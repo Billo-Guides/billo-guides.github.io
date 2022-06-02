@@ -1,5 +1,5 @@
-# PS! Wi-Fi
-Test repository for the PS! Wi-Fi GitHub site.
+# Guides
+Repository for RNG abuse guides by Billo.
 
 ## Credits
 
