@@ -78,7 +78,7 @@ It's common to see clusters when searching for a target, a cluster is a group of
 
 Now advance the RNG state while watching the <code>Curr adv.</code> box, we'll want to open our menu as close to the target frame as possible. Using Zapdos as our example...<br /><br />
 <ul>
-  <li>The target is on 580-583 advances away in a cluster of 4, based on previous recorded attempts the delay is 30.</li>
+  <li>The target is 580-583 advances away in a cluster of 4, based on previous recorded attempts the delay is 30.</li>
   <li>Subtract the delay from the number of advances, this will be the target frame for this attempt. (550 in this case)</li>
   <li>Advance towards the target frame using bike advances to slowly get closer to the target frame. (Use DaySkip to advance large distances quickly!)</li>
   <li>Once we are close enough, open the pause menu and select the map.</li>
@@ -86,9 +86,9 @@ Now advance the RNG state while watching the <code>Curr adv.</code> box, we'll w
   <li>Fly into the area the bird is in and track it down!</li>
 </ul>
   
-Opening the map will cause the RNG state to advance a small amount, the amount will vary depending on your current location, eivronment, and <span class="fw-bold">the amount of Pokemon currently on your party.</span> It's suggested to deposit all but one of your Pokemon into the PC to utilize this advancement method.<br /><br />
+Opening the map will cause the RNG state to advance a small amount, the amount will vary depending on your current location, environment, and <span class="fw-bold">the amount of Pokemon currently in your party.</span> It's suggested to deposit all but one of your Pokemon into the PC to utilize this advancement method.<br /><br />
 
-If you believe you flew into position on the correct frame, chase down the bird and initiate the encounter, once you are in-battle use the <code>Read Encounter</code> feature of the generator to confirm the Pokémon you are in battle with matches the output of the generator.<br /><br />
+If you believe you flew into position on the correct frame, chase down the bird and initiate the encounter, once you are in-battle use the <code>Read Encounter</code> feature of the generator to confirm the Pokémon you are in battle with matches the output.<br /><br />
 
 <span class="fw-bold">Figure 5/6/7 -</span> Result Found!<br />
 <img src="./images/galar-bird-trio/figure-5-in-battle-encounter-read-zapdos.png" style="width:675px;height:400px;"><br /><br />
@@ -126,8 +126,8 @@ This is a common issue players will face when tackling this hunt as the delay is
 Each bird has a different delay which need calculating independently. Your delay is calculated by <code>frame hit - Frame initated = delay</code>. We can use the <code>Read Encounter</code> feature of the tool to confirm the frame we are hitting and see if we need to account for any delay. Here's how it's done!
 <ul>
   <li>Aim for a target, such as any marked bird.</li>
-  <li>Take a practice attempt and fly into the target. Take note of the frame you the Pokémon was spawned on.</li>
-  <li>Encounter the Pokémon and click the <code>Read Encounter</code> button if you didn't find the Pokémon what you expected.</li>
+  <li>Take a practice attempt and fly into the target. Take note of the frame you initiated fly.</li>
+  <li>Encounter the Pokémon and click the <code>Read Encounter</code> button if you didn't find the Pokémon that you expected.</li>
   <li>Do a filterless search (or search for the specific IVs of the result you found) and find the frame you hit, take note of the number and subtract the target frame number from it.</li>
   <li>This will be your delay for that particular encounter.</li>
 </ul>
