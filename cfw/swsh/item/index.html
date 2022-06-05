@@ -10,7 +10,7 @@ permalink: /cfw/swsh/item/
 
 <hr />
 
-This portion of the guide will cover the process of RNG abusing the Cram-o-matic and the Rotom PC lottery function in Sword/Shield using the SWSH Overworld RNG Generator by <a href="https://github.com/LegoFigure11LegoFigure11">LegoFigure11</a>. 
+This portion of the guide will cover the process of RNG abusing the Cram-o-matic and the PC lottery function in Sword/Shield using the SWSH Overworld RNG Generator by <a href="https://github.com/LegoFigure11LegoFigure11">LegoFigure11</a>. 
 Item RNG abuse is best utilized to help players obtain rare/valuable items such as rare Pokeballs!<br /> <br />
 
 <span class="fw-bold">This guide assumes you are using a CFW Switch console running Atmosphere.</span> If you are not running CFW fear not, you can find an alternative CFWless guide here!<br /> <br />
@@ -59,9 +59,9 @@ You can check the <code>atmosphere/contents</code> folder of your SD card and ma
 </div>
 
 <h3><span class="fw-bold">Time to get to work! </span></h3>
-The goal is to interact with the Cram-o-matic on the calculated target frame given to us by the <code>Cram-o-matic</code> tab of the generator. For this example we will be using the advancement methods listed at the top of the page. <u>dayskip</u>, <u>menuing</u> and <u>player movement</u> advances will be used for this example.<br /><br />
+The goal is to interact with the Cram-o-matic on the calculated target frame given to us by the <code>Cram-o-matic</code> tab of the generator. We will be using the advancement methods listed at the top of the page. <u>dayskip</u>, <u>menuing</u> and <u>player movement</u> advances will be used for this example.<br /><br />
 
-If you plan to use the <code>DaySkip</code> feature you should take note of how many frames advance per day skipped to make sure you don't overshoot your target.<br /><br />
+If you plan to use the <code>DaySkip</code> feature you should take note of how many frames advance per day skipped to ensure that you don't overshoot your target.<br /><br />
 
 In this example we will be aiming for a 5 Level Balls. You can be more specific with the filters if you wish, such as filtering for a specific rare items.<br /><br />
 
@@ -83,7 +83,7 @@ Once the <code>Cram-o-matic</code> tab is filled in correctly you can begin look
   <li>Search again, do this until you have desirable results.</li>
 </ol>
 
-Calculating the amount of advancements that pass from closing the pause menu is required for this method! Do this roughly 5 times and write down the number of advancements that passed, keep the lowest number in mind. (In this example, 30 was the lowest number of advancements.)<br /><br />
+Calculating the amount of advancements that pass from closing the pause menu is required for this method! Do this roughly 5 times and write down the number of advancements that passed, keep the highest number in mind. (In this example, 35 was the highest number of advancements.)<br /><br />
   
 <span class="fw-bold">We found a target frame!</span> 5 Level Balls on advance 795. This is the frame we will press A to initiate the Cram-o-matic. The RNG state will not advance during the menus, you can safely press B if you miss and then begin looking for a new target.<br /><br />
 
@@ -98,7 +98,7 @@ Here's a more fleshed out example...<br /><br />
   <li>Advance towards the target frame by standing close to a nearby NPC to slowly get closer. (Or use DaySkip to advance large distances quickly!)</li>
   <li>Once close enough (Within 500 frames of the target), run over to the Cram-o-matic.</li>
   <li>From this point, only advance by opening and closing the menu and using small player movements.</li>
-  <li>Earlier we calculated 30 advances from closing the menu slowly advance the RNG state using player movement until roughly 35 frames away to avoid overshooting. (Adapt this number to suit the number you noted down earlier.)</li>
+  <li>Earlier we calculated 35 advances from closing the menu slowly advance the RNG state using player movement until roughly 35 frames away to avoid overshooting. (Adapt this number to suit the number you noted down earlier.)</li>
   <li>Pause the game by pressing X, unpause while watching the number in the <code>Curr. Adv</code> field of the generator.</li>
   <li>If you undershoot the target nudge control stick quickly, once you see your target frame in the <code>Curr. Adv</code> field, interact with the Cram-o-matic by pressing A.</li>
 </ul>
@@ -121,7 +121,64 @@ That's all there is to RNG abusing the Cram-o-matic!<br />
   <h1 class="text-light text-center pt-3 pb-3">Rotom Lottery RNG abuse (CFW)</h1>
 </div><br />
 
-This section is unfinished. Come back later!<br /><br />
+<h3><span class="fw-bold">Time to get to work! </span></h3>
+The goal is to interact with the PC in any Pokecenter on the calculated target frame given to us by the <code>Loto-ID</code> tab of the generator. We will be using the advancement methods listed at the top of the page. <u>dayskip</u>, <u>menuing</u> and <u>player movement</u> advances will be used for this example.<br /><br />
+
+If you plan to use the <code>DaySkip</code> feature you should take note of how many frames advance per day skipped to ensure that you don't overshoot your target.<br /><br />
+
+We will be aiming for a Master Ball, this requires the 5 digit number given by the Loto-ID minigame to exactly match the Trainer ID one of your caught/stored Pokemon. We can determine which frame will match our TID using the <code>Loto-ID</code> tab of the generator.<br /><br />
+
+You can search for multiple TIDs by opening <code>Loto-ID.txt</code> in a text editor and inputting a list of TIDs to read from, this file is found in the same directory as the generator.<br /><br />
+
+<span class="fw-bold">Figure 1 -</span> Tool setup<br />
+<img src="./images/roto-id/figure-1-tool-setup-loto.gif" style="width:675px;height:400px;"><br /><br />
+
+<span class="fw-bold">Awesome, everything looks good!</span> We can see our current seeds on the <code>Roto-ID</code> tab and have our filters set properly. Time to stand near the PC in Wedgehurst Pokecenter!<br /><br />
+
+<span class="fw-bold">Figure 2 -</span> Game setup<br />
+<img src="./images/roto-id/figure-2-game-setup-loto.jpg" style="width:675px;height:400px;"><br /><br />
+
+Once the <code>Loto-ID</code> tab is filled in correctly you can begin looking for target frames by clicking the search button.<br /><br />
+
+<u>If your results are not desirable, repeat the following:</u>
+<ol>
+  <li>Disconnect your Switch from the tool.</li>
+  <li>Restart your game and enter the overworld.</li>
+  <li>Enter the pause or Home menu and reconnect your Switch to the tool.</li>
+  <li>Search again, do this until you have desirable results.</li>
+</ol>
+
+Calculating the amount of advancements that pass from closing the pause menu is required for this method! Do this roughly 5 times and write down the number of advancements that passed, keep the highest number in mind. (In this example, 12 was the highest number of advancements.)<br /><br />
+  
+<span class="fw-bold">We found a target frame!</span> A Master Ball match on advance x. This is the frame we will press A to fire up the PC. The RNG state will not advance during the menus, you can safely press B if you miss and then begin looking for a new target.<br /><br />
+
+<span class="fw-bold">Figure  3 -</span> Target found!<br />
+<img src="./images/roto-id/figure-3-target-found-loto.png" style="width:675px;height:400px;"><br /><br />
+  
+We'll want to exit the pause menu as close to the target frame as possible in order to freeze the noise in the area, then use rapid player movement advances to hit our target frame and finally, interact with the cram-o-matic on this frame.<br /><br />
+  
+Here's a more fleshed out example...<br /><br />
+<ul>
+  <li>The target is x advances away, delay is 0.</li>
+  <li>Advance towards the target frame by standing close to a nearby NPC to slowly get closer. (Or use DaySkip to advance large distances quickly!)</li>
+  <li>Once close enough (Within 500 frames of the target), run over to the PC.</li>
+  <li>From this point, only advance by opening and closing the menu and using small player movements.</li>
+  <li>Earlier we calculated 12 advances from closing the menu slowly advance the RNG state using player movement until roughly 12 frames away to avoid overshooting. (Adapt this number to suit the number you noted down earlier.)</li>
+  <li>Pause the game by pressing X, unpause while watching the number in the <code>Curr. Adv</code> field of the generator.</li>
+  <li>If you undershoot the target nudge control stick quickly, once you see your target frame in the <code>Curr. Adv</code> field, interact with the PC by pressing A.</li>
+</ul>
+
+Player movement will advance the RNG state 1-2 frames with each new stick input, allowing for more precise advancements during the window of silence, making it much easier to hit a target frame.<br /><br />
+
+If you believe you interacted with the PC on the correct frame, click the <code>Try Loto-ID</code> option in-game and spam through the menus to claim your reward! Make sure the reward matches the output of the generator.<br /><br />
+
+<span class="fw-bold">Figure 4/5 -</span> Result Found!<br />
+<img src="./images/roto-id/figure-4-result-found-gui-loto.png" style="width:675px;height:400px;"><br /><br />
+<img src="./images/roto-id/igure-5-result-found-switch-loto.jpg" style="width:675px;height:400px;"><br /><br />
+
+The result matches the output of the generator, mission accomplished!<br /><br />
+
+That's all there is to RNG abusing the the PC lottery function!<br />
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/overworld">
   Send me to the Overworld RNG abuse guide!
