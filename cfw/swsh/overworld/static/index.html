@@ -15,7 +15,7 @@ If you made it this far, it must mean you have an interest in RNG abusing Pokém
 <h3><span class="fw-bold">Getting Started:</span></h3>
 <u>Before starting, do the following:</u>
 <ul>
-  <li>Open the GUI and click on the <code>Encounter Lookup</code> button at the top of the window. This will open the Encounter Lookup tab.</li>
+  <li>Open the GUI and click on the <code>Encounter Lookup</code> button at the top of the main window. This will open the Encounter Lookup tab.</li>
   <li>Type the species name of the Pokémon you are hunting into the empty field, this will bring up a list of every the possible encounter and has all the information you need for the main window.</li>
   <li>Scroll down the list of encounters and click on one of the rows displaying a static encounter, this will automatically enter the information into the main window.</li>
   <li>Head to the location in-game, change the date until you meet the correct weather condition, then stand near the spawn point of the Pokémon.</li>
@@ -63,7 +63,7 @@ It's common to see "clusters" or "groups" of frames that produce the same result
 <span class="fw-bold">Figure  3 -</span> Target found!<br />
 <img src="./images/static/figure-3-static-search-duraludon.png" style="width:675px;height:400px;"><br /><br />
 
-Advance the RNG state while watching the <code>Curr adv.</code> field of the main window until you're a close range of your target, you can use <code>DaySkip</code> to advance in large amounts, then use a steadier advancement method to advance in smaller amounts, such as bike or player movement.<br /><br />
+Advance the RNG state while watching the <code>Curr adv.</code> field of the main window until you're within a close range of your target, you can use <code>DaySkip</code> to advance in large amounts, then use a steadier advancement method to advance in smaller amounts, such as bike or player movement.<br /><br />
 
 You can be creative with the methods you use to advance the RNG state.<br /><br />
 
@@ -109,7 +109,9 @@ For the purposes of this guide, the term "delay" is used to describe the frame d
 
 Most static encounters do not need to account for delay, this applies most to encounters in extreme weather conditions or in an otherwise unstable environment, like having other spawned Pokémon present.<br /><br />
 
-Delay Calc - <code>frame Pokemon was generated - frame encounter was initiated = delay</code> - We can use the <code>Read Encounter</code> feature of the tool to confirm the exact frame the encounter was generated on and calculate the delay from there. Here's how it's done!
+Delay Calc - <code>frame Pokemon was generated - frame encounter was initiated = delay</code><br /><br />
+
+We can use the <code>Read Encounter</code> feature of the tool to confirm the exact frame the encounter was generated on and calculate the delay from there. Here's how it's done!
 <ul>
   <li>Aim for a target, such as any shiny Pokémon.</li>
   <li>Run towards the Pokémon and spawn it in the overworld then initiate the encounter. Take note of the frame you the Pokémon was spawned on.</li>
