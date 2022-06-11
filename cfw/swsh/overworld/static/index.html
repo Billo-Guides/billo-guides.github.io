@@ -17,11 +17,13 @@ If you made it this far, it must mean you have an interest in RNG abusing Pokém
 <ul>
   <li>Open the GUI and click on the <code>Encounter Lookup</code> button at the top of the window. This will open the Encounter Lookup tab.</li>
   <li>Type the species name of the Pokémon you are hunting into the empty field, this will bring up a list of every the possible encounter and has all the information you need for the main window.</li>
-  <li>Scroll down the list of encounters and click on one of the rows displaying a static encounter, this will automatically enter the information into the main window. (A quiet area in calm weather conditions is recommended.)</li>
-  <li>Head to the location in-game, change the date until you meet the correct weather condition, then stand near the spawn point of the Pokémon. (Minimal NPCs or other spawned Pokémon present is recommended to reduce noise.)</li>
+  <li>Scroll down the list of encounters and click on one of the rows displaying a static encounter, this will automatically enter the information into the main window.</li>
+  <li>Head to the location in-game, change the date until you meet the correct weather condition, then stand near the spawn point of the Pokémon.</li>
   <li>Run far enough away to despawn the Pokémon and save.</li>
   <li>Press the Home button on your controller, click <code>Connect</code> on the main window of the tool.</li>
 </ul>
+
+When searching possible encounters it is suggested to pick an encounter in a quiet area with calm weather to reduce the amount of noise significantly. Noise is area specific, to test how much noise an area has, head to the location in-game and connect your console to the GUI while standing in the overworld and monitor the speed of advancements.<br /> <br />
 
 <h3><span class="fw-bold">Time to get to work!</span></h3>
 The goal is to walk towards our encounter and spawn it on the calculated target frame displayed on the generator. The advancement methods used are listed on the main page of this guide, <u>day skip</u>, <u>bike</u> and <u>player movement</u> advances will be used for this example.<br /><br />
@@ -54,7 +56,7 @@ Once the main window is filled in correctly & you are stood in a good position i
 
 <span class="fw-bold">We found one!</span> A shiny, Adamant natured Duraludon in a cluster on advances 1000-1001. These are the "target frames" and the aim will be to spawn Duraludon in the overworld on either of these frames.<br /><br />
 
-Once a Pokémon is spawned in the overworld the stats and internal details (such as PID/EC) are generated and set in stone, this is why it is only important to spawn the Pokémon in the overworld on the correct frame. <span class="fw-bold">Just don't let the Pokémon despawn after you spawn it!</span><br /><br />
+Once a Pokémon is spawned in the overworld the stats and internal details (such as PID/EC) are generated and set in stone, this is why it is only important to spawn the Pokémon in the overworld on the correct frame. <span class="fw-bold">Don't let the Pokémon despawn after you spawn it in the overworld!</span><br /><br />
 
 It's common to see "clusters" or "groups" of frames that produce the same result when searching for a target. Aiming for large clusters is recommended as this will provide more chances for the player to spawn the Pokémon on the correct frame.<br /><br />
 
@@ -107,7 +109,7 @@ For the purposes of this guide, the term "delay" is used to describe the frame d
 
 Most static encounters do not need to account for delay, this applies most to encounters in extreme weather conditions or in an otherwise unstable environment, like having other spawned Pokémon present.<br /><br />
 
-Your delay is calculated by <code>frame Pokemon was generated - frame encounter was initiated = delay</code>. We can use the <code>Read Encounter</code> feature of the tool to confirm the frame the encounter was generated on and calculate the delay. Here's how it's done!
+Delay Calc - <code>frame Pokemon was generated - frame encounter was initiated = delay</code> - We can use the <code>Read Encounter</code> feature of the tool to confirm the exact frame the encounter was generated on and calculate the delay from there. Here's how it's done!
 <ul>
   <li>Aim for a target, such as any shiny Pokémon.</li>
   <li>Run towards the Pokémon and spawn it in the overworld then initiate the encounter. Take note of the frame you the Pokémon was spawned on.</li>
