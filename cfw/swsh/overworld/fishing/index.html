@@ -48,12 +48,12 @@ We will be aiming for a Shiny Whiscash with a mark in Slumbering Weald. You can 
 <span class="fw-bold">Let's enter this information into the main window by clicking the row that matches our conditions!</span><br /><br />
 
 <span class="fw-bold">Figure 1 -</span> Tool setup<br />
-<img src="./images/fishing/figure-1-encounter-lookup-fishing.gif" style="width:675px;height:400px;"><br /><br />
+<img src="./overworld/images/fishing/figure-1-encounter-lookup-fishing.gif" style="width:675px;height:400px;"><br /><br />
 
 <span class="fw-bold">Awesome, everything looks good!</span> Time to find an quiet fishing pool and set the weather condition if appropriate.<br /><br />
 
 <span class="fw-bold">Figure 2 -</span> Game setup<br />
-<img src="./images/fishing/figure-2-in-game-setup-fishing.gif" style="width:675px;height:400px;"><br />
+<img src="./overworld/images/fishing/figure-2-in-game-setup-fishing.gif" style="width:675px;height:400px;"><br />
 
 <u>This location in Slumbering Weald is ideal, there are no NPCs around and there are no spawned Pokémon present.</u><br /><br />
 
@@ -68,7 +68,7 @@ Once the main window is filled in correctly & you are stood in a good position i
 </ol>
 
 <span class="fw-bold">Figure  3 -</span> Target found!<br />
-<img src="./images/fishing/figure-3-target-found-fishing.png" style="width:675px;height:400px;"><br /><br />
+<img src="./overworld/images/fishing/figure-3-target-found-fishing.png" style="width:675px;height:400px;"><br /><br />
 
 <span class="fw-bold">We found one!</span> A shiny, x natured Whiscash in a cluster on advances x-y. These are the "target frames" and the aim will be to spawn a fishing pool in the water on any of these frames.<br /><br />
 
@@ -93,9 +93,9 @@ You can find out how to calculate delay at the bottom of this page in the Troubl
 <span class="fw-bold">We hit our target frame!</span> If you believe you hit your target frame, run around and try to spawn the fishing pool and press and interact with it before it despawns, once you are in-battle use the <code>Read Encounter</code> feature of the generator to confirm the Pokémon you are in battle with matches the output of the generator.<br /><br />
 
 <span class="fw-bold">Figure 4/5/6 -</span> Result found!<br />
-<img src="./images/fishing/figure-4-in-battle-encounter-read-fishing.png" style="width:675px;height:400px;"><br /><br />
-<img src="./images/fishing/figure-5-in-battle-encounter-switch-fishing.jpg" style="width:675px;height:400px;"><br /><br />
-<img src="./images/fishing/figure-6-summary-screen-switch-fishing.jpg" style="width:675px;height:400px;"><br /><br />
+<img src="./overworld/images/fishing/figure-4-in-battle-encounter-read-fishing.png" style="width:675px;height:400px;"><br /><br />
+<img src="./overworld/images/fishing/figure-5-in-battle-encounter-switch-fishing.jpg" style="width:675px;height:400px;"><br /><br />
+<img src="./overworld/images/fishing/figure-6-summary-screen-switch-fishing.jpg" style="width:675px;height:400px;"><br /><br />
 
 The Whiscash matches the output of the tool, mission accomplished! Espeon in party slot 1 with the ability Syncronize was used to determine the nature, using a Pokémon with this ability will make the nature of any overworld Pokémon match the nature of yours.<br /><br />
 
@@ -145,7 +145,7 @@ We can use the <code>Read Encounter</code> feature of the tool to confirm the ex
 <u>When RNG abusing in unstable conditions you should record delays for multiple attempts before aiming for a target and check for any consistent delay counts. It is also advised to aim for large clusters where possible to increase your chances of actually hitting the target.</u><br /><br />
 
 <span class="fw-bold">Figure 8 -</span> Delay troubleshooting example<br />
-<img src="./images/fishing/figure-8-troubleshooting-delay.png" style="width:675px;height:400px"><br /><br />
+<img src="./overworld/images/fishing/figure-8-troubleshooting-delay.png" style="width:675px;height:400px"><br /><br />
 
 We hit a shiny, but it wasn't Whiscash! So what happened here? We actually hit a different frame within a shiny cluster which contained the encounter slot values for Barboach, we can take a look by locating the exact Barboach encounter in the <code>Encounter Lookup</code> tab, and clicking search again in the main window. <br /><br />
 
@@ -157,7 +157,7 @@ Make sure the <code>KO Count:</code> field is updated to match the species you a
 - In order to find the Barboach we are troubleshooting on the generator, we would need to enter <code>90</code> into the <count>KO Count:</code> field to match the Barboach we are in battle with.<br /><br />
 
 <span class="fw-bold">Figure 9 -</span> Troubleshooting Encounter-slots<br />
-<img src="./images/fishing/figure-9-finding-frame-fishing.gif" style="width:675px;height:400px"><br /><br />
+<img src="./overworld/images/fishing/figure-9-finding-frame-fishing.gif" style="width:675px;height:400px"><br /><br />
 
 Here we can see Barboach was indeed a shiny Pokémon within the cluster, (encounterslot value of x-y according to <code>Encounter Lookup</code>). Our goal was frame x and we hit frame y, the tool shows these values are a match x-y frames later than our desired target frame, we will adjust accordingly by walking into the grass 2 frames earlier next time.<br /><br />
 
