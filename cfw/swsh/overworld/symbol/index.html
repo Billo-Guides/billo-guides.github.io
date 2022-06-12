@@ -33,7 +33,7 @@ This references the <code>Number Battled:</code> screen of the Pokédex and is u
 Want to know the odds based on the total amount of KOs? <a href="https://bulbapedia.bulbagarden.net/wiki/Brilliant_Pok%C3%A9mon">This article on Bulbapedia</a> will tell you everything you need to know.<br /> <br />
 
 <h3><span class="fw-bold">Time to get to work!</span></h3>
-The goal is to walk towards our grass and spawn the Pokémon on the calculated target frame given by the generator. The advancement methods used are listed on the main page of this guide, <u>day skip</u>, <u>bike</u> and <u>player movement</u> advances will be used for this example.<br /><br />
+The goal is to walk towards our grass and spawn the Pokémon on the calculated target frame given by the generator. The advancement methods used are listed in detail on the main page of this guide..<br /><br />
 
 If you plan to use the <code>DaySkip</code> feature you should take a moment to monitor your advances to avoid overshooting. Connect to the GUI and skip 1 day at a time to get a rough estimate amount of advances per day skipped.<br /><br />
 
@@ -70,20 +70,30 @@ Once the main window is filled in correctly & you are stood in a good position i
   <li>Search again, do this until you have desirable results.</li>
 </ol>
 
+<span class="fw-bold">Figure  3 -</span> Target found!<br />
+<img src="./images/symbol/figure-3-target-found-symbol.png" style="width:675px;height:400px;"><br /><br />
+
 <span class="fw-bold">We found one!</span> A shiny, Modest natured Swablu in a cluster on advances 2007-2009. These are the "target frames" and the aim will be to spawn Swablu in the overworld on any of these frames.<br /><br />
 
 Once a Pokémon is spawned in the overworld the stats and internal details (such as PID/EC) are generated and set in stone, this is why it is only important to spawn the Pokémon in the overworld on the correct frame. <span class="fw-bold">Don't let the Pokémon despawn after you spawn it in the overworld!</span><br /><br />
 
 It's common to see "clusters" or "groups" of frames that produce the same result when searching for a target. Aiming for large clusters is recommended as this will provide more chances for the player to spawn the Pokémon on the correct frame.<br /><br />
 
-<span class="fw-bold">Figure  3 -</span> Target found!<br />
-<img src="./images/symbol/figure-3-target-found-symbol.png" style="width:675px;height:400px;"><br /><br />
-
-Advance the RNG state while watching the <code>Curr adv.</code> field of the main window until you're within a close range of your target, you can use <code>DaySkip</code> to advance in large amounts, then use a steadier advancement method to advance in smaller amounts, such as bike or player movement.<br /><br />
+<u>Advancing towards the target (Step-by-step example):</u><br />
+<ul>
+  <li>The target is 2007-2009 advances away, the delay is 2 in Giant's Bed based on local testing, this means the target frames for this attempt are frame 2005-2007.</li>
+  <li>Stand close to a patch of grass in the area, advance towards the target frame using bike or using spawned overworld Pokemon in the area. You can use DaySkip to advance large distances quickly too!</li>
+  <li>Once close enough (within ~1000 frames), stand near to the patch of grass, far enough away to not have any spawned Pokemon in the grass.</li>
+  <li>From this point it's recommended to only advance by opening and closing the menu and using player movement/bike advancements.</li>
+  <li>Open and close the pause menu with X, take note of how many the number of advancements that have passed from doing so. Repeat this process a few times and then take the highest number of advances from your results.</li>
+  <li>Advance closer to your target (within ~100 frames) and pause the game .</li>
+  <li>Use animation advances to get close towards your target frame, factor in the number of advances that pass from closing the menu. (For example: We get 5 advances from closing the menu and our target is 50 advances away, only 45 animation advances will be required as we'd pick up the remaining 5 from closing the pause menu.)</li>
+  <li>Close the menu and run around to spawn the towards the grass to spawn the encounter, player movement advancements will not occur until the control stick is in a resting state. This gives the best chance at spawning the encounter on the correct frame.</li>
+</ul>
 
 You can be creative with the methods you use to advance the RNG state.<br /><br />
 
-Giant's Bed has a base delay of 2. This means our target frames for this example will be advances 2005-2007. You can find out how to calculate delay at the bottom of this page in the Troubleshooting Encounters section.<br /><br /> 
+You can find out how to calculate delay at the bottom of this page in the Troubleshooting Encounters section.<br /><br /> 
 
 <span class="fw-bold">Figure  4 -</span> Target frame hit!<br />
 <img src="./images/symbol/figure-4-hitting-target-symbol.png" style="width:675px;height:400px;"><br /><br />
