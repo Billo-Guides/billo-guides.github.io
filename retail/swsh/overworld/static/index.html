@@ -25,26 +25,26 @@ If you made it this far, it must mean you have an interest in RNG abusing Pokém
 When searching possible encounters it is suggested to pick an encounter in a quiet area with calm weather to reduce the amount of noise significantly. Noise is area specific, and it is recommended to test how much noise an area has to avoid overshooting the target.<br /> <br />
 
 <h3><span class="fw-bold">Identifying your current seeds:</span></h3>
-It's impossible to search for results without knowing the current seeds, this is done through the <code>Seed Finder</code> tab of the generator. Click the button at the top of the main window to open the Seed Finder tab and begin recording your sequence of animations.<br /><br />
+It's impossible to search for results without knowing the current seeds, this is done through the <code>Retail Seed Finder</code> tab of the generator. Click the Retail Seed Finder button at the top of the main window and begin recording your sequence of animations.<br /><br />
 
 <u>Step-by-step instructions for identifying your current RNG states:</u>
 <ul>
   <li>Open the game and enter the overworld.</li>
-  <li>Pause the game using X, click "Pokemon", then view the summary of any of your Pokemon.</li>
-  <li>Open the Seed Finder tab of the GUI and have your Pokemon animate.</li>
+  <li>Pause the game using X, click "Pokémon", then view the summary of any of your Pokémon.</li>
+  <li>Open the Seed Finder tab of the GUI and have your Pokémon animate.</li>
   <li>Click (or type) 0 if your animation was physical.</li>
   <li>Click (or type) 1 if your animation was special.</li>
   <li>Repeat this process 128 times and your seed will be generated. Click <code>Update Main Form</code> and exit back to the main window.</li>
 </ul>
 
-This can seem like a lengthy and tedious process at first glance (it kinda is), for this reason it's advised to remap your controller button layout if you are able to do so, so that the button you use to advance is more comfortable for you to press repeatedly such as remapping L3 to Y, then using the Y button to record your animation sequence.<br /><br />
+This can seem like a lengthy and tedious process at first glance (it kinda is), for this reason it's advised to remap your controller button layout if you are able to do so, such as remapping L3 to Y. This is done through the Switch system settings.<br /><br />
 
 Once you know your seed you can easily re-identify your current state within 10-20 animations, this is done using the <code>Retail Advances Tracker</code> feature on the main window of the generator.<br /><br />
 
 <u>Re-identifying your current RNG states using the Retail Advances Tracker:</u>
 <ul>
   <li>Click <code>Generate Pattern</code> once you have found your seeds using Seed Finder.</li>
-  <li>Pause the game using X, click "Pokemon", then view the summary of any of your Pokemon and have it do some animations.</li>
+  <li>Pause the game using X, click "Pokémon", then view the summary of any of your Pokémon and have it do some animations.</li>
   <li>Click (or type) 0 into the field if your animation was physical.</li>
   <li>Click (or type) 1 into the field if your animation was special.</li>
   <li>Repeat roughly 10-20 times until you are given 1 possible result. Click <code>Update States</code> to automatically paste your new seeds into the correct fields.</li>
@@ -67,7 +67,7 @@ In this example we will be aiming for a Shiny Aerodactyl with a mark in Giant's 
 <span class="fw-bold">Figure 2 -</span> Game setup<br />
 <img src="./images/static/figure-2-in-game-setup.gif" style="width:675px;height:400px;"><br /><br />
 
-<u>This location in Giant's Bed is ideal, there are no NPCs around and there are no spawned Pokémon present.</u> Giant's Beat is located within the Crown Tundra which is a notably quiet area in calm weather conditions.<br /><br />
+<u>This location in Giant's Bed is ideal, there are no NPCs around and there are no spawned Pokémon present.</u> Giant's Bed is located within the Crown Tundra which is a notably quiet area in calm weather conditions.<br /><br />
 
 <span class="fw-bold">Figure 3 -</span> Seed identification<br />
 <img src="./images/static/figure-3-seed-identification-static.gif" style="width:675px;height:400px;"><br /><br />
@@ -89,9 +89,9 @@ It's common to see "clusters" or "groups" of frames that produce the same result
 
 <u>Advancing towards the target (Step-by-step example):</u><br />
 <ul>
-  <li>The target is x-y advances away, the delay is 0 for this static encounter based on local testing, this means the target frames for this attempt are frame x-y.</li>
+  <li>The target is x-y advances away, based on local testing the delay for this static encounter is 0, this means the target frames for this attempt are frame x-y.</li>
   <li>Advance towards the target frame using bike, NPCs or using other spawned overworld Pokémon in the area. You can use DaySkip to advance large distances quickly too!</li>
-  <li>Once you believe you are close enough to a target (within ~500 frames), stand near to the spawn radius of the Pokémon you are hunting. (Re-identify your current seed at this point if you lose track of advancements.)</li><br />
+  <li>Once you believe you are close enough to a target (within ~500 frames), stand near to the spawn radius of the Pokémon you are hunting. Re-identify your current seed.</li><br />
   
   From this point it's recommended to only advance by opening and closing the menu and using animation/bike advancements as they are easier to keep track of.<br /><br />
   
@@ -109,7 +109,9 @@ You can be creative with the methods you use to advance the RNG state.<br /><br 
 <span class="fw-bold">Figure  5 -</span> Target Frame Hit!<br />
 <img src="./images/static/figure-5-static-hit-aerodactyl.png" style="width:675px;height:400px;"><br /><br />
 
-By using animations and a standard calculator to keep track of inputs, we were able to hit out target frame! Earlier we used seed re-identification and calculated that closing the pause menu advances roughly 5 frames. So we are now 5 frames away from the target with the pause menu open, closing the menu and running into the encounter should spawn the shiny Aerodactyl we are targeting.<br /><br />
+By using animations and a standard calculator to keep track of inputs, we were able to hit out target frame!<br /><br />
+
+Earlier we used seed re-identification and calculated that closing the pause menu advances roughly 5 frames. So we are now 5 frames away from the target with the pause menu open, closing the menu and running into the encounter should spawn the shiny Aerodactyl we are targeting.<br /><br />
 
 If you believe you spawned the Pokémon on the correct frame, close the pause menu and quickly run towards it and spawn it in the overworld, capture the Pokémon and confirm it matches the result displayed on the main window of the generator.<br /><br />
 
@@ -139,13 +141,13 @@ This section covers how to troubleshoot encounters and delays. If you keep missi
   <li>Information in the main window was not completely accurate.</li>
 </ul>
 
-<h5><span class="fw-bold">Encounter spawned too early or late...</span></h5>
+<h5><span class="fw-bold">Encounter spawned too early or too late...</span></h5>
 
 This is a common issue players will face when tackling static encounters and is likely due to mistiming when spawning the Pokémon. Retry and search for a new target frame and make sure your player positioning is correct.<br /><br />
 
 <h5><span class="fw-bold">Troubleshooting delay...</span></h5>
 
-For the purposes of this guide, the term "delay" is used to describe the frame difference between the Pokemon we encountered and the frame the encounter was initiated on.<br /><br />
+For the purposes of this guide, the term "delay" is used to describe the frame difference between the Pokémon we encountered and the frame the encounter was initiated on.<br /><br />
 
 Most static encounters do not need to account for delay, this applies most to encounters in extreme weather conditions or in an otherwise unstable environment, like having other spawned Pokémon present.<br /><br />
 
