@@ -40,7 +40,7 @@ In this example we will be aiming for a Shiny Duraludon with a mark in Giant's S
 <span class="fw-bold">Awesome, everything looks good!</span> Time to find an ideal position to stand in-game and set the correct weather condition.<br /><br />
 
 <span class="fw-bold">Figure 2 -</span> Game setup<br />
-<img src="./images/static/figure-2-in-game-setup.gif" style="width:675px;height:400px;"><br />
+<img src="./images/static/figure-2-in-game-setup.gif" style="width:675px;height:400px;"><br /><br />
 
 <u>This location in Giant's Seat is ideal, there are no NPCs around and there are no spawned Pokémon present.</u> Giant's Seat is located in the Wild Area which is a notably quiet area in calm weather conditions.<br /><br />
 
@@ -77,8 +77,6 @@ It's common to see "clusters" or "groups" of frames that produce the same result
 
 You can be creative with the methods you use to advance the RNG state.<br /><br />
 
-You can find out how to calculate delay at the bottom of this page in the Troubleshooting Encounters section.<br /><br /> 
-
 <span class="fw-bold">Figure  4 -</span> Target Frame Hit!<br />
 <img src="./images/static/figure-4-static-hit-duraludon.png" style="width:675px;height:400px;"><br /><br />
 
@@ -106,12 +104,12 @@ This section covers how to troubleshoot encounters and delays. If you keep missi
 <h3><span class="fw-bold">Missing Targets:</span></h3>
 <u>The commonly occuring reasons for missing a target Pokémon are:</u>
 <ul>
-  <li>Encounter spawned too late due to mistiming.</li>
+  <li>Encounter spawned too late or too early due to mistiming.</li>
   <li>There is a delay left unaccounted for.</li>
   <li>Information in the main window was not completely accurate.</li>
 </ul>
 
-<h5><span class="fw-bold">Encounter spawned too late...</span></h5>
+<h5><span class="fw-bold">Encounter spawned too late or too early...</span></h5>
 
 This is a common issue players will face when tackling static encounters and is likely due to mistiming when spawning the Pokémon. Retry and search for a new target frame and make sure your player positioning is correct.<br /><br />
 
@@ -126,7 +124,7 @@ Delay Calc - <code>frame Pokemon was generated - frame encounter was initiated =
 We can use the <code>Read Encounter</code> feature of the tool to confirm the exact frame the encounter was generated on and calculate the delay from there. Here's how it's done!
 <ul>
   <li>Aim for a target, such as any shiny Pokémon.</li>
-  <li>Run towards the Pokémon and spawn it in the overworld then initiate the encounter. Take note of the frame you the Pokémon was spawned on.</li>
+  <li>Run towards the Pokémon and spawn it in the overworld then initiate the encounter. Take note of the frame the Pokémon was spawned on.</li>
   <li>Encounter the Pokémon and click the <code>Read Encounter</code> button.</li>
   <li>If you didn't find the Pokémon that you expected, do a filterless search (or search for the specific IVs of the result you found) and find the frame you hit.</li>
   <li>Subtract your target advancement from the frame you actually hit.</li>
