@@ -1,0 +1,65 @@
+---
+layout: default
+title: TID/SID (Retail)
+permalink: /retail/swsh/finding-tid-sid
+---
+
+<div class="bg-dark title">
+  <h1 class="text-light text-center pt-3 pb-3">Finding your TID/SID (Retail)</h1>
+</div>
+
+<hr />
+
+This tutorial will provide coverage of how to find your 5 digit TID/SID so that you can RNG abuse overworld encounters to the fullest extent. Your 5 digit TID/SID are values that determine if a wild Pokemon will be shiny, so it's important that we know what these values are before starting!<br /><br />
+
+In Sword/Shield you cannot RNG abuse your TID/SID, this tutorial is only for finding your TID/SID <u>in an existing save file.</u><br /><br />
+
+<h3><span class="fw-bold">Getting Started:</span></h3>
+
+There are two methods you can use to find your TID/SID combination, both with a unique set of requirements. Your options are:<br />
+<ol>
+  <li>Ask a friend or use a Discord bot running Sysbot.NET to dump the file, then view the data in PKHeX to find your TID/SID. (Recommended - NSO required)</li>
+  <li>Find a shiny Pokemon without RNG abuse, identify your current seed after capture and then perform a reverse search using the generator to find your TID/SID. (No NSO required - Requires a shiny)</li>
+</ol>
+
+<h3><span class="fw-bold">Sysbot.NET or the help of a friend:</span></h3>
+
+Sysbot.NET or a friend running CFW can dump the data file of your Pokemon which you can then view in a PKHeX to easily find your TID/SID combination. Many Discord servers host their own Sysbots that users can use to dump the data of their Pokemon, Use Google to find one that you can use!<br /><br />
+  
+<u>Requirements:</u>
+<ul>
+  <li><a href="https://projectpokemon.org/home/files/file/1-pkhex/">PKHeX</a> - For viewing Pokemon data.</li>
+  <li>Nintendo Switch Online - For interacting with a friend or bot using Wi-Fi.</li>
+</ul>
+
+<u>Finding your TID/SID with PKHeX (step-by-step tutorial):</u>
+<ol>
+  <li>Download and extract the <code>PKHeX.exe</code> into an empty folder and run the program.<li>
+  <li>Click <code>Options</code> at the top of the window, then click <code>Settings</code>, change the Blank Save Version to Sword or Shield.</li>
+  <li>Dump the data of any Pokemon that you have caught on your save file with the help of a friend or Sysbot.</li>
+  <li>Download the file and open it in PKHeX (right click the Pokemon + click view if you dragged it into a box slot).</li>
+  <li>Head over to the OT/Misc tab, you should see the trainer data of your Pokemon.</li>
+  <li>Hover over the TID/SID fields with your mouse, your 5 digit TID/SID will be displayed.</li>
+</ol>
+
+<span class="fw-bold">Figure 1 -</span> TID/SID Lookup using PKHeX<br />
+<img src="./overworld/images/finding-tid-sid/figure-1-pkhex-lookup.gif" style="width:675px;height:400px;"><br /><br />
+
+<h3><span class="fw-bold">Using a caught shiny Pokemon and RNG states:</span></h3>
+
+<u>Requirements:</u>
+<ul>
+  <li>Finding a random shiny Pokemon in the wild. (Not from a Max Raid or Dynamax Adventure!)</li>
+  <li>Knowing your RNG state shortly after capturing the shiny in order to reverse search the seed using the <code>Search for TID/SID</code> function of the generator.</li>
+</ul>
+
+<u>Finding your TID/SID using a caught wild Pokemon (step-by-step tutorial):</u><br /><br />
+
+Coming soon!<br /><br />
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/overworld">
+  Send me back to the main page!
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a>
