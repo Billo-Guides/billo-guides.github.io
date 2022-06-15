@@ -8,7 +8,7 @@ permalink: /cfw/lgpe/bird-watching
   <h1 class="text-light text-center pt-3 pb-3"> LGPE Overworld Legendary Bird Hunting (CFW)</h1>
 </div>
 
-This guide will cover the process of how you can find members of the legendary bird trio Articuno, Zapdos & Moltres in the overworld easily by using the moarencounterbots branch of the Sysbot.NET repository by <a href="https://github.com/Lusamine">Lusamine</a>.<br /> <br />
+This guide will cover the process of how you can find members of the legendary bird trio Articuno, Zapdos & Moltres in the overworld easily, by using the moarencounterbots branch of the Sysbot.NET repository by <a href="https://github.com/Lusamine">Lusamine</a>.<br /> <br />
 
 <span class="fw-bold">This guide assumes you are using a CFW Switch console running Atmosphere.</span><br /><br />
 
@@ -23,8 +23,8 @@ Visit the <a href="https://github.com/kwsch/SysBot.NET/wiki/Building-the-.sln">o
 
 <u>Installation Instructions:</u>
 <ol>
-  <li>Download and extract the contents from the sys-botbase download into an empty folder.</a></li>
-  <li>Place the <code>atmosphere</code> folder(s) from the sys-botbase download onto the root of your Switch SD card.</li>
+  <li>Download sys-botbase and extract the contents into an empty folder.</a></li>
+  <li>Place the <code>atmosphere</code> folder from the sys-botbase download onto the root of your Switch SD card.</li>
   <li>Check the <code>/atmosphere/contents</code> directory of your SD card a folder named <code>430000000000000B</code>.</li>
   <li>Reboot your Switch and launch CFW.</li>
 </ol>
@@ -36,9 +36,9 @@ In order to use the LGPE encounterbots, open the <code>.exe</code> once and clos
 <span class="fw-bold">Figure 1 -</span> Hub tab overview<br />
 <img src="./images/bird-watching/figure-1-hub-overview.gif" style="width:675px;height:400px;"><br /><br />
 
-The Hub tab is where decide the type of encounter we are doing, and which Pokemon to hunt for. Scroll down to <code>EncounterLGPE</code> and set your conditions, click on each of the fields and you will be met with a short description about them at the bottom of the window.<br /> <br />
+The Hub tab is where decide the type of encounter we are doing and which Pokemon to hunt for. Scroll down to <code>EncounterLGPE</code> and set your conditions, click on each of the fields and you will be met with a short description about them at the bottom of the window.<br /> <br />
 
-Now scroll down to stopconditions and set your filters for your legendary bird of choice, you can be as specific with the filters as you like, such as filtering for specific IVs or shiny type, or have the bot continue the routine if the legendary bird is not shiny.<br /> <br />
+Now scroll down to <code>StopConditions</code> and set your filters for your legendary bird of choice, you can be as specific with the filters as you like, such as filtering for specific IVs or shiny type, or have the bot continue the routine if the legendary bird is not shiny.<br /> <br />
 
 Suggested settings and a detailed overview of each setting can be found on the <a href="https://github.com/Lusamine/SysBot.NET/wiki/LGPE-EncounterBots">moarencounterbots Wiki</a>, <u>it's recommended to read this page in its entirety before starting</u>, it contains a lot of useful information!<br /> <br />
 
@@ -61,7 +61,7 @@ The goal is to spawn the legendary bird of choice in the overworld. we will use 
 - If you do not want the bot to stop on non-shiny results set the <code>StopOnAllBirdsLGPE</code> setting to FALSE in <code>StopConditions</code><br />
 - If you wish to hunt for a specific bird you must set the <code>StopOnSpecies</code> setting to your bird of choice in <code>StopConditions</code><br />
 - The bot assumes you are using the Pokecenter at Mt. Moon and have defeated/caught the legendary bird trio in their original static locations.<br />
-- The legendary birds are sky spawns, meaning you must have unlocked the ability to encounter sky spawns in-game, given shortly after defeating the Elite 4.<br /><br /><br />
+- The legendary birds are sky spawns, meaning you must have unlocked the ability to encounter sky spawns in-game, given shortly after defeating the Elite 4.<br /><br />
 
 <h4><span class="fw-bold">Shiny Hunting Stratergy:</span></h4>
 To get optimal chances of finding a shiny legendary bird you should capture every bird that spawns of your chosen species. Upon capturing a Pokemon your shiny odds will increase for the next Pokemon that spawns of the same species.<br /> <br />
