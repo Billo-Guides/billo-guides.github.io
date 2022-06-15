@@ -53,3 +53,51 @@ The Log tab is where we monitor what is going on in-game, it shows us what the b
 The Bots tab is where we add bots, select the <code>EncBotBirdWatch</code> option in the dropdown menu, type your switch IP into the field and click <code>Add</code> to add a new instance of EncBotBirdWatch.<br /> <br />
 
 <span class="fw-bold">With setup out of the way, it's time hunt some legendary birds!</span><br /><br />
+
+<h3><span class="fw-bold">Let's go to work!</span></h3>
+
+The goal is to spawn the legendary bird of choice in the overworld. we will use the bot to predict when a bird will spawn and to advance towards our target. It will then output the result and pause the game using the home button so that we can catch it!<br /> <br />
+
+- If you do not want the bot to stop on non-shiny results set the <code>StopOnAllBirdsLGPE</code> setting to FALSE in <code>StopConditions</code><br />
+- If you wish to hunt for a specific bird you must set the <code>StopOnSpecies</code> setting to your bird of choice in <code>StopConditions</code><br />
+- The bot assumes you are using the Pokecenter at Mt. Moon and have defeated/caught the legendary bird trio in their original static locations.<br />
+- The legendary birds are sky spawns, meaning you must have unlocked the ability to encounter sky spawns in-game, given shortly after defeating the Elite 4.<br />
+
+<h4><span class="fw-bold">Shiny Hunting Stratergy:</span></h4>
+To get optimal chances of finding a shiny legendary bird you should capture every bird that spawns of your chosen species. Upon capturing a Pokemon your shiny odds will increase for the next Pokemon that spawns of the same species.<br /> <br />
+
+For this reason it's recommended to have <code>StopOnAllBirdsLGPE</code> set to TRUE, you can then chain capture your chosen species for boosted shiny odds.<br /> <br />
+
+In this example we will be looking for any legendary bird at Mt. Moon Pokecenter, you can be more specific with the filters if you wish.<br /> <br />
+
+<span class="fw-bold">Figure 4 -</span> Game Setup<br />
+<img src="./images/bird-watching/figure-4-game-setup.jpg" style="width:675px;height:400px;"><br /><br />
+
+Once you are stood outside Mt. Moon and have your bot configured properly, click <code>Start All</code> and head over to the Logs tab.<br /> <br />
+
+<span class="fw-bold">Figure 5 -</span> Bot Started<br />
+<img src="./images/bird-watching/figure-5-bot-started.gif" style="width:675px;height:400px;"><br /><br />
+
+The bot should now begin hunting for birds by exiting the Pokecenter then checking your RNG states. If you are having trouble exiting/entering the Pokecenter consider adjusting your timing settings.<br /> <br />
+
+<span class="fw-bold">Figure 6 -</span> Target Found!<br />
+<img src="./images/bird-watching/figure-6-target-found.png" style="width:675px;height:400px;"><br /><br />
+
+The bot will now begin waiting for your bird to spawn in the overworld, once it detects the encounter it will pause the game if it meets your stop conditions, otherwise it will continue looking for results.<br /> <br />
+
+<span class="fw-bold">Figure 7/8 -</span> Result Found!<br />
+<img src="./images/bird-watching/figure-7-result-found-bot.png" style="width:675px;height:400px;"><br />
+<img src="./images/bird-watching/figure-8-result-found-game.jpg" style="width:675px;height:400px;"><br />
+
+We found a Zapdos in the overworld! Time to catch it to boost the shiny odds of the next Zapdos we find.
+
+<span class="fw-bold">Figure 9 -</span> Result captured!<br />
+<img src="./images/bird-watching/figure-9-result-captured.jpg" style="width:675px;height:400px;"><br /><br />
+
+You can now repeat this process and farm as many birds as you desire!<br /><br />
+
+<u>Disclaimer:</u>
+- This method does not guarantee shiny results, you may need to run the bot for a long period of time to find shinies.<br /><br />
+
+<u>Credits:</u>
+Huge credit to Anubis aka Lusamine for creating moarencounterbots and developing the method to find legendary birds, without them this guide would not be possible.<br /><br />
