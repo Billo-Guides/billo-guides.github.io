@@ -1,1 +1,234 @@
+---
+layout: default
+title: Static RNG (Retail)
+permalink: /retail/swsh/overworld/static
+---
+
+<div class="bg-success title">
+  <h1 class="text-light text-center pt-3 pb-3">Static Encounter RNG (Retail)</h1>
+</div>
+
+<hr />
+
+If you made it this far, it must mean you have an interest in RNG abusing Pokémon from static encounters! This page will cover the whole process, from finding a desirable location to achieving a final result.<br /> <br />
+
+<h3><span class="fw-bold">Getting Started:</span></h3>
+<u>Before starting, do the following:</u>
+<ul>
+  <li>Open the GUI and click on the <code>Encounter Lookup</code> button at the top of the main window. This will open the Encounter Lookup tab.</li>
+  <li>Type the species name of the Pokémon you are hunting into the empty field, this will bring up a list of every possible encounter and has all the information you need for the main window.</li>
+  <li>Scroll down the list of encounters and click on one of the rows displaying a static encounter, this will automatically enter the information into the main window.</li>
+  <li>Enter your 5 digit TID/SID into the fields on the main window, select <code>Shiny Charm & Mark charm</code> if you have them present in your save file.</li>
+  <li>All of the birds are shiny locked and have 3 guaranteed IVs, click the <code>Shiny Locked</code> checkbox and set the IV count to 3.<li>
+  <li>Head to the location of the bird in-game in-game and save.</li>
+</ul>
+
+<u>You must have also met the following in-game requirements:</u>
+<ul>
+  <li>Have the legendary birds roaming in each of the Wild Areas by completing the Crown Tundra main quest.</li>
+  <li>Unlock a fly point in each of the areas. Snowslide Slope (Articuno) East Lake Axewell (Zapdos) Fields of honor (Moltres) are recommended.</li>
+</ul>
+
+<h3><span class="fw-bold">Day Skipping:</span></h3>
+If you plan to use the day skipping exploit to advance the RNG state, you should take a moment to monitor your advances to avoid overshooting. Skip 1 day at a time and reidentify your current seed to get a rough estimate of how many frames will advance per day skipped.<br /><br />
+
+<span class="fw-bold">Day skipping will change the weather in the area!</span> Be sure to set your date back to how it was originally to restore the weather condition.<br /><br />
+
+<h3><span class="fw-bold">Identifying your current seeds:</span></h3>
+It's impossible to search for results without knowing the current seeds, this is done through the <code>Retail Seed Finder</code> tab of the generator. Click the Retail Seed Finder button at the top of the main window and begin recording your sequence of animations.<br /><br />
+
+<u>Step-by-step instructions for identifying your current RNG states:</u>
+<ul>
+  <li>Open the game and enter the overworld.</li>
+  <li>Pause the game using X, click "Pokémon", then view the summary of any of your Pokémon.</li>
+  <li>Open the Seed Finder tab of the GUI and have your Pokémon animate.</li>
+  <li>Click (or type) 0 if your animation was physical.</li>
+  <li>Click (or type) 1 if your animation was special.</li>
+  <li>Repeat this process 128 times and your seed will be generated. Click <code>Update Main Form</code> and exit back to the main window.</li>
+</ul>
+
+This can seem like a lengthy and tedious process at first glance (it kinda is), for this reason it's advised to remap your controller button layout if you are able to do so, such as remapping L3 to Y. This is done through the Switch system settings.<br /><br />
+
+Once you know your seed you can easily re-identify your current state within 10-20 animations, this is done using the <code>Retail Advances Tracker</code> feature on the main window of the generator.<br /><br />
+
+<u>Re-identifying your current RNG states using the Retail Advances Tracker:</u>
+<ul>
+  <li>Click <code>Generate Pattern</code> once you have found your seeds using Seed Finder.</li>
+  <li>Pause the game using X, click "Pokémon", then view the summary of any of your Pokémon and have it do some animations.</li>
+  <li>Click (or type) 0 into the field if your animation was physical.</li>
+  <li>Click (or type) 1 into the field if your animation was special.</li>
+  <li>Repeat roughly 10-20 times until you are given 1 possible result. Click <code>Update States</code> to automatically paste your new seeds into the correct fields.</li>
+</ul>
+
+Seed re-identification plays a huge role, it helps us keep track of the amount of advancements that have happened between searches. This is extremely helpful for closing in on a specific target frame or finding out how many advancements a specific action achieves.<br /><br />
+
+<span class="fw-bold">With all the required reading out of the way, it's time to get started!</span><br /><br />
+
+<hr />
+
+<h3><span class="fw-bold">Time to get to work!</span></h3>
+The goal is to fly into the location of our desired bird on the calculated target frame given by the generator. The advancement methods used are listed on the main page of this guide.<br /><br />
+
+The birds are guaranteed to spawn in the Wild Areas once you complete the requirements to have them roaming. Their internal details will be set in stone until you leave the area, this means we can use fly or leave the area to regenerate the IVs/Nature/Mark of our bird if we miss our target frame.<br /><br />
+
+The delay for each of the birds varies. It's recommended to take a few practice attempts and note down your delay for the highest chances of being able to hit the target frame. See the <code>Troubleshooting Encounters</code> section at the bottom of this page if you are running into problems with delay calculation.<br /><br />
+
+<span class="fw-bold" style="color:#C1A9CA;">Articuno</span><br />
+<span class="fw-bold">Location:</span> Crown Tundra<br />
+<span class="fw-bold">Recommended fly point:</span> Snowslide Slope<br />
+<span class="fw-bold">Recommended starting delay:</span> 130-140<br /><br />
+
+<span class="fw-bold" style="color:#E76236;">Zapdos</span><br />
+<span class="fw-bold">Location:</span> Wild Area (Meetup Point/Motostoke Area)<br />
+<span class="fw-bold">Recommended fly point:</span> East Lake Axewell<br />
+<span class="fw-bold">Recommended starting delay:</span> 20-30<br /><br />
+
+<span class="fw-bold" style="color:#DE2B5C;">Moltres</span><br />
+<span class="fw-bold">Location:</span> Isle of Armor<br />
+<span class="fw-bold">Recommended fly point:</span> Master Dojo<br />
+<span class="fw-bold">Recommended starting delay:</span> 60-80<br /><br />
+
+We will be aiming for a 5IV marked Zapdos in this example. You can be more specific with the filters if you wish, such as filtering for a specific mark or specific IVs. The process for RNG abusing each of the birds is the same.</span> You will simply fly to the correct location depending on which of the birds you are hunting.<br /><br />
+
+These legendaries are shiny locked! The <code>Shiny Locked</code> box is checked before beginning to search.<br /><br />
+
+<span class="fw-bold">Figure 1 -</span> Tool setup<br />
+<img src="./images/galar-bird-trio/figure-1-encounter-lookup-bird-trio.gif" style="width:675px;height:400px;"><br /><br />
+
+<span class="fw-bold">Awesome, everything looks good!</span> Time to fly into location in-game.<br /><br />
+
+<span class="fw-bold">Figure 2 -</span> Game setup<br />
+<img src="./images/static/figure-2-in-game-setup.gif" style="width:675px;height:400px;"><br /><br />
+
+<span class="fw-bold">Figure 3 -</span> Recommended Fly Points<br />
+<img src="./images/galar-bird-trio/figure-3-fly-points.gif" style="width:675px;height:400px;"><br />
+
+<u>These three fly points are suggested as they're close to the spawn point of each of the birds, meaning we can encounter them more quickly.</u><br /><br />
+
+<span class="fw-bold">Figure 4 -</span> Seed identification<br />
+<img src="./images/static/figure-4-seed-identification-static.gif" style="width:675px;height:400px;"><br /><br />
+  
+After recording 128 animations the seed will be generated, clicking <code>Update Main Form</code> will automatically paste the information into the correct field of the main wndow, <span class="fw-bold">don't forget to do this before exiting the <code>Retail Seed Finder</code> tab!</span><br /><br />
+  
+Once the main window is filled in correctly, you've identified your current seeds & you are stood in a good position in-game, you can begin looking for target frames by clicking the search button on main window of the generator.<br /><br />
+
+<u>If your results are not desirable, you will need to close the game and identify your current seeds again using the <code>Retail Seed Finder</code> tab.</u><br /><br />
+
+<span class="fw-bold">Figure  4 -</span> Target found!<br />
+<img src="./images/static/figure-4-static-search-aerodactyl.png" style="width:675px;height:400px;"><br /><br />
+
+<span class="fw-bold">We found one!</span> A shiny, x natured Zapdos in a cluster on advances x-y. These are the "target frames" and the aim will be to spawn Zapdos in the overworld on any of these frames.<br /><br />
+
+Once the bird is spawned in the overworld the stats and internal details (such as PID/EC) are generated and set in stone, this is why it is only important to fly in and spawn the bird in the overworld on the correct frame. <span class="fw-bold">Don't let the Pokémon despawn after you spawn it in the overworld!</span><br /><br />
+
+It's common to see "clusters" or "groups" of frames that produce the same result when searching for a target. Aiming for large clusters is recommended as this will provide more chances for the player to spawn the Pokémon on the correct frame.<br /><br />
+
+<u>Advancing towards the target (Step-by-step example):</u><br />
+<ul>
+  <li>The target is x-y advances away, based on local testing the delay for this encounter is 30, this means the target frames for this attempt are frame x-y.</li>
+  <li>Advance towards the target frame using bike, NPCs or using other spawned overworld Pokémon in the area. You can use DaySkip to advance large distances quickly too!</li>
+  <li>Once you believe you are close enough to a target (within ~500 frames), pause the game and re-identify your current seed.</li><br />
+  
+  From this point it's recommended to only advance by opening and closing the menu and using animation/bike advancements as they are easier to keep track of.<br /><br />
+  
+  <li>Close and reopen the map, re-identify your current seeds using the Retail Advances Tracker and take note of the number of advancements that have passed. Repeat this process a few times and then take the highest number of advances from your results.</li>
+  <li>Advance closer to your target (within ~100 frames) and pause the game again, reidentify your current seeds.</li><br />
+
+  From this point it's recommended to only advance using animations, animations provide a consistent +1 advancement per button press, which means we can use it to keep track advancements with 100% accuracy.<br /><br />
+  
+  <li>Use animation advances to advance close towards your target frame, factor in the number of advances that pass from flying into an area and amount of frames that advance from opening the map.</li>
+  <li>Close the summary screen, open the map, and fly into the area of your chosen bird, then chase it down and initiate the encounter.</li>
+</ul>
+
+You can be creative with the methods you use to advance the RNG state.<br /><br />
+
+<span class="fw-bold">Figure  5 -</span> Target Frame Hit!<br />
+<img src="./images/static/figure-5-static-hit-aerodactyl.png" style="width:675px;height:400px;"><br /><br />
+
+By using animations and a standard calculator to keep track of inputs, we were able to hit out target frame!<br /><br />
+
+Earlier calculated a rough delay of 30 upon flying into East Lake Axewell and 3 frames from opening the map. So we are now 33 frames away from the target with the pause menu open, flying into East Lake Axewell should spawn now the bird we are targeting.<br /><br />
+
+If you believe you flew into position on the correct frame, capture the Pokémon and confirm it matches the result displayed on the main window of the generator.<br /><br />
+
+<span class="fw-bold">Figure 6/7 -</span> Result Found!<br />
+<img src="./images/static/figure-6-static-in-battle.jpg" style="width:675px;height:400px;"><br /><br />
+<img src="./images/static/figure-7-static-summary-screen.jpg" style="width:675px;height:400px;"><br /><br />
+
+<span class="fw-bold">The Zapdos matches the output of the generator, mission accomplished!</span> Espeon in party slot 1 with the ability Syncronize was used to determine the nature, using a Pokémon with this ability will make the nature of any overworld Pokémon match the nature of yours.<br /><br />
+
+Different areas & environments can have a drastic influence on delay, if you are missing targets when you believe you should be finding results, you should consider reading the Troubleshooting Encounters section down below.<br /><br />
+
+<hr />
+
+<div class="bg-secondary title">
+  <h1 class="text-light text-center pt-3 pb-3">Troubleshooting Encounters</h1>
+</div>
+
+<hr />
+
+This section covers how to troubleshoot encounters and delays. If you keep missing targets, spawning in the wrong Pokémon, or can't find your result on the RNG tool, this is the place to be.<br /><br />
+
+<h3><span class="fw-bold">Missing Targets:</span></h3>
+<u>The commonly occuring reasons for missing a target Pokémon are:</u>
+<ul>
+  <li>Encounter spawned too early/late due to mistiming.</li>
+  <li>There is a delay left unaccounted for.</li>
+  <li>Information in the main window was not completely accurate.</li>
+</ul>
+
+<h5><span class="fw-bold">Encounter spawned too early or too late...</span></h5>
+
+This is a common issue players will face when tackling this hunt as the delay is variable and not always consistent. Retry and search for a new target frame, take note of your delays on each attempt and go for the one you are hitting most often.<br /><br />
+
+<h5><span class="fw-bold">Troubleshooting delay...</span></h5>
+
+For the purposes of this guide, the term "delay" is used to describe the frame difference between the Pokémon we encountered and the frame the encounter was initiated on.<br /><br />
+
+Delay Calc - <code>frame Pokemon was generated - frame encounter was initiated = delay</code><br /><br />
+
+We can use an IV calculator to confirm the exact frame the encounter was generated on and calculate the delay from there. Here's how it's done!
+<ul>
+  <li>Aim for a target, such as any marked legendary bird.</li>
+  <li>Take a practice attempt and fly into the target. Take note of the frame you initiated fly.</li>
+  <li>Encounter the Pokémon and capture it, then calculate the exact IVs using an IV calculator such as the <a href="http://www.psypokes.com/dex/iv.php">this one by Psypokes</a>.</li>
+  <li>If you didn't find the Pokémon that you expected, search for the specific IVs of the result you found and find the frame you hit.</li>
+  <li>Subtract your target advancement from the frame you actually hit.</li>
+  <li>This will be your delay for that particular encounter.</li>
+</ul>
+
+Once you have noted down a few delays aim for targets once again, this time factoring in the delay you noted down. For example if we hit a delay of 30, our final A press will be 30 frames before the result you can see on the generator.<br /><br />
+
+<span class="fw-bold">Figure 8 -</span> Delay troubleshooting example<br />
+<img src="./images/static/figure-8-troubleshooting-encounters.jpg" style="width:675px;height:400px;"><br /><br />
+
+We encountered an Zapdos, but it doesn't have the IVs we expected! So what happened here? Well... We miscalculated. Let's try to find the frame we actually hit.<br /><br />
+
+<span class="fw-bold">Figure 9 -</span> Calculating the IVs<br />
+<img src="./images/static/figure-9-calculating-IVs.png" style="width:675px;height:400px;"><br /><br />
+
+Using Psypokes IV calculator we can find the IVs of the Zapdos-Galar we hit and use this information to locate the exact frame we landed on according to the generator.<br /><br />
+
+<span class="fw-bold">Figure 10 -</span> Finding the frame<br />
+<img src="./images/static/figure-10-locating-frame.gif" style="width:675px;height:400px;"><br /><br />
+
+By filtering for IVs we can see the frame that generated the Zapdos, it was 1 frame behind where we wanted to be, oh well! We will adjust accordingly for next time by spawning it in the overworld 1 frame later.<br /><br />
+
+<h5><span class="fw-bold">Cannot find result...</span></h5>
+If you cannot find the Pokémon you are in battle with anywhere on the tool this is likely due to one of two reasons:
+<ul>
+  <li>Losing track of advancements.</li>
+  <li>The information entered into the main window of the tool was not completely accurate.</li>
+</ul>
+
+Double check the information on the main tab is entered correctly by searching it on the Encounter Lookup and clicking the correct row. <u>You must pay attention to the row you are clicking and making sure it matches your in-game environment.</u><br /><br />
+
+That's all there is to it!<br /><br />
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/overworld">
+  Send me back!
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a>
 
