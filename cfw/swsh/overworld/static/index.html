@@ -25,10 +25,12 @@ If you made it this far, it must mean you have an interest in RNG abusing Pokém
 
 When searching possible encounters it is suggested to pick an encounter in a quiet area with calm weather to reduce the amount of noise significantly. Noise is area specific, to test how much noise an area has, head to the location in-game and connect your console to the GUI while standing in the overworld and monitor the speed of advancements.<br /> <br />
 
+If you plan to use the <code>DaySkip</code> feature you should take a moment to monitor your advances to avoid overshooting. Connect to the GUI and skip 1 day at a time to get a rough estimate amount of advances per day skipped.<br /><br />
+
+<hr />
+
 <h3><span class="fw-bold">Time to get to work!</span></h3>
 The goal is to walk towards our encounter and spawn it on the calculated target frame displayed on the generator. The advancement methods used are listed in detail on the main page of this guide.<br /><br />
-
-If you plan to use the <code>DaySkip</code> feature you should take a moment to monitor your advances to avoid overshooting. Connect to the GUI and skip 1 day at a time to get a rough estimate amount of advances per day skipped.<br /><br />
 
 Static encounters are guaranteed to be the same species every time until the weather in the area changes, weather changes on each new day. As long as the correct weather conditions are set we will get the same species in the same location every time the player walks into the spawn radius of the Pokémon.<br /><br />
 
@@ -67,8 +69,10 @@ It's common to see "clusters" or "groups" of frames that produce the same result
 <ul>
   <li>The target is 1000-1001 advances away, based on local testing the delay for this static encounter is 0, this means the target frames for this attempt are frame 1000-1001.</li>
   <li>Advance towards the target frame using bike or using other spawned overworld Pokémon in the area. You can use DaySkip to advance large distances quickly too!</li>
-  <li>Once close enough (within ~500 frames), stand near to the spawn of the Pokémon you are hunting, far enough away to not have other Pokémon spawned in the overworld.</li>
-  <li>From this point it's recommended to only advance by opening and closing the menu and using player movement/bike advancements.</li>
+  <li>Once close enough (within ~500 frames), stand near to the spawn of the Pokémon you are hunting, far enough away to not have other Pokémon spawned in the overworld.</li><br />
+  
+  From this point it's recommended to only advance by opening and closing the menu and using player movement/bike advancements.<br /><br />
+  
   <li>Open and close the pause menu with X, take note of the number of advancements that have passed from doing so. Repeat this process a few times and then take the highest number of advances from your results.</li>
   <li>Advance closer to your target (within ~100 frames) and pause the game by pressing X.</li>
   <li>Use animation advances to get close towards your target frame, factor in the number of advances that pass from closing the menu. (For example: We get 5 advances from closing the menu and our target is 50 advances away, only 45 animation advances will be required as we'd pick up the remaining 5 from closing the pause menu.)</li>
