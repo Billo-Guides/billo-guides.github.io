@@ -45,7 +45,7 @@ Item RNG abuse is best utilized to help players obtain rare/valuable items such 
   <li>Have the Rotom PC lottery function & Cram-o-matic available for use.</li>
   <li>If you plan to RNG abuse the Cram-o-matic, have at least 4 apricorns to use in the machine.</li>
   <li>Stand next to the machine you want to work on.</li>
-  <li>Press the Home button on your controller, click <code>Connect</code> on the main window of the tool.</li>
+  <li>Pause the game using "X", click <code>Connect</code> on the main window of the generator.</li>
 </ul>
 
 <hr />
@@ -59,28 +59,47 @@ Item RNG abuse is best utilized to help players obtain rare/valuable items such 
   <li><span class="fw-bold">Active NPCs -</span> Standing near an NPC will "activate" them, this will advance the RNG state rapidly. - Area specific advancements, good for covering large amounts of advancements quickly.</li><br />
 </ol>
 
-<h3><span class="fw-bold">Day Skipping:</span></h3>
-We can use the <code>DaySkip</code> feature of the tool to advance the RNG state rapidly, up to a total of around 13,000 advancements per day skipped. The amount of frames that advance by Day Skipping is heavily influenced by the amount of Pokémon currently in your boxes, the number will increase drastically if you store more Pokémon. <u>Does not include Pokémon in eggs</u>.<br /><br />
+
+<h3><span class="fw-bold">What are motions/animations?</span></h3>
+The term "motions" or "animations" refers to a feature of the Pokémon summary page, when pressing L3 (Clicking in the left stick) your Pokémon will do one of two animations, physical or special. Recording these in sequence will eventually produce our current RNG state.<br /><br />
+
+<span class="fw-bold">Figure 0 -</span> Animation differences<br />
+<img src="./overworld/images/main-page/figure-0-animations.gif" style="width:675px;height:400px;"><br /><br />
+
+In the first animation Espeon swipes towards the screen, this is a clear physical animation.<br />
+In the second animation Espeon stays in place using a psychic move, this is a clear special animation.<br /><br />
 
 <h3><span class="fw-bold">Menu Close Prediction:</span></h3>
-We can use the <code>Menu Close Advances Viewer</code> to accurately predict the amount of advancements that will pass from closing the pause menu, this is based on the amount of NPCs in the building and if you were holding a direction on the control stick at the time of unpause.<br /><br /> 
+We can accurately predict the number of advancements that will pass when we close the pause menu. It is based on the number of NPCs in the area and if you were holding a direction on the control stick at the time of unpause. For Loto-ID and Cram-o-matic, the NPC Counts are likely as follows:<br /><br />
 
-<u>Here's how it's done:</u><br />
-- Connect to the generator.<br />
-- Click the <code>Menu Close Advances Viewer</code> button at the top of the generator to open a smaller window. If you have already connected to the generator you should see your current seeds already in the correct fields.<br />
-- Calculate the amount of NPCs in the building manually, note down the number into the <code>NPCs</code> field. (This includes Pokemon "NPCs")<br />
-- Enter your number of advancements into the <code>Init Adv.</code> field, as seen on the main window of the generator. (Starting from 0 advances is recommended)<br />
-- Enter the search range into the <code>+</code> field directly below and search, you should then do a few menu close advancements to make sure the prediction is accurate.<br /><br />
+<span class="fw-bold">Wedgehurst Center:</span> 5<br />
+<span class="fw-bold">Dojo (Completed IoA Story):</span> 21<br /><br />
 
-<span class="fw-bold">Closing the pause menu has an added effect of freezing noise in the area for a short time period</span>, we will use this window of silence in tandem with menu close prediction to near guarantee that we interact with the machine on the correct frame. (More on this below!)<br /><br />
-<hr />
+If you do not get the correct results, or are attempting to RNG something outside of the above areas, you will need to Calculate your NPC Count.<br /><br />
+  
+<u>This can be done using the Menu Close Advances Viewer as follows:</u>
+<ol>
+<li>Count the number of NPCs in the area you're in manually. This can also include Pokemon and models outside of render distance so may not be completely accurate, this simply provides a good starting point.</li>
+<li>Get into position and press "X" to open the menu.</li>
+<li>Connect to the generator. The number in the <code>Curr Adv.</code> field should be 0.</li>
+<li>Click the <code>Menu Close Advances Viewer</code> button at the top of the generator to open a smaller window. Your seeds should be visible in the correct fields.</li>
+<li>Take the number of NPCs you counted earlier and put it into the <code>NPCs</code> field.</li>
+<li>Enter the search range (a few hundred should be enough!) into the <code>+</code> field directly below and search, you should then close and reopen the menu to make sure the predicted advances match what you actually get.</li>
+<li>If the values do not match, tweak the number in the NPCs field (decrease the value if the number of advances you got was lower than expected, increase if it was higher) until it matches. Now do a few more menu advances then re-identify your current seed to make sure you stay on track with the generated "timeline".</li>
+</ol>
+
+<span class="fw-bold">Closing the pause menu has an added effect of freezing noise in the area for a short time period</span>, we will use this window of silence in tandem with menu close prediction to near guarantee that we interact with the machine on the correct frame.<br /><br />
+
+Menu close prediction is not a requirement to perform item RNG abuse, this is the recommended method to use as it allows you to precisely advance all the way up to your target using animations instead of relying on frame clusters or luck. This comes with the side effect of potentially finding fewer results but provides a lot more consistency.<br /><br />
+
+<span class="fw-bold">With all the required reading out of the way, let's get into it!</span><br /><br />
 
 <div class="bg-secondary title">
   <h1 class="text-light text-center pt-3 pb-3">Cram-o-matic RNG abuse (CFW)</h1>
 </div>
 
 <h3><span class="fw-bold">Time to get to work! </span></h3>
-The goal is to interact with the Cram-o-matic on the calculated target frame given to us by the <code>Cram-o-matic</code> tab of the generator. We will be using the advancement methods listed at the top of the page.<br /><br />
+The goal is to interact with the Cram-o-matic on the calculated target frame given to us by the <code>Cram-o-matic</code> tab of the generator. We will be using the advancement methods listed at the top of the page and using menu close prediction to hit the target frame.<br /><br />
 
 If you plan to use the <code>DaySkip</code> feature you should take note of how many frames advance per day skipped to ensure that you don't overshoot your target.<br /><br />
 
@@ -94,37 +113,41 @@ In this example we will be aiming for a 5 Level Balls. You can be more specific 
 <span class="fw-bold">Figure 2 -</span> Game setup<br />
 <img src="./images/cram-o-matic/figure-2-game-setup-cram.jpg" style="width:675px;height:400px;"><br /><br />
 
-Once the <code>Cram-o-matic</code> tab is filled in correctly with  you can begin looking for target frames by clicking the search button.<br /><br />
+Once the <code>Cram-o-matic</code> tab is filled in correctly, you can begin looking for target frames by clicking the search button.<br /><br />
 
 <u>If your results are not desirable, repeat the following:</u>
 <ol>
-  <li>Disconnect your Switch from the tool.</li>
+  <li>Disconnect your Switch from the generator.</li>
   <li>Restart your game and enter the overworld.</li>
-  <li>Enter the pause or Home menu and reconnect your Switch to the tool.</li>
+  <li>Enter the pause or Home menu and reconnect your Switch to the generator.</li>
   <li>Search again, do this until you have desirable results.</li>
 </ol>
   
 <span class="fw-bold">We found a target frame!</span> 5 Level Balls on advance 795. This is the frame we will press A to initiate the Cram-o-matic. The RNG state will not advance during the menus, you can safely press B if you miss and then begin looking for a new target.<br /><br />
 
+When using the <code>Consider menu close</code> feature, the output results are of the frame that you need to close the menu on, <u>NOT</u> the frame that you need to start the interaction on.<br /><br /> 
+
+After closing the pause menu on the correct target frame you should be able to quickly interact with the Cram-o-matic machine to claim your reward.<br /><br />
+
 <span class="fw-bold">Figure  3 -</span> Target found!<br />
 <img src="./images/cram-o-matic/figure-3-target-found-cram.png" style="width:675px;height:400px;"><br /><br />
   
-We'll want to exit the pause menu as close to the target frame as possible in order to freeze the noise in the area, then use rapid player movement advances to hit our target frame and finally, interact with the cram-o-matic on this frame.<br /><br />
+<span class="fw-bold">We found a target frame!</span> 5 Level Balls on advance 795. This will be the frame we close the pause menu and interact with the Cram-o-matic.<br /><br />
   
-Here's a more fleshed out example...<br /><br />
+<u>Here's a more fleshed out example...</u><br />
 <ul>
-  <li>The target is 795 advances away, delay is 0, and there are 20 NPCs in the building, this information has been entered into the <code>Retail Menu Advances Tracker</code> window.</li>
-  <li>Advance towards the target frame by standing close to a nearby NPC to slowly get closer. (Or use DaySkip to advance large distances quickly!)</li>
-  <li>Once close enough (Within ~200 frames of the target), run over to the PC.</li>
-  <li>From this point, only advance by using menu close prediction, animations and small player movements.</li><br />
+  <li>The target is 795 advances away, delay is 0, and there are 21 NPCs in the building, we are in the pause menu, our console is connected and the <code>Cram-o-matic</code> window is open.</li>
+  <li>Advance the RNG state by activating a nearby NPC or Date Skipping.</li>
+  <li>Once you are a within a few hundred frames of the target, run over to the Cram-o-matic machine.</li><br />
+
+  <span class="fw-bold">From this point, only advance by using menu close prediction and summary animations.</span><br /><br />
   
-  <li>Pause the game and reconnect to the generator, search for your target again on the <code>Cram-o-matic</code> window and take note of the target frame.</li>
-  <li>Open the <code>Retail Menu Advances Tracker</code> window, enter your target frame into the <code>+</code> field then search. You can now see how many advancements will pass from closing the menu indicated under the <code>Jump</code> column.</li>
-  <li>Close and reopen the pause menu until you are close to your target frame, use animation advancements to line up properly with your target.</li>
-  <li>If you undershoot the target nudge control stick quickly, once you see your target frame in the <code>Curr. Adv</code> field, interact with the Cram-o-matic by pressing A.</li>
+  <li>Open the <code>Cram-o-matic</code> window and search for your target again.</li>
+  <li>Use animations to advance to the target frame as displayed by the <code>Cram-o-matic</code> window. (Use the <code>Curr. Adv</code> field of the generator to keep track.)</li>
+  <li>Close the pause menu then quickly interact with the Cram-o-matic machine by pressing "A".</li>
 </ul>
 
-Player movement will advance the RNG state 1-2 frames with each new stick input, allowing for more precise advancements during the window of silence, making it much easier to hit a target frame.<br /><br />
+Player movement will advance the RNG state 1-2 frames with each new stick input, allowing for more precise advancements during the window of silence, making it much easier to hit a target frame if we undershoot for any reason.<br /><br />
 
 If you believe you interacted with the Cram-o-matic on the correct frame, feed it 4 apricorns and take your reward! Make sure the reward matches the output of the generator.<br /><br />
 
@@ -134,7 +157,7 @@ If you believe you interacted with the Cram-o-matic on the correct frame, feed i
 
 The result matches the output of the generator, mission accomplished! We got 5 Level Balls from the Scam-o... er... Cram-o-matic on our first attempt!<br /><br />
 
-That's all there is to RNG abusing the Cram-o-matic!<br />
+That's all there is to RNG abusing the Cram-o-matic using CFW!<br />
 
 <hr />
 
@@ -174,24 +197,24 @@ Once the <code>Loto-ID</code> tab is filled in correctly you can begin looking f
 <span class="fw-bold">Figure  3 -</span> Target found!<br />
 <img src="./images/loto-id/figure-3-target-found-loto.png" style="width:675px;height:400px;"><br /><br />
   
-We'll want to exit the pause menu as close to the target frame as possible in order to freeze the noise in the area, then use rapid player movement advances to hit our target frame and finally, interact with the PC on this frame.<br /><br />
+<span class="fw-bold">We found a target frame!</span> A Master Ball on advance 806-808. This will be the frame we close the pause menu and interact with the PC.<br /><br />
   
-Here's a more fleshed out example...<br /><br />
+<u>Here's a more fleshed out example...</u><br />
 <ul>
-  <li>The target is 806-808 advances away, delay is 0, and there are 7 NPCs in the building, this information has been entered into the <code>Retail Menu Advances Tracker</code> window.</li>
-  <li>Advance towards the target frame by standing close to a nearby NPC to slowly get closer. (Or use DaySkip to advance large distances quickly!)</li>
-  <li>Once close enough (Within ~200 frames of the target), run over to the PC.</li>
-  <li>From this point, only advance by using menu close prediction, animations and small player movements.</li><br />
+  <li>The target is 806-808 advances away, delay is 0, and there are 7 NPCs in the building, we are in the pause menu, our console is connected and the <code>Cram-o-matic</code> window is open.</li>
+  <li>Advance the RNG state by activating a nearby NPC or Date Skipping.</li>
+  <li>Once you are a within a few hundred frames of the target, run over to the Rotom PC.</li><br />
+
+  <span class="fw-bold">From this point, only advance by using menu close prediction and summary animations.</span><br /><br />
   
-  <li>Pause the game and reconnect to the generator, search for your target again on the <code>Loto-ID</code> window and take note of the target frame.</li>
-  <li>Open the <code>Retail Menu Advances Tracker</code> window, enter your target frame into the <code>+</code> field then search. You can now see how many advancements will pass from closing the menu indicated under the <code>Jump</code> column.</li>
-  <li>Close and reopen the pause menu until you are close to your target frame, use animation advancements to line up properly with your target frame.</li>
-  <li>If you undershoot the target nudge control stick quickly, once you see your target frame in the <code>Curr. Adv</code> field, interact with the PC by pressing A.</li>
+  <li>Open the <code>Loto-ID</code> window and search for your target again.</li>
+  <li>Use animations to advance to the target frame as displayed by the <code>Loto-ID</code> window. (Use the <code>Curr. Adv</code> field of the generator to keep track.)</li>
+  <li>Close the pause menu then quickly interact with the Rotom PC by pressing "A".</li>
 </ul>
 
-Player movement will advance the RNG state 1-2 frames with each new stick input, allowing for more precise advancements during the window of silence, making it much easier to hit a target frame if menu close prediction fails.<br /><br />
+Player movement will advance the RNG state 1-2 frames with each new stick input, allowing for more precise advancements during the window of silence, making it much easier to hit a target frame if we undershoot for any reason.<br /><br />
 
-If you believe you interacted with the PC on the correct frame, click the <code>Try Loto-ID</code> option in-game and spam through the menus to claim your reward! Make sure the reward matches the output of the generator.<br /><br />
+If you believe you interacted with the PC on the correct frame, click the "Try Loto-ID" option and claim your reward! Make sure the reward matches the output of the generator.<br /><br />
 
 <span class="fw-bold">Figure 4/5 -</span> Result Found!<br />
 <img src="./images/loto-id/figure-4-result-found-loto.png" style="width:675px;height:400px;"><br /><br />
