@@ -65,10 +65,10 @@ Seed re-identification plays a huge role, it helps us keep track of the amount o
 <h3><span class="fw-bold">Time to get to work!</span></h3>
 The goal is to walk towards into grass and spawn a hidden encounter (shaking grass) on the calculated target frame given by the generator. The advancement methods used are listed in detail on the main page of this guide.<br /><br />
 
-We will be aiming for a Shiny -pokemonnamehere- in Glimwood Tangle. You can be more specific with the filters if you wish, such as filtering for a specific mark or specific IVs.<br /><br />
+We will be aiming for a Shiny Sinistea-Antique in Glimwood Tangle. You can be more specific with the filters if you wish, such as filtering for a specific mark or specific IVs.<br /><br />
 
 <u>Using -pokemonnamehere- as the example:</u><br />
-- The <code>Encounter Lookup</code> tab tells us that -pokemonnamehere- has an encounter slot range of x-y, a level range of x-y and is a hidden encounter in x weather. It also tells us -pokemonnamehere- does not hold a random item and has x potential Egg Moves.<br />
+- The <code>Encounter Lookup</code> tab tells us that Sinistea-Antique has an encounter slot range of 99-99, a level range of 34-36 and is a hidden encounter in x weather. It also tells us Sinistea-Antique does not hold a random item and has 0 potential Egg Moves.<br />
 - Clicking the row that applies to our encounter will enter all the information we need into the main window.<br />
 - KO count is irrelevant as hidden encounters cannot be Brilliant Aura.<br /><br />
 
@@ -96,7 +96,7 @@ Once the main window is filled in correctly, you've identified your current seed
 <span class="fw-bold">Figure  4 -</span> Target found!<br />
 <img src="./images/hidden/figure-4-hidden-search.png" style="width:675px;height:400px;"><br /><br />
 
-<span class="fw-bold">We found one!</span> A shiny, x natured -pokemonnamehere- in a cluster on advances x-y. These are the "target frames" and the aim will be to spawn -pokemonnamehere in the grass on any of these frames.<br /><br />
+<span class="fw-bold">We found one!</span> A shiny, x natured Sinistea-Antique in a cluster on advances x-y. These are the "target frames" and the aim will be to spawn an encounter in the grass on any of these frames.<br /><br />
 
 Hidden encounters have a chance of spawning per step taken while in grass. If the encounter does not spawn in the first 1-2 steps there is a good chance that you will miss your target frame.<br /><br />
 
@@ -114,7 +114,7 @@ It's common to see "clusters" or "groups" of frames that produce the same result
   From this point it's recommended to only advance by opening and closing the menu and using animation/bike advancements as they are easier to keep track of.<br /><br />
   
   <li>Quickly close and reopen the pause menu to avoid any random advancements, re-identify your current seeds using the Retail Advances Tracker and take note of the number of advancements that have passed. Repeat this process a few times and then take the highest number of advances from your results.</li>
-  <li>Advance closer to your target (within ~100 frames) and pause the game again, reidentify your current seeds.</li><br />
+  <li>Advance closer to your target (within ~100 frames) and pause the game again, reidentify your current seeds. (Make sure you are not riding your bike.)</li><br />
 
   From this point it's recommended to only advance using animations, animations provide a consistent +1 advancement per button press, which means we can use it to keep track advancements with 100% accuracy.<br /><br />
   
@@ -131,15 +131,15 @@ You can be creative with the methods you use to advance the RNG state.<br /><br 
 
 By using animations and a standard calculator to keep track of inputs, we were able to hit out target frame!<br /><br />
 
-Earlier we used seed re-identification and calculated that closing the pause menu advances roughly 6 frames. So we are now 6 frames away from the target with the pause menu open, closing the menu and spawning a hidden encounter in 1-2 steps should spawn the shiny -pokemonnamehere- we are targeting.<br /><br />
+Earlier we used seed re-identification and calculated that closing the pause menu advances roughly 10 frames and the base delay in the area is 5. So we are now 15~ frames away from the target with the pause menu open, closing the menu and spawning a hidden encounter in 1-2 steps should spawn the shiny Sinistea-Antique we are targeting.<br /><br />
 
-If you believe you hit your target frame, close the pause menu and quickly run towards the grass to spawn the Pokémon, capture it and confirm it matches the result displayed on the main window of the generator.<br /><br />
+If you believe you hit your target frame, close the pause menu and quickly run into the grass to (hopefully) spawn the Pokémon, capture it and confirm it matches the result displayed on the main window of the generator.<br /><br />
 
 <span class="fw-bold">Figure 6/7 -</span> Result Found!<br />
 <img src="./images/hidden/figure-6-hidden-in-battle.jpg" style="width:675px;height:400px;"><br /><br />
 <img src="./images/hidden/figure-7-hidden-summary-screen.jpg" style="width:675px;height:400px;"><br /><br />
 
-<span class="fw-bold">The -pokemonnamehere- matches the output of the generator, mission accomplished!</span> Espeon in party slot 1 with the ability Syncronize was used to determine the nature, using a Pokémon with this ability will make the nature of any overworld Pokémon match the nature of yours.<br /><br />
+<span class="fw-bold">The Sinistea-Antique matches the output of the generator, mission accomplished!</span> Espeon in party slot 1 with the ability Syncronize was used to determine the nature, using a Pokémon with this ability will make the nature of any overworld Pokémon match the nature of yours.<br /><br />
 
 Different areas & environments can have a drastic influence on delay, if you are missing targets when you believe you should be finding results, you should consider reading the Troubleshooting Encounters section down below.<br /><br />
 
@@ -184,7 +184,7 @@ We can use the <code>Read Encounter</code> feature of the tool to confirm the ex
 <ul>
   <li>Aim for a target, such as any shiny Pokémon.</li>
   <li>Walk towards the grass, spawn the Pokemon and initiate an encounter. Take note of the frame the Pokémon was spawned on.</li>
-  Encounter the Pokémon and capture it, then calculate the exact IVs using an IV calculator such as the <a href="http://www.psypokes.com/dex/iv.php">this one by Psypokes</a>.</li>
+  Encounter the Pokémon and capture it, then calculate the exact IVs using an IV calculator such as the <a href="https://www.serebii.net/games/iv-calcswsh.shtml">this one by Serebii</a>.</li>
   <li>If you didn't find the Pokémon that you expected, do a filterless search (or search for the specific IVs of the result you found) and find the frame you hit.</li>
   <li>Subtract your target advancement from the frame you actually hit.</li>
   <li>This will be your delay for that particular encounter.</li>
@@ -195,14 +195,14 @@ We can use the <code>Read Encounter</code> feature of the tool to confirm the ex
 <span class="fw-bold">Figure 9 -</span> Delay troubleshooting example<br />
 <img src="./images/hidden/figure-9-troubleshooting-delay.png" style="width:675px;height:400px;"><br /><br />
 
-We hit a shiny, but it wasn't -pokemonnamehere-! So what happened here? We actually hit a different frame within a shiny cluster which contained the encounter slot values for -pokemonnamehere2-, we can take a look by locating the exact encounter in the <code>Encounter Lookup</code> tab and clicking search again on the main window. <br /><br />
+We hit a shiny, but it wasn't Sinistea-Antique! So what happened here? We actually hit a different frame within a shiny cluster which contained the encounter slot values for -pokemonnamehere2-, we can take a look by locating the exact encounter in the <code>Encounter Lookup</code> tab and clicking search again on the main window. <br /><br />
 
 <u>If the Pokemon you find is non shiny you will need to be more specific with your filters, include the exact IV of the result found to easily find the frame that you hit.</u><br /><br />
 
 <span class="fw-bold">Figure 10 -</span> Calculating the IVs<br />
 <img src="./images/symbol/figure-10-calculating-IVs.png" style="width:675px;height:400px;"><br /><br />
 
-Using Psypokes IV calculator we can find the rough IVs of the -pokemonnamehere2- we hit and use this information to locate the exact frame we landed on according to the generator.<br /><br />
+Using an IV calculator we can find the rough IVs of the -pokemonnamehere2- we hit and use this information to locate the exact frame we landed on according to the generator.<br /><br />
 
 <span class="fw-bold">Figure 11 -</span> Troubleshooting Encounter-slots<br />
 <img src="./images/hidden/figure-11-encounter-lookup-troubleshooting-morgrem.gif" style="width:675px;height:400px;"><br /><br />
