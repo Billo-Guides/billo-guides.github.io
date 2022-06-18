@@ -76,17 +76,17 @@ The goal is to walk towards the grass and spawn the Pokémon on the calculated t
 
 <u>The generator does not currently provide support for mechanics that boost the encounter rates of specific Pokémon, such as Dexrec boosts or abilities like Storm Drain. Using spawn boosters like these may output incorrect results.</u><br /><br />
 
-We will be aiming for a Shiny, Marked x with a Brilliant Aura in Slippery Slope. You can be more specific with the filters if you wish, such as filtering for a specific mark or specific IVs.<br /><br />
+We will be aiming for a Shiny, marked Phantump with a Brilliant Aura in Slippery Slope. You can be more specific with the filters if you wish, such as filtering for a specific mark or specific IVs.<br /><br />
 
-<u>Using -pokemonnamehere- as the example:</u><br />
-- The <code>Encounter Lookup</code> tab tells us that -pokemonnamehere- has an encounter slot range of x-y, a level range of x-y and is a symbol encounter in x weather. It also tells us -pokemonnamehere- does not hold a random item and has x potential Egg Moves.<br />
+<u>Using Phantump as the example:</u><br />
+- The <code>Encounter Lookup</code> tab tells us that Phantump has an encounter slot range of 90-99, a level range of 60-65 and is a symbol encounter in overcast weather. It also tells us Phantump does not hold a random item and has 3 potential Egg Moves.<br />
 - Clicking the row that applies to our encounter will enter all the information we need into the main window.<br />
 - Our Pokédex tells us we have >500 KOs on -pokemonnamehere-.<br /><br />
 
 <span class="fw-bold">Let's enter this information into the main window by clicking the row that matches our conditions!</span><br /><br />
 
 <span class="fw-bold">Figure 1 -</span> Tool setup<br />
-<img src="./images/symbol/figure-1-encounter-lookup-symbol-aerodactyl.gif" style="width:675px;height:400px;"><br /><br />
+<img src="./images/symbol/figure-1-encounter-lookup-symbol.gif" style="width:675px;height:400px;"><br /><br />
 
 <span class="fw-bold">Awesome, everything looks good!</span> Our TID/SID and the details of the encounter have been entered into the main window. Time to find an ideal position to stand in-game and set the correct weather condition.<br /><br />
 
@@ -96,7 +96,7 @@ We will be aiming for a Shiny, Marked x with a Brilliant Aura in Slippery Slope.
 <u>This location in Slippery Slope is ideal, there are no NPCs around and there are no spawned Pokémon present.</u> Slippery Slope is located within the Crown Tundra which is a notably quiet area in calm weather conditions.<br /><br />
 
 <span class="fw-bold">Figure 3 -</span> Seed identification<br />
-<img src="./images/symbol/figure-3-seed-identification-static.gif" style="width:675px;height:400px;"><br /><br />
+<img src="./images/symbol/figure-3-seed-identification-symbol.gif" style="width:675px;height:400px;"><br /><br />
   
 After recording 128 animations the seed will be generated, clicking <code>Update Main Form</code> will automatically paste the information into the correct field of the main wndow, <span class="fw-bold">don't forget to do this before exiting the <code>Retail Seed Finder</code> tab!</span><br /><br />
   
@@ -107,7 +107,7 @@ Once the main window is filled in correctly, you've identified your current seed
 <span class="fw-bold">Figure  4 -</span> Target found!<br />
 <img src="./images/symbol/figure-4-symbol-search.png" style="width:675px;height:400px;"><br /><br />
 
-<span class="fw-bold">We found one!</span> A shiny, x natured -pokemonnamehere- in a cluster on advances x-y. These are the "target frames" and the aim will be to spawn -pokemonnamehere in the grass on any of these frames.<br /><br />
+<span class="fw-bold">We found one!</span> A shiny, x natured Phantump in a cluster on advances x-y. These are the "target frames" and the aim will be to spawn Phantump in the grass on any of these frames.<br /><br />
 
 Once a Pokémon is spawned in the grass the stats and internal details (such as PID/EC) are generated and set in stone, this is why it is only important to spawn the Pokémon in the overworld on the correct frame. <span class="fw-bold">Don't let the Pokémon despawn after you spawn it in the overworld!</span><br /><br />
 
@@ -115,7 +115,7 @@ It's common to see "clusters" or "groups" of frames that produce the same result
 
 <u>Advancing towards the target (Step-by-step example):</u><br />
 <ul>
-  <li>The target is x-y advances away, based on local testing the delay for this symbol encounter is 3, this means the target frames for this attempt are frame x-y.</li>
+  <li>The target is x-y advances away, based on local testing the delay for this symbol encounter is 2, this means the aim will be to walk into the grass 2 frames earlier than the target frame displayed on the generator.</li>
   <li>Advance towards the target frame using bike, NPCs or using other spawned overworld Pokémon in the area. You can use DaySkip to advance large distances quickly too!</li>
   <li>Once you believe you are close enough to a target (within ~500 frames), stand near to a patch of grass in the area, far enough away so that the Pokemon in the grass are despawned</li>
   <li>Pause the game and re-identify your RNG state using Pokemon animations.</li><br />
@@ -127,7 +127,7 @@ It's common to see "clusters" or "groups" of frames that produce the same result
 
   From this point it's recommended to only advance using animations, animations provide a consistent +1 advancement per button press, which means we can use it to keep track advancements with 100% accuracy.<br /><br />
   
-  <li>Use animation advances to advance close towards your target frame, factor in the number of advances that pass from closing the menu.</li>
+  <li>Use animation advances to advance close towards your target frame, factor in the number of advances that pass from closing the menu AND the area delay if known.</li>
   <li>Close the pause menu and run towards spawn point of the Pokémon, player movement advancements will not occur until the control stick is in a resting state. This gives the best chance at spawning the encounter on the correct frame.</li>
 </ul>
 
@@ -140,7 +140,7 @@ You can be creative with the methods you use to advance the RNG state.<br /><br 
 
 By using animations and a standard calculator to keep track of inputs, we were able to hit out target frame!<br /><br />
 
-Earlier we used seed re-identification and calculated that closing the pause menu advances roughly 2 frames. So we are now 2 frames away from the target with the pause menu open, closing the menu and running into the encounter should spawn the shiny -pokemonnamehere- we are targeting.<br /><br />
+Earlier we used seed re-identification and calculated that closing the pause menu advances roughly 3 frames. We also calculated that Slippery Slope has a delay of 2 for this encounter. So we are now a total of 5 frames away from the target with the pause menu open, closing the menu and running towards the grass should spawn the shiny Phantump we are targeting.<br /><br />
 
 If you believe you hit your target frame, close the pause menu and quickly run towards the grass to spawn the Pokémon, capture it and confirm it matches the result displayed on the main window of the generator.<br /><br />
 
@@ -148,7 +148,7 @@ If you believe you hit your target frame, close the pause menu and quickly run t
 <img src="./images/symbol/figure-6-static-in-battle.jpg" style="width:675px;height:400px;"><br /><br />
 <img src="./images/symbol/figure-7-static-summary-screen.jpg" style="width:675px;height:400px;"><br /><br />
 
-<span class="fw-bold">The -pokemonnamehere- matches the output of the generator, mission accomplished!</span> Espeon in party slot 1 with the ability Syncronize was used to determine the nature, using a Pokémon with this ability will make the nature of any overworld Pokémon match the nature of yours.<br /><br />
+<span class="fw-bold">The Phantump matches the output of the generator, mission accomplished!</span> Espeon in party slot 1 with the ability Syncronize was used to determine the nature, using a Pokémon with this ability will make the nature of any overworld Pokémon match the nature of yours.<br /><br />
 
 Different areas & environments can have a drastic influence on delay, if you are missing targets when you believe you should be finding results, you should consider reading the Troubleshooting Encounters section down below.<br /><br />
 
@@ -186,7 +186,7 @@ We can use an IV calculator to confirm the exact frame the encounter was generat
 <ul>
   <li>Aim for a target, such as any shiny Pokémon.</li>
   <li>Run towards the Pokémon and spawn it in the overworld then initiate the encounter. Take note of the frame the Pokémon was spawned on.</li>
-  <li>Encounter the Pokémon and capture it, then calculate the exact IVs using an IV calculator such as the <a href="http://www.psypokes.com/dex/iv.php">this one by Psypokes</a>.</li>
+  <li>Encounter the Pokémon and capture it, then calculate the exact IVs using an IV calculator such as the <a href="https://www.serebii.net/games/iv-calcswsh.shtml">this one by Serebii</a>.</li>
   <li>If you didn't find the Pokémon that you expected, search for the specific IVs of the result you found and find the frame you hit.</li>
   <li>Subtract your target advancement from the frame you actually hit.</li>
   <li>This will be your delay for that particular encounter.</li>
@@ -197,24 +197,24 @@ We can use an IV calculator to confirm the exact frame the encounter was generat
 <span class="fw-bold">Figure 8 -</span> Delay troubleshooting example<br />
 <img src="./images/symbol/figure-8-troubleshooting-encounters.jpg" style="width:675px;height:400px;"><br /><br />
 
-We hit a shiny, but it wasn't -pokemonnamehere-! So what happened here? We actually hit a different frame within a shiny cluster which contained the encounter slot values for -pokemonnamehere2-, we can take a look by locating the exact -pokemonnamehere2- encounter in the <code>Encounter Lookup</code> tab, and clicking search again in the main window. <br /><br />
+We hit a shiny, but it wasn't Phantump! So what happened here? We actually hit a different frame within a shiny cluster which contained the encounter slot values for Snom, we can take a look by finding the exact Snom encounter in the <code>Encounter Lookup</code> tab, and clicking search again in the main window. <br /><br />
 
 Make sure the <code>KO Count:</code> field is updated to match the species you are searching for! Here's a quick example:<br />
-- We are seeking a -pokemonnamehere- and have 500 KOs according to the Pokédex.<br />
-- We hit a -pokemonnamehere2- and have 90 KOs according to the Pokédex.<br />
-- In order to find the -pokemonnamehere- we are troubleshooting on the generator, we would need to enter <code>90</code> into the <count>KO Count:</code> field to match the NidoranF we caught.<br /><br />
+- We are seeking a Phantump and have 500 KOs according to the Pokédex.<br />
+- We hit a Snom and have 90 KOs according to the Pokédex.<br />
+- In order to find the Snom we are troubleshooting on the generator, we would need to enter <code>90</code> into the <count>KO Count:</code> field to match the Snom we caught.<br /><br />
 
 <span class="fw-bold">Figure 9 -</span> Calculating the IVs<br />
 <img src="./images/symbol/figure-9-calculating-IVs.png" style="width:675px;height:400px;"><br /><br />
 
-Using Psypokes IV calculator we can find the rough IVs of the -pokemonnamehere2- we hit and use this information to locate the exact frame we landed on according to the generator.<br /><br />
+Using Psypokes IV calculator we can find the rough IVs of the Snom we hit and use this information to locate the exact frame we landed on according to the generator.<br /><br />
 
 <u>If the Pokémon you find is non shiny you will need to be more specific with your filters, include the exact IVs displayed by the IV calculator to easily find the frame that you hit.</u><br /><br />
 
 <span class="fw-bold">Figure 10 -</span> Finding the frame<br />
 <img src="./images/symbol/figure-10-locating-frame.gif" style="width:675px;height:400px;"><br /><br />
 
-Here we can see -pokemonnamehere2- was indeed a shiny Pokémon within the cluster, (encounterslot value of x-y according to <code>Encounter Lookup</code>). Our goal was frame 3,001 and we hit frame 3,003, the tool shows these values are a match 1-2 frames later than our desired target frame, we will adjust accordingly by walking into the grass 2 frames earlier next time.<br /><br />
+Here we can see Snom was indeed a shiny Pokémon within the cluster, (encounterslot value of 0-21 according to <code>Encounter Lookup</code>). Our goal was frame 25 and we hit frame 24, the tool shows these values are a match 1 frames earlier than our desired target frame, we will adjust accordingly by walking into the grass 1 frame later next time.<br /><br />
 
 <h5><span class="fw-bold">Cannot find result...</span></h5>
 If you cannot find the Pokémon you are in battle with anywhere on the tool this is likely due to one of two reasons:
