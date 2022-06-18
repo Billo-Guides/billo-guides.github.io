@@ -85,7 +85,7 @@ We will be aiming for a Shiny Sinistea-Antique in Glimwood Tangle. You can be mo
 <u>This location in Glimwood Tangle is ideal, there are no NPCs around and there are no spawned Pokémon present.</u> Glimwood Tangle is a notably a noisy area.<br /><br />
 
 <span class="fw-bold">Figure 3 -</span> Seed identification<br />
-<img src="./images/hidden/figure-3-seed-identification-static.gif" style="width:675px;height:400px;"><br /><br />
+<img src="./images/hidden/figure-3-seed-identification-hidden.gif" style="width:675px;height:400px;"><br /><br />
   
 After recording 128 animations the seed will be generated, clicking <code>Update Main Form</code> will automatically paste the information into the correct field of the main wndow, <span class="fw-bold">don't forget to do this before exiting the <code>Retail Seed Finder</code> tab!</span><br /><br />
   
@@ -193,7 +193,7 @@ We can use the <code>Read Encounter</code> feature of the tool to confirm the ex
 <u>When RNG abusing in unstable conditions you should record delays for multiple attempts before aiming for a target and check for any consistent delay counts. It is also advised to aim for large clusters where possible to increase your chances of actually hitting the target.</u><br /><br />
 
 <span class="fw-bold">Figure 9 -</span> Delay troubleshooting example<br />
-<img src="./images/hidden/figure-9-troubleshooting-delay.png" style="width:675px;height:400px;"><br /><br />
+<img src="./images/hidden/figure-9-troubleshooting-delay.jpg" style="width:675px;height:400px;"><br /><br />
 
 We hit a shiny, but it wasn't Sinistea-Antique! So what happened here? We actually hit a different frame within a shiny cluster which contained the encounter slot values for Oranguru, we can take a look by locating the exact encounter in the <code>Encounter Lookup</code> tab and clicking search again on the main window.<br /><br />
 
@@ -205,7 +205,7 @@ We hit a shiny, but it wasn't Sinistea-Antique! So what happened here? We actual
 Using an IV calculator we can find the rough IVs of the Oranguru we found and use this information to locate the exact frame we landed on according to the generator.<br /><br />
 
 <span class="fw-bold">Figure 11 -</span> Troubleshooting Encounter-slots<br />
-<img src="./images/hidden/figure-11-encounter-lookup-troubleshooting-morgrem.gif" style="width:675px;height:400px;"><br /><br />
+<img src="./images/hidden/figure-11-encounter-lookup-troubleshooting-oranguru.gif" style="width:675px;height:400px;"><br /><br />
 
 Here we can see Oranguru was indeed a shiny Pokémon within the cluster (Encounterslot value of 85-93 according to <code>Encounter Lookup</code>). Our goal was frame 82 and we hit frame 80, the tool shows these values are a match 2 frames earlier than our desired target frame, we will adjust accordingly by walking into the grass 2 frames later next time.<br /><br />
 
