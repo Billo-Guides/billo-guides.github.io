@@ -16,54 +16,54 @@ If you made it this far, it must mean you have an interest in RNG abusing Pokém
 <u>Before starting, do the following:</u>
 <ul>
   <li>Open the GUI and click on the <code>Encounter Lookup</code> button at the top of the main window. This will open the Encounter Lookup tab.</li>
-  <li>Type the species name of the Pokémon you are hunting into the empty field, this will bring up a list of every possible encounter and has all the information you need for the main window.</li>
-  <li>Scroll down the list of encounters and click on one of the rows displaying a hidden encounter, this will automatically enter the information into the main window.</li>
-  <li>Enter your 5 digit TID/SID into the fields on the main window, select <code>Shiny Charm & Mark charm</code> if you have them present in your save file.</li>
-  <li>Head to the location in-game, change the date until you meet the correct weather condition, then stand near to a patch of grass.</li>
-  <li>Save the game, then press the X button to pause the game.</li>
+  <li>Type the species name of the Pokémon you are hunting into the empty field, this will bring up a list of every possible encounter for that Pokémon.</li>
+  <li>Scroll down the list of encounters and click on one of the rows displaying a HIDDEN encounter, this will automatically enter the information into the main window.</li>
+  <li>Enter your 5 digit TID/SID into the fields on the main window, select <code>Shiny Charm</code> & <code>Mark charm</code> if you have them present in your save file.</li>
+  <li>Head to the location in-game, change the date until you meet the correct weather condition, then stand near to a patch of grass in the area.</li>
+  <li>Run far enough away to despawn the Pokémon and save, then press the <code>X</code> button to pause the game.</li>
 </ul>
 
-When searching possible encounters it is suggested to pick an encounter in a quiet area with calm weather to reduce the amount of noise significantly. Noise is area specific, and it is recommended to test how much noise an area has to avoid overshooting the target.<br /> <br />
-
-<h3><span class="fw-bold">Day Skipping:</span></h3>
-If you plan to use the day skipping exploit to advance the RNG state, you should take a moment to monitor your advances to avoid overshooting. Skip 1 day at a time and reidentify your current seed to get a rough estimate of how many frames will advance per day skipped.<br /><br />
-
-<span class="fw-bold">Day skipping will change the weather in the area!</span> Be sure to set your date back to how it was originally to restore the weather condition.<br /><br />
+It's suggested to pick an encounter in a quiet area with calm weather to reduce instability. Noise is area specific, you should test how noisy an area is before attempting to RNG abuse Pokémon in it.<br /> <br />
 
 <h3><span class="fw-bold">Identifying your current seeds:</span></h3>
-It's impossible to search for results without knowing the current seeds, this is done through the <code>Retail Seed Finder</code> tab of the generator. Click the Retail Seed Finder button at the top of the main window and begin recording your sequence of animations.<br /><br />
+It's impossible to search for results without knowing the current seeds, you can identify your current seed through the <code>Retail Seed Finder</code> window of the generator, open it and begin recording your sequence of animations.<br /><br />
 
-<u>Step-by-step instructions for identifying your current RNG states:</u>
-<ul>
+<u>Identifying your current seed using Retail Seed Finder:</u>
+<ol>
   <li>Open the game and enter the overworld.</li>
-  <li>Pause the game using X, click "Pokémon", then view the summary of any of your Pokémon.</li>
-  <li>Open the Seed Finder tab of the GUI and have your Pokémon animate.</li>
-  <li>Click (or type) 0 if your animation was physical.</li>
-  <li>Click (or type) 1 if your animation was special.</li>
+  <li>Pause the game using <code>X</code>, click <code>Pokémon</code>, then view the summary of any of your Pokémon.</li>
+  <li>Open the <code>Retail Seed Finder</code> window and have your Pokémon animate.</li>
+  <li>Click (or type) <code>0</code> if your animation was physical.</li>
+  <li>Click (or type) <code>1</code> if your animation was special.</li>
   <li>Repeat this process 128 times and your seed will be generated. Click <code>Update Main Form</code> and exit back to the main window.</li>
-</ul>
+  <li>Search for a target frame.</li>
+</ol>
 
-This can seem like a lengthy and tedious process at first glance (it kinda is), for this reason it's advised to remap your controller button layout if you are able to do so, such as remapping L3 to Y. This is done through the Switch system settings.<br /><br />
+This can seem like a lengthy and tedious process at first glance (it kinda is), for this reason it's advised to remap your controller button layout if you are able to do so, such as remapping the <code>L3</code> button to <code>Y</code>. This is done through the Switch system settings.<br /><br />
 
-Once you know your seed you can easily re-identify your current state within 10-20 animations, this is done using the <code>Retail Advances Tracker</code> feature on the main window of the generator.<br /><br />
+Once you know your seed you can easily re-identify your current state within 10-20 animations, this is done using the <code>Retail Advances Tracker</code> feature found on the main window.<br /><br />
 
 <u>Re-identifying your current RNG states using the Retail Advances Tracker:</u>
-<ul>
-  <li>Click <code>Generate Pattern</code> once you have found your seeds using Seed Finder.</li>
-  <li>Pause the game using X, click "Pokémon", then view the summary of any of your Pokémon and have it do some animations.</li>
-  <li>Click (or type) 0 into the field if your animation was physical.</li>
-  <li>Click (or type) 1 into the field if your animation was special.</li>
+<ol>
+  <li>Click <code>Generate Pattern</code> once you have found your seeds using <code>Retail Seed Finder</code>.</li>
+  <li>Pause the game using <code>X</code>, click <code>Pokémon</code>, then view the summary of any of your Pokémon and have it do some animations.</li>
+  <li>Click (or type) <code>0</code> if your animation was physical.</li>
+  <li>Click (or type) <code>1</code> if your animation was special.</li>
   <li>Repeat roughly 10-20 times until you are given 1 possible result. Click <code>Update States</code> to automatically paste your new seeds into the correct fields.</li>
-</ul>
+  <li>Search for your target again. If you see your target on the generator again that means the original seed identification was correct and you can continue following the guide.</li>
+  <li>If you cannot find your original target this means seed identification was incorrect and needs to be redone.</li>
+</ol>
 
-Seed re-identification plays a huge role, it helps us keep track of the amount of advancements that have happened between searches. This is extremely helpful for closing in on a specific target frame or finding out how many advancements a specific action achieves.<br /><br />
+Seed re-identification plays a huge role, it helps us keep track of the amount of frame advancements between searches. This is extremely helpful for closing in on a specific target frame or finding out how many advancements a specific action achieves.<br /><br />
+
+The generator does not currently provide support for mechanics that boost the encounter rates of specific Pokémon. This includes Dexrec boosts or abilities like Storm Drain. Using spawn boosters like these may output incorrect results.<br /><br />
 
 <span class="fw-bold">With all the required reading out of the way, it's time to get started!</span><br /><br />
 
 <hr />
 
 <h3><span class="fw-bold">Time to get to work!</span></h3>
-The goal is to walk towards into grass and spawn a hidden encounter (shaking grass) on the calculated target frame given by the generator. The advancement methods used are listed in detail on the main page of this guide.<br /><br />
+The goal is to walk towards into grass and spawn a hidden encounter on the calculated target frame given by the generator. The advancement methods used are listed in detail on the main page of this guide.<br /><br />
 
 We will be aiming for a Shiny Sinistea-Antique in Glimwood Tangle. You can be more specific with the filters if you wish, such as filtering for a specific mark or specific IVs.<br /><br />
 
@@ -82,16 +82,18 @@ We will be aiming for a Shiny Sinistea-Antique in Glimwood Tangle. You can be mo
 <span class="fw-bold">Figure 2 -</span> Game setup<br />
 <img src="./images/hidden/figure-2-in-game-setup.gif" style="width:675px;height:400px;"><br /><br />
 
-<u>This location in Glimwood Tangle is ideal, there are no NPCs around and there are no spawned Pokémon present.</u> Glimwood Tangle is a notably a noisy area which will increase the difficulty of hitting the correct target frame.<br /><br />
+<u>This location in Glimwood Tangle is ideal, there are no NPCs around and there are no spawned Pokémon present.</u> 
+
+Glimwood Tangle is a notably a noisy area which will increase the difficulty of hitting the correct target frame.<br /><br />
 
 <span class="fw-bold">Figure 3 -</span> Seed identification<br />
 <img src="./images/hidden/figure-3-seed-identification-hidden.gif" style="width:675px;height:400px;"><br /><br />
   
-After recording 128 animations the seed will be generated, clicking <code>Update Main Form</code> will automatically paste the information into the correct field of the main wndow, <span class="fw-bold">don't forget to do this before exiting the <code>Retail Seed Finder</code> tab!</span><br /><br />
+After recording 128 animations the seed will be generated, clicking <code>Update Main Form</code> will automatically paste the information into the correct field of the main wndow.<br /><br />
   
 Once the main window is filled in correctly, you've identified your current seeds & you are stood in a good position in-game, you can begin looking for target frames by clicking the search button on main window of the generator.<br /><br />
 
-<u>If your results are not desirable, you will need to close the game and identify your current seeds again using the <code>Retail Seed Finder</code> tab.</u><br /><br />
+<span class="fw-bold">If your results are not desirable, you will need to reset the game and identify your current seeds again.</span><br /><br />
 
 <span class="fw-bold">Figure  4 -</span> Target found!<br />
 <img src="./images/hidden/figure-4-hidden-search.png" style="width:675px;height:400px;"><br /><br />
@@ -104,25 +106,33 @@ Once a Pokémon is spawned in the grass the stats and internal details (such as 
 
 It's common to see "clusters" or "groups" of frames that produce the same result when searching for a target. Aiming for large clusters is recommended as this will provide more chances for the player to spawn the Pokémon on the correct frame.<br /><br />
 
-<u>Advancing towards the target (Step-by-step example):</u><br />
-<ul>
-  <li>The target is 3451-3453 advances away, based on local testing the delay for this hidden encounter is 4, this means the target frames for this attempt are frame 3447-3450.</li>
-  <li>Advance towards the target frame using bike, NPCs or using other spawned overworld Pokémon in the area. You can use Date Skipping to advance large distances quickly too!</li>
-  <li>Once you believe you are close enough to a target (within ~500 frames), stand close to a patch of grass in the area.</li>
-  <li>Pause the game and re-identify your RNG state using Pokemon animations.</li><br />
-  
-  From this point it's recommended to only advance by opening and closing the menu and using animation/bike advancements as they are easier to keep track of.<br /><br />
-  
-  <li>Quickly close and reopen the pause menu to avoid any random advancements, re-identify your current seeds using the <code>Retail Advances Tracker</code> and take note of the number of advancements that have passed. Repeat this process a few times and then take the highest number of advances from your results.</li>
-  <li>Advance closer to your target (within ~100 frames) and pause the game again, reidentify your current seeds. (Make sure you are not riding your bike.)</li><br />
+<h5><span class="fw-bold">Advancing towards the target:</span></h5>
+The generator displays the target on frame 3451-3453, based on local testing the delay for this hidden encounter is 3. This means we will aim to walk into the grass on frame 3448-3450.<br /><br />
 
-  From this point it's recommended to only advance using animations, animations provide a consistent +1 advancement per button press, which means we can use it to keep track advancements with 100% accuracy.<br /><br />
-  
-  <li>Use animation advances to advance close towards your target frame, factor in the number of advances that pass from closing the menu.</li>
-  <li>Close the pause menu and run into the grass, moving into the grass in one singular control stick input gives the best chance at spawning the encounter on the correct frame.</li>
-</ul>
+<u>Step by step:</u><br />
+<ol>
+  <li>Advance towards the target frame using bike, NPCs or by spawning overworld Pokémon in the area.</li><br />
+If your target is a large number of frames away consider using the day skipping method described on the main page of this guide.<br /><br />
 
-A standard calculator can be helpful to keep track of inputs when advancing using animations, add +1 for each input you do on the Pokemon summary screen until you reach the target frame.<br /><br />
+  <li>Once you believe you are close to the target (within ~500 frames), stand near to the spawn point of the Pokémon you are hunting and re-identify your current seed.</li><br />
+Re-identify your current seed using the Pokémon summary screen, <u>not</u> by using the party menu.<br /><br />
+
+<span class="fw-bold">From this point it's recommended to only advance using menu close, animation and bike advancements as they only advance in small increments, making them easy to keep track of.</span><br /><br />
+
+  <li>Quickly close and reopen the pause menu, re-identify your current seed and pay attention to the number of advancements that have passed, repeat this step roughly 5 times.</li><br />
+It's important to know the average number of frames that will advance from closing the pause menu, we will eventually need to account for this to hit the correct target frame.<br /><br />
+
+  <li>Advance closer to your target frame (within ~100 frames this time) and open the pause menu again, open the Pokémon summary page and re-identify your current seed once more.</li><br />
+Make sure you are not on your bike at this point, you should also have a calculator available to use to keep track of inputs/advancements.<br /><br />
+
+<span class="fw-bold">From this point it's recommended to only advance using animations from the <u>party menu</u>, this provide a stable +1 advancement per input.</span><br /><br />
+
+  <li>Open the party menu and advance to your target frame, you can use a calculator to keep track of inputs. Here's where we need to factor in the amount of advances that pass from closing the pause menu and the delay of the area.</li><br />
+For example, if the area has a base delay of 3, and 8 frames advance from closing the pause menu (average) and the target was 100 advances away, we would advance to frame 89 (100-11) using animations, then closing the pause menu would pick up the 3 advancements we need to hit the target frame.<br /><br />
+
+  <li>Close the pause menu and quickly run into the grass to try to spawn a hidden encounter! If successful, encounter/capture it and make sure it matches the output shown on the generator.</li><br />
+Remember not to let it despawn! If an encounter did not spawn you will have to begin looking for a new target frame.<br />
+</ol>
 
 You can be creative with the methods you use to advance the RNG state.<br /><br />
 
@@ -131,15 +141,13 @@ You can be creative with the methods you use to advance the RNG state.<br /><br 
 
 By using animations and a standard calculator to keep track of inputs, we were able to hit out target frame!<br /><br />
 
-Earlier we used seed re-identification and calculated that closing the pause menu advances roughly 9 frames and the base delay in the area is 4. So we are now 13~ frames away from the target with the pause menu open, closing the menu and spawning a hidden encounter in 1-2 steps should spawn the shiny Sinistea-Antique we are targeting.<br /><br />
-
-If you believe you hit your target frame, close the pause menu and quickly run into the grass to (hopefully) spawn the Pokémon, capture it and confirm it matches the result displayed on the main window of the generator.<br /><br />
-
 <span class="fw-bold">Figure 6/7 -</span> Result Found!<br />
 <img src="./images/hidden/figure-6-hidden-in-battle.jpg" style="width:675px;height:400px;"><br /><br />
 <img src="./images/hidden/figure-7-hidden-summary-screen.jpg" style="width:675px;height:400px;"><br /><br />
 
-<span class="fw-bold">The Sinistea-Antique matches the output of the generator, mission accomplished!</span> Espeon in party slot 1 with the ability Syncronize was used to determine the nature, using a Pokémon with this ability will make the nature of any overworld Pokémon match the nature of yours.<br /><br />
+<span class="fw-bold">The Sinistea-Antique matches the output of the generator, mission accomplished!</span><br /><br />
+
+Espeon in party slot 1 with the ability Syncronize was used to determine the nature, using a Pokémon with this ability will make the nature of any overworld Pokémon match the nature of yours.<br /><br />
 
 Different areas & environments can have a drastic influence on delay, if you are missing targets when you believe you should be finding results, you should consider reading the Troubleshooting Encounters section down below.<br /><br />
 
@@ -151,7 +159,7 @@ Different areas & environments can have a drastic influence on delay, if you are
 
 <hr />
 
-This section covers how to troubleshoot encounters and delays. If you keep missing targets, spawning in the wrong Pokémon, or can't find your result on the RNG tool, this is the place to be.<br /><br />
+This section covers how to troubleshoot encounters and delays. If you keep missing targets, spawning in the wrong Pokémon, or can't find your result on the generator at all, this is the place to be.<br /><br />
 
 <h3><span class="fw-bold">Missing Targets:</span></h3>
 The commonly occuring reasons for missing a target Pokémon are:
@@ -176,21 +184,21 @@ Standing directly next to the grass is advised as you will be able to spawn a hi
 
 For the purposes of this guide, the term "delay" is used to describe the frame difference between the Pokémon we encountered and the frame the encounter was initiated on.<br /><br />
 
-Most hidden encounters need to account for some amount of delay, this applies most to encounters in extreme weather conditions or in an otherwise unstable environment, like having other spawned Pokémon present.<br /><br />
+Most hidden encounters need to account for some delay, this applies most to encounters in extreme weather conditions or in an otherwise unstable environment, like having other spawned Pokémon present.<br /><br />
 
-Delay Calc - <code>frame Pokémon was generated - frame encounter was initiated = delay</code><br /><br />
+Delay Calc - <code>frame Pokemon was generated - frame encounter was initiated = delay</code><br /><br />
 
-We can use the <code>Read Encounter</code> feature of the tool to confirm the exact frame the encounter was generated on and calculate the delay from there. Here's how it's done!
+We can use an IV calculator to confirm the exact frame the encounter was generated on and calculate the delay from there. Here's how it's done!
 <ul>
   <li>Aim for a target, such as any shiny Pokémon.</li>
-  <li>Walk towards the grass, spawn the Pokemon and initiate an encounter. Take note of the frame the Pokémon was spawned on.</li>
-  Encounter the Pokémon and capture it, then calculate the exact IVs using an IV calculator such as the <a href="https://www.serebii.net/games/iv-calcswsh.shtml">this one by Serebii</a>.</li>
-  <li>If you didn't find the Pokémon that you expected, do a filterless search (or search for the specific IVs of the result you found) and find the frame you hit.</li>
-  <li>Subtract your target advancement from the frame you actually hit.</li>
+  <li>Run towards the Pokémon and spawn it in the overworld then initiate the encounter. Take note of the frame the Pokémon was spawned on.</li>
+  <li>Encounter the Pokémon and capture it, then calculate the exact IVs using an IV calculator such as the <a href="https://www.serebii.net/games/iv-calcswsh.shtml">this one by Serebii</a>.</li>
+  <li>If you didn't find the Pokémon that you expected, search for the specific IVs of the result you found and find the frame you hit.</li>
+  <li>Subtract your the frame the Pokémon was spawned on from the frame you actually hit.</li>
   <li>This will be your delay for that particular encounter.</li>
 </ul>
 
-<u>When RNG abusing in unstable conditions you should record delays for multiple attempts before aiming for a target and check for any consistent delay counts. It is also advised to aim for large clusters where possible to increase your chances of actually hitting the target.</u><br /><br />
+When RNG abusing in unstable conditions you should record delays for multiple attempts before aiming for a target and check for any consistent delay counts. It is also advised to aim for large clusters where possible to increase your chances of actually hitting the target.<br /><br />
 
 <span class="fw-bold">Figure 9 -</span> Delay troubleshooting example<br />
 <img src="./images/hidden/figure-9-troubleshooting-delay.jpg" style="width:675px;height:400px;"><br /><br />
@@ -200,7 +208,7 @@ We hit a shiny, but it wasn't Sinistea-Antique! So what happened here? We actual
 <u>If the Pokemon you find is non shiny you will need to be more specific with your filters, include the exact IV of the result found to easily find the frame that you hit.</u><br /><br />
 
 <span class="fw-bold">Figure 10 -</span> Calculating the IVs<br />
-<img src="./images/symbol/figure-10-calculating-IVs.png" style="width:675px;height:400px;"><br /><br />
+<img src="./images/hidden/figure-10-calculating-IVs.png" style="width:675px;height:400px;"><br /><br />
 
 Using an IV calculator we can find the rough IVs of the Oranguru we found and use this information to locate the exact frame we landed on according to the generator.<br /><br />
 
@@ -216,7 +224,9 @@ If you cannot find the Pokémon you are in battle with anywhere on the tool this
   <li>The information entered into the main window of the tool was not completely accurate.</li>
 </ul>
 
-Try to reposition your character and see if your issue persists, if you are still having problems double check the information on the main window is entered correctly by searching it on the Encounter Lookup and clicking the correct row. <u>You must pay attention to the row you are clicking and making sure it matches your in-game environment.</u><br /><br />
+Try to reposition your character and see if your issue persists, if you are still having problems double check the information on the main tab is entered correctly by searching it on the <code>Encounter Lookup</code> and clicking the correct row.<br /><br /> 
+
+<u>You must pay attention to the row you are clicking and making sure it matches your in-game environment.</u><br /><br />
 
 That's all there is to it!<br /><br />
 
