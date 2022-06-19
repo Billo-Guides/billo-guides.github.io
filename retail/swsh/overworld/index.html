@@ -34,38 +34,40 @@ Download and extract all the contents from the <code>SWSH_OWRNG_Generator_GUI.zi
 
 <h3><span class="fw-bold">Tool Setup:</span></h3>
 
-<span class="fw-bold">Figure 1/2 -</span> Main window overview<br />
+<span class="fw-bold">Figure 1 -</span> Main window overview<br />
 <img src="./overworld/images/main-page/figure-1-main-window-overview.png" style="width:675px;height:400px;"><br /><br />
-
-This is the main window of the generator with default configurations. To start with you will need to find your current RNG states, this is done using the <code>Seed Finder</code> tab located at the top of the main window of the GUI.</u><br /><br />
 
 <u>Let's take a closer look at the main window:</u>
 <ul>
-  <li><span class="fw-bold">The TID/SID fields expect you to input the 5 digit TID/SID of your save file.</span> This is a requirement for the generator so that it can produce accurate results for shiny Pokémon.
-  <li><span class="fw-bold">The field below Init. adv. is the frame range or amount of frames to search through.</span> Set this to an amount you are comfortable with.</li>
+  <li><span class="fw-bold">The TID/SID fields expect you to input the 5 digit TID/SID of your save file.</span> This is a requirement for the generator to produce accurate results for shiny Pokémon.
+  <li><span class="fw-bold">The empty field below <code>Init. adv.</code> is the frame range or amount of frames to search through.</span> Set this to an amount you are comfortable with.</li>
   <li><span class="fw-bold">You can use the IVs/Shiny/Mark filters to search for specific internal details.</span> On Symbol or Fishing encounters you can even filter for Pokémon with Brilliant Aura!</li>
-  <li><span class="fw-bold">The checkboxes on the left should be filled out according to your desired hunt.</span> We can quickly find this information using the <code>Encounter Lookup</code> tab of the generator.</li>
-  <li><span class="fw-bold">You should check the Shiny Charm and Mark Charm boxes if those items are present your save file.</span> It's recommended to aquire both of these items before starting.</li>
-  <li><span class="fw-bold">Retail Advances Tracker is used frequently to re-identify our current RNG states with far fewer motions needed.</span> You can usually re-identify in 10-20 recorded motions.</li>
-  <li><span class="fw-bold">The Read Encounter & DaySkip features are exclusive to players running CFW.</span></li>
+  <li><span class="fw-bold">The encounter details left should be filled out according to your desired hunt.</span> We can quickly find this information using the <code>Encounter Lookup</code> tab.</li>
+  <li><span class="fw-bold">You should check the <code>Shiny Charm</code> and <code>Mark Charm</code> boxes if those items are present your save file.</span> It's recommended to aquire both of these items before starting.</li>
+  <li><span class="fw-bold">The <code>Retail Advances Tracker</code> is used frequently to re-identify our current RNG states with far fewer motions needed.</span> You can usually re-identify in 10-20 recorded motions.</li>
+  <li><span class="fw-bold">The <code>Read Encounter</code> & <code>DaySkip</code> features are exclusive to players running CFW.</span></li>
 </ul>
 
+<span class="fw-bold">Figure 1 -</span> Retail Seed Finder overview<br />
 <img src="./overworld/images/main-page/figure-2-seedfinder-tab-overview.png" style="width:675px;height:400px;"><br /><br />
 
-This is the Seed Finder tab, here you will record a sequence of 128 motions/animations in order to find your current RNG states.<br /><br />
+This is the <code>Retail Seed Finder</code> tab, here you will record a sequence of 128 motions/animations in order to find your current seed.<br /><br />
 
 <h3><span class="fw-bold">What are motions/animations?</span></h3>
-The term "motions" or "animations" refers to a feature of the Pokémon summary page, when pressing L3 (Clicking in the left stick) your Pokémon will do one of two animations, physical or special.<br /><br />
+The term "motions" or "animations" refers to a feature of the Pokémon summary page, when pressing the "L3" button your Pokémon will do one of two animations, physical or special.<br /><br />
 
 <span class="fw-bold">Figure 3 -</span> Animation differences<br />
 <img src="./overworld/images/main-page/figure-3-animations.gif" style="width:675px;height:400px;"><br /><br />
 
-For some Pokemon it's easier to distinguish the physical and special animations than it is for others, it's important to use a Pokemon that has a clear physical/special animation for the sake of keeping track of them easily.<br /><br />
+In the first motion Espeon lunges forward - This is a clear indication of it being the physical animation.<br />
+In the second motion Espeon remains in place using Psychic - This is a clear indication of it being the special animation.<br /><br />
+
+You can use motions/animations in two places, on the party menu or by viewing the summary of a specific Pokemon. When identifying your current seed it's important to use the <u>summary screen</u> to avoid any extra unwanted advancements from the party menu.<br /><br />
 
 <span class="fw-bold">Figure 4 -</span> Encounter Lookup tab overview<br />
 <img src="./overworld/images/main-page/figure-4-encounter-lookup.gif" style="width:675px;height:400px;"><br /><br />
 
-Click <code>Encounter Lookup</code> in the navigation bar and type the species of Pokémon you intend on hunting in the search bar then select it in the dropdown menu. You will now see a list of all the possible wild encounters for that Pokémon, by selecting a row you will automatically enter all the required information into the main window, be sure to select the one that applies to you. Once you have done so you can exit back to the main window.<br /><br />
+This is the <code>Encounter Lookup</code> tab, searching for a specific species in the dropdown list will bring up a list of every possible wild encounter for that Pokemon in the entire game.<br /><br />
 
 <h5><span class="fw-bold">Environment Control:</span></h5>
 For the purposes of this guide, the term "noisy" is used to describe an area or environment in which the RNG state naturally advances at a fast pace.<br /><br />
@@ -80,33 +82,38 @@ For the purposes of this guide, the term "noisy" is used to describe an area or 
 <u>Examples:</u><br />
 - In Crown Tundra the area is naturally <u>quiet</u>, so we will have a <u>relatively easy</u> time hunting a Pokémon in clear weather conditions.<br />
 - In Isle of Armor the area is naturally <u>noisy</u>, so we will have a <u>more difficult</u> time hunting Pokémon in general.<br />
-- If we added rainy weather to either of these situations we would increase the amount of natural noise, and further increase the instability.<br /><br />
+- If we added rainy weather to either of these situations we would increase the amount of natural noise and further increase the instability.<br /><br />
 
 In all cases it's best to target a Pokémon in a quiet area, however sometimes you will be forced to hunt a Pokémon in an unstable environment.<br /><br />
 
 <h3><span class="fw-bold">Advancing the RNG state:</span></h3>
 <u>Multiple in-game actions can be used to advance the RNG state with varying influence, these include:</u>
 <ol>
-  <li><span class="fw-bold">Player movement -</span> Each time the player stops moving the control stick the RNG state will advance a small amount - Roughly 1-3 advancements & a spammable action.</li><br />
-  <li><span class="fw-bold">Rotom Bike -</span> Mounting and dismounting the bike with the <code>+</code> button will advance the RNG state a small amount. - Area specific advancements & a spammable action.</li><br />
-  <li><span class="fw-bold">Menu close -</span> Opening and closing the pause menu will advance the RNG state a small amount depending on your location and amount of NPCs present. - Area specific advancements & a spammable action.</li><br />
-  <li><span class="fw-bold">Animations -</span> You can make your Pokémon animate on the party summary screen by pressing in the left stick. - 1 advancment per "click" & a spammable action.</li><br />
-  <li><span class="fw-bold">Active NPCs -</span> Standing near an NPC will "activate" them, this will advance the RNG state rapidly. - Area specific advancements, good for covering large amounts of advancements quickly.</li><br />
-  <li><span class="fw-bold">Map & Flying -</span> We can fly into an area to advance the RNG state too! - Area specific advancements, this is used primarily for hunting Articuno, Zapdos and Moltres.</li><br />
+  <li><span class="fw-bold">Player movement -</span> Each time the player stops moving the control stick the RNG state will advance a small amount - Roughly 1-3 advancements per input.</li><br />
+  <li><span class="fw-bold">Rotom Bike -</span> Mounting and dismounting the bike with the <code>+</code> button will advance the RNG state a small amount. - Area specific advancements.</li><br />
+  <li><span class="fw-bold">Menu close -</span> Opening and closing the pause menu will advance the RNG state a small amount depending on your location and amount of NPCs in the area. - Area specific advancements.</li><br />
+  <li><span class="fw-bold">Animations -</span> Having your Pokemon animate on the party summary screen will advance the RNG state a small amount. - 1 advancment per "click" on the party menu, 1 advancement per motion on the summary page.</li><br />
+  <li><span class="fw-bold">Active NPCs -</span> Standing near an NPC will cause them to become active, this will advance the RNG state rapidly. - Area specific advancements, good for covering large amounts of advancements quickly.</li><br />
+  <li><span class="fw-bold">Map & Flying -</span> Flying into an area will advance the RNG state too! - Area specific advancements, this is only used for Articuno, Zapdos and Moltres.</li><br />
 </ol>
 
 <h3><span class="fw-bold">Day Skipping:</span></h3>
 
 We can use Day Skipping to advance up to a total of around 13,000 advancements per day skipped. The amount of frames that advance by Day Skipping is heavily influenced by the amount of Pokémon currently stored in your boxes (not including eggs). the number will increase drastically if you store more Pokémon.<br /><br /> 
 
+Exiting a ranked battle gives us the conditions we need to perform easy date skipping on retail hardware.<br /><br /> 
+
 <u>To perform the day skipping technique follow these instructions:</u>
 <ol>
-  <li>Walk over to a Max Raid Den, throw in a Wishing Piece if the den is not already active.</li>
-  <li>Click A, then "Invite Others" and press the Home button.</li>
-  <li>From here navigate to Switch System Settings and change the date ahead by one day.</li>
+  <li>Pause the game and press VS to enter a ranked battle.</li>
+  <li>Forfeit once you enter the battle. Alternatively you can play out the whole battle if you wish.</li>
+  <li>From here navigate to the System Settings and change the date ahead by one day.</li>
   <li>Exit back to the main menu of the home screen and reopen the game.</li>
-  <li>Cancel the raid and re-enter the overworld, this is a singular day skip, repeat the same process from step 1 to perform multiple.</li>
+  <li>Repeat step 4 and 5.</li>
 </ol> 
+
+You should notice time-based events such as the Rotom Lottery function have reset, this is an indication that the exploit has been properly activated.<br /><br /> 
+
 <br />
 
 <hr />
@@ -115,7 +122,7 @@ We can use Day Skipping to advance up to a total of around 13,000 advancements p
   <h1 class="text-light text-center pt-3 pb-3">The Process</h1>
 </div><br />
 
-<span class="fw-bold">From here the guide assumes you know your 5 digit TID/SID combination.</span> You must have this information on-hand if you plan to RNG abuse shiny Pokemon. Follow the tutorial by clicking the button directly below this text if you are unsure.<br /><br />
+<span class="fw-bold">From this point the guide assumes you know your 5 digit TID/SID combination.</span> You must have this information on-hand if you plan to RNG abuse shiny Pokemon. Follow the tutorial by clicking the button directly below this text if you are unsure.<br /><br />
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/finding-tid-sid">
   Click here for a tutorial on finding your 5 digit TID/SID!
@@ -142,6 +149,7 @@ Galarian Articuno, Zapdos and Moltres are static encounters with a unique method
 </ul>
 
 <span class="fw-bold">Great! Now we know all the terminology, it's time to get started!</span><br /><br />
+
 Search the species you wish to hunt on the <code>Encounter Lookup</code> tab of the generator and pick one of the encounters from the list. Take note of the type of encounter you have chosen and click on the page that applies to you!<br /><br />
 
 <h3><span class="fw-bold">Static Encounters:</span></h3>
