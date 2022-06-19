@@ -119,7 +119,7 @@ If you do not get the correct results, or are attempting to RNG something outsid
 <u>This can be done using the Menu Close Advances Viewer as follows:</u>
 <ol>
 <li>Count the number of NPCs in the area you're in manually. This can also include Pokemon and models outside of render distance so may not be completely accurate, this simply provides a good starting point.</li>
-<li>Get into position and press "X" to open the menu.</li>
+<li>Get into position and press <code>X</code> to open the menu.</li>
 <li>Identify your current seed in the <code>Retail Seed Finder</code> tab by using animations. (Click <code>Update Main Form</code> after seed identification!)</li>
 <li>Click the <code>Menu Close Advances Viewer</code> button at the top of the generator to open a smaller window. Your seeds should be visible in the correct fields.</li>
 <li>Take the number of NPCs you counted earlier and put it into the <code>NPCs</code> field.</li>
@@ -170,22 +170,36 @@ After closing the pause menu on the correct target frame you should be able to q
 <img src="./images/cram-o-matic/figure-3-target-found-cram-retail.png" style="width:675px;height:400px;"><br /><br />
 
 <span class="fw-bold">We found a target frame!</span> 5 Rare balls on advance 41 (after considering 21 NPCs with menu close). This will be the frame we close the pause menu and interact with the Cram-o-matic.<br /><br />
-  
-<u>Here's a more fleshed out example...</u><br />
-<ul>
-  <li>The target is 41 advances away, delay is 0, and there are 21 NPCs in the building, we are in the pause menu after identifying the current seeds and the <code>Cram-o-matic</code> window is open.</li>
-  <li>Advance the RNG state by activating a nearby NPC or Date Skipping.</li>
-  <li>Once you are a within a few hundred frames of the target, run over to the Cram-o-matic machine. You can re-identify your current seed at any point if you lose track.</li><br />
 
-  <span class="fw-bold">From this point, only advance by using menu close prediction and summary animations.</span><br /><br />
-  
-  <li>Make sure you are facing the Cram-o-matic and pause the game with "X".</li>
-  <li>After re-identifying your current seed open the <code>Cram-o-matic</code> window and search for your target again.</li>
-  <li>Use animations to advance to the target frame as displayed by the <code>Cram-o-matic</code> window. (Use a calculator to keep track of inputs if needed.)</li>
-  <li>Close the pause menu then quickly interact with the Cram-o-matic machine by pressing "A".</li>
-</ul>
+<h5><span class="fw-bold">Advancing towards the target:</span></h5>
+The generator displays the target on frame 41, you do not need to account for any delay. This means we will aim to interact with the Cram-o-matic on frame 41.<br /><br />
 
-If you believe you interacted with the Cram-o-matic on the correct frame, feed it 4 apricorns and take your reward! Make sure the reward matches the output of the generator.<br /><br />
+There are 21 NPCs in the area, we need this information to accurately predict the amount of advancements that will occur from closing the pause menu.<br /><br />
+
+<u>Step by step:</u><br />
+<ol>
+  <li>Advance towards the target by standing near NPCs in the dojo and using player movement.</li><br />
+If your target is a large number of frames away consider using the day skipping method described at the top of this page.<br /><br />
+
+  <li>Once you believe you are close to the target (within ~500 frames), stand near to the Cram-o-matic and re-identify your current seed.</li><br />
+Re-identify your current seed using the Pokémon summary screen, <u>not</u> by using the party menu.<br /><br />
+
+<span class="fw-bold">From this point it's recommended to only advance using menu close and animations as they only advance in small increments, making them easy to keep track of.</span><br /><br />
+
+  <li>Open the Cram-o-matic window of the generator, enter the amount of NPCs you have in the dojo into the field, then search for your target again.</li><br />
+The <code>Jump</code> column displays the amount of advancements that will pass from closing the menu when considering menu close prediction.<br /><br />
+
+  <li>Advance closer to your target frame (within ~100 frames this time) and open the pause menu again, open the Pokémon summary page, re-identify your current seed then search in the Cram-o-matic window once more.</li><br />
+Make sure you are facing the Cram-o-matic at this point, you should also have a calculator available to use to keep track of inputs/advancements.<br /><br />
+
+<span class="fw-bold">From this point it's recommended to only advance using animations from the <u>party menu</u>, this provide a stable +1 advancement per input.</span><br /><br />
+
+  <li>Open the party menu and advance to your target frame, you can use a calculator to keep track of inputs.</li><br />
+
+  <li>Close the pause menu and quickly interact with the Cram-o-matic. If successful, you will have hit your target frame! Feed it 4 apricorns and claim your reward.</li><br />
+</ol>
+
+You can be creative with the methods you use to advance the RNG state.<br /><br />
 
 <span class="fw-bold">Figure 4/5 -</span> Result Found!<br />
 <img src="./images/cram-o-matic/figure-4-result-found-gui-cram-retail.png" style="width:675px;height:400px;"><br /><br />
@@ -234,21 +248,35 @@ Once the <code>Loto-ID</code> tab is filled in correctly you can begin looking f
 
 <span class="fw-bold">We found a target frame!</span> A Master Ball on advance x. This will be the frame we close the pause menu and interact with the Rotom PC in the Pokecenter.<br /><br />
   
-<u>Here's a more fleshed out example...</u><br />
-<ul>
-  <li>The target is x advances away, delay is 0, and there are 7 NPCs in the building, we are in the pause menu after identifying the current seeds and the <code>Loto-ID</code> window is open.</li>
-  <li>Advance the RNG state by activating a nearby NPC or Date Skipping.</li>
-  <li>Once you are within a few hundred frames of the target, stand close to the PC. You can re-identify your current seed at any point if you lose track.</li><br />
+<h5><span class="fw-bold">Advancing towards the target:</span></h5>
+The generator displays the target on frame 52, you do not need to account for any delay. This means we will aim to interact with the PC on frame 52.<br /><br />
 
-  <span class="fw-bold">From this point, only advance by using menu close prediction and summary animations.</span><br /><br />
-  
-  <li>Make sure you are facing the PC and pause the game with "X".</li>
-  <li>After re-identifying your current seed open the <code>Loto-ID</code> window and search for your target again.</li>
-  <li>Use animations to advance to the target frame as displayed by the <code>Loto-ID</code> window. (Use a calculator to keep track of inputs if needed.)</li>
-  <li>Close the pause menu then quickly interact with the Rotom PC by pressing "A".</li>
-</ul>
+There are 7 NPCs in the area, we need this information to accurately predict the amount of advancements that will occur from closing the pause menu.<br /><br />
 
-If you believe you interacted with the Rotom PC on the correct frame, click the "Try Loto ID" option and claim your reward! Make sure the reward matches the output of the generator.<br /><br />
+<u>Step by step:</u><br />
+<ol>
+  <li>Advance towards the target by standing near NPCs in the Pokecentre and using player movement.</li><br />
+If your target is a large number of frames away consider using the day skipping method described at the top of this page.<br /><br />
+
+  <li>Once you believe you are close to the target (within ~500 frames), stand near to the PC and re-identify your current seed.</li><br />
+Re-identify your current seed using the Pokémon summary screen, <u>not</u> by using the party menu.<br /><br />
+
+<span class="fw-bold">From this point it's recommended to only advance using menu close and animations as they only advance in small increments, making them easy to keep track of.</span><br /><br />
+
+  <li>Open the Loto-ID window of the generator, enter the amount of NPCs you have in the Pokecentre into the field, then search for your target again.</li><br />
+The <code>Jump</code> column displays the amount of advancements that will pass from closing the menu when considering menu close prediction.<br /><br />
+
+  <li>Advance closer to your target frame (within ~100 frames this time) and open the pause menu again, open the Pokémon summary page, re-identify your current seed then search in the Loto-ID window once more.</li><br />
+Make sure you are facing the PC at this point, you should also have a calculator available to use to keep track of inputs/advancements.<br /><br />
+
+<span class="fw-bold">From this point it's recommended to only advance using animations from the <u>party menu</u>, this provide a stable +1 advancement per input.</span><br /><br />
+
+  <li>Open the party menu and advance to your target frame, you can use a calculator to keep track of inputs.</li><br />
+
+  <li>Close the pause menu and quickly interact with the PC. If successful, you will have hit your target frame! Click the "Try Loto ID" option to claim your reward.</li><br />
+</ol>
+
+You can be creative with the methods you use to advance the RNG state.<br /><br />
 
 <span class="fw-bold">Figure 4/5 -</span> Result Found!<br />
 <img src="./images/roto-id/figure-4-result-found-loto-retail.png" style="width:675px;height:400px;"><br /><br />
