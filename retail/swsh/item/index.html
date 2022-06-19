@@ -42,13 +42,34 @@ Download and extract all the contents from the <code>SWSH_OWRNG_Generator_GUI.zi
 <hr />
 
 <h3><span class="fw-bold">Advancing the RNG state:</span></h3>
-<u>Multiple in-game actions can be used to advance the RNG state with varying influence, the methods used in this guide include:</u><br />
+<u>Multiple in-game actions can be used to advance the RNG state with varying influence, these include:</u>
 <ol>
-  <li><span class="fw-bold">Player movement -</span> Each time the player stops moving the control stick the RNG state will advance a small amount - Roughly 1-3 advancements & a spammable action.</li><br />
-  <li><span class="fw-bold">Menu close -</span> Opening and closing the pause menu will advance the RNG state a small amount depending on your location and amount of NPCs present. - Predictable advancements & a spammable action.</li><br />
-  <li><span class="fw-bold">Animations -</span> You can make your Pokémon animate on the party summary screen by pressing in the left stick. - 1 advancment per "click" & a spammable action.</li><br />
-  <li><span class="fw-bold">Active NPCs -</span> Standing near an NPC will "activate" them, this will advance the RNG state rapidly. - Area specific advancements, good for covering large amounts of advancements quickly.</li><br />
+  <li><span class="fw-bold">Player movement -</span> Each time the player stops moving the control stick the RNG state will advance a small amount - Roughly 1-3 advancements per input.</li><br />
+  <li><span class="fw-bold">Menu close -</span> Opening and closing the pause menu will advance the RNG state a small amount depending on your location and amount of NPCs in the area. - Area specific advancements.</li><br />
+  <li><span class="fw-bold">Animations -</span> Having your Pokemon animate on the party summary screen will advance the RNG state a small amount. - 1 advancment per "click" on the party menu, 1 advancement per motion on the summary page.</li><br />
+  <li><span class="fw-bold">Active NPCs -</span> Standing near an NPC will cause them to become active, this will advance the RNG state rapidly. - Area specific advancements, good for covering large amounts of advancements quickly.</li><br />
 </ol>
+
+<h3><span class="fw-bold">Day Skipping:</span></h3>
+
+We can use Day Skipping to advance up to a total of around 13,000 advancements per day skipped. The amount of frames that advance by Day Skipping is heavily influenced by the amount of Pokémon currently stored in your boxes (not including eggs). the number will increase drastically if you store more Pokémon.<br /><br /> 
+
+Exiting a ranked battle gives us the conditions we need to perform easy date skipping on retail hardware.<br /><br /> 
+
+If you plan to use the day skipping exploit you should take a moment to monitor your advances to avoid overshooting your target frame. Skip 1 day at a time and reidentify your current seed to get a rough estimate of how many frames will advance per day skipped. (More on seed identification later!)<br /><br />
+
+<span class="fw-bold">Day skipping will change the weather in the area!</span> Be sure to set your date back to how it was originally to restore the weather condition.<br /><br />
+
+<u>To perform the day skipping technique follow these instructions:</u>
+<ol>
+  <li>Pause the game and press VS to enter a ranked battle.</li>
+  <li>Forfeit once you enter the battle. Alternatively you can play out the whole battle if you wish.</li>
+  <li>From here navigate to the System Settings and change the date ahead by one day.</li>
+  <li>Exit back to the main menu of the home screen and reopen the game.</li>
+  <li>Repeat step 4 and 5.</li>
+</ol> 
+
+You should notice time-based events such as the Rotom Lottery function have reset, this is an indication that the exploit has been properly activated.<br /><br /> 
 
 <h3><span class="fw-bold">What are motions/animations?</span></h3>
 The term "motions" or "animations" refers to a feature of the Pokémon summary page, when pressing L3 (Clicking in the left stick) your Pokémon will do one of two animations, physical or special. Recording these in sequence will eventually produce our current RNG state.<br /><br />
@@ -59,19 +80,33 @@ The term "motions" or "animations" refers to a feature of the Pokémon summary p
 In the first animation Espeon swipes towards the screen, this is a clear physical animation.<br />
 In the second animation Espeon stays in place using a psychic move, this is a clear special animation.<br /><br />
 
-<u>Step-by-step instructions for identifying your current seeds:</u>
-<ul>
+<u>Identifying your current seed using Retail Seed Finder:</u>
+<ol>
   <li>Open the game and enter the overworld.</li>
-  <li>Pause the game using X, click "Pokémon", then view the summary of any of your Pokémon.</li>
-  <li>Open the Seed Finder tab of the GUI and have your Pokémon animate.</li>
-  <li>Click (or type) 0 if your animation was physical.</li>
-  <li>Click (or type) 1 if your animation was special.</li>
+  <li>Pause the game using <code>X</code>, click <code>Pokémon</code>, then view the summary of any of your Pokémon.</li>
+  <li>Open the <code>Retail Seed Finder</code> window and have your Pokémon animate.</li>
+  <li>Click (or type) <code>0</code> if your animation was physical.</li>
+  <li>Click (or type) <code>1</code> if your animation was special.</li>
   <li>Repeat this process 128 times and your seed will be generated. Click <code>Update Main Form</code> and exit back to the main window.</li>
-</ul>
+  <li>Search for a target frame.</li>
+</ol>
 
-This can seem like a lengthy and tedious process at first glance (it kinda is), for this reason it's advised to remap your controller button layout if you are able to do so, such as remapping L3 to Y. This is done through the Switch system settings.<br /><br />
+This can seem like a lengthy and tedious process at first glance (it kinda is), for this reason it's advised to remap your controller button layout if you are able to do so, such as remapping the <code>L3</code> button to <code>Y</code>. This is done through the Switch system settings.<br /><br />
 
-Once you know your seed you can easily re-identify your current state within 10-20 animations, this is done using the <code>Retail Advances Tracker</code> feature on the main window of the generator.<br /><br />
+Once you know your seed you can easily re-identify your current state within 10-20 animations, this is done using the <code>Retail Advances Tracker</code> feature found on the main window.<br /><br />
+
+<u>Re-identifying your current RNG states using the Retail Advances Tracker:</u>
+<ol>
+  <li>Click <code>Generate Pattern</code> once you have found your seeds using <code>Retail Seed Finder</code>.</li>
+  <li>Pause the game using <code>X</code>, click <code>Pokémon</code>, then view the summary of any of your Pokémon and have it do some animations.</li>
+  <li>Click (or type) <code>0</code> if your animation was physical.</li>
+  <li>Click (or type) <code>1</code> if your animation was special.</li>
+  <li>Repeat roughly 10-20 times until you are given 1 possible result. Click <code>Update States</code> to automatically paste your new seeds into the correct fields.</li>
+  <li>Search for your target again. If you see your target on the generator again that means the original seed identification was correct and you can continue following the guide.</li>
+  <li>If you cannot find your original target this means seed identification was incorrect and needs to be redone.</li>
+</ol>
+
+Seed re-identification plays a huge role, it helps us keep track of the amount of frame advancements between searches. This is extremely helpful for closing in on a specific target frame or finding out how many advancements a specific action achieves.<br /><br />
 
 <h3><span class="fw-bold">Menu Close Prediction:</span></h3>
 We can accurately predict the number of advancements that will pass when we close the pause menu. It is based on the number of NPCs in the area and if you were holding a direction on the control stick at the time of unpause. For Loto-ID and Cram-o-matic, the NPC Counts are likely as follows:<br /><br />
