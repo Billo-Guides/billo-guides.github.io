@@ -1,20 +1,19 @@
 <script type="text/javascript">
   var url = window.location.pathname;
-  var pathname = url.slice(1, url.indexOf("/", 1)).toLowerCase();
+  var pathname = url.slice(url.indexOf("/", 1) + 1, url.indexOf("/", url.indexOf("/", 1) + 1)).toLowerCase();
   switch (pathname) {
-    case "misc":
-      $("#nav-misc").addClass("active").css("color", "#fff");
+    case "swsh":
+      $("#SwordShieldDropdown").addClass("active").css("color", "#fff");
       break;
 
-    case "proof-guidelines":
-      $("#nav-proof").addClass("active").css("color", "#fff");
-      break;
-
-    case "rules":
-      $("#nav-rules").addClass("active").css("color", "#fff");
+    case "lgpe":
+      $("#LGPEDropdown").addClass("active").css("color", "#fff");
       break;
 
     default:
       $("#nav-home").addClass("active").css("color", "#fff");
+  }
+  if (url.toLowerCase().endsWith(".git")) {
+    window.location.replace("https://github.com/Billo-Guides/billo-guides.github.io");
   }
 </script>

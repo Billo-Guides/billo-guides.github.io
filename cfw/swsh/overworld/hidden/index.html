@@ -35,7 +35,8 @@ The goal is to walk into grass and spawn a hidden encounter on the calculated ta
 We will be aiming for a Shiny Sinistea-Antique in Glimwood Tangle. You can be more specific with the filters if you wish, such as filtering for a specific mark or specific IVs.<br /><br />
 
 <u>Using Sinistea-Antique as the example:</u><br />
-- The <code>Encounter Lookup</code> tab tells us that Sinistea-Antique in Glimwood Tangle has an encounter slot range of 99-99, a level range of 34-36 and is a hidden encounter in all weather. It also tells us Sinistea-Antique does not hold a random item, and has no potential Egg Moves.<br />
+- The <code>Encounter Lookup</code> tab tells us that Sinistea-Antique in Glimwood Tangle has an encounter slot range of 99-99, a level range of 34-36 and is a hidden encounter in all weather. It also tells us Sinistea-Antique does not hold a random
+item, and has no potential Egg Moves.<br />
 - Clicking the row that applies to our encounter will enter all the information we need into the main window.<br />
 - Number of KOs is irrelevant as hidden encounters cannot be Brilliant Aura.<br /><br />
 
@@ -66,7 +67,8 @@ Once the main window is filled in correctly & you are stood in a good position i
 <span class="fw-bold">Figure 3 -</span> Target found!<br />
 <img src="./images/hidden/figure-3-target-found-hidden.png" style="width:675px;height:400px;"><br /><br />
 
-<span class="fw-bold">We found one!</span> A shiny, gentle natured Sinistea-Antique in a cluster on advances 19,139 and 19,141. These are the "target frames" and the aim will be to spawn a hidden encounter in the grass on either of these frames.<br /><br />
+<span class="fw-bold">We found one!</span> A shiny, gentle natured Sinistea-Antique in a cluster on advances 19,139 and 19,141. These are the "target frames" and the aim will be to spawn a hidden encounter in the grass on either of these
+frames.<br /><br />
 
 Hidden encounters have a chance of spawning per step taken while in grass. If the encounter does not spawn in the first 1-2 steps there is a good chance that you will miss your target frame.<br /><br />
 
@@ -74,7 +76,8 @@ Once a hidden encounter is spawned the stats and internal details (such as PID/E
 
 <span class="fw-bold">Don't let the Pokémon despawn after you spawn it in the overworld!</span> Hidden encounters will despawn within a few seconds of appearing, run into the encounter quickly.<br /><br />
 
-It's common to see "clusters" or "groups" of frames that produce the same result when searching for a target. Aiming for large clusters is recommended as this will provide more chances for the player to spawn the Pokémon on the correct frame.<br /><br />
+It's common to see "clusters" or "groups" of frames that produce the same result when searching for a target. Aiming for large clusters is recommended as this will provide more chances for the player to spawn the Pokémon on the correct
+frame.<br /><br />
 
 <h5><span class="fw-bold">Advancing towards the target:</span></h5>
 The generator displays the target on frame 19,139 and 19,141, based on local testing the delay for this symbol encounter is 3. This means the target frames for this attempt will be frame 19,136 and 19,138.<br /><br />
@@ -82,23 +85,24 @@ The generator displays the target on frame 19,139 and 19,141, based on local tes
 <u>Step by step:</u><br />
 <ol>
   <li>Advance towards the target frame using bike, NPCs or by spawning overworld Pokémon in the area.</li><br />
-Consider using the <code>DaySkip</code> feature of the GUI to advance large distances.<br /><br />
+  Consider using the <code>DaySkip</code> feature of the GUI to advance large distances.<br /><br />
 
   <li>Once you are close to the target (within ~500 frames), stand close to a patch of grass in the area and click the <code>Update States</code> button.</li><br />
-This will update your current seeds at the top right of the window.<br /><br />
+  This will update your current seeds at the top right of the window.<br /><br />
 
-<span class="fw-bold">From this point it's recommended to only advance using menu close, animation and bike advancements as they only advance in small increments, making them easy to keep track of.</span><br /><br />
+  <span class="fw-bold">From this point it's recommended to only advance using menu close, animation and bike advancements as they only advance in small increments, making them easy to keep track of.</span><br /><br />
 
   <li>Quickly close and reopen the pause menu, pay attention to the number of advancements that have passed from doing so (shown in the <code>Curr. Adv.</code> field on the main window), repeat this step roughly 5 times.</li><br />
-It's important to know the average number of frames that will advance from closing the pause menu, we will eventually need to account for this to hit the correct target frame.<br /><br />
+  It's important to know the average number of frames that will advance from closing the pause menu, we will eventually need to account for this to hit the correct target frame.<br /><br />
 
-<span class="fw-bold">From this point it's recommended to only advance using animations from the <u>party menu</u>, this provide a stable +1 advancement per input.</span><br /><br />
+  <span class="fw-bold">From this point it's recommended to only advance using animations from the <u>party menu</u>, this provide a stable +1 advancement per input.</span><br /><br />
 
   <li>Open the party menu and advance to your target frame using animations, here's where we need to factor in the amount of advances that pass from closing the pause menu.</li><br />
-For example, if the delay in the area is 3, the average number of frames from closing the pause menu is 8 and the target is 100 advances away, we would advance to frame 89 using animations, then closing the pause menu would pick up the 8 advancements we need to hit the target frame.<br /><br />
+  For example, if the delay in the area is 3, the average number of frames from closing the pause menu is 8 and the target is 100 advances away, we would advance to frame 89 using animations, then closing the pause menu would pick up the 8
+  advancements we need to hit the target frame.<br /><br />
 
   <li>Close the pause menu and quickly run into grass to spawn an encounter! If a hidden encounter spawned, great! Encounter it then click the <code>Read Encounter</code> button. Make sure it matches the output shown on the generator.</li><br />
-If a hidden encounter did not spawn you were simply unlucky and will have to look for a new target frame.<br />
+  If a hidden encounter did not spawn you were simply unlucky and will have to look for a new target frame.<br />
 </ol>
 
 You can be creative with the methods you use to advance the RNG state.<br /><br />
@@ -143,7 +147,7 @@ The commonly occuring reasons for missing a target Pokémon are:
 
 <h5><span class="fw-bold">Encounter did not spawn or spawned too late...</span></h5>
 
-This is a common issue players will face when tackling hidden encounters and is likely due to mistiming when spawning the Pokémon. Retry and search for a new target frame and make sure your player positioning is correct.<br /><br /> 
+This is a common issue players will face when tackling hidden encounters and is likely due to mistiming when spawning the Pokémon. Retry and search for a new target frame and make sure your player positioning is correct.<br /><br />
 
 Standing directly next to the grass is advised as you will be able to spawn a hidden encounter in 1-2 steps. You will know if you are standing too close when the player starts the crouching animation, this is something we want to avoid.<br /><br />
 
@@ -168,19 +172,22 @@ We can use the <code>Read Encounter</code> feature of the tool to confirm the ex
   <li>This will be your delay for that particular encounter.</li>
 </ul>
 
-<u>When RNG abusing in unstable conditions you should record delays for multiple attempts before aiming for a target and check for any consistent delay counts. It is also advised to aim for large clusters where possible to increase your chances of actually hitting the target.</u><br /><br />
+<u>When RNG abusing in unstable conditions you should record delays for multiple attempts before aiming for a target and check for any consistent delay counts. It is also advised to aim for large clusters where possible to increase your chances of
+  actually hitting the target.</u><br /><br />
 
 <span class="fw-bold">Figure 9 -</span> Delay troubleshooting example<br />
 <img src="./images/hidden/figure-9-troubleshooting-delay.png" style="width:675px;height:400px;"><br /><br />
 
-We hit a shiny, but it wasn't Sinistea-Antique! So what happened here? We actually hit a different frame within a shiny cluster which contained the encounter slot values for Morgrem, we can take a look by locating the exact encounter in the <code>Encounter Lookup</code> tab and clicking search again on the main window. <br /><br />
+We hit a shiny, but it wasn't Sinistea-Antique! So what happened here? We actually hit a different frame within a shiny cluster which contained the encounter slot values for Morgrem, we can take a look by locating the exact encounter in the
+<code>Encounter Lookup</code> tab and clicking search again on the main window. <br /><br />
 
 <u>If the Pokemon you find is non shiny you will need to be more specific with your filters, include the exact IVs displayed in the <code>Read Encounter</code> box to easily find the frame that you hit.</u><br /><br />
 
 <span class="fw-bold">Figure 10 -</span> Troubleshooting Encounter-slots<br />
 <img src="./images/hidden/figure-10-encounter-lookup-troubleshooting-morgrem.gif" style="width:675px;height:400px;"><br /><br />
 
-Here we can see Morgrem was indeed a shiny Pokémon within the cluster (Encounterslot value of 0-19 according to <code>Encounter Lookup</code>). Our goal was frame 3,996 and we hit frame 4005, the tool shows these values are a match 9 frames later than our desired target frame, we will adjust accordingly by walking into the grass 9~ frames earlier next time.<br /><br />
+Here we can see Morgrem was indeed a shiny Pokémon within the cluster (Encounterslot value of 0-19 according to <code>Encounter Lookup</code>). Our goal was frame 3,996 and we hit frame 4005, the tool shows these values are a match 9 frames later
+than our desired target frame, we will adjust accordingly by walking into the grass 9~ frames earlier next time.<br /><br />
 
 <h5><span class="fw-bold">Cannot find result...</span></h5>
 If you cannot find the Pokémon you are in battle with anywhere on the tool this is likely due to one of two reasons:
@@ -189,7 +196,7 @@ If you cannot find the Pokémon you are in battle with anywhere on the tool this
   <li>The information entered into the main window of the tool was not completely accurate.</li>
 </ul>
 
-Try to reposition your character and see if your issue persists, if you are still having problems double check the information on the main window is entered correctly by searching it on the Encounter Lookup and clicking the correct row.<br /><br /> 
+Try to reposition your character and see if your issue persists, if you are still having problems double check the information on the main window is entered correctly by searching it on the Encounter Lookup and clicking the correct row.<br /><br />
 
 <u>You must pay attention to the row you are clicking and making sure it matches your in-game environment.</u><br /><br />
 
