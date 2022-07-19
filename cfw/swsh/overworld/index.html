@@ -68,20 +68,28 @@ This is the <code>Encounter Lookup</code> window. Searching for a specific speci
 <span class="fw-bold">Figure 3 -</span> Menu Close Advances Viewer window overview<br />
 <img src="./overworld/images/main-page/figure-3-menu-close-advances-viewer-overview-cfw.gif" style="width:675px;height:400px;"><br /><br />
 
-This is the <code>Menu Close Advances Viewer</code> window. Here we are able to accurately predict the amount of advancements that will occur from closing the pause menu, this is based on your current seed and number of NPCs in the area.<br /><br />
+<h3><span class="fw-bold">Menu Close Prediction:</span></h3>
+We can accurately predict the number of advancements that will pass when we close the pause menu. It is based on the number of NPCs in the area and if you were holding a direction on the control stick at the time of unpause.<br /><br />
 
-When unpausing the game the noise in the area will freeze for a brief time period. This applies to most areas of the game and the window of silence can last a few seconds. We can use this window of silence to all but guarantee that we spawn or interact with our encounters on the correct frame.<br /><br />
+If you do not get the correct results, you will need to Calculate your NPC Count.<br /><br />
 
-<u>How to find the number of NPCs in the area you are in:</u>
+<u>This can be done using the Menu Close Advances Viewer as follows:</u>
 <ol>
-  <li>Open the game and press X to open the pause menu, then click <code>Connect</code> on the main window of the generator, ideally the number in the <code>Curr. adv.</code> field should remain at 0.</li>
-  <li>Open the <code>Menu Close Advances Viewer</code> window.</li>
-  <li>Close and reopen the pause menu in game any number of times, take note of the amount of advancements that occur.</li>
-  <li>Change the number in the <code>NPCs</code> tab of the <code>Menu Close Advances Viewer</code> window to 0. Increment this number by 1 until the amount of advancements aligns with the <code>Curr. adv.</code> field.</li>
-  <li>This will be the number of NPCs in your area, take note of the number in case you need to refer to it later.</li>
+  <li>Count the number of NPCs in the area you're in manually. This can also include Pokemon and models outside of render distance so may not be completely accurate, this simply provides a good starting point. If you are unable to calculate the amount of NPCs in the area manually, start from 0.</li>
+  <li>Get into position and press <code>X</code> to open the menu.</li>
+  <li>Click connect on the main window of the generator.</li>
+  <li>Click the <code>Menu Close Advances Viewer</code> button at the top of the generator to open a smaller window. Your seeds should be visible in the correct fields.</li>
+  <li>Take the number of NPCs you counted earlier and put it into the <code>NPCs</code> field.</li>
+  <li>Enter your number of advancements into the <code>Curr Adv.</code> field, as seen on the main window of the generator.</li>
+  <li>Enter the search range (a few hundred should be enough!) into the <code>+</code> field directly below and search, you should then close and reopen the menu to make sure the predicted advances match what you actually get.</li>
+  <li>If the values do not match, tweak the number in the NPCs field (decrease the value if the number of advances you got was lower than expected, increase if it was higher) until it matches. Now do a few more menu advances then re-identify your
+    current seed to make sure you stay on track with the generated "timeline".</li>
 </ol>
 
-Opening and closing the pause menu too quickly may result in no frames being advanced.<br /><br />
+<span class="fw-bold">Closing the pause menu has an added effect of freezing noise in the area for a short time period</span>, we will use this window of silence in tandem with menu close prediction to near guarantee that we interact with the machine
+on the correct frame.<br /><br />
+
+Menu close prediction is not a requirement to perform overworld RNG abuse, this is the recommended method to use as it allows you to precisely advance all the way up to your target using animations instead of relying on frame clusters or luck and provides a lot more consistency.<br /><br />
 
 <h3><span class="fw-bold">Environment Control:</span></h3>
 For the purposes of this guide, the term "noisy" is used to describe an area or environment in which the RNG state naturally advances at a fast pace.<br /><br />
