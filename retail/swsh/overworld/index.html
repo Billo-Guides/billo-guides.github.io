@@ -161,12 +161,14 @@ Download and extract all the contents from the <code>SWSH_OWRNG_Generator_GUI.zi
     <details>
       <summary><span class="fw-bold">How to calculate the number of NPCs in an area:</span></summary> <br />
       <ol>
-        <li>Attempt to count the number of NPCs in the area of your target manually if possible. If this is impossible, starting from 0 is acceptable.</li><br />
-        <li>Press the <code>X</code> button on your controller to open the pause menu. Then click <code>Connect</code> on the main window of the generator.</li><br />
-        <li>Click the <code>Menu Close Advances Viewer</code> button at the top of the generator to open a smaller window. Your seeds should be visible in the correct fields.</li><br />
+        <li>Attempt to count the number of NPCs in the area of your target manually if possible. If this is impossible, starting from 0 NPCs and working forward is acceptable.</li><br />
+        <li>Identify your current seeds using the <code>Retail Seed Finder</code>, as explained above, keep the game paused after doing so. This will ensure that the amount of advancements that have occured since finding your seed will remain at 0.</li><br />
+        <li>Click the <code>Menu Close Advances Viewer</code> button at the top of the generator to open a smaller window.</li><br />
+        <li>Take your seeds from the <code>State[0] & State[1] fields of the Main Window, and enter them into the same fields of the Menu Close Advances Viewer window.</li><br />
         <li>Take the number of NPCs you counted earlier and put it into the <code>NPCs</code> field.</li><br />
-        <li>Enter your number of advancements into the <code>Curr Adv.</code> field, as seen on the main window. If the above steps were closely followed, this number should be 0.</li><br />
-        <li>Enter the search range into the <code>+</code> field, then hit search, you should then close and reopen the menu to make sure the predicted advances match what you actually get.</li><br />
+        <li>Enter your number of advancements into the <code>Init Adv.</code> field. If the above steps were closely followed, this number should be 0.</li><br />
+        <li>Enter the search range into the <code>+</code> field, then hit search, you should then close and reopen the menu and re-identify your current seed.</li><br />
+        <li>Subtract the amount of advancements that were consumed by re-identifying your current seed from the total amount of advancements that have occured. (For example, if 18 advancements have occured, and it took 14 advancements to re-identify the current seed, then 4 frames passed from opening and closing the pause menu)</li><br />
         <li>If the values do not match, tweak the number in the NPCs field until it matches. (Decrease the value if the number of advances you got was lower than expected, increase if it was higher)</li>
       </hr>
       </ol>
