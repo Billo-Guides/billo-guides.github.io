@@ -34,7 +34,8 @@ Overworld RNG abuse can be used to obtain shiny and/or marked Pokémon from wild
 <h3><span class="fw-bold">Getting Started:</span></h3>
 <u>You will need:</u>
 <ul>
-  <li><a href="https://github.com/LegoFigure11/swsh-overworld-rng-gui/releases">SWSH Overworld RNG Generator</a></li>
+  <li><a href="https://github.com/LegoFigure11/swsh-overworld-rng-gui/releases">SWSH Overworld RNG Generator - Latest release</a></li>
+  <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/6.0">.NET 6.0</a> - Generator dependency</li>
   <li>A standard calculator</li>
 </ul>
 
@@ -164,7 +165,7 @@ Download and extract all the contents from the <code>SWSH_OWRNG_Generator_GUI.zi
         <li>Attempt to count the number of NPCs in the area of your target manually if possible. If this is impossible, starting from 0 NPCs and working forward is acceptable.</li><br />
         <li>Identify your current seeds using the <code>Retail Seed Finder</code>, as explained above, keep the game paused after doing so. This will ensure that the amount of advancements that have occured since finding your seed will remain at 0.</li><br />
         <li>Click the <code>Menu Close Advances Viewer</code> button at the top of the generator to open a smaller window.</li><br />
-            <li>Take your seeds from the <code>State[0] & State[1]</code> fields of the Main Window, and enter them into the same fields of the Menu Close Advances Viewer window.</li><br />
+        <li>Take your seeds from the <code>State[0] & State[1]</code> fields of the Main Window, and enter them into the same fields of the Menu Close Advances Viewer window.</li><br />
         <li>Take the number of NPCs you counted earlier and put it into the <code>NPCs</code> field.</li><br />
         <li>Enter your number of advancements into the <code>Init Adv.</code> field. If the above steps were closely followed, this number should be 0.</li><br />
         <li>Enter the search range into the <code>+</code> field, then hit search, you should then close and reopen the menu and re-identify your current seed.</li><br />
@@ -314,22 +315,26 @@ There are four types of encounters: Static, Symbol, Hidden, & Fishing. It's impo
        <tbody id="results">
    <tr>
       <td><span class="fw-bold">Static</span></td>
-      <td>100% chance of encounter spawns with an overworld model, static spawns will not be standing in grass.<br /><br /></td>
+      <td>100% chance of encounter spawns with an overworld model, static spawns will not be standing in grass.<br /><br />
+         <a href="./overworld/images/main-page/staticencounter.jpg">Example</a><br /><br /></td>
       <td><span class="fw-bold" style="color:#be1111;">No</span></td>
    </tr>
    <tr>
      <td><span class="fw-bold">Symbol</span></td>
-     <td>By chance encounters in the grass or water with an overworld model.<br /><br /></td>
+     <td>By chance encounters in the grass or water with an overworld model.<br /><br />
+         <a href="./overworld/images/main-page/symbolencounter.jpg">Example</a><br /><br /></td>
      <td><span class="fw-bold" style="color:#1eb10a;">Yes</span></td>
    </tr>
    <tr>
      <td><span class="fw-bold">Hidden</span></td>
-     <td>By chance encounters in the grass that does not have an overworld model, these encounters are indicated by the "!" symbol when walking around in the grass.<br /><br /></td>
+     <td>By chance encounters in the grass that does not have an overworld model, these encounters are indicated by the "!" symbol when walking around in the grass.<br /><br />
+         <a href="./overworld/images/main-page/hiddenencounter.jpg">Example</a><br /><br /></td>
      <td><span class="fw-bold" style="color:#be1111;">No</span></td>
    </tr>
    <tr>
      <td><span class="fw-bold">Fishing</span></td>
-     <td>By chance encounters in the water that does not have an overworld model, these encounters indicated by a rippling water and a fishing rod is required to encounter them.<br /><br /></td>
+     <td>By chance encounters in the water that does not have an overworld model, these encounters indicated by a rippling water and a fishing rod is required to encounter them.<br /><br />
+         <a href="./overworld/images/main-page/fishingencounter.jpg">Example</a><br /><br /></td>
      <td><span class="fw-bold" style="color:#1eb10a;">Yes</span></td>
     </tr>
     <tr>
@@ -339,7 +344,7 @@ There are four types of encounters: Static, Symbol, Hidden, & Fishing. It's impo
      </tr>
      </tbody>
 </table>
-
+      
 <span class="fw-bold">Great! Now that we know all the terminology, it's time to get started!</span><br /><br />
   
 Search the species you wish to hunt on the <code>Encounter Lookup</code> tab of the generator and pick one of the encounters from the list. Take note of the type of encounter you have chosen and click on the page that applies to you!<br /><br />
