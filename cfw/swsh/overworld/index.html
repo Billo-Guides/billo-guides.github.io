@@ -34,6 +34,7 @@ Overworld RNG abuse can be used to obtain shiny and/or marked Pokémon from wild
 <u>You will need:</u>
 <ul>
   <li><a href="https://github.com/LegoFigure11/swsh-overworld-rng-gui/releases">SWSH Overworld RNG Generator</a> - Latest release</li>
+  <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/6.0">.NET 6.0</a> - Generator dependency</li>
   <li><a href="https://github.com/Koi-3088/sys-usb-botbase/releases">sys-usb-botbase</a> - Latest release</li>
   <li><a href="https://github.com/spacemeowx2/ldn_mitm/releases/">ldn-mitm</a> - Latest release</li>
 </ul>
@@ -130,13 +131,11 @@ Overworld RNG abuse can be used to obtain shiny and/or marked Pokémon from wild
     <details>
       <summary><span class="fw-bold">How to calculate the number of NPCs in an area:</span></summary> <br />
       <ol>
-        <li>Attempt to count the number of NPCs in the area of your target manually if possible. If this is impossible, starting from 0 is acceptable.</li><br />
-        <li>Press the <code>X</code> button on your controller to open the pause menu. Then click <code>Connect</code> on the main window of the generator.</li><br />
-        <li>Click the <code>Menu Close Advances Viewer</code> button at the top of the generator to open a smaller window. Your seeds should be visible in the correct fields.</li><br />
-        <li>Take the number of NPCs you counted earlier and put it into the <code>NPCs</code> field.</li><br />
-        <li>Enter your number of advancements into the <code>Curr Adv.</code> field, as seen on the main window. If the above steps were closely followed, this number should be 0.</li><br />
-        <li>Enter the search range into the <code>+</code> field, then hit search, you should then close and reopen the menu to make sure the predicted advances match what you actually get.</li><br />
-        <li>If the values do not match, tweak the number in the NPCs field until it matches. (Decrease the value if the number of advances you got was lower than expected, increase if it was higher)</li>
+        <li>Press the <code>X</code> button on your controller to open the pause menu, then disconnect and reconnect to the main window. This will ensure the number inside the <code>Curr. Adv</code> remains at 0.</li><br />
+        <li>Click the <code>Menu Close Advances Viewer</code> button at the top of the main window to open a smaller window. Your seeds should be visible in the correct fields.</li><br />
+        <li>Close the pause menu then quickly re-open it, take note of the number of advancements that have occured from doing so.</li><br />
+        <li>Enter your number of advancements into the <code>Init Adv.</code> field. If the above steps were closely followed, this number should be 0.</li><br />    
+        <li>Type 0 into the <code>NPCs</code> field and search. Gradually increase this number by 1 until you find a match. Repeat this step a few times to ensure the advancement predictions are accurate.</li><br />
       </ol>
     </details>
     <br />
@@ -254,22 +253,26 @@ There are four types of encounters: Static, Symbol, Hidden, & Fishing. It's impo
        <tbody id="results">
    <tr>
       <td><span class="fw-bold">Static</span></td>
-      <td>100% chance of encounter spawns with an overworld model, static spawns will not be standing in grass.<br /><br /></td>
+      <td>100% chance of encounter spawns with an overworld model, static spawns will not be standing in grass.<br /><br />
+         <a href="./overworld/images/main-page/staticencounter.jpg">Example</a><br /><br /></td>
       <td><span class="fw-bold" style="color:#be1111;">No</span></td>
    </tr>
    <tr>
      <td><span class="fw-bold">Symbol</span></td>
-     <td>By chance encounters in the grass or water with an overworld model.<br /><br /></td>
+     <td>By chance encounters in the grass or water with an overworld model.<br /><br />
+         <a href="./overworld/images/main-page/symbolencounter.jpg">Example</a><br /><br /></td>
      <td><span class="fw-bold" style="color:#1eb10a;">Yes</span></td>
    </tr>
    <tr>
      <td><span class="fw-bold">Hidden</span></td>
-     <td>By chance encounters in the grass that does not have an overworld model, these encounters are indicated by the "!" symbol when walking around in the grass.<br /><br /></td>
+     <td>By chance encounters in the grass that does not have an overworld model, these encounters are indicated by the "!" symbol when walking around in the grass.<br /><br />
+         <a href="./overworld/images/main-page/hiddenencounter.jpg">Example</a><br /><br /></td>
      <td><span class="fw-bold" style="color:#be1111;">No</span></td>
    </tr>
    <tr>
      <td><span class="fw-bold">Fishing</span></td>
-     <td>By chance encounters in the water that does not have an overworld model, these encounters indicated by a rippling water and a fishing rod is required to encounter them.<br /><br /></td>
+     <td>By chance encounters in the water that does not have an overworld model, these encounters indicated by a rippling water and a fishing rod is required to encounter them.<br /><br />
+         <a href="./overworld/images/main-page/fishingencounter.jpg">Example</a><br /><br /></td>
      <td><span class="fw-bold" style="color:#1eb10a;">Yes</span></td>
     </tr>
     <tr>
