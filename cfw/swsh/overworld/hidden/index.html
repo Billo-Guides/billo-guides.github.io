@@ -4,43 +4,78 @@ title: Hidden RNG (CFW)
 permalink: /cfw/swsh/overworld/hidden
 ---
 
-<div class="bg-success title">
-  <h1 class="text-light text-center pt-3 pb-3"> Hidden Encounter RNG (CFW)</h1>
+<div class="title" style="background-color: #0c0038;" id="FirstTitleHidden">
+  <h1 class="text-light text-center pt-3 pb-3">Hidden Encounter Guide (CFW)</h1>
 </div>
+  <hr />
+   
+   If you made it this far, it must mean you have an interest in RNG abusing Pokémon from Hidden encounters! This page will cover the whole process, from finding a desirable location to achieving a final result.<br /> <br />
+   
+   <div id="toc_container">
+     <span class="fw-bold">Table of Contents:</span>
+     <ul class="toc_list">
+       <li><a href="#FirstTitleHidden">Getting started</a> (This is where you are now)</li>
+       <li><a href="#SecondTitleHidden">Getting to work</a></li>
+       <li><a href="#ThirdTitleHidden">Advancing towards the target</a></li>
+     </ul>
+     </div>
+   
+   <div class="accordion" id="GettingStartedHidden">
+     <div class="card">
+       <div class="card-header text-white" style="background-color: #0c0038;">
+       <div class="card-header" id="GettingStartedHidden">
+         <h5 class="mb-0">
+           <span class="fw-bold">Getting Started</span>
+         </h5>
+       </div>
+       <div class="card-body" style="background-color: #ffffff36;">
+         <ol>
+           <li>Open the GUI and click on the <code>Encounter Lookup</code> button at the top of the main window. This will open the Encounter Lookup tab.</li><br />
+           <li>Type the species name of the Pokémon you are hunting into the empty field. This will bring up a list of every possible encounter and has all the information you need for the main window.</li><br />
+           <li>Scroll down the list of encounters and click on one of the rows displaying a HIDDEN encounter. This will automatically enter the information into the main window.</li><br />
+           <li>Head to the location in-game, change the date until you meet the correct weather condition.</li><br />
+           <li>Stand next to a patch of tall grass and save the game.</li><br />
+           <li>Press the <code>X</code> button on your controller to pause the game, and click <code>Connect</code> on the main window of the tool.</li><br />
+         </ol>
+   
+         <details>
+           <summary><u>Tips & Advice:</u><br /></summary>
+           <ul>
+           <li>Hidden encounters are not guaranteed to be the same species every time, the Pokémon species is instead based on an encounterslot value of 0-99.</li><br />
+           <li>Stand as close to the grass as possible when you are close to the target frame, hidden encounters have a chance of spawning per step taken in tall grass.</li><br />
+           <li>Aiming for clustered frames gives you a higher chance of hitting targets. A cluster is a group of frames that produce the same end result.</li><br />
+           <li>Brilliant Aura is not possible on Pokémon from Hidden encounters.</li><br />
+           <li>Having any Pokémon with the ability Syncronize in the first slot of your party will guarantee that the nature of any encountered overworld Pokémon will be the same as your leading Pokémon. </li><br />
+           <li>Test how fast the RNG state naturally advances in the area of your target Pokémon, consider locations with calm weather to reduce instability.</li><br />
+           <li>Use small patches of grass where possible to keep the amount of spawned Pokémon to a minimum..</li>
+           </ul>
+           </details>
+         </div>
+       </div>
+     </div>
+   <br />
+
+<span class="fw-bold">With all the required reading out of the way, it's time to get to work!</span>
 
 <hr />
+<div class="title" style="background-color: #0c0038;" id="SecondTitleHidden">
+  <h1 class="text-light text-center pt-3 pb-3">Time to Get to Work!</h1>
+</div>
+  <hr />
 
-If you made it this far, it must mean you have an interest in RNG abusing Pokémon from hidden encounters! This page will cover the whole process, from finding a desirable location to achieving a final result.<br /> <br />
+  The goal is to walk into grass and spawn a hidden encounter on the calculated target frame given by the generator. The advancement methods used are listed on the main page of this guide.<br /><br />
 
-<h3><span class="fw-bold">Getting Started:</span></h3>
-<u>Before starting, do the following:</u>
-<ul>
-  <li>Open the GUI and click on the <code>Encounter Lookup</code> button at the top of the main window. This will open the Encounter Lookup tab.</li>
-  <li>Type the species name of the Pokémon you are hunting into the empty field. This will bring up a list of every possible encounter and has all the information you need for the main window.</li>
-  <li>Scroll down the list of encounters and click on one of the rows displaying a HIDDEN encounter. This will automatically enter the information into the main window.</li>
-  <li>Head to the location in-game, change the date until you meet the correct weather condition, then stand near the spawn point of the Pokémon.</li>
-  <li>Run far enough away to despawn the Pokémon and save.</li>
-  <li>Press the Home button on your controller, and click <code>Connect</code> on the main window of the tool.</li>
-</ul>
+  In this example we will be aiming for a Shiny Sinistea-Antique in Glimwood Tangle. You can be more specific with the filters if you wish, such as filtering for a specific mark or specific IVs.<br /><br />
 
-It's suggested to pick an encounter in a quiet area with calm weather to reduce instability. Noise is area specific, you should test how noisy an area is before attempting to RNG abuse Pokémon in it.<br /> <br />
-
-<span class="fw-bold">With all the required reading out of the way, it's time to get started!</span><br /><br />
-
-<hr />
-
-<h3><span class="fw-bold">Time to Get to Work!</span></h3>
-The goal is to walk into grass and spawn a hidden encounter on the calculated target frame given by the generator. The advancement methods used are listed on the main page of this guide.<br /><br />
-
-We will be aiming for a Shiny Sinistea-Antique in Glimwood Tangle. You can be more specific with the filters if you wish, such as filtering for a specific mark or specific IVs.<br /><br />
-
-<u>Using Sinistea-Antique as the example:</u><br />
-- The <code>Encounter Lookup</code> tab tells us that Sinistea-Antique in Glimwood Tangle has an encounter slot range of 99-99, a level range of 34-36 and is a hidden encounter in all weather. It also tells us Sinistea-Antique does not hold a random
-item, and has no potential Egg Moves.<br />
-- Clicking the row that applies to our encounter will enter all the information we need into the main window.<br />
-- Number of KOs is irrelevant as hidden encounters cannot be Brilliant Aura.<br /><br />
-
-<span class="fw-bold">Let's enter this information into the main window by clicking the row that matches our conditions!</span><br /><br />
+<details>
+  <summary><u>Using Sinistea-Antique as the example:</u></summary>
+  <ul>
+     <li>The <code>Encounter Lookup</code> tab tells us that Sinistea-Antique in Glimwood Tangle has an encounter slot range of 99-99, a level range of 34-36 and is a hidden encounter in all weather. It also tells us Sinistea-Antique does not hold a random item, and has no potential Egg Moves.<br /></li>
+     <li>After clicking the row of our choice, we can see all the information about the encounter listed on the left hand side of the main window.</li>
+     <li>We are paused in-game, standing directly next to a patch of tall grass, and our current seeds are visible on the main window after clicking <code>Connect</code>.</li>
+     <li>Now all the details of our encounter are set up properly and we are ready to search or targets!</li>
+  </ul>
+</details><br />
 
 <span class="fw-bold">Figure 1 -</span> Tool setup<br />
 <img src="./images/hidden/figure-1-encounter-lookup-symbol-sinistea-antique.gif" style="width:675px;height:400px;"><br /><br />
@@ -50,19 +85,32 @@ item, and has no potential Egg Moves.<br />
 <span class="fw-bold">Figure 2 -</span> Game setup<br />
 <img src="./images/hidden/figure-2-in-game-setup.gif" style="width:675px;height:400px;"><br /><br />
 
-<u>This location in Glimwood Tangle is ideal, there are no NPCs around and has no extra unwanted spawns present.</u><br /><br />
+<div class="accordion" id="GameSetup">
+  <div class="card">
+    <div class="card-header text-white" style="background-color: #0c0038;">
+    <div class="card-header" id="GameSetup">
+      <h5 class="mb-0">
+        <span class="fw-bold">Game Setup</span>
+      </h5>
+    </div>
+    <div class="card-body" style="background-color: #ffffff36;">
+      This location in Glimwood Tangle is ideal, there are no NPCs around and has no extra unwanted spawns present. The weather in Glimwood Tangle never changes, if the weather in the area of your target does change, set the weather condition.<br /><br />
 
-Glimwood tangle is a moderately noisy area so the less extra noise, the better. This rule applies for all other areas.<br /><br />
+      Once a Hidden encounter is spawned in the grass, the stats and internal details (such as PID/EC) are generated and set in stone until it disappears. This is why it is only important to spawn the encounter in the grass on the correct frame (And to not let a target Pokémon despawn! Hidden encounters will despawn after 2-3 seconds.).<br /><br />
 
-Once the main window is filled in correctly & you are stood in a good position in-game, you can begin looking for target frames by clicking the search button on the generator.<br /><br />
+      Now that the main window is filled in correctly & you are standing in a good position in-game, you can begin looking for target frames by clicking the search button on main window of the generator.<br /><br />
 
-<u>If your results are not desirable, repeat the following:</u>
-<ol>
-  <li>Disconnect your Switch from the tool.</li>
-  <li>Restart your game and enter the overworld.</li>
-  <li>Enter the pause or Home menu and reconnect your Switch to the tool.</li>
-  <li>Search again, do this until you have desirable results.</li>
-</ol>
+      <span class="fw-bold">If your results are not desirable, repeat the following:</span><br /><br />
+      <ol>
+        <li>Disconnect your Switch from the tool.</li>
+        <li>Restart your game and enter the overworld.</li>
+        <li>Pause the game, then reconnect your Switch to the tool.</li>
+        <li>Search again, do this until you have desirable results.</li>
+      </ol>
+      </div>
+    </div>
+  </div>
+<br />
 
 <span class="fw-bold">Figure 3 -</span> Target found!<br />
 <img src="./images/hidden/figure-3-target-found-hidden.png" style="width:675px;height:400px;"><br /><br />
@@ -70,50 +118,60 @@ Once the main window is filled in correctly & you are stood in a good position i
 <span class="fw-bold">We found one!</span> A shiny, gentle natured Sinistea-Antique in a cluster on advances 19,139 and 19,141. These are the "target frames" and the aim will be to spawn a hidden encounter in the grass on either of these
 frames.<br /><br />
 
-Hidden encounters have a chance of spawning per step taken while in grass. If the encounter does not spawn in the first 1-2 steps there is a good chance that you will miss your target frame.<br /><br />
-
-Once a hidden encounter is spawned the stats and internal details (such as PID/EC) are generated and set in stone. This is why it is only important to spawn the encounter in the grass on the correct frame. <br /><br />
-
-<span class="fw-bold">Don't let the Pokémon despawn after you spawn it in the overworld!</span> Hidden encounters will despawn within a few seconds of appearing, run into the encounter quickly.<br /><br />
-
-It's common to see "clusters" or "groups" of frames that produce the same result when searching for a target. Aiming for large clusters is recommended as this will provide more chances for the player to spawn the Pokémon on the correct
-frame.<br /><br />
-
-<h5><span class="fw-bold">Advancing towards the target:</span></h5>
+<hr />
+<div class="title" style="background-color: #0c0038;" id="ThirdTitleHidden">
+  <h1 class="text-light text-center pt-3 pb-3">Advancing towards the target!</h1>
+</div>
+  <hr />
 The generator displays the target on frame 19,139 and 19,141, based on local testing the delay for this symbol encounter is 3. This means the target frames for this attempt will be frame 19,136 and 19,138.<br /><br />
 
-<u>Step by step:</u><br />
-<ol>
-  <li>Advance towards the target frame using bike, NPCs or by spawning overworld Pokémon in the area.</li><br />
-  Consider using the <code>Skip</code> feature of the main window to advance large distances with date skipping.<br /><br />
+<div class="accordion" id="AdvancingToTargetHidden">
+  <div class="card">
+    <div class="card-header text-white" style="background-color: #0c0038;">
+    <div class="card-header" id="AdvancingToTargetHidden">
+      <h5 class="mb-0">
+        <span class="fw-bold">Hitting your target frame</span>
+      </h5>
+    </div>
+    <div class="card-body" style="background-color: #ffffff36;">
 
-  <li>Once you are within a few hundred frames of your target, stand near next to a patch of grass in the location of your target Pokémon, then pause the game with X.</li><br /><br />
+      <span class="fw-bold">Step-by-step tutorial:</span><br /><br />
+      <ol>
+        <li>Advance towards your target frame using any of the methods listed inside the table on <a href="https://billo-guides.github.io/cfw/swsh/overworld">main page of this guide</a>. Consider using the <code>Skip</code> feature to advance large distances with day skipping.</li><br />
+      
+        <li>Once you are within a few hundred frames of your target, stand near to the spawn point of the Pokémon you are hunting.</li><br />
+      
+        <li>Pause the game using the <code>X</code> button, then disconnect and reconnect to the main window, then search for your target again.</li><br />
 
-  <span class="fw-bold">From this point it's recommended to only advance using menu close, animation and bike advancements as they only advance in small increments, making them easy to keep track of.</span><br /><br />
+        <div class="card-body" class="text-light" style="background-color: #0c0038;">
+          <span class="fw-bold">Tip:</span> From this point it's recommended to only advance using <code>menu close & animations</code> as they only advance in small increments, making them easy to keep track of.
+       </div><br />
 
-  <li>Disconnect and reconnect to the generator, search for your target again.</li><br />
-  You should be relatively close to your target frame at this stage.<br /><br />
-    
-  <li>Open the <code>Menu Close Advances Viewer</code> window and work out the amount of NPCs that are in the area, then enter your target frame into the <code>+</code> field of this window and hit search.</li><br />
-  This can be used to accurately predict the number of advancements that occur from closing the pause menu, as explained on the <a href="https://billo-guides.github.io/cfw/swsh/overworld">main page</a>.<br /><br />
+        <li>Open the <code>Menu Close Advances Viewer</code> window and work out the amount of NPCs that are in the area, as explained on the <a href="https://billo-guides.github.io/cfw/swsh/overworld">main page</a>. Enter this number into the <code>NPCs</code> field.</li><br />
+          
+        <li>Enter your target frame into the <code>+</code> field of this window and hit search. This should be the highest number in the cluster.</li><br /> 
+        
+        <div class="card-body" class="text-light" style="background-color: #0c0038;">
+          <span class="fw-bold">Tip:</span> If you are unable to find your target frame in the search results, this means the target cannot be hit based on your seed. Use animations to advance the RNG state slightly, then close and re-open the <code>Menu Close Advances Viewer</code> window and search for your target frame again. Repeat this process until your target frame is visible.
+       </div><br />
 
-  <span class="fw-bold">From this point it's recommended to only advance using menu close prediction, you can also use party animation advancements to nudge the frames forward one at a time if you need to.</span><br /><br />
-  
-  An example of a good time to use animations to nudge frames forward is when you are unable to find your target frame on the <code>Menu Close Advances Viewer</code> window, or need to advance small distances. (Each animation is a stable +1 advancement.)<br /><br />
+        <li>Open and close the pause menu until closing the menu a single time lands onto your target frame, according to the <code>Menu Close Advances Viewer</code> prediction. Pay attention to the <code>Curr. Adv</code> field of the main window to avoid overshooting your target.</li><br />
+      
+        <li>Close the pause menu and quickly run into the grass to spawn your Pokémon and initate an encounter before it despawns! Confirm you have hit the expected result by clicking the <code>Read Encounter</code> button when in battle.</li><br />
 
-  <li>Open and close the pause menu until closing the menu a single time lands onto your target frame, according to the <code>Menu Close Advances Viewer</code> prediction.</li><br />
-  Pay attention to the <code>Curr. Adv</code> field of the generator to avoid overshooting your target.<br /><br />
-
-  <li>Close the pause menu and quickly run into the grass to spawn a hidden encounter! Encounter it, then click the <code>Read Encounter</code> button. Make sure it matches the output shown on the generator.</li><br />
-  Remember not to let it despawn!<br />
-</ol>
-
-You can be creative with the methods you use to advance the RNG state. Menu close prediction is not necessary but will make for a much easier time hitting target frames and is extremely helpful in the more noisy areas of the game.<br /><br />
+      <div class="card-body" class="text-light" style="background-color: #0c0038;">
+       You can be creative with the methods you use to advance the RNG state. Menu close prediction is not necessary but will make for a much easier time hitting target frames and is extremely helpful in areas of the game where the RNG advances at a quick pace.
+     </div>
+       </ol>
+      </div>
+    </div>
+  </div>
+<br />
 
 <span class="fw-bold">Figure 4 -</span> Target frame hit!<br />
 <img src="./images/hidden/figure-4-hitting-target-hidden.png" style="width:675px;height:400px;"><br /><br />
 
-By using menu close prediction and animation advancements to keep track of inputs, we were able to hit out target frame!<br /><br />
+<span class="fw-bold">By using menu close prediction and animation advancements to keep track of inputs, we were able to hit out target frame!</span><br /><br />
 
 <span class="fw-bold">Figure 5/6/7 -</span> Result found!<br />
 <img src="./images/hidden/figure-5-in-battle-encounter-read-hidden.png" style="width:675px;height:400px;"><br /><br />
