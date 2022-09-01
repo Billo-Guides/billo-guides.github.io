@@ -147,79 +147,14 @@ By using animations and a standard calculator to keep track of inputs, we were a
 
 Espeon in party slot 1 with the ability Syncronize was used to determine the nature, using a Pokémon with this ability will make the nature of any overworld Pokémon match the nature of yours.<br /><br />
 
-Different areas & environments can have a drastic influence on delay, if you are missing targets when you believe you should be finding results, you should consider reading the Troubleshooting Encounters section down below.<br /><br />
+Different areas & environments can have a drastic influence on delay, if you are missing targets when you believe you should be finding results, you should consider reading the <code>Troubleshooting Encounters</code> page by clicking the button directly down below.<br /><br />
 
-<hr />
-
-<div class="bg-secondary title">
-  <h1 class="text-light text-center pt-3 pb-3">Troubleshooting Encounters</h1>
-</div>
-
-<hr />
-
-This section covers how to troubleshoot encounters and delays. If you keep missing targets, spawning in the wrong Pokémon, or can't find your result on the generator at all, this is the place to be.<br /><br />
-
-<h3><span class="fw-bold">Missing Targets:</span></h3>
-<u>The commonly occuring reasons for missing a target Pokémon are:</u>
-<ul>
-  <li>Encounter spawned too early/late due to mistiming.</li>
-  <li>There is a delay left unaccounted for.</li>
-  <li>Information in the main window was not completely accurate.</li>
-</ul>
-
-<h5><span class="fw-bold">Encounter spawned too early or too late...</span></h5>
-
-This is a common issue players will face when tackling static encounters and is likely due to mistiming when spawning the Pokémon. Retry and search for a new target frame and make sure your player positioning is correct.<br /><br />
-
-<h5><span class="fw-bold">Troubleshooting delay...</span></h5>
-
-For the purposes of this guide, the term "delay" is used to describe the frame difference between the Pokémon we encountered and the frame the encounter was initiated on.<br /><br />
-
-Most static encounters do not need to account for delay, this applies most to encounters in extreme weather conditions or in an otherwise unstable environment, such as having other spawned Pokémon present.<br /><br />
-
-Delay Calc - <code>frame Pokemon was generated - frame encounter was initiated = delay</code><br /><br />
-
-We can use an IV calculator to confirm the exact frame the encounter was generated on and calculate the delay from there. Here's how it's done!
-<ul>
-  <li>Aim for a target, such as any shiny Pokémon.</li>
-  <li>Run towards the Pokémon and spawn it in the overworld then initiate the encounter. Take note of the frame the Pokémon was spawned on.</li>
-  <li>Encounter the Pokémon and capture it, then calculate the exact IVs using an IV calculator such as the <a href="https://www.serebii.net/games/iv-calcswsh.shtml">this one by Serebii</a>.</li>
-  <li>If you didn't find the Pokémon that you expected, search for the specific IVs of the result you found and find the frame you hit.</li>
-  <li>Subtract your the frame the Pokémon was spawned on from the frame you actually hit.</li>
-  <li>This will be your delay for that particular encounter.</li>
-</ul>
-
-When RNG abusing in unstable conditions you should record delays for multiple attempts before aiming for a target and check for any consistent delay counts. It is also advised to aim for large clusters where possible to increase your chances of
-actually hitting the target.<br /><br />
-
-<span class="fw-bold">Figure 8 -</span> Delay troubleshooting example<br />
-<img src="./images/static/figure-8-troubleshooting-encounters.jpg" style="width:675px;height:400px;"><br /><br />
-
-We encountered an Aerodactyl, but it wasn't shiny! So what happened here? Well... We miscalculated. Let's try to find the frame we actually hit.<br /><br />
-
-<span class="fw-bold">Figure 9 -</span> Calculating the IVs<br />
-<img src="./images/static/figure-9-calculating-IVs.png" style="width:675px;height:400px;"><br /><br />
-
-Using the IV calculator we can find the rough IVs of the Aerodactyl we hit and use this information to locate the exact frame we landed on according to the generator.<br /><br />
-
-<span class="fw-bold">Figure 10 -</span> Finding the frame<br />
-<img src="./images/static/figure-10-locating-frame.gif" style="width:675px;height:400px;"><br /><br />
-
-By doing a filterless search we can see the shiny cluster, and frame we hit was 1 frame behind where we wanted to be, oh well! We will adjust accordingly for next time by spawning it in the overworld 1 frame later.<br /><br />
-
-<h5><span class="fw-bold">Cannot find result...</span></h5>
-If you cannot find the Pokémon you are in battle with anywhere on the tool this is likely due to one of two reasons:
-<ul>
-  <li>Player was positioned too close to the spawn and the Pokémon had already been generated long before walking into it.</li>
-  <li>The information entered into the main window of the tool was not completely accurate.</li>
-</ul>
-
-Try to reposition your character and see if your issue persists, if you are still having problems double check the information on the main tab is entered correctly by searching it on the <code>Encounter Lookup</code> and clicking the correct
-row.<br /><br />
-
-<u>You must pay attention to the row you are clicking and making sure it matches your in-game environment.</u><br /><br />
-
-That's all there is to it!<br /><br />
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/overworld/troubleshooting">
+  Click here to be redirected to the Troubleshooting Encounters page!
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a><br />
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/overworld">
   Send me back!
