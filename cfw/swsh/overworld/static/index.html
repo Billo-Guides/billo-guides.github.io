@@ -4,36 +4,64 @@ title: Static RNG (CFW)
 permalink: /cfw/swsh/overworld/static
 ---
 
-<div class="bg-success title">
-  <h1 class="text-light text-center pt-3 pb-3">Static Encounter RNG (CFW)</h1>
-</div>
-
-<hr />
+<div class="title" style="background-color: #0c0038;" id="FirstTitleStatic">
+   <h1 class="text-light text-center pt-3 pb-3">Static Encounter Guide (CFW)</h1>
+ </div>
+ <hr />
 
 If you made it this far, it must mean you have an interest in RNG abusing Pokémon from static encounters! This page will cover the whole process, from finding a desirable location to achieving a final result.<br /> <br />
 
-<h3><span class="fw-bold">Getting Started:</span></h3>
-<u>Before starting, do the following:</u>
-<ul>
-  <li>Open the GUI and click on the <code>Encounter Lookup</code> button at the top of the main window. This will open the Encounter Lookup tab.</li>
-  <li>Type the species name of the Pokémon you are hunting into the empty field. This will bring up a list of every possible encounter and has all the information you need for the main window.</li>
-  <li>Scroll down the list of encounters and click on one of the rows displaying a STATIC encounter. This will automatically enter the information into the main window.</li>
-  <li>Head to the location in-game, change the date until you meet the correct weather condition, then stand near the spawn point of the Pokémon.</li>
-  <li>Run far enough away to despawn the Pokémon and save.</li>
-  <li>Press the Home button on your controller, and click <code>Connect</code> on the main window of the tool.</li>
-</ul>
+<div id="toc_container">
+  <span class="fw-bold">Table of Contents:</span>
+  <ul class="toc_list">
+    <li><a href="#FirstTitleStatic">Getting started</a> (This is where you are now)</li>
+    <li><a href="#SecondTitleStatic">Getting to work</a></li>
+    <li><a href="#ThirdTitleStatic">Advancing towards the target</a></li>
+  </ul>
+  </div>
 
-It's suggested to pick an encounter in a quiet area with calm weather to reduce instability. Noise is area specific, you should test how noisy an area is before attempting to RNG abuse Pokémon in it.<br /> <br />
+<div class="accordion" id="GettingStartedStatic">
+  <div class="card">
+    <div class="card-header text-white" style="background-color: #0c0038;">
+    <div class="card-header" id="GettingStartedStatic">
+      <h5 class="mb-0">
+        <span class="fw-bold">Getting Started</span>
+      </h5>
+    </div>
+    <div class="card-body" style="background-color: #ffffff36;">
+      <ol>
+        <li>Open the GUI and click on the <code>Encounter Lookup</code> button at the top of the main window. This will open the Encounter Lookup tab.</li><br />
+        <li>Type the species name of the Pokémon you are hunting into the empty field. This will bring up a list of every possible encounter and has all the information you need for the main window.</li><br />
+        <li>Scroll down the list of encounters and click on one of the rows displaying a STATIC encounter. This will automatically enter the information into the main window.</li><br />
+        <li>Head to the location in-game, change the date until you meet the correct weather condition, then stand near the spawn point of the Pokémon.</li><br />
+        <li>Run far enough away to despawn the Pokémon and save.</li><br />
+        <li>Press the <code>X</code> button on your controller to pause the game, and click <code>Connect</code> on the main window of the tool.</li><br />
+      </ol>
 
-<span class="fw-bold">With all the required reading out of the way, it's time to get started!</span><br /><br />
+      <details>
+        <summary><u>Tips & Advice:</u><br /></summary>
+        <ul>
+        <li>Static encounters are guaranteed to be the same species every time until the weather in the area changes, the weather can potentially change each time the system clock reaches <code>00:00</code>.</li><br />
+        <li>Aiming for clustered frames gives you a higher chance of hitting targets. A cluster is a group of frames that produce the same end result.</li><br />
+        <li>Having any Pokémon with the ability Syncronize in the first slot of your party will guarantee that the nature of any encountered overworld Pokémon will be the same as your leading Pokémon. </li><br />
+        <li>Test how fast the RNG state naturally advances in the area of your target Pokémon, consider locations with calm weather to reduce instability.</li><br />
+        <li>You should knock out any unwanted static spawns if they are blocking your path.</li>
+        </ul>
+        </details>
+      </div>
+    </div>
+  </div>
+<br />
+
+<span class="fw-bold">With all the required reading out of the way, it's time to get to work!</span>
 
 <hr />
+<div class="title" style="background-color: #0c0038;" id="SecondTitleStatic">
+  <h1 class="text-light text-center pt-3 pb-3">Time to Get to Work!</h1>
+</div>
+  <hr />
 
-<h3><span class="fw-bold">Time to Get to Work!</span></h3>
 The goal is to walk towards the spawn point of the encounter on the calculated target frame displayed on the generator. The advancement methods used are listed on the main page of the guide.<br /><br />
-
-Static encounters are guaranteed to be the same species every time until the weather in the area changes, weather changes on each new day. As long as the correct weather conditions are set, we will get the same species in the same location every time
-the player walks into the spawn radius of the Pokémon.<br /><br />
 
 In this example we will be aiming for a Shiny Duraludon with a mark in Giant's Seat. You can be more specific with the filters if you wish, such as filtering for a specific mark or specific IVs.<br /><br />
 
@@ -45,64 +73,107 @@ In this example we will be aiming for a Shiny Duraludon with a mark in Giant's S
 <span class="fw-bold">Figure 2 -</span> Game setup<br />
 <img src="./images/static/figure-2-in-game-setup.gif" style="width:675px;height:400px;"><br /><br />
 
-<u>This location in Giant's Seat is ideal, there are no NPCs around and there are no spawned Pokémon present.</u><br /><br />
+<div class="accordion" id="GameSetup">
+  <div class="card">
+    <div class="card-header text-white" style="background-color: #0c0038;">
+    <div class="card-header" id="GameSetup">
+      <h5 class="mb-0">
+        <span class="fw-bold">Game Setup</span>
+      </h5>
+    </div>
+    <div class="card-body" style="background-color: #ffffff36;">
+      This location in Giant's Seat is ideal, there are no NPCs around and there are no spawned Pokémon present. Giant's Seat is located in the Wild Area, which is a notably quiet area in calm weather conditions.<br /><br />
 
-Giant's Seat is located in the Wild Area, which is a notably quiet area in calm weather conditions.<br /><br />
+      Once a Pokémon is spawned in the overworld, the stats and internal details (such as PID/EC) are generated and set in stone. This is why it is only important to spawn the Pokémon in the overworld on the correct frame.<br /><br />
 
-Once the main window is filled in correctly & you are standing in a good position in-game, you can begin looking for target frames by clicking the search button on main window of the generator.<br /><br />
+      Once the main window is filled in correctly & you are standing in a good position in-game, you can begin looking for target frames by clicking the search button on main window of the generator.<br /><br />
 
-<u>If your results are not desirable, repeat the following:</u>
-<ol>
-  <li>Disconnect your Switch from the tool.</li>
-  <li>Restart your game and enter the overworld.</li>
-  <li>Enter the pause or Home menu and reconnect your Switch to the tool.</li>
-  <li>Search again, do this until you have desirable results.</li>
-</ol>
+      <span class="fw-bold">If your results are not desirable, repeat the following:</span><br /><br />
+      <ol>
+        <li>Disconnect your Switch from the tool.</li>
+        <li>Restart your game and enter the overworld.</li>
+        <li>Pause the game, then reconnect your Switch to the tool.</li>
+        <li>Search again, do this until you have desirable results.</li>
+      </ol>
+      </div>
+    </div>
+  </div>
+<br />
 
 <span class="fw-bold">Figure 3 -</span> Target found!<br />
 <img src="./images/static/figure-3-static-search-duraludon.png" style="width:675px;height:400px;"><br /><br />
 
-<span class="fw-bold">We found one!</span> A shiny, Adamant natured Duraludon in a cluster on advances 1000-1001. These are the "target frames" and the aim will be to spawn Duraludon in the overworld on either of these frames.<br /><br />
+<span class="fw-bold">We found one!</span> A shiny, Adamant natured Duraludon in a cluster on advances 1000-1001. These are the "target frames" for this attempt.<br /><br />
 
-Once a Pokémon is spawned in the overworld, the stats and internal details (such as PID/EC) are generated and set in stone. This is why it is only important to spawn the Pokémon in the overworld on the correct frame.<br /><br />
+<hr />
+<div class="title" style="background-color: #0c0038;" id="ThirdTitleStatic">
+  <h1 class="text-light text-center pt-3 pb-3">Advancing Towards the Target!</h1>
+</div>
+  <hr />
 
-<span class="fw-bold">Don't let the Pokémon despawn after you spawn it in the overworld!</span><br /><br />
+  After pressing search on the main window the results display a shiny Duraludon on frame 1000 & 1001. Based on local testing the delay for this static encounter is 0. This means the target for this attempt remains at frame 1000-1001.<br /><br />
 
-<h5><span class="fw-bold">Advancing towards the target:</span></h5>
-The generator displays the target on frame 1000-1001, based on local testing the delay for this static encounter is 0. This means the target remains at frame 1000-1001.<br /><br />
+  <details>
+    <summary><u>How to calculate delays:</u><br /></summary>
+    <ol>
+      <li>Aim for a target, such as any shiny Pokémon.</li>
+      <li>Run towards the Pokémon and spawn it in the overworld then initiate the encounter. Take note of the frame the Pokémon was spawned on.</li>
+      <li>Encounter the Pokémon and click the <code>Read Encounter</code> button.</li>
+      <li>If you didn't find the Pokémon that you expected, do a filterless search (or search for the specific IVs of the result you found) and find the frame you hit.</li>
+      <li>Subtract your target advancement from the frame you actually hit.</li>
+      <li>This will be your delay for that particular encounter.</li>
+    </ol>
+    </details>
+    <br />
 
-<u>Step by step:</u><br />
-<ol>
-  <li>Advance towards the target frame using bike, NPCs or by spawning overworld Pokémon in the area.</li><br />
-  Consider using the <code>Skip</code> feature of the main window to advance large distances with date skipping.<br /><br />
+  <div class="accordion" id="AdvancingToTargetStatic">
+    <div class="card">
+      <div class="card-header text-white" style="background-color: #0c0038;">
+      <div class="card-header" id="AdvancingToTargetStatic">
+        <h5 class="mb-0">
+          <span class="fw-bold">Hitting your target frame</span>
+        </h5>
+      </div>
+      <div class="card-body" style="background-color: #ffffff36;">
 
-  <li>Once you are within a few hundred frames of your target, stand near to the spawn point of the Pokémon you are hunting, then pause the game with X.</li><br /><br />
+        <span class="fw-bold">Step-by-step tutorial:</span><br /><br />
+        <ol>
+          <li>Advance towards your target frame using any of the methods listed inside the table on <a href="https://billo-guides.github.io/cfw/swsh/overworld">main page of this guide</a>. Consider using the <code>Skip</code> feature to advance large distances with day skipping.</li><br />
+        
+          <li>Once you are within a few hundred frames of your target, stand near to the spawn point of the Pokémon you are hunting.</li><br />
+        
+          <li>Pause the game using the <code>X</code> button, then disconnect and reconnect to the main window, then search for your target again.</li><br />
 
-  <span class="fw-bold">From this point it's recommended to only advance using menu close, animation and bike advancements as they only advance in small increments, making them easy to keep track of.</span><br /><br />
+          <div class="card-body" class="text-light" style="background-color: #0c0038;">
+            <span class="fw-bold">Tip:</span> From this point it's recommended to only advance using <code>menu close & animations</code> as they only advance in small increments, making them easy to keep track of.
+         </div><br />
 
-  <li>Disconnect and reconnect to the generator, search for your target again.</li><br />
-  You should be relatively close to your target frame at this stage. (Within a few hundred frames.)<br /><br />
-    
-  <li>Open the <code>Menu Close Advances Viewer</code> window and work out the amount of NPCs that are in the area, then enter your target frame into the <code>+</code> field of this window and hit search.</li><br />
-  This can be used to accurately predict the number of advancements that occur from closing the pause menu, as explained on the <a href="https://billo-guides.github.io/cfw/swsh/overworld">main page</a>.<br /><br />
+          <li>Open the <code>Menu Close Advances Viewer</code> window and work out the amount of NPCs that are in the area, as explained on the <a href="https://billo-guides.github.io/cfw/swsh/overworld">main page</a>. Enter this number into the <code>NPCs</code> field.</li><br />
+            
+          <li>Enter your target frame into the <code>+</code> field of this window and hit search. This should be the highest number in the cluster.</li><br /> 
+          
+          <div class="card-body" class="text-light" style="background-color: #0c0038;">
+            <span class="fw-bold">Tip:</span> If you are unable to find your target frame in the search results, this means the target cannot be hit based on your seed. Use animations to advance the RNG state slightly, then close and re-open the <code>Menu Close Advances Viewer</code> window and search for your target frame again. Repeat this process until your target frame is visible.
+         </div><br />
 
-  <span class="fw-bold">From this point it's recommended to only advance using menu close prediction, you can also use party animation advancements to nudge the frames forward one at a time if you need to.</span><br /><br />
-  
-  An example of a good time to use animations to nudge frames forward is when you are unable to find your target frame on the <code>Menu Close Advances Viewer</code> window, or need to advance small distances. (Each animation is a stable +1 advancement.)<br /><br />
+          <li>Open and close the pause menu until closing the menu a single time lands onto your target frame, according to the <code>Menu Close Advances Viewer</code> prediction. Pay attention to the <code>Curr. Adv</code> field of the main window to avoid overshooting your target.</li><br />
+        
+          <li>Close the pause menu and quickly run towards the spawn point of your Pokémon and initate an encounter! Confirm you have hit the expected result by clicking the <code>Read Encounter</code> button when in battle.</li><br />
+        
 
-  <li>Open and close the pause menu until closing the menu a single time lands onto your target frame, according to the <code>Menu Close Advances Viewer</code> prediction.</li><br />
-  Pay attention to the <code>Curr. Adv</code> field of the generator to avoid overshooting your target.<br /><br />
-
-  <li>Close the pause menu and quickly run towards the spawn point of your Pokémon! Encounter it, then click the <code>Read Encounter</code> button. Make sure it matches the output shown on the generator.</li><br />
-  Remember not to let it despawn!<br />
-</ol>
-
-You can be creative with the methods you use to advance the RNG state. Menu close prediction is not necessary but will make for a much easier time hitting target frames and is extremely helpful in the more noisy areas of the game.<br /><br />
+        <div class="card-body" class="text-light" style="background-color: #0c0038;">
+         You can be creative with the methods you use to advance the RNG state. Menu close prediction is not necessary but will make for a much easier time hitting target frames and is extremely helpful in areas of the game where the RNG advances at a quick pace.
+       </div>
+         </ol>
+        </div>
+      </div>
+    </div>
+  <br />
 
 <span class="fw-bold">Figure 4 -</span> Target Frame Hit!<br />
 <img src="./images/static/figure-4-static-hit-duraludon.png" style="width:675px;height:400px;"><br /><br />
 
-By using menu close prediction and animations to keep track of inputs, we were able to hit out target frame!<br /><br />
+<span class="fw-bold">By using menu close prediction and animations to keep track of inputs, we were able to hit out target frame!</span><br /><br />
 
 <span class="fw-bold">Figure 5/6/7 -</span> Result Found!<br />
 <img src="./images/static/figure-5-static-result-found.png" style="width:675px;height:400px;"><br /><br />
@@ -111,79 +182,17 @@ By using menu close prediction and animations to keep track of inputs, we were a
 
 <span class="fw-bold">The Duraludon matches the output of the tool, mission accomplished!</span><br /><br />
 
-Espeon in party slot 1 with the ability Syncronize was used to determine the nature, using a Pokémon with this ability will make the nature of any overworld Pokémon match the nature of yours.<br /><br />
+Different areas & environments can have a drastic influence on delay, if you are missing targets when you believe you should be finding results, you should consider reading the Encounter Troubleshooting page.<br /><br />
 
-Different areas & environments can have a drastic influence on delay, if you are missing targets when you believe you should be finding results, you should consider reading the Troubleshooting Encounters section down below.<br /><br />
-
-<hr />
-
-<div class="bg-secondary title">
-  <h1 class="text-light text-center pt-3 pb-3">Troubleshooting Encounters</h1>
-</div>
-
-<hr />
-
-This section covers how to troubleshoot encounters and delays. If you keep missing targets, spawning in the wrong Pokémon, or can't find your result on the RNG tool, this is the place to be.<br /><br />
-
-<h3><span class="fw-bold">Missing Targets:</span></h3>
-<u>The commonly occuring reasons for missing a target Pokémon are:</u>
-<ul>
-  <li>Encounter spawned too late or too early due to mistiming.</li>
-  <li>There is a delay left unaccounted for.</li>
-  <li>Information in the main window was not completely accurate.</li>
-</ul>
-
-<h5><span class="fw-bold">Encounter spawned too late or too early...</span></h5>
-
-This is a common issue players will face when tackling static encounters and is likely due to mistiming when spawning the Pokémon. Retry and search for a new target frame and make sure your player positioning is correct.<br /><br />
-
-<h5><span class="fw-bold">Troubleshooting delay...</span></h5>
-
-For the purposes of this guide, the term "delay" is used to describe the frame difference between the Pokémon we encountered and the frame the encounter was initiated on.<br /><br />
-
-Most static encounters do not need to account for delay, this applies most to encounters in extreme weather conditions or in an otherwise unstable environment, like having other spawned Pokémon present.<br /><br />
-
-Delay Calc - <code>frame Pokemon was generated - frame encounter was initiated = delay</code><br /><br />
-
-We can use the <code>Read Encounter</code> feature of the tool to confirm the exact frame the encounter was generated on and calculate the delay from there. Here's how it's done!
-<ul>
-  <li>Aim for a target, such as any shiny Pokémon.</li>
-  <li>Run towards the Pokémon and spawn it in the overworld then initiate the encounter. Take note of the frame the Pokémon was spawned on.</li>
-  <li>Encounter the Pokémon and click the <code>Read Encounter</code> button.</li>
-  <li>If you didn't find the Pokémon that you expected, do a filterless search (or search for the specific IVs of the result you found) and find the frame you hit.</li>
-  <li>Subtract your target advancement from the frame you actually hit.</li>
-  <li>This will be your delay for that particular encounter.</li>
-</ul>
-
-<u>When RNG abusing in unstable conditions you should record delays for multiple attempts before aiming for a target and check for any consistent delay counts. It is also advised to aim for large clusters where possible to increase your chances of
-  actually hitting the target.</u><br /><br />
-
-<span class="fw-bold">Figure 8 -</span> Delay troubleshooting example<br />
-<img src="./images/static/figure-8-troubleshooting-encounters.png" style="width:675px;height:400px;"><br /><br />
-
-We encountered an Duraludon, but it wasn't shiny! So what happened here? Well... We miscalculated. Let's try to find the frame we actually hit.<br /><br />
-
-<span class="fw-bold">Figure 9 -</span> Finding the frame<br />
-<img src="./images/static/figure-9-locating-frame.gif" style="width:675px;height:400px;"><br /><br />
-
-By doing a filterless search we can see the the shiny cluster, and frame we hit was 2 frames behind where we wanted to be, oh well! We will adjust accordingly for next time by spawning it in the overworld 2 frames later.<br /><br />
-
-<h5><span class="fw-bold">Cannot find result...</span></h5>
-If you cannot find the Pokémon you are in battle with anywhere on the tool this is likely due to one of two reasons:
-<ul>
-  <li>Player was positioned too close to the spawn and the Pokémon had already been generated long before walking into it.</li>
-  <li>The information entered into the main window of the tool was not completely accurate.</li>
-</ul>
-
-Try to reposition your character and see if your issue persists, if you are still having problems double check the information on the main tab is entered correctly by searching it on the <code>Encounter Lookup</code> and clicking the correct
-row.<br /><br />
-
-<u>You must pay attention to the row you are clicking and making sure it matches your in-game environment.</u><br /><br />
-
-That's all there is to it!<br /><br />
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/overworld/troubleshooting">
+  Click here to open the Encounter Troubleshooting page!
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a><br />
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/overworld">
-  Send me back!
+  Send me back to the main page!
   <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
   </svg>
