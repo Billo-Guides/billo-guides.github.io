@@ -144,20 +144,18 @@ Download and extract all the contents from the <code>SWSH_OWRNG_Generator_GUI.zi
 <span class="fw-bold">Figure 5 -</span> Menu Close Advances Viewer window overview<br />
 <img src="./overworld/images/main-page/figure-5-menu-close-advances-viewer-overview-retail.gif" style="width:675px;height:400px;"><br /><br />
 
-<div class="accordion" id="MenuClosePrediction">
+<div class="accordion" id="MenuClosePredictionRetail">
   <div class="card">
     <div class="card-header text-white" style="background-color: #0c0038;">
-    <div class="card-header" id="MenuClosePrediction">
+    <div class="card-header" id="MenuClosePredictionRetail">
       <h5 class="mb-0">
         <span class="fw-bold">Menu Close Prediction Overview</span>
       </h5>
     </div>
     <div class="card-body" style="background-color: #ffffff36;">
-     It is possible to predict the amount of advancements that will pass from closing the pause menu. This can be achieved by using the  <code>Menu Close Advances Viewer Window</code>.<br /><br />
+     The <code>Menu Close Advances Viewer</code> can be used to predict the amount of advancements that will pass from closing the pause menu. Closing the pause menu also has an added effect of freezing the RNG state in the area for a a few seconds, this makes it a great option for closing in on any target frames as it provides a lot more consistency in doing so.<br /><br />
 
-     Closing the pause menu has an added effect of freezing the RNG state for a short time period. We will use this window of silence in tandem with menu close prediction to near guarantee that we spawn the encounter on the correct frame.<br /><br />
-
-     Learning how to utilize this method is not a requirement for Overworld RNG abuse. Although it is a very powerful tool and the recommended method to use in order to hit targets with more consistency.<br /><br />
+     By knowing how many advancements will occur from closing the pause menu, and having a window of silence to run into position and spawn the encounter, we can near guarantee to hit any potential target frames.<br /><br />
 
     <details>
       <summary><span class="fw-bold">How to calculate the number of NPCs in an area:</span></summary> <br />
@@ -196,7 +194,7 @@ The RNG state will naturally advance, and the pace of the advancements will vary
   </details><br />
 
 Multiple in-game actions can also be used to advance the RNG state with varying influence, these can be found in the table directly below.<br /><br />
-
+      
 <table class="table table-striped" style="width:100%">
   <thead class="table text-white" style="background-color: #0c0038;">
       <th scope="col">Type of action</th>
@@ -207,47 +205,45 @@ Multiple in-game actions can also be used to advance the RNG state with varying 
        <tbody id="results">
    <tr>
       <td><span class="fw-bold">Player Movement</span></td>
-      <td>Moving the player using the control stick, then letting the control stick fall back into it's resting state. This also includes whistling and using the bike bell using the <code>L3</code> button.<br /><br /></td>
+      <td>Moving the player using the control stick, then letting the control stick fall back into it's resting state. This Includes whistle and bike bell.<br /><br /></td>
       <td>1-3 Advancements per input.</td>
   </tr>
   <tr>
      <td><span class="fw-bold">Rotom Bike</span></td>
      <td>Mounting and dismounting the bike with the <code>+</code> button.<br /><br /></td>
-     <td>Area specific advancements, small influence.</td>     
+     <td>Varying depending on location and environment.</td>     
   </tr>
   <tr>
      <td><span class="fw-bold">Menu Close</span></td>
-     <td>Opening and closing the pause menu using the <code>Y</code> button. The amount of advancements that occur from closing the pause menu can be predicted, as described above.<br /><br /></td>
-     <td>Area specific advancements, varying influence.</td>     
+     <td>Opening and closing the pause menu using the <code>X</code> button.<br /><br /></td>
+     <td>Varying depending on location and environment, predictable (explained above).</td>     
  </tr>
+<tr>
+     <td><span class="fw-bold">NPC Activation</span></td>
+     <td>Standing near an NPC to make them notice the player. Moving away from an NPC will cause them to "deactivate". Useful for covering short distances quickly.<br /><br /></td>
+     <td>~2500 advancements per minute.</td>     
+</tr>
+<tr>
+     <td><span class="fw-bold">Town Map</span></td>
+     <td>Opening the map and flying into an area. This is only used for roaming encounters.<br /><br /></td>
+     <td>Can be influenced by the amount of Pokémon in your party.</td>     
+</tr>
  <tr>
      <td><span class="fw-bold">Animations/Motions</span></td>
-     <td>Having your Pokémon animate on the summary screen or party menu by clicking in the <code>L3</code> button.<br /><br />
-     This action can be done on the <code>Pokémon</code> menu that displays your party, or on an individual Pokémon summary screen.<br /><br /></td>
-     <td>+1 advancement <u>per animation</u> on the individual Pokémon summary screen.<br />
+     <td>Having your Pokémon animate on the summary screen or party menu by clicking in the <code>L3</code> button.<br /><br /></td>
+     <td>+1 advancement <u>per animation</u> on the individual Pokémon summary screen.<br /><br />
      +1 advancement <u>per button input</u> on the party summary screen.</td>     
 </tr>
 <tr>
-     <td><span class="fw-bold">NPC Activation</span></td>
-     <td>Standing near an NPC will cause them to become active, this will advance the RNG state rapidly. Walking away from the NPC will cause them to deactivate and the number of advancements will begin to slow down.<br /><br /></td>
-     <td>~2500 advancements per minute. Useful for covering short distances quickly.</td>     
-</tr>
-<tr>
-     <td><span class="fw-bold">Flying into an area</span></td>
-     <td>Opening and closing the town map will advance the RNG state a small amount, and flying into an area will also advance the RNG state.<br /><br />
-      This method is only used for Galarian Articuno, Zapdos and Moltres due to their unique behavior.<br /><br /></td>
-     <td>Area specific advancements, varying influence.</td>     
-</tr>
-<tr>
      <td><span class="fw-bold">Day Skipping</span></td>
-     <td>Used to advance towards far away targets very quickly, up to roughly 15,000 frame advancements per day skipped.<br /><br />
+     <td>Using the "day skipping" exploit to advance towards far away targets very quickly, up to roughly 15,000 frame advancements per day skipped.<br /><br />
      It is recommended to take time to monitor the amount of frames that are advancing per day skipped, to avoid overshooting any potential target frames.<br /><br /></td> 
      <td>The influence is specific to different variables in your save file. <br /><br /> (Explained below)</td>     
 </tr>
 </tbody>
 </table>
 <br />
-
+      
 <div class="accordion" id="RetailSkippingInfo">
   <div class="card">
     <div class="card-header text-white" style="background-color: #0c0038;">
@@ -260,9 +256,9 @@ Multiple in-game actions can also be used to advance the RNG state with varying 
       <h6><span class="fw-bold">Day Skipping</span></h6>
       Date skipping on retail is a manual process that requires some setup. In order to day skip efficently you must exit a ranked battle.<br /><br />
 
-      The amount of advancements from day skipping is heavily influenced by the amount of Pokémon currently stored within boxes. Fill your boxes with Pokémon to make the most of this feature. (This does not include Pokémon in eggs!)<br /><br />
+      The amount of advancements from day skipping is heavily influenced by the amount of Pokémon currently stored within boxes. Fill your boxes with Pokémon to make the most of this feature. <u>This does not include Pokémon in eggs!</u><br /><br />
 
-      Avoid date skipping in large distances inside any of the Wild Areas (including Isle of Armor and Crown Tundra Wild Areas). This may cause your game to crash due to the constantly advancing Max Raids! We recommend using an in-door location to advance distances >1000 days.<br /><br />
+      Avoid date skipping in large distances inside any of the Wild Areas, including Isle of Armor and Crown Tundra Wild Areas. This may cause your game to crash due to the constantly advancing Max Raids! We recommend using an in-door location to advance distances >1000 days.<br /><br />
 
       <span class="fw-bold">Day skipping will change the weather in the area!</span> Be sure to set your date back to how it was originally to restore the weather condition.<br /><br />
 
@@ -289,9 +285,9 @@ Multiple in-game actions can also be used to advance the RNG state with varying 
 </div>
 <hr />
 
-<span class="fw-bold">From this point the guide assumes you know your 5 digit TID/SID combination.</span> You must have this information on-hand if you plan to RNG abuse shiny Pokemon. Follow the tutorial by clicking the button directly below this text if you are unsure.<br /><br />
+<span class="fw-bold">From this point the guide assumes you know your 5 digit TID/SID combination.</span> You must have this information on-hand if you plan to RNG abuse shiny Pokemon.<br /><br />
 
-Already know your TID/SID combination or have no interest in RNG abusing shiny Pokémon? Great! You can continue reading the information on this page.<br /><br />
+Already know your TID/SID combination or have no interest in RNG abusing shiny Pokémon? Great! You can continue reading the information on this page. If you do not know your 5 digit TID/SID combination, click the button directly below for a tutorial.<br /><br />
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/finding-tid-sid">
   Click here for a tutorial on finding your 5 digit TID/SID!
