@@ -4,11 +4,18 @@ title: Item RNG (Retail)
 permalink: /retail/swsh/item/
 ---
 
-<div class="bg-success title">
-  <h1 class="text-light text-center pt-3 pb-3">Item RNG (Retail)</h1>
-</div>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid #302e2e;
+      }
+</style>
 
-<hr />
+    <div class="title" style="background-color: #0c0038;">
+      <h1 class="text-light text-center pt-3 pb-3">Item RNG Guide (Retail)</h1>
+    </div>
+      <hr />
 
 This portion of the guide will cover the process of RNG abusing the Cram-o-matic and the PC lottery function in Sword/Shield using the SWSH Overworld RNG Generator by <a href="https://github.com/LegoFigure11">LegoFigure11</a>.
 Item RNG abuse is best utilized to help players obtain rare/valuable items such as rare Pokeballs!<br /> <br />
@@ -27,53 +34,68 @@ Item RNG abuse is best utilized to help players obtain rare/valuable items such 
 <u>You will need:</u>
 <ul>
   <li><a href="https://github.com/LegoFigure11/swsh-overworld-rng-gui/releases">SWSH Overworld RNG Generator</a> - Latest release</li>
+  <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/6.0">.NET 6.0</a> - Generator dependency</li>
   <li>A standard calculator</li>
 </ul>
-
-Download and extract all the contents from the <code>SWSH_OWRNG_Generator_GUI.zip</code> into an empty folder and run the <code>.exe</code> file.<br /><br />
-
+  
 <u>In-game setup:</u>
 <ul>
   <li>Have the Rotom PC lottery function & Cram-o-matic available for use.</li>
   <li>If you plan to RNG abuse the Cram-o-matic, have at least 4 apricorns to use in the machine.</li>
   <li>Stand next to the machine you want to work on.</li>
+  <li>Pause the game using "X", click <code>Connect</code> on the main window of the generator.</li>
 </ul>
-<br />
+
+
+<hr />
+<div class="title" style="background-color: #0c0038;">
+  <h1 class="text-light text-center pt-3 pb-3">Important Information</h1>
+</div>
 <hr />
 
 <h3><span class="fw-bold">Advancing the RNG state:</span></h3>
-<u>Multiple in-game actions can be used to advance the RNG state with varying influence, these include:</u>
-<ol>
-  <li><span class="fw-bold">Player movement -</span> Each time the player stops moving the control stick the RNG state will advance a small amount - Roughly 1-3 advancements per input.</li><br />
-  <li><span class="fw-bold">Menu close -</span> Opening and closing the pause menu will advance the RNG state a small amount depending on your location and amount of NPCs in the area. - Area specific advancements.</li><br />
-  <li><span class="fw-bold">Animations -</span> Having your Pokemon animate on the party summary screen will advance the RNG state a small amount. - 1 advancment per "click" on the party menu, 1 advancement per motion on the summary page.</li><br />
-  <li><span class="fw-bold">Active NPCs -</span> Standing near an NPC will cause them to become active, this will advance the RNG state rapidly. - Area specific advancements, good for covering large amounts of advancements quickly.</li><br />
-</ol>
 
-<h3><span class="fw-bold">Day Skipping:</span></h3>
+The RNG state will advance naturally depending on your location, and the amount of NPCs that are present. Since the Cram-o-matic and Rotom PC are located in-doors, we do not need to worry about other variables that would advance the RNG state, like weather.<br /><br />
 
-We can use Day Skipping to advance up to a total of around 13,000 advancements per day skipped. The amount of frames that advance by Day Skipping is heavily influenced by the amount of Pokémon currently stored in your boxes (not including eggs). the
-number will increase drastically if you store more Pokémon.<br /><br />
+Multiple in-game actions can also be used to advance the RNG state with varying influence, the most useful actions can be found in the table directly below.<br /><br />
 
-Exiting a ranked battle gives us the conditions we need to perform easy date skipping on retail hardware.<br /><br />
+<table class="table table-striped" style="width:100%" id="AdvancementTable">
+  <thead class="table text-white" style="background-color: #0c0038;">
+      <th scope="col">Type of action</th>
+      <th scope="col">Description of action</th>
+      <th scope="col">Adv. influence</th>
+   </tr>
+       </thead>
+       <tbody id="results">
+   <tr>
+      <td><span class="fw-bold">Player Movement</span></td>
+      <td>Moving the player using the control stick, then letting the control stick fall back into it's resting state. This Includes whistle and bike bell.<br /><br /></td>
+      <td>1-3 Advancements per input.</td>
+  </tr>
+  <tr>
+     <td><span class="fw-bold">Menu Close</span></td>
+     <td>Opening and closing the pause menu using the <code>X</code> button.<br /><br /></td>
+     <td>Varying depending on location and environment, predictable (explained below).</td>     
+ </tr>
+  <tr>
+     <td><span class="fw-bold">NPC Activation</span></td>
+     <td>Standing near an NPC to make them notice the player. Moving away from an NPC will cause them to "deactivate". Useful for covering short distances quickly.<br /><br /></td>
+     <td>~2500 advancements per minute.</td>     
+</tr>
+ <tr>
+     <td><span class="fw-bold">Animations/Motions</span></td>
+     <td>Having your Pokémon animate on the summary screen or party menu by clicking in the <code>L3</code> button, or by using the <code>Skip</code> feature.<br /><br /></td>
+     <td>+1 advancement <u>per animation</u> on the individual Pokémon summary screen.<br /><br />
+     +1 advancement <u>per button input</u> on the party summary screen.</td>     
+</tr>
+</tbody>
+</table>
+<br />
 
-If you plan to use the day skipping exploit you should take a moment to monitor your advances to avoid overshooting your target frame. Skip 1 day at a time and reidentify your current seed to get a rough estimate of how many frames will advance per
-day skipped. (More on seed identification later!)<br /><br />
 
-<u>To perform the day skipping technique follow these instructions:</u>
-<ol>
-  <li>Pause the game and press VS to enter a ranked battle.</li>
-  <li>Forfeit once you enter the battle. Alternatively you can play out the whole battle if you wish.</li>
-  <li>From here navigate to the System Settings and change the date ahead by one day.</li>
-  <li>Exit back to the main menu of the home screen and reopen the game.</li>
-  <li>Repeat step 4 and 5.</li>
-</ol>
+<h3><span class="fw-bold">Identifying your current seed</span></h3>
 
-You should notice time-based events such as the Rotom Lottery function have reset, this is an indication that the exploit has been properly activated.<br /><br />
-
-<h3><span class="fw-bold">What are motions/animations?</span></h3>
-The term "motions" or "animations" refers to a feature of the Pokémon summary page, when pressing L3 (Clicking in the left stick) your Pokémon will do one of two animations, physical or special. Recording these in sequence will eventually produce our
-current RNG state.<br /><br />
+The term "motions" or "animations" refers to a feature of the Pokémon summary page, when pressing L3 (Clicking in the left stick) your Pokémon will do one of two animations, physical or special. Recording these in sequence will eventually produce our current RNG state.<br /><br />
 
 <span class="fw-bold">Figure 0 -</span> Animation differences<br />
 <img src="/retail/swsh/overworld/images/main-page/figure-3-animations.gif" style="width:675px;height:400px;"><br /><br />
@@ -81,133 +103,193 @@ current RNG state.<br /><br />
 In the first animation Espeon swipes towards the screen, this is a clear physical animation.<br />
 In the second animation Espeon stays in place using a psychic move, this is a clear special animation.<br /><br />
 
-<u>Identifying your current seed using Retail Seed Finder:</u>
-<ol>
-  <li>Open the game and enter the overworld.</li>
-  <li>Pause the game using <code>X</code>, click <code>Pokémon</code>, then view the summary of any of your Pokémon.</li>
-  <li>Open the <code>Retail Seed Finder</code> window and have your Pokémon animate.</li>
-  <li>Click (or type) <code>0</code> if your animation was physical.</li>
-  <li>Click (or type) <code>1</code> if your animation was special.</li>
-  <li>Repeat this process 128 times and your seed will be generated. Click <code>Update Main Form</code> and exit back to the main window.</li>
-  <li>Search for a target frame.</li>
-</ol>
+<div class="accordion" id="SeedIdentification">
+  <div class="card">
+    <div class="card-header text-white" style="background-color: #0c0038;">
+    <div class="card-header" id="SeedIdentification">
+      <h5 class="mb-0">
+        <span class="fw-bold">Seed (Re)Identification:</span>
+      </h5>
+    </div>
+    <div class="card-body" style="background-color: #ffffff36;">
 
-This can seem like a lengthy and tedious process at first glance (it kinda is), for this reason it's advised to remap your controller button layout if you are able to do so, such as remapping the <code>L3</code> button to <code>Y</code>. This is done
-through the Switch system settings.<br /><br />
+      <span class="fw-bold">How to identify current seeds using the Retail Seed Finder:</span><br /><br />
+      <ol>
+        <li>Open the <code>Retail Seed Finder</code> window and open the pause menu in-game.</li><br />
+        <li>Open the Pokemon party menu, select a Pokemon, then click summary.</li><br />
+        <li>Begin making your Pokemon animate by using the <code>L3</code> button, take note of the type of animation. (Physical or special).</li><br />
+        <li>If the animation was physical, click the <code>(0)Physical</code> button, if the animation was special, click the <code>(1)Special</code> button.<br /><br />
+        If you don't feel like clicking the button, you can use your keyboard too! Simply type <code>0</code> or <code>,</code> for a physical animation, and <code>1</code> or <code>.</code> for a special animation.</li><br />
+        <li>Repeat this process 128 times, if done correctly your current seeds will now be visible on-screen. Click <code>Update Main Form</code>. At this stage it is safe to close the Retail Seed Finder window.</li><br />
+        <li>After identifying your current seed you can now begin searching for target frames!</li>
+      </ol><hr />
 
-Once you know your seed you can easily re-identify your current state within 10-20 animations, this is done using the <code>Retail Advances Tracker</code> feature found on the main window.<br /><br />
+      <span class="fw-bold">How to re-identify current seeds using the Retail Advances Tracker:</span><br /><br />
+      <ol>
+        <li>Click the <code>Generate Pattern</code> button on the main window after identifying your current seed.</li><br />
+        <li>Open the Pokemon party menu, select a Pokemon, then click summary.</li><br />
+        <li>Record 10-20 animations until you are left with 1 result.</li><br />
+        <li>Click <code>Update States</code> after doing so to input your new current seed into the <code>State[0]</code> and <code>Stete[1]</code> fields automatically.</li><br />
+        <li>Search for your target frame again and confirm the seed re-identification was correct.</li>
+      </ol>
 
-<u>Re-identifying your current RNG states using the Retail Advances Tracker:</u>
-<ol>
-  <li>Click <code>Generate Pattern</code> once you have found your seeds using <code>Retail Seed Finder</code>.</li>
-  <li>Pause the game using <code>X</code>, click <code>Pokémon</code>, then view the summary of any of your Pokémon and have it do some animations.</li>
-  <li>Click (or type) <code>0</code> if your animation was physical.</li>
-  <li>Click (or type) <code>1</code> if your animation was special.</li>
-  <li>Repeat roughly 10-20 times until you are given 1 possible result. Click <code>Update States</code> to automatically paste your new seeds into the correct fields.</li>
-  <li>Search for your target again. If you see your target on the generator again that means the original seed identification was correct and you can continue following the guide.</li>
-  <li>If you cannot find your original target this means seed identification was incorrect and needs to be redone.</li>
-</ol>
+      <details>
+        <summary><span class="fw-bold">Seed Identification Troubleshooting:</span><br /></summary>
+      <div class="card-body" class="text-light" style="background-color: #0c0038;">
+        If you do not find a result after re-identification, or your target frame disappears, this is because either:<br /><br />
+        <ul>
+          <li>The initial seed identification (using the <code>Retail Seed Finder</code>) was incorrect. Which is a result of not recording the animations properly.</li>
+          <li>The re-identification animations were not recorded properly, and produced an invalid result.</li>
+        </ul>
+        To resolve this you will need to re-identify your current seed from the start, pay close attention to the sequence of animations to avoid producing incorrect results!<br /><br />
 
-Seed re-identification plays a huge role, it helps us keep track of the amount of frame advancements between searches. This is extremely helpful for closing in on a specific target frame or finding out how many advancements a specific action
-achieves.<br /><br />
+        Seed re-identification plays a big role in advancing towards a target frame, and also helps to find out how many advancements will occur from a specific in-game action.</details>
+       </div>
+      </div>
+    </div>
+  </div>
+<br />
 
-<h3><span class="fw-bold">Menu Close Prediction:</span></h3>
-We can accurately predict the number of advancements that will pass when we close the pause menu. It is based on the number of NPCs in the area and if you were holding a direction on the control stick at the time of unpause. For Loto-ID and
-Cram-o-matic, the NPC Counts are likely as follows:<br /><br />
+<span class="fw-bold">If your results are not desirable, you will need to reset the game and identify your current seeds again.</span><br /><br />
 
-<span class="fw-bold">Wedgehurst Center:</span> 5<br />
-<span class="fw-bold">Dojo (Completed IoA Story):</span> 21<br /><br />
+<div class="accordion" id="MenuClosePredictionCFW">
+  <div class="card">
+    <div class="card-header text-white" style="background-color: #0c0038;">
+    <div class="card-header" id="MenuClosePredictionCFW">
+      <h5 class="mb-0">
+        <span class="fw-bold">Menu Close Prediction Overview</span>
+      </h5>
+    </div>
+    <div class="card-body" style="background-color: #ffffff36;">
+     The <code>Menu Close Advances Viewer</code> can be used to predict the amount of advancements that will pass from closing the pause menu. Closing the pause menu also has an added effect of freezing the RNG state in the area for a a few seconds, this makes it a great option for closing in on any target frames as it provides a lot more consistency in doing so.<br /><br />
 
-If you do not get the correct results, or are attempting to RNG something outside of the above areas, you will need to Calculate your NPC Count.<br /><br />
+     <span class="fw-bold">For Loto-ID and the Cram-o-Matic he NPC Counts are likely as follows:</span><br />
+      Wedgehurst Center = 5<br />
+      Dojo (Completed IoA Story) = 21<br /><br />
 
-<u>This can be done using the Menu Close Advances Viewer as follows:</u>
-<ol>
-  <li>Count the number of NPCs in the area you're in manually. This can also include Pokemon and models outside of render distance so may not be completely accurate, this simply provides a good starting point.</li>
-  <li>Get into position and press <code>X</code> to open the menu.</li>
-  <li>Identify your current seed in the <code>Retail Seed Finder</code> tab by using animations. (Click <code>Update Main Form</code> after seed identification!)</li>
-  <li>Click the <code>Menu Close Advances Viewer</code> button at the top of the generator to open a smaller window. Your seeds should be visible in the correct fields.</li>
-  <li>Take the number of NPCs you counted earlier and put it into the <code>NPCs</code> field.</li>
-  <li>Enter your number of advancements into the <code>Init Adv.</code> field, as seen on the main window of the generator.</li>
-  <li>Enter the search range (a few hundred should be enough!) into the <code>+</code> field directly below and search, you should then close and reopen the menu to make sure the predicted advances match what you actually get.</li>
-  <li>If the values do not match, tweak the number in the NPCs field (decrease the value if the number of advances you got was lower than expected, increase if it was higher) until it matches. Now do a few more menu advances then re-identify your
-    current seed to make sure you stay on track with the generated "timeline".</li>
-</ol>
+     By knowing how many advancements will occur from closing the pause menu, and having a window of silence to interact with the machine, we can near guarantee to hit any potential target frames.<br /><br />
 
-<span class="fw-bold">Closing the pause menu has an added effect of freezing noise in the area for a short time period</span>, we will use this window of silence in tandem with menu close prediction to near guarantee that we interact with the machine
-on the correct frame.<br /><br />
+     When using the <code>Consider menu close</code> feature, the output results are of the frame that you need to close the menu on, <u>NOT</u> the frame that you need to start the interaction on.<br /><br />
 
-Menu close prediction is not a requirement to perform retail item RNG abuse, this is the recommended method to use as it allows you to precisely advance all the way up to your target using animations instead of relying on frame clusters or luck. This
-comes with the side effect of potentially finding fewer results but provides a lot more consistency.<br /><br />
+    <details>
+      <summary><span class="fw-bold">How to calculate the number of NPCs in an area:</span></summary> <br />
+      <ol>
+        <li>Attempt to count the number of NPCs in the area of your target manually if possible. If this is impossible, starting from 0 NPCs and working forward is acceptable.</li><br />
+        <li>Identify your current seeds using the <code>Retail Seed Finder</code>, as explained above, keep the game paused after doing so. This will ensure that the amount of advancements that have occured since finding your seed will remain at 0.</li><br />
+        <li>Click the <code>Menu Close Advances Viewer</code> button at the top of the generator to open a smaller window.</li><br />
+        <li>Take your seeds from the <code>State[0] & State[1]</code> fields of the Main Window, and enter them into the same fields of the Menu Close Advances Viewer window.</li><br />
+        <li>Take the number of NPCs you counted earlier and put it into the <code>NPCs</code> field.</li><br />
+        <li>Enter your number of advancements into the <code>Init Adv.</code> field. If the above steps were closely followed, this number should be 0.</li><br />
+        <li>Enter the search range into the <code>+</code> field, then hit search, you should then close and reopen the menu and re-identify your current seed.</li><br />
+        <li>Subtract the amount of advancements that were consumed by re-identifying your current seed from the total amount of advancements that have occured. (For example, if 18 advancements have occured, and it took 14 advancements to re-identify the current seed, then 4 frames passed from opening and closing the pause menu)</li><br />
+        <li>If the values do not match, tweak the number in the NPCs field until it matches. (Decrease the value if the number of advances you got was lower than expected, increase if it was higher)</li>
+      </ol>
+    </details>
+      </div>
+    </div>
+  </div>
+<br />
 
-<span class="fw-bold">With all the required reading out of the way, let's get into it!</span><br /><br />
+<span class="fw-bold">With all the required reading out of the way, let's get into it!</span>
 
 <hr />
-
-<div class="bg-secondary title">
+<div class="title" style="background-color: #0c0038;">
   <h1 class="text-light text-center pt-3 pb-3">Cram-o-matic RNG abuse</h1>
 </div>
+<hr />
 
-<h3><span class="fw-bold">Time to get to work! </span></h3>
-The goal is to interact with the Cram-o-matic on the calculated target frame given to us by the <code>Cram-o-matic</code> tab of the generator. We will be using the advancement methods listed at the top of the page and using menu close prediction to
-hit the target frame.<br /><br />
+The goal is to interact with the Cram-o-matic on the calculated target frame given to us by the <code>Cram-o-matic</code> window of the generator. We will be using the advancement methods listed in the table above to hit the target frame.<br /><br />
 
-In this example we will be aiming for a 5 Rare Pokeballs. You can be more specific with the filters if you wish, such as filtering for a specific rare items.<br /><br />
+In this example we will be aiming for a 5 Level Balls. You can be more specific with the filters if you wish, such as filtering for a specific rare items.<br /><br />
 
 First, stand near the Cram-o-matic and pause the game, then begin recording animations to identify your current seed.<br /><br />
 
 <span class="fw-bold">Figure 1 -</span> Tool setup:<br />
 <img src="./images/cram-o-matic/figure-1-cram-retail-seedfinder.gif" style="width:675px;height:400px;"><br /><br />
 
+<span class="fw-bold">Awesome, everything looks good!</span> We can see our current seeds on the <code>Cram-o-matic</code> tab and have our filters set properly, it's time to search for a target frame.<br /><br />
+
 <span class="fw-bold">Figure 2 -</span> Game setup<br />
 <img src="./images/cram-o-matic/figure-2-game-setup-cram-retail.jpg" style="width:675px;height:400px;"><br /><br />
 
-<span class="fw-bold">Awesome, everything looks good!</span> We can see our current seeds on the <code>Cram-o-matic</code> tab and have our filters set properly, it's time to search for a target frame.<br /><br />
+<div class="accordion" id="GameSetupCram">
+  <div class="card">
+    <div class="card-header text-white" style="background-color: #0c0038;">
+    <div class="card-header" id="GameSetupCram">
+      <h5 class="mb-0">
+        <span class="fw-bold">Game Setup</span>
+      </h5>
+    </div>
+    <div class="card-body" style="background-color: #ffffff36;">
+      We are now stood directly next to the Cram-o-matic and have the console connected to the generator.<br /><br />
 
-<u>If your results are not desirable, repeat the following:</u>
-<ol>
-  <li>Restart your game and enter the overworld.</li>
-  <li>Enter the pause or Home menu and re-identify your current seed using animations.</li>
-  <li>Search again, do this until you have desirable results.</li>
-</ol>
+      Once the player interacts with the Cram-o-matic, the RNG state will freeze due to being on a menu screen. This is why it is only important to interact with the Cram-o-matic on the correct frame.<br /><br />
 
-When using the <code>Consider menu close</code> feature, the output results are of the frame that you need to close the menu on, <u>NOT</u> the frame that you need to start the interaction on.<br /><br />
+      Once the <code>Cram-o-matic</code> tab is filled in correctly, you can begin looking for target frames by clicking the search button.<br /><br />
 
-After closing the pause menu on the correct target frame you should be able to quickly interact with the Cram-o-matic machine to claim your reward.<br /><br />
+      <span class="fw-bold">If your results are not desirable, restart the game and re-identify your current seed, then search for a new target frame.</span><br /><br />
+      </div>
+    </div>
+  </div>
+<br />
 
 <span class="fw-bold">Figure 3 -</span> Target found!<br />
 <img src="./images/cram-o-matic/figure-3-target-found-cram-retail.png" style="width:675px;height:400px;"><br /><br />
 
 <span class="fw-bold">We found a target frame!</span> 5 Rare balls on advance 41 (after considering 21 NPCs with menu close). This will be the frame we close the pause menu and interact with the Cram-o-matic.<br /><br />
 
-<h5><span class="fw-bold">Advancing towards the target:</span></h5>
+<hr />
+<div class="title" style="background-color: #0c0038;">
+  <h1 class="text-light text-center pt-3 pb-3">Advancing towards the target</h1>
+</div>
+<hr />
+
 The generator displays the target on frame 41, you do not need to account for any delay. This means we will aim to interact with the Cram-o-matic on frame 41.<br /><br />
 
 There are 21 NPCs in the area, we need this information to accurately predict the amount of advancements that will occur from closing the pause menu.<br /><br />
 
-<u>Step by step:</u><br />
-<ol>
-  <li>Advance towards the target by standing near NPCs in the dojo and using player movement.</li><br />
-  If your target is a large number of frames away consider using the day skipping method described at the top of this page.<br /><br />
+<div class="accordion" id="AdvancingToTargetCram">
+  <div class="card">
+    <div class="card-header text-white" style="background-color: #0c0038;">
+    <div class="card-header" id="AdvancingToTargetCram">
+      <h5 class="mb-0">
+        <span class="fw-bold">Hitting your target frame</span>
+      </h5>
+    </div>
+    <div class="card-body" style="background-color: #ffffff36;">
 
-  <li>Once you believe you are close to the target (within ~500 frames), stand near to the Cram-o-matic and re-identify your current seed.</li><br />
-  Re-identify your current seed using the Pokémon summary screen, <u>not</u> by using the party menu.<br /><br />
+      <span class="fw-bold">Step-by-step tutorial:</span><br /><br />
+      <ol>
+        <li>Advance towards your target frame using any of the methods listed inside the <a href="#AdvancementTable">table above</a>.</li><br />
 
-  <span class="fw-bold">From this point it's recommended to only advance using menu close and animations as they only advance in small increments, making them easy to keep track of.</span><br /><br />
+        <li>Gradually re-identify your current seed, to avoid overshooting any target frames.</li><br />
+      
+        <li>Once you are within a few hundred frames of your target, stand within distance of the Cram-o-matic so that you can immediately interact with it in a single <code>A</code> press.</li><br />
+      
+        <li>Pause the game using the <code>X</code> button then re-identify your current seed, then search for your target again in the <code>Cram-o-matic</code> window.</li><br />
 
-  <li>Open the Cram-o-matic window of the generator, enter the amount of NPCs you have in the dojo into the field, then search for your target again.</li><br />
-  The <code>Jump</code> column displays the amount of advancements that will pass from closing the menu when considering menu close prediction.<br /><br />
+        <div class="card-body" class="text-light" style="background-color: #0c0038;">
+          <span class="fw-bold">Tip:</span> From this point it's recommended to only advance using <code>menu close & animations</code> as they only advance in small increments, making them easy to keep track of.
+       </div><br />
 
-  <li>Advance closer to your target frame (within ~100 frames this time) and open the pause menu again, open the Pokémon summary page, re-identify your current seed then search in the Cram-o-matic window once more.</li><br />
-  Make sure you are facing the Cram-o-matic at this point, you should also have a calculator available to use to keep track of inputs/advancements.<br /><br />
+        <li>Open the <code>Cram-o-matic</code> window, enter your target frame into the <code>+</code> field and the amount of NPCs into the <code>NPCs</code> field, then click search.</li><br />
+        
+        <div class="card-body" class="text-light" style="background-color: #0c0038;">
+          <span class="fw-bold">Tip:</span> If you are unable to find your target frame in the search results, this means the target cannot be hit based on your seed. Use animations to advance the RNG state slightly, re-identify your current seed again, then close and re-open the <code>Cram-o-matic</code> window and search for your target frame again. Repeat this process until your target frame is visible.
+       </div><br />
 
-  <span class="fw-bold">From this point it's recommended to only advance using animations from the <u>party menu</u>, this provide a stable +1 advancement per input.</span><br /><br />
-
-  <li>Open the party menu and advance to your target frame, you can use a calculator to keep track of inputs.</li><br />
-
-  <li>Close the pause menu and quickly interact with the Cram-o-matic. If successful, you will have hit your target frame! Feed it 4 apricorns and claim your reward.</li><br />
-</ol>
-
-You can be creative with the methods you use to advance the RNG state.<br /><br />
+        <li>Open and close the pause menu until closing the menu a single time lands onto your target frame, according to the <code>Cram-o-matic</code> window prediction.</li><br />
+      
+        <li>Close the pause menu and quickly interact with the Cram-o-matic, if you believe you hit your target frame, feed it the appropriate apricorns to claim your reward.</li><br />
+      
+      <div class="card-body" class="text-light" style="background-color: #0c0038;">
+       You can be creative with the methods you use to advance the RNG state. Menu close prediction is not necessary but will make for a much easier time hitting target frames and is extremely helpful in areas of the game where the RNG advances at a quick pace.
+     </div>
+       </ol>
+      </div>
+    </div>
+  </div>
+<br />
 
 <span class="fw-bold">Figure 4/5 -</span> Result Found!<br />
 <img src="./images/cram-o-matic/figure-4-result-found-gui-cram-retail.png" style="width:675px;height:400px;"><br /><br />
@@ -215,77 +297,103 @@ You can be creative with the methods you use to advance the RNG state.<br /><br 
 
 The result matches the output of the generator, mission accomplished! We got 5 Level Balls from the Cram-o-matic on our first attempt!<br /><br />
 
-That's all there is to RNG abusing the Cram-o-matic on retail hardware!<br />
+<span class="fw-bold">That's all there is to RNG abusing the Cram-o-matic on retail hardware!</span><br />
 
 <hr />
-
-<div class="bg-secondary title">
+<div class="title" style="background-color: #0c0038;">
   <h1 class="text-light text-center pt-3 pb-3">Rotom Lottery RNG abuse</h1>
-</div><br />
+</div>
+<hr />
 
-<h3><span class="fw-bold">Time to get to work! </span></h3>
-The goal is to interact with the Rotom PC in any Pokecenter on the calculated target frame given to us by the <code>Loto-ID</code> tab of the generator. We will be using the advancement methods listed at the top of the page and using menu close
-prediction to hit the target frame.<br /><br />
+The goal is to interact with the Rotom PC in any Pokecenter on the calculated target frame given to us by the <code>Loto-ID</code> tab of the generator. We will be using the advancement methods listed at the top of the page and using menu close prediction to hit the target frame.<br /><br />
 
 In this example we will be aiming for a Master Ball. You can be more specific with the filters if you wish, such as filtering for a specific rare item.<br /><br />
-
-First, stand near the Rotom PC and pause the game, then begin recording animations to identify your current seed.<br /><br />
 
 <span class="fw-bold">Figure 1 -</span> Tool setup:<br />
 <img src="./images/roto-id/figure-1-loto-retail-seedfinder.gif" style="width:675px;height:400px;"><br /><br />
 
+<span class="fw-bold">Awesome, everything looks good!</span> We can see our current seeds on the <codeLoto-ID</code> tab and have our filters set properly, it's time to search for a target frame.<br /><br />
+
 <span class="fw-bold">Figure 2 -</span> Game setup<br />
 <img src="./images/roto-id/figure-2-game-setup-loto-retail.jpg" style="width:675px;height:400px;"><br /><br />
 
-<span class="fw-bold">Awesome, everything looks good!</span> We can see our current seeds on the <codeLoto-ID< /code> tab and have our filters set properly, it's time to search for a target frame.<br /><br />
+<div class="accordion" id="GameSetupLoto">
+  <div class="card">
+    <div class="card-header text-white" style="background-color: #0c0038;">
+    <div class="card-header" id="GameSetupLoto">
+      <h5 class="mb-0">
+        <span class="fw-bold">Game Setup</span>
+      </h5>
+    </div>
+    <div class="card-body" style="background-color: #ffffff36;">
+      We are now stood directly next to the PC and have the console connected to the generator.<br /><br />
 
-  <u>If your results are not desirable, repeat the following:</u>
-  <ol>
-    <li>Restart your game and enter the overworld.</li>
-    <li>Enter the pause or Home menu and re-identify your current seed using animations.</li>
-    <li>Search again, do this until you have desirable results.</li>
-  </ol>
+      Once the player interacts with the PC, the RNG state will freeze due to being on a menu screen. This is why it is only important to interact with the PC on the correct frame.<br /><br />
 
-  When using the <code>Consider menu close</code> feature, the output results are of the frame that you need to close the menu on, <u>NOT</u> the frame that you need to start the interaction on.<br /><br />
+      Once the <code>Loto-ID</code> tab is filled in correctly, you can begin looking for target frames by clicking the search button.<br /><br />
 
-  After closing the pause menu on the correct target frame you should be able to quickly interact with the PC to claim your reward.<br /><br />
-
-  Once the <code>Loto-ID</code> tab is filled in correctly you can begin looking for target frames by clicking the search button.<br /><br />
+      <span class="fw-bold">If your results are not desirable, restart the game and re-identify your current seed, then search for a new target frame.</span><br /><br />
+      </div>
+    </div>
+  </div>
+<br />
 
   <span class="fw-bold">Figure 3 -</span> Target found!<br />
   <img src="./images/roto-id/figure-3-target-found-loto.png" style="width:675px;height:400px;"><br /><br />
 
-  <span class="fw-bold">We found a target frame!</span> A Master Ball on advance x. This will be the frame we close the pause menu and interact with the Rotom PC in the Pokecenter.<br /><br />
+  <span class="fw-bold">We found a target frame!</span> A Master Ball on advance x. This will be the frame we close the pause menu and interact with the Rotom PC in the Pokecenter.
 
-  <h5><span class="fw-bold">Advancing towards the target:</span></h5>
+  <hr />
+<div class="title" style="background-color: #0c0038;">
+  <h1 class="text-light text-center pt-3 pb-3">Advancing towards the target</h1>
+</div>
+<hr />
   The generator displays the target on frame 52, you do not need to account for any delay. This means we will aim to interact with the PC on frame 52.<br /><br />
 
   There are 7 NPCs in the area, we need this information to accurately predict the amount of advancements that will occur from closing the pause menu.<br /><br />
 
-  <u>Step by step:</u><br />
-  <ol>
-    <li>Advance towards the target by standing near NPCs in the Pokecentre and using player movement.</li><br />
-    If your target is a large number of frames away consider using the day skipping method described at the top of this page.<br /><br />
-
-    <li>Once you believe you are close to the target (within ~500 frames), stand near to the PC and re-identify your current seed.</li><br />
-    Re-identify your current seed using the Pokémon summary screen, <u>not</u> by using the party menu.<br /><br />
-
-    <span class="fw-bold">From this point it's recommended to only advance using menu close and animations as they only advance in small increments, making them easy to keep track of.</span><br /><br />
-
-    <li>Open the Loto-ID window of the generator, enter the amount of NPCs you have in the Pokecentre into the field, then search for your target again.</li><br />
-    The <code>Jump</code> column displays the amount of advancements that will pass from closing the menu when considering menu close prediction.<br /><br />
-
-    <li>Advance closer to your target frame (within ~100 frames this time) and open the pause menu again, open the Pokémon summary page, re-identify your current seed then search in the Loto-ID window once more.</li><br />
-    Make sure you are facing the PC at this point, you should also have a calculator available to use to keep track of inputs/advancements.<br /><br />
-
-    <span class="fw-bold">From this point it's recommended to only advance using animations from the <u>party menu</u>, this provide a stable +1 advancement per input.</span><br /><br />
-
-    <li>Open the party menu and advance to your target frame, you can use a calculator to keep track of inputs.</li><br />
-
-    <li>Close the pause menu and quickly interact with the PC. If successful, you will have hit your target frame! Click the "Try Loto ID" option to claim your reward.</li><br />
-  </ol>
-
-  You can be creative with the methods you use to advance the RNG state.<br /><br />
+  <div class="accordion" id="AdvancingToTargetLoto">
+    <div class="card">
+      <div class="card-header text-white" style="background-color: #0c0038;">
+      <div class="card-header" id="AdvancingToTargetLoto">
+        <h5 class="mb-0">
+          <span class="fw-bold">Hitting your target frame</span>
+        </h5>
+      </div>
+      <div class="card-body" style="background-color: #ffffff36;">
+  
+        <span class="fw-bold">Step-by-step tutorial:</span><br /><br />
+        <ol>
+          <li>Advance towards your target frame using any of the methods listed inside the <a href="#AdvancementTable">table above</a>.</li><br />
+  
+          <li>Gradually re-identify your current seed, to avoid overshooting any target frames.</li><br />
+        
+          <li>Once you are within a few hundred frames of your target, stand within distance of the PC so that you can immediately interact with it in a single <code>A</code> press.</li><br />
+        
+          <li>Pause the game using the <code>X</code> button then re-identify your current seed, then search for your target again in the <code>Loto-ID</code> window.</li><br />
+  
+          <div class="card-body" class="text-light" style="background-color: #0c0038;">
+            <span class="fw-bold">Tip:</span> From this point it's recommended to only advance using <code>menu close & animations</code> as they only advance in small increments, making them easy to keep track of.
+         </div><br />
+  
+          <li>Open the <code>Loto-ID</code> window, enter your target frame into the <code>+</code> field and the amount of NPCs into the <code>NPCs</code> field, then click search.</li><br />
+          
+          <div class="card-body" class="text-light" style="background-color: #0c0038;">
+            <span class="fw-bold">Tip:</span> If you are unable to find your target frame in the search results, this means the target cannot be hit based on your seed. Use animations to advance the RNG state slightly, re-identify your current seed again, then close and re-open the <code>Loto-ID</code> window and search for your target frame again. Repeat this process until your target frame is visible.
+         </div><br />
+  
+          <li>Open and close the pause menu until closing the menu a single time lands onto your target frame, according to the <code>Loto-ID</code> window prediction.</li><br />
+        
+          <li>Close the pause menu and quickly interact with the PC, if you believe you hit your target frame, feed it the appropriate apricorns to claim your reward.</li><br />
+        
+        <div class="card-body" class="text-light" style="background-color: #0c0038;">
+         You can be creative with the methods you use to advance the RNG state. Menu close prediction is not necessary but will make for a much easier time hitting target frames and is extremely helpful in areas of the game where the RNG advances at a quick pace.
+       </div>
+         </ol>
+        </div>
+      </div>
+    </div>
+  <br />
 
   <span class="fw-bold">Figure 4/5 -</span> Result Found!<br />
   <img src="./images/roto-id/figure-4-result-found-loto-retail.png" style="width:675px;height:400px;"><br /><br />
@@ -293,7 +401,7 @@ First, stand near the Rotom PC and pause the game, then begin recording animatio
 
   The result matches the output of the generator, mission accomplished!<br /><br />
 
-  That's all there is to RNG abusing the the PC lottery function on retail hardware!<br /><br />
+  <span class="fw-bold">That's all there is to RNG abusing the the PC lottery function on retail hardware!</span><br /><br />
 
   <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/overworld">
     Send me to the Overworld RNG abuse guide!
