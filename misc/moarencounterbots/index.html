@@ -4,5 +4,64 @@ title: Building & Editing moarencounterbots in Visual Studio
 permalink: /misc/moarencounterbots/
 ---
 <div class="bg-dark title">
-  <h1 class="text-light text-center pt-3 pb-3">Building & Editing Sysbot.NET - Moarencounterbots</h1>
-</div>
+  <h1 class="text-light text-center pt-3 pb-3">Building & Editing Sysbot.NET</h1>
+</div><hr />
+
+<p>This page covers how to compile Sysbot.NET and how to make custom edits to source code using Visual Studio on a Windows device. We will be working with <a href="https://github.com/Lusamine/SysBot.NET/">Sysbot.NET fork by Lusamine</a>.</p>
+
+<h3><span class="fw-bold">Getting Started:</span></h3>
+<p><u>In order to build the program you will need to install the following:</u></p>
+<ul>
+  <li><a href="https://visualstudio.microsoft.com/vs/">Microsoft Visual Studio 2022</a></li>
+  <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet-framework/net47">.NET 4.7 Framework developer pack</a></li>
+  <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/3.1">.NET Core 3.1 SDK</a></li>
+</ul>
+
+<p>Once you have installed the required programs and dependencies, restart your device to ensure that there are no issues with your installations.</p>
+
+<p>In this guide we will learn how to build/compile the application, switch between different branches, make small edits to existing source code, and how to keep up to date with the most recent commits of the program.</p>
+<hr />
+
+<h3><span class="fw-bold">Compiling The Application:</span></h3>
+<p>Some forks will require the user to compile the source code before use. This is done by cloning the Github repository in Visual Studio.</p>
+
+<span class="fw-bold">Figure 1 -</span> Cloning the repository<br />
+<img src="./misc/images/figure1.gif" style="width:675px;height:400px;"><br /><br />
+
+<u>Step-by-step instructions:</u>
+<ol>
+  <li>Open a new instance of Visual Studio and open the Github repository you would like to clone inside your browser.</li>
+  <li>On the repository page, click the green <code>Code</code> button to reveal the dropdown menu.</li>
+  <li>Copy the .git link to clipboard, then revisit the Visual Studio window.</li>
+  <li>Click <code>Clone a repository</code> in the table on the right, then click <code>GitHub.</code></li>
+  <li>Paste the repository link into the field and select a path.</li>
+  <li>Click <code>Clone</code> and wait for a new window to open.</li>
+</ol>
+
+<span class="fw-bold">Figure 2 -</span> Repository successfully cloned<br />
+<img src="./misc/images/figure2.png" style="width:675px;height:400px;"><br /><br />
+
+<p>Once you have cloned the repository, a new window should open in Visual Studio similar to the image above. Next we need to switch the branch to Moarencounterbots to avoid compiling the wrong branch.</p>
+
+<span class="fw-bold">Figure 3 -</span> Switching branches<br />
+<img src="./misc/images/figure3.gif" style="width:675px;height:400px;"><br /><br />
+
+<u>Step-by-step instructions:</u>
+<ol>
+  <li>With the repository open in visual studio, click <code>Master</code> at the bottom right-hand side of the window.</li>
+  <li>Click <code>Remotes</code> to see a full list of remote branches for the repository.</li>
+  <li>Click <code>moarencounterbots</code> and wait for Visual Studio to switch the branch.</li>
+  <li>You should now see <code>moarencounterbots</code> at the bottom right-hand side of the window instead.</li>
+</ol>
+
+<span class="fw-bold">Figure 4 -</span> Building the program<br />
+<img src="./misc/images/figure4.gif" style="width:675px;height:400px;"><br /><br />
+
+<u>Step-by-step instructions:</u>
+<ol>
+  <li>With the repository open in Visual Studio, select <code>Release</code> in the menu bar at the top of the window.</li>
+  <li>Select <code>x64</code> in the menu bar to the immediate right.</li>
+  <li>Select <code>Winforms</code> in the menu bar to the immediate right.</li>
+  <li>Click <code>Build</code> at the top of the page, then click <code>Build Solution</code>.</li>
+  <li>Wait for the program to finish building. You can find the compiled application inside of the <code>Sysbot.NET/SysBot.Pokemon.WinForms/bin/x64</code> directory.</li>
+</ol>
