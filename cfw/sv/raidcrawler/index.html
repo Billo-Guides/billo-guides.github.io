@@ -4,7 +4,6 @@ title: RaidCrawler Guide
 permalink: /cfw/sv/raidcrawler/
 ---
 
-
 <div class="title" style="background-color: #0c0038;">
     <h1 class="text-light text-center pt-3 pb-3">RaidCrawler Guide (CFW)</h1>
   </div>
@@ -50,14 +49,25 @@ permalink: /cfw/sv/raidcrawler/
     <div class="card-body" style="background-color: #ffffff36;">
       Pictured above is RaidCrawler, by connecting our console to this program we can scan all of the active Tera Raids on the map, and even continue until a shiny Pokemon is found using automated date skipping!<br /><br />
 
-      To start with, enter the local IP address of your Switch console into the <code>Switch IP:</code> field, then click connect. You should now notice that the status has changed to <code>Reading raid block...</code>, once completed you can begin observing the contents of the raids.<br /><br />
-      <ul>
+      To start with, enter the local IP address of your Switch console into the <code>Switch IP:</code> field, then click connect. You should now notice that the status has changed to <code>Reading raid block...</code>, then set your game version and story progression level inside the dropdown menus on the left.<br /><br />
+      
+      <details>
+        <summary>Game progression key (Click to expand!):<br /></summary>
+        <ol>
+          <li>New game</li>
+          <li>5 gym badges obtained</li>
+          <li>8 gym badges obtained</li>
+          <li>Elite 4 beaten</li>
+          <li>6 star raids unlocked</li>
+        </ol>
+        </details><br />
+
+        <ul>
         <li>The <code>Read Raids</code> button can be used at any time, this is particularly useful if you are manually advancing the date.</li>
         <li>The <code>Advance Date</code> button can be used to automate the date skipping process, be sure to desync any controllers before clicking this button or it will not work.</li>
         <li>When the <code>Continue until shiny?</code> checkbox is active, the program will advance the date until a shiny Tera Raid appears, this is extremely useful for players who don't want to date skip and check manually.</li>
         <li>The arrow buttons are used to check the contents of each raid seperately. Each raid is indicated with a unique number /69.</li>
         <li>When the <code>Event?</code> checkbox is active, this means that the Tera Raid den currently being read is a promotional distribution Tera Raid.</li>
-        <li>When the <code>Black raid (6 star)?</code> checkbox is active, this means that the Tera Raid den currently being read is the one-per-day 6 star den.</li>
       </ul><br />
 
       <div class="card-body" class="text-light" style="background-color: #0c0038;">
@@ -80,11 +90,12 @@ permalink: /cfw/sv/raidcrawler/
 
 After scanning the raid dens and advancing the system date using <code>Day Skip</code> feature, we were able to quickly find a shiny raid and we have been provided with the following information:<br /><br />
 <ul>
- <li>Seed, PID and EC (if the PID is <mark>highlighted yellow</mark>, that means it is a shiny Pokemon)</li>
- <li>Raid Tera Type</li>
- <li>General location of raid</li> 
- <li>Raid IVs based on star count (star count is also based on game progression!)</li>
- <li>If raid is 6 star or event</li>
+ <li>Seed, PID and EC, the PID will be <mark>highlighted yellow</mark> if it is a shiny Pokemon</li>
+ <li>Pokemon species and Tera typing</li>
+ <li>The general location of the raid on the map</li> 
+ <li>Raid difficulty</li>
+ <li>The IVs of the raid (For accurate reads it is important to set your game progression level correctly)</li>
+ <li>If raid is an event distribution</li>
 </ul>
 
 By using this information we can navigate towards the area that contains our shiny Pokemon to confirm the result in-game matches the output on RaidCrawler.<br /><br />
