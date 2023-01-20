@@ -4,15 +4,33 @@ title: RaidCrawler Guide
 permalink: /cfw/sv/raidcrawler/
 ---
 
+<style>
+  mark { 
+    background-color: #FFD700;
+    color: black;
+  }
+  .card-bg {
+  background-color: #d1d1d1;
+  border-bottom-right-radius: 0.20rem !important;
+  border-bottom-left-radius: 0.20rem !important;
+  }
+  table,
+  th,
+  td {
+    border: 1px solid black;
+  }
+  </style>
+
 <div class="title" style="background-color: #0c0038;">
-    <h1 class="text-light text-center pt-3 pb-3">RaidCrawler Guide (CFW)</h1>
+    <h1 class="text-light text-center pt-3 pb-3">RaidCrawler Guide</h1>
   </div>
-    <hr />
+  <hr />
   
-  This guide will provide coverage of how scan Tera Raid dens in Scarlet/Violet by using the RaidCrawler program developed by <a href="https://github.com/LegoFigure11">LegoFigure11</a>.
-  RaidCrawler can be used to read <span class="fw-bold">all</span> of the Tera Raid dens on the map, this can be used to scan for shininess and/or specific IV values.<br /> <br />
+ <p>This guide provides in-depth coverage of how to use <a href="https://github.com/LegoFigure11/RaidCrawler/">RaidCrawler</a>, a program created by <a href="https://github.com/LegoFigure11">LegoFigure11</a> that can be used to read the contents of Tera Raid dens in Pokemon Scarlet & Violet.</p>
+
+ <p>RaidCrawler is capable of reading the contents of all active Tera Raid dens on the map, as well as automatically scan for raids that meets specific filter conditions set by the user (you). This defeats the need to manually check every den in hope for a desirable result, granting a very large timesave.</p>
   
-  <span class="fw-bold">This guide assumes you are using a CFW Switch console running Atmosphere. This is also technically <u>NOT</u> RNG abuse!</span> This is considered closer to brute force RNG than true RNG abuse.<br /> <br />
+ <p><span class="fw-bold" style="color: #b60606;">From here this guide assumes you are using a CFW Switch console running Atmosphere.</span></p>
 
   <h3><span class="fw-bold">Getting Started:</span></h3>
 <u>You will need:</u>
@@ -23,86 +41,208 @@ permalink: /cfw/sv/raidcrawler/
 </ul>
 
 <details>
-<summary><u>Installation Instructions (Click to expand!)</u></summary>
+<summary><u>Installation Instructions:</u></summary>
 <ol>
   <li>Download and extract all the contents from the <code>RaidCrawler.zip</code> into an empty folder.</li>
   <li>Download and extract all the contents from the <code>sys-botbase</code> download then place the <code>atmosphere</code> folder on to the root of your Switch SD card.</a></li>
   <li>Check the <code>/atmosphere/contents</code> directory of your SD card for a folder named <code>430000000000000B</code>.</li>
-  <li>Reboot your Switch console and launch CFW.</li>
+  <li>Reboot your Switch console and launch SysCFW.</li>
 </ol>
 </details>
-<br />
+<hr />
 
-<h3><span class="fw-bold">Tool Setup:</span></h3>
+<h3><span class="fw-bold">Tool Setup:</span></h3><p></p>
 
-<span class="fw-bold">Figure 1 -</span> RaidCrawler UI Overview<br />
-<img src="/cfw/sv/images/raidcrawler/figure-1.gif" style="width:675px;height:400px;"><br /><br />
+<span class="fw-bold">Figure 1 -</span> RaidCrawler Setup<br />
+<img src="/cfw/sv/images/raidcrawler/figure1.gif" style="width:675px;height:400px;"><br /><br />
 
-<div class="accordion" id="RaidCrawlerOverviewCFW">
-  <div class="card">
-    <div class="card-header text-white" style="background-color: #0c0038;">
-    <div class="card-header" id="RaidCrawlerOverviewCFW">
-      <h5 class="mb-0">
-        <span class="fw-bold">RaidCrawler UI Overview</span>
-      </h5>
-    </div>
-    <div class="card-body" style="background-color: #ffffff36;">
-      Pictured above is RaidCrawler, by connecting our console to this program we can scan all of the active Tera Raids on the map, and even continue until a shiny Pokemon is found using automated date skipping!<br /><br />
 
-      To start with, enter the local IP address of your Switch console into the <code>Switch IP:</code> field, then click connect. You should now notice that the status has changed to <code>Reading raid block...</code>, then set your game version and story progression level inside the dropdown menus on the left.<br /><br />
-      
-      <details>
-        <summary>Game progression key (Click to expand!):<br /></summary>
-        <ol>
-          <li>New game</li>
-          <li>5 gym badges obtained</li>
-          <li>8 gym badges obtained</li>
-          <li>Elite 4 beaten</li>
-          <li>6 star raids unlocked</li>
-        </ol>
-        </details><br />
-
-        <ul>
-        <li>The <code>Read Raids</code> button can be used at any time, this is particularly useful if you are manually advancing the date.</li>
-        <li>The <code>Advance Date</code> button can be used to automate the date skipping process, be sure to desync any controllers before clicking this button or it will not work.</li>
-        <li>When the <code>Continue until shiny?</code> checkbox is active, the program will advance the date until a shiny Tera Raid appears, this is extremely useful for players who don't want to date skip and check manually.</li>
-        <li>The arrow buttons are used to check the contents of each raid seperately. Each raid is indicated with a unique number /69.</li>
-        <li>When the <code>Event?</code> checkbox is active, this means that the Tera Raid den currently being read is a promotional distribution Tera Raid.</li>
-      </ul><br />
-
-      <div class="card-body" class="text-light" style="background-color: #0c0038;">
-        <p><span class="fw-bold">Note:</span> In order to use the <code>Date Skip</code> feature it is advised to desync all controllers currently connected to your Switch console or have only Joy-Cons attached to the console.</p>
-
-        You should also disable <code>Syncronize Clock via Internet</code> in your console system settings.
-     </div><br />
-
-     <div class="card-body" class="text-light" style="background-color: #0c0038;">
-        <span class="fw-bold">Note:</span> Remove any overlays, cheats or cheating applications such as Edizon, Tesla and Capturesight if you are experiencing read errors.
-     </div><br />
-
-      </div>
-    </div>
+<div class="card border-dark">
+  <div class="card-header" style="background-color: #0c0038;" id="RaidCrawlerSetup">
+    <span class="fw-bold text-light">RaidCrawler Setup & Feature Overview</span>
   </div>
-<br />
+  <div class="card-body card-bg">
+    <p span class="fw-bold">This is the window you will be presented with after opening RaidCrawler for the first time. For the purposes of this guide, this is the "Main window".</p> 
+      
+    <p>Type the local IP address of your Switch console into the <code class="fw-bold">Switch IP:</code> on the top left of the window, then click <code class="fw-bold">Connect</code> once you are stood in the overworld in-game. You should now see that RaidCrawler has started scanning for story progression values.</p>
 
-<span class="fw-bold">Figure 2 -</span> Shiny Found!<br />
-<img src="/cfw/sv/images/raidcrawler/figure-2.gif" style="width:675px;height:400px;"><br /><br />
+    <p>Once the current status has changed <code class="fw-bold">Completed</code>, you should now see the details of a Tera Raid on the right-hand portion of the RaidCrawler window. This is an indication of a successful connection to the program. By using the arrow keys on the left you can view the details of all the current active raids on the map (as seen in Figure 1).</p>
+    
+    <details>
+      <summary span class="fw-bold">Troubleshooting:</summary>
+      <ul>
+        <li>Remove any overlays, cheats or cheating applications (Edizon, Tesla, Capturesight) if you are experiencing read errors or the program is not working as expected.</li>
+        <li>Consider re-installing sys-botbase if you continue to have connection problems.</li>
+      </ul>
+      </details><p></p>
+      <hr />
 
-After scanning the raid dens and advancing the system date using <code>Day Skip</code> feature, we were able to quickly find a shiny raid and we have been provided with the following information:<br /><br />
-<ul>
- <li>Seed, PID and EC, the PID will be <mark>highlighted yellow</mark> if it is a shiny Pokemon</li>
- <li>Pokemon species and Tera typing</li>
- <li>The general location of the raid on the map</li> 
- <li>Raid difficulty</li>
- <li>The IVs of the raid (For accurate reads it is important to set your game progression level correctly)</li>
- <li>If raid is an event distribution</li>
-</ul>
+    <h6 span class="fw-bold">Raid Controls:</h6>
+    <p>Inside the <code class="fw-bold">Raid Controls</code> box on the main window we can see various buttons, here's some information about what each button does:</p>
+    <ul>
+      <li><code class="fw-bold">Read Raids</code> - Re-scans for active raids at any given point.</li>
+      <li><code class="fw-bold">Screenshot</code> - Takes a screenshot of the game for sharing using <a href="https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks">Webhooks</a>.</li>
+      <li><code class="fw-bold">Open Map</code> - Shows the location of the currently viewed raid on the world map.</li>
+      <li><code class="fw-bold">Dump Raid</code> - Dumps the raid block (for researchers & raid preservation).</li>
+      <li><code class="fw-bold">Pull Events</code> - Pulls the most recent promotional event raid data.</li>
+      <li><code class="fw-bold">Rewards</code> - Shows the reward items given to the player after completing the raid.</li>
+    </ul>
 
-By using this information we can navigate towards the area that contains our shiny Pokemon to confirm the result in-game matches the output on RaidCrawler.<br /><br />
+    <p>If you have an active Raid Power sandwich, set the <code class="fw-bold">Raid Sandwich Boost</code> level according to the level of the active sandwich. This is used to determine the bonus reward items given after completing a raid.</p>
 
-<span class="fw-bold">Figure 3 -</span> Result Found!<br />
-<img src="/cfw/sv/images/raidcrawler/figure-3.png" style="width:675px;height:400px;"><br /><br />
+  </div>
+</div><br />
 
-After finding and capturing your result, you can begin date skipping and scanning raids immediately for quick and effective Tera Raid shiny hunting.<br /><br />
+<p><b>Great!</b> Now we know how to connect to the program and have an understanding of the information inside the main window, we can begin applying relevant filters & configuring the program settings!</p><hr />
 
-<span class="fw-bold">That's all there is to it!</span>
+<span class="fw-bold">Figure 2 -</span> Filter Overview<br />
+<img src="/cfw/sv/images/raidcrawler/figure2.gif" style="width:675px;height:400px;"><br /><br />
+
+<div class="card border-dark">
+  <div class="card-header" style="background-color: #0c0038;" id="FilterInfo">
+    <span class="fw-bold text-light">Filter Condition Information</span>
+  </div>
+  <div class="card-body card-bg">
+    <p span class="fw-bold">Clicking the <code span class="fw-bold">Edit Filters</code> button will open the Filter Settings sub-window. Here you can decide the conditions that will stop the program automatically scanning for raids.</p> 
+      
+    <p>RaidCrawler uses a DateSkipping routine to automatically advance the date, which refreshes all active Tera Raids. Using smart filtering we can ensure that RaidCrawler only stops on desired target raids. Clicking each checkbox will activate the corrisponding field (demonstrated in Figure 2).</p>
+      
+    <p>It's possible to set multiple filters if you are searching for more than one target, it is also possible to combine filters conditions together if you are looking for something specific, such as a shiny Pokemon with specific IVs.</p>
+
+    <details>
+      <summary span class="fw-bold">Example:</summary>
+      <ul>
+        <li>Clicking the <code span class="fw-bold">Shiny?</code> checkbox then updating the filter will look for any shiny Pokemon.</li>
+        <li>Clicking the <code span class="fw-bold">Species</code> checkbox, setting a desired species, then updating the filter add a second filter for Pokemon of the chosen species.</li>
+        <li>If we are seeking a shiny Pokemon of a specific species, we would combine both of these filters into one instead.</li>
+        <li>If we are seeking ANY shiny Pokemon OR a Pokemon of a specific species, we can set the filters independently to look for one or the other instead of seeking both.</li>
+      </ul>
+      </details><hr />
+
+    <p>You can also apply <a href="https://projectpokemon.org/tutorials/save-editing/using-pkhex/how-to-use-the-batch-editor-in-pkhex-r77/">batch filters</a> in order to filter for anything that is not already listed in the sub window. This is a more advanced filtering method that will not be covered in this guide. 99% of use cases will be covered by the filters that already exist inside the sub window.</p>
+
+  </div>
+</div><br />
+
+<span class="fw-bold">Figure 3 -</span> Settings Overview<br />
+<img src="/cfw/sv/images/raidcrawler/figure3.gif" style="width:675px;height:400px;"><br /><br />
+
+<div class="card border-dark">
+  <div class="card-header" style="background-color: #0c0038;" id="SettingsInfo">
+    <span class="fw-bold text-light">Settings Information</span>
+  </div>
+  <div class="card-body card-bg">
+    <p span class="fw-bold">Clicking the <code span class="fw-bold">Open Settings</code> button will open the RaidCrawler Settings sub-window. Here we can change a bunch of settings that determine how the program operates.</p> 
+
+    <p>There are 6 tabs inside this sub window (as seen in Figure 3), these are:</p>
+    <ul>
+      <li><code class="fw-bold">General</code> - For changing game information such as story progress.</li>
+      <li><code class="fw-bold">Match</code> - Decide how you want to be notified when a result has been found.</li>
+      <li><code class="fw-bold">Advance Date</code> - For making changes to parts of the date skipping routine.</li>
+      <li><code class="fw-bold">Webhooks</code> - Hook RaidCrawler up to your discord server using Webhooks.</li>
+      <li><code class="fw-bold">Experimental</code> - Experimental features that can be ignored for now.</li>
+      <li><code class="fw-bold">About</code> - Shows current program build and developer information.</li>
+    </ul>
+
+    <p><b>Note:</b> As of Version 1.1.0, the information inside the <code class="fw-bold">General</code> tab is filled automatically upon connecting to the program, <u>do not change these values after connecting</u> as this will produce inaccurate results.</p><hr />
+
+    <h6 span class="fw-bold">Date Skipping:</h6>
+
+    <p>Pressing the <code class="fw-bold">Advance Date</code> button on the main window will initiate the date skipping routine, this will take over your console and enter system settings to change the current date automatically, by doing so, all of the active raids on the map will be refreshed and ready to be re-scanned. This process will be repeated until a desired result has been found.</p>
+
+    <p>The <code class="fw-bold">Advance Date</code> tab of the settings sub window is used for making changes to the date skipping routine if it is not working for you. In any case it is best to make sure your connection is completely stable before making any changes to the routine.</p>
+
+    <p>The default routine is configured for generic V1 Switch consoles, if you are using a Lite or an OLED you will need to change the value inside <code class="fw-bold">Time to hold to overshoot "Date and Time"</code> or use DDOWN inputs instead.</p>
+
+        <div class="col">
+          <table class="table table-striped">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col" class="col-5">Console</th>
+                <th scope="col" class="col-5">Suggested Overshoot Value</th>
+              </tr>
+            </thead>
+            <tbody id="results">
+              <tr>
+                <td class="fw-bold">Switch V1/V2</td>
+                <td>900-950</td>
+              </tr>
+              <tr>
+                <td class="fw-bold">Switch Lite</td>
+                <td>800</td>
+              </tr>
+              <tr>
+                <td class="fw-bold">Switch OLED</td>
+                <td>950</td>
+              </tr>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <details>
+          <summary span class="fw-bold">Troubleshooting:</summary>
+          <ul>
+            <li>Make sure that all controlers are desynced before clicking the <code>Advance Date</code> button on the main window.</li>
+            <li>If you run into problems with the routine not performing as intended, edit the appropriate values inside the <code>Advance Date</code> tab of the settings sub window.</li>
+            <li>You will need to use your eyes to inspect exactly what is going wrong with the routine in order to understand which fields need to be edited.</li>
+            <li>Disable any experimental features and stick to a more stable routine (e.g disable experimental touch screen inputs)</li>
+            <li>Make sure your connection is stable before clicking the <code>Advance Date</code> button, as stated above.</li>
+          </ul>
+          </details><p></p>
+  </div>
+</div><br />
+
+<p>From this point the guide assumes you have a stable connection to the program and both the settings & filters set appropriately. <b>It's time to begin searching for a target!</b></p><hr />
+
+<div class="title" style="background-color: #0c0038;">
+  <h1 class="text-light text-center pt-3 pb-3">The Process</h1>
+</div>
+<hr />
+
+<p>In this example we will be searching for any shiny Pokemon, you can be more specific with the filters if you wish, such as filtering for a specific species or IV values.</p>
+
+<span class="fw-bold">Figure 4 -</span> Filter Configuration<br />
+<img src="/cfw/sv/images/raidcrawler/figure4.png" style="width:675px;height:400px;"><br /><br />
+
+<div class="card border-dark">
+  <div class="card-header" style="background-color: #0c0038;" id="FilterConfig">
+    <span class="fw-bold text-light">Filter Configuration</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>The filters have been set to search for any shiny Pokemon (as seen in figure 4), we can now close this sub window and begin scanning for a desired raid.</p>
+
+    <p>Enter the overworld in-game and pause to open the map, then click <code>Connect</code> on the main window of RaidCrawler. After you have connected and have the map open, desync any controllers that are currently connected. This will allow us to effectively use the date skipping routine and automate the hunting process.</p>
+
+    <p>Click the <code>Advance Date</code> button to initiate the date skipping routine, RaidCrawler should now begin advancing the date and scanning for new raid dens automatically until a result has been found.</p>
+  </div>
+</div><br />
+  
+<span class="fw-bold">Figure 5 -</span> Target Found!<br />
+<img src="/cfw/sv/images/raidcrawler/figure.gif" style="width:675px;height:400px;"><br /><br />
+
+<div class="card border-dark">
+  <div class="card-header" style="background-color: #0c0038;" id="TargetFound">
+    <span class="fw-bold text-light">Target Found!</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>After scanning the raid dens and advancing the system date using Date Skipping, we were able to quickly find our desired Tera Raid and we have been provided with the following information:</p>
+    <ul>
+     <li>Seed, PID and EC, the PID will be <mark>highlighted gold</mark> if it is a shiny Pokemon</li>
+     <li>Pokemon species and Tera typing</li>
+     <li>The general location of the raid on the map</li> 
+     <li>Raid difficulty (star count)</li>
+     <li>The IVs of the raid</li>
+     <li>If raid is part of a promotional event distribution</li>
+    </ul>
+    
+    <p>By clicking the <code>Open Map</code> button we are able to see the general location of the raid on the world map. Navigate towards the area that contains the raid to confirm the result in-game matches the output on RaidCrawler.</p>
+  </div>
+</div><br />
+
+<span class="fw-bold">Figure 6 -</span> Result Found!<br />
+<img src="/cfw/sv/images/raidcrawler/figure.png" style="width:675px;height:400px;"><br /><br />
+
+<p>The raid matches the output displayed by RaidCrawler, once you have confirmed a match you can either capture the raid for yourself, or reset the game and host the raid for members of the community. <u>Make sure to save the game before entering the raid if you intend to share it with other players.</u></p>
+
+<span class="fw-bold">That's all there is to it!</span> You can now repeat everything you have learned from this guide to effectively hunt for any Tera Raids that you desire.
