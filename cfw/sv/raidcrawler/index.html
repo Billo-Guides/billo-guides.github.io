@@ -40,14 +40,19 @@ permalink: /cfw/sv/raidcrawler/
   <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/6.0">.NET 6.0</a> - Program dependency</li>
 </ul>
 
-<details>
-<summary><u>Installation Instructions:</u></summary>
+<u>Installation Instructions:</u>
 <ol>
   <li>Download and extract all the contents from the <code>RaidCrawler.zip</code> into an empty folder.</li>
-  <li>Download and extract all the contents from the <code>sys-botbase</code> download then place the <code>atmosphere</code> folder on to the root of your Switch SD card.</a></li>
-  <li>Check the <code>/atmosphere/contents</code> directory of your SD card for a folder named <code>430000000000000B</code>.</li>
-  <li>Reboot your Switch console and launch SysCFW.</li>
+  <li>Download and extract all the contents from the <code>sys-botbase</code> download then move the <code>atmosphere</code> folder to the root of your Switch SD card.</li>
+  <li>Download .NET 6.0 SDK and run <code>dotnet-sdk-6.0.x-win-x64.exe</code>, then go through the setup instructions.</li>
 </ol>
+
+<details>
+<summary><u>Unsure why you need extra components?</u></summary>
+<ul>
+  <li>sys-botbase is a Switch system module which allows the console to communicate with your computer, RaidCrawler is unable to connect to your console without sys-botbase properly installed.</li>
+  <li>.NET 6.0 SDK is a program dependency, RaidCrawler will be unable to launch without this installed.</li>
+</ul>
 </details>
 <hr />
 
@@ -219,7 +224,7 @@ permalink: /cfw/sv/raidcrawler/
 </div><br />
   
 <span class="fw-bold">Figure 5 -</span> Target Found!<br />
-<img src="/cfw/sv/images/raidcrawler/figure.gif" style="width:675px;height:400px;"><br /><br />
+<img src="/cfw/sv/images/raidcrawler/Figure5.gif" style="width:675px;height:400px;"><br /><br />
 
 <div class="card border-dark">
   <div class="card-header" style="background-color: #0c0038;" id="TargetFound">
@@ -241,7 +246,7 @@ permalink: /cfw/sv/raidcrawler/
 </div><br />
 
 <span class="fw-bold">Figure 6 -</span> Result Found!<br />
-<img src="/cfw/sv/images/raidcrawler/figure.png" style="width:675px;height:400px;"><br /><br />
+<img src="/cfw/sv/images/raidcrawler/Figure6.jpg" style="width:675px;height:400px;"><br /><br />
 
 <p>The raid matches the output displayed by RaidCrawler, once you have confirmed a match you can either capture the raid for yourself, or reset the game and host the raid for members of the community. <u>Make sure to disable Autosave and then manually save the game before entering the raid if you intend to share it with other players.</u></p>
 
