@@ -4,93 +4,108 @@ title: Bird Watching (CFW)
 permalink: /cfw/lgpe/bird-watching
 ---
 
+<style>
+  .card-bg {
+  background-color: #d1d1d1;
+  border-bottom-right-radius: 0.20rem !important;
+  border-bottom-left-radius: 0.20rem !important;
+  }
+  table,
+  th,
+  td {
+    border: 1px solid black;
+  }
+  </style>
+
+
 <div class="title" style="background-color: #0c5b74;">
- <h1 class="text-light text-center pt-3 pb-3">Legendary Bird Hunting (LGPE)</h1>
-</div>
-<hr />
+  <h1 class="text-light text-center pt-3 pb-3">Legendary Bird Hunting (LGPE)</h1>
+ </div>
+ <hr />
 
-This guide will cover the process of how you can find members of the legendary bird trio Articuno, Zapdos & Moltres in the overworld easily, by using the moarencounterbots branch of the Sysbot.NET repository by <a
-  href="https://github.com/Lusamine">Lusamine</a>.<br /> <br />
+ <p>This guide provides coverage on how to use the <a href="https://github.com/Lusamine/SysBot.NET/tree/moarencounterbots">Moarencounterbots</a> sysbot branch by <a href="https://github.com/Lusamine">Lusamine</a> to automate the process of hunting overworld legendary birds (Articuno, Zapdos & Moltres) in Let's Go! Pikachu & Eevee.</p>
 
-<span class="fw-bold">This guide assumes you are using a CFW Switch console running Atmosphere.</span><br /><br />
+ <p>Moarencounterbots is a fork of SysBot.NET that provides extra encounterbots that cannot be found in the base program, including <code class="fw-bold">EncBotBirdWatchLGPE</code>. This encounterbot checks the RNG state to determine when an overworld legendary bird will spawn and will continually enter Mt. Moon PokeCénter until it finds a close enough target.</p>
+
+ <p>It's possible to configure the bot to look for a specific bird target OR any of the three, it's also possible to hunt for only Shiny targets.</p>
+
+<p><span class="fw-bold" style="color: #b60606;">From here this guide assumes you are using a CFW Switch console running Atmosphere.</span></p>
 
 <h3><span class="fw-bold">Getting Started:</span></h3>
 <u>You will need:</u>
 <ul>
-  <li><a href="https://github.com/Lusamine/SysBot.NET/tree/moarencounterbots">Sysbot.NET - Moarencounterbots</a> - Latest commit</li>
-  <li><a href="https://github.com/olliz0r/sys-botbase/releases/">sys-botbase</a> - Latest release</li>
+<li><a href="https://github.com/Lusamine/SysBot.NET/tree/moarencounterbots">SysBot.NET Moarencounterbots</a> - Latest commit</li>
+<li><a href="https://github.com/olliz0r/sys-botbase/releases/">sys-botbase</a> - Latest Release</li>
 </ul>
 
-Visit the <a href="https://github.com/kwsch/SysBot.NET/wiki/Building-the-.sln">official Sysbot.NET Wiki</a> for instructions on building the application using Visual Studio.<br /><br />
+<u>For building the program:</u>
+<ul>
+<li><a href="https://dotnet.microsoft.com/en-us/download/dotnet-framework/net47">.NET 4.7 SDK</a></li>
+<li><a href="https://visualstudio.microsoft.com/vs/">Visual Studio 2022</a></li>
+</ul>
 
 <details>
-  <summary><u>Installation Instructions (Click to expand!)</u></summary>
-<ol>
-  <li>Download sys-botbase and extract the contents into an empty folder.</a></li>
-  <li>Place the <code>atmosphere</code> folder from the sys-botbase download onto the root of your Switch SD card.</li>
-  <li>Check the <code>/atmosphere/contents</code> directory of your SD card a folder named <code>430000000000000B</code>.</li>
-  <li>In order to use the LGPE encounterbots, open the <code>.exe</code> once and close it to generate a <code>config.json</code>. Right click this file and open it in a text editor and change the Mode to 100.</li>
-  <li>Reboot your Switch and launch CFW.</li>
-</ol>
-</details><br />
+<summary><u>Unsure why you need extra components?</u></summary>
+<ul>
+<li>sys-botbase is a Switch system module which allows the console to communicate with your computer, SysBot.NET is unable to connect to your console without sys-botbase properly installed.</li>
+<li>.NET 4.7 SDK is required to build the application, Visual Studio is the application that will allow you to build the application.</li>
+</ul>
 
-<span class="fw-bold">Figure 1 -</span> Hub tab overview<br />
-<img src="./images/bird-watching/figure-1-hub-overview.gif" style="width:675px;height:400px;"><br /><br />
+<p>You will need to compile the source code as this program does not provide a pre-compiled release. Read through the documentation found on the Official Sysbot.NET Wiki for more information on how to <a href="https://github.com/kwsch/SysBot.NET/wiki/Building-the-.sln">compile the application using Visual Studio</a> & <a href="https://github.com/kwsch/SysBot.NET/wiki/Bot-Startup-Details#general-program-usage">sys-botbase installation</a>. For further instructions consider visiting <a href="https://billo-guides.github.io/misc/moarencounterbots/">my other guide</a> which covers how to compile this application in some extra detail.</p>
+</details>
+<hr />
 
-<div class="accordion" id="HubOverview">
-  <div class="card">
-    <div class="card-header text-white" style="background-color: #0c5b74;">
-    <div class="card-header" id="HubOverview">
-      <h5 class="mb-0">
-        <span class="fw-bold">Hub tab Overview</span>
-      </h5>
-    </div>
-    <div class="card-body" style="background-color: #ffffff36;">
-      The Hub tab is where we decide the type of encounter we are doing and which Pokémon to hunt for. Scroll down to <code>EncounterLGPE</code> and set your conditions, click on each of the fields and you will be met with a short description about them at the bottom of the window.<br /> <br />
+<div class="title" style="background-color: #0c5b74;">
+  <h1 class="text-light text-center pt-3 pb-3">SysBot Tab Overview</h1>
+ </div>
+ <hr />
 
-      Now scroll down to <code>StopConditions</code> and set your filters for your legendary bird of choice, you can be as specific with the filters as you like, such as filtering for specific IVs or shiny type, or have the bot continue the routine if the legendary bird is not shiny.<br /> <br />
+ <p>This portion of the guide covers all the information you need to know about each of the tabs in order to run <code class="fw-bold">EncBotBirdWatchLGPE</code>.</p>
 
-      Suggested settings and a detailed overview of each setting can be found on the <a href="https://github.com/Lusamine/SysBot.NET/wiki/LGPE-EncounterBots">moarencounterbots Wiki</a>, <u>it's recommended to read this page in its entirety before starting</u>, it contains a lot of useful information!
-      </div>
-    </div>
+ <p>The default configuration is for Scarlet/Violet, you will first need to change the current game settings to use Let's Go encounterbots. Upon launching the program for the first time and closing it, a file named <code class="fw-bold">config.json</code> will appear, right click and open it in any text editor and change the <code class="fw-bold">Mode</code> to <code class="fw-bold">100</code>.</p>
+
+ <p>After changing the mode, then running <code class="fw-bold">SysBot.exe</code> again you will be presented with a screen similar to the one shown below in Figure 1.</p>
+
+ <span class="fw-bold">Figure 1 -</span> SysBot overview<br />
+<img src="./images/bird-watching/sysbotmain.gif" style="width:675px;height:400px;"><br /><br /><hr />
+
+<span class="fw-bold">Figure 2 -</span> Hub tab overview<br />
+<img src="./images/bird-watching/hub.gif" style="width:675px;height:400px;"><br /><br />
+
+<div class="card border-dark">
+  <div class="card-header" style="background-color: #0c5b74;" id="HubOverview">
+    <span class="fw-bold text-light">Hub tab Overview</span>
   </div>
-<br />
-
-<span class="fw-bold">Figure 2 -</span> Log tab overview<br />
-<img src="./images/bird-watching/figure-2-logs-overview.gif" style="width:675px;height:400px;"><br /><br />
-
-<div class="accordion" id="LogsOverview">
-  <div class="card">
-    <div class="card-header text-white" style="background-color: #0c5b74;">
-    <div class="card-header" id="LogsOverview">
-      <h5 class="mb-0">
-        <span class="fw-bold">Logs tab Overview</span>
-      </h5>
-    </div>
-    <div class="card-body" style="background-color: #ffffff36;">
-      The Log tab is where we monitor what is going on in-game, it shows us what the bot is doing in real-time and will contain all the information you need to know, such as when a legendary bird has spawned in the overworld, or if it's a shiny variant.
-      </div>
-    </div>
+  <div class="card-body card-bg">
+    <p>The Hub tab is where we decide the type of encounter we are doing and which Pokémon to hunt for. Scroll down to <code class="fw-bold">EncounterLGPE</code> and set your conditions, click on each of the fields and you will be met with a short description about them at the bottom of the window.</p>
+    <p>Now scroll down to <code class="fw-bold">StopConditions</code> and set your filters for your legendary bird of choice, you can be as specific with the filters as you like, such as filtering for specific IVs or shiny type, or have the bot continue the routine if the legendary bird is not shiny.</p>
+    <p>Suggested settings and a detailed overview of each setting can be found on the <a href="https://github.com/Lusamine/SysBot.NET/wiki/LGPE-EncounterBots">Moarencounterbots Wiki</a>, <u>it's recommended to read this page in its entirety before starting</u>, it contains a lot of useful information!</p>
   </div>
-<br />
+</div><hr />
 
-<span class="fw-bold">Figure 3 -</span> Bots tab overview<br />
-<img src="./images/bird-watching/figure-3-bots-overview.gif" style="width:675px;height:400px;"><br /><br />
+<span class="fw-bold">Figure 3 -</span> Logs tab overview<br />
+<img src="./images/bird-watching/logs.gif" style="width:675px;height:400px;"><br /><br />
 
-<div class="accordion" id="BotsOverview">
-  <div class="card">
-    <div class="card-header text-white" style="background-color: #0c5b74;">
-    <div class="card-header" id="BotsOverview">
-      <h5 class="mb-0">
-        <span class="fw-bold">Bots tab Overview</span>
-      </h5>
-    </div>
-    <div class="card-body" style="background-color: #ffffff36;">
-      The Bots tab is where we add bots, select the <code>EncBotBirdWatch</code> option in the dropdown menu, type your switch IP into the field and click <code>Add</code> to add a new instance of EncBotBirdWatch.
-      </div>
-    </div>
+<div class="card border-dark">
+  <div class="card-header" style="background-color: #0c5b74;" id="LogsOverview">
+    <span class="fw-bold text-light">Logs tab Overview</span>
   </div>
-<br />
+  <div class="card-body card-bg">
+    <p>The Log tab is where we monitor what is going on in-game, it shows us what the bot is doing in real-time and will contain all the information you need to know, such as when a legendary bird has spawned in the overworld, or if it's a shiny variant.</p>
+  </div>
+</div><hr />
+
+<span class="fw-bold">Figure 4 -</span> Bots tab overview<br />
+<img src="./images/bird-watching/bots.gif" style="width:675px;height:400px;"><br /><br />
+
+<div class="card border-dark">
+  <div class="card-header" style="background-color: #0c5b74;" id="BotsOverview">
+    <span class="fw-bold text-light">Bots tab Overview</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>The Bots tab is where we add bots, select the <code class="fw-bold">EncBotBirdWatch</code> option in the dropdown menu, type your switch IP into the field and click <code class="fw-bold">Add</code> to add a new instance of EncBotBirdWatch.</p>
+  </div>
+</div><p></p>
 
 <span class="fw-bold">With setup out of the way, it's time hunt some legendary birds!</span>
 
@@ -100,59 +115,55 @@ Visit the <a href="https://github.com/kwsch/SysBot.NET/wiki/Building-the-.sln">o
 </div>
   <hr />
 
-The goal is to spawn the legendary bird of choice in the overworld. we will use the bot to predict when a bird will spawn and to advance towards our target. It will then output the result and pause the game using the home button so that we can catch
-it!<br /> <br />
+  <p>The goal is to spawn the legendary bird of choice in the overworld. we will use the bot to predict when a bird will spawn and to advance towards our target. It will then output the result and pause the game using the home button so that we can catch it!</p>
 
-- If you do not want the bot to stop on non-shiny results set the <code>StopOnAllBirdsLGPE</code> setting to FALSE in <code>StopConditions</code><br />
-- If you wish to hunt for a specific bird you must set the <code>StopOnSpecies</code> setting to your bird of choice in <code>StopConditions</code><br />
-- The bot assumes you are using the Pokécenter at Mt. Moon and have defeated/caught the legendary bird trio in their original static locations.<br />
-- The legendary birds are sky spawns, meaning you must have unlocked the ability to encounter sky spawns in-game, given shortly after defeating the Elite 4.<br /><br />
+  <details>
+    <summary><u>Notes and tips:</u></summary>
+    <ul>
+    <li>If you do not want the bot to stop on non-shiny results set the <code class="fw-bold">StopOnAllBirdsLGPE</code> setting to FALSE in <code>StopConditions</code></li>
+    <li>If you wish to hunt for a specific bird you must set the <code class="fw-bold">StopOnSpecies</code> setting to your bird of choice in <code>StopConditions</code></li>
+    <li>The bot assumes you are using the Pokécenter at Mt. Moon and have defeated/caught the legendary bird trio in their original static locations.</li>
+    <li>The legendary birds are sky spawns, meaning you must have unlocked the ability to encounter sky spawns in-game, given shortly after defeating the Elite 4.</li>
+    </ul>
+   </details><p></p>
 
-
-<div class="accordion" id="ShinyHuntingStrat">
-  <div class="card">
-    <div class="card-header text-white" style="background-color: #0c5b74;">
-    <div class="card-header" id="ShinyHuntingStrat">
-      <h5 class="mb-0">
-        <span class="fw-bold">Shiny Hunting Strategy</span>
-      </h5>
-    </div>
-    <div class="card-body" style="background-color: #ffffff36;">
-      To get optimal chances of finding a shiny legendary bird you should capture every bird that spawns of your chosen species. Upon capturing a Pokemon your shiny odds will increase for the next Pokemon that spawns of the same species.<br /> <br />
-
-      For this reason it's recommended to have <code>StopOnAllBirdsLGPE</code> set to TRUE, you can then chain capture your chosen species for boosted shiny odds.<br /> <br />
-
-      In this example we will be looking for any legendary bird at Mt. Moon Pokécenter, you can be more specific with the filters if you wish.
+    <div class="card border-dark">
+      <div class="card-header" style="background-color: #0c5b74;" id="ShinyHuntingStrat">
+        <span class="fw-bold text-light">Shiny Hunting Strategy</span>
       </div>
-    </div>
-  </div>
-<br />
+      <div class="card-body card-bg">
+        <p>To get optimal chances of finding a shiny legendary bird you should capture every bird that spawns of your chosen species. Upon capturing a Pokemon your shiny odds will increase for the next Pokemon that spawns of the same species.</p>
+        <p>For this reason it's recommended to have <code class="fw-bold">StopOnAllBirdsLGPE</code> set to TRUE, you can then chain capture your chosen species for boosted shiny odds.</p>
+        <p>In this example we will be looking for any legendary bird at Mt. Moon Pokécenter, you can be more specific with the filters if you wish, such as filtering for a specific or shiny bird.</p>
+      </div>
+    </div><hr />
 
-<span class="fw-bold">Figure 4 -</span> Game Setup<br />
-<img src="./images/bird-watching/figure-4-game-setup.jpg" style="width:675px;height:400px;"><br /><br />
+<span class="fw-bold">Figure 5 -</span> Game Setup<br />
+<img src="./images/bird-watching/gamesetup.jpg" style="width:675px;height:400px;"><br /><br />
 
-Once you are stood outside Mt. Moon and have your bot configured properly, click <code>Start All</code> and head over to the Logs tab.<br /> <br />
+<p>Once you are stood outside Mt. Moon and have your bot configured properly, click <code>Start All</code> and head over to the Logs tab.</p>
 
-<span class="fw-bold">Figure 5 -</span> Bot Started<br />
-<img src="./images/bird-watching/figure-5-bot-started.gif" style="width:675px;height:400px;"><br /><br />
+<span class="fw-bold">Figure 6 -</span> Bot Started<br />
+<img src="./images/bird-watching/botstarted.gif" style="width:675px;height:400px;"><br /><br />
 
-The bot should now begin hunting for birds by exiting the Pokecénter then checking your RNG states. If you are having trouble exiting/entering the Pokecénter consider adjusting your timing settings.<br /> <br />
+<p>The bot should now begin hunting for birds by exiting the Pokecénter then checking your RNG states. If you are having trouble exiting/entering the Pokecénter consider adjusting your timing settings.</p>
 
-<span class="fw-bold">Figure 6 -</span> Target Found!<br />
-<img src="./images/bird-watching/figure-6-target-found.png" style="width:675px;height:400px;"><br /><br />
+<span class="fw-bold">Figure 7 -</span> Target Found!<br />
+<img src="./images/bird-watching/targetfound.png" style="width:675px;height:400px;"><br /><br />
 
-The bot will now begin waiting for your bird to spawn in the overworld, once it detects the encounter it will pause the game if it meets your stop conditions, otherwise it will continue looking for results.<br /> <br />
+<p>The bot will now begin waiting for your bird to spawn in the overworld, once it detects the encounter it will pause the game if it meets your stop conditions, otherwise it will continue looking for results.</p>
 
-<span class="fw-bold">Figure 7/8 -</span> Result Found!<br />
-<img src="./images/bird-watching/figure-7-result-found-bot.png" style="width:675px;height:400px;"><br /><br />
-<img src="./images/bird-watching/figure-8-result-found-game.jpg" style="width:675px;height:400px;"><br />
+<span class="fw-bold">Figure 8/9 -</span> Result Found!<br />
+<img src="./images/bird-watching/resultfoundbot.png" style="width:675px;height:400px;"><br /><br />
+<img src="./images/bird-watching/resultfoundgame.jpg" style="width:675px;height:400px;"><br /><br />
 
-We found a Zapdos in the overworld! Time to catch it to boost the shiny odds of the next Zapdos we find.<br /><br />
+<p>We found a Zapdos in the overworld! Time to catch it to boost the shiny odds of the next Zapdos we find.</p>
 
-<span class="fw-bold">Figure 9 -</span> Result captured!<br />
-<img src="./images/bird-watching/figure-9-result-captured.jpg" style="width:675px;height:400px;"><br /><br />
+<span class="fw-bold">Figure 10 -</span> Result captured!<br />
+<img src="./images/bird-watching/resultcaptured.jpg" style="width:675px;height:400px;"><br /><br />
 
-You can now repeat this process and farm as many birds as you desire!<br /><br />
+<p>You can now repeat this process and farm as many birds as you desire!</p>
 
 <u>Disclaimer:</u>
 - This method does not guarantee shiny results, you may need to run the bot for a long period of time to find shinies.<br /><br />
+
