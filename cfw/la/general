@@ -1,0 +1,57 @@
+---
+layout: default
+title: Legends Arceus RNG Guide
+permalink: /cfw/la/general/
+---
+
+<style>
+  mark {
+    background-color: #FFD700;
+    color: black;
+  }
+
+  .card-bg {
+    background-color: #d1d1d1;
+    border-bottom-right-radius: 0.20rem !important;
+    border-bottom-left-radius: 0.20rem !important;
+  }
+
+  table,
+  th,
+  td {
+    border: 1px solid black;
+  }
+</style>
+
+<div class="title" style="background-color: #0c0038;">
+  <h1 class="text-light text-center pt-3 pb-3">Legends: Arceus RNG</h1>
+</div>
+<hr />
+
+<p>This guide provides in-depth coverage of how to RNG abuse Legendary Pokemon in Legends: Arceus, using RNG scripts written by Lusamine and scanner bots created by Zyro670.</p>
+
+<p>In Legends: Arceus, it is possible to RNG abuse certain legendary Pokemon for desirable IVs & Natures, the method used to RNG abuse these Pokemon can vary depending on if the encounter uses Main RNG or is tied to a Spawner.</p>
+
+<p><span class="fw-bold" style="color: #b60606;">From here this guide assumes you are using a CFW Switch console running Atmosphere.</span></p>
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="MainRNGVSSpawners">
+    <span class="fw-bold text-light">Main RNG VS Spawners:</span>
+  </div>
+  <div class="card-body card-bg">
+    <h3><span class="fw-bold">What is Main RNG?</span></h3>
+    <p>Main RNG is what some encounters use to generate a Pokemon, this is a constantly ticking state and hitting the desired result will be based on correct/precise timing.</p>
+
+    Encounters that use Main RNG are as follows:
+    <ul>
+      <li>Origin Legendary (Dialga or Palkia)</li>
+      <li>Opposite Legendary (Dialga or Palkia, depending on the Origin Pokemon chosen)</li>
+      <li>Giratina</li>
+      <li>Arceus</li>
+    </ul>
+
+    <h3><span class="fw-bold">What is a Spawner?</span></h3>
+  <p>Spawners hold a specific Pokemon that is visible in the overworld, when a Legendary Pokemon on a spawner is knocked out the spawner seed will advance by 1 frame every time, this means that hitting a desired result will be based on KOing the Pokemon on the spawner and not based on timing.</p>
+
+  </div>
+</div><br />
