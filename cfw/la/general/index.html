@@ -25,8 +25,7 @@ permalink: /cfw/la/legendary/
 
 <div class="title" style="background-color: #0c0038;">
   <h1 class="text-light text-center pt-3 pb-3">Legends: Arceus RNG</h1>
-</div>
-<hr />
+</div><hr />
 
 <p>This guide provides in-depth coverage of how to RNG abuse Legendary Pokemon in Legends: Arceus, using RNG generator scripts written by <a href="https://github.com/kwsch/SysBot.NET/wiki/Building-the-.sln">Lusamine</a>. It is possible to RNG manipulate Legendary Pokemon for desirable IVs & Natures, the method used can vary depending on if the encounter uses Main RNG or is tied to a Spawner.</p>
   
@@ -41,63 +40,74 @@ permalink: /cfw/la/legendary/
   </svg>
 </a><br>
 
-<h4><span class="fw-bold">Getting Started:</span></h4>
-<u>PC Setup:</u>
-<ul>
-  <li><a href="https://github.com/Lusamine/SysBot.NET/tree/moarencounterbots">Moarencounterbots</a> - Sysbot.NET fork by Lusamine (For Main RNG encounters only)</li>
-  <li><a href="https://github.com/zyro670/PokeViewer.NET/releases/">PokeViewer.NET</a> - By Zyro670 (For reading the details of Pokemon we are in-battle with)</li>
-  <li><a href="https://projectpokemon.org/home/files/file/2445-pkhex-development-build/">PKHeX</a> - By Kaphotics (For dumping Pokemon files for Spawner based encounters)</li>
-  <li><a href="https://www.linqpad.net/Download.aspx">Linqpad 7</a> - By Joseph Albahari (For running the RNG scripts by Lusamine)</li>
-</ul>
-
-<small>You will need to build the moarencounterbots branch of Lusamines Sysbot.NET yourself using Visual Studio. The official build guide can be found <a href="https://github.com/kwsch/SysBot.NET/wiki/Building-the-.sln">here</a>! <a href="https://billo-guides.github.io/misc/moarencounterbots/images/Figure3.gif">Follow this GIF</a> if you are unsure how to switch branches or are running into issues doing so.</small><p></p>
-
-<u>RNG Scripts:</u>
-<ul>
-  <li><a href="https://gist.github.com/Lusamine/87ecd66f2c07bc549a9ca0f42a39d74f">Main RNG encounter calculator</a></li>
-  <li><a href="https://gist.github.com/Lusamine/950888ce3906d19b1bb654de7399743e">Spawner RNG encounter calculator</a></li>
-  <li><a href="https://gist.github.com/Lusamine/1a7f9e4418b618daa75f7c9e9c2a9e91">Spawner seed solver</a></li>
-</ul>
-
-<small>Technical details for running each of these scripts can be found at the bottom of each page on the above links. The steps will differ slightly depending on the type of script you are trying to run, be sure to follow the steps in detail to avoid running into issues.</small><p></p>
-
-<u>Switch Setup::</u>
-<ul>
-  <li><a href="https://github.com/olliz0r/sys-botbase/releases/">sys-botbase</a> - By Olliz0r</li>
-</ul>
-
-<small>Download the latest release of sys-botbase and drag the <code>atmosphere</code> folder to the root of your Switch SD card, then reboot the console into SysCFW.</small><hr />
-
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="MainRNGVSSpawners">
-    <span class="fw-bold text-light">Main RNG VS Spawners:</span>
+  <div class="anchored card-header" style="background-color: #0c0038;" id="setupandinstallLA">
+    <span class="fw-bold text-light">Getting Started (Installation & Setup):</span>
   </div>
   <div class="card-body card-bg">
-    <h5><span class="fw-bold">What is Main RNG?</span></h5>
-    <p>Main RNG is what some encounters use to generate a Pokemon, this is a constantly ticking hidden state and so hitting the desired result will be dependent on correct/precise timing.</p>
-
-    <span class="fw-bold">The following legendary encounters are tied to Main RNG:</span>
+    <h5><span class="fw-bold">PC Setup</span></h5>
     <ul>
-      <li>Dialga or Palkia - Origin</li>
-      <li>Dialga or Palkia - Non-Origin</li>
-      <li>Giratina</li>
-      <li>Regigigas</li>
-      <li>Arceus</li>
+      <li><a href="https://github.com/Lusamine/SysBot.NET/tree/moarencounterbots">Moarencounterbots</a> - Sysbot.NET fork by Lusamine (For Main RNG encounters only)</li>
+      <li><a href="https://github.com/zyro670/PokeViewer.NET/releases/">PokeViewer.NET</a> - By Zyro670 (For reading the details of Pokemon in battle)</li>
+      <li><a href="https://projectpokemon.org/home/files/file/2445-pkhex-development-build/">PKHeX</a> - By Kaphotics (For dumping Pokemon files for Spawner based encounters)</li>
+      <li><a href="https://www.linqpad.net/Download.aspx">Linqpad 7</a> - By Joseph Albahari (For running the RNG scripts by Lusamine)</li>
     </ul>
+    <small>You will need to build the moarencounterbots branch of Lusamines Sysbot.NET yourself using Visual Studio. The official build guide can be found <a href="https://github.com/kwsch/SysBot.NET/wiki/Building-the-.sln">here</a>! <a href="https://billo-guides.github.io/misc/moarencounterbots/images/Figure3.gif">Follow this GIF</a> if you are unsure how to switch branches or are running into issues doing so.</small><hr />
 
-    <h5><span class="fw-bold">What is a Spawner?</span></h5>
-    <p>Spawners hold a specific Pokemon that is visible in the overworld, when a Pokemon on a spawner is knocked out the spawner seed will advance by 1 frame. This means that hitting a desired result will be based on KOing the Pokemon on the spawner and certain amount of times in a row.</p>
-
-    <span class="fw-bold">The following legendary encounters are tied to spawners:</span>
+    <h5><span class="fw-bold">RNG Scripts</span></h5>
     <ul>
-      <li>Lake Trio - Uxie/Mesprit/Azelf</li>
-      <li>Weather Quartet - Tornadus/Thundurus/Landorus/Enamorus</li>
-      <li>Heatran</li>
-      <li>Cresselia</li>
-      <li>Manaphy/Phione</li>
-      <li>Shaymin</li>
-      <li>Darkrai</li>
+      <li><a href="https://gist.github.com/Lusamine/87ecd66f2c07bc549a9ca0f42a39d74f">Main RNG encounter calculator</a></li>
+      <li><a href="https://gist.github.com/Lusamine/950888ce3906d19b1bb654de7399743e">Spawner RNG encounter calculator</a></li>
+      <li><a href="https://gist.github.com/Lusamine/1a7f9e4418b618daa75f7c9e9c2a9e91">Spawner seed solver</a></li>
     </ul>
+    <small>Technical details for running each of these scripts can be found at the bottom of each page on the above links. The steps will differ slightly depending on the type of script you are trying to run, be sure to follow the steps in detail to avoid running into issues.</small><hr />   
+
+    <h5><span class="fw-bold">Switch Setup</span></h5>
+    <ul>
+      <li><a href="https://github.com/olliz0r/sys-botbase/releases/">sys-botbase</a> - By Olliz0r</li>
+    </ul>
+    <small>Download the latest release of sys-botbase and drag the <code>atmosphere</code> folder to the root of your Switch SD card, then reboot the console into SysCFW.</small>
+  </div>
+</div><hr />
+
+   <div class="title" style="background-color: #0c0038;">
+     <h1 class="text-light text-center pt-3 pb-3">Required Reading</h1>
+   </div><hr />
+
+   <p>From this point the guide assumes your setup is correct, if you have not yet completed the setup for each of the scripts and applications, go back and finish this first.</p>
+
+   <p>It is important to understand the type of encounter you wish to RNG abuse, the card below will outline which Legendary Pokemon are tied to each type of encounter.</p>
+
+    <div class="card border-dark">
+      <div class="anchored card-header" style="background-color: #0c0038;" id="MainRNGVSSpawners">
+        <span class="fw-bold text-light">Main RNG VS Spawners:</span>
+      </div>
+      <div class="card-body card-bg">
+        <h5><span class="fw-bold">What is Main RNG?</span></h5>
+        <p>Main RNG is what some encounters use to generate a Pokemon, this is a constantly ticking hidden state and so hitting the desired result will be dependent on correct/precise timing.</p>
+    
+        <span class="fw-bold">The following legendary encounters are tied to Main RNG:</span>
+        <ul>
+          <li>Dialga or Palkia - Origin</li>
+          <li>Dialga or Palkia - Non-Origin</li>
+          <li>Giratina</li>
+          <li>Regigigas</li>
+          <li>Arceus</li>
+        </ul>
+    
+        <h5><span class="fw-bold">What is a Spawner?</span></h5>
+        <p>Spawners hold a specific Pokemon that is visible in the overworld, when a Pokemon on a spawner is knocked out the spawner seed will advance by 1 frame. This means that hitting a desired result will be based on KOing the Pokemon on the spawner and certain amount of times in a row.</p>
+    
+        <span class="fw-bold">The following legendary encounters are tied to spawners:</span>
+        <ul>
+          <li>Lake Trio - Uxie/Mesprit/Azelf</li>
+          <li>Weather Quartet - Tornadus/Thundurus/Landorus/Enamorus</li>
+          <li>Heatran</li>
+          <li>Cresselia</li>
+          <li>Manaphy/Phione</li>
+          <li>Shaymin</li>
+          <li>Darkrai</li>
+        </ul>
 
   </div>
 </div><hr />
