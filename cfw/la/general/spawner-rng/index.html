@@ -24,5 +24,61 @@ permalink: /cfw/la/legendary/spawner-rng
 </style>
 
 <div class="title" style="background-color: #0c0038;">
-  <h1 class="text-light text-center pt-3 pb-3">Spawner Legendary RNG Abuse</h1>
+  <h1 class="text-light text-center pt-3 pb-3">Spawner RNG Legendary Abuse</h1>
+</div><hr />
+
+<p>This page will provide in-depth information about how to RNG abuse Legendary Pokemon in Legends: Arceus that are tied to what is known as Spawners. We will be using RNG generator scripts and tools written by <a href="https://github.com/Lusamine">Lusamine</a>, as mentioned on the main page.</p>
+
+<p><span class="fw-bold" style="color: #b60606;">From here it is assumed that you have already followed all of the setup instructions found on the introductory page of this guide.</span></p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/legendary/#setupandinstallLA">
+  Didn't follow the setup instructions on the main page yet? <span class="fw-bold">Click here to go back</span>!
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a><br>
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="setupandinstallspawnerrng">
+    <span class="fw-bold text-light">Script Setup:</span>
+  </div>
+  <div class="card-body card-bg">
+    <h5><span class="fw-bold">For Spawner RNG you will need:</span></h5>
+    <ul>
+      <li><a href="https://gist.github.com/Lusamine/950888ce3906d19b1bb654de7399743e">Spawner RNG calculation script</a></li>
+      <li><a href="https://gist.github.com/Lusamine/1a7f9e4418b618daa75f7c9e9c2a9e91">Spawner seed solver script</a></li>
+    </ul>
+
+    <details>
+      <summary><u>Spawner calculation script setup instructions:</u></summary>
+      <ul>
+        <li>Open LINQPad 7, then copy/paste the Spawner RNG calculation script into the main window.</li>
+        <li>Change the <code span class="fw-bold">Language</code> in the LINQPad header to C# program.</li>
+        <li>Press F4, then add PKHeX.Core.dll to the <code span class="fw-bold">Additional References</code> tab by selecting it via Add/Browse...</li>
+        <li>Type PKHeX.Core into the <code span class="fw-bold">Namespace Imports</code> tab.</li>
+        <li>Run the script by clicking the <code span class="fw-bold">▶ button</code>, You should now see the script output at the bottom of the window.</li>
+      </ul>
+
+      <p>Having trouble with the written instructions? You can use <a href="linkhere">this GIF</a> as a point of reference instead!</p><hr />
+     </details><p></p>
+
+      <details>
+        <summary><u>Seed reversal script setup instructions:</u></summary>
+      <ul>
+        <li>Open LINQPad 7, then copy/paste the Spawner seed solver script into the main window.</li>
+        <li>Change the <code span class="fw-bold">Language</code> in the LINQPad header to C# program.</li>
+        <li>Press F4, then add PKHeX.Core.dll, Microsoft.Z3.dll & libz3.dll to the <code span class="fw-bold">Additional References</code> tab by selecting it via Add/Browse...</li>
+        <li>Copy/Paste the following into the <code span class="fw-bold">Namespace Imports</code> tab:<p></p>
+          Microsoft.Z3<br>
+          PKHeX.Core<br>
+          System.Collections.Concurrent<br>
+          System.Runtime.CompilerServices<br>
+          System.Threading.Tasks<p></p></li>
+      </ul>
+
+      <p>Having trouble with the written instructions? You can use <a href="linkhere">this GIF</a> as a point of reference instead!</p><hr />
+     </details><p></p>
+
+     <p>Once you have confirmed that the script(s) is working as intended, click <code span class="fw-bold">File</code> and save it to a known location. This will ensure that you do not need to repeat the setup instructions for future usage.</p>
+  </div>
 </div><hr />
