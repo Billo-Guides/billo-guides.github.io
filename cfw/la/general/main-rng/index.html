@@ -39,33 +39,130 @@ permalink: /cfw/la/legendary/main-rng
 </a><br>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="setupandinstallmainrng">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="youwillneedmainrng">
     <span class="fw-bold text-light">You will need:</span>
   </div>
   <div class="card-body card-bg">
-    <h5><span class="fw-bold">Script Setup</span></h5>
+    <h5><span class="fw-bold">Download Links:</span></h5>
     <ul>
       <li><a href="https://gist.github.com/Lusamine/87ecd66f2c07bc549a9ca0f42a39d74f">Main RNG calculation script</a></li>
       <li><a href="https://projectpokemon.org/home/files/file/2445-pkhex-development-build/">PKHeX.Core.dll</a></li>
-    </ul>
+    </ul><hr />
 
-    <details>
-      <summary><u>Main RNG calculation script setup instructions:</u></summary>
-      <ul>
+    <h5><span class="fw-bold">Script Setup Instructions:</span></h5>
+      <ol>
         <li>Open LINQPad 7, then copy/paste the Main RNG calculation script into the main window.</li>
         <li>Change the <code span class="fw-bold">Language</code> in the LINQPad header to C# program.</li>
         <li>Press F4, then add PKHeX.Core.dll to the <code span class="fw-bold">Additional References</code> tab by selecting it via Add/Browse...</li>
         <li>Type PKHeX.Core into the <code span class="fw-bold">Namespace Imports</code> tab.</li>
         <li>Run the script by clicking the <code span class="fw-bold">▶ button</code>, You should now see the script output at the bottom of the window.</li>
-      </ul>
+      </ol>
 
-      <p>Having trouble with the written instructions? You can use <a href="https://billo-guides.github.io/cfw/la/general/images/main-rng/main-rng-script-setup.gif">this GIF</a> as a point of reference instead!</p>
-     </details><p></p><hr />
+      <p>Having trouble with the written instructions? You can use <a href="https://billo-guides.github.io/cfw/la/general/images/main-rng/main-rng-script-setup.gif">this GIF</a> as a point of reference instead!</p><hr />
 
-    <h5><span class="fw-bold">In-game setup</span></h5>
-    <ul>
-      <li>Stand in-game, close to the Pokemon you plan to RNG abuse.</li>
-      <li>Enough resources (items) to capture the Pokemon if the capture is not guaranteed.</li>
-    </ul>
+     <h5><span class="fw-bold">PC Setup:</span></h5>
+     <ul>
+       <li>Main RNG calculation script running properly on your PC. (To calculate upcoming frames)</li>
+       <li>Sysbot.NET Moarencounterbots open in Legends: Arceus mode. (To find out & track your RNG state/seed)</li>
+     </ul>
+     <small>The download link for Lusamine's Moarencounterbots comes pre-configured and will automatically be in Legends: Arceus mode. If you deleted or misplaced <code span class="fw-bold">config.json</code>, you will need to edit the Mode value to 3 in a text editor like Notepad, as stated on the <a href="https://github.com/kwsch/SysBot.NET/wiki/Bot-Startup-Details#mode">Sysbot.NET Wiki</a>.</small><hr />
+
+     <p><span class="fw-bold">Now that we have all the setup instructions out of the way, it's time to get to work!</span></p>
   </div>
+</div>
+
+<hr /><div class="title" style="background-color: #0c0038;">
+  <h1 class="text-light text-center pt-3 pb-3">How To Use - RNG Script</h1>
+</div><hr />
+
+<p>This section intends to help you understand how to use Moarencounterbots and the Main RNG generator script. You do not need any prior programming knowledge in order to get started.</p>
+
+<p>As we can see, by pressing the <code span class="fw-bold">▶ button</code> we are able to see a various different IV/Nature spreads, these are the upcoming spreads based on the seed used in the script example (E1CEA3FF1E3A9B5CB709ACB78FF71808).</p>
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="findingcurrentseed">
+    <span class="fw-bold text-light">Finding your current seed:</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>To find your current Main RNG seed/state, you will need to use Moarencounterbots. Moarencounterbots has the ability to read and track your current Main RNG state.</p>
+
+    <h5><span class="fw-bold">Step-by-step (finding your current seed):</span></h5>
+    <ul>
+      <li>Open the Sysbot.NET window and head over to <code span class="fw-bold">Hub</code> tab, then open the <code span class="fw-bold">EncounterLA</code> dropdown menu.</li>
+      <li>Change <code span class="fw-bold">DisplaySeedMode</code> to Bit128.</li>
+      <li>It is also advised to change the <code span class="fw-bold">MonitorRefreshRate</code> to 0 while we are in this menu.</li>
+      <li>Head back to the <code span class="fw-bold">Bots</code> tab and select <code span class="fw-bold">EncBotCopySeedLA</code> in the dropdown menu, type in your Switch local IP address, then start the bot.</li>
+      <li>Open Legends: Arceus and press the Home button on your controller to freeze the RNG state.</li>
+      <li>Start the bot. You should now see your seed in the <code span class="fw-bold">Logs</code> tab, it will also automatically be copied to your clipboard!</li>
+    </ul>
+
+    <p><small>By default, <code span class="fw-bold">DisplaySeedMode</code> will be set to Bit32, which is not what the script expects so will be incorrect for this use case. By changing the <code span class="fw-bold">MonitorRefreshRate</code> to 0 milliseconds, we will be able to monitor our RNG state properly in real-time.</small></p>
+
+    <details>
+      <summary><u>Troubleshooting</u></summary>
+      <p>If you are running into issues with the bot connecting to your console, double check that your IP address is correct by opening the Homebrew menu on your console and pressing Y (you do not need to change the port, this should always be 6000).</p>
+      <p>If you continue to run into problems, consider visiting the <a href="https://github.com/kwsch/SysBot.NET/wiki/Troubleshooting-Connection-Errors">Troubleshooting page of the Sysbot.NET Wiki</a>.</p>
+    </details>
+  </div>
+</div><br>
+
+<span class="fw-bold">Figure 1 -</span> Sysbot.NET Setup<p></p>
+<img src="/cfw/la/general/images/main-rng/moarencounterbots-setup.gif" style="width:675px;height:400px;"><br /><br />
+
+<p>Now that we have our current seed, we need to input it into the RNG script and set a range of frames to search through.</p>
+
+<span class="fw-bold">Figure 2 -</span> Main RNG Script Configuration<p></p>
+<img src="/cfw/la/general/images/main-rng/script-config.gif" style="width:675px;height:400px;"><br /><br />
+
+<p>If you plan to search for specific IVs and Nature you will need to edit the filters, filters are located towards the bottom of the script. By default the filters are "commented out" with <code span class="fw-bold">//</code>, we can tell that a line is commented out because it will be written in <code style="color: #0a7a00;">greentext</code>.</p>
+
+<p>To activate a filter, we will need to remove the comment. You will also need to change the Nature and IV values if you wish to filter for specific Nature/IV combinations. We can safely ignore the gender filter since none of these legendaries have a gender.</p>
+
+<span class="fw-bold">Figure 3 -</span> IV/Nature filtering<p></p>
+<img src="/cfw/la/general/images/main-rng/iv-nature-filters.gif" style="width:675px;height:400px;"><br /><br />
+
+<p>If you do not like the results from your current seed, you can simply reset the game for a fresh start and run the CopySeed bot on Moarencounterbots again until you get a desirable result.</p>
+
+<p>Great! You should now have a general understanding of how to use the scripts and how to obtain your current seed. We can now move onto the process of RNG abusing each of the Pokemon.</p>
+  
+<p>Each of these Legendaries will have slightly differing methods to use in order to RNG abuse them. For that reason (and to avoid unnecessary confusion), each one will be covered on a seperate page.</p>
+
+<p>Jump to the page of the legendary you plan to RNG abuse to get started! These pages will cover the whole process from start to finish with a worked example to follow along with.</p>
+<hr />
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/legendary/main-rng/origin-legend">
+  <span class="fw-bold">For Origin Dialga/Palkia, click here!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a><br>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/legendary/main-rng/origin-legend">
+  <span class="fw-bold">For Base Form Dialga/Palkia, click here!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a><br>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/legendary/main-rng/origin-legend">
+  <span class="fw-bold">For Arceus, click here!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a><br>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/legendary/main-rng/origin-legend">
+  <span class="fw-bold">For Giratina, click here!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a><br>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/legendary/main-rng/origin-legend">
+  <span class="fw-bold">For Regigigas, click here!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a><br>
+
 </div><hr />
