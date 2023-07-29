@@ -28,13 +28,11 @@ permalink: /cfw/la/legendary/
 </div><hr />
 
 <p>This guide provides in-depth coverage of how to RNG abuse Legendary Pokemon in Legends: Arceus, using RNG generator scripts written by <a href="https://github.com/Lusamine">Lusamine</a>. It is possible to RNG manipulate Legendary Pokemon for desirable IVs & Natures, the method used can vary depending on if the encounter uses Main RNG or is tied to a Spawner.</p>
-  
-<p>It is only possible to RNG manipulate Pokemon that use Main RNG if you are using Custom Firmware or emulator, Pokemon tied to spawners can be RNG abused on both unmodified (Retail) and modified (CFW) consoles!</p>
 
-<p><span class="fw-bold" style="color: #b60606;">From here this guide assumes you are using a CFW Switch console running Atmosphere and machine running Windows OS. Emulator and alternative OS support will not be provided here.</span></p>
+<p><span class="fw-bold" style="color: #b60606;">From here it is assumed you are using a CFW Switch console running <a href="https://github.com/Atmosphere-NX/Atmosphere/releases">Atmosphere</a>, and have <a href="https://github.com/olliz0r/sys-botbase">sys-botbase</a> correctly installed. This guide is also focused towards users running Windows OS.</span></p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/la/legendary">
-  Looking for a retail focused guide? You are in the wrong place! Click here!
+  Looking for a retail focused guide? You are in the wrong place! <span class="fw-bold">Click here!</span>
   <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
   </svg>
@@ -42,30 +40,51 @@ permalink: /cfw/la/legendary/
 
 <div class="card border-dark">
   <div class="anchored card-header" style="background-color: #0c0038;" id="setupandinstallLA">
-    <span class="fw-bold text-light">Getting Started (Installation & Setup):</span>
+    <span class="fw-bold text-light">Setup Instructions:</span>
   </div>
   <div class="card-body card-bg">
     <h5><span class="fw-bold">PC Setup</span></h5>
     <ul>
       <li><a href="https://cdn.discordapp.com/attachments/691006074324648003/1131735782978228274/moarencounterbots.zip">Moarencounterbots</a> - Sysbot.NET fork by <a href="https://github.com/Lusamine/SysBot.NET/tree/moarencounterbots">Lusamine</a></li>
-      <li><a href="https://projectpokemon.org/home/files/file/1-pkhex/">PKHeX Stable Build</a> & <a href="https://github.com/architdate/PKHeX-Plugins/releases/">Matching Plugins</a></li>
+      <li><a href="https://github.com/architdate/PKHeX-Plugins/releases/">PKHeX & Plugins</a></li>
       <li><a href="https://github.com/zyro670/PokeViewer.NET/releases/">PokeViewer.NET</a></li>
+      <li><a href="https://www.linqpad.net/">LINQPad 7</a></li>
     </ul>
-    <small>If you are unsure how to install PKHeX plugins, <a href="https://github.com/architdate/PKHeX-Plugins/wiki/Installing-PKHeX-Plugins">click here for a setup tutorial</a>! These programs/applications will be used to view/dump Pokemon files while we are playing the game.</small><hr />
+
+      <small>
+      <ol>
+        <li>Extract the contents of <code span class="fw-bold">Moarencounterbots.zip</code> into an empty folder in a known location.</li>
+        <li>Grab <code span class="fw-bold">almsetup_stable.exe</code>, move it into an empty folder, then run the file to begin downloading.</li>
+        <li>Grab the latest release of <code span class="fw-bold">Pokeviewer.NET</code>, then extract the contents into a fresh, empty folder.</li>
+        <li>Download <code span class="fw-bold">LINQPad 7</code> and place it into an empty folder, this is used to run the RNG abuse scripts.</li>
+      </ol>
+      </small><hr />
 
     <h5><span class="fw-bold">Script Setup:</span></h5>
     <ul>
-      <li><a href="https://www.linqpad.net/">LINQPad 7</a> - For running Lusamine's RNG scripts</li>
       <li><a href="https://projectpokemon.org/home/files/file/2445-pkhex-development-build/">PKHeX Development Build</a> - For PKHeX.Core.dll</li>
-      <li><a href="https://cdn.discordapp.com/attachments/691006074324648003/1131748215805456525/LA-RNG-Z3.zip">MicrosoftZ3.dll & libz3.dll</a> - Other important .dll files</li>
+      <li><a href="https://cdn.discordapp.com/attachments/691006074324648003/1131748215805456525/LA-RNG-Z3.zip">MicrosoftZ3.dll & libz3.dll</a> - For other important .dll files</li>
     </ul>
-    <small>Download PKHeX Development Build and extract PKHeX.Core.dll to a known location, then do the same for MicrosoftZ3.dll and libz3.dll. These files are important for running the relevant scripts.</small><hr />
+    <small>
+      <ol>
+        <li>Create a folder called <code span class="fw-bold">dlls</code> in a known location on your PC.</li>
+        <li>Download PKHeX Development Build, then extract <code span class="fw-bold">PKHeX.Core.dll</code> into the folder.</li>
+        <li>Download <code span class="fw-bold">MicrosoftZ3.dll</code> & <code span class="fw-bold">libz3.dll</code> then extract those into the same folder.</li>
+        <li>You should now have all 3 of the relevant .dll files inside the same folder for easy access later on.</li>
+      </ol>
+    </small><hr />
 
-    <h5><span class="fw-bold">Switch Setup</span></h5>
+    <h5><span class="fw-bold">Switch Setup:</span></h5>
     <ul>
-      <li><a href="https://github.com/olliz0r/sys-botbase/releases/">sys-botbase</a> - By Olliz0r</li>
+      <li><a href="https://github.com/olliz0r/sys-botbase">sys-botbase</a></li>
     </ul>
-    <small>Download the latest release of sys-botbase and drag the <code span class="fw-bold">atmosphere</code> folder to the root of your Switch SD card, then reboot the console into SysCFW.</small>
+    <small>
+      <ol>
+        <li>Download the latest release of sys-botbase and extract the <code span class="fw-bold">atmosphere</code> folder to a known location.</li>
+        <li>Place the <code span class="fw-bold">atmosphere</code> folder onto the root of your Switch SD card, then reboot the console.</li>
+        <li>You should now have sys-botbase properly installed! This is necessary for your switch to connect to your computer remotely.</li>
+      </ol>
+    </small>
   </div>
 </div><hr />
 
@@ -73,9 +92,7 @@ permalink: /cfw/la/legendary/
      <h1 class="text-light text-center pt-3 pb-3">Required Reading</h1>
    </div><hr />
 
-   <p>From this point the guide assumes your setup is correct, <u>if you have not yet completed the above setup instructions, go back and finish this first</u>!</p>
-
-   <p>It is important to understand the type of encounter you wish to RNG abuse, the card below will outline which Legendary Pokemon are tied to each type of encounter.</p>
+   <p>There are 2 different ways that the game uses to generate Legendary Pokemon, these are Main RNG seeding, and Spawner RNG seeding. It is important to understand the difference between these two generation methods, and understand which encounters fall into each category before getting started.</p>
 
     <div class="card border-dark">
       <div class="anchored card-header" style="background-color: #0c0038;" id="MainRNGVSSpawners">
@@ -83,7 +100,7 @@ permalink: /cfw/la/legendary/
       </div>
       <div class="card-body card-bg">
         <h5><span class="fw-bold">What is Main RNG?</span></h5>
-        <p>Main RNG is what some encounters use to generate a Pokemon, this is a constantly ticking hidden state and so hitting the desired result will be dependent on correct/precise timing.</p>
+        <p>Main RNG is a constantly ticking hidden state and so hitting the desired result will be dependent on correct/precise timing. Moarencounterbots can be used to accurately read and track your current Main RNG seeds in real time.</p>
     
         <span class="fw-bold">The following legendary encounters are tied to Main RNG:</span>
         <ul>
@@ -92,10 +109,10 @@ permalink: /cfw/la/legendary/
           <li>Giratina</li>
           <li>Regigigas</li>
           <li>Arceus</li>
-        </ul>
+        </ul><hr />
     
         <h5><span class="fw-bold">What is a Spawner?</span></h5>
-        <p>Spawners hold a specific Pokemon that is visible in the overworld, when a Pokemon on a spawner is knocked out the spawner seed will advance by 1 frame. This means that hitting a desired result will be based on KOing the Pokemon on the spawner and certain amount of times in a row.</p>
+        <p>Spawners hold a specific Pokemon that is visible in the overworld, when a Pokemon is knocked out the spawner seed will advance by 1 frame. This means that hitting a desired result will be based on KOing the Pokemon on the spawner a certain amount of times in a row until you reach your target frame.</p>
     
         <span class="fw-bold">The following legendary encounters are tied to Spawners:</span>
         <ul>
@@ -107,8 +124,6 @@ permalink: /cfw/la/legendary/
           <li>Shaymin</li>
           <li>Darkrai</li>
         </ul>
-
-        <p>Click the button below that applies to the type of RNG abuse you need to learn more about in order to get started!</p>
   </div>
 </div><br>
 
