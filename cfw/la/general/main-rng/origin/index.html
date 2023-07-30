@@ -167,24 +167,115 @@ permalink: /cfw/la/legendary/main-rng/origin-legend
 
 <p><span class="fw-bold">We hit our target frame and have secured a Palkia with 6 perfect IVs! That's all there is to it!</span></p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 <hr /><div class="title" style="background-color: #0c0038;" id="deathmethod">
-  <h1 class="text-light text-center pt-3 pb-3">Death Method (WIP)</h1>
+  <h1 class="text-light text-center pt-3 pb-3">Death Method</h1>
 </div><hr />
 
 <p>If you are reading this text you have decided to use the Death Method, here you can find a worked example of how to RNG abuse Origin Dialga/Palkia using this method.</p>
 
-<span class="fw-bold">Figure 1 -</span> Calculating delay<p></p>
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="delaycalcdeathmethod">
+    <span class="fw-bold text-light">Getting Started:</span>
+  </div>
+  <div class="card-body card-bg">
+
+    <p>You will need to calculate the rough delay for this encounter. The term "delay" is used to describe how long it take for the Pokemon to generate after the final A Press. The amount of frames that advance when re-starting the boss battle is variable, so it is important to take a few practice attempts to figure out a delay that is consistent for you.</p>
+
+    <p>It is recommended to <u>disable Autosave</u> and have <u>a full team of 6 Pokemon</u> so that our target Pokemon is sent to boxes. Sending the Pokemon to boxes will make it easier to view using Livehex (viewable when the credits roll begins instead of after the credits).</p><hr />
+
+    <h5><span class="fw-bold">Calculating Delay (Step-By-Step)</span></h5>
+     <ul>
+       <li>Enter the boss battle, then whittle the HP of the boss down to a single bar.</li>
+       <li>Intentionally take damage and lose the fight, go through the dialog until you reach reach the screen of the final A press. (<a href="/cfw/la/general/images/main-rng/origin/final-a-press-death-method.jpg">This screen</a>!)</li>
+       <li>Enter the Switch home menu to freeze the RNG state, then check your current seed by running <code span class="fw-bold">EncBotCopySeedLA</code> in Moarencounterbots.</li>
+       <li>Paste in your current seed into the RNG script, then search without filters. This will provide the starting frame.</li>
+       <li>Press the <code span class="fw-bold">Home button (⌂)</code> again to unpause the game and quickly press the <code span class="fw-bold">A button</code>. This will put you back into battle with a freshly generated boss.</li>
+       <li>Defeat the boss and inspect it using PKHeX/Livehex to find the frame it was generated on. That will be your delay for this attempt.</li>
+    </ul>
+  </div>
+</div><br>
+
+<span class="fw-bold">Figure 1 -</span> Calculating Delay (Death Method)<p></p>
 <img src="/cfw/la/general/images/main-rng/origin/delay-calc-origin-death-method.png" style="width:675px;height:400px;"><br /><br />
+
+<p>After following the delay calculation steps, after searching for the PID of the Palkia we hit and matching the IVs/Nature, we can see that it was generated on frame 4. This means our delay for this attempt is 4. After 5 attempts we have the following delay values:</p>
+
+<table class="table table-striped" style="width:100%">
+  <thead class="table text-white" style="background-color: #0c0038;">
+      <th scope="col">Attempt</th>
+      <th scope="col">Delay Value</th>
+   </tr>
+       </thead>
+       <tbody>
+        <tr>
+          <td><span class="fw-bold">Attempt 1</span></td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td><span class="fw-bold">Attempt 2</span></td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td><span class="fw-bold">Attempt 3</span></td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td><span class="fw-bold">Attempt 4</span></td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td><span class="fw-bold">Attempt 5</span></td>
+          <td>3</td>
+        </tr>
+
+     </tbody>
+</table>
+
+<p>This means a safe delay value to target in future attempts is 2-4. The delay values shown here are based on how quickly I was able to skip the cutscene and enter the battle with Palkia, your values may vary if you skip the cutscene at a different speed, or do not skip the cutscene at all.</p>
+
+<p><span class="fw-bold">Now that we have a rough delay, it's time to get to work on finding a suitable seed and target frame!</span></p>
+
+<span class="fw-bold">Figure 2 -</span> Setting Filters<p></p>
+<img src="/cfw/la/general/images/main-rng/origin/filters-origin-cutscene-method.gif" style="width:675px;height:400px;"><br /><br />
+
+<p>In this example the filters are set to search for any Palkia with 6 perfect IVs (31/31/31/31/31/31), you can be more specific with the filters if you wish, such as filtering for a specific nature, or optimal 0 IV values such as 0 Atk.</p>
+
+<span class="fw-bold">Figure 3 -</span> Target Frame Found<p></p>
+<img src="/cfw/la/general/images/main-rng/origin/target-frame-found-origin-death-method.gif" style="width:675px;height:400px;"><br /><br />
+
+<p>Great! We found a 6IV NATUREHERE Palkia in xyz advances in a cluster of x, a cluster is a group of frames that produce the same end result, the larger the cluster the more chances you have of hitting the correct target frame.</p>
+
+<p>We now need to advance to close to our target frame, monitor your RNG state by running <code span class="fw-bold">EncBotRNGMonitorLA</code> in Moarencounterbots, this will track the amount of advancements that have occured in real time.</p>
+  
+<span class="fw-bold">Figure 4 -</span> RNG State Monitoring Using EncBotRNGMonitorLA<p></p>
+<img src="/cfw/la/general/images/main-rng/origin/rng-state-monitoring.gif" style="width:675px;height:400px;"><br /><br />
+
+<p>The RNG state at the Spear Pillar advances slowly. By moving to a more populated area you can advance the RNG state at a much quicker rate, for example in an area heavily populated with wild Pokemon, or next to a body of water.</p>
+
+<p><span class="fw-bold">It can take between 1000-5,000 advancements to whittle it down to a single bar of HP depending on your skill level. Leave yourself enough time to head back to Spear Pillar and whittle down the boss' HP bar to ensure you do not overshoot the target.</span></p>
+
+<span class="fw-bold">Figure 5 -</span> Advancing To The Target<p></p>
+<img src="/cfw/la/general/images/main-rng/origin/advancing-to-target-death-method.gif" style="width:675px;height:400px;"><br /><br />
+
+<p>We have relocated to Spear Pillar and are ~5000 frames away from the target frame, we are now ready to engage in a battle against the boss.</p>
+
+<span class="fw-bold">Figure 6 -</span> Getting Into Position<p></p>
+<img src="/cfw/la/general/images/main-rng/origin/getting-into-position-death-method.jpg" style="width:675px;height:400px;"><br /><br />
+
+<p>The boss is down to a single bar of HP and we are close to the target frame, it's time to let the boss win by taking damage until the trainer blacks out.</p>
+
+<p>Get to <a href="/cfw/la/general/images/main-rng/origin/final-a-press-death-method.jpg">the screen of the final A press</a>, and let <code span class="fw-bold">EncBotRNGMonitorLA</code> run until the Logs tab displays the correct target frame, then press the A button to regenerate the boss as quickly as possible for the best chance of success.</p>
+
+<span class="fw-bold">Figure 7 -</span> Hitting The Target Frame<p></p>
+<img src="/cfw/la/general/images/main-rng/origin/hitting-target-frame-death-method.png" style="width:675px;height:400px;"><br /><br />
+
+<p>Subtract the delay from the target frame to calculate the frame of the final A press, earlier we calculated a rough delay of 3, and the target frame after re-checking the current seed is xyz, this means the frame we should aim to press the A button on is zyx.</p>
+
+<p><code span class="fw-bold">1234 (target frame) - 3 (rough delay) = 1234 (frame to press A)</code></p>
+
+<span class="fw-bold">Figure 8 -</span> Result Found!<p></p>
+<img src="/cfw/la/general/images/main-rng/origin/result-found-origin-death-method.png" style="width:675px;height:400px;"><br /><br />
+
+<p>After defeating the boss we can inspect the Pokemon that generated afterwards using PKHeX/Livehex to see if we hit the correct frame!</p>
+
+<p><span class="fw-bold">We hit our target frame and have secured a Palkia with 6 perfect IVs! That's all there is to it!</span></p>
