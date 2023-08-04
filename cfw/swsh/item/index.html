@@ -1,76 +1,77 @@
 ---
 layout: default
-title: Item RNG
+title: Item RNG (CFW)
 permalink: /cfw/swsh/item/
 ---
 
-    <style>
-      table,
-      th,
-      td {
-        border: 1px solid #302e2e;
-      }
+<style>
+  mark {
+    background-color: #FFD700;
+    color: black;
+  }
+
+  .card-bg {
+    background-color: #d1d1d1;
+    border-bottom-right-radius: 0.20rem !important;
+    border-bottom-left-radius: 0.20rem !important;
+  }
+
+  table,
+  th,
+  td {
+    border: 1px solid black;
+  }
 </style>
 
-    <div class="title" style="background-color: #0c0038;">
-      <h1 class="text-light text-center pt-3 pb-3">Item RNG Guide (CFW)</h1>
-    </div>
-      <hr />
+<div class="title" style="background-color: #0c0038;">
+  <h1 class="text-light text-center pt-3 pb-3">SwSh Item RNG Guide (CFW)</h1>
+</div><hr />
 
-This portion of the guide will cover the process of RNG abusing the Cram-o-matic and the PC lottery function in Sword/Shield using the SWSH Overworld RNG Generator by <a href="https://github.com/LegoFigure11">LegoFigure11</a>.
-Item RNG abuse is best utilized to help players obtain rare/valuable items such as rare Pokeballs!<br /> <br />
+<p>This guide will cover the process of RNG abusing the Cram-o-matic and the PC lottery function in Sword/Shield using the SWSH Overworld RNG Generator by <a href="https://github.com/LegoFigure11">LegoFigure11</a>. Item RNG abuse is best utilized to help players obtain rare/valuable items such as rare Pokeballs!</p>
 
-<span class="fw-bold">This guide assumes you are using a CFW Switch console running Atmosphere.</span><br /> <br />
+<p><span class="fw-bold" style="color: #b60606;">From here this guide assumes you are using a CFW Switch console running Atmosphere.</span></p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/item">
-  Click here if you are using a unmodified Switch console!
+  Click here if you are using a <span class="fw-bold">unmodified</span> Switch console!
   <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
   </svg>
 </a>
 <br />
 
-<h3><span class="fw-bold">Getting Started:</span></h3>
-<u>You will need:</u>
-<ul>
-  <li><a href="https://github.com/LegoFigure11/swsh-overworld-rng-gui/releases">SWSH Overworld RNG Generator</a> - Latest release</li>
-  <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/6.0">.NET 6.0</a> - Generator dependency</li>
-  <li><a href="https://github.com/Koi-3088/sys-usb-botbase/releases">sys-usb-botbase</a> - Latest release</li>
-  <li><a href="https://github.com/spacemeowx2/ldn_mitm/releases/">ldn-mitm</a> - Latest release</li>
-</ul>
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="requirementsSWSHitem">
+    <span class="fw-bold text-light">Requirements:</span>
+  </div>
+  <div class="card-body card-bg">
+    <h5><span class="fw-bold">Download Links:</span></h5>
+    <ul>
+      <li><a href="https://github.com/LegoFigure11/swsh-overworld-rng-gui/releases">SWSH Overworld RNG Generator</a> - Latest release</li>
+      <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/7.0">.NET 7.0</a> - Generator dependency</li>
+      <li><a href="https://github.com/Koi-3088/sys-usb-botbase/releases">sys-usb-botbase</a> - Latest release</li>
+      <li><a href="https://github.com/spacemeowx2/ldn_mitm/releases/">ldn-mitm</a> - Latest release</li>
+    </ul>
 
-<details>
-<summary><u>Installation Instructions (Click to expand!)</u></summary>
-<ol>
-  <li>Download and extract all the contents from the <code>SWSH_OWRNG_Generator_GUI.zip</code> into an empty folder.</li>
-  <li>Download and extract all the contents from the <code>sys-usb-botbase</code> & <code>ldn-mitm</code> downloads into an empty folder.</a></li>
-  <li>Place the <code>atmosphere</code> folder(s) from these downloads onto the root of your Switch SD card.</li>
-  <li>Check the <code>/atmosphere/contents</code> directory of your SD card for two folders named <code>430000000000000B</code> & <code>4200000000000010</code>.</li>
-  <li>Reboot your Switch console and launch CFW.</li>
-</ol>
-</details><br />
-
-<u>In-game setup:</u>
-<ul>
-  <li>Have the Rotom PC lottery function & Cram-o-matic available for use.</li>
-  <li>If you plan to RNG abuse the Cram-o-matic, have at least 4 apricorns to use in the machine.</li>
-  <li>Stand next to the machine you want to work on.</li>
-  <li>Pause the game using "X", click <code>Connect</code> on the main window of the generator.</li>
-</ul>
-
-<hr />
-<div class="title" style="background-color: #0c0038;">
-  <h1 class="text-light text-center pt-3 pb-3">Important Information</h1>
+    <h5><span class="fw-bold">Installation Instructions:</span></h5>
+    <ol>
+      <li>Download and extract all the contents from the <code class="fw-bold">SWSH_OWRNG_Generator_GUI.zip</code> into an empty folder.</li>
+      <li>Download and extract all the contents from the <code class="fw-bold">sys-usb-botbase</code> & <code class="fw-bold">ldn-mitm</code> downloads into an empty folder.</a></li>
+      <li>Place the <code class="fw-bold">atmosphere</code> folders from these downloads onto the root of your Switch SD card.</li>
+      <li>Check the <code class="fw-bold">/atmosphere/contents</code> directory of your SD card for two folders named <code class="fw-bold">430000000000000B</code> & <code class="fw-bold">4200000000000010</code>.</li>
+      <li>After confirming those folders are present, reboot your Switch console and launch SysCFW.</li>
+    </ol>
+ </div>
 </div>
-<hr />
 
-<h3><span class="fw-bold">Advancing the RNG state:</span></h3>
+<hr /><div class="title" style="background-color: #0c0038;">
+  <h1 class="text-light text-center pt-3 pb-3">Important Information</h1>
+</div><hr />
 
-The RNG state will advance naturally depending on your location, and the amount of NPCs that are present. Since the Cram-o-matic and Rotom PC are located in-doors, we do not need to worry about other variables that would advance the RNG state, like weather.<br /><br />
+<p>SWSH_OWRNG_Generator_GUI can be used to track the current RNG state, and the amount of advancements that have passed since connecting to the program. Frames will advance naturally depending on your location and the amount of NPCs that are present. Since both machines are located in-doors, these are the only variables that we need to consider.</p>
+  
+<p>Different in-game actions can also be used to advance the RNG state with varying influence, the most useful actions can be found in the table directly below.</p>
 
-Multiple in-game actions can also be used to advance the RNG state with varying influence, the most useful actions can be found in the table directly below.<br /><br />
-
-<table class="table table-striped" style="width:100%" id="AdvancementTable">
+<table class="table table-striped" style="width:100%" id="advancementtable">
   <thead class="table text-white" style="background-color: #0c0038;">
       <th scope="col">Type of action</th>
       <th scope="col">Description of action</th>
@@ -85,7 +86,7 @@ Multiple in-game actions can also be used to advance the RNG state with varying 
   </tr>
   <tr>
      <td><span class="fw-bold">Menu Close</span></td>
-     <td>Opening and closing the pause menu using the <code>X</code> button.<br /><br /></td>
+     <td>Opening and closing the pause menu using the <code class="fw-bold">X</code> button.<br /><br /></td>
      <td>Varying depending on location and environment, predictable (explained below).</td>     
  </tr>
   <tr>
@@ -95,7 +96,7 @@ Multiple in-game actions can also be used to advance the RNG state with varying 
 </tr>
  <tr>
      <td><span class="fw-bold">Animations/Motions</span></td>
-     <td>Having your Pokémon animate on the summary screen or party menu by clicking in the <code>L3</code> button, or by using the <code>Skip</code> feature.<br /><br /></td>
+     <td>Having your Pokémon animate on the summary screen or party menu by clicking in the <code class="fw-bold">L3</code> button, or by using the <code class="fw-bold">Skip</code> feature.<br /><br /></td>
      <td>+1 advancement <u>per animation</u> on the individual Pokémon summary screen.<br /><br />
      +1 advancement <u>per button input</u> on the party summary screen.</td>     
 </tr>
@@ -103,260 +104,223 @@ Multiple in-game actions can also be used to advance the RNG state with varying 
 </table>
 <br />
 
-<div class="accordion" id="MenuClosePredictionCFW">
-  <div class="card">
-    <div class="card-header text-white" style="background-color: #0c0038;">
-    <div class="card-header" id="MenuClosePredictionCFW">
-      <h5 class="mb-0">
-        <span class="fw-bold">Menu Close Prediction Overview</span>
-      </h5>
-    </div>
-    <div class="card-body" style="background-color: #ffffff36;">
-     The <code>Menu Close Advances Viewer</code> can be used to predict the amount of advancements that will pass from closing the pause menu. Closing the pause menu also has an added effect of freezing the RNG state in the area for a a few seconds, this makes it a great option for closing in on any target frames as it provides a lot more consistency in doing so.<br /><br />
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="menuclosepredictioncfw">
+    <span class="fw-bold text-light">Menu Close Advancement Prediction:</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>The <code class="fw-bold">Menu Close Advances Viewer</code> window can be used to predict the amount of advancements that will pass from closing the pause menu. Closing the pause menu also has an added effect of freezing the RNG state in the area for a a few seconds, this makes it a great option for closing in on any target frames as it provides a lot more consistency in doing so.</p>
 
-     <span class="fw-bold">For Loto-ID and the Cram-o-Matic he NPC Counts are likely as follows:</span><br />
-      Wedgehurst Center = 5<br />
-      Dojo (Completed IoA Story) = 21<br /><br />
+    <p><span class="fw-bold">For Loto-ID and the Cram-o-Matic the NPC Counts are likely as follows:</span></p>
+    <ul>
+      <li>Wedgehurst Pokemon Center = 5 NPCs</li>
+      <li>Isle of Armor Dojo = 21 NPCs with completed story</li>
+    </ul>
 
-     By knowing how many advancements will occur from closing the pause menu, and having a window of silence to interact with the machine, we can near guarantee to hit any potential target frames.<br /><br />
+    <p>By knowing how many advancements will occur from closing the pause menu, and having a window of silence to interact with the machine, we can near guarantee to hit any potential target frames.</p>
 
-     When using the <code>Consider menu close</code> feature, the output results are of the frame that you need to close the menu on, <u>NOT</u> the frame that you need to start the interaction on.<br /><br />
+    <p>When using the <code class="fw-bold">Consider menu close</code> feature of the <code class="fw-bold">Menu Close Advances Viewer</code>, the result output will be for the frame you should close the pause menu on, not the frame of which you should interact with the machine!</p>
 
     <details>
-      <summary><span class="fw-bold">How to calculate the number of NPCs in an area:</span></summary> <br />
+      <summary><span class="fw-bold">Manually Calculating NPC Count:</span></summary>
       <ol>
-        <li>Press the <code>X</code> button on your controller to open the pause menu, then disconnect and reconnect to the main window. This will ensure the number inside the <code>Curr. Adv</code> remains at 0.</li><br />
-        <li>Click the <code>Menu Close Advances Viewer</code> button at the top of the main window to open a smaller window. Your seeds should be visible in the correct fields.</li><br />
-        <li>Close the pause menu then quickly re-open it, take note of the number of advancements that have occured from doing so.</li><br />
-        <li>Enter your number of advancements into the <code>Init Adv.</code> field. If the above steps were closely followed, this number should be 0.</li><br />    
-        <li>Type 0 into the <code>NPCs</code> field and search. Gradually increase this number by 1 until you find a match. Repeat this step a few times to ensure the advancement predictions are accurate.</li><br />
+        <li>Press the <code class="fw-bold">X</code> button on your controller to open the pause menu, then disconnect and reconnect to the main window. This will ensure the number inside the <code class="fw-bold">Curr. Adv</code> remains at 0.</li>
+        <li>Click the <code class="fw-bold">Menu Close Advances Viewer</code> button at the top of the main window to open a smaller window. Your seeds should be visible in the correct fields.</li>
+        <li>Close the pause menu then quickly re-open it, take note of the number of advancements that have occured from doing so.</li>
+        <li>Enter your number of advancements into the <code class="fw-bold">Init Adv.</code> field. If the above steps were closely followed, this number should be 0.</li>
+        <li>Type 0 into the <code class="fw-bold">NPCs</code> field and search. Gradually increase this number by 1 until you find a match. Repeat this step a few times to ensure the advancement predictions are accurate.</li>
       </ol>
     </details>
-      </div>
-    </div>
-  </div>
-<br />
+ </div>
+</div><br />
 
 <span class="fw-bold">With all the required reading out of the way, let's get into it!</span>
 
-<hr />
-<div class="title" style="background-color: #0c0038;">
+
+<hr /><div class="title" style="background-color: #0c0038;">
   <h1 class="text-light text-center pt-3 pb-3">Cram-o-matic RNG abuse</h1>
-</div>
-<hr />
+</div><hr />
 
-The goal is to interact with the Cram-o-matic on the calculated target frame given to us by the <code>Cram-o-matic</code> window of the generator. We will be using the advancement methods listed in the table above to hit the target frame.<br /><br />
+<p>The goal is to interact with the Cram-o-matic on the calculated target frame given to us by the <code class="fw-bold">Cram-o-matic</code> window of the generator. We will be using the advancement methods listed in the table above to hit the target frame.</p>
 
-In this example we will be aiming for a 5 Level Balls. You can be more specific with the filters if you wish, such as filtering for a specific rare items.<br /><br />
+<p>In this example we will be aiming for a 5 Level Balls. You can be more specific with the filters if you wish, such as filtering for a specific rare items.</p>
 
 <span class="fw-bold">Figure 1 -</span> Tool setup<br />
 <img src="./images/cram-o-matic/figure-1-tool-setup-cram.gif" style="width:675px;height:400px;"><br /><br />
 
-<span class="fw-bold">Awesome, everything looks good!</span> We can see our current seeds on the <code>Cram-o-matic</code> tab and have our filters set properly. Time to stand near the Cram-o-matic!<br /><br />
+<p><span class="fw-bold">Awesome, everything looks good!</span> We can see our current seeds on the <code class="fw-bold">Cram-o-matic</code> tab and have our filters set properly. Time to stand near the Cram-o-matic!</p>
 
 <span class="fw-bold">Figure 2 -</span> Game setup<br />
 <img src="./images/cram-o-matic/figure-2-game-setup-cram.jpg" style="width:675px;height:400px;"><br /><br />
 
-<div class="accordion" id="GameSetupCram">
-  <div class="card">
-    <div class="card-header text-white" style="background-color: #0c0038;">
-    <div class="card-header" id="GameSetupCram">
-      <h5 class="mb-0">
-        <span class="fw-bold">Game Setup</span>
-      </h5>
-    </div>
-    <div class="card-body" style="background-color: #ffffff36;">
-      We are now stood directly next to the Cram-o-matic and have the console connected to the generator.<br /><br />
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="setupcramcfw">
+    <span class="fw-bold text-light">Setup (Cram-o-Matic):</span>
+  </div>
+  <div class="card-body card-bg">
+    <ol>
+      <li>Progress to the point of having access to the Cram-o-Matic</li>
+      <li>Have at least 4 apricorns in your inventory to throw into the machine.</li>
+      <li>Stand near to the Cram-o-Matic, press the <code class="fw-bold">X</code> button to pause the game.</li>
+      <li>Connect to SWSH_OWRNG_Generator_GUI at this point.</li>
+      <li>Open the <code class="fw-bold">Cram-o-Matic</code> tab, then set the filters & NPC count.</li>
+      <li>Search for a desirable target frame.</li>
+    </ol>
 
-      Once the player interacts with the Cram-o-matic, the RNG state will freeze due to being on a menu screen. This is why it is only important to interact with the Cram-o-matic on the correct frame.<br /><br />
-
-      Once the <code>Cram-o-matic</code> tab is filled in correctly, you can begin looking for target frames by clicking the search button.<br /><br />
-
-      <span class="fw-bold">If your results are not desirable, repeat the following:</span><br /><br />
+    <p><span class="fw-bold">If your results are not desirable, repeat the following:</p>
       <ol>
         <li>Disconnect your Switch from the tool.</li>
         <li>Restart your game and enter the overworld.</li>
         <li>Pause the game, then reconnect your Switch to the tool.</li>
         <li>Search again, do this until you have desirable results.</li>
       </ol>
-      </div>
-    </div>
-  </div>
-<br />
+ </div>
+</div><br />
 
 <span class="fw-bold">Figure 3 -</span> Target found!<br />
 <img src="./images/cram-o-matic/figure-3-target-found-cram.png" style="width:675px;height:400px;"><br /><br />
 
-<span class="fw-bold">We found a target frame!</span> 5 Level Balls on advance 795.
+<p><span class="fw-bold">We found a target frame!</span> 5 Level Balls on advance 795.</p>
 
-<hr />
-<div class="title" style="background-color: #0c0038;">
+<hr /><div class="title" style="background-color: #0c0038;">
   <h1 class="text-light text-center pt-3 pb-3">Advancing Towards The Target</h1>
 </div><hr />
 
-The generator displays the target on frame 795, we do not need to account for any delay. This means we will aim to interact with the Cram-o-matic on frame 795.<br /><br />
+<p>The Cram-o-Matic window of SWSH_OWRNG_Generator_GUI displays the target on frame 795, we do not need to account for any delay. This means we will aim to interact with the Cram-o-matic on frame 795.</p>
 
-There are 21 NPCs in the area, we need this information to accurately predict the amount of advancements that will occur from closing the pause menu.<br /><br />
+<p>Earlier we calculated that there are 21 NPCs in the area, we need this information to accurately predict the amount of advancements that will occur from closing the pause menu.</p>
 
-<div class="accordion" id="AdvancingToTargetCram">
-  <div class="card">
-    <div class="card-header text-white" style="background-color: #0c0038;">
-    <div class="card-header" id="AdvancingToTargetCram">
-      <h5 class="mb-0">
-        <span class="fw-bold">Hitting your target frame</span>
-      </h5>
-    </div>
-    <div class="card-body" style="background-color: #ffffff36;">
-
-      <span class="fw-bold">Step-by-step tutorial:</span><br /><br />
-      <ol>
-        <li>Advance towards your target frame using any of the methods listed inside the <a href="#AdvancementTable">table above</a>.</li><br />
-      
-        <li>Once you are within a few hundred frames of your target, stand within distance of the Cram-o-matic so that you can immediately interact with it in a single <code>A</code> press.</li><br />
-      
-        <li>Pause the game using the <code>X</code> button, then disconnect and reconnect to the main window, then search for your target again in the <code>Cram-o-matic</code> window.</li><br />
-
-        <div class="card-body" class="text-light" style="background-color: #0c0038;">
-          <span class="fw-bold">Tip:</span> From this point it's recommended to only advance using <code>menu close & animations</code> as they only advance in small increments, making them easy to keep track of.
-       </div><br />
-
-        <li>Open the <code>Cram-o-matic</code> window, enter your target frame into the <code>+</code> field and the amount of NPCs into the <code>NPCs</code> field, then click search.</li><br />
-        
-        <div class="card-body" class="text-light" style="background-color: #0c0038;">
-          <span class="fw-bold">Tip:</span> If you are unable to find your target frame in the search results, this means the target cannot be hit based on your seed. Use animations to advance the RNG state slightly, then close and re-open the <code>Cram-o-matic</code> window and search for your target frame again. Repeat this process until your target frame is visible.
-       </div><br />
-
-        <li>Open and close the pause menu until closing the menu a single time lands onto your target frame, according to the <code>Loto-ID</code> window prediction. Pay attention to the <code>Curr. Adv</code> field of the main window to avoid overshooting your target.</li><br />
-      
-        <li>Close the pause menu and quickly interact with the Cram-o-matic, if you believe you hit your target frame, feed it the appropriate apricorns to claim your reward.</li><br />
-      
-      <div class="card-body" class="text-light" style="background-color: #0c0038;">
-       You can be creative with the methods you use to advance the RNG state. Menu close prediction is not necessary but will make for a much easier time hitting target frames and is extremely helpful in areas of the game where the RNG advances at a quick pace.
-     </div>
-       </ol>
-      </div>
-    </div>
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="advancingtotargetcramcfw">
+    <span class="fw-bold text-light">Hitting Your Target Frame:</span>
   </div>
-<br />
+  <div class="card-body card-bg">
+
+    <ul>
+      <li>Advance towards your target frame using any method listed inside the <a href="#advancementtable">table above</a></li><p></p>
+      <li>Once you are within a few hundred frames of your target, stand within distance of the Cram-o-matic so that you can immediately interact with it in a single <code class="fw-bold">A</code> press.</li><p></p>
+      <li>Pause the game using the <code class="fw-bold">X</code> button, then disconnect and reconnect to the main window, then search for your target again in the <code class="fw-bold">Cram-o-matic</code> window.</li>
+    </ul>
+
+      <div class="alert" style="background-color: #c0bdbd;">
+        <span class="fw-bold">Tip -</span> From this point it's recommended to only use <code class="fw-bold">menu close</code> & <code class="fw-bold">amimation</code> advancements as they advance in small increments, making them easy to keep track of.
+      </div>
+
+      <ul>
+        <li>Open the <code class="fw-bold">Cram-o-Matic</code> window, enter your target frame into the <code class="fw-bold">+</code> field and the amount of NPCs into the <code class="fw-bold">NPCs</code> field, then click search.</li>
+      </ul>
+
+      <div class="alert" style="background-color: #c0bdbd;">
+        <span class="fw-bold">Tip -</span> If you are unable to find your target frame in the search results, this means the target cannot be hit based on your seed. Use animations to advance the RNG state slightly, then close and re-open the <code class="fw-bold">Cram-o-matic</code> window and search for your target frame again. Repeat this process until your target frame is visible.
+      </div>
+
+      <ul>
+        <li>Open and close the pause menu until closing the menu a single time lands onto your target frame, according to the <code class="fw-bold">Cram-o-Matic</code> window prediction. Pay attention to the <code class="fw-bold">Curr. Adv</code> field of the main window to avoid overshooting your target.</li><p></p>
+        <li>Close the pause menu and quickly interact with the Cram-o-matic, if you believe you hit your target frame, feed it the appropriate apricorns to claim your reward.</li>
+      </ul>
+
+      <p>You can be creative with the methods you use to advance the RNG state. Menu close prediction is not necessary but will make for a much easier time hitting target frames and is extremely helpful in areas of the game where the RNG advances at a quick pace.</p>
+ </div>
+</div><br />
 
 <span class="fw-bold">Figure 4/5 -</span> Result Found!<br />
 <img src="./images/cram-o-matic/figure-4-result-found-gui-cram.png" style="width:675px;height:400px;"><br /><br />
 <img src="./images/cram-o-matic/igure-5-result-found-switch-cram.jpg" style="width:675px;height:400px;"><br /><br />
 
-The result matches the output of the generator, mission accomplished! We got 5 Level Balls from the Scam-o... er... Cram-o-matic on our first attempt!<br /><br />
+<p>The result matches the output of the generator, mission accomplished! We got 5 Level Balls from the Scam-o... er... Cram-o-matic on our first attempt!</p>
 
-<span class="fw-bold">That's all there is to RNG abusing the Cram-o-matic!</span><br />
+<p><span class="fw-bold">That's all there is to RNG abusing the Cram-o-matic!</span></p>
 
-<hr />
-<div class="title" style="background-color: #0c0038;">
-  <h1 class="text-light text-center pt-3 pb-3">Rotom Loto-ID RNG Abuse</h1>
+<hr /><div class="title" style="background-color: #0c0038;">
+  <h1 class="text-light text-center pt-3 pb-3">Rotom Lottery RNG Abuse</h1>
 </div><hr />
 
-The goal is to interact with the the PC in any Pokecenter on the calculated target frame given to us by the <code>Loto-ID</code> window of the generator. We will be using the advancement methods listed in the table above to hit the target frame. In this example we will be aiming for a Master Ball.<br /><br />
+<p>The goal is to interact with the Rotom PC in the Pokecenter on the calculated target frame given to us by the <code class="fw-bold">Loto-ID</code> window of the generator. We will be using the advancement methods listed in the table above to hit the target frame and the target will be to obtain a Master Ball.</p>
 
-You can search for multiple TIDs by opening <code>Loto-ID.txt</code> in a text editor and inputting a list of TIDs to read from, this file is found in the same directory as the generator.<br /><br />
+<p>You can search for multiple TIDs by opening <code class="fw-bold">Loto-ID.txt</code> in a text editor and inputting a list of TIDs to read from, this is helpful if you have Pokemon with varying TIDs in storage.<code class="fw-bold">Loto-ID.txt</code> is found in the same directory as SWSH_OWRNG_Generator_GUI.</p>
 
 <span class="fw-bold">Figure 1 -</span> Tool setup<br />
 <img src="./images/loto-id/figure-1-tool-setup-loto.gif" style="width:675px;height:400px;"><br /><br />
 
-<span class="fw-bold">Awesome, everything looks good!</span> We can see our current seeds on the <code>Loto-ID</code> tab and have our filters set properly. Time to stand near the PC in Wedgehurst Pokecenter!<br /><br />
+<p><span class="fw-bold">Awesome, everything looks good!</span> We can see our current seeds on the <code class="fw-bold">Loto-ID</code> tab and have our filters set properly. Time to stand near the PC in Wedgehurst PokeCenter!</p>
 
 <span class="fw-bold">Figure 2 -</span> Game setup<br />
 <img src="./images/loto-id/figure-2-game-setup-loto.jpg" style="width:675px;height:400px;"><br /><br />
 
-<div class="accordion" id="GameSetupLoto">
-  <div class="card">
-    <div class="card-header text-white" style="background-color: #0c0038;">
-    <div class="card-header" id="GameSetupLoto">
-      <h5 class="mb-0">
-        <span class="fw-bold">Game Setup</span>
-      </h5>
-    </div>
-    <div class="card-body" style="background-color: #ffffff36;">
-      We are now stood directly next to the a PC and have the console connected to the generator.<br /><br />
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="setuplottocfw">
+    <span class="fw-bold text-light">Setup (Rotom Lottery):</span>
+  </div>
+  <div class="card-body card-bg">
+    <ol>
+      <li>Stand near to the Rotom PC in any Pokemon Center (Wedgehurst recommended)</li>
+      <li>Press the <code class="fw-bold">X</code> button to pause the game.</li>
+      <li>Connect to SWSH_OWRNG_Generator_GUI at this point.</li>
+      <li>Open the <code class="fw-bold">Loto-ID</code> tab, then set the filters & NPC count.</li>
+      <li>Search for a desirable target frame.</li>
+    </ol>
 
-      Once the player interacts with the PC, the RNG state will freeze due to being on a menu screen. This is why it is only important to interact with the PC on the correct frame.<br /><br />
-
-      Once the <code>Loto-ID</code> tab is filled in correctly, you can begin looking for target frames by clicking the search button.<br /><br />
-
-      <span class="fw-bold">If your results are not desirable, repeat the following:</span><br /><br />
+    <p><span class="fw-bold">If your results are not desirable, repeat the following:</p>
       <ol>
         <li>Disconnect your Switch from the tool.</li>
         <li>Restart your game and enter the overworld.</li>
         <li>Pause the game, then reconnect your Switch to the tool.</li>
         <li>Search again, do this until you have desirable results.</li>
       </ol>
-      </div>
-    </div>
-  </div>
-<br />
+ </div>
+</div><br />
 
 <span class="fw-bold">Figure 3 -</span> Target found!<br />
 <img src="./images/loto-id/figure-3-target-found-loto.png" style="width:675px;height:400px;"><br /><br />
 
-<span class="fw-bold">We found a target frame!</span> A Master Ball on advance 806-808. This will be the frame we close the pause menu and interact with the PC.<br /><br />
+<p><span class="fw-bold">We found a target frame!</span> A Master Ball on advance 806-808. This will be the frame we close the pause menu and interact with the PC.</p>
 
 <hr />
 <div class="title" style="background-color: #0c0038;">
   <h1 class="text-light text-center pt-3 pb-3">Advancing Towards The Target</h1>
 </div><hr />
 
-The generator displays the target on frame 806-808, we do not need to account for any delay. This means we will aim to interact with the PC on frame 806-808.<br /><br />
+<p>The Loto-ID window of SWSH_OWRNG_Generator_GUI displays the target on frame 806-808, we do not need to account for any delay. This means we will aim to interact with the PC on frame 806-808.</p>
 
-There are 7 NPCs in this Pokecenter, we need this information to accurately predict the amount of advancements that will occur from closing the pause menu.<br /><br />
+<p>Earlier we calculated that there are 7 NPCs in the area, we need this information to accurately predict the amount of advancements that will occur from closing the pause menu.</p>
 
-<div class="accordion" id="AdvancingToTargetLoto">
-  <div class="card">
-    <div class="card-header text-white" style="background-color: #0c0038;">
-    <div class="card-header" id="AdvancingToTargetLoto">
-      <h5 class="mb-0">
-        <span class="fw-bold">Hitting your target frame</span>
-      </h5>
-    </div>
-    <div class="card-body" style="background-color: #ffffff36;">
-
-      <span class="fw-bold">Step-by-step tutorial:</span><br /><br />
-      <ol>
-        <li>Advance towards your target frame using any of the methods listed inside the <a href="#AdvancementTable">table above</a>.</li><br />
-      
-        <li>Once you are within a few hundred frames of your target, stand within distance of the the PC so that you can immediately interact with it in a single <code>A</code> press.</li><br />
-      
-        <li>Pause the game using the <code>X</code> button, then disconnect and reconnect to the main window, then search for your target again in the <code>Loto-ID</code> window.</li><br />
-
-        <div class="card-body" class="text-light" style="background-color: #0c0038;">
-          <span class="fw-bold">Tip:</span> From this point it's recommended to only advance using <code>menu close & animations</code> as they only advance in small increments, making them easy to keep track of.
-       </div><br />
-
-        <li>Open the <code>Loto-ID</code> window, enter your target frame into the <code>+</code> field and the amount of NPCs into the <code>NPCs</code> field, then click search.</li><br />
-        
-        <div class="card-body" class="text-light" style="background-color: #0c0038;">
-          <span class="fw-bold">Tip:</span> If you are unable to find your target frame in the search results, this means the target cannot be hit based on your seed. Use animations to advance the RNG state slightly, then close and re-open the <code>Loto-ID</code> window and search for your target frame again. Repeat this process until your target frame is visible.
-       </div><br />
-
-        <li>Open and close the pause menu until closing the menu a single time lands onto your target frame, according to the <code>Loto-ID</code> window prediction. Pay attention to the <code>Curr. Adv</code> field of the main window to avoid overshooting your target.</li><br />
-      
-        <li>Close the pause menu and quickly interact with the PC, if you believe you hit your target frame, get through those cutscenes to claim your reward.</li><br />
-      
-      <div class="card-body" class="text-light" style="background-color: #0c0038;">
-       You can be creative with the methods you use to advance the RNG state. Menu close prediction is not necessary but will make for a much easier time hitting target frames and is extremely helpful in areas of the game where the RNG advances at a quick pace.
-     </div>
-       </ol>
-      </div>
-    </div>
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="advancingtotargetlottocfw">
+    <span class="fw-bold text-light">Hitting Your Target Frame:</span>
   </div>
-<br />
+  <div class="card-body card-bg">
+
+    <ul>
+      <li>Advance towards your target frame using any method listed inside the <a href="#advancementtable">table above</a></li><p></p>
+      <li>Once you are within a few hundred frames of your target, stand within distance of the PC so that you can immediately interact with it in a single <code class="fw-bold">A</code> press.</li><p></p>
+      <li>Pause the game using the <code class="fw-bold">X</code> button, then disconnect and reconnect to the main window, then search for your target again in the <code class="fw-bold">Loto-ID</code> window.</li>
+    </ul>
+
+      <div class="alert" style="background-color: #c0bdbd;">
+        <span class="fw-bold">Tip -</span> From this point it's recommended to only use <code class="fw-bold">menu close</code> & <code class="fw-bold">amimation</code> advancements as they advance in small increments, making them easy to keep track of.
+      </div>
+
+      <ul>
+        <li>Open the <code class="fw-bold">Loto-ID</code> window, enter your target frame into the <code class="fw-bold">+</code> field and the amount of NPCs into the <code class="fw-bold">NPCs</code> field, then click search.</li>
+      </ul>
+
+      <div class="alert" style="background-color: #c0bdbd;">
+        <span class="fw-bold">Tip -</span> If you are unable to find your target frame in the search results, this means the target cannot be hit based on your seed. Use animations to advance the RNG state slightly, then close and re-open the <code class="fw-bold">Cram-o-matic</code> window and search for your target frame again. Repeat this process until your target frame is visible.
+      </div>
+
+      <ul>
+        <li>Open and close the pause menu until closing the menu a single time lands onto your target frame, according to the <code class="fw-bold">Loto-ID</code> window prediction. Pay attention to the <code class="fw-bold">Curr. Adv</code> field of the main window to avoid overshooting your target.</li><p></p>
+        <li>Close the pause menu and quickly interact with the PC, if you believe you hit your target frame, click the lottery option to claim your reward.</li>
+      </ul>
+
+      <p>You can be creative with the methods you use to advance the RNG state. Menu close prediction is not necessary but will make for a much easier time hitting target frames and is extremely helpful in areas of the game where the RNG advances at a quick pace.</p>
+ </div>
+</div><br />
 
 <span class="fw-bold">Figure 4/5 -</span> Result Found!<br />
 <img src="./images/loto-id/figure-4-result-found-loto.png" style="width:675px;height:400px;"><br /><br />
 <img src="./images/loto-id/figure-5-result-found-switch-loto.jpg" style="width:675px;height:400px;"><br /><br />
 
-The result matches the output of the generator, mission accomplished!<br /><br />
+<p>The result matches the output of the generator, mission accomplished!</p>
 
-<span class="fw-bold">That's all there is to RNG abusing the the PC lottery function!</span><br /><br />
-
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/overworld">
-  Send me to the Overworld RNG abuse guide!
-  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-  </svg>
-</a>
+<p><span class="fw-bold">That's all there is to RNG abusing the the PC lottery function!</span></p>
