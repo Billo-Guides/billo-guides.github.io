@@ -1,5 +1,170 @@
 ---
 layout: default
 title: Legends Arceus RNG Guide
-permalink: /retail/la/legendary/spawner-rng
+permalink: /retail/la/legendary/spawner-rng/getting-started
 ---
+
+<style>
+    mark {
+      background-color: #FFD700;
+      color: black;
+    }
+  
+    .card-bg {
+      background-color: #d1d1d1;
+      border-bottom-right-radius: 0.20rem !important;
+      border-bottom-left-radius: 0.20rem !important;
+    }
+  
+    table,
+    th,
+    td {
+      border: 1px solid black;
+    }
+  </style>
+  
+  <div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">Spawner Legendary RNG (Retail)</h1>
+  </div><hr />
+  
+  <p>This page will provide in-depth information about how to RNG abuse Legendary Pokemon in Legends: Arceus that are tied to what is known as Spawners. We will be using RNG automation programs written by <a href="https://github.com/lusamine">Lusamine</a>, as mentioned on the main page.</p>
+  
+  <p><span class="fw-bold" style="color: #b60606;">From here it is assumed that you have already followed all of the setup & installation instructions found on the introductory page of this guide.</span></p>
+  
+  <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/la/legendary/#setupandinstallLA">
+    Didn't follow the setup instructions on the main page yet? <span class="fw-bold">Click here to go back</span>!
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+  </a><br>
+  
+  <div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="aboutspawnerrng">
+      <span class="fw-bold text-light">About Spawner RNG:</span>
+    </div>
+    <div class="card-body card-bg">
+      <p>Pokemon that are tied to spawners have their seed generated when you enter the map or cave that they are located in. The seed remains the same until you defeat the Pokemon and have it respawn, this will be a consistent +1 advancement to the Spawner seed.</p>
+  
+      <p>Leaving the area and heading back to Jubilife HQ will refresh the spawner seed of every Pokemon on the map, including Legendary Pokemon. We can use the Spawner Seed Solver and Spawner RNG Calculator scripts to find and check our current seed for desirable results.</p>
+      
+      <p>It is recommended to have a strong Pokemon, lots of healing items (e.g Elixirs, Potions, Revives) and lots of throwable items (Ball of Mud, Sticky Glob etc.) before getting started. You will need enough resources to consistently defeat/stun the Legendary Pokemon that you are hunting.</p>
+    </div>
+  </div><br>
+  
+  <span class="fw-bold">Now we know the basics about Spawner-based encounters, it's time to get to work!</span>
+
+  <hr /><div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">Getting To Work!</h1>
+  </div><hr />
+
+  <p>After gathering resources, <u>disable autosave in the in-game settings to avoid catastrophe.</u> Checking your seed requires capturing the Pokemon and returning to Jubilife HQ, which will force the game to save with a caught legendary unless autosave is disabled.</p>
+
+  <div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="currentseedretail">
+      <span class="fw-bold text-light">Finding Your Current Seed & Frame Advancements:</span>
+    </div>
+    <div class="card-body card-bg">
+      <p>In order to find your current seed you will need access to a console that is running Custom Firmware, this most commonly used method is dumping your Pokemon using somebody elses Sysbot. Many free Sysbots can be found in public Discord servers, you can find a list of servers that host Sysbots with a quick Google search.</p><hr />
+
+      <h4><span class="fw-bold">How to find your current seed:</span></h4>
+
+      <p>Sysbot.NET is capable to dump any Pokemon you shown inside the trade window without needing to physically trade the Pokemon (as this would force a save and lock you into the same seed permanently). This gives retail players the ability to check their seed and reset the game if the seed does not produce any desirable results.</p>
+
+      <ol>
+        <li>Head into the map location of your desired Legendary, then manually save the game.</li>
+        <li>Capture the legendary, then return to Jubilife without saving the game.</li>
+        <li>Initiate a Sysbot dump trade, then dump the Legendary Pokemon that you caught.</li>
+        <li>Reset the game, this time, KO the Pokemon instead of catching it.</li>
+        <li>Advance a single frame, then capture the next Legendary that spawns.</li>
+        <li>Initiate another Sysbot trade, dump the Pokemon again and reset the game.</li>
+        <li>You should now have two sequencial pa8 files and be back in correct map location.</li>
+        <li>Put both of the dumped pa8 files inside the <code class="fw-bold">pa8s</code> folder that was created earlier.</li>
+        <li>Run the Seed Solver script until a seed is produced.</li>
+      </ol><hr />
+
+      <h4><span class="fw-bold" id="advancingrngstate">How to advance the RNG state:</span></h4>
+
+      <p>Frame advancement methods will differ depending on if your Pokemon is an forced capture or despawns when defeated, this section will cover how to advance frames in both of these scenarios.</p>
+
+      <h5 class="fw-bold">Despawns When Defeated:</h5>
+      <p><small><span class="fw-bold">These include -</span> Tornadus, Thundurus, Landorus, Enamorus, Manaphy, Shaymin & Darkrai.</small></p>
+  
+      <ol>
+        <li>Knockout the legendary.</li>
+        <li>Fly to a campsite, then sleep until night, then sleep again until morning.</li>
+        <li>Fly to a cave and enter, then save and reboot the game.</li>
+        <li>Fly back to the legendary and wait for the weather for a weather cycle to occur</li>
+        <li>After a weather cycle has passed the Pokemon should have respawned (may take a few minutes of waiting).</li>
+      </ol>
+
+      <p><span class="fw-bold">Note - </span>Tornadus or Thundurus will only spawn in specific weather conditions, Tornadus will only respawn in a blizzard, and Thundurus will only respawn in a thunderstorm.</p>
+  
+      <h5 class="fw-bold">Forced Capture:</h5>
+      <p><small><span class="fw-bold">These include -</span> Uxie, Mesprit, Azelf, Heatran & Cresselia.</small></p>
+  
+      <ol>
+        <li>Knockout the legendary.</li>
+        <li>Click through the menus until you regain control of your character.</li>
+      </ol>
+
+      <p><span class="fw-bold">Note - </span>All of these Pokemon are located inside caves except Cresselia, which means you cannot leave the area once you are already inside.</p>
+   </div></div><br>
+
+   <p>After finding your current seed you can paste it into the Spawner RNG Calculation script and search for desirable results. If you do not find desirable results you will need to leave the area back to Jubilife HQ then start again from seed checking step 1.</p>
+
+   <hr /><div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">Worked Example</h1>
+  </div><hr />
+
+   <p>This section of the guide aims to provide a step-by-step guide of the start to finish process for Spawner RNG abuse. You can follow along if you do not already have complete understanding of how to use the RNG scripts or advance towards a result.</p>
+
+   <span class="fw-bold">Figure 1 -</span> How To Use - Seed Solver Script<p></p>
+   <img src="/retail/la/spawner/images/how-to-use-seed-solver.gif" style="width:675px;height:400px;"><br /><br />
+
+   <p>First, dump the two necessary .pa8 files of the Pokemon you are hunting using the <a href="#currentseedretail">above mentioned method</a>, then place them into the <code class="fw-bold">pa8</code> folder that was created earlier, check that the path is correct, then run the script after doing so.</p>
+    
+   <p>After a short wait you should now see that a group seed has been produced, copy it, this seed is the seed that the Calculation Script will need to calculate the upcoming advancements of the Pokemon on the spawner that you are searching.</p>
+
+   <span class="fw-bold">Figure 2 -</span> How To Use - RNG Calculation Script<p></p>
+   <img src="/retail/la/spawner/images/how-to-use-calculator.gif" style="width:675px;height:400px;"><br /><br />
+
+   <p>Copy the group seed that was produced by the Seed Solver Script, then paste it into the Spawner RNG Calculation Script on the line that starts with <code class="fw-bold">ulong group_seed = 0x</code> (located towards the top of the script).</p> 
+    
+   <p>In this example the seed that was produced is <code class="fw-bold">264cc9c14e639858</code>, If you have pasted the seed into the script correctly it should look similar to the following:</p> 
+
+   <div class="alert border-dark" style="background-color: #d1d1d1;">              
+    <code class="fw-bold" style="color: #0a7a00;">// Initial State</code><br>
+    <code class="fw-bold" style="color: #2e62bf;">ulong</code> <code class="fw-bold" style="color: #000000;">group_seed =</code> <code class="fw-bold" style="color: #af82de;">0x1234567887654321;</code> <code class="fw-bold" style="color: #0a7a00;">// group seed</code><br>
+    <code class="fw-bold" style="color: #2e62bf;">ulong</code> <code class="fw-bold" style="color: #000000;">init =</code> <code class="fw-bold" style="color: #2e62bf;">unchecked</code><code class="fw-bold" style="color: #000000;">(group_seed)</code><br>
+    <code class="fw-bold" style="color: #000000;">Xoroshiro128Plus rng =</code> <code class="fw-bold" style="color: #2e62bf;">new</code><code class="fw-bold" style="color: #000000;">(init)</code> 
+    </div><p></p>
+
+   <span class="fw-bold">Figure 3 -</span> Setting Filters - Calculation Script<p></p>
+   <img src="/retail/la/spawner/images/setting-filters-calculator-script.gif" style="width:675px;height:400px;"><br /><br />
+
+   <p>To search for flawless IV spreads, activate the filters found towards the bottom of the script. By default the IV filters will be disabled and will need to be activated manually, this can be done by removing the comments (<code class="fw-bold" style="color: #0a7a00;">*/</code>) that surround the IV filters at the top and the bottom.</p>
+
+   <p><u>If your desired Pokemon is Heatran</u>, you will also need to set the <code class="fw-bold">GenderCompare</code> value at the top of the script to 127, Heatran is the only case where this value should be changed from -1 as the rest of these legendaries have a fixed gender or are genderless.</p>
+
+   <p>If your search result is not desirable or you do not find any results when searching with filters, you will need to return to Jubilife then back to the map that contains the legendary you are hunting in order to refresh the seed, then find your current seed again (see Figure 1).</p>
+   
+   <span class="fw-bold">Figure 4 -</span> Target Found!<p></p>
+   <img src="/retail/la/spawner/images/target-found-spawner.png" style="width:675px;height:400px;"><br /><br />
+
+   <p>We will be searching for any Enamorus with an speed IV value of 0, In the above image, we can see that there is an Enamorus that matches this description in 5 advances! This means we will need to knock out and respawn Enamorus 5 times to hit the correct target frame.</p>
+
+   <p>Advance the RNG state using the <a href="#advancingrngstate">above mentioned method</a>. Enamorus is one of the Pokemon that will despawn when defeated, so we will will need to follow the "despawns when defeated" steps in order to effectively respawn it.</p>
+
+   <span class="fw-bold">Figure 5 -</span> Result Found!<p></p>
+   <img src="/retail/la/spawner/images/result-found-spawner.jpg" style="width:675px;height:400px;"><br /><br />
+
+   <p>After advancing 5 frames we have now reached our target frame and found the Enamorus that is believed to have an speed IV value of 0!</p>
+    
+   <p>Legends: Arceus has no way to check the exact IV values in-game, this means you will need to confirm the IVs of the Pokemon by either dumping it using a Sysbot or viewing it inside Pokemon HOME.</p>
+
+   <span class="fw-bold">Figure 6 -</span> IV confirmation<p></p>
+   <img src="/retail/la/spawner/images/iv-confirmation-spawner.png" style="width:675px;height:400px;"><br /><br />
+
+   <p>After dumping the Enamorus using Sysbot.NET and viewing the file in PKHeX, we have confirmed that the IVs & nature match what was produced by the script, mission accomplished!</p>
+
+   <p><span class="fw-bold">That's all there is to RNG legendary Pokemon tied to spawners on retail hardware!</span></p>
