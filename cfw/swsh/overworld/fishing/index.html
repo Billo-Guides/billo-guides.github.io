@@ -4,239 +4,224 @@ title: Fishing RNG (CFW)
 permalink: /cfw/swsh/overworld/fishing
 ---
 
-<div class="title" style="background-color: #0c0038;" id="FirstTitleFishing">
-   <h1 class="text-light text-center pt-3 pb-3">Fishing Encounter Guide (CFW)</h1>
- </div>
-   <hr />
-   
-   If you made it this far, it must mean you have an interest in RNG abusing Pokémon from Fishing encounters! This page will cover the whole process, from finding a desirable location to achieving a final result.<br /> <br />
-   
-   <div id="toc_container">
-     <span class="fw-bold">Table of Contents:</span>
-     <ul class="toc_list">
-       <li><a href="#FirstTitleFishing">Getting started</a> (This is where you are now)</li>
-       <li><a href="#SecondTitleFishing">Getting to work</a></li>
-       <li><a href="#ThirdTitleFishing">Advancing towards the target</a></li>
-     </ul>
-     </div>
-   
-   <div class="accordion" id="GettingStartedFishing">
-     <div class="card">
-       <div class="card-header text-white" style="background-color: #0c0038;">
-       <div class="card-header" id="GettingStartedFishing">
-         <h5 class="mb-0">
-           <span class="fw-bold">Getting Started</span>
-         </h5>
-       </div>
-       <div class="card-body" style="background-color: #ffffff36;">
-         <ol>
-           <li>Open the GUI and click on the <code>Encounter Lookup</code> button at the top of the main window. This will open the Encounter Lookup tab.</li><br />
-           <li>Type the species name of the Pokémon you are hunting into the empty field. This will bring up a list of every possible encounter and has all the information you need for the main window.</li><br />
-           <li>Scroll down the list of encounters and click on one of the rows displaying a FISHING encounter. This will automatically enter the information into the main window.</li><br />
-           <li>Head to the location in-game, change the date until you meet the correct weather condition, then stand near the spawn point of the Pokémon.</li><br />
-           <li>Stand next to a fishing pool and save.</li><br />
-           <li>Press the <code>X</code> button on your controller to pause the game, and click <code>Connect</code> on the main window of the tool.</li><br />
-         </ol>
-   
-         <details>
-           <summary><u>Tips & Advice:</u><br /></summary>
-           <ul>
-           <li>Fishing encounters are not guaranteed to be the same species every time, the Pokémon species is instead based on an encounterslot value of 0-99.</li><br />
-           <li>Aiming for clustered frames gives you a higher chance of hitting targets. A cluster is a group of frames that produce the same end result.</li><br />
-           <li>Brilliant Aura Pokémon are guaranteed to be 2IV upon encounter, consider filtering for Brilliant Aura if your goal is a high IV, shiny Pokémon.</li><br />
-           <li>Having any Pokémon with the ability Syncronize in the first slot of your party will guarantee that the nature of any encountered overworld Pokémon will be the same as your leading Pokémon. </li><br />
-           <li>Test how fast the RNG state naturally advances in the area of your target Pokémon, consider locations with calm weather to reduce instability.</li><br />
-           <li>You should knock out any unwanted static spawns if they are blocking your path towards the grass containing your target.</li>
-           </ul>
-           </details>
-         </div>
-       </div>
-     </div>
-   <br />
+<style>
+  mark {
+    background-color: #FFD700;
+    color: black;
+  }
 
-   <div class="accordion" id="KOMechanic">
-    <div class="card">
-      <div class="card-header text-white" style="background-color: #0c0038;">
-      <div class="card-header" id="KOMechanic">
-        <h5 class="mb-0">
-          <span class="fw-bold">Important Information</span>
-        </h5>
-      </div>
-      <div class="card-body" style="background-color: #ffffff36;">
-        <h6><span class="fw-bold">The KO mechanic & Brilliant Aura:</span></h6>
-        This references the <code>Number Battled:</code> screen of the Pokédex and is used to boost the odds of (Shiny) Brilliant Aura Pokémon. You are able to view the total amount of KO'd Pokémon per species in your entire save file.<br /> <br />
+  .card-bg {
+    background-color: #d1d1d1;
+    border-bottom-right-radius: 0.20rem !important;
+    border-bottom-left-radius: 0.20rem !important;
+  }
 
-        Find the Pokédex entry of the Pokémon you are hunting and enter the total number of KOs into the <code>KO Count:</code> field of the main window. This number is important in order to get accurate results from the generator.<br /> <br />
+  table,
+  th,
+  td {
+    border: 1px solid black;
+  }
+</style>
 
-        Brilliant Aura guarantees 2 full 31 IVs. Players who desire high IV wild caught Pokémon may wish to filter for Brilliant Aura.<br /><br />
-    
-        <details>
-        <summary><h6><span class="fw-bold">Other information:</span></h6></summary>
-       <div class="card-body" class="text-light" style="background-color: #0c0038;">
-        Want to know the odds based on the total amount of KOs? <a href="https://bulbapedia.bulbagarden.net/wiki/Brilliant_Pok%C3%A9mon">This Bulbapedia article</a> will tell you everything you need to know.
-       </div><br />
-       <div class="card-body" class="text-light" style="background-color: #0c0038;">
-       The generator does not currently provide support for mechanics that boost the encounter rates of specific Pokémon. This includes Dexrec boosts or abilities like Storm Drain. Using spawn boosters like these may output incorrect results.
-      </div><br />
-      <div class="card-body" class="text-light" style="background-color: #0c0038;">
-      You cannot spawn a fishing pool while you are riding the bike. Make sure you have dismounted the bike before closing in on your target frame.
-     </div>
-     </details>
-       </div>
-        </div>
-      </div>
-    </div>
-  <br />
+<div class="title" style="background-color: #0c0038;">
+  <h1 class="text-light text-center pt-3 pb-3">SwSh Fishing Encounter Guide</h1>
+</div><hr />
 
-<span class="fw-bold">With all the required reading out of the way, it's time to get started!</span>
+<p>This page provides information and worked examples for how you can RNG abuse Pokémon from <span class="fw-bold">Fishing encounters.</span> The whole process will be covered here, from finding a desirable location to use to achieving the final result.</p>
 
-<hr />
-<div class="title" style="background-color: #0c0038;" id="SecondTitleFishing">
-  <h1 class="text-light text-center pt-3 pb-3">Time to Get to Work!</h1>
-</div>
-  <hr />
+<p>Fishing encounters are not guaranteed to be the same species every time, much like a Symbol encounter. The Pokémon species is instead based on an encounterslot value of 0-99. Encounterslot values will change with the weather, the weather can potentially change every time the clock hits 00:00.</p>
 
-  The goal is to spawn a fishing pool on the calculated target frame given by the generator. The advancement methods used are listed on the main page of this guide.<br /><br />
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/overworld">
+  Picked the wrong type of encounter? <span class="fw-bold">Click here to go back!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a><br>
 
-  We will be aiming for a Shiny Whiscash with a mark in Slumbering Weald. You can be more specific with the filters if you wish, such as filtering for a specific mark, specific IVs or Brilliant Aura.<br /><br />
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="getting-started-fishing-cfw">
+    <span class="fw-bold text-light">Getting Started (Fishing Encounter):</span>
+  </div>
+  <div class="card-body card-bg">
+    <ol>
+      <li>Open SWSH_OWRNG_Generator_GUI, then click on the <code span class="fw-bold">Encounter Lookup</code> button at the top of the window to open the Encounter Lookup tab.</li><p></p>
+      <li>Type the species name into the empty search field to bring up a list of encounters for that specific Pokémon. Select a row that appeals to you by left clicking it.</li><p></p>
+      <li>Confirm that the the filters have been set properly inside the Main Window, encounter filters can be found on the left-hand side.</li><p></p>
+      <li>You will also need to set your KO count correctly in order to produce accurate results, this can be found on the Pokédex entry of the Pokémon you are hunting.</li><p></p>
+      <li>Set your search filters inside the middle portion of the Main Window. You can filter for specific Marks, IVs, Shininess, etc.</li><p></p>
+      <li>Fly to the correct location in-game then stand near to the fishing pool that contains your desired Pokemon, close enough to spawn the fishing pool.</li><p></p>
+      <li>Set the correct weather condition using Luxray's <code span class="fw-bold">Set</code> function if the current weather in-game is incorrect.</li><p></p>
+      <li>Save the game once you are stood in place, then click the <code span class="fw-bold">Connect</code> button inside the main window, once connected you can begin searching for target frames.</li>
+    </ol>
 
-<details>
-  <summary><u>Using Whiscash as the example:</u></summary>
-  <ul>
-     <li>The <code>Encounter Lookup</code> tab tells us that Whiscash has an encounter slot range of 0-59, a level range of 45-47 and is a fishing encounter in all weather. It also tells us Whiscash does not hold a random item and has 4 potential Egg Moves.<br /></li>
-     <li>After clicking the row of our choice, we can see all the information about the encounter listed on the left hand side of the main window.</li>
-     <li>The Pokedex displays a <code>Number Battled:</code> value of 500 for Whiscash, this needs to be entered into the <code>KO: Count</code> field of the generator.</li>
-     <li>We are paused in-game next to a fishing pool, and our current seeds are visible on the main window after clicking <code>Connect</code>.</li>
-     <li>Now all the details of our encounter are set up properly and we are ready to search or targets!</li>
-  </ul>
-</details><br />
+    <details>
+    <summary><span class="fw-bold">If your results are not desirable, repeat the following:</span></summary><p></p>
+    <ol>
+      <li>Disconnect your Switch from the tool.</li>
+      <li>Restart your game and enter the overworld.</li>
+      <li>Pause the game, then reconnect your Switch to the tool.</li>
+      <li>Search again, repeat until the result is desirable.</li>
+    </ol>
+  </details>
+  </div>
+  </div><br>
 
-<span class="fw-bold">Figure 1 -</span> Tool setup<br />
+  <span class="fw-bold">Figure 1 -</span> Tool setup<p></p>
 <img src="./images/fishing/figure-1-encounter-lookup-fishing.gif" style="width:675px;height:400px;"><br /><br />
 
-<span class="fw-bold">Awesome, everything looks good!</span> Time to find an quiet fishing pool and set the weather condition if appropriate.<br /><br />
+  <p><span class="fw-bold">Using Whiscash as the example:</span> The location for this encounter given by Encounter Lookup is Slumbering Weald, and the expected weather condition is sunny. The search filters have been set to search for any Shiny with any Mark.</p>
 
-<span class="fw-bold">Figure 2 -</span> Game setup<br />
-<img src="./images/fishing/figure-2-in-game-setup-fishing.gif" style="width:675px;height:400px;"><br /><br />
-
-<div class="accordion" id="GameSetup">
-  <div class="card">
-    <div class="card-header text-white" style="background-color: #0c0038;">
-    <div class="card-header" id="GameSetup">
-      <h5 class="mb-0">
-        <span class="fw-bold">Game Setup</span>
-      </h5>
-    </div>
-    <div class="card-body" style="background-color: #ffffff36;">
-      This location in Slumbering Weald is ideal, there are no NPCs around and there are no spawned Pokémon present.<br /><br />
-
-      Once a fishing pool has spawned in the water, the stats and internal details (such as PID/EC) are generated and set in stone. This is why it is only important to spawn the Pokémon in the fishing pool on the correct frame (And to not let a target Pokémon despawn!).<br /><br />
-
-      Now that the main window is filled in correctly & you are standing in a good position in-game, you can begin looking for target frames by clicking the search button on main window of the generator.<br /><br />
-
-      <span class="fw-bold">If your results are not desirable, repeat the following:</span><br /><br />
-      <ol>
-        <li>Disconnect your Switch from the tool.</li>
-        <li>Restart your game and enter the overworld.</li>
-        <li>Pause the game, then reconnect your Switch to the tool.</li>
-        <li>Search again, do this until you have desirable results.</li>
-      </ol>
-      </div>
-    </div>
-  </div>
-<br />
-
-<span class="fw-bold">Figure 3 -</span> Target found!<br />
-<img src="./images/fishing/figure-3-target-found-fishing.png" style="width:675px;height:400px;"><br /><br />
-
-<span class="fw-bold">We found one!</span> A shiny, Hardy natured Whiscash in a cluster on advances 271-274. These are the "target frames" and the aim will be to spawn a fishing pool in the water on any of these frames.
-
-<hr />
-<div class="title" style="background-color: #0c0038;" id="ThirdTitleFishing">
-  <h1 class="text-light text-center pt-3 pb-3">Advancing towards the target!</h1>
-</div>
-  <hr />
-
-  After pressing search on the main window the results display a shiny Whiscash on frame 271-274. Based on local testing the delay for this fishing encounter is 0. This means the target for this attempt remains at frame 271-274.<br /><br />
+  <p>Whiscash has an encounterslot value of 0-59, and the Pokedex tells us that we have 500 KOs for Whiscash, this information has now been reflected inside the encounter filters found on the left-side of the Main Window.</p>
 
   <details>
-    <summary><u>How to calculate delays:</u><br /></summary>
+    <summary><span class="fw-bold">Important Information:</span></summary><p></p>
+  <div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="important-info-symbol-cfw">
+      <span class="fw-bold text-light">Important Information:</span>
+    </div>
+    <div class="card-body card-bg">
+      <h6><span class="fw-bold">The KO mechanic & Brilliant Aura</span></h6>
+      <p>The KO Mechanic provides a boost to the rates of Shiny & Brilliant Aura Pokémon, you can find the correct value by opening the Pokedéx screen of the Pokémon you are hunting. You can find more details about the odds boosts on <a href="https://bulbapedia.bulbagarden.net/wiki/Brilliant_Pok%C3%A9mon#Appearance_rate">Bulbapedia</a>.</p>
+
+      <p>Brilliant Aura boosts the amount of guaranteed 31 IVs a Pokémon has, only Pokémon from symbol/fishing encounters can have this trait. This makes fishing encounters ideal for those who are hunting for high IV wild Pokémon.</p><hr />
+
+      <h6><span class="fw-bold">Dex Recommendations & Ability Boosts</span></h6>
+
+      <p>Dex recommendations can be found by opening the Pokedex, when a Pokemon is recommended the encounterslot value for that specific Pokemon is boosted.</p>
+
+      <p>Abilities like Lightning Rod, Harvest & Storm Drain boost the encounterslot value for Pokemon of specific types.</p>
+
+      <p>Both of these boosting methods are NOT accounted for inside SWSH_OWRNG_Generator_GUI. Avoid using Dexrec or ability boosts in case of inaccuracies.</p>
+    </div>
+    </div>
+  </details>
+
+<hr /><div class="title" style="background-color: #0c0038;">
+  <h1 class="text-light text-center pt-3 pb-3">The Process</h1>
+ </div><hr />
+
+ <p>The goal is to spawn the fishing pool on the calculated target frame displayed by the generator search results. Once a fishing pool has spawned in the overworld the stats and internal details are set in stone.</p>
+    
+ <p>From here the it is assumed that your encounter & search filters have been properly configured (see Figure 1). The advancement methods used are throughout this guide are listed inside the table found on the main page.</p>
+
+<span class="fw-bold">Figure 2 -</span> Game setup<p></p>
+<img src="./images/fishing/figure-2-in-game-setup-fishing.gif" style="width:675px;height:400px;"><br /><br />
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="game-setup-fishing-cfw">
+    <span class="fw-bold text-light">Game Setup:</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>For Fishing encounters, the best place to stand would be directly next to the fishing pool that contains the target Pokémon. Avoid standing in areas that trigger other wild Pokémon or Static encounters to spawn where possible.</p>
+
+    <p>The above location is considered an ideal location, there are a low number of NPCs around and no extra spawned Pokémon present. The player is also stood directly next to the fishing pool.</p>
+
+    <p>Slumbering Weald is located near the players house, it is a notably quiet area in calm weather conditions, the speed of advancements will depend on your location, NPC count & weather.</p>
+
+    <div class="alert" style="background-color: #c0bdbd;">
+      If you cannot find a good position to stand in, you can knock out any static spawns that block your path to the Pokémon, it will remain despawned until return to the area after a date has been changed.
+    </div>
+
+  </div>
+</div><br>
+
+<span class="fw-bold">Figure 3 -</span> Target found!<p></p>
+<img src="./images/fishing/figure-3-target-found-fishing.png" style="width:675px;height:400px;"><br /><br />
+
+<p>We found one! After searching for a desirable result we can see a shiny, Hardy natured Whiscash in a cluster on advances 271-274. When searching for target frames you may notice that they appear in clusters, clusters are a group of frames that produce the same end result. The larger the cluster, the better chances you have of hitting your target frame!</p>
+
+<p><span class="fw-bold">It's time to begin advancing towards the target frame!</span></p>
+
+<hr /><div class="title" style="background-color: #0c0038;">
+  <h1 class="text-light text-center pt-3 pb-3">Advancing Towards the Target!</h1>
+</div><hr />
+
+<p>After setting up your search filters and standing in the correct position in-game, you will need to calculate the amount of NPCs in the area and the base delay of the encounter. Doing both of these things will provide the best possible chances of hitting the correct target frame.</p>
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="delay-npc-count-fishing-cfw">
+    <span class="fw-bold text-light">Delay Calculation & NPC Calibration:</span>
+  </div>
+  <div class="card-body card-bg">
+    <h6 span class="fw-bold">Delay Calculation</h6>
     <ol>
-      <li>Aim for a target, such as any shiny Pokémon.</li>
-      <li>Spawn a fishing pool it in the overworld then initiate the encounter. Take note of the frame the Pokémon was spawned on.</li>
-      <li>Encounter the Pokémon and click the <code>Read Encounter</code> button.</li>
-      <li>If you didn't find the Pokémon that you expected, do a filterless search (or search for the specific IVs of the result you found) and find the frame you hit.</li>
-      <li>Subtract your target advancement from the frame you actually hit.</li>
+      <li>Aim for a target frame, such as any shiny Pokémon.</li>
+      <li>Spawn the Pokémon on the desired target frame, then initiate the encounter.</li>
+      <li>Take note of the frame that you believe the Pokémon was spawned on.</li>
+      <li>Read the Pokémon you are in battle with using the <code class="fw-bold">Read Encounter</code> button.</li>
+      <li>If this is the Pokémon you expected, your delay will be 0.</li>
+      <li>Otherwise, perform a filterless search to find the Pokémon you hit.</li>
+      <li>Subtract the frame the Pokémon was spawned on from the frame you actually hit.</li>
       <li>This will be your delay for that particular encounter.</li>
     </ol>
-    </details>
-    <br />
 
-  <div class="accordion" id="AdvancingToTargetFishing">
-    <div class="card">
-      <div class="card-header text-white" style="background-color: #0c0038;">
-      <div class="card-header" id="AdvancingToTargetFishing">
-        <h5 class="mb-0">
-          <span class="fw-bold">Hitting your target frame</span>
-        </h5>
-      </div>
-      <div class="card-body" style="background-color: #ffffff36;">
+    <h6 span class="fw-bold">NPC Calibration</h6>
+    <ol>
+      <li>Pause the game then disconnect and reconnect to the program, if done correctly, the number inside the <code span class="fw-bold">Curr. Adv</code> field of the main window should now be 0.</li>
+      <li>Click the <code span class="fw-bold">Menu Close Advances Viewer</code> button at the top of the main window to open the tab. Your seeds should be visible in the correct fields automatically.</li>
+      <li>Close the pause menu then quickly re-open it, note of the number of advancements that have occured from doing so (see <code span class="fw-bold">Curr. Adv</code>).</li>  
+      <li>Type 0 into the <code span class="fw-bold">NPCs</code> field and search. Gradually increase by 1 until the number inside the top row of the <code span class="fw-bold">Jump</code> column matches the number inside the <code span class="fw-bold">Curr. Adv</code> field.</li>
+      <li>Close and re-open the pause menu a few times to make sure that the calculated NPC count is correct.</li>
+    </ol>
 
-        <span class="fw-bold">Step-by-step tutorial:</span><br /><br />
-        <ol>
-          <li>Advance towards your target frame using any of the methods listed inside the table on <a href="https://billo-guides.github.io/cfw/swsh/overworld">main page of this guide</a>. Consider using the <code>Skip</code> feature to advance large distances with day skipping.</li><br />
-        
-          <li>Once you are within a few hundred frames of your target, stand near to a fishing pool that contains the Pokémon you are hunting.</li><br />
-        
-          <li>Pause the game using the <code>X</code> button, then disconnect and reconnect to the main window, then search for your target again.</li><br />
+  </div>
+  </div><br>
 
-          <div class="card-body" class="text-light" style="background-color: #0c0038;">
-            <span class="fw-bold">Tip:</span> From this point it's recommended to only advance using <code>menu close & animations</code> as they only advance in small increments, making them easy to keep track of. You should also dismount your bike at this point.
-         </div><br />
+  <p>Take note of the calculated delay and NPC count, you will need this information in order to reach the correct target frame later. Do not change position after calculating the number of NPCs, as this is subject to change depending on positioning.</p>
 
-          <li>Open the <code>Menu Close Advances Viewer</code> window and work out the amount of NPCs that are in the area, as explained on the <a href="https://billo-guides.github.io/cfw/swsh/overworld">main page</a>. Enter this number into the <code>NPCs</code> field.</li><br />
-            
-          <li>Enter your target frame into the <code>+</code> field of this window and hit search. This should be the highest number in the cluster.</li><br /> 
-          
-          <div class="card-body" class="text-light" style="background-color: #0c0038;">
-            <span class="fw-bold">Tip:</span> If you are unable to find your target frame in the search results, this means the target cannot be hit based on your seed. Use animations to advance the RNG state slightly, then close and re-open the <code>Menu Close Advances Viewer</code> window and search for your target frame again. Repeat this process until your target frame is visible.
-         </div><br />
-
-          <li>Open and close the pause menu until closing the menu a single time lands onto your target frame, according to the <code>Menu Close Advances Viewer</code> prediction. Pay attention to the <code>Curr. Adv</code> field of the main window to avoid overshooting your target.</li><br />
-        
-          <li>Close the pause menu and walk around to spawn a fishing pool (without letting the stick rest, as this will advance the RNG state) then initate an encounter! Confirm you have hit the expected result by clicking the <code>Read Encounter</code> button when in battle.</li><br />
-
-        <div class="card-body" class="text-light" style="background-color: #0c0038;">
-         You can be creative with the methods you use to advance the RNG state. Menu close prediction is not necessary but will make for a much easier time hitting target frames and is extremely helpful in areas of the game where the RNG advances at a quick pace.
-       </div>
-         </ol>
-        </div>
-      </div>
+  <div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="hitting-target-frame-static-cfw">
+      <span class="fw-bold text-light">Hitting Your Target Frame:</span>
     </div>
-  <br />
+    <div class="card-body card-bg">
 
-  <span class="fw-bold">By using menu close prediction and animation advancements to keep track of inputs, we were able to hit out target frame!</span><br /><br />
+      <h6 class="fw-bold">Step-by-step tutorial:</h6>
+      <ul>
+        <li>Advance towards your target frame using any of the methods listed inside the table on the <a href="https://billo-guides.github.io/cfw/swsh/overworld">main page</a>. Consider date skipping to advance large distances.</li><p></p>
+        <li>Once you are close a few thousand frames away from the target, head back to the correct position in-game (see Figure 2).</li><p></p>
+        <li>Pause the game, then disconnect and reconnect to the Main Window and press the search button again. This will be the new target frame.</li><p></p>
+      </ul>
 
-<span class="fw-bold">Figure 4/5/6 -</span> Result found!<br />
+      <div class="alert" style="background-color: #c0bdbd;">
+        From this point it is recommended to advance towards the target using only menu close prediction & animations. These types of advancements advance in small increments and are easy to keep track of. 
+      </div>
+
+      <ul>
+        <li>Open the Menu Close Advances Viewer tab, and type the number of NPCs (calculated earlier) into the <code span class="fw-bold">NPCs</code> field.</li><p></p>
+        <li>Then type your target frame into the <code span class="fw-bold">+</code> field and search, factor in the delay that was calculated earlier.</li><p></p>
+      </ul>
+
+      <div class="alert" style="background-color: #c0bdbd;">
+        E.g - If the calculated delay is 3, and your target frame is frame 1000, your new target frame is now 997. If you are unable to find your target frame in the search results, use animations to advance the RNG state by 1, repeat until your target frame is visible.
+      </div>
+
+      <ul>
+        <li>Open and close the pause menu until closing the menu a single time lands onto your target frame, according to the <code span class="fw-bold">Menu Close Advances Viewer</code> prediction.</li><p></p>
+        <li>Close the pause menu and run around close to the pond to spawn the fishing pool (without letting the stick rest as this will advance the RNG state). </li><p></p>
+        <li>Confirm you have hit the expected result by initiating the encounter, then clicking the <code span class="fw-bold">Read Encounter</code> button when in battle.</li>
+      </ul>
+
+      <div class="alert" style="background-color: #c0bdbd;">
+       If you encountered an unexpected result, this either means you missed your target frame (too slow) or your delay is incorrect. Confirm your delay using the <a href="#delay-npc-count-fishing-cfw">above mentioned method</a> and try again from the beginning.
+      </div>
+
+    </div>
+    </div><br>
+
+  <p><span class="fw-bold">By using menu close prediction and animations to keep track of inputs, we were able to hit out target frame!</span></p>
+
+<span class="fw-bold">Figure 4/5/6 -</span> Result found!<p></p>
 <img src="./images/fishing/figure-4-in-battle-encounter-read-fishing.png" style="width:675px;height:400px;"><br /><br />
 <img src="./images/fishing/figure-5-in-battle-encounter-switch-fishing.jpg" style="width:675px;height:400px;"><br /><br />
 <img src="./images/fishing/figure-6-summary-screen-switch-fishing.jpg" style="width:675px;height:400px;"><br /><br />
 
-<span class="fw-bold">Whiscash matches the output of the tool, mission accomplished!</span><br /><br />
-
-Different areas & environments can have a drastic influence on delay, if you are missing targets when you believe you should be finding results, you should consider reading the Encounter Troubleshooting page.<br /><br />
-
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/overworld/troubleshooting">
-  Click here to open the Encounter Troubleshooting page!
-  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-  </svg>
-</a><br />
+<p><span class="fw-bold">The Whiscash matches what is expected by the tool, mission accomplished!</span></p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/overworld">
-  Send me back to the main page!
+  <span class="fw-bold">Send me back to the main page!</span>
   <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
   </svg>
+</a>
 </a>
 
