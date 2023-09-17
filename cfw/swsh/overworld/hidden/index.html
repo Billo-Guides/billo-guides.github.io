@@ -21,6 +21,15 @@ permalink: /cfw/swsh/overworld/hidden
   td {
     border: 1px solid black;
   }
+
+  blockquote {
+  background: #c5c5c5;
+  border: 1px solid #9e9e9e;
+  border-left: 5px solid #0c0038;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  }
 </style>
 
 <div class="title" style="background-color: #0c0038;">
@@ -46,7 +55,7 @@ permalink: /cfw/swsh/overworld/hidden
     <ol>
       <li>Open SWSH_OWRNG_Generator_GUI, then click on the <code span class="fw-bold">Encounter Lookup</code> button at the top of the window to open the Encounter Lookup tab.</li><p></p>
       <li>Type the species name into the empty search field to bring up a list of encounters for that specific Pokémon. Select a row that appeals to you by left clicking it.</li><p></p>
-      <li>Confirm that the filters have been set properly inside the Main Window, encounter filters can be found on the left-hand side.</li><p></p>
+      <li>Confirm that the the filters have been set properly inside the Main Window, encounter filters can be found on the left-hand side.</li><p></p>
       <li>Set your search filters inside the middle portion of the Main Window. You can filter for specific Marks, IVs, Shininess, etc.</li><p></p>
       <li>Fly to the correct location in-game, then set the correct weather condition using Luxray's <code span class="fw-bold">Set</code> function if the current weather in-game is incorrect.</li><p></p>
       <li>Stand next to a patch of tall grass, save the game, then click the <code span class="fw-bold">Connect</code> button inside the main window, once connected you can begin searching for target frames.</li>
@@ -91,10 +100,7 @@ permalink: /cfw/swsh/overworld/hidden
 
     <p>If you are hunting for hidden encounters in other areas, you may notice that it is impossible to find a patch of grass with no overworld spawns. This will reduce the effectiveness of closing the pause menu to freeze the RNG state.</p>
 
-    <div class="alert" style="background-color: #c0bdbd;">
-      If you cannot find a good position to stand in, you can knock out any static spawns that block your path to the Pokémon, it will remain despawned until return to the area after a date has been changed.
-    </div>
-
+    <blockquote>If you cannot find a good position to stand in, you can knock out any static spawns that block your path to the Pokémon, it will remain despawned until return to the area after a date has been changed.</blockquote>
   </div>
   </div><br>
 
@@ -128,11 +134,7 @@ permalink: /cfw/swsh/overworld/hidden
       <li>This will be your delay for that particular encounter.</li>
     </ol>
 
-    <div class="alert" style="background-color: #c0bdbd;">
-      <p>Hidden encounters have the chance to spawn per step taken in long grass, sometimes they may not spawn quickly enough and you will miss your target frame as a result.</p>
-
-      Aim to spawn the encounter within 1-3 steps when calculating delay for the most accurate results.
-    </div>
+    <blockquote>Hidden encounters have the chance to spawn per step taken in grass, they may not spawn quickly enough which means you will miss your target as a result. Spawn the encounter within 1-3 steps when calculating delay for the most accurate results.</blockquote>
 
     <h6 span class="fw-bold">NPC Calibration</h6>
     <ol>
@@ -161,29 +163,23 @@ permalink: /cfw/swsh/overworld/hidden
         <li>Pause the game, then disconnect and reconnect to the Main Window and press the search button again. This will be the new target frame.</li><p></p>
       </ul>
 
-      <div class="alert" style="background-color: #c0bdbd;">
-        From this point it is recommended to advance towards the target using only menu close prediction & animations. These types of advancements advance in small increments and are easy to keep track of. 
-      </div>
+      <blockquote>From this point it is recommended to advance towards the target using only menu close prediction & animation advancements. These methods advance frames in small increments, making them easy to keep track of.</blockquote>
 
       <ul>
-        <li>Open the Menu Close Advances Viewer tab, and type the number of NPCs (calculated earlier) into the <code span class="fw-bold">NPCs</code> field.</li><p></p>
-        <li>Then type your target frame into the <code span class="fw-bold">+</code> field and search, factor in the delay that was calculated earlier.</li><p></p>
+        <li>Open the Menu Close Advances Viewer tab, and type the calculated number of NPCs into the <code span class="fw-bold">NPCs</code> field.</li><p></p>
+        <li>Then type your target frame into the <code span class="fw-bold">+</code> field and search, factor in the delay that was calculated earlier (Example: <code span class="fw-bold">1000 (target) - 3 (delay) = 997 (new target)</code>).</li><p></p>
       </ul>
 
-      <div class="alert" style="background-color: #c0bdbd;">
-        E.g - If the calculated delay is 3, and your target frame is frame 1000, your new target frame is now 997. If you are unable to find your target frame in the search results, use animations to advance the RNG state by 1, repeat until your target frame is visible.
-      </div>
+       <blockquote>If you are unable to find your target frame in the search results, use animations to advance the RNG state by 1, repeat until your target frame is visible inside the Menu Close Advances Viewer window.<br><br>
+
+       If you cannot hit your target frame using menu close prediction, use it to get as close as you can. Afterwards you can use an alternative advancement method (e.g player movement) to hit your target frame.</blockquote>
 
       <ul>
         <li>Open and close the pause menu until closing the menu a single time lands onto your target frame, according to the <code span class="fw-bold">Menu Close Advances Viewer</code> prediction.</li><p></p>
         <li>Close the pause menu and quickly run into the grass to try to spawn an encounter, then initate the encounter! Confirm you have hit the expected result by clicking the <code span class="fw-bold">Read Encounter</code> button when in battle.</li>
       </ul>
 
-      <div class="alert" style="background-color: #c0bdbd;">
-       <p>If you encountered an unexpected result, this either means you missed your target frame (too slow), the encounter did not spawn on time, or your delay is incorrect. Confirm your delay using the <a href="#delay-npc-count-symbol-cfw">above mentioned method</a> and try again from the beginning.</p>
-
-       Keep in mind that spawning a hidden encounter is subject to random chance, it may not spawn on time when you run into the grass and this will cause you to miss your target frame as a result, prepare to make several attempts before sucessfully hitting your target frame.
-      </div>
+      <blockquote>If you encountered an unexpected result, this either means you missed your target frame (too slow), the encounter did not spawn on time, or your delay is incorrect. Confirm your delay using the <a href="#delay-npc-count-symbol-cfw">above mentioned method</a> and retry.</blockquote>
 
     </div>
     </div><br>
@@ -198,9 +194,9 @@ permalink: /cfw/swsh/overworld/hidden
 <img src="./images/hidden/figure-6-in-battle-encounter-switch-hidden.jpg" style="width:675px;height:400px;"><br /><br />
 <img src="./images/hidden/figure-7-summary-screen-switch-hidden.jpg" style="width:675px;height:400px;"><br /><br />
 
-<p><span class="fw-bold">The Sinistea-Antique matches the output of the tool, mission accomplished!</span></p>
+<p><span class="fw-bold">The Sinistea-Antique matches the output of the tool, mission accomplished! You can find video examples of initiating the encounter and capture <a href="https://imgur.com/a/kIkeAPt">here</a></span></p>
 
-<p>You can find video examples of initiating the encounter and capture <a href="https://imgur.com/a/kIkeAPt">here</a>.</p>
+<p>Keep in mind that spawning a hidden encounter is subject to random chance, sometimes the encounter may spawn too late, which will result in missing the target frame. Be prepared to make multiple attempts for this encounter type.</p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/overworld">
   <span class="fw-bold">Send me back to the main page!</span>
@@ -208,3 +204,4 @@ permalink: /cfw/swsh/overworld/hidden
     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
   </svg>
 </a>
+
