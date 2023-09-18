@@ -152,15 +152,17 @@ permalink: /cfw/swsh/overworld/fishing
   <div class="card-body card-bg">
     <h6 span class="fw-bold">Delay Calculation</h6>
     <ol>
-      <li>Aim for a target frame, such as any shiny Pokémon.</li>
-      <li>Spawn the Pokémon on the desired target frame, then initiate the encounter.</li>
-      <li>Take note of the frame that you believe the Pokémon was spawned on.</li>
-      <li>Read the Pokémon you are in battle with using the <code class="fw-bold">Read Encounter</code> button.</li>
-      <li>If this is the Pokémon you expected, your delay will be 0.</li>
-      <li>Otherwise, perform a filterless search to find the Pokémon you hit.</li>
-      <li>Subtract the frame the Pokémon was spawned on from the frame you actually hit.</li>
-      <li>This will be your delay for that particular encounter.</li>
-    </ol>
+      <li>Pause the game, then disconnect and reconnect to the main window. The number inside the <code class="fw-bold">Curr. Adv.</code> field should now be 0.</li>
+      <li>Unpause the game and run around to make the fishing pool spawn in the overworld, take note of the frame it was spawned on.</li>
+      <li>Initiate the encounter, the press the <code class="fw-bold">Read Encounter</code> button to see the details of the Pokémon you are in battle with.</li>
+      <li>If this is the Pokémon you expected, your delay will be 0. Otherwise, you will need to find the frame you actually hit.</li>
+      <li>If you did not hit the expected encounter, search for Pokémon you hit using the Encounter Lookup, then click the row that matches your current location & weather.</li>
+      <li>Search using the main window again to find the frame you actually hit, you can filter for IVs for a more specific result output.</li>
+      <li>If you did not hit the expected encounter, filter for the IVs of the Pokémon you are in battle with to find the frame you actually hit.</li>
+      <li>Subtract the frame the Pokémon was spawned on from the frame you actually hit. This will be your delay for that particular encounter.</li>
+     </ol>
+
+     <blockquote><span class="fw-bold">For example:</span> If we spawned the fishing pool on frame 150, but the Pokémon we are in battle with was generated on frame 152, the calculated delay is 2.</blockquote>
 
     <h6 span class="fw-bold">NPC Calibration</h6>
     <ol>
@@ -177,11 +179,10 @@ permalink: /cfw/swsh/overworld/fishing
   <p>Take note of the calculated delay and NPC count, you will need this information in order to reach the correct target frame later. Do not change position after calculating the number of NPCs, as this is subject to change depending on positioning.</p>
 
   <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="hitting-target-frame-static-cfw">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="hitting-target-frame-fishing-cfw">
       <span class="fw-bold text-light">Hitting Your Target Frame:</span>
     </div>
     <div class="card-body card-bg">
-
       <h6 class="fw-bold">Step-by-step tutorial:</h6>
       <ul>
         <li>Advance towards your target frame using any of the methods listed inside the table on the <a href="https://billo-guides.github.io/cfw/swsh/overworld">main page</a>. Consider date skipping to advance large distances.</li><p></p>
@@ -196,14 +197,17 @@ permalink: /cfw/swsh/overworld/fishing
         <li>Then type your target frame into the <code span class="fw-bold">+</code> field and search, factor in the delay that was calculated earlier (Example: <code span class="fw-bold">1000 (target) - 3 (delay) = 997 (new target)</code>).</li><p></p>
       </ul>
 
-      <blockquote>If you are unable to find your target frame in the search results, use animations to advance the RNG state by 1, repeat until your target frame is visible inside the Menu Close Advances Viewer window.<br><br>
-
-        If you cannot hit your target frame using menu close prediction, use it to get as close as you can. Afterwards you can use an alternative advancement method (e.g player movement) to hit your target frame.</blockquote>
+      <blockquote>If you are unable to find your target frame in the search results, use animations to advance the RNG state by 1, click the <code span class="fw-bold">Update States</code> button on the main window & repeat the above step. Do this until your target frame is visible.</blockquote>
 
       <ul>
-        <li>Open and close the pause menu until closing the menu a single time lands onto your target frame, according to the <code span class="fw-bold">Menu Close Advances Viewer</code> prediction.</li><p></p>
-        <li>Close the pause menu and run around close to the pond to spawn the fishing pool (without letting the stick rest as this will advance the RNG state). </li><p></p>
-        <li>Confirm you have hit the expected result by initiating the encounter, then clicking the <code span class="fw-bold">Read Encounter</code> button when in battle.</li>
+        <li>If it is possible to land directly onto your target frame using menu close prediction, open and close the pause menu until closing the pause menu a single time will land you onto your target frame.</li><p></p>
+        <li>If you cannot hit your target using menu close prediction, get as close as you can using this method. You will then need to be ready to use movement animations to hit your target after the final unpause instead.</li>
+      </ul>
+
+      <blockquote>Be sure to test how many advancements occur from movement to get an idea of how many movements you need to do to hit the target frame. Typically a single movement will advance 1-2 frames depending on your location.</blockquote>
+
+      <ul>
+        <li>Close the pause menu (do movement advancements here if necessary). Once you have landed onto your target frame, quickly run around without letting go of the control stick to spawn the fishing pool, then fish the Pokémon to initiate a battle.</li>
       </ul>
 
       <blockquote>If you encountered an unexpected result, this either means you missed your target frame (too slow), the encounter did not spawn on time, or your delay is incorrect. Confirm your delay using the <a href="#delay-npc-count-symbol-cfw">above mentioned method</a> and retry.</blockquote>
@@ -226,4 +230,3 @@ permalink: /cfw/swsh/overworld/fishing
     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
   </svg>
 </a>
-
