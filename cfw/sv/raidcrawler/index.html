@@ -40,21 +40,20 @@ permalink: /cfw/sv/raidcrawler/
 <u>You will need:</u>
 <ul>
   <li><a href="https://github.com/LegoFigure11/RaidCrawler/releases/">RaidCrawler</a> - Latest release</li>
-  <li><a href="https://github.com/olliz0r/sys-botbase/releases/">sys-botbase</a> - Latest release</li>
   <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/7.0">.NET 7.0</a> - Program dependency</li>
 </ul>
 
 <u>Installation Instructions:</u>
 <ol>
   <li>Download and extract all the contents from the <code class="fw-bold">RaidCrawler.zip</code> into an empty folder.</li>
-  <li>Download and extract all the contents from the <code class="fw-bold">sys-botbase</code> download then move the <code class="fw-bold">atmosphere</code> folder to the root of your Switch SD card.</li>
+  <li>Move the <code class="fw-bold">atmosphere</code> folder to the root of your Switch SD card then reboot the console.</li>
   <li>Download .NET 7.0 SDK and run <code class="fw-bold">dotnet-sdk-7.0.x-win-x64.exe</code>, then go through the setup instructions.</li>
 </ol>
 
 <details>
   <summary><u>Unsure why you need extra components?</u></summary>
   <ul>
-    <li>sys-botbase is a Switch system module which allows the console to communicate with your computer, RaidCrawler is unable to connect to your console without sys-botbase properly installed.</li>
+    <li>The <code class="fw-bold">atmosphere</code> folder bundled with RaidCrawler is a custom version of sys-botbase developed by <a href="https://github.com/zyro670">Zyro670</a>. Sys-botbase is required as it allows your Switch console to communicate with your computer.</li>
     <li>.NET 7.0 SDK is a program dependency, RaidCrawler will be unable to launch without this installed.</li>
   </ul>
 </details>
@@ -154,7 +153,7 @@ permalink: /cfw/sv/raidcrawler/
 
     <p>There are 6 tabs inside this sub window (as seen in Figure 3), these are:</p>
     <ul>
-      <li><code class="fw-bold">General</code> - For changing game information such as story progress.</li>
+      <li><code class="fw-bold">General</code> - Shows game information such as story progress.</li>
       <li><code class="fw-bold">Match</code> - Decide how you want to be notified when a result has been found.</li>
       <li><code class="fw-bold">Advance Date</code> - For making changes to parts of the date skipping routine.</li>
       <li><code class="fw-bold">Webhooks</code> - Hook RaidCrawler up to your discord server using Webhooks.</li>
@@ -163,58 +162,55 @@ permalink: /cfw/sv/raidcrawler/
     </ul>
 
     <p>For a tutorial on how to set up Discord Webhook integration, visit <a href="https://docs.google.com/document/d/1XDw_sPBv7AfYDiAzZdYie11ZXpw2inG0zOuMp9gRY5o/edit?usp=sharing">this Google document</a> (written by caleb#2080)</p>
-
-    <p><b>Note:</b> As of Version 1.1.0, the information inside the <code class="fw-bold">General</code> tab is filled automatically upon connecting to the program, <u>do not change these values after connecting</u> as this will produce inaccurate
-      results.</p>
     <hr />
 
     <h6 span class="fw-bold">Date Skipping:</h6>
 
-    <p>Pressing the <code class="fw-bold">Advance Date</code> button on the main window will initiate the date skipping routine, this will take over your console and enter system settings to change the current date automatically, by doing so, all of
-      the active raids on the map will be refreshed and ready to be re-scanned. This process will be repeated until a desired result has been found.</p>
+    <p>With the help of sys-botbase, RaidCrawler is able to take over the console and perform automated date advancements. By doing so, all of the active raids will be refreshed & re-scanned. This process is repeated until a desired result has been found.</p>
 
-    <p>The <code class="fw-bold">Advance Date</code> tab of the settings sub window is used for making changes to the date skipping routine if it is not working for you. In any case it is best to make sure your connection is completely stable before
-      making any changes to the routine.</p>
+    <p>Pressing the <code class="fw-bold">Advance Date</code> button on the main window will initiate the date skipping routine, the method used will be based on what has been selected inside the <code class="fw-bold">Advance Date</code> tab of the <code class="fw-bold">Settings</code> window. There are multiple different options available to choose from.</p>
 
-    <p>The default routine is configured for generic V1 Switch consoles, if you are using a Lite or an OLED, or are having any inconsistencies using the overshoot setting on any type of console when using the default routine, you will need to change the value inside <code class="fw-bold">Time to hold to overshoot "Date and Time"</code> or use DDOWN inputs instead.
-    </p>
+    <ol>
+      <li>Zyros' method is the most time optimal method, this utilizes a <a href="https://github.com/zyro670/usb-botbase">custom sys-botbase fork</a> to perform advancements, capable of completing a scan every 5 seconds.</li>
+      <li>Touch screen inputs is the second quickest (but less consistent) method of date skipping using the Switch system settings.</li>
+      <li>DDown inputs is the default method that is slower (but more consistent) than the touch screen input method.</li>
+    </ol>
 
-    <div class="col">
-      <table class="table table-striped">
-        <thead class="table-dark">
-          <tr>
-            <th scope="col" class="col-5">Console</th>
-            <th scope="col" class="col-5">Suggested Overshoot Value</th>
-          </tr>
-        </thead>
-        <tbody id="results">
-          <tr>
-            <td class="fw-bold">Switch V1/V2</td>
-            <td>900-950</td>
-          </tr>
-          <tr>
-            <td class="fw-bold">Switch Lite</td>
-            <td>800</td>
-          </tr>
-          <tr>
-            <td class="fw-bold">Switch OLED</td>
-            <td>950</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <p>For Zyros' date advancement method, Date & Time must be synced via the internet inside the Switch system settings. All controllers must also be disconnected from the console before beginning pressing the <code class="fw-bold">Advance Date</code> button on the main window.</p>
 
-    <details>
-      <summary span class="fw-bold">Troubleshooting:</summary>
-      <ul>
-        <li>Make sure that all controlers are desynced before clicking the <code class="fw-bold">Advance Date</code> button on the main window.</li>
-        <li>If you run into problems with the routine not performing as intended, edit the appropriate values inside the <code class="fw-bold">Advance Date</code> tab of the settings sub window.</li>
-        <li>You will need to use your eyes to inspect exactly what is going wrong with the routine in order to understand which fields need to be edited.</li>
-        <li>Disable any experimental features and stick to a more stable routine (e.g disable experimental touch screen inputs and overshoot)</li>
-        <li>Make sure your connection is stable before clicking the <code class="fw-bold">Advance Date</code> button, as stated above.</li>
-      </ul>
-    </details>
-    <p></p>
+     <details>
+      <summary><span class="fw-bold">System settings advancements setup:</span></summary>
+
+      <p>The default routine is configured for generic V1 Switch consoles, if you are using a Lite or an OLED, or are having any inconsistencies using the overshoot setting on any type of console when using the default routine, you will need to change the value inside <code class="fw-bold">Time to hold to overshoot "Date and Time"</code> or use DDOWN inputs instead.</p>
+
+      <p>Date & Time must not be synced by the internet if you are using this method. All controllers must also be disconnected from the console before beginning pressing the <code class="fw-bold">Advance Date</code> button on the main window.</p>
+
+        <div class="col">
+          <table class="table table-striped">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col" class="col-5">Console</th>
+                <th scope="col" class="col-5">Suggested Overshoot Value</th>
+              </tr>
+            </thead>
+            <tbody id="results">
+              <tr>
+                <td class="fw-bold">Switch V1/V2</td>
+                <td>900-950</td>
+              </tr>
+              <tr>
+                <td class="fw-bold">Switch Lite</td>
+                <td>800</td>
+              </tr>
+              <tr>
+                <td class="fw-bold">Switch OLED</td>
+                <td>950</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+     </details>
   </div>
 </div><br />
 
