@@ -119,14 +119,14 @@ permalink: /retail/la/legendary/spawner-rng/getting-started
    <p>This section of the guide aims to provide a step-by-step guide of the start to finish process for Spawner RNG abuse. You can follow along if you do not already have complete understanding of how to use the RNG scripts or advance towards a result.</p>
 
    <span class="fw-bold">Figure 1 -</span> How To Use - Seed Solver Script<p></p>
-   <img src="/retail/la/spawner/images/how-to-use-seed-solver.gif" style="width:675px;height:400px;"><br /><br />
+   <a href="/retail/la/spawner/images/how-to-use-seed-solver.gif" target="_blank"><img src="/retail/la/spawner/images/how-to-use-seed-solver.gif" style="width:675px;height:400px;"></a><br /><br />
 
    <p>First, dump the two necessary .pa8 files of the Pokemon you are hunting using the <a href="#currentseedretail">above mentioned method</a>, then place them into the <code class="fw-bold">pa8</code> folder that was created earlier, check that the path is correct, then run the script after doing so.</p>
     
    <p>After a short wait you should now see that a group seed has been produced, copy it, this seed is the seed that the Calculation Script will need to calculate the upcoming advancements of the Pokemon on the spawner that you are searching.</p>
 
    <span class="fw-bold">Figure 2 -</span> How To Use - RNG Calculation Script<p></p>
-   <img src="/retail/la/spawner/images/how-to-use-calculator.gif" style="width:675px;height:400px;"><br /><br />
+   <a href="/retail/la/spawner/images/how-to-use-calculator.gif" target="_blank"><img src="/retail/la/spawner/images/how-to-use-calculator.gif" style="width:675px;height:400px;"></a><br /><br />
 
    <p>Copy the group seed that was produced by the Seed Solver Script, then paste it into the Spawner RNG Calculation Script on the line that starts with <code class="fw-bold">ulong group_seed = 0x</code> (located towards the top of the script).</p> 
     
@@ -140,7 +140,7 @@ permalink: /retail/la/legendary/spawner-rng/getting-started
     </div><p></p>
 
    <span class="fw-bold">Figure 3 -</span> Setting Filters - Calculation Script<p></p>
-   <img src="/retail/la/spawner/images/setting-filters-calculator-script.gif" style="width:675px;height:400px;"><br /><br />
+   <a href="/retail/la/spawner/images/setting-filters-calculator-script.gif" target="_blank"><img src="/retail/la/spawner/images/setting-filters-calculator-script.gif" style="width:675px;height:400px;"></a><br /><br />
 
    <p>To search for flawless IV spreads, activate the filters found towards the bottom of the script. By default the IV filters will be disabled and will need to be activated manually, this can be done by removing the comments (<code class="fw-bold" style="color: #0a7a00;">*/</code>) that surround the IV filters at the top and the bottom.</p>
 
@@ -149,21 +149,21 @@ permalink: /retail/la/legendary/spawner-rng/getting-started
    <p>If your search result is not desirable or you do not find any results when searching with filters, you will need to return to Jubilife then back to the map that contains the legendary you are hunting in order to refresh the seed, then find your current seed again (see Figure 1).</p>
    
    <span class="fw-bold">Figure 4 -</span> Target Found!<p></p>
-   <img src="/retail/la/spawner/images/target-found-spawner.png" style="width:675px;height:400px;"><br /><br />
+   <a href="/retail/la/spawner/images/target-found-spawner.png" target="_blank"><img src="/retail/la/spawner/images/target-found-spawner.png" style="width:675px;height:400px;"></a><br /><br />
 
    <p>We will be searching for any Enamorus with an speed IV value of 0, In the above image, we can see that there is an Enamorus that matches this description in 5 advances! This means we will need to knock out and respawn Enamorus 5 times to hit the correct target frame.</p>
 
    <p>Advance the RNG state using the <a href="#advancingrngstate">above mentioned method</a>. Enamorus is one of the Pokemon that will despawn when defeated, so we will will need to follow the "despawns when defeated" steps in order to effectively respawn it.</p>
 
    <span class="fw-bold">Figure 5 -</span> Result Found!<p></p>
-   <img src="/retail/la/spawner/images/result-found-spawner.jpg" style="width:675px;height:400px;"><br /><br />
+   <a href="/retail/la/spawner/images/result-found-spawner.jpg" target="_blank"><img src="/retail/la/spawner/images/result-found-spawner.jpg" style="width:675px;height:400px;"></a><br /><br />
 
    <p>After advancing 5 frames we have now reached our target frame and found the Enamorus that is believed to have an speed IV value of 0!</p>
     
    <p>Legends: Arceus has no way to check the exact IV values in-game, this means you will need to confirm the IVs of the Pokemon by either dumping it using a Sysbot or viewing it inside Pokemon HOME.</p>
 
    <span class="fw-bold">Figure 6 -</span> IV confirmation<p></p>
-   <img src="/retail/la/spawner/images/iv-confirmation-spawner.png" style="width:675px;height:400px;"><br /><br />
+   <a href="/retail/la/spawner/images/how-to-use-seed-solver.gif" target="_blank"><img src="/retail/la/spawner/images/iv-confirmation-spawner.png" style="width:675px;height:400px;"></a><br /><br />
 
    <p>After dumping the Enamorus using Sysbot.NET and viewing the file in PKHeX, we have confirmed that the IVs & nature match what was produced by the script, mission accomplished!</p>
 

@@ -5,124 +5,153 @@ permalink: /cfw/la/legendary/main-rng/origin-legend
 ---
 
 <style>
-  mark {
-    background-color: #FFD700;
-    color: black;
-  }
+    mark {
+        background-color: #FFD700;
+        color: black;
+    }
 
-  .card-bg {
-    background-color: #d1d1d1;
-    border-bottom-right-radius: 0.20rem !important;
-    border-bottom-left-radius: 0.20rem !important;
-  }
+    .card-bg {
+        background-color: #d1d1d1;
+        border-bottom-right-radius: 0.20rem !important;
+        border-bottom-left-radius: 0.20rem !important;
+    }
 
-  table,
-  th,
-  td {
-    border: 1px solid black;
-  }
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
 </style>
 
 <div class="title" style="background-color: #0c0038;">
-  <h1 class="text-light text-center pt-3 pb-3">Origin Dialga/Palkia RNG Abuse</h1>
-</div><hr />
+    <h1 class="text-light text-center pt-3 pb-3">Origin Dialga/Palkia RNG Abuse</h1>
+</div>
+<hr />
 
 <p>This section of the guide aims to provide a worked example for how to RNG abuse the Origin Form Legendary Pokemon, Dialga/Palkia.</p>
 
 <p><span class="fw-bold" style="color: #b60606;">If you have made it this far, you should already have the initial setup completed and have a general understanding of how to use Moarencounterbots and the RNG calculation scripts, as well as understanding how to use PKHeX/Livehex to view Pokemon.</span></p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/legendary/main-rng">
-  Don't understand how to use the tools/scripts yet? <span class="fw-bold">Click here to go back</span>!
-  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-  </svg>
-</a><br>
+    Don't understand how to use the tools/scripts yet? <span class="fw-bold">Click here to go back</span>!
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+<br>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="pickingyourmethod">
-    <span class="fw-bold text-light">Picking Your Method:</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>Pick the method you wish to use for this encounter, Dialga/Palkia are generated at different times depending on the method used. There are two possible methods, these will be named <u>Cutscene Method</u> & <u>Death Method</u>.</p>
-      
-    <p><span class="fw-bold">Read the descriptions below and choose a method based on your skill level, then click on one of the hyperlinks to get started.</span></p><hr />
+    <div class="anchored card-header" style="background-color: #0c0038;" id="pickingyourmethod">
+        <span class="fw-bold text-light">Picking Your Method:</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Pick the method you wish to use for this encounter, Dialga/Palkia are generated at different times depending on the method used. There are two possible methods, these will be named <u>Cutscene Method</u> & <u>Death Method</u>.</p>
 
-    <h5><a href="#cutscenemethod">Cutscene Method:</a></h5>
-    <p>This method involves skipping a cutscene in order to engage a battle with Dialga/Palkia. They will be generated when you enter the boss battle from the cutscene.</p>
+        <p><span class="fw-bold">Read the descriptions below and choose a method based on your skill level, then click on one of the hyperlinks to get started.</span></p><hr />
 
-    <p>You need to be able to consistently defeat the boss battle without dying. Losing to the boss will force the Pokemon to regenerate and you will miss your target frame.</p><hr />
+        <h5><a href="#cutscenemethod">Cutscene Method:</a></h5>
+        <p>This method involves skipping a cutscene in order to engage a battle with Dialga/Palkia. They will be generated when you enter the boss battle from the cutscene.</p>
 
-    <h5><a href="#deathmethod">Death Method:</a></h5>
-    <p>This method involves dying towards the end of the battle with Dialga/Palkia. They will be regenerated when you re-enter the battle from the continue screen.</p>
+        <p>You need to be able to consistently defeat the boss battle without dying. Losing to the boss will force the Pokemon to regenerate and you will miss your target frame.</p><hr />
 
-    <p>This method is more forgiving as you are allowed to lose to the boss battle without missing your target, but will involve waiting for a longer time period before reaching your target frame.</p>
+        <h5><a href="#deathmethod">Death Method:</a></h5>
+        <p>This method involves dying towards the end of the battle with Dialga/Palkia. They will be regenerated when you re-enter the battle from the continue screen.</p>
 
-  </div>
-</div><br>
+        <p>This method is more forgiving as you are allowed to lose to the boss battle without missing your target, but will involve waiting for a longer time period before reaching your target frame.</p>
+
+    </div>
+</div>
+<br>
 
 <hr /><div class="title" style="background-color: #0c0038;" id="cutscenemethod">
-  <h1 class="text-light text-center pt-3 pb-3">Cutscene Method</h1>
-</div><hr />
+    <h1 class="text-light text-center pt-3 pb-3">Cutscene Method</h1>
+</div>
+<hr />
 
 <p>If you are reading this text you have decided to use the Cutscene Method, here you can find a worked example of how to RNG abuse Origin Dialga/Palkia using this method.</p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="delaycalccutscenemethod">
-    <span class="fw-bold text-light">Getting Started:</span>
-  </div>
-  <div class="card-body card-bg">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="delaycalccutscenemethod">
+        <span class="fw-bold text-light">Getting Started:</span>
+    </div>
+    <div class="card-body card-bg">
 
-    <p>You will need to calculate the rough delay for this encounter. The term "delay" is used to describe how long it take for the Pokemon to generate after the final A Press. The amount of frames that advance during the cutscene is variable, so it is important to take a few practice attempts to figure out a delay that is consistent for you.</p>
+        <p>You will need to calculate the rough delay for this encounter. The term "delay" is used to describe how long it take for the Pokemon to generate after the final A Press. The number of frames that advances during the cutscene is variable, so it is important to take a few practice attempts to figure out a delay that is consistent for you.</p>
 
-    <p>It is recommended to <u>disable Autosave</u> and have <u>a full team of 6 Pokemon</u> so that our target Pokemon is sent to boxes. Sending the Pokemon to boxes will make it easier to view using Livehex (viewable when the credits roll begins instead of after the credits).</p><hr />
+        <p>It is recommended to <u>disable Autosave</u> and have <u>a full team of 6 Pokemon</u> so that your target Pokemon is sent to boxes. Sending the Pokemon to boxes will make it easier to view using Livehex (viewable when the credits roll begins instead of after the credits).</p><hr />
 
-    <h5><span class="fw-bold">Calculating Delay (Step-By-Step)</span></h5>
-     <ul>
-       <li>Open the game and enter the cutscene before the boss battle, then press the <code span class="fw-bold">A button</code> until you reach the screen of the final A press. (<a href="/cfw/la/general/images/main-rng/origin/final-a-press-cutscene-method.jpg">This screen</a>!)</li>
-       <li>Enter the Switch home menu to freeze the RNG state, then check your current seed by running <code span class="fw-bold">EncBotCopySeedLA</code> in Moarencounterbots.</li>
-       <li>Paste in your current seed into the RNG script, then search without filters. This will provide the starting frame.</li>
-       <li>Press the <code span class="fw-bold">Home button (⌂)</code> again to unpause the game and quickly press the <code span class="fw-bold">A button</code>. The cutscene will begin and then fade out to a black screen.</li>
-       <li>Once the next part of the cutscene loads, attempt to skip it as fast as possible by pressing the <code span class="fw-bold">+ button</code> followed by the <code span class="fw-bold">X button</code>.</li>
-       <li>Defeat the boss and inspect it using PKHeX/Livehex to find the frame it was generated on. That will be your delay for this attempt.</li>
-    </ul>
-    <small><span class="fw-bold">Remember:</span> Losing the boss battle will cause the boss to regenerate, this means your delay will not be accurate, make sure you have the skill to defeat the boss in one attempt or consider using the <a href="#deathmethod">Death Method</a> instead.</small>
-  </div>
-</div><br>
+        <h5><span class="fw-bold">Calculating Delay (Step-By-Step)</span></h5>
+        <ul>
+            <li>Open the game and enter the cutscene before the boss battle, then press the <code span class="fw-bold">A button</code> until you reach the screen of the final A press. (<a href="/cfw/la/general/images/main-rng/origin/final-a-press-cutscene-method.jpg" target="_blank">This screen</a>!)</li>
+            <li>From here, pick the method you want to use. There are two methods to approach this: 1) Try to skip the cutscene as soon as possible, or 2) Wait for a particular part of the cutscene before skipping.</li>
+        </ul>
+
+        <h6><span class="fw-bold">Method 1 (Immediate Cutscene Skip)</span></h6>
+        This method is simpler since you only target one delay, but will require you to be consistent at skipping the cutscene.
+        <ul>
+            <li>Enter the Switch home menu to freeze the RNG state, then check your current seed by running <code span class="fw-bold">EncBotCopySeedLA</code> in Moarencounterbots.</li>
+            <li>Paste your current seed into the RNG script, then search without filters. This will provide the starting frame.</li>
+            <li>Press the <code span class="fw-bold">Home button (⌂)</code> to unpause the game and quickly press the <code span class="fw-bold">A button</code>. The cutscene will begin and then fade out to a black screen.</li>
+            <li>Once the next part of the cutscene loads, attempt to skip it as fast as possible by pressing the <code span class="fw-bold">+ button</code> followed by the <code span class="fw-bold">X button</code>.</li>
+            <li>Defeat the boss and inspect it using PKHeX/Livehex to find the frame it was generated on. That will be your delay for this attempt.</li>
+        </ul>
+
+        <h6><span class="fw-bold">Method 2 (Targeted Cutscene Skip)</span></h6>
+        The second method may be more consistent, but requires approximating the first delay in order to more precisely hit a second delay. The suggested timing is to press A at a delay of about 110-120 on the screen with Commander Kamado, then wait to skip the cutscene until you are approximately 0-5 away from your target. We'll calibrate the second delay here since the first one does not need to be very precise.
+        <ul>
+            <li>Connect <code span class="fw-bold">EncBotRNGMonitorLA</code> in Moarencounterbots. Set <code span class="fw-bold">BotEncounter > EncounterLA > MonitorRefreshRate</code> to 0.</li>
+            <li>Press the <code span class="fw-bold">Home button (⌂)</code> to unpause the game and press the <code span class="fw-bold">A button</code> to start the cutscene. (This is the A press that you'll normally perform 110-120 before your target).</li>
+            <li>Press the <code span class="fw-bold">+ button</code> to open the option to skip the cutscene.
+            <li>Wait for approximately 110-130 advances to go past on RNG Monitor to enter a slower part of the cutscene, then press <code span class="fw-bold">Home button (⌂)</code> to pause the game.</li>
+            <li>Check your current seed by running <code span class="fw-bold">EncBotCopySeedLA</code> in Moarencounterbots.</li>
+            <li>Paste your current seed into the RNG script, then search without filters. This will provide the starting frame.</li>
+            <li>Press the <code span class="fw-bold">Home button (⌂)</code> to unpause the game and quickly press the <code span class="fw-bold">X button</code> to skip the cutscene.</li>
+            <li>Defeat the boss and inspect it using PKHeX/Livehex to find the frame it was generated on. That will be your delay for this attempt.</li>
+        </ul>
+
+        <small><span class="fw-bold">Remember:</span> Losing the boss battle will cause the boss to regenerate, which will make your delay inaccurate. Make sure you can defeat the boss in one attempt or consider using the <a href="#deathmethod">Death Method</a> instead.</small>
+    </div>
+</div>
+<br>
+
+<p>The example will continue with the Immediate Cutscene Skip method, but you can use the Targeted Cutscene Skip in a similar fashion.</p>
 
 <span class="fw-bold">Figure 1 -</span> Calculating Delay (Cutscene Method)<p></p>
-<img src="/cfw/la/general/images/main-rng/origin/delay-calc-origin-cutscene-method.png" style="width:675px;height:400px;"><br /><br />
+<a href="/cfw/la/general/images/main-rng/origin/delay-calc-origin-cutscene-method.png" target="_blank"><img src="/cfw/la/general/images/main-rng/origin/delay-calc-origin-cutscene-method.png" style="width:675px;height:400px;"></a>
+<br />
+<br />
 
 <p>After following the delay calculation steps, after searching for the PID of the Palkia we hit and matching the IVs/Nature, we can see that it was generated on frame 58. This means our delay for this attempt is 58. After 5 attempts we have the following delay values:</p>
 
 <table class="table table-striped" style="width:100%">
-  <thead class="table text-white" style="background-color: #0c0038;">
-      <th scope="col">Attempt</th>
-      <th scope="col">Delay Value</th>
-   </tr>
-       </thead>
-       <tbody>
+    <thead class="table text-white" style="background-color: #0c0038;">
+    <th scope="col">Attempt</th>
+    <th scope="col">Delay Value</th>
+    </tr>
+    </thead>
+    <tbody>
         <tr>
-          <td><span class="fw-bold">Attempt 1</span></td>
-          <td>58</td>
+            <td><span class="fw-bold">Attempt 1</span></td>
+            <td>58</td>
         </tr>
         <tr>
-          <td><span class="fw-bold">Attempt 2</span></td>
-          <td>57</td>
+            <td><span class="fw-bold">Attempt 2</span></td>
+            <td>57</td>
         </tr>
         <tr>
-          <td><span class="fw-bold">Attempt 3</span></td>
-          <td>65</td>
+            <td><span class="fw-bold">Attempt 3</span></td>
+            <td>65</td>
         </tr>
         <tr>
-          <td><span class="fw-bold">Attempt 4</span></td>
-          <td>62</td>
+            <td><span class="fw-bold">Attempt 4</span></td>
+            <td>62</td>
         </tr>
         <tr>
-          <td><span class="fw-bold">Attempt 5</span></td>
-          <td>58</td>
+            <td><span class="fw-bold">Attempt 5</span></td>
+            <td>58</td>
         </tr>
 
-     </tbody>
+    </tbody>
 </table>
 
 <p>This means a safe delay value to target in future attempts is 58-65. The delay values shown here are based on how quickly I was able to skip the cutscene and enter the battle with Palkia, your values may vary if you skip the cutscene at a different speed, or do not skip the cutscene at all.</p>
@@ -130,105 +159,121 @@ permalink: /cfw/la/legendary/main-rng/origin-legend
 <p><span class="fw-bold">Now that we have a rough delay, it's time to get to work on finding a suitable seed and target frame!</span></p>
 
 <span class="fw-bold">Figure 2 -</span> Setting Filters<p></p>
-<img src="/cfw/la/general/images/main-rng/origin/filters-origin-cutscene-method.gif" style="width:675px;height:400px;"><br /><br />
+<a href="/cfw/la/general/images/main-rng/origin/filters-origin-cutscene-method.gif" target="_blank"><img src="/cfw/la/general/images/main-rng/origin/filters-origin-cutscene-method.gif" style="width:675px;height:400px;"></a>
+<br />
+<br />
 
 <p>In this example the filters are set to search for any Palkia with 6 perfect IVs (31/31/31/31/31/31), you can be more specific with the filters if you wish, such as filtering for a specific nature, or optimal 0 IV values such as 0 Atk.</p>
 
 <span class="fw-bold">Figure 3 -</span> Target Frame Found<p></p>
-<img src="/cfw/la/general/images/main-rng/origin/target-frame-found-origin-cutscene-method.gif" style="width:675px;height:400px;"><br /><br />
+<a href="/cfw/la/general/images/main-rng/origin/target-frame-found-origin-cutscene-method.gif" target="_blank"><img src="/cfw/la/general/images/main-rng/origin/target-frame-found-origin-cutscene-method.gif" style="width:675px;height:400px;"></a>
+<br />
+<br />
 
 <p>Great! We found a 6IV Docile Palkia in 24,864 advances in a cluster of 4, a cluster is a group of frames that produce the same end result, the larger the cluster the more chances you have of hitting the correct target frame.</p>
 
-<p>We now need to advance to close to our target frame, monitor your RNG state by running <code span class="fw-bold">EncBotRNGMonitorLA</code> in Moarencounterbots, this will track the amount of advancements that have occured in real time.</p>
-  
+<p>We now need to advance to close to our target frame, monitor your RNG state by running <code span class="fw-bold">EncBotRNGMonitorLA</code> in Moarencounterbots, this will track the amount of advancements that have occurred in real time.</p>
+
 <span class="fw-bold">Figure 4 -</span> RNG State Monitoring Using EncBotRNGMonitorLA<p></p>
-<img src="/cfw/la/general/images/main-rng/origin/rng-state-monitoring.gif" style="width:675px;height:400px;"><br /><br />
+<a href="/cfw/la/general/images/main-rng/origin/rng-state-monitoring.gif" target="_blank"><img src="/cfw/la/general/images/main-rng/origin/rng-state-monitoring.gif" style="width:675px;height:400px;"></a>
+<br />
+<br />
 
 <p>The RNG state at the Spear Pillar advances at a slow rate. By moving to a more populated area you can advance the RNG state at a much quicker rate, in the example image above the player is stood next to a large body of water in an area that is densely populated with Pokemon.</p>
 
 <p>Consider leaving Spear Pillar and heading somewhere where the RNG state advances more rapidly if you need to cover a large amount of frame advancements. <span class="fw-bold">If you have moved location, leave enough time to reposition yourself to avoid overshooting!</span></p>
 
 <span class="fw-bold">Figure 5 -</span> Advancing To The Target<p></p>
-<img src="/cfw/la/general/images/main-rng/origin/advancing-to-target-cutscene-method.gif" style="width:675px;height:400px;"><br /><br />
+<a href="/cfw/la/general/images/main-rng/origin/advancing-to-target-cutscene-method.gif" target="_blank"><img src="/cfw/la/general/images/main-rng/origin/advancing-to-target-cutscene-method.gif" style="width:675px;height:400px;"></a>
+<br />
+<br />
 
-<p>We are now back at Spear Pillar and ~2253 frames away from the target, earlier we calculated a rough delay of 58-65, which means the goal is now to press the A button on frame ~2,188-2195, then skip the cutscene as fast as possible.</p>
+<p>We are now back at Spear Pillar and ~2253 frames away from the target, earlier we calculated a rough delay of 58-65, which means the goal is now to press the A button on frame ~2188-2195, then skip the cutscene as fast as possible.</p>
 
 <p><code span class="fw-bold">2253 (target) - 58 (delay) = 2195 (new target)</code></p>
 
 <span class="fw-bold">Figure 6 -</span> Hitting The Target Frame<p></p>
-<img src="/cfw/la/general/images/main-rng/origin/hitting-target-frame-cutscene-method.png" style="width:675px;height:400px;"><br /><br />
+<a href="/cfw/la/general/images/main-rng/origin/hitting-target-frame-cutscene-method.png" target="_blank"><img src="/cfw/la/general/images/main-rng/origin/hitting-target-frame-cutscene-method.png" style="width:675px;height:400px;"></a>
+<br />
+<br />
 
 <p>Get to <a href="/cfw/la/general/images/main-rng/origin/final-a-press-cutscene-method.jpg">the screen of the final A press</a>, and let <code span class="fw-bold">EncBotRNGMonitorLA</code> run until the Logs tab displays the correct target frame, then press the <code span class="fw-bold">A button</code>, then skip the cutscene as fast as possible for the best chances of hitting the correct target frame.</p>
 
 <p><span class="fw-bold">Now it's time to defeat the boss, then inspect the Palkia using PKHeX/Livehex to see if we hit the correct target frame!</span></p>
 
 <span class="fw-bold">Figure 7 -</span> Result Found!<p></p>
-<img src="/cfw/la/general/images/main-rng/origin/result-found-origin-cutscene-method.png" style="width:675px;height:400px;"><br /><br />
+<a href="/cfw/la/general/images/main-rng/origin/result-found-origin-cutscene-method.png" target="_blank"><img src="/cfw/la/general/images/main-rng/origin/result-found-origin-cutscene-method.png" style="width:675px;height:400px;"></a>
+<br />
+<br />
 
 <p><span class="fw-bold">We hit our target frame and have secured a Palkia with 6 perfect IVs! That's all there is to it!</span></p>
 
 <hr /><div class="title" style="background-color: #0c0038;" id="deathmethod">
-  <h1 class="text-light text-center pt-3 pb-3">Death Method</h1>
-</div><hr />
+    <h1 class="text-light text-center pt-3 pb-3">Death Method</h1>
+</div>
+<hr />
 
 <p>If you are reading this text you have decided to use the Death Method, here you can find a worked example of how to RNG abuse Origin Dialga/Palkia using this method.</p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="delaycalcdeathmethod">
-    <span class="fw-bold text-light">Getting Started:</span>
-  </div>
-  <div class="card-body card-bg">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="delaycalcdeathmethod">
+        <span class="fw-bold text-light">Getting Started:</span>
+    </div>
+    <div class="card-body card-bg">
 
-    <p>You will need to calculate the rough delay for this encounter. The term "delay" is used to describe how long it take for the Pokemon to generate after the final A Press. The amount of frames that advance when re-starting the boss battle is variable, so it is important to take a few practice attempts to figure out a delay that is consistent for you.</p>
+        <p>You will need to calculate the rough delay for this encounter. The term "delay" is used to describe how long it take for the Pokemon to generate after the final A Press. The amount of frames that advance when re-starting the boss battle is variable, so it is important to take a few practice attempts to figure out a delay that is consistent for you.</p>
 
-    <p>It is recommended to <u>disable Autosave</u> and have <u>a full team of 6 Pokemon</u> so that our target Pokemon is sent to boxes. Sending the Pokemon to boxes will make it easier to view using Livehex (viewable when the credits roll begins instead of after the credits).</p><hr />
+        <p>It is recommended to <u>disable Autosave</u> and have <u>a full team of 6 Pokemon</u> so that our target Pokemon is sent to boxes. Sending the Pokemon to boxes will make it easier to view using Livehex (viewable when the credits roll begins instead of after the credits).</p><hr />
 
-    <h5><span class="fw-bold">Calculating Delay (Step-By-Step)</span></h5>
-     <ul>
-       <li>Enter the boss battle, then whittle the HP of the boss down to a single bar.</li>
-       <li>Intentionally take damage and lose the fight, go through the dialog until you reach the screen of the final A press. (<a href="/cfw/la/general/images/main-rng/origin/final-a-press-death-method.jpg">This screen</a>!)</li>
-       <li>Enter the Switch home menu to freeze the RNG state, then check your current seed by running <code span class="fw-bold">EncBotCopySeedLA</code> in Moarencounterbots.</li>
-       <li>Paste in your current seed into the RNG script, then search without filters. This will provide the starting frame.</li>
-       <li>Press the <code span class="fw-bold">Home button (⌂)</code> again to unpause the game and quickly press the <code span class="fw-bold">A button</code>. This will put you back into battle with a freshly generated boss.</li>
-       <li>Defeat the boss and inspect it using PKHeX/Livehex to find the frame it was generated on. That will be your delay for this attempt.</li>
-    </ul>
-  </div>
-</div><br>
+        <h5><span class="fw-bold">Calculating Delay (Step-By-Step)</span></h5>
+        <ul>
+            <li>Enter the boss battle, then whittle the HP of the boss down to a single bar.</li>
+            <li>Intentionally take damage and lose the fight, go through the dialog until you reach the screen of the final A press. (<a href="/cfw/la/general/images/main-rng/origin/final-a-press-death-method.jpg">This screen</a>!)</li>
+            <li>Enter the Switch home menu to freeze the RNG state, then check your current seed by running <code span class="fw-bold">EncBotCopySeedLA</code> in Moarencounterbots.</li>
+            <li>Paste in your current seed into the RNG script, then search without filters. This will provide the starting frame.</li>
+            <li>Press the <code span class="fw-bold">Home button (⌂)</code> again to unpause the game and quickly press the <code span class="fw-bold">A button</code>. This will put you back into battle with a freshly generated boss.</li>
+            <li>Defeat the boss and inspect it using PKHeX/Livehex to find the frame it was generated on. That will be your delay for this attempt.</li>
+        </ul>
+    </div>
+</div>
+<br>
 
 <span class="fw-bold">Figure 1 -</span> Calculating Delay (Death Method)<p></p>
-<img src="/cfw/la/general/images/main-rng/origin/delay-calc-origin-death-method.png" style="width:675px;height:400px;"><br /><br />
+<a href="/cfw/la/general/images/main-rng/origin/delay-calc-origin-death-method.png" target="_blank"><img src="/cfw/la/general/images/main-rng/origin/delay-calc-origin-death-method.png" style="width:675px;height:400px;"></a>
+<br />
+<br />
 
 <p>After following the delay calculation steps, after searching for the PID of the Palkia we hit and matching the IVs/Nature, we can see that it was generated on frame 4. This means our delay for this attempt is 4. After 5 attempts we have the following delay values:</p>
 
 <table class="table table-striped" style="width:100%">
-  <thead class="table text-white" style="background-color: #0c0038;">
-      <th scope="col">Attempt</th>
-      <th scope="col">Delay Value</th>
-   </tr>
-       </thead>
-       <tbody>
+    <thead class="table text-white" style="background-color: #0c0038;">
+    <th scope="col">Attempt</th>
+    <th scope="col">Delay Value</th>
+    </tr>
+    </thead>
+    <tbody>
         <tr>
-          <td><span class="fw-bold">Attempt 1</span></td>
-          <td>4</td>
+            <td><span class="fw-bold">Attempt 1</span></td>
+            <td>4</td>
         </tr>
         <tr>
-          <td><span class="fw-bold">Attempt 2</span></td>
-          <td>3</td>
+            <td><span class="fw-bold">Attempt 2</span></td>
+            <td>3</td>
         </tr>
         <tr>
-          <td><span class="fw-bold">Attempt 3</span></td>
-          <td>3</td>
+            <td><span class="fw-bold">Attempt 3</span></td>
+            <td>3</td>
         </tr>
         <tr>
-          <td><span class="fw-bold">Attempt 4</span></td>
-          <td>2</td>
+            <td><span class="fw-bold">Attempt 4</span></td>
+            <td>2</td>
         </tr>
         <tr>
-          <td><span class="fw-bold">Attempt 5</span></td>
-          <td>3</td>
+            <td><span class="fw-bold">Attempt 5</span></td>
+            <td>3</td>
         </tr>
 
-     </tbody>
+    </tbody>
 </table>
 
 <p>This means a safe delay value to target in future attempts is 2-4. The delay values shown here are based on how quickly I was able to skip the cutscene and enter the battle with Palkia, your values may vary if you skip the cutscene at a different speed, or do not skip the cutscene at all.</p>
@@ -236,45 +281,59 @@ permalink: /cfw/la/legendary/main-rng/origin-legend
 <p><span class="fw-bold">Now that we have a rough delay, it's time to get to work on finding a suitable seed and target frame!</span></p>
 
 <span class="fw-bold">Figure 2 -</span> Setting Filters<p></p>
-<img src="/cfw/la/general/images/main-rng/origin/filters-origin-cutscene-method.gif" style="width:675px;height:400px;"><br /><br />
+<img src="/cfw/la/general/images/main-rng/origin/filters-origin-cutscene-method.gif" style="width:675px;height:400px;">
+<br />
+<br />
 
 <p>In this example the filters are set to search for any Palkia with 6 perfect IVs (31/31/31/31/31/31), you can be more specific with the filters if you wish, such as filtering for a specific nature, or optimal 0 IV values such as 0 Atk.</p>
 
 <span class="fw-bold">Figure 3 -</span> Target Frame Found<p></p>
-<img src="/cfw/la/general/images/main-rng/origin/target-frame-found-origin-death-method.gif" style="width:675px;height:400px;"><br /><br />
+<a href="/cfw/la/general/images/main-rng/origin/target-frame-found-origin-death-method.gif" target="_blank"><img src="/cfw/la/general/images/main-rng/origin/target-frame-found-origin-death-method.gif" style="width:675px;height:400px;"></a>
+<br />
+<br />
 
 <p>Great! We found a 6IV Hardy Palkia in 49,350 advances in a cluster of 9, a cluster is a group of frames that produce the same end result, the larger the cluster the more chances you have of hitting the correct target frame.</p>
 
-<p>We now need to advance to close to our target frame, monitor your RNG state by running <code span class="fw-bold">EncBotRNGMonitorLA</code> in Moarencounterbots, this will track the amount of advancements that have occured in real time.</p>
-  
+<p>We now need to advance to close to our target frame, monitor your RNG state by running <code span class="fw-bold">EncBotRNGMonitorLA</code> in Moarencounterbots, this will track the amount of advancements that have occurred in real time.</p>
+
 <span class="fw-bold">Figure 4 -</span> RNG State Monitoring Using EncBotRNGMonitorLA<p></p>
-<img src="/cfw/la/general/images/main-rng/origin/rng-state-monitoring.gif" style="width:675px;height:400px;"><br /><br />
+<a href="/cfw/la/general/images/main-rng/origin/rng-state-monitoring.gif" target="_blank"><img src="/cfw/la/general/images/main-rng/origin/rng-state-monitoring.gif" style="width:675px;height:400px;"></a>
+<br />
+<br />
 
 <p>The RNG state at the Spear Pillar advances slowly. By moving to a more populated area you can advance the RNG state at a much quicker rate, for example in an area heavily populated with wild Pokemon, or next to a body of water.</p>
 
 <p><span class="fw-bold">It can take between 1000-5,000 advancements to whittle it down to a single bar of HP depending on your skill level. Leave yourself enough time to head back to Spear Pillar and whittle down the boss' HP bar to ensure you do not overshoot the target.</span></p>
 
 <span class="fw-bold">Figure 5 -</span> Advancing To The Target<p></p>
-<img src="/cfw/la/general/images/main-rng/origin/advancing-to-target-death-method.gif" style="width:675px;height:400px;"><br /><br />
+<a href="/cfw/la/general/images/main-rng/origin/advancing-to-target-death-method.gif" target="_blank"><img src="/cfw/la/general/images/main-rng/origin/advancing-to-target-death-method.gif" style="width:675px;height:400px;"></a>
+<br />
+<br />
 
 <p>We have relocated to Spear Pillar and are ~3000 frames away from the target frame, we are now ready to engage in a battle against the boss.</p>
 
 <span class="fw-bold">Figure 6 -</span> Getting Into Position<p></p>
-<img src="/cfw/la/general/images/main-rng/origin/getting-into-position-death-method.jpg" style="width:675px;height:400px;"><br /><br />
+<a href="/cfw/la/general/images/main-rng/origin/getting-into-position-death-method.jpg" target="_blank"><img src="/cfw/la/general/images/main-rng/origin/getting-into-position-death-method.jpg" style="width:675px;height:400px;"></a>
+<br />
+<br />
 
 <p>The boss is down to a single bar of HP and we are close to the target frame, it's time to let the boss win by taking damage until the trainer blacks out.</p>
 
 <p>Get to <a href="/cfw/la/general/images/main-rng/origin/final-a-press-death-method.jpg">the screen of the final A press</a>, and let <code span class="fw-bold">EncBotRNGMonitorLA</code> run until the Logs tab displays the correct target frame, then press the A button to regenerate the boss as quickly as possible for the best chance of success.</p>
 
 <span class="fw-bold">Figure 7 -</span> Hitting The Target Frame<p></p>
-<img src="/cfw/la/general/images/main-rng/origin/hitting-target-frame-death-method.png" style="width:675px;height:400px;"><br /><br />
+<a href="/cfw/la/general/images/main-rng/origin/hitting-target-frame-death-method.png" target="_blank"><img src="/cfw/la/general/images/main-rng/origin/hitting-target-frame-death-method.png" style="width:675px;height:400px;"></a>
+<br />
+<br />
 
 <p>Subtract the delay from the target frame to calculate the frame of the final A press, earlier we calculated a rough delay of 3, and the target frame after re-checking the current seed is 779, this means the frame we should aim to press the A button on is 776-779.</p>
 
 <p><code span class="fw-bold">779 (target frame) - 3 (rough delay) = 776 (frame to press A)</code></p>
 
 <span class="fw-bold">Figure 8 -</span> Result Found!<p></p>
-<img src="/cfw/la/general/images/main-rng/origin/result-found-origin-death-method.png" style="width:675px;height:400px;"><br /><br />
+<a href="/cfw/la/general/images/main-rng/origin/result-found-origin-death-method.png" target="_blank"><img src="/cfw/la/general/images/main-rng/origin/result-found-origin-death-method.png" style="width:675px;height:400px;"></a>
+<br />
+<br />
 
 <p>After defeating the boss we can inspect the Pokemon that generated afterwards using PKHeX/Livehex to see if we hit the correct frame!</p>
 
