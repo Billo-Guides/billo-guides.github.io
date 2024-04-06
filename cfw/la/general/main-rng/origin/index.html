@@ -76,23 +76,45 @@ permalink: /cfw/la/legendary/main-rng/origin-legend
     </div>
     <div class="card-body card-bg">
 
-        <p>You will need to calculate the rough delay for this encounter. The term "delay" is used to describe how long it take for the Pokemon to generate after the final A Press. The amount of frames that advance during the cutscene is variable, so it is important to take a few practice attempts to figure out a delay that is consistent for you.</p>
+        <p>You will need to calculate the rough delay for this encounter. The term "delay" is used to describe how long it take for the Pokemon to generate after the final A Press. The number of frames that advances during the cutscene is variable, so it is important to take a few practice attempts to figure out a delay that is consistent for you.</p>
 
-        <p>It is recommended to <u>disable Autosave</u> and have <u>a full team of 6 Pokemon</u> so that our target Pokemon is sent to boxes. Sending the Pokemon to boxes will make it easier to view using Livehex (viewable when the credits roll begins instead of after the credits).</p><hr />
+        <p>It is recommended to <u>disable Autosave</u> and have <u>a full team of 6 Pokemon</u> so that your target Pokemon is sent to boxes. Sending the Pokemon to boxes will make it easier to view using Livehex (viewable when the credits roll begins instead of after the credits).</p><hr />
 
         <h5><span class="fw-bold">Calculating Delay (Step-By-Step)</span></h5>
         <ul>
-            <li>Open the game and enter the cutscene before the boss battle, then press the <code span class="fw-bold">A button</code> until you reach the screen of the final A press. (<a href="/cfw/la/general/images/main-rng/origin/final-a-press-cutscene-method.jpg">This screen</a>!)</li>
+            <li>Open the game and enter the cutscene before the boss battle, then press the <code span class="fw-bold">A button</code> until you reach the screen of the final A press. (<a href="/cfw/la/general/images/main-rng/origin/final-a-press-cutscene-method.jpg" target="_blank">This screen</a>!)</li>
+            <li>From here, pick the method you want to use. There are two methods to approach this: 1) Try to skip the cutscene as soon as possible, or 2) Wait for a particular part of the cutscene before skipping.</li>
+        </ul>
+
+        <h6><span class="fw-bold">Method 1 (Immediate Cutscene Skip)</span></h6>
+        This method is simpler since you only target one delay, but will require you to be consistent at skipping the cutscene.
+        <ul>
             <li>Enter the Switch home menu to freeze the RNG state, then check your current seed by running <code span class="fw-bold">EncBotCopySeedLA</code> in Moarencounterbots.</li>
-            <li>Paste in your current seed into the RNG script, then search without filters. This will provide the starting frame.</li>
-            <li>Press the <code span class="fw-bold">Home button (⌂)</code> again to unpause the game and quickly press the <code span class="fw-bold">A button</code>. The cutscene will begin and then fade out to a black screen.</li>
+            <li>Paste your current seed into the RNG script, then search without filters. This will provide the starting frame.</li>
+            <li>Press the <code span class="fw-bold">Home button (⌂)</code> to unpause the game and quickly press the <code span class="fw-bold">A button</code>. The cutscene will begin and then fade out to a black screen.</li>
             <li>Once the next part of the cutscene loads, attempt to skip it as fast as possible by pressing the <code span class="fw-bold">+ button</code> followed by the <code span class="fw-bold">X button</code>.</li>
             <li>Defeat the boss and inspect it using PKHeX/Livehex to find the frame it was generated on. That will be your delay for this attempt.</li>
         </ul>
-        <small><span class="fw-bold">Remember:</span> Losing the boss battle will cause the boss to regenerate, this means your delay will not be accurate, make sure you have the skill to defeat the boss in one attempt or consider using the <a href="#deathmethod">Death Method</a> instead.</small>
+
+        <h6><span class="fw-bold">Method 2 (Targeted Cutscene Skip)</span></h6>
+        The second method may be more consistent, but requires approximating the first delay in order to more precisely hit a second delay. The suggested timing is to press A at a delay of about 110-120 on the screen with Commander Kamado, then wait to skip the cutscene until you are approximately 0-5 away from your target. We'll calibrate the second delay here since the first one does not need to be very precise.
+        <ul>
+            <li>Connect <code span class="fw-bold">EncBotRNGMonitorLA</code> in Moarencounterbots. Set <code span class="fw-bold">BotEncounter > EncounterLA > MonitorRefreshRate</code> to 0.</li>
+            <li>Press the <code span class="fw-bold">Home button (⌂)</code> to unpause the game and press the <code span class="fw-bold">A button</code> to start the cutscene. (This is the A press that you'll normally perform 110-120 before your target).</li>
+            <li>Press the <code span class="fw-bold">+ button</code> to open the option to skip the cutscene.
+            <li>Wait for approximately 110-130 advances to go past on RNG Monitor to enter a slower part of the cutscene, then press <code span class="fw-bold">Home button (⌂)</code> to pause the game.</li>
+            <li>Check your current seed by running <code span class="fw-bold">EncBotCopySeedLA</code> in Moarencounterbots.</li>
+            <li>Paste your current seed into the RNG script, then search without filters. This will provide the starting frame.</li>
+            <li>Press the <code span class="fw-bold">Home button (⌂)</code> to unpause the game and quickly press the <code span class="fw-bold">X button</code> to skip the cutscene.</li>
+            <li>Defeat the boss and inspect it using PKHeX/Livehex to find the frame it was generated on. That will be your delay for this attempt.</li>
+        </ul>
+
+        <small><span class="fw-bold">Remember:</span> Losing the boss battle will cause the boss to regenerate, which will make your delay inaccurate. Make sure you can defeat the boss in one attempt or consider using the <a href="#deathmethod">Death Method</a> instead.</small>
     </div>
 </div>
 <br>
+
+<p>The example will continue with the Immediate Cutscene Skip method, but you can use the Targeted Cutscene Skip in a similar fashion.</p>
 
 <span class="fw-bold">Figure 1 -</span> Calculating Delay (Cutscene Method)<p></p>
 <a href="/cfw/la/general/images/main-rng/origin/delay-calc-origin-cutscene-method.png" target="_blank"><img src="/cfw/la/general/images/main-rng/origin/delay-calc-origin-cutscene-method.png" style="width:675px;height:400px;"></a>
@@ -150,7 +172,7 @@ permalink: /cfw/la/legendary/main-rng/origin-legend
 
 <p>Great! We found a 6IV Docile Palkia in 24,864 advances in a cluster of 4, a cluster is a group of frames that produce the same end result, the larger the cluster the more chances you have of hitting the correct target frame.</p>
 
-<p>We now need to advance to close to our target frame, monitor your RNG state by running <code span class="fw-bold">EncBotRNGMonitorLA</code> in Moarencounterbots, this will track the amount of advancements that have occured in real time.</p>
+<p>We now need to advance to close to our target frame, monitor your RNG state by running <code span class="fw-bold">EncBotRNGMonitorLA</code> in Moarencounterbots, this will track the amount of advancements that have occurred in real time.</p>
 
 <span class="fw-bold">Figure 4 -</span> RNG State Monitoring Using EncBotRNGMonitorLA<p></p>
 <a href="/cfw/la/general/images/main-rng/origin/rng-state-monitoring.gif" target="_blank"><img src="/cfw/la/general/images/main-rng/origin/rng-state-monitoring.gif" style="width:675px;height:400px;"></a>
@@ -166,7 +188,7 @@ permalink: /cfw/la/legendary/main-rng/origin-legend
 <br />
 <br />
 
-<p>We are now back at Spear Pillar and ~2253 frames away from the target, earlier we calculated a rough delay of 58-65, which means the goal is now to press the A button on frame ~2,188-2195, then skip the cutscene as fast as possible.</p>
+<p>We are now back at Spear Pillar and ~2253 frames away from the target, earlier we calculated a rough delay of 58-65, which means the goal is now to press the A button on frame ~2188-2195, then skip the cutscene as fast as possible.</p>
 
 <p><code span class="fw-bold">2253 (target) - 58 (delay) = 2195 (new target)</code></p>
 
@@ -272,7 +294,7 @@ permalink: /cfw/la/legendary/main-rng/origin-legend
 
 <p>Great! We found a 6IV Hardy Palkia in 49,350 advances in a cluster of 9, a cluster is a group of frames that produce the same end result, the larger the cluster the more chances you have of hitting the correct target frame.</p>
 
-<p>We now need to advance to close to our target frame, monitor your RNG state by running <code span class="fw-bold">EncBotRNGMonitorLA</code> in Moarencounterbots, this will track the amount of advancements that have occured in real time.</p>
+<p>We now need to advance to close to our target frame, monitor your RNG state by running <code span class="fw-bold">EncBotRNGMonitorLA</code> in Moarencounterbots, this will track the amount of advancements that have occurred in real time.</p>
 
 <span class="fw-bold">Figure 4 -</span> RNG State Monitoring Using EncBotRNGMonitorLA<p></p>
 <a href="/cfw/la/general/images/main-rng/origin/rng-state-monitoring.gif" target="_blank"><img src="/cfw/la/general/images/main-rng/origin/rng-state-monitoring.gif" style="width:675px;height:400px;"></a>
