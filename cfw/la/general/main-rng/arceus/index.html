@@ -30,9 +30,7 @@ permalink: /cfw/la/legendary/main-rng/arceus
 
 <p>This section of the guide aims to provide a worked example for how to RNG abuse Arceus.</p>
 
-<p><span class="fw-bold" style="color: #b60606;">If you have made it this far, you should already have the initial setup completed and have a general understanding of how to use Moarencounterbots and the RNG abuse scripts.</span></p>
-
-<br /><p><span class="fw-bold" style="color: #b60606;">This part of the guide is still a WIP! Check back later when it's complete.</span></p>
+<p><span class="fw-bold" style="color: #b60606;">If you have made it this far, you should already have the initial setup completed and have a general understanding of how to use Moarencounterbots and the RNG calculation scripts, as well as understanding how to use PKHeX/Livehex to view Pokemon.</span></p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/legendary/main-rng">
     Don't understand how to use the tools/scripts yet? <span class="fw-bold">Click here to go back</span>!
@@ -43,26 +41,133 @@ permalink: /cfw/la/legendary/main-rng/arceus
 <br>
 
 <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="gettingstartedarceusrng">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="delay-calc-arceus">
         <span class="fw-bold text-light">Getting Started:</span>
     </div>
     <div class="card-body card-bg">
-        <p>First, you will need to find a suitable seed and target frame. To do this will need Moarencounterbots and the Main RNG abuse script open and ready to use, including setting the appropriate IV/Nature filters.</p>
 
-        <ol>
-            <li>Open the Main RNG generator script, scroll down and input the correct Nature/IV filters.</li>
-            <li>Stand outside the Origin Legendary encounter and save the game. You should be as close as possible to the encounter cutscene.</li>
-            <li>Press the Home button to freeze the RNG state, and select EncBotCopySeedLA on Moarencounterbots.</li>
-            <li>Add the bot, then click Start All to get your current seed, this will be automatically copied to clipboard.</li>
-            <li>Paste the seed into the script, then set the amount of frames you wish to search through.</li>
-            <li>Run the script, if you do not find a desirable result, you will need to reset the game and run EncBotCopySeedLA again.</li>
-        </ol><hr />
+        <p>Before anything else, you will need to calculate the rough delay for this encounter. The term "delay" is used to describe how long it take for the Pokemon to generate after the final A Press. We recommend <u>disabling Autosave</u> and to have <u>a full team of 6 Pokemon</u> so that your target Pokemon is sent to boxes. Sending the Pokemon to boxes will make it easier to view using Livehex.</p><hr />
 
-        <p>In this example, we will be going for any Palkia-Origin with 6 perfect IVs (31/31/31/31/31/31), you can be more specific with your filters if you wish, such as targeting a specific Nature.</p>
+        <h5><span class="fw-bold">Calculating Delay (Step-By-Step)</span></h5>
+        <ul>
+            <li>Initiate the Arceus boss battle and defeat it, then proceed to the screen of the final <code span class="fw-bold">A button</code> press, this will be the screen that shows the Arceus quest has been completed (<a href="/cfw/la/general/images/main-rng/arceus/arceus-final-a-press.png" target="_blank">This screen</a>).</li>
+            <li>Press the <code span class="fw-bold">Home button (⌂)</code>, then open Moarencounterbots and select <code span class="fw-bold">EncBotRNGMonitorLA</code>.</li>
+            <li>Head back to the <code span class="fw-bold">Bots</code> tab on Moarencounterbots and start the bot, if done correctly you should now see a seed has been produced in the <code span class="fw-bold">Logs</code> tab.</li>
+            <li>Paste your current seed into the Main RNG script, then search without filters. This will be the starting frame.</li>
+            <li>Unpause the game and continue mashing the A button to generate Arceus, then inspect it using Livehex.</li>
+            <li>Copy the PID of the Arceus and use the find function (Ctrl F) to search for the PID in your search results.</li>
+            <li>Take note of the frame that Arceus was generated on, this will be your delay for this attempt.</li>
+            <li>The delay for this encounter is not perfectly stable, it is recommended to repeat this process a few times to get a rough average delay that works for you.</li>
+        </ul>
+
+        <small><span class="fw-bold">Note -</span> Defeating Arceus may be difficult at first, so we can use the delay calculation process to also become familiar with how to win the battle!</small>
     </div>
 </div>
+<br>
 
-<span class="fw-bold">Figure 1 -</span> Script Setup<p></p>
-<a href="/cfw/la/general/images/main-rng/origin/script-setup.gif" target="_blank"><img src="/cfw/la/general/images/main-rng/origin/script-setup.gif" style="width:675px;height:400px;"></a>
+<span class="fw-bold">Figure 1 -</span> Calculating Delay<p></p>
+<a href="/cfw/la/general/images/main-rng/arceus/delay-calc-arceus.gif" target="_blank"><img src="/cfw/la/general/images/main-rng/arceus/delay-calc-arceus.gif" style="width:675px;height:400px;"></a>
 <br />
 <br />
+
+<p>After following the delay calculation steps, after searching for the PID of the Arceus we hit and matching the IVs/Nature, we can see that it was generated on frame 34. This means the delay for this attempt is 37. After 5 attempts we have the following delay values:</p>
+
+<table class="table table-striped" style="width:100%">
+    <thead class="table text-white" style="background-color: #0c0038;">
+    <th scope="col">Attempt</th>
+    <th scope="col">Delay Value</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><span class="fw-bold">Attempt 1</span></td>
+            <td>34</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">Attempt 2</span></td>
+            <td>36</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">Attempt 3</span></td>
+            <td>43</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">Attempt 4</span></td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">Attempt 5</span></td>
+            <td>37</td>
+        </tr>
+
+    </tbody>
+</table>
+
+<p>Based on the table above, a safe delay to target would be between frame 34-43, these delay values are based on how quickly I was able to spam the A button to generate arceus, these values may vary for you!</p>
+
+<p><span class="fw-bold">Now that we have a rough delay, it's time to get to work on finding a suitable seed and target frame!</span></p>
+
+<span class="fw-bold">Figure 2 -</span> Setting Filters<p></p>
+<a href="/cfw/la/general/images/main-rng/arceus/filters-arceus.gif" target="_blank"><img src="/cfw/la/general/images/main-rng/arceus/filters-arceus.gif" style="width:675px;height:400px;"></a>
+<br />
+<br />
+
+<p>In this example the filters are set to search for any Arceus with 6 perfect IVs (31/31/31/31/31/31), you can be more specific with the filters if you wish, such as filtering for a specific nature, or optimal 0 IV values such as 0 Atk.</p>
+
+<span class="fw-bold">Figure 3 -</span> Target Frame Found<p></p>
+<a href="/cfw/la/general/images/main-rng/arceus/target-frame-found-arceus.gif" target="_blank"><img src="/cfw/la/general/images/main-rng/arceus/target-frame-found-arceus.gif" style="width:675px;height:400px;"></a>
+<br />
+<br />
+
+<p>Great! We found a 6IV Quirky Arceus in 18,241 advances in a cluster of 4, a cluster is a group of frames that produce the same end result, the larger the cluster the more chances you have of hitting the correct target frame.</p>
+
+<p>We now need to advance to close to our target frame, you can now begin to monitor your RNG state by running <code span class="fw-bold">EncBotRNGMonitorLA</code> in Moarencounterbots, this will track the amount of advancements that have occurred in real time.</p>
+
+<span class="fw-bold">Figure 4 -</span> RNG State Monitoring Using EncBotRNGMonitorLA<p></p>
+<a href="/cfw/la/general/images/main-rng/arceus/rng-state-monitoring.gif" target="_blank"><img src="/cfw/la/general/images/main-rng/arceus/rng-state-monitoring.gif" style="width:675px;height:400px;"></a>
+<br />
+<br />
+
+<p>The RNG state at the Spear Pillar advances at a slow rate. By moving to a more populated area you can advance the RNG state at a much quicker rate, in the example image above the player is stood next to a large body of water in an area that is densely populated with Pokemon.</p>
+
+<p>Consider leaving Spear Pillar and heading somewhere where the RNG state advances more rapidly if you need to cover a large amount of frame advancements. But be sure to save yourself enough time to reposition yourself at Spear Pillar and have enough frames left to defeat Arceus without overshooting your target.</p> 
+
+<details>
+<summary><span class="fw-bold">Example</span></summary>
+<p>If it takes you roughly 3,000 frames to get back to Spear Pillar from your position, and roughly 7,000 frames to defeat Arceus, start to head back to Spear Pillar at roughly 10,000 frames away from your target, leave enough time to reposition yourself to avoid overshooting!</p>
+</details><p></p>
+
+<span class="fw-bold">Figure 5 -</span> Advancing To The Target<p></p>
+<a href="/cfw/la/general/images/main-rng/arceus/advancing-to-target-arceus.png" target="_blank"><img src="/cfw/la/general/images/main-rng/arceus/advancing-to-target-arceus.png" style="width:675px;height:400px;"></a>
+<br />
+<br />
+
+<p>We are now back at Spear Pillar and 6,255 frames away from the target, it can take up to 10,000 advances to defeat the Arceus boss on average, it is recommended to check how long it takes you to win, as any time during or after the Arceus battle will advance the RNG state slowly.</p>
+
+<p>On average it takes me 5,000-7,000 frames to defeat the boss, so there is enough time to defeat it and position myself on the screen of the final A press and ultimately to avoid overshooting the target frame.</p>
+
+<span class="fw-bold">Figure 6 -</span> Screen Of Final Button Press<p></p>
+<a href="/cfw/la/general/images/main-rng/arceus/arceus-final-a-press.png" target="_blank"><img src="/cfw/la/general/images/main-rng/arceus/arceus-final-a-press.png" style="width:675px;height:400px;"></a>
+<br />
+<br />
+
+<p>Get to the screen of the final A press (pictured above), and let <code span class="fw-bold">EncBotRNGMonitorLA</code> run until the Logs tab displays the correct target frame. You can use the <code span class="fw-bold">Home button (⌂)</code> to close in on your target frame at your own pace.</p>
+
+<span class="fw-bold">Figure 7 -</span> Hitting The Target Frame<p></p>
+<a href="/cfw/la/general/images/main-rng/arceus/hitting-target-frame-arceus.png" target="_blank"><img src="/cfw/la/general/images/main-rng/arceus/hitting-target-frame-arceus.png" style="width:675px;height:400px;"></a>
+<br />
+<br />
+
+<p>Here we can see the target is now on frame 217 after re-entering the seed, and that the calculated delay is 36. Once the Sysbot log output displays that we are on frame 182, this means that the target frame has been reached.</p>
+
+<p><code span class="fw-bold">x (earliest target frame) - y (delay) = z (frame to press A)</code></p>
+
+<p>We will now begin spamming the <code span class="fw-bold">A button</code> as quickly as possible to re-open the game and spam through the menus, this will provide the best chance of hitting the correct target frame.</p>
+
+<span class="fw-bold">Figure 8 -</span> Result Found!<p></p>
+<a href="/cfw/la/general/images/main-rng/arceus/result-found-arceus.png" target="_blank"><img src="/cfw/la/general/images/main-rng/arceus/result-found-arceus.png" style="width:675px;height:400px;"></a>
+<br />
+<br />
+
+<p><span class="fw-bold">We hit our target frame and have secured a 6IV Arceus! That's all there is to it!</span></p>
+
