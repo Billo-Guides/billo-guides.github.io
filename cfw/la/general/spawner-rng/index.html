@@ -48,8 +48,6 @@ permalink: /cfw/la/legendary/spawner-rng
     <p>Leaving the area and heading back to Jubilife HQ will refresh the spawner seed of every Pokemon on the map, including Legendary Pokemon. We can use <a href="https://github.com/zyro670/NotForkBot.NET/tree/NotKoiTest">Zyro670's Sysbot</a> to automate the seed checking process.</p>
     
     <p>It is recommended to have a strong Pokemon, lots of healing items (e.g Elixirs, Potions, Revives) and lots of throwable items (Ball of Mud, Sticky Glob etc.) before getting started. You will need enough resources to consistently defeat/stun the Legendary Pokemon that you are hunting.</p>
-
-    <p><span class="fw-bold">Note:</span> Currently, there is no known method to advance the spawner seed on Manaphy/Phione. This guide does not contain information about RNG abusing these Pokemon.</p>
   </div>
 </div><br>
 
@@ -108,9 +106,8 @@ permalink: /cfw/la/legendary/spawner-rng
 
     <p>For Pokemon located <u>inside caves</u>, you will need to save the game stood outside of the cave entry point of the Pokemon you wish to hunt.</p>
 
-    <p><span class="fw-bold">These are -</span> Uxie, Mesprit, Azelf, & Heatran.</p>
+    <p><span class="fw-bold">These are -</span> Uxie, Mesprit, Azelf, Heatran & Manaphy.</p>
 
-    <p><span class="fw-bold">Note:</span> Despite spawning in caves, Manaphy/Phione does not work the same way, and there is no known method to advance the spawner seed for these Pokemon, as mentioned above.</p>
   </div>
 </div><br>
 
@@ -146,12 +143,14 @@ permalink: /cfw/la/legendary/spawner-rng
 
     <ol>
       <li>Knockout the legendary.</li>
-      <li>Fly to a campsite, then sleep until night, then sleep again until morning.</li>
+      <li>Fly to a campsite, then sleep until night, then sleep again until evening.</li>
       <li>Fly to a cave and enter, then save and reboot the game.</li>
       <li>Fly back to the legendary and wait 1 weather cycle for the legendary to respawn.</li>
       <li>Repeat from step 1 until the desired frame has been hit.</li>
-      <li>Alternatively, if you wish to advance using the bot you can use <a href="https://github.com/zyro670/NotForkBot.NET/wiki/8.-GenieScanner">this method</a> instead.</li>
-    </ol><hr />
+    </ol>
+    
+    <small>While not required, it is recommended to sleep until evening after step 3, this will guarantee a weather cycle to occur within 3 minutes, otherwise you may be waiting longer than necessary for one to occur.</small>
+    <hr />
 
     <h5 class="fw-bold">Forced Capture:</h5>
     <p><span class="fw-bold">These include -</span> Uxie, Mesprit, Azelf, Heatran & Cresselia.</p>
@@ -160,9 +159,29 @@ permalink: /cfw/la/legendary/spawner-rng
       <li>Knockout the legendary.</li>
       <li>Click through the menus until you regain control of your character.</li>
       <li>Repeat from step 1 until the desired frame has been hit.</li>
-    </ol><hr />
+    </ol>
+
+    <small>These Pokemon are tied to main story quests, which means there is no wait time between encounters whatsoever.</small>
+    <hr />
+
+    <h5 class="fw-bold">Unique Cases:</h5>
+    <p><span class="fw-bold">These include -</span> Manaphy & Phione.</p>
+
+    <ol>
+      <li>Knockout the legendary.</li>
+      <li>Fly to a campsite, then sleep until night, then sleep again until evening.</li>
+      <li>Warp to Fire Pit Island and enter the cave, then save and reboot the game.</li>
+      <li>Fly back to the cave that contains Manaphy and wait 1 weather cycle for it to respawn.</li>
+      <li>Enter the cave, check to see if your Pokemon has respawned.</li>
+      <li>Repeat from step 1 until the desired frame has been hit.</li>
+    </ol>
+
+    <small>Manaphy is a unique case in that it does not immediately respawned but is contained inside a cave, so the advancement method is more akin to the method for Overworld legendaries.</small>
+    <hr />
 
     <p>You can use PokeViewer.NET to read the current spawned Legendary Pokemon, then compare it to the Sysbot logs output to keep track of your current frame if you get lost along the way.</p>
+
+    <p>This SysBot fork offers an alternative method to advance frames that artificially alters the game time to simulate sleeping at a campsite, if you wish to use this method then see <a href="https://github.com/zyro670/NotForkBot.NET/wiki/">the Wiki</a> for more information instead.</li>
   </div>
 </div><br>
 
