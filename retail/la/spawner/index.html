@@ -39,17 +39,15 @@ permalink: /retail/la/legendary/spawner-rng/getting-started
   </a><br>
   
   <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="aboutspawnerrng">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="about-retail-spawner-rng">
       <span class="fw-bold text-light">About Spawner RNG:</span>
     </div>
     <div class="card-body card-bg">
-      <p>Pokemon that are tied to spawners have their seed generated when you enter the map or cave that they are located in. The seed remains the same until you defeat the Pokemon and have it respawn, this will be a consistent +1 advancement to the Spawner seed.</p>
+      <p>Pokemon that are tied to spawners have their seed generated when you enter the map or cave that they are located in. The seed remains the same until you defeat the Pokemon and have it respawn. Respawning will be a consistent +1 advancement to the Spawner seed.</p>
   
       <p>Leaving the area and heading back to Jubilife HQ will refresh the spawner seed of every Pokemon on the map, including Legendary Pokemon. We can use the Spawner Seed Solver and Spawner RNG Calculator scripts to find and check our current seed for desirable results.</p>
       
       <p>It is recommended to have a strong Pokemon, lots of healing items (e.g Elixirs, Potions, Revives) and lots of throwable items (Ball of Mud, Sticky Glob etc.) before getting started. You will need enough resources to consistently defeat/stun the Legendary Pokemon that you are hunting.</p>
-
-      <p><span class="fw-bold">Note:</span> Currently, there is no known method to advance the spawner seed on Manaphy/Phione. This guide does not contain information about RNG abusing these Pokemon.</p>
     </div>
   </div><br>
   
@@ -62,13 +60,13 @@ permalink: /retail/la/legendary/spawner-rng/getting-started
   <p>After gathering resources, <u>disable autosave in the in-game settings to avoid catastrophe.</u> Checking your seed requires capturing the Pokemon and returning to Jubilife HQ, which will force the game to save with a caught legendary unless autosave is disabled.</p>
 
   <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="currentseedretail">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="retail-seed-information">
       <span class="fw-bold text-light">Finding Your Current Seed & Frame Advancements:</span>
     </div>
     <div class="card-body card-bg">
-      <p>In order to find your current seed you will need access to a console that is running Custom Firmware, this most commonly used method is dumping your Pokemon using somebody elses Sysbot. Many free Sysbots can be found in public Discord servers, you can find a list of servers that host Sysbots with a quick Google search.</p><hr />
+      <p>In order to find your current seed you will need access to a console that is running Custom Firmware, this most commonly used method is dumping your Pokemon using somebody elses SysBot. Many free SysBots can be found in public Discord servers, you can find a list of servers that host SysBots with a quick Google search.</p><hr />
 
-      <h4><span class="fw-bold">How to find your current seed:</span></h4>
+      <h4><span class="fw-bold" id="finding-current-seed-using-sysbot">How to find your current seed:</span></h4>
 
       <p>Sysbot.NET is capable to dump any Pokemon you shown inside the trade window without needing to physically trade the Pokemon (as this would force a save and lock you into the same seed permanently). This gives retail players the ability to check their seed and reset the game if the seed does not produce any desirable results.</p>
 
@@ -84,7 +82,7 @@ permalink: /retail/la/legendary/spawner-rng/getting-started
         <li>Run the Seed Solver script until a seed is produced.</li>
       </ol><hr />
 
-      <h4><span class="fw-bold" id="advancingrngstate">How to advance the RNG state:</span></h4>
+      <h4><span class="fw-bold" id="advancing-the-rng-state">How to advance the RNG state:</span></h4>
 
       <p>Frame advancement methods will differ depending on if your Pokemon is an forced capture or despawns when defeated, this section will cover how to advance frames in both of these scenarios.</p>
 
@@ -143,7 +141,7 @@ permalink: /retail/la/legendary/spawner-rng/getting-started
    <span class="fw-bold">Figure 1 -</span> How To Use - Seed Solver Script<p></p>
    <a href="/retail/la/spawner/images/how-to-use-seed-solver.gif" target="_blank"><img src="/retail/la/spawner/images/how-to-use-seed-solver.gif" style="width:675px;height:400px;"></a><br /><br />
 
-   <p>First, dump the two necessary .pa8 files of the Pokemon you are hunting using the <a href="#currentseedretail">above mentioned method</a>, then place them into the <code class="fw-bold">pa8</code> folder that was created earlier, check that the path is correct, then run the script after doing so.</p>
+   <p>First, dump the two necessary .pa8 files of the Pokemon you are hunting using the <a href="#finding-current-seed-using-sysbot">above mentioned method</a>, then place them into the <code class="fw-bold">pa8</code> folder that was created earlier, check that the path is correct, then run the script after doing so.</p>
     
    <p>After a short wait you should now see that a group seed has been produced, copy it, this seed is the seed that the Calculation Script will need to calculate the upcoming advancements of the Pokemon on the spawner that you are searching.</p>
 
@@ -166,16 +164,16 @@ permalink: /retail/la/legendary/spawner-rng/getting-started
 
    <p>To search for flawless IV spreads, activate the filters found towards the bottom of the script. By default the IV filters will be disabled and will need to be activated manually, this can be done by removing the comments (<code class="fw-bold" style="color: #0a7a00;">*/</code>) that surround the IV filters at the top and the bottom.</p>
 
-   <p><u>If your desired Pokemon is Heatran</u>, you will also need to set the <code class="fw-bold">GenderCompare</code> value at the top of the script to 127, Heatran is the only case where this value should be changed from -1 as the rest of these legendaries have a fixed gender or are genderless.</p>
+   <p><span class="fw-bold">For Heatran specifically</span>, you will also need to set the <code class="fw-bold">GenderCompare</code> value at the top of the script to 127, Heatran is the only case where this value should be changed from -1 as the rest of these legendaries have a fixed gender or are genderless.</p>
 
    <p>If your search result is not desirable or you do not find any results when searching with filters, you will need to return to Jubilife then back to the map that contains the legendary you are hunting in order to refresh the seed, then find your current seed again (see Figure 1).</p>
    
-   <span class="fw-bold">Figure 4 -</span> Target Found!<p></p>
+   finding-current-seed-using-sysbotFigure 4 -</span> Target Found!<p></p>
    <a href="/retail/la/spawner/images/target-found-spawner.png" target="_blank"><img src="/retail/la/spawner/images/target-found-spawner.png" style="width:675px;height:400px;"></a><br /><br />
 
    <p>We will be searching for any Enamorus with an speed IV value of 0, In the above image, we can see that there is an Enamorus that matches this description in 5 advances! This means we will need to knock out and respawn Enamorus 5 times to hit the correct target frame.</p>
 
-   <p>Advance the RNG state using the <a href="#advancingrngstate">above mentioned method</a>. Enamorus is one of the Pokemon that will despawn when defeated, so we will will need to follow the "despawns when defeated" steps in order to effectively respawn it.</p>
+   <p>Advance the RNG state using the <a href="#advancing-the-rng-state">above mentioned method</a>. Enamorus is one of the Pokemon that will despawn when defeated, so we will will need to follow the "despawns when defeated" steps in order to effectively respawn it.</p>
 
    <span class="fw-bold">Figure 5 -</span> Result Found!<p></p>
    <a href="/retail/la/spawner/images/result-found-spawner.jpg" target="_blank"><img src="/retail/la/spawner/images/result-found-spawner.jpg" style="width:675px;height:400px;"></a><br /><br />
@@ -187,6 +185,6 @@ permalink: /retail/la/legendary/spawner-rng/getting-started
    <span class="fw-bold">Figure 6 -</span> IV confirmation<p></p>
    <a href="/retail/la/spawner/images/how-to-use-seed-solver.gif" target="_blank"><img src="/retail/la/spawner/images/iv-confirmation-spawner.png" style="width:675px;height:400px;"></a><br /><br />
 
-   <p>After dumping the Enamorus using Sysbot.NET and viewing the file in PKHeX, we have confirmed that the IVs & nature match what was produced by the script, mission accomplished!</p>
+   <p>After dumping the Enamorus using Sysbot.NET and viewing the file in PKHeX, we have confirmed that the IVs & nature match what was produced by the script.</p>
 
    <p><span class="fw-bold">That's all there is to RNG legendary Pokemon tied to spawners on retail hardware!</span></p>
