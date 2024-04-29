@@ -27,9 +27,9 @@ permalink: /retail/la/legendary
     <h1 class="text-light text-center pt-3 pb-3">Legends: Arceus RNG (Retail)</h1>
   </div><hr />
   
-  <p>This guide provides in-depth coverage of how to RNG abuse Legendary Pokemon in Legends: Arceus, using RNG generator scripts written by <a href="https://github.com/Lusamine">Lusamine</a>. Every Legendary Pokemon that is tied to a spawner can be RNG abused on retail hardware, making it possible to get optimal IV & Nature combinations! The term "spawner" will be properly defined down below.</p>
+  <p>This guide provides in-depth coverage of how to RNG abuse Legendary Pokemon tied to Spawners in Legends: Arceus, using RNG generation scripts written by <a href="https://github.com/Lusamine">Lusamine</a>.</p>
   
-  <p><span class="fw-bold" style="color: #b60606;">From here it is assumed you are using an unmodified Switch console and running Windows OS on your computer.</span></p>
+  <p><span class="fw-bold" style="color: #b60606;">From here it is assumed you are using a retail (unmodified) Switch console and running Windows OS on your computer.</span></p>
   
   <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/legendary">
     Have Custom Firmware installed? You are in the wrong place! <span class="fw-bold">Click here!</span>
@@ -45,24 +45,25 @@ permalink: /retail/la/legendary
   <p>There are 2 different ways that the game uses to generate Legendary Pokemon, these are Spawner RNG seeded, and Main RNG seeded. It is important to understand the difference between these two generation methods, and understand which encounters fall into each category before getting started.</p>
   
    <div class="card border-dark">
-     <div class="anchored card-header" style="background-color: #0c0038;" id="spawnernutshell">
+     <div class="anchored card-header" style="background-color: #0c0038;" id="spawner-rng-overview">
        <span class="fw-bold text-light">Spawner RNG In A Nutshell:</span>
      </div>
      <div class="card-body card-bg">
-       <p>Spawners hold a specific Pokemon that is visible in the overworld, when a Pokemon is knocked out the spawner seed will advance by 1 frame. This means that hitting a desired result will be based on KOing the Pokemon on the spawner a certain amount of times in a row until you reach your target frame.</p>
-   
-       <span class="fw-bold">The following legendary encounters are tied to a Spawner:</span>
+       <h6><span class="fw-bold">What is a spawner?</span></h6>
+         <p>Spawners are specific locations on the map that hold a wild Pokemon, these Pokemon will move around in the overworld. When the Pokemon is knocked out and forced to respawn the seed will advance by 1, so this means that hitting a desired result is as simple as knocking out a Pokemon and respawning it a certain number of times in a row.</p>
+
+       <h6><span class="fw-bold">Legendaries tied to spawners include:</span></h6>
        <ul>
-         <li>Lake Trio - Uxie/Mesprit/Azelf</li>
-         <li>Weather Quartet - Tornadus/Thundurus/Landorus/Enamorus</li>
+         <li>Lake Trio - Uxie, Mesprit & Azelf</li>
+         <li>Weather Quartet - Tornadus, Thundurus, Landorus & Enamorus</li>
          <li>Heatran</li>
          <li>Cresselia</li>
-         <li>Manaphy/Phione</li>
+         <li>Manaphy & Phione</li>
          <li>Shaymin</li>
          <li>Darkrai</li>
        </ul>
 
-       <p>It is possible to RNG abuse any of the Pokemon from the above list on retail hardware. Custom Firmware (CFW) is required if you wish to RNG abuse Pokemon that use Main RNG.</p>
+       <p>It is possible to RNG abuse any of the Pokemon from the above list on retail hardware. Any other legendary encounter is currently impossible without Switch CFW (or using an emulator).</p>
   </div></div>
 
   <hr /><div class="title" style="background-color: #0c0038;">
@@ -72,7 +73,7 @@ permalink: /retail/la/legendary
   <p>These are the tools, applications & scripts you will need in order to RNG abuse Legendary Pokemon tied to spawners.</p>
   
   <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="setupandinstallLA">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="setup-and-installation-la-retail">
       <span class="fw-bold text-light">Setup Instructions:</span>
     </div>
     <div class="card-body card-bg">
@@ -133,19 +134,19 @@ permalink: /retail/la/legendary
   <span class="fw-bold">Figure 1 -</span> Spawner Calculation Script Setup<p></p>
   <a href="/retail/la/spawner/images/generator-script-initial-setup.gif" target="_blank"><img src="/retail/la/spawner/images/generator-script-initial-setup.gif" style="width:675px;height:400px;"></a><br /><br />
 
-  <p>Here we can see the Spawner Calculation Script is configured correctly because a result was outputted at the bottom of the main window when using the example seed present inside the script.</p>
+  <p>By running this script we can see everything has been configured correctly, as a result has been produced at the bottom of the window when using the example/placeholder seed.</p>
 
   <span class="fw-bold">Figure 2 -</span> Spawner Seed Solver Script Setup<p></p>
   <a href="/retail/la/spawner/images/seed-solver-script-initial-setup.gif" target="_blank"><img src="/retail/la/spawner/images/seed-solver-script-initial-setup.gif" style="width:675px;height:400px;"></a><br /><br />
 
-  <p>Here we can see the Spawner Seed Solver Script is configured correctly as the following message was produced at the bottom of the main window:</p>
+  <p>Here we can see the Seed Solver Script has been configured correctly as the following message was produced at the bottom of the main window:</p>
   
   <div class="alert border-dark" style="background-color: #d1d1d1;">              
     <code class="fw-bold">DirectoryNotFoundException<br>
     Could not find a part of the path 'C:\Users\USER\Desktop\pa8'.</code>
   </div><p></p>
 
-  <p>This message is produced because the script requires 2 consecutive Pokemon from the spawner you wish to check inside the correct directory in order to produce a spawner seed. We have not yet gathered this information. Information about seed solving and frame advancements can be found on the next page.</p>
+  <p>This error message is produced because the script requires 2 consecutive Pokemon from the spawner you wish to check inside the correct directory in order to produce a spawner seed. We have not yet gathered this information, this will be covered later on in the guide.</p>
 
   <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/la/legendary/spawner-rng/getting-started">
     <span class="fw-bold">Getting Started</span>!
