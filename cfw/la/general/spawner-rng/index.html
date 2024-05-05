@@ -24,12 +24,12 @@ permalink: /cfw/la/legendary/spawner-rng
 </style>
 
 <div class="title" style="background-color: #0c0038;">
-  <h1 class="text-light text-center pt-3 pb-3">Spawner RNG Legendary Abuse</h1>
+  <h1 class="text-light text-center pt-3 pb-3">Spawner RNG Abuse</h1>
 </div><hr />
 
-<p>This page will provide in-depth information about how to RNG abuse Legendary Pokemon in Legends: Arceus that are tied to what is known as Spawners. We will be using RNG automation programs written by <a href="https://github.com/zyro670">Zyro670</a>, as mentioned on the main page.</p>
+<p>This page offers comprehensive guidance in RNG Legendary & Mythical abusing Pokemon that are associated with Spawner RNG. We'll utilize RNG automation programs developed by <a href="https://github.com/zyro670">Zyro670</a>, as referenced on the main page.</p>
 
-<p><span class="fw-bold" style="color: #b60606;">From here it is assumed that you have already followed all of the setup instructions for Spawner RNG abuse, found on the introductory page of this guide.</span></p>
+<p><span class="fw-bold" style="color: #b60606;">From here it is assumed that you have already followed all of the relevant setup instructions found on the introductory page of this guide.</span></p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/legendary/#setupandinstallLA">
   Didn't follow the setup instructions on the main page yet? <span class="fw-bold">Click here to go back</span>!
@@ -43,11 +43,18 @@ permalink: /cfw/la/legendary/spawner-rng
     <span class="fw-bold text-light">About Spawner RNG:</span>
   </div>
   <div class="card-body card-bg">
-    <p>Pokemon that are tied to spawners have their seed generated when you enter the map or cave that they are located in. The seed remains the same until you defeat the Pokemon and have it respawn, this will be a consistent +1 advancement to the Spawner seed.</p>
+    <p>Pokémon associated with spawners have their seed generated upon entering the map or cave where they are located. This seed remains constant until you defeat the Pokémon and trigger its respawn, resulting in a consistent +1 advancement to the Spawner seed.</p>
 
-    <p>Leaving the area and heading back to Jubilife HQ will refresh the spawner seed of every Pokemon on the map, including Legendary Pokemon. We can use <a href="https://github.com/zyro670/NotForkBot.NET/tree/NotKoiTest">Zyro670's Sysbot</a> to automate the seed checking process.</p>
-    
-    <p>It is recommended to have a strong Pokemon, lots of healing items (e.g Elixirs, Potions, Revives) and lots of throwable items (Ball of Mud, Sticky Glob etc.) before getting started. You will need enough resources to consistently defeat/stun the Legendary Pokemon that you are hunting.</p>
+    <p>Returning to Jubilife HQ refreshes the spawner seed for every Pokémon on the map, including Legendary & Mythical Pokemon. We can utilize <a href="https://github.com/zyro670/NotForkBot.NET/tree/NotKoiTest">Zyro670's SysBot</a> to automate the seed checking process.</p>
+
+    <details>
+      <summary><span class="fw-bold">Recommendations:</span></summary>
+      <ul>
+        <li>Have a strong Pokemon that can easily defeat the Pokemon you wish to RNG abuse within one to two attacks.</li>
+        <li>Prepare plenty of throwable items, such as Sticky Glob. You will need to stun the Pokemon to engage in battle.</li>
+        <li>Have expendable healing items, such as Potions, Revives and Elixirs. You will be unable to leave the area until you achieve your result.</li>
+      </ul>
+    </details>
   </div>
 </div><br>
 
@@ -57,10 +64,10 @@ permalink: /cfw/la/legendary/spawner-rng
   <h1 class="text-light text-center pt-3 pb-3">Getting Started (Spawner RNG)</h1>
 </div><hr />
 
-<p>After you have gathered enough resources you will need to configure Sysbot.NET properly for the game you are using and the Pokemon you plan to hunt. In this example we will be hunting for Enamorus with flawless IVs.</p>
+<p>Firstly, you will need to configure SysBot.NET to meet the conditions of your chosen hunt, in this example we will be hunting for Enamorus with a flawless IV spread.</p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="notforkbotsetup">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="sysbot-setup-spawner-rng">
     <span class="fw-bold text-light">Sysbot.NET Setup & Instructions:</span>
   </div>
   <div class="card-body card-bg">
@@ -75,26 +82,38 @@ permalink: /cfw/la/legendary/spawner-rng
 
     <h5 class="fw-bold">Spawner RNG Setup:</h5>
     <ol>
-      <li>Open the <code class="fw-bold">Hub</code> tab of Sysbot.NET, then open the <code class="fw-bold">ArceusLA</code> dropdown menu. This is where you will add the relevant information specific to your chosen hunt.</li>
+      <li>Open the <code class="fw-bold">Hub</code> tab of SysBot, then open the <code class="fw-bold">ArceusLA</code> dropdown menu. This is where you will add the relevant details for your chosen hunt.</li>
       <li>Set the <code class="fw-bold">BotType</code> to the Pokemon you are hunting. For Genies use <code class="fw-bold">GenieScanner</code>, and for anything else use <code class="fw-bold">OtherLegendReset</code>.</li>
-      <li>Open the <code class="fw-bold">SpecialConditions</code> dropdown menu, then select the correct <code class="fw-bold">ScanLocation</code> for the Pokemon you are hunting. (<u>Example</u>: for Enamorus, select Crimson Mirelands)</li>
-      <li>If you have chosen <code class="fw-bold">OtherLegendReset</code>, you will also need to select the <code class="fw-bold">TypeOfLegend</code> that you are hunting to make sure the bot performs the correct routine.</li>
-      <li>Set the <code class="fw-bold">MaxAdvancesToSearch</code> to an the amount of advancements you are comfortable with doing (50-100 is recommended).</li>
-      <li>Set <code class="fw-bold">RunToProfessor</code> to false so you can take advantage of teleportation when leaving the area to save time.</li>
-      <li>Scroll up to the top, and open the <code class="fw-bold">StopConditions</code> dropdown menu, type in your desired IVs/Nature combination, then restart the bot (close and re-open).</li>
+      <li>Open the <code class="fw-bold">SpecialConditions</code> dropdown menu, then select the <code class="fw-bold">ScanLocation</code> that matches the location of your chosen hunt.</li>
+      <li>For encounters that use the <code class="fw-bold">OtherLegendReset</code> routine, you will also need to select the <code class="fw-bold">TypeOfLegend</code> you are hunting from the dropdown menu.</li>
+      <li>If your encounter is contained within a cave, <code class="fw-bold">RunToProfessor</code> should be set to <code class="fw-bold">True</code>, otherwise this can be set to <code class="fw-bold">False</code> to save time.</li>
+      <li>Set the <code class="fw-bold">MaxAdvancesToSearch</code> to an amount you are comfortable with, 50-100 advances is recommended as advancements can take a long time depending on your chosen hunt.</li>
+      <li>Scroll up to the top, and open the <code class="fw-bold">StopConditions</code> dropdown menu, type in your desired IVs/Nature combination, then restart the bot by closing and re-opening the entire program.</li>
     </ol>
 
-    <p>Once you have configured the <code class="fw-bold">Hub</code> tab details properly head back over to the <code class="fw-bold">Bots</code> tab, then add the <code class="fw-bold">ArceusBot</code> using the local IP address of your Switch console.</p>
+    <p>After properly configuring the bot, head back over to the <code class="fw-bold">Bots</code> tab. Here you will add the bot to the active bots list.</p>
+
+    <details>
+      <summary><span class="fw-bold">Adding a bot:</span></summary>
+      <ul>
+        <li>Type the local IP address of your switch console into the designated field.</li>
+        <li>Open the dropdown menu on the right, then select <code class="fw-bold">ArceusBot</code>.</li>
+        <li>Click <code class="fw-bold">Add</code> to add the bot to the list of active bots.</li>
+        <li>Active bots can then be started by selecting <code class="fw-bold">Start All</code>.</li>
+      </ul>
+
+      <small><span class="fw-bold">Note -</span> If you change the StopConditions or details about your desired hunt, you should close and re-open the entire program to ensure these changes take affect.</small>
+    </details>
   </div>
 </div><br>
 
 <span class="fw-bold">Figure 1 -</span> Sysbot.NET Setup<p></p>
 <a href="/cfw/la/general/images/spawner-rng/sysbot-setup-spawner.gif" target="_blank"><img src="/cfw/la/general/images/spawner-rng/sysbot-setup-spawner.gif" style="width:675px;height:400px;"></a><br /><br />
 
-<p>Your setup should look similar to the above image, the bot type is set to <code class="fw-bold">GenieScanner</code>, <code class="fw-bold">ScanLocation</code> set to Crimson Mirelands, and <code class="fw-bold">StopConditions</code> are set to 31/0/31/31/31/0, these are the required settings for hunting Enamorus.</p>
+<p>Your setup should look similar to the above image, the bot type is set to <code class="fw-bold">GenieScanner</code>, <code class="fw-bold">ScanLocation</code> set to Crimson Mirelands, and <code class="fw-bold">StopConditions</code> are set to 31/0/31/31/31/0, these are the configurations used for hunting Enamorus.</p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="ingamesetupspawnerrng">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="ingame-setup-spawner-rng">
     <span class="fw-bold text-light">In-game Setup:</span>
   </div>
   <div class="card-body card-bg">
