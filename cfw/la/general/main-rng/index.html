@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Legends Arceus RNG Guide
-permalink: /cfw/la/legendary/main-rng
+permalink: /cfw/la/general/main-rng
 ---
 
 <style>
@@ -39,55 +39,82 @@ permalink: /cfw/la/legendary/main-rng
 </a><br>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="youwillneedmainrng">
-    <span class="fw-bold text-light">You will need:</span>
+  <div class="anchored card-header" style="background-color: #0c0038;" id="requirements-main-rng">
+    <span class="fw-bold text-light">Scripts & Dependencies:</span>
   </div>
   <div class="card-body card-bg">
-    <h5><span class="fw-bold">Scripts:</span></h5>
+    <h5><span class="fw-bold">You will need:</span></h5>
     <ul>
       <li><a href="https://gist.github.com/Lusamine/87ecd66f2c07bc549a9ca0f42a39d74f">Main RNG calculation script</a></li>
+      <li><a href="./downloads/PKHeX.Core.dll" download>PKHeX.Core.dll</a></li>
     </ul>
 
-    <h5><span class="fw-bold">Setup Instructions:</span></h5>
-      <ol>
-        <li>Open LINQPad, then copy/paste the Main RNG script into the main window.</li>
-        <li>Change the <code span class="fw-bold">Language</code> in the LINQPad header to C# program.</li>
-        <li>Press F4, then add PKHeX.Core.dll to the <code span class="fw-bold">Additional References</code> tab.</li>
-        <li>Type "PKHeX.Core" on a new line in the <code span class="fw-bold">Namespace Imports</code> tab.</li>
-        <li>Run the script by clicking the <code span class="fw-bold">▶ button</code>, You should now see the script output at the bottom of the window.</li>
-      </ol>
+    <h6><span class="fw-bold">Setup Instructions:</span></h6>
+    <ol>
+      <li>Open LINQPad, then change the <code span class="fw-bold">Language</code> in the header to C# program, delete any existing code left visible in the main window.</li>
+      <li>Copy the code from the Main RNG calculation script linked above, then paste it inside the main window.</li>
+      <li>Press F4 to open a sub window. Then click the <code span class="fw-bold">Add / Browse</code> button on the bottom left.</li>
+      <li>Locate <code span class="fw-bold">PKHeX.Core.dll</code> within your files and select it, this will add it to the <code span class="fw-bold">Additional References</code> tab.</li>
+      <li>Navigate to the <code span class="fw-bold">Namespace Imports</code> tab, then type "PKHeX.Core". Close the sub window once completed.</li>
+      <li>Enable compiler optimizations by clicking the small button at the bottom right of the main window.</li>
+      <li>Run the script by clicking the <code span class="fw-bold">▶ button</code>, You should now see the script output at the bottom of the window.</li>
+      <li>Once you have confirmed that the script is running correctly, save it in a known location on your computer.</li>
+    </ol>
 
-      <p>Having trouble with the written instructions? You can use <a href="https://billo-guides.github.io/cfw/la/general/images/main-rng/main-rng-script-setup.gif">this GIF</a> as a point of reference instead!</p><hr />
-
-     <h5><span class="fw-bold">PC Setup:</span></h5>
-     <ul>
-       <li>Sysbot.NET Moarencounterbots open in Legends: Arceus mode.</li>
-       <li>Livehex set up properly on a Legends: Arceus save file.</li>
-     </ul>
-
-     <small>
-      <ol>
-        <li>See the <a href="https://github.com/kwsch/SysBot.NET/wiki/Bot-Startup-Details#mode">Sysbot.NET Wiki</a> for more information on switching game modes using Sysbot.NET.</li>
-        <li>See the <a href="https://github.com/architdate/PKHeX-Plugins/wiki/Installing-LiveHeX#starting-livehex">Livehex Wiki</a> for more information on switching game modes using PKHeX.</li>
-      </ol>
-     </small>
-
-     <p>The Moarencounterbots build from the introductory page of this guide is pre-configured to work with Legends: Arceus automatically.</p>
+    <details>
+      <summary><span class="fw-bold">Troubleshooting:</span></summary>
+      <ul>
+        <li>Ensure the Namespace Imports and Additional References are set up exactly as described above.</li>
+        <li>Ensure that Step 1 is followed exactly as described above, having extra unwanted code will cause the script to malfunction.</li>
+        <li>Having trouble with written instructions? Use <a href="https://billo-guides.github.io/cfw/la/general/images/main-rng/main-rng-script-setup.gif">this GIF</a> as a point of reference instead!</li>
+      </ul>
+    </details>
   </div>
 </div><br>
 
-<p><span class="fw-bold">Now that we have all the setup instructions out of the way, it's time to get to work on understanding how to use the Main RNG script!</span></p>
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="pc-setup-main-rng">
+    <span class="fw-bold text-light">PC Setup:</span>
+  </div>
+  <div class="card-body card-bg">
+    <h5><span class="fw-bold">You will need:</span></h5>
+    <ul>
+      <li>Moarencounterbots open in Legends: Arceus mode.</li>
+      <li>PokeViewer.NET set up and ready to use.</li>
+    </ul>
+
+    <h6><span class="fw-bold">Setup Instructions:</span></h6>
+    <ol>
+      <li>Open <code span class="fw-bold">Moarencounterbots</code> and confirm that <code span class="fw-bold">SysBot.NET Pokemon (LA)</code> is present in the header.</li>
+      <li>Navigate to the <code span class="fw-bold">Homebrew Menu</code> on your console, then press the <code span class="fw-bold">Y button</code>. Take note of the displayed IP address (NOT THE PORT).</li>
+      <li>Open <code span class="fw-bold">PokeViewer.NET</code> with Legends: Arceus open on your console, then type the local IP address of your console into the assigned field.</li>
+      <li>Click <code span class="fw-bold">Connect</code>, if you see a Legends: Arceus logo on screen, connection to the console was succesful.</li>
+    </ol>
+
+    <details>
+      <summary><span class="fw-bold">Troubleshooting:</span></summary>
+      <p>Visit the relevant Wiki page for the program you are using to learn more about switching game modes, connectivity, and general program usage.</p>
+      <h6><span class="fw-bold">Wiki links:</span></h6>
+      <ul>
+        <li><a href="https://github.com/kwsch/SysBot.NET/wiki/Bot-Startup-Details#mode">Sysbot.NET</a></li>
+        <li><a href="https://github.com/architdate/PKHeX-Plugins/wiki/Installing-LiveHeX#starting-livehex">PokeViewer.NET</a></li>
+      </ul>
+    </details>
+  </div>
+</div><br>
+
+<p><span class="fw-bold">Once you have confirmed that everything works as intended, you can move on to understanding how to use the script.</span></p>
 
 <hr /><div class="title" style="background-color: #0c0038;">
-  <h1 class="text-light text-center pt-3 pb-3">How To Use - RNG Script</h1>
+  <h1 class="text-light text-center pt-3 pb-3">RNG Script Usage</h1>
 </div><hr />
 
-<p>By pressing the <code span class="fw-bold">▶ button</code> to run the script, we are able to see a various different spreads, these spreads are for the seed used in the script example (<code span class="fw-bold">E1CEA3FF1E3A9B5CB709ACB78FF71808</code>). We can tell that the script is working as intended if results are displayed at the bottom of the LINQPad window.</p>
+<p>To execute the script, simply press the <code span class="fw-bold">▶ button</code>. This action enables us to view various spreads. It's important to note that these spreads correspond to the seed used in the script example (<code span class="fw-bold">E1CEA3FF1E3A9B5CB709ACB78FF71808</code>), not your current seed. You can confirm that the script is functioning correctly if results are displayed at the bottom of the LINQPad window.</p>
 
-<p>To find your current Main RNG seed you will need to use Moarencounterbots. This program is vital for viewing and tracking your current seed in real time. Follow the step-by-step guide below to understand how to use the program to find your current seed.</p>
+<p>To determine your current Main RNG seed, you'll need to utilize Moarencounterbots. This program is essential for observing and tracking your current seed in real-time. Follow the step-by-step guide below to learn how to use the program effectively to find and monitor your current seed.</p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="findingcurrentseed">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="seed-information-main-rng">
     <span class="fw-bold text-light">Finding & Monitoring Your Current Seed:</span>
   </div>
   <div class="card-body card-bg">
@@ -97,7 +124,7 @@ permalink: /cfw/la/legendary/main-rng
       <li>Change <code span class="fw-bold">DisplaySeedMode</code> to Bit128.</li>
       <li>Head back to the <code span class="fw-bold">Bots</code> tab and select <code span class="fw-bold">EncBotCopySeedLA</code> in the dropdown menu.</li>
       <li>Type in your Switch local IP address, then add the bot (port should be 6000).</li>
-      <li>Open Legends: Arceus and press the Home button to freeze the RNG state.</li>
+      <li>Open Legends: Arceus and press the <code span class="fw-bold">Home 🏠︎</code> button to freeze the RNG state.</li>
       <li>Start the bot. You should now see your seed in the <code span class="fw-bold">Logs</code> tab, it will also automatically be copied to your clipboard!</li>
     </ul><hr />
 
@@ -107,9 +134,9 @@ permalink: /cfw/la/legendary/main-rng
       <li>Change the value inside <code span class="fw-bold">MonitorRefreshRate</code> to 0.</li>
       <li>Head back to the <code span class="fw-bold">Bots</code> tab and select <code span class="fw-bold">EncBotRNGMonitorLA</code> in the dropdown menu.</li>
       <li>Type in your Switch local IP address, then add the bot (port should be 6000).</li>
-      <li>Open Legends: Arceus and enter the overworld.</li>
-      <li>Start the bot. You should now see your seed is being monitored inside the <code span class="fw-bold">Logs</code> tab in real time!</li>
-    </ul><hr />
+      <li>Open Legends: Arceus and press the <code span class="fw-bold">Home 🏠︎</code> button to freeze the RNG state.</li>
+      <li>Start the bot then resume the game. You should now see your seed is being monitored inside the <code span class="fw-bold">Logs</code> tab in real time!</li>
+    </ul>
 
     <p>Once you have all everything configured properly inside the Hub, you can switch between <code span class="fw-bold">EncBotCopySeed</code> and <code span class="fw-bold">EncBotRNGMonitor</code> as often as you like without needing any further configuration.</p>
   </div>
@@ -123,18 +150,16 @@ permalink: /cfw/la/legendary/main-rng
 <span class="fw-bold">Figure 2 -</span> Main RNG Script Configuration<p></p>
 <a href="/cfw/la/general/images/main-rng/script-config.gif" target="_blank"><img src="/cfw/la/general/images/main-rng/script-config.gif" style="width:675px;height:400px;"></a><br /><br />
 
-<p>If you plan to search for specific IVs and Nature you will need to edit the filters, filters are located towards the bottom of the script, by default the filters are written as comments, so any search will be done without any filters applied.</p>
+<p>If you intend to search for specific IVs and Nature, you'll need to adjust the filters located towards the bottom of the script. By default, these filters are written as comments, meaning that any search will be conducted without applying any filters.</p>
 
-<p>A line of code that begins with <code class="fw-bold" style="color: #0a7a00;">//</code> is a comment. To activate the filters, simply remove the <code class="fw-bold" style="color: #0a7a00;">//</code> from the lines you wish to activate, to deactivate a filter, add <code class="fw-bold" style="color: #0a7a00;">//</code> back onto the line.</p>
-
-<p>You will also need to change the Nature and IV values if you wish to filter for specific combinations. We can safely ignore the gender filter since none of these legendaries have a gender.</p>
+<p>A line of code that begins with <code class="fw-bold" style="color: #0a7a00;">//</code> is a comment. To activate the filters, simply remove the <code class="fw-bold" style="color: #0a7a00;">//</code> from the lines you wish to activate. Conversely, to deactivate a filter, add <code class="fw-bold" style="color: #0a7a00;">//</code> back onto the line (see below image).</p>
 
 <span class="fw-bold">Figure 3 -</span> IV/Nature filtering<p></p>
 <a href="/cfw/la/general/images/main-rng/iv-nature-filters.gif" target="_blank"><img src="/cfw/la/general/images/main-rng/iv-nature-filters.gif" style="width:675px;height:400px;"></a><br /><br />
 
-<p>In this example we have applied filters for any 31/0/31/31/31/31 spread with a Calm nature by removing the comment tags on the IV and Nature filters. This seed has a lengthy amount of advances before hitting the target frame, so it can be considered undesirable. To refresh your seed you will need to restart the game and run <code span class="fw-bold">EncBotCopySeedLA</code> again until you find something desirable.</p>
+<p>In this example, we've applied filters for a spread of 31/0/31/31/31/31 with a Calm nature by activating the IV and Nature filters. However, this seed requires a lengthy amount of advances before hitting the target frame, making it undesirable. To refresh your seed, you'll need to restart the game and run <code span class="fw-bold">EncBotCopySeedLA</code> again until you find a desirable result.</p>
 
-<p>Great! You should now have a general understanding of how to use the scripts and how to obtain your current seed. We can now move onto the process of RNG abusing each of the Pokemon. Each of these Legendaries will have slightly differing methods to use in order to RNG abuse them. For this reason each encounter will be covered on a seperate page.</p><hr />
+<p>You should now have a general understanding of how to use the scripts and how to monitor your current seed. We can now move onto the process of RNG abusing each of the Pokemon. Each of these Legendaries will have slightly differing methods to use in order to RNG abuse them. For this reason each encounter will be covered on a seperate page.</p><hr />
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/legendary/main-rng/origin-legend">
   <span class="fw-bold">For Origin Dialga/Palkia, click here!</span>
