@@ -28,11 +28,11 @@ permalink: /cfw/la/legendary/main-rng/arceus
 </div>
 <hr />
 
-<p>This section of the guide aims to provide a worked example for how to RNG abuse Arceus.</p>
+<p>This section of the guide aims to provide a worked example for how to RNG abuse Arceus. Make sure <u>Autosave is disabled</u> and that you have a <u>full team of 6 Pokemon</u> before beginning this portion of the guide. This provides a safety net for failed targets and makes it easier to check results using PokeViewer.</p>
 
-<p><span class="fw-bold" style="color: #b60606;">If you have made it this far, you should already have the initial setup completed and have a general understanding of how to use Moarencounterbots and the RNG calculation scripts, as well as understanding how to use PKHeX/Livehex to view Pokemon.</span></p>
+<p><span class="fw-bold" style="color: #b60606;">If you've reached this point, you should have already completed the initial setup and acquired a basic understanding of how to utilize Moarencounterbots and the Main RNG calculation script. Additionally, you should be familiar with using PokeViewer.NET to view Pokemon.</span></p>
 
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/legendary/main-rng">
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/general/main-rng">
     Don't understand how to use the tools/scripts yet? <span class="fw-bold">Click here to go back</span>!
     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
@@ -42,20 +42,19 @@ permalink: /cfw/la/legendary/main-rng/arceus
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c0038;" id="delay-calc-arceus">
-        <span class="fw-bold text-light">Getting Started:</span>
+        <span class="fw-bold text-light">Getting Started (Delay Calculation):</span>
     </div>
     <div class="card-body card-bg">
-
-        <p>Before anything else, you will need to calculate the rough delay for this encounter. The term "delay" is used to describe how long it take for the Pokemon to generate after the final A Press. We recommend <u>disabling Autosave</u> and to have <u>a full team of 6 Pokemon</u> so that your target Pokemon is sent to boxes. Sending the Pokemon to boxes will make it easier to view using Livehex.</p><hr />
+        <p>You will need to calculate the rough delay for this encounter. The term 'delay' refers to how long it takes for the Pokemon to generate after the final A Press. Since the number of frames that advance during the cutscene is variable, it's important to take a few practice attempts to determine a delay that is consistent for you.</p>
 
         <h5><span class="fw-bold">Calculating Delay (Step-By-Step)</span></h5>
         <ul>
-            <li>Initiate the Arceus boss battle and defeat it, then proceed to the screen of the final <code span class="fw-bold">A button</code> press, this will be the screen that shows the Arceus quest has been completed (<a href="/cfw/la/general/images/main-rng/arceus/arceus-final-a-press.png" target="_blank">This screen</a>).</li>
+            <li>Initiate the Arceus boss battle and defeat it, then proceed to the screen of the <a href="/cfw/la/general/images/main-rng/arceus/arceus-final-a-press.png" target="_blank">final A button press</a>.</li>
             <li>Press the <code span class="fw-bold">Home button (⌂)</code>, then open Moarencounterbots and select <code span class="fw-bold">EncBotRNGMonitorLA</code>.</li>
             <li>Head back to the <code span class="fw-bold">Bots</code> tab on Moarencounterbots and start the bot, if done correctly you should now see a seed has been produced in the <code span class="fw-bold">Logs</code> tab.</li>
             <li>Paste your current seed into the Main RNG script, then search without filters. This will be the starting frame.</li>
-            <li>Unpause the game and continue mashing the A button to generate Arceus, then inspect it using Livehex.</li>
-            <li>Copy the PID of the Arceus and use the find function (Ctrl F) to search for the PID in your search results.</li>
+            <li>Unpause the game and continue mashing the A button to generate Arceus, then inspect it using PokeViewer.</li>
+            <li>Copy the PID of the Arceus and use the find function (<code span class="fw-bold">CTRL+F</code>) to search for the PID in your search results.</li>
             <li>Take note of the frame that Arceus was generated on, this will be your delay for this attempt.</li>
             <li>The delay for this encounter is not perfectly stable, it is recommended to repeat this process a few times to get a rough average delay that works for you.</li>
         </ul>
@@ -70,7 +69,8 @@ permalink: /cfw/la/legendary/main-rng/arceus
 <br />
 <br />
 
-<p>After following the delay calculation steps, after searching for the PID of the Arceus we hit and matching the IVs/Nature, we can see that it was generated on frame 34. This means the delay for this attempt is 34. After 5 attempts we have the following delay values:</p>
+<p>After following the delay calculation steps and searching for the PID of the encountered Palkia, we find that it was generated on frame 34. Therefore, our delay for this attempt is 34. After 5 attempts, we have the following delay values:</p>
+
 
 <table class="table table-striped" style="width:100%">
     <thead class="table text-white" style="background-color: #0c0038;">
@@ -103,34 +103,34 @@ permalink: /cfw/la/legendary/main-rng/arceus
     </tbody>
 </table>
 
-<p>Based on the table above, a safe delay to target would be between frame 34-43, these delay values are based on how quickly I was able to spam the A button to generate arceus, these values may vary for you!</p>
+<p>This means a safe delay value to target in future attempts is 2-4. The delay values shown here are based on how quickly I was mash through the final screen before Arceus was generated; your values may vary depending on how quickly you are able to mash the A button to generate Arceus.</p>
 
-<p><span class="fw-bold">Now that we have a rough delay, it's time to get to work on finding a suitable seed and target frame!</span></p>
+<p><span class="fw-bold">Now that we have a rough delay range, it's time to focus on finding a suitable seed and target frame.</span></p>>
 
 <span class="fw-bold">Figure 2 -</span> Setting Filters<p></p>
 <a href="/cfw/la/general/images/main-rng/arceus/filters-arceus.gif" target="_blank"><img src="/cfw/la/general/images/main-rng/arceus/filters-arceus.gif" style="width:675px;height:400px;"></a>
 <br />
 <br />
 
-<p>In this example the filters are set to search for any Arceus with 6 perfect IVs (31/31/31/31/31/31), you can be more specific with the filters if you wish, such as filtering for a specific nature, or optimal 0 IV values such as 0 Atk.</p>
+<p>In this example, the filters are configured to search for any Palkia with 6 perfect IVs (31/31/31/31/31/31). You can further customize the filters if desired, such as specifying a particular nature or optimizing for 0 IV values, such as 0 Attack.</p>
 
 <span class="fw-bold">Figure 3 -</span> Target Frame Found<p></p>
 <a href="/cfw/la/general/images/main-rng/arceus/target-frame-found-arceus.gif" target="_blank"><img src="/cfw/la/general/images/main-rng/arceus/target-frame-found-arceus.gif" style="width:675px;height:400px;"></a>
 <br />
 <br />
 
-<p>Great! We found a 6IV Quirky Arceus in 18,241 advances in a cluster of 4, a cluster is a group of frames that produce the same end result, the larger the cluster the more chances you have of hitting the correct target frame.</p>
+<p>Great! We discovered a 6IV Hardy Arceus after 18,241 advances within a cluster of 4. A cluster refers to a group of frames that produce the same end result; the larger the cluster, the greater the chances of hitting the correct target frame.</p>
 
-<p>We now need to advance to close to our target frame, you can now begin to monitor your RNG state by running <code span class="fw-bold">EncBotRNGMonitorLA</code> in Moarencounterbots, this will track the amount of advancements that have occurred in real time.</p>
+<p>Now, we need to advance close to our target frame. Monitor your RNG state by running <code span class="fw-bold">EncBotRNGMonitorLA</code> in Moarencounterbots; this will track the number of advancements that occur in real time.</p>
 
 <span class="fw-bold">Figure 4 -</span> RNG State Monitoring Using EncBotRNGMonitorLA<p></p>
 <a href="/cfw/la/general/images/main-rng/arceus/rng-state-monitoring.gif" target="_blank"><img src="/cfw/la/general/images/main-rng/arceus/rng-state-monitoring.gif" style="width:675px;height:400px;"></a>
 <br />
 <br />
 
-<p>The RNG state at the Spear Pillar advances at a slow rate. By moving to a more populated area you can advance the RNG state at a much quicker rate, in the example image above the player is stood next to a large body of water in an area that is densely populated with Pokemon.</p>
+<p>The RNG state at the Spear Pillar advances at a slow rate. Moving to a more populated area allows you to advance the RNG state much more quickly. In the example image above, the player is standing next to a large body of water in an area densely populated with Pokemon.</p>
 
-<p>Consider leaving Spear Pillar and heading somewhere where the RNG state advances more rapidly if you need to cover a large amount of frame advancements. But be sure to save yourself enough time to reposition yourself at Spear Pillar and have enough frames left to defeat Arceus without overshooting your target.</p> 
+<p>Consider leaving Spear Pillar and heading to a location where the RNG state advances more rapidly if you need to cover a large amount of frame advancements. If you have moved locations, make sure to leave enough time to reposition yourself to avoid overshooting your target frame.</p>
 
 <details>
 <summary><span class="fw-bold">Example</span></summary>
@@ -162,12 +162,15 @@ permalink: /cfw/la/legendary/main-rng/arceus
 
 <p><code span class="fw-bold">x (earliest target frame) - y (delay) = z (frame to press A)</code></p>
 
-<p>We will now begin spamming the <code span class="fw-bold">A button</code> as quickly as possible to re-open the game and spam through the menus, this will provide the best chance of hitting the correct target frame.</p>
+<p>It is now time to begin spamming the <code span class="fw-bold">A button</code> as quickly as possible, then inspect the Arceus using <a href="https://github.com/zyro670/PokeViewer.NET/wiki/2.-Box-View">PokeViewer.NET Box Viewer</a> to see if we hit the correct target.</p>
 
 <span class="fw-bold">Figure 8 -</span> Result Found!<p></p>
 <a href="/cfw/la/general/images/main-rng/arceus/result-found-arceus.png" target="_blank"><img src="/cfw/la/general/images/main-rng/arceus/result-found-arceus.png" style="width:675px;height:400px;"></a>
 <br />
 <br />
 
-<p><span class="fw-bold">We hit our target frame and have secured a 6IV Arceus! That's all there is to it!</span></p>
+<p><span class="fw-bold">We hit our target frame and have secured a Arceus with 6 perfect IVs! That's all there is to it!</span></p>
+
+<p><small><span class="fw-bold">Final Note -</span> Keen eyed readers may notice that the example uses PKHeX to view the box slot that contains our Pokemon, PokeViewer is considered to be more user friendly and does the same job.</small></p>
+
 
