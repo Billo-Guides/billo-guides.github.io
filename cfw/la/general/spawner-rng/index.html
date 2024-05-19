@@ -42,7 +42,7 @@ permalink: /cfw/la/general/spawner-rng
   <h1 class="text-light text-center pt-3 pb-3">Getting Started</h1>
 </div><hr />
 
-<p>Firstly, SysBot.NET needs to be configured properly for use with Legends: Arceus. After doing so you will also need to apply the relevant settings according to the Pokemon you intend on hunting.</p>
+<p>First, you will need to configure Zyro670s SysBot.NET for use with Legends: Arceus. Once configured, adjust the settings based on the specific Pokémon you want to hunt.</p>
 
 <p>In this example we will be configuring the program to hunt for an Enamorus with 6 flawless IVs.</p>
 
@@ -51,47 +51,39 @@ permalink: /cfw/la/general/spawner-rng
     <span class="fw-bold text-light">Sysbot.NET Setup & Instructions:</span>
   </div>
   <div class="card-body card-bg">
-    <h5 class="fw-bold">Sysbot.NET Config:</h5>
+    <h5 class="fw-bold">NotForkBot Config:</h5>
     <ol>
-      <li>Open Zyro670's SysBot.NET, then close it again to generate a file named <code class="fw-bold">config.json</code>.</li>
+      <li>Open <code class="fw-bold">SysBot.exe</code>, then close it again to generate a file named <code class="fw-bold">config.json</code>.</li>
       <li>Right-click <code class="fw-bold">config.json</code>, then open it with a text editor (e.g Notepad).</li>
       <li>Edit the <code class="fw-bold">Mode</code> value to 3, then save and close <code class="fw-bold">config.json</code>.</li>
-      <li>Open Sysbot.NET again and confirm that <code class="fw-bold">Sysbot: Pokemon (LA)</code> is present in the header.</li>
+      <li>Open <code class="fw-bold">SysBot.exe</code> again, confirm that <code class="fw-bold">Sysbot: Pokemon (LA)</code> is present in the header.</li>
     </ol>
 
-    <p>After setting up SysBot.NET and confirming that Legends: Arceus mode was activated properly, head over to the <code class="fw-bold">Hub</code> tab, this is where all the relevant details about the Pokemon you are hunting will be entered.</p>
+    <p>After confirming that Legends: Arceus mode was activated properly, head over to the <code class="fw-bold">Hub</code> tab. This is where you will enter the relevant details about the Pokemon you are hunting.</p>
 
     <h5 class="fw-bold">Spawner RNG Setup:</h5>
     <ol>
-      <li>Open the <code class="fw-bold">Hub</code> tab of SysBot, then open the <code class="fw-bold">ArceusLA</code> dropdown menu. This is where you will add the relevant details for your chosen hunt.</li>
-      <li>Set the <code class="fw-bold">BotType</code> to the Pokemon you are hunting. For Genies use <code class="fw-bold">GenieScanner</code>, and for anything else use <code class="fw-bold">OtherLegendReset</code>.</li>
-      <li>Open the <code class="fw-bold">SpecialConditions</code> dropdown menu, then select the <code class="fw-bold">ScanLocation</code> that matches the location of your chosen hunt.</li>
-      <li>For encounters that use the <code class="fw-bold">OtherLegendReset</code> routine, you will also need to select the <code class="fw-bold">TypeOfLegend</code> you are hunting from the dropdown menu.</li>
-      <li>If your encounter is contained within a cave, <code class="fw-bold">RunToProfessor</code> should be set to <code class="fw-bold">True</code>, otherwise this can be set to <code class="fw-bold">False</code> to save time.</li>
-      <li>Set the <code class="fw-bold">MaxAdvancesToSearch</code> to an amount you are comfortable with, 50-100 advances is recommended as advancements can take a long time depending on your chosen hunt.</li>
-      <li>Scroll up to the top, and open the <code class="fw-bold">StopConditions</code> dropdown menu, type in your desired IVs/Nature combination, then restart the bot by closing and re-opening the entire program.</li>
+      <li>In the <code class="fw-bold">ArceusLA</code> dropdown menu, set the <code class="fw-bold">BotType</code> to match the Pokemon you are hunting. For the Genies set this to <code class="fw-bold">GenieScanner</code> and for anything else use <code class="fw-bold">OtherLegendReset</code>.</li>
+      <li>Open the <code class="fw-bold">SpecialConditions</code> dropdown menu, then select the correct <code class="fw-bold">ScanLocation</code> based on the Pokemon you are hunting. If you have chosen <code class="fw-bold">OtherLegendReset</code>, select the correct Pokemon under <code class="fw-bold">TypeOfLegend</code> as well.</li>
+      <li>If your encounter is located within a cave, or if you have any issues with using character teleportation, set <code class="fw-bold">RunToProfessor</code> to <code class="fw-bold">True</code>, otherwise you can leave this set to <code class="fw-bold">False</code> to save time.</li>
+      <li>Set <code class="fw-bold">MaxAdvancesToSearch</code> to a comfortable amount; for Pokemon that do not immediately respawn, 50-100 advances are recommended as advancements can take a long time, 200-300 advances are recommended for everything else.</li>
+      <li>In the <code class="fw-bold">StopConditions</code> dropdown menu at the top, enter your desired IVs & Nature, you will need to close and re-open <code class="fw-bold">SysBot.exe</code> every time you change these settings to ensure they have been properly activated.</li>
+      <li>After re-opening <code class="fw-bold">SysBot.exe</code>, enter the local IP address of your console into the assigned field, and select <code class="fw-bold">ArceusLA</code> from the dropdown menu on the right, then add the bot to the list of active bots.</li>
     </ol>
 
-    <p>After properly configuring the bot, head back over to the <code class="fw-bold">Bots</code> tab. Here you will add the bot to the active bots list.</p>
-
-    <details>
-      <summary><span class="fw-bold">Adding a bot:</span></summary>
-      <ul>
-        <li>Type the local IP address of your switch console into the designated field.</li>
-        <li>Open the dropdown menu on the right, then select <code class="fw-bold">ArceusBot</code>.</li>
-        <li>Click <code class="fw-bold">Add</code> to add the bot to the list of active bots.</li>
-        <li>Active bots can then be started by selecting <code class="fw-bold">Start All</code>.</li>
-      </ul>
-
-      <small><span class="fw-bold">Note -</span> If you change the StopConditions or details about your desired hunt, you should close and re-open the entire program to ensure these changes take affect.</small>
-    </details>
+    <p>Active bots can be started by clicking the <code class="fw-bold">Start All</code> button, ensure all controllers have been fully disconnected (or JoyCons are attached to the console) before starting bots, connected Pro Controllers will cause the bot to not accept button inputs.</p>
   </div>
 </div><br>
 
 <span class="fw-bold">Figure 1 -</span> Sysbot.NET Setup<p></p>
 <a href="/cfw/la/general/images/spawner-rng/sysbot-setup-spawner.gif" target="_blank"><img src="/cfw/la/general/images/spawner-rng/sysbot-setup-spawner.gif" style="width:675px;height:400px;"></a><br /><br />
 
-<p>Your setup should look similar to the above image, the bot type is set to <code class="fw-bold">GenieScanner</code>, <code class="fw-bold">ScanLocation</code> set to Crimson Mirelands, and <code class="fw-bold">StopConditions</code> are set to 31/0/31/31/31/0, these are the configurations used for hunting Enamorus.</p>
+<p>Your setup should look similar to the above image, in this example the bot has been configured to search for an Enamorus with 6 perfect IVs.</p>
+<ul>
+  <li><code class="fw-bold">BotType</code> is set to <code class="fw-bold">GenieScanner</code> because Enamorus is a genie.</li>
+  <li><code class="fw-bold">ScanLocation</code> has been set to Crimson Mirelands, because that is where Enamorus is located.</li>
+  <li><code class="fw-bold">StopConditions</code> have been set to search for an IV spread of 31/0/31/31/31/0.</li>
+</ul>
 
 <div class="card border-dark">
   <div class="anchored card-header" style="background-color: #0c0038;" id="ingame-setup-spawner-rng">
@@ -141,7 +133,7 @@ permalink: /cfw/la/general/spawner-rng
 <p>We found a 31/0/31/31/31/0 Enamorus in 59 advances (sensitive information has been blocked out to protect my Enamorus), it's now time to begin advancing towards the target frame!</p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="advancingtotargetframespawner">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="advancing-to-target-spawner">
     <span class="fw-bold text-light">Advancing Towards The Target:</span>
   </div>
   <div class="card-body card-bg">
@@ -201,5 +193,5 @@ permalink: /cfw/la/general/spawner-rng
 <span class="fw-bold">Figure 5 -</span> Result Found!<p></p>
 <a href="/cfw/la/general/images/spawner-rng/result-found-spawner.jpg" target="_blank"><img src="/cfw/la/general/images/spawner-rng/result-found-spawner.jpg" style="width:675px;height:400px;"></a><br /><br />
 
-<p><span class="fw-bold">After advancing 59 frames using the above mentioned method, the 31/0/31/31/31/0 Enamorus has been found & caught! That's all there is to it!</span></p>
+<p><span class="fw-bold">After advancing 59 frames using the above mentioned method, the 31/0/31/31/31/0 Enamorus has been found & caught. That's all there is to it!</span></p>
 
