@@ -21,15 +21,24 @@ permalink: /retail/la/legendary
     td {
       border: 1px solid black;
     }
+
+    blockquote {
+     background: #c5c5c5;
+     border: 1px solid #9e9e9e;
+     border-left: 5px solid #0c0038;
+     margin: 1.5em 10px;
+     padding: 0.5em 10px;
+     quotes: "\201C""\201D""\2018""\2019";
+    }
   </style>
   
   <div class="title" style="background-color: #0c0038;">
     <h1 class="text-light text-center pt-3 pb-3">Legends: Arceus RNG (Retail)</h1>
   </div><hr />
+
+  <p>This guide provides detailed instructions on RNG abusing Legendary Pokemon in Legends: Arceus, leveraging RNG scripts developed by <a href="https://github.com/Lusamine">Lusamine</a>.</p>
   
-  <p>This guide provides in-depth coverage of how to RNG abuse Legendary Pokemon tied to Spawners in Legends: Arceus, using RNG generation scripts written by <a href="https://github.com/Lusamine">Lusamine</a>.</p>
-  
-  <p><span class="fw-bold" style="color: #b60606;">From here it is assumed you are using a retail (unmodified) Switch console and running Windows OS on your computer.</span></p>
+  <p><span class="fw-bold" style="color: #b60606;">From here it is assumed you are using a unmodified Switch console and running stock firmware. This guide is also targeted towards Windows OS users.</span></p>
   
   <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/general">
     Have Custom Firmware installed? You are in the wrong place! <span class="fw-bold">Click here!</span>
@@ -41,34 +50,41 @@ permalink: /retail/la/legendary
   <hr /><div class="title" style="background-color: #0c0038;">
     <h1 class="text-light text-center pt-3 pb-3">Required Reading</h1>
   </div><hr />
-  
-  <p>There are 2 different ways that the game uses to generate Legendary Pokemon, these are Spawner RNG seeded, and Main RNG seeded. It is important to understand the difference between these two generation methods, and understand which encounters fall into each category before getting started.</p>
-  
+
+  <p>You can RNG manipulate most Legendary & Mythical encounters on retail hardware, this can be used to attain desired IVs & Nature combinations. There are two different types of seeding used to generate Legendary/Mythical Pokemon in Legends: Arceus, these are commonly referred to as Spawner RNG and Main RNG.</p>
+
+  <p>Currently it is only possible to RNG manipulate Pokemon that are tied to Spawner RNG on retail hardware. If you wish to RNG abuse Pokemon tied to Main RNG you will need a Switch console capable of running Custom Firmware.</p>
+      
    <div class="card border-dark">
      <div class="anchored card-header" style="background-color: #0c0038;" id="spawner-rng-overview">
-       <span class="fw-bold text-light">Spawner RNG In A Nutshell:</span>
+       <span class="fw-bold text-light">Spawner RNG Details:</span>
      </div>
      <div class="card-body card-bg">
-       <h6><span class="fw-bold">What is a spawner?</span></h6>
-         <p>Spawners are specific locations on the map that hold a wild Pokemon, these Pokemon will move around in the overworld. When the Pokemon is knocked out and forced to respawn the seed will advance by 1, so this means that hitting a desired result is as simple as knocking out a Pokemon and respawning it a certain number of times in a row.</p>
+     <h5><span class="fw-bold">What is Spawner RNG?</span></h5>
 
-       <h6><span class="fw-bold">Legendaries tied to spawners include:</span></h6>
-       <ul>
-         <li>Lake Trio - Uxie, Mesprit & Azelf</li>
-         <li>Weather Quartet - Tornadus, Thundurus, Landorus & Enamorus</li>
-         <li>Heatran</li>
-         <li>Cresselia</li>
-         <li>Manaphy & Phione</li>
-         <li>Shaymin</li>
-         <li>Darkrai</li>
-       </ul>
+     <p>Spawners contain specific Pokemon visible in the overworld. When the Pokemon is knocked out and respawned, the spawner seed advances by 1 frame. Achieving the desired result involves respawning the Pokemon a certain number of times in succession until you reach your target frame.</p>
+ 
+     <h6><span class="fw-bold">Spawner RNG Encounters:</span></h6>
+     <ul>
+       <li>Lake Trio - Uxie, Mesprit & Azelf</li>
+       <li>Weather Quartet - Tornadus, Thundurus, Landorus & Enamorus</li>
+       <li>Heatran</li>
+       <li>Cresselia</li>
+       <li>Manaphy/Phione</li>
+       <li>Shaymin</li>
+       <li>Darkrai</li>
+     </ul>
 
-       <p>It is possible to RNG abuse any of the Pokemon from the above list on retail hardware. Any other legendary encounter is currently impossible without Switch CFW (or using an emulator).</p>
-  </div></div>
+     <blockquote>Any other Legendary or Mythical Pokemon not present in the above list is tied to Main RNG and is impossible to RNG abuse on a retail device at this point in time.</blockquote>
+         
+     </div>
+   </div>
 
   <hr /><div class="title" style="background-color: #0c0038;">
     <h1 class="text-light text-center pt-3 pb-3">Setup & Installation</h1>
   </div><hr />
+
+  <p>Here are the relevant tools & scripts you will need to perform Spawner RNG manipulation.</p>
   
   <p>These are the tools, applications & scripts you will need in order to RNG abuse Legendary Pokemon tied to spawners.</p>
   
@@ -107,7 +123,6 @@ permalink: /retail/la/legendary
               <li>Run the script by clicking the <code span class="fw-bold">▶ button</code>, You should now see the script output at the bottom of the window.</li>
               <li>Once you have confirmed that the script is running correctly, save it in a known location on your computer.</li>
             </ol>
-            <small>If you are running into issues, ensure your Namespace Imports and Additional References are set up exactly as decribed above, and that you only have the relevant code from the script you are using inside the main window. Extra unwanted code will cause issues when running the script.</small><hr />
 
             <h5><span class="fw-bold">Spawner RNG Seed Solver Initial Setup</span></h5>
             <ol>
@@ -118,18 +133,20 @@ permalink: /retail/la/legendary
               <li>Press F4, then add PKHeX.Core.dll, libz3.dll and MicrosoftZ3.dll to the <code span class="fw-bold">Additional References</code> tab.</li>
               <li>Copy/Paste the following into the <code span class="fw-bold">Namespace Imports</code> tab:</li><p></p>
 
-                <div class="alert" style="background-color: #c0bdbd;">              
+                <blockquote>
                     Microsoft.Z3<br>
                     PKHeX.Core<br>
                     System.Collections.Concurrent<br>
                     System.Runtime.CompilerServices<br>
                     System.Threading.Tasks
-                </div>
+                </blockquote>
+
               <li>Enable compiler optimizations by clicking the small button at the bottom right of the main window.</li>
               <li>Run the script by clicking the <code span class="fw-bold">▶ button</code>, You should now see the script output at the bottom of the window.</li>
               <li>Once you have confirmed that the script is running correctly, save it in a known location on your computer.</li>
             </ol>
-            <small>If you are running into issues, ensure your Namespace Imports and Additional References are set up exactly as decribed above, and that you only have the relevant code from the script you are using inside the main window. Extra unwanted code will cause issues when running the script.</small>
+
+            <blockquote>If you are encountering errors when attempting to run either of the above scripts, make sure all the steps listed above have been followed to the letter. Not following these steps properly will result in complications.</blockquote>
     </div>
   </div><br>
 
@@ -142,11 +159,9 @@ permalink: /retail/la/legendary
   <a href="/retail/la/spawner/images/seed-solver-script-initial-setup.gif" target="_blank"><img src="/retail/la/spawner/images/seed-solver-script-initial-setup.gif" style="width:675px;height:400px;"></a><br /><br />
 
   <p>Here we can see the Seed Solver Script has been configured correctly as the following message was produced at the bottom of the main window:</p>
-  
-  <div class="alert border-dark" style="background-color: #d1d1d1;">              
-    <code class="fw-bold">DirectoryNotFoundException<br>
-    Could not find a part of the path 'C:\Users\USER\Desktop\pa8'.</code>
-  </div><p></p>
+
+  <blockquote><code class="fw-bold">DirectoryNotFoundException<br>
+    Could not find a part of the path 'C:\Users\USER\Desktop\pa8'.</code></blockquote>
 
   <p>This error message means that the script is functioning as intended, but cannot find any <code class="fw-bold">.pa8</code> files inside the chosen directory. It is currently unable to resolve the seed until those files are present.</p>
 
