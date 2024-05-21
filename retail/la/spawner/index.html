@@ -21,6 +21,15 @@ permalink: /retail/la/legendary/spawner-rng/getting-started
     td {
       border: 1px solid black;
     }
+
+    blockquote {
+     background: #c5c5c5;
+     border: 1px solid #9e9e9e;
+     border-left: 5px solid #0c0038;
+     margin: 1.5em 10px;
+     padding: 0.5em 10px;
+     quotes: "\201C""\201D""\2018""\2019";
+    }
   </style>
   
   <div class="title" style="background-color: #0c0038;">
@@ -29,7 +38,7 @@ permalink: /retail/la/legendary/spawner-rng/getting-started
   
   <p>This page will provide in-depth information about how to RNG abuse Legendary Pokemon in Legends: Arceus that are tied to what is known as Spawners. We will be using RNG automation programs written by <a href="https://github.com/lusamine">Lusamine</a>, as mentioned on the main page.</p>
   
-  <p><span class="fw-bold" style="color: #b60606;">From here it is assumed that you have already followed all of the setup & installation instructions found on the introductory page of this guide.</span></p>
+  <p><span class="fw-bold" style="color: #b60606;">From here it is assumed that you have already followed all of the setup & installation instructions found on the introductory page of this guide. You should also understand how to interact with a SysBot to dump the necessary .pa8 files needed to use the scripts.</span></p>
   
   <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/la/legendary">
     Didn't follow the setup instructions on the main page yet? <span class="fw-bold">Click here to go back</span>!
@@ -38,99 +47,62 @@ permalink: /retail/la/legendary/spawner-rng/getting-started
     </svg>
   </a><br>
   
-  <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="about-retail-spawner-rng">
-      <span class="fw-bold text-light">About Spawner RNG:</span>
-    </div>
-    <div class="card-body card-bg">
-      <p>Pokemon that are tied to spawners have their seed generated when you enter the map or cave that they are located in. The seed remains the same until you defeat the Pokemon and have it respawn. Respawning will be a consistent +1 advancement to the Spawner seed.</p>
-  
-      <p>Leaving the area and heading back to Jubilife HQ will refresh the spawner seed of every Pokemon on the map, including Legendary Pokemon. We can use the Spawner Seed Solver and Spawner RNG Calculator scripts to find and check our current seed for desirable results.</p>
-      
-      <p>It is recommended to have a strong Pokemon, lots of healing items (e.g Elixirs, Potions, Revives) and lots of throwable items (Ball of Mud, Sticky Glob etc.) before getting started. You will need enough resources to consistently defeat/stun the Legendary Pokemon that you are hunting.</p>
-    </div>
-  </div><br>
-  
-  <span class="fw-bold">Now we know the basics about Spawner-based encounters, it's time to get to work!</span>
-
   <hr /><div class="title" style="background-color: #0c0038;">
     <h1 class="text-light text-center pt-3 pb-3">Getting To Work!</h1>
   </div><hr />
 
-  <p>After gathering resources, <u>disable autosave in the in-game settings to avoid catastrophe.</u> Checking your seed requires capturing the Pokemon and returning to Jubilife HQ, which will force the game to save with a caught legendary unless autosave is disabled.</p>
+  <p>Before anything else, it is important to disable autosave, gather enough healing/throwable items, and have a strong Pokemon capable of easily defeating the Pokemon you wish to RNG abuse.</p>
 
-  <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="retail-seed-information">
-      <span class="fw-bold text-light">Finding Your Current Seed & Frame Advancements:</span>
-    </div>
-    <div class="card-body card-bg">
-      <p>In order to find your current seed you will need access to a console that is running Custom Firmware, this most commonly used method is dumping your Pokemon using somebody elses SysBot. Many free SysBots can be found in public Discord servers, you can find a list of servers that host SysBots with a quick Google search.</p><hr />
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="advancing-to-target-spawner">
+    <span class="fw-bold text-light">Frame Advancements:</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>Frame advancement methods will differ depending on if your Pokemon is an forced capture or despawns when defeated, this section will cover how to advance frames in both of these scenarios.</p>
 
-      <h4><span class="fw-bold" id="finding-current-seed-using-sysbot">How to find your current seed:</span></h4>
+    <h5 class="fw-bold">Despawns When Defeated:</h5>
+    <p><span class="fw-bold">These include -</span> Tornadus, Thundurus, Landorus, Enamorus, Shaymin & Darkrai.</p>
 
-      <p>Sysbot.NET is capable to dump any Pokemon you shown inside the trade window without needing to physically trade the Pokemon (as this would force a save and lock you into the same seed permanently). This gives retail players the ability to check their seed and reset the game if the seed does not produce any desirable results.</p>
-
-      <ol>
-        <li>Head into the map location of your desired Legendary, then manually save the game.</li>
-        <li>Capture the legendary, then return to Jubilife without saving the game.</li>
-        <li>Initiate a Sysbot dump trade, then dump the Legendary Pokemon that you caught.</li>
-        <li>Reset the game, this time, KO the Pokemon instead of catching it.</li>
-        <li>Advance a single frame, then capture the next Legendary that spawns.</li>
-        <li>Initiate another Sysbot trade, dump the Pokemon again and reset the game.</li>
-        <li>You should now have two sequencial pa8 files and be back in correct map location.</li>
-        <li>Put both of the dumped pa8 files inside the <code class="fw-bold">pa8s</code> folder that was created earlier.</li>
-        <li>Run the Seed Solver script until a seed is produced.</li>
-      </ol><hr />
-
-      <h4><span class="fw-bold" id="advancing-the-rng-state">How to advance the RNG state:</span></h4>
-
-      <p>Frame advancement methods will differ depending on if your Pokemon is an forced capture or despawns when defeated, this section will cover how to advance frames in both of these scenarios.</p>
-
-      <h5 class="fw-bold">Despawns When Defeated:</h5>
-      <p><small><span class="fw-bold">These include -</span> Tornadus, Thundurus, Landorus, Enamorus, Shaymin & Darkrai.</small></p>
-  
-      <ol>
-        <li>Knockout the legendary.</li>
-        <li>Fly to a campsite, then sleep until night, then sleep again until evening.</li>
-        <li>Fly to a cave and enter, then save and reboot the game.</li>
-        <li>Fly back to the legendary and wait 1 weather cycle for the legendary to respawn.</li>
-        <li>Repeat from step 1 until the desired frame has been hit.</li>
-      </ol>
+    <ol>
+      <li>Knockout the legendary, then fly to a campsite.</li>
+      <li>Sleep until night, then sleep again until evening.</li>
+      <li>Fly to a cave and enter, then save and reboot the game.</li>
+      <li>(Optional but optimal) Fly to a campsite then sleep until evening.</li>
+      <li>Fly back to the legendary and wait 1 weather cycle for the legendary to respawn.</li>
+      <li>Repeat from step 1 until the desired frame has been hit.</li>
+    </ol>
     
-      <p><small>While not required, it is recommended to sleep until evening after step 3, this will guarantee a weather cycle to occur within 3 minutes, otherwise you may be waiting longer than necessary for one to occur.</small></p>
+    <blockquote><span class="fw-bold">Note -</span> Tornadus, Thundurus and Darkrai only respawn in certain conditions, Tornadus in a Blizzard, Thundurus in a Thunderstorm, and Darkrai at night.</blockquote>
+    <hr />
 
-      <p><span class="fw-bold">Note - </span>Tornadus or Thundurus will only spawn in specific weather conditions, Tornadus will only respawn in a blizzard, and Thundurus will only respawn in a thunderstorm.</p><hr />
-  
-      <h5 class="fw-bold">Forced Capture:</h5>
-      <p><span class="fw-bold">These include -</span> Uxie, Mesprit, Azelf, Heatran & Cresselia.</p>
+    <h5 class="fw-bold">Forced Capture:</h5>
+    <p><span class="fw-bold">These include -</span> Uxie, Mesprit, Azelf, Heatran & Cresselia.</p>
 
-      <ol>
-        <li>Knockout the legendary.</li>
-        <li>Click through the menus until you regain control of your character.</li>
-        <li>Repeat from step 1 until the desired frame has been hit.</li>
-      </ol>
+    <ol>
+      <li>Knockout the legendary.</li>
+      <li>Click through the menus until you regain control of your character.</li>
+      <li>Repeat from step 1 until the desired frame has been hit.</li>
+    </ol>
 
-      <p><small>These Pokemon are tied to main story quests, which means there is no wait time between encounters whatsoever.</small></p>
+    <blockquote><span class="fw-bold">Note - </span>All of these Pokemon are located in caves, with the exception of Cresselia, come well prepared to avoid needing to leave the area.</blockquote>
+    <hr />
 
-      <p><span class="fw-bold">Note - </span>All of these Pokemon are located inside caves except Cresselia, which means you cannot leave the cave once you are already inside, come well prepared!</p><hr />
+    <h5 class="fw-bold">Unique Cases:</h5>
+    <p><span class="fw-bold">These include -</span> Manaphy & Phione.</p>
 
-      <h5 class="fw-bold">Unique Cases:</h5>
-      <p><span class="fw-bold">These include -</span> Manaphy & Phione.</p>
+    <ol>
+      <li>Knockout the legendary, then fly to a campsite.</li>
+      <li>Sleep until night, then sleep again until evening.</li>
+      <li>Warp to Fire Pit Island and enter the cave, then save and reboot the game.</li>
+      <li>Fly back to the cave that contains Manaphy and wait 1 weather cycle for it to respawn.</li>
+      <li>Enter the cave, check to see if your Pokemon has respawned.</li>
+      <li>Repeat from step 1 until the desired frame has been hit.</li>
+    </ol>
 
-      <ol>
-        <li>Knockout the legendary.</li>
-        <li>Fly to a campsite, then sleep until night, then sleep again until evening.</li>
-        <li>Warp to Fire Pit Island and enter the cave, then save and reboot the game.</li>
-        <li>Fly back to the cave that contains Manaphy and wait 1 weather cycle for it to respawn.</li>
-        <li>Enter the cave, check to see if your Pokemon has respawned.</li>
-        <li>Repeat from step 1 until the desired frame has been hit.</li>
-      </ol>
+    <blockquote><span class="fw-bold">Note -</span> Manaphy & Phione are unique cases, they are contained inside a cave but do not immediately respawn. The method used to respawn these Pokemon is more akin to the method used for Overworld.</blockquote>
 
-      <small>Manaphy & Phione are unique cases in that it does not immediately respawned but is contained inside a cave, so the advancement method is more akin to the method for Overworld legendaries.</small>
-        
-   </div></div><br>
-
-   <p>After finding your current seed you can paste it into the Spawner RNG Calculation script and search for desirable results. If you do not find desirable results you will need to leave the area back to Jubilife HQ then start again from seed checking step 1.</p>
+  </div>
+</div><br>
 
    <hr /><div class="title" style="background-color: #0c0038;">
     <h1 class="text-light text-center pt-3 pb-3">Worked Example</h1>
@@ -141,7 +113,7 @@ permalink: /retail/la/legendary/spawner-rng/getting-started
    <span class="fw-bold">Figure 1 -</span> How To Use - Seed Solver Script<p></p>
    <a href="/retail/la/spawner/images/how-to-use-seed-solver.gif" target="_blank"><img src="/retail/la/spawner/images/how-to-use-seed-solver.gif" style="width:675px;height:400px;"></a><br /><br />
 
-   <p>First, dump the two necessary .pa8 files of the Pokemon you are hunting using the <a href="#finding-current-seed-using-sysbot">above mentioned method</a>, then place them into the <code class="fw-bold">pa8</code> folder that was created earlier, check that the path is correct, then run the script after doing so.</p>
+   <p>First, dump the two necessary .pa8 files of the Pokemon you are hunting, then place them into the <code class="fw-bold">pa8</code> folder that was created earlier, check that the path is correct, then run the script after doing so.</p>
     
    <p>After a short wait you should now see that a group seed has been produced, copy it, this seed is the seed that the Calculation Script will need to calculate the upcoming advancements of the Pokemon on the spawner that you are searching.</p>
 
