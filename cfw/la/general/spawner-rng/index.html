@@ -21,6 +21,15 @@ permalink: /cfw/la/general/spawner-rng
   td {
     border: 1px solid black;
   }
+
+  blockquote {
+  background: #c5c5c5;
+  border: 1px solid #9e9e9e;
+  border-left: 5px solid #0c0038;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  }
 </style>
 
 <div class="title" style="background-color: #0c0038;">
@@ -29,7 +38,7 @@ permalink: /cfw/la/general/spawner-rng
 
 <p>This page offers comprehensive guidance in RNG Legendary & Mythical abusing Pokemon that are associated with Spawner RNG. We'll utilize RNG automation programs developed by <a href="https://github.com/zyro670">Zyro670</a>, as referenced on the main page.</p>
 
-<p><span class="fw-bold" style="color: #b60606;">From here it is assumed that you have already followed all of the relevant setup instructions & have read through all the information provided on the introductory page of this guide.</span></p>
+<p><span class="fw-bold" style="color: #b60606;">From here it is assumed that you have already followed all of the relevant setup instructions & have read through all the information provided on the introductory page of this guide, including configuring SysBot.NET to be used with Legends: Arceus.</span></p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/general">
   Didn't follow the setup instructions on the main page yet? <span class="fw-bold">Click here to go back</span>!
@@ -42,23 +51,13 @@ permalink: /cfw/la/general/spawner-rng
   <h1 class="text-light text-center pt-3 pb-3">Getting Started</h1>
 </div><hr />
 
-<p>First, you will need to configure Zyro670s SysBot.NET for use with Legends: Arceus. Once configured, adjust the settings based on the specific Pokémon you want to hunt.</p>
+<p>Firstly, you will need to adjust the settings inside the <code class="fw-bold">Hub</code> tab of SysBot.NET based on the specific details about Pokémon you want to hunt, such as the species and map location.</p>
 
 <div class="card border-dark">
   <div class="anchored card-header" style="background-color: #0c0038;" id="sysbot-setup-spawner-rng">
-    <span class="fw-bold text-light">Sysbot.NET Setup & Instructions:</span>
+    <span class="fw-bold text-light">SysBot Setup:</span>
   </div>
   <div class="card-body card-bg">
-    <h5 class="fw-bold">NotForkBot Config:</h5>
-    <ol>
-      <li>Open <code class="fw-bold">SysBot.exe</code>, then close it again to generate a file named <code class="fw-bold">config.json</code>.</li><p></p>
-      <li>Right-click <code class="fw-bold">config.json</code>, then open it with a text editor (e.g Notepad).</li><p></p>
-      <li>Edit the <code class="fw-bold">Mode</code> value to 3, then save and close <code class="fw-bold">config.json</code>.</li><p></p>
-      <li>Open <code class="fw-bold">SysBot.exe</code> again, confirm that <code class="fw-bold">Sysbot: Pokemon (LA)</code> is present in the header.</li>
-    </ol>
-
-    <p>After confirming that Legends: Arceus mode was activated properly, head over to the <code class="fw-bold">Hub</code> tab. This is where you will enter the relevant details about the Pokemon you are hunting.</p>
-
     <h5 class="fw-bold">Spawner RNG Setup:</h5>
     <ol>
       <li>In the <code class="fw-bold">ArceusLA</code> dropdown menu, set the <code class="fw-bold">BotType</code> to match the Pokemon you are hunting. For the Genies set this to <code class="fw-bold">GenieScanner</code> and for anything else use <code class="fw-bold">OtherLegendReset</code>.</li><p></p>
@@ -66,10 +65,11 @@ permalink: /cfw/la/general/spawner-rng
       <li>If your encounter is located within a cave, or if you have any issues with using character teleportation, set <code class="fw-bold">RunToProfessor</code> to <code class="fw-bold">True</code>, otherwise you can leave this set to <code class="fw-bold">False</code> to save time.</li><p></p>
       <li>Set <code class="fw-bold">MaxAdvancesToSearch</code> to a comfortable amount; for Pokemon that do not immediately respawn, 50-100 advances are recommended as advancements can take a long time, 200-300 advances are recommended for everything else.</li><p></p>
       <li>In the <code class="fw-bold">StopConditions</code> dropdown menu at the top, enter your desired IVs & Nature, you will need to close and re-open <code class="fw-bold">SysBot.exe</code> every time you change these settings to ensure they have been properly activated.</li><p></p>
-      <li>After re-opening <code class="fw-bold">SysBot.exe</code>, enter the local IP address of your console into the assigned field, and select <code class="fw-bold">ArceusLA</code> from the dropdown menu on the right, then add the bot to the list of active bots.</li>
+      <li>After re-opening <code class="fw-bold">SysBot.exe</code>, enter the local IP address of your console into the assigned field, and select <code class="fw-bold">ArceusLA</code> from the dropdown menu on the right, then add the bot to the list of active bots.</li><p></p>
+      <li>Active bots can then be started by using the <code class="fw-bold">Start All</code> button, and stopped using the <code class="fw-bold">Stop All</code> respectively. You can confirm that the bot is able to interact with the console at this stage if you wish.</li>
     </ol>
 
-    <p>Active bots can be started by clicking the <code class="fw-bold">Start All</code> button, ensure all controllers have been fully disconnected (or JoyCons are attached to the console) before starting bots, connected Pro Controllers will cause the bot to not accept button inputs.</p>
+    <blockquote>Ensure all controllers are disconnected, or that JoyCons are physically connected to the console before starting bots. Otherwise you will run into issues with the bots not accepting button inputs.</blockquote>
   </div>
 </div><br>
 
@@ -92,11 +92,11 @@ permalink: /cfw/la/general/spawner-rng
 
     <p>For Pokemon located <u>in the overworld</u>, you will need to start from Jubilife, then manually enter the map that contains the Pokemon you wish to hunt.</p>
 
-    <p><span class="fw-bold">These are -</span> Tornadus, Thundurus, Landorus, Enamorus, Cresselia, Shaymin & Darkrai.</p>
+    <blockquote><span class="fw-bold">These are -</span> Tornadus, Thundurus, Landorus, Enamorus, Cresselia, Shaymin & Darkrai.</p></blockquote>
 
     <p>For Pokemon located <u>inside caves</u>, you will need to save the game stood outside of the cave entry point of the Pokemon you wish to hunt.</p>
 
-    <p><span class="fw-bold">These are -</span> Uxie, Mesprit, Azelf, Heatran & Manaphy.</p>
+    <blockquote><span class="fw-bold">These are -</span> Uxie, Mesprit, Azelf, Heatran & Manaphy.</p></blockquote>
 
     <details>
       <summary><span class="fw-bold">Recommendations:</span></summary>
@@ -142,13 +142,12 @@ permalink: /cfw/la/general/spawner-rng
       <li>Knockout the legendary, then fly to a campsite.</li>
       <li>Sleep until night, then sleep again until evening.</li>
       <li>Fly to a cave and enter, then save and reboot the game.</li>
+      <li>(Optional but optimal) Fly to a campsite then sleep until evening.</li>
       <li>Fly back to the legendary and wait 1 weather cycle for the legendary to respawn.</li>
       <li>Repeat from step 1 until the desired frame has been hit.</li>
     </ol>
     
-    <p><span class="fw-bold">Note -</span> Tornadus, Thundurus and Darkrai only respawn in certain conditions, Tornadus in a Blizzard, Thundurus in a Thunderstorm, and Darkrai at night.</p>
-    
-    <small>While not required, it is recommended to sleep until evening after step 3, this will guarantee a weather cycle to occur within 3 minutes, otherwise you may be waiting longer than necessary for one to occur.</small>
+    <blockquote><span class="fw-bold">Note -</span> Tornadus, Thundurus and Darkrai only respawn in certain conditions, Tornadus in a Blizzard, Thundurus in a Thunderstorm, and Darkrai at night.</blockquote>
     <hr />
 
     <h5 class="fw-bold">Forced Capture:</h5>
@@ -160,9 +159,7 @@ permalink: /cfw/la/general/spawner-rng
       <li>Repeat from step 1 until the desired frame has been hit.</li>
     </ol>
 
-    <p><span class="fw-bold">Note - </span>All of these Pokemon are located inside caves except Cresselia, which means you cannot leave the cave once you are already inside, come well prepared!</p>
-
-    <small>These Pokemon are tied to main story quests, which means there is no wait time between encounters whatsoever.</small>
+    <blockquote><span class="fw-bold">Note - </span>All of these Pokemon are located in caves, with the exception of Cresselia, come well prepared to avoid needing to leave the area.</p></blockquote>
     <hr />
 
     <h5 class="fw-bold">Unique Cases:</h5>
@@ -177,11 +174,12 @@ permalink: /cfw/la/general/spawner-rng
       <li>Repeat from step 1 until the desired frame has been hit.</li>
     </ol>
 
-    <p><small>Manaphy is a unique case in that it does not immediately respawned but is contained inside a cave, so the advancement method is more akin to the method for Overworld legendaries.</small></p>
+    <blockquote><span class="fw-bold">Note -</span> Manaphy & Phione are unique cases, they are contained inside a cave but do not immediately respawn. The method used to respawn these Pokemon is more akin to the method used for Overworld.</blockquote>
 
-    <p>The SysBot offers an alternative method to advance frames that artificially alters the game time to simulate sleeping at a campsite, if you wish to use this method then see <a href="https://github.com/zyro670/NotForkBot.NET/wiki/">the Wiki</a> for more information instead.</li>
   </div>
 </div><br>
+
+<p>NotForkBot offers an alternative method to advance frames that artificially alters the game time to simulate sleeping at a campsite, if you wish to use this method then see <a href="https://github.com/zyro670/NotForkBot.NET/wiki/">the Wiki</a> for more information instead.</li>
 
 <p>Use <a href="https://github.com/zyro670/PokeViewer.NET/wiki/1.-View">PokeViewer.NET's View function</a> if you lose track of your current frame. Compare the Pokémon's details (IVs, Nature, PID, EC) to the logs from SysBot.NET to determine your exact frame.</p> 
   
