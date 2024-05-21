@@ -161,10 +161,35 @@ permalink: /retail/la/legendary
   <blockquote><code class="fw-bold">DirectoryNotFoundException<br>
     Could not find a part of the path 'C:\Users\USER\Desktop\pa8'.</code></blockquote>
 
-  <p>This error message means that the script is functioning as intended, but cannot find any <code class="fw-bold">.pa8</code> files inside the chosen directory. It is currently unable to resolve the seed until those files are present.</p>
+  <p>This error message means that the script is functioning as intended, but cannot find any <code class="fw-bold">.pa8</code> files inside the chosen directory. It is currently unable to resolve the seed until those files are present, two <code class="fw-bold">.pa8</code> files from the same Spawner are required to resolve a matching seed.</p>
 
-  <p>Two consecutive Pokemon from the spawner you wish to resolve should be present inside this folder. Information about how to dump the required files is covered in detail on the next page.</p>
+  <div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="finding-spawner-seed-retail">
+      <span class="fw-bold text-light">Finding Current Seed:</span>
+    </div>
+    <div class="card-body card-bg">
+      <p>To find your current seed you will need access to a SysBot. These bots are capable of dumping the <code class="fw-bold">.pa8</code> files required to use the seed solver script without needing to physically trade the Pokemon. Not saving gives the player the opportunity to save and reset the game if they are left with an undesirable seed.</p>
 
+      <p>Many free SysBots are hosted in community focused discord servers, these can be found with a quick google search. Make sure that the bot you are attempting to use is compatible with Legends: Arceus.</p>
+
+      <h5><span class="fw-bold" id="finding-current-seed-using-sysbot">Using SysBot to find your current seed:</span></h5>
+      <ol>
+        <li>Open the game settings and disable autosave if you have not already done so.</li>
+        <li>Head into the map location of your desired Legendary, then manually save the game.</li>
+        <li>Capture the legendary, then return to Jubilife without saving the game.</li>
+        <li>Initiate a SysBot dump trade, then dump the Legendary Pokemon that you caught.</li>
+        <li>Reset the game, this time, KO the Pokemon instead of catching it.</li>
+        <li>Advance a single frame, then capture the next Legendary that spawns.</li>
+        <li>Initiate another SysBot trade, dump the Pokemon again and reset the game.</li>
+        <li>You should now have two sequencial pa8 files and be back in correct map location.</li>
+        <li>Put both of the dumped .pa8 files inside the <code class="fw-bold">pa8s</code> folder that was created earlier.</li>
+        <li>Run the Seed Solver script until a seed is produced.</li>
+      </ol>
+
+      <blockquote>For the sake of avoiding repetition, details on how to advance frames can be found on the Getting Started page.</blockquote>
+      </div>
+    </div><br>
+ 
   <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/la/legendary/spawner-rng/getting-started">
     <span class="fw-bold">Getting Started</span>!
     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
