@@ -21,6 +21,15 @@ permalink: /cfw/la/legendary/main-rng/dialga-palkia
     td {
         border: 1px solid black;
     }
+
+    blockquote {
+     background: #c5c5c5;
+     border: 1px solid #9e9e9e;
+     border-left: 5px solid #0c0038;
+     margin: 1.5em 10px;
+     padding: 0.5em 10px;
+     quotes: "\201C""\201D""\2018""\2019";
+    }
 </style>
 
 <div class="title" style="background-color: #0c0038;">
@@ -28,7 +37,9 @@ permalink: /cfw/la/legendary/main-rng/dialga-palkia
 </div>
 <hr />
 
-<p>This section of the guide aims to provide a worked example for how to RNG abuse the Origin Form Legendary Pokemon, Dialga/Palkia.</p>
+<p>This section of the guide aims to provide a worked example for how to RNG abuse the Box Legendary Pokemon, Dialga/Palkia.</p>
+
+<p>Ensure <u>Autosave is disabled</u> and that you have a <u>full team of 6 Pokemon</u> before beginning this portion of the guide. This provides a safety net for failed targets and makes it easier to check results.</p>
 
 <p><span class="fw-bold" style="color: #b60606;">If you've reached this point, you should have already completed the initial setup and acquired a basic understanding of how to utilize Moarencounterbots and the Main RNG calculation script. Additionally, you should be familiar with using PokeViewer.NET to view Pokemon.</span></p>
 
@@ -67,11 +78,9 @@ permalink: /cfw/la/legendary/main-rng/dialga-palkia
 </div><hr />
 
 <p>If you are reading this text you have decided to use the Cutscene Method, here you can find a worked example of how to RNG abuse Dialga/Palkia using this method.</p>
+
+<blockquote><span class="fw-bold">Reminder -</span> Losing to the origin boss battle will cause it to regenerate, which will make your results inaccurate. Ensure you can defeat the boss in one attempt or use the <a href="#death-method">Death Method</a> instead.</blockquote>
     
-<p>Reminder: Losing the boss battle will cause it to regenerate, which will make your results inaccurate. Make sure you can defeat the boss in one attempt or consider using the <a href="#death-method">Death Method</a> instead.</p>
-
-<p>Make sure <u>Autosave is disabled</u> and that you have a <u>full team of 6 Pokemon</u> before beginning this portion of the guide. This provides a safety net for failed targets and makes it easier to check results using PokeViewer.</p>
-
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c0038;" id="cutscene-method-delay-calculation">
         <span class="fw-bold text-light">Getting Started (Delay Calculation):</span>
@@ -89,11 +98,11 @@ permalink: /cfw/la/legendary/main-rng/dialga-palkia
             <li>Paste your current seed into the Main RNG script, then search without filters. This will provide the starting frame.</li>
             <li>Press the <code span class="fw-bold">Home button (⌂)</code> to unpause the game and quickly press the <code span class="fw-bold">A button</code>. The cutscene will begin and then fade out to a black screen.</li>
             <li>Once the next part of the cutscene loads, attempt to skip it as fast as possible by pressing the <code span class="fw-bold">+ button</code> followed by the <code span class="fw-bold">X button</code>.</li>
-            <li>Defeat the boss and inspect the result using PokeViewer to find the frame it was generated on. That will be your delay for this attempt.</li>
+            <li>Defeat the boss (origin form) or enter the battle (base form) and inspect the result using PokeViewer to find the frame it was generated on. That will be your delay for this attempt.</li>
         </ul><hr />
 
         <h6><span class="fw-bold">Method 2 (Targeted Cutscene Skip)</span></h6>
-        <p>This method may be more consistent, but requires approximating the first delay in order to more precisely hit a second delay. The suggestion is to press A on the <a href="/cfw/la/general/images/main-rng/origin/final-a-press-cutscene-method.jpg" target="_blank">final A button press screen</a> when you are roughly 130 advancements away from your target frame.</p>
+        <p>This method may be more consistent for origin form, but requires approximating the first delay in order to more precisely hit a second delay. The suggestion is to press A on the <a href="/cfw/la/general/images/main-rng/origin/final-a-press-cutscene-method.jpg" target="_blank">final A button press screen</a> when you are roughly 130 advancements away from your target frame.</p>
 
         <ul>
             <li>Press the <code span class="fw-bold">Home button (⌂)</code>, then connect <code span class="fw-bold">EncBotRNGMonitorLA</code> in Moarencounterbots. Set <code span class="fw-bold">BotEncounter > EncounterLA > MonitorRefreshRate</code> to 0.</li>
@@ -102,7 +111,7 @@ permalink: /cfw/la/legendary/main-rng/dialga-palkia
             <li>Press the <code span class="fw-bold">Home button (⌂)</code> to freeze the RNG state, then check your current seed by running <code span class="fw-bold">EncBotCopySeedLA</code> in Moarencounterbots.</li>
             <li>Paste your current seed into the Main RNG script, then search without filters. This will provide the starting frame.</li>
             <li>Press the <code span class="fw-bold">Home button (⌂)</code> to unpause the game and quickly press the <code span class="fw-bold">X button</code> to skip the cutscene when you are around 0-5 frames away from your target.</li>
-            <li>Defeat the boss and inspect the result using PokeViewer to find the frame it was generated on. That will be your delay for this attempt.</li>
+            <li>Defeat the boss (origin form) or enter the battle (base form) and inspect the result using PokeViewer to find the frame it was generated on. That will be your delay for this attempt.</li>
         </ul>
     </div>
 </div>
