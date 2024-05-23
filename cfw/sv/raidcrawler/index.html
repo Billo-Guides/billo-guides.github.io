@@ -65,22 +65,25 @@ permalink: /cfw/sv/raidcrawler/
 
     <blockquote>Latest versions of RaidCrawler are bundled with a sys-botbase fork, this is required to remotely communicate with your console and utilize application features.</blockquote>
 
-    <h6><span class="fw-bold">RaidCrawler Initial Setup:</span></h6>
-    <ol>
-      <li>Open the Homebrew menu by clicking the album button on the Switch home screen, then press the Y Button, this will provide the local IP address of the console.</li>
-      <li>Enter the local IP address into the assigned <code class="fw-bold">Switch IP:</code> field on the top left of the RaidCrawler window, then click the <code class="fw-bold">Connect</code> button.</li>
-      <li>If the installation instructions were followed correctly you should now see that RaidCrawler has began to scan the contents of your save file, such as story progression values.</li>
-      <li>Once the <code class="fw-bold">Status</code> at the bottom of the window has changed to <code class="fw-bold">Completed</code>, you should see the contents of all of the active Tera Raid dens.</li>
-    </ol>
+    <details>
+      <summary><span class="fw-bold">How to connect to RaidCrawler:</span></summary>
+      <ol>
+        <li>Open the Homebrew menu by clicking the album button on the Switch home screen, then press the Y Button, this will provide the local IP address of the console.</li>
+        <li>Enter the local IP address into the assigned <code class="fw-bold">Switch IP:</code> field on the top left of the RaidCrawler window, then click the <code class="fw-bold">Connect</code> button.</li>
+        <li>If the installation instructions were followed correctly you should now see that RaidCrawler has began to scan the contents of your save file, such as story progression values.</li>
+        <li>Once the <code class="fw-bold">Status</code> at the bottom of the window has changed to <code class="fw-bold">Completed</code>, you should see the contents of all of the active Tera Raid dens.</li>
+      </ol>
 
-    <blockquote>
+      <blockquote>
       <p>For read errors, remove all overlays (Tesla, Capturesight etc.) & cheats (Edizon etc.) then reboot the console.</p>
       For connection errors, re-install sys-botbase and check that your PC and console are using the same network.
-    </blockquote>
+      </blockquote>
+    </details>
+    
   </div>
 </div><br />
 
-<p><span class="fw-bold">Once you have followed all of the above steps and confirmed that the console is able to communicate with RaidCrawler, you can begin with the Program Setup portion of the guide.</span></p>
+<p><span class="fw-bold">Ensure that your console and RaidCrawler are able to communicate with each other before continuing.</span></p>
 
 <hr /><div class="title" style="background-color: #0c0038;">
   <h1 class="text-light text-center pt-3 pb-3">Program Setup</h1>
@@ -121,15 +124,14 @@ permalink: /cfw/sv/raidcrawler/
     <span class="fw-bold text-light">Filter Condition Information</span>
   </div>
   <div class="card-body card-bg">
-    <p span class="fw-bold">Clicking the <code span class="fw-bold">Edit Filters</code> button will open the Filter Settings sub-window. Here you can decide the conditions that will stop the program automatically scanning for raids.</p>
+    <p>Clicking the <code span class="fw-bold">Edit Filters</code> button opens the Filter Settings sub-window, here is where you can set the conditions that will stop the program from automatically scanning for raids.</p>
 
-    <p>RaidCrawler uses a DateSkipping routine to automatically advance the date, which refreshes all active Tera Raids. Using smart filtering we can ensure that RaidCrawler only stops on desired target raids. Clicking each checkbox will activate the
-      corrisponding field (demonstrated in Figure 2).</p>
+    <p>You can set a specific search filter if you wish to search for one target, or combine filter conditions to search for multiple targets, such as finding a shiny Pokemon, or finding a shiny Pokemon with specific IVs.</p>
 
-    <p>It's possible to set multiple filters if you are searching for more than one target, it is also possible to combine filters conditions together if you are looking for something specific, such as a shiny Pokemon with specific IVs.</p>
+    <p>You can also use <a href="https://projectpokemon.org/tutorials/save-editing/using-pkhex/how-to-use-the-batch-editor-in-pkhex-r77/">batch filters</a> to filter for criteria not listed in the sub-window. This advanced filtering method is beyond the scope of this guide, as the existing sub-window filters cover 99% of use cases.</p>
 
     <details>
-      <summary span class="fw-bold">Example:</summary>
+      <summary span class="fw-bold">Filter example:</summary>
       <ul>
         <li>Clicking the <code span class="fw-bold">Shiny?</code> checkbox then updating the filter will look for any shiny Pokemon.</li>
         <li>Clicking the <code span class="fw-bold">Species</code> checkbox, setting a desired species, then updating the filter add a second filter for Pokemon of the chosen species.</li>
@@ -137,10 +139,6 @@ permalink: /cfw/sv/raidcrawler/
         <li>If we are seeking ANY shiny Pokemon OR a Pokemon of a specific species, we can set the filters independently to look for one or the other instead of seeking both.</li>
       </ul>
     </details>
-    <hr />
-
-    <p>You can also apply <a href="https://projectpokemon.org/tutorials/save-editing/using-pkhex/how-to-use-the-batch-editor-in-pkhex-r77/">batch filters</a> in order to filter for anything that is not already listed in the sub window. This is a more
-      advanced filtering method that will not be covered in this guide. 99% of use cases will be covered by the filters that already exist inside the sub window.</p>
 
   </div>
 </div><br />
@@ -153,7 +151,7 @@ permalink: /cfw/sv/raidcrawler/
     <span class="fw-bold text-light">Settings Information</span>
   </div>
   <div class="card-body card-bg">
-    <p span class="fw-bold">Clicking the <code span class="fw-bold">Open Settings</code> button will open the RaidCrawler Settings sub-window. Here we can change a bunch of settings that determine how the program operates.</p>
+    <p>Clicking the <code span class="fw-bold">Open Settings</code> button will open the RaidCrawler Settings sub-window. Here we can change a bunch of settings that determine how the program operates.</p>
 
     <p>There are 6 tabs inside this sub window (as seen in Figure 3), these are:</p>
     <ul>
