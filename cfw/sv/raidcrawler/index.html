@@ -21,6 +21,15 @@ permalink: /cfw/sv/raidcrawler/
   td {
     border: 1px solid black;
   }
+
+  blockquote {
+     background: #c5c5c5;
+     border: 1px solid #9e9e9e;
+     border-left: 5px solid #0c0038;
+     margin: 1.5em 10px;
+     padding: 0.5em 10px;
+     quotes: "\201C""\201D""\2018""\2019";
+  }
 </style>
 
 <div class="title" style="background-color: #0c0038;">
@@ -28,67 +37,65 @@ permalink: /cfw/sv/raidcrawler/
 </div>
 <hr />
 
-<p>This guide provides in-depth coverage of how to use <a href="https://github.com/LegoFigure11/RaidCrawler/">RaidCrawler</a>, a program created by <a href="https://github.com/LegoFigure11">LegoFigure11</a> that can be used to read the contents of
-  Tera Raid dens in Pokemon Scarlet & Violet.</p>
+<p>This guide provides in-depth coverage of how to use <a href="https://github.com/LegoFigure11/RaidCrawler/">RaidCrawler</a>, a program created by <a href="https://github.com/LegoFigure11">LegoFigure11</a> that can be used to read the contents of Tera Raid dens in Pokemon Scarlet & Violet.</p>
 
-<p>RaidCrawler is capable of reading the contents of all active Tera Raid dens on the map, as well as automatically scan for raids that meets specific filter conditions set by the user (you). This defeats the need to manually check every den in hope
-  for a desirable result, granting a very large timesave.</p>
+<p>RaidCrawler is capable of scanning and displaying all active Tera Raid dens on the map. It automatically searches for raids that meet user-defined filter criteria, eliminating the need to manually check each den. This feature grants a significant timesave.</p>
 
-<p><span class="fw-bold" style="color: #b60606;">From here this guide assumes you are using a CFW Switch console running Atmosphere.</span></p>
+<p><span class="fw-bold" style="color: #b60606;">From here this guide assumes you are using a CFW Switch console running Atmosphere. You must have also progressed far enough in-game to have gain access to Tera Raids.</span></p>
 
-<h3 class="anchored"><span class="fw-bold">Getting Started:</span></h3>
-<u>You will need:</u>
-<ul>
-  <li><a href="https://github.com/LegoFigure11/RaidCrawler/releases/">RaidCrawler</a> - Latest release</li>
-  <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0">.NET 8.0</a> - Program dependency</li>
-</ul>
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="download-and-installation-raidcrawler">
+    <span class="fw-bold text-light">Download & Installation</span>
+  </div>
+  <div class="card-body card-bg">
+    <h6><span class="fw-bold">Required Downloads:</span></h6>
+    <ul>
+      <li><a href="https://github.com/LegoFigure11/RaidCrawler/releases/">RaidCrawler</a></li>
+      <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0">.NET 8.0</a></li>
+    </ul>
 
-<u>Installation Instructions:</u>
-<ol>
-  <li>Download and extract all the contents from the <code class="fw-bold">RaidCrawler.zip</code> into an empty folder.</li>
-  <li>Move the <code class="fw-bold">atmosphere</code> folder to the root of your Switch SD card then reboot the console.</li>
-  <li>Download .NET 8.0 SDK and run <code class="fw-bold">dotnet-sdk-8.0.x-win-x64.exe</code>, then go through the setup instructions.</li>
-</ol>
+    <blockquote>.NET 8.0 is a program dependency, this means that RaidCrawler will be unable to function without having this installed onto your computer.</blockquote>
 
-<details>
-  <summary><u>Unsure why you need extra components?</u></summary>
-  <ul>
-    <li>The <code class="fw-bold">atmosphere</code> folder bundled with RaidCrawler is a custom version of sys-botbase developed by <a href="https://github.com/zyro670">Zyro670</a>. Sys-botbase is required as it allows your Switch console to communicate with your computer.</li>
-    <li>.NET 8.0 SDK is a program dependency, RaidCrawler will be unable to launch without this installed.</li>
-  </ul>
-</details>
-<hr />
+    <h6><span class="fw-bold">Installation Instructions:</span></h6>
+    <ol>
+      <li>Download and extract all the contents from the <code class="fw-bold">RaidCrawler.zip</code> into an empty folder.</li>
+      <li>Move the <code class="fw-bold">atmosphere</code> folder (sys-botbase) to the root of your Switch SD card then reboot the console.</li>
+      <li>Download and run <code class="fw-bold">dotnet-sdk-8.0.x-win-x64.exe</code>, then go through the setup instructions.</li> 
+    </ol>
 
-<h3 class="anchored"><span class="fw-bold">Tool Setup:</span></h3>
-<p></p>
+    <blockquote>Latest versions of RaidCrawler are bundled with a sys-botbase fork, this is required to remotely communicate with your console and utilize application features.</blockquote>
+
+    <h6><span class="fw-bold">RaidCrawler Initial Setup:</span></h6>
+    <ol>
+      <li>Open the Homebrew menu by clicking the album button on the Switch home screen, then press the Y Button, this will provide the local IP address of the console.</li>
+      <li>Enter the local IP address into the assigned <code class="fw-bold">Switch IP:</code> field on the top left of the RaidCrawler window, then click the <code class="fw-bold">Connect</code> button.</li>
+      <li>If the installation instructions were followed correctly you should now see that RaidCrawler has began to scan the contents of your save file, such as story progression values.</li>
+      <li>Once the <code class="fw-bold">Status</code> at the bottom of the window has changed to <code class="fw-bold">Completed</code>, you should see the contents of all of the active Tera Raid dens.</li>
+    </ol>
+
+    <blockquote>
+      <p>For read errors, remove all overlays (Tesla, Capturesight etc.) & cheats (Edizon etc.) then reboot the console.</p>
+      For connection errors, re-install sys-botbase and check that your PC and console are using the same network.
+    </blockquote>
+  </div>
+</div><br />
+
+<p><span class="fw-bold">Once you have followed all of the above steps and confirmed that the console is able to communicate with RaidCrawler, you can begin with the Program Setup portion of the guide.</span></p>
+
+<hr /><div class="title" style="background-color: #0c0038;">
+  <h1 class="text-light text-center pt-3 pb-3">Program Setup</h1>
+</div><hr />
 
 <span class="fw-bold">Figure 1 -</span> RaidCrawler Setup<br />
 <a href="/cfw/sv/images/raidcrawler/Figure1.gif" target="_blank"><img src="/cfw/sv/images/raidcrawler/Figure1.gif" style="width:675px;height:400px;"></a><br /><br />
 
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="RaidCrawlerSetup">
-    <span class="fw-bold text-light">RaidCrawler Setup & Feature Overview</span>
+  <div class="anchored card-header" style="background-color: #0c0038;" id="feature-overview-raidcrawler">
+    <span class="fw-bold text-light">Feature Overview:</span>
   </div>
   <div class="card-body card-bg">
-    <p span class="fw-bold">This is the window you will be presented with after opening RaidCrawler for the first time. For the purposes of this guide, this is the "Main window".</p>
-
-    <p>Type the local IP address of your Switch console into the <code class="fw-bold">Switch IP:</code> on the top left of the window, then click <code class="fw-bold">Connect</code> once you are stood in the overworld in-game. You should now see
-      that RaidCrawler has started scanning for story progression values.</p>
-
-    <p>Once the current status has changed <code class="fw-bold">Completed</code>, you should now see the details of a Tera Raid on the right-hand portion of the RaidCrawler window. This is an indication of a successful connection to the program. By
-      using the arrow keys on the left you can view the details of all the current active raids on the map (as seen in Figure 1).</p>
-
-    <details>
-      <summary span class="fw-bold">Troubleshooting:</summary>
-      <ul>
-        <li>Remove any overlays, cheats or cheating applications (Edizon, Tesla, Capturesight) if you are experiencing read errors or the program is not working as expected.</li>
-        <li>Consider re-installing sys-botbase if you continue to have connection problems.</li>
-        <li>You must progress through the game until you have unlocked raids on the overworld map, this program will not work on a brand new save file.</li>
-      </ul>
-    </details>
-    <p></p>
-    <hr />
+    <p>This is the window you will be presented with after opening RaidCrawler for the first time. For the purposes of this guide, this is referred to as the "Main window".</p>
 
     <h6 span class="fw-bold">Raid Controls:</h6>
     <p>Inside the <code class="fw-bold">Raid Controls</code> box on the main window we can see various buttons, here's some information about what each button does:</p>
@@ -106,14 +113,13 @@ permalink: /cfw/sv/raidcrawler/
   </div>
 </div><br />
 
-<p><b>Great!</b> Now we know how to connect to the program and have an understanding of the information inside the main window, we can begin applying relevant filters & configuring the program settings!</p>
-<hr />
+<p>Now we understand how to connect to the program and have an understanding of the information inside the main window, we can begin applying relevant filters & configuring the program settings.</p>
 
 <span class="fw-bold">Figure 2 -</span> Filter Overview<br />
 <a href="/cfw/sv/images/raidcrawler/Figure2.gif" target="_blank"><img src="/cfw/sv/images/raidcrawler/Figure2.gif" style="width:675px;height:400px;"></a><br /><br />
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="FilterInfo">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="filter-conditions-raidcrawler">
     <span class="fw-bold text-light">Filter Condition Information</span>
   </div>
   <div class="card-body card-bg">
