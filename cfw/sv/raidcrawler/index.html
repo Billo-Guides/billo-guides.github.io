@@ -99,7 +99,6 @@ permalink: /cfw/sv/raidcrawler/
     <span class="fw-bold text-light">Feature Overview:</span>
   </div>
   <div class="card-body card-bg">
-    <h6 span class="fw-bold">Raid Controls:</h6>
     <p>Inside the <code class="fw-bold">Raid Controls</code> box on the main window we can see various buttons, here's some information about what each button does:</p>
     <ul>
       <li><code class="fw-bold">Read Raids</code> - Re-scans for active raids at any given point.</li>
@@ -147,8 +146,8 @@ permalink: /cfw/sv/raidcrawler/
 <a href="/cfw/sv/images/raidcrawler/Figure3.gif" target="_blank"><img src="/cfw/sv/images/raidcrawler/Figure3.gif" style="width:675px;height:400px;"></a><br /><br />
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="SettingsInfo">
-    <span class="fw-bold text-light">Settings Information</span>
+  <div class="anchored card-header" style="background-color: #0c0038;" id="raidcrawler-settings-overview">
+    <span class="fw-bold text-light">Settings Overview</span>
   </div>
   <div class="card-body card-bg">
     <p>Clicking the <code span class="fw-bold">Open Settings</code> button will open the RaidCrawler Settings sub-window. Here we can change a bunch of settings that determine how the program operates.</p>
@@ -163,29 +162,34 @@ permalink: /cfw/sv/raidcrawler/
       <li><code class="fw-bold">About</code> - Shows current program build and developer information.</li>
     </ul>
 
-    <p>For a tutorial on how to set up Discord Webhook integration, visit <a href="https://docs.google.com/document/d/1XDw_sPBv7AfYDiAzZdYie11ZXpw2inG0zOuMp9gRY5o/edit?usp=sharing">this Google document</a> (written by caleb#2080)</p>
-    <hr />
+    <blockquote><a href="https://docs.google.com/document/d/1XDw_sPBv7AfYDiAzZdYie11ZXpw2inG0zOuMp9gRY5o/edit?usp=sharing">This Google document</a> (written by kaylub_iso on Discord) expands on webhooks integration in great detail.</p></blockquote>
+  </div>
+</div><br />
 
-    <h6 span class="fw-bold">Date Skipping:</h6>
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="date-skipping-details">
+    <span class="fw-bold text-light">Date Skipping</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>Date skipping is required to refresh the active Tera Raids currently on the map. We can utilize sys-botbase to completely automate the date skipping process, then use RaidCrawler to scan the active raids until a result that matches the chosen filters has been found.</p>
 
-    <p>With the help of sys-botbase, RaidCrawler is able to take over the console and perform automated date advancements. By doing so, all of the active raids will be refreshed & re-scanned. This process is repeated until a desired result has been found.</p>
-
-    <p>Pressing the <code class="fw-bold">Advance Date</code> button on the main window will initiate the date skipping routine, the method used will be based on what has been selected inside the <code class="fw-bold">Advance Date</code> tab of the <code class="fw-bold">Settings</code> window. There are multiple different options available to choose from.</p>
+    <p>Pressing the <code class="fw-bold">Advance Date</code> button on the main window will initiate 1 of 3 date skipping routines, based on what was chosen inside the <code class="fw-bold">Settings</code> sub-window.</p>
 
     <ol>
-      <li>Zyros' method is the most time optimal method, this utilizes a <a href="https://github.com/zyro670/usb-botbase">custom sys-botbase fork</a> to perform advancements, capable of completing a scan every 5 seconds.</li>
-      <li>Touch screen inputs is the second quickest (but less consistent) method of date skipping using the Switch system settings.</li>
-      <li>DDown inputs is the default method that is slower (but more consistent) than the touch screen input method.</li>
+      <li><span class="fw-bold">Zyro's method -</span> This method advances the system time once every 5 seconds by altering the system clock using sys-botbase instead of System Settings.</li>
+      <li><span class="fw-bold">Touch screen inputs -</span> This method is the quicker of the two methods that manually change the date as intended using System Settings.</li>
+      <li><span class="fw-bold">DDown inputs -</span> This method is the slower but more consistent System Settings method, use this if you are having trouble with option 2.</li>
     </ol>
 
-    <p>For Zyros' date advancement method, Date & Time must be synced via the internet inside the Switch system settings. All controllers must also be disconnected from the console before beginning pressing the <code class="fw-bold">Advance Date</code> button on the main window.</p>
+    <blockquote>
+      <p>For Zyro's method, ensure that Date & Time is synced via the internet, this is the only method where this applies.</p>
+      Disconnect all controllers (or attach JoyCons) before attempting to use any of the date advancement methods to avoid complications.
+    </blockquote>
 
      <details>
       <summary><span class="fw-bold">System settings advancements setup:</span></summary>
 
       <p>The default routine is configured for generic V1 Switch consoles, if you are using a Lite or an OLED, or are having any inconsistencies using the overshoot setting on any type of console when using the default routine, you will need to change the value inside <code class="fw-bold">Time to hold to overshoot "Date and Time"</code> or use DDOWN inputs instead.</p>
-
-      <p>Date & Time must not be synced by the internet if you are using this method. All controllers must also be disconnected from the console before beginning pressing the <code class="fw-bold">Advance Date</code> button on the main window.</p>
 
         <div class="col">
           <table class="table table-striped">
@@ -213,16 +217,15 @@ permalink: /cfw/sv/raidcrawler/
         </div>
 
      </details>
+    
   </div>
 </div><br />
 
-<p>From this point the guide assumes you have a stable connection to the program and both the settings & filters set appropriately. <b>It's time to begin searching for a target!</b></p>
-<hr />
+<p>From this point the guide assumes you have a stable connection to the program and both the settings & filters have been configured properly. <span class="fw-bold">It's time to begin searching for a target!</span></p>
 
-<div class="title" style="background-color: #0c0038;">
+<hr /><div class="title" style="background-color: #0c0038;">
   <h1 class="anchored   text-light text-center pt-3 pb-3">The Process</h1>
-</div>
-<hr />
+</div><hr />
 
 <p>In this example we will be searching for any shiny Pokemon, you can be more specific with the filters if you wish, such as filtering for a specific species or IV values.</p>
 
@@ -230,16 +233,15 @@ permalink: /cfw/sv/raidcrawler/
 <a href="/cfw/sv/images/raidcrawler/Figure4.png" target="_blank"><img src="/cfw/sv/images/raidcrawler/Figure4.png" style="width:675px;height:400px;"></a><br /><br />
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="FilterConfig">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="filter-config-example">
     <span class="fw-bold text-light">Filter Configuration</span>
   </div>
   <div class="card-body card-bg">
-    <p>The filters have been set to search for any shiny Pokemon (as seen in figure 4), we can now close this sub window and begin scanning for a desired raid.</p>
+    <p>The filters have been set to search for any shiny Pokemon (as seen in figure 4), we can now close this sub-window and begin scanning for a desired raid.</p>
 
-    <p>Enter the overworld in-game and pause to open the map, then click <code class="fw-bold">Connect</code> on the main window of RaidCrawler. After you have connected and have the map open, desync any controllers that are currently connected. This
-      will allow us to effectively use the date skipping routine and automate the hunting process.</p>
+    <p>Enter the overworld in-game and pause to open the map, then click <code class="fw-bold">Connect</code> on the main window of RaidCrawler. After you have connected and have the map open, desync any controllers that are currently connected. This will allow us to effectively use the date skipping routine and automate the hunting process.</p>
 
-    <p>Click the <code class="fw-bold">Advance Date</code> button to initiate the date skipping routine, RaidCrawler should now begin advancing the date and scanning for new raid dens automatically until a result has been found.</p>
+    <p>Click the <code class="fw-bold">Advance Date</code> button to initiate the date skipping routine, RaidCrawler should now begin advancing the date and scanning for new raid dens automatically until a result that matches the filter criteria has been found.</p>
   </div>
 </div><br />
 
@@ -247,7 +249,7 @@ permalink: /cfw/sv/raidcrawler/
 <a href="/cfw/sv/images/raidcrawler/Figure5.gif" target="_blank"><img src="/cfw/sv/images/raidcrawler/Figure5.gif" style="width:675px;height:400px;"></a><br /><br />
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="TargetFound">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="target-found-raidcrawler">
     <span class="fw-bold text-light">Target Found!</span>
   </div>
   <div class="card-body card-bg">
@@ -261,15 +263,15 @@ permalink: /cfw/sv/raidcrawler/
       <li>If raid is part of a promotional event distribution</li>
     </ul>
 
-    <p>By clicking the <code class="fw-bold">Open Map</code> button we are able to see the general location(s) of the raid on the world map. Navigate towards the area that contains the raid to confirm the result in-game matches the output on
-      RaidCrawler. If two or more locations are displayed in the map, visually cross-check RaidCrawler&apos;s map with the in-game map to determine which one to use.</p>
+    <p>By clicking the <code class="fw-bold">Open Map</code> button we are able to see the general location(s) of the raid on the world map. Navigate towards the area that contains the raid to confirm the result in-game matches the output on RaidCrawler. If two or more locations are displayed in the map, visually cross-check RaidCrawler's map with the in-game map to determine which one to use.</p>
   </div>
 </div><br />
 
 <span class="fw-bold">Figure 6 -</span> Result Found!<br />
 <a href="/cfw/sv/images/raidcrawler/Figure6.jpg" target="_blank"><img src="/cfw/sv/images/raidcrawler/Figure6.jpg" style="width:675px;height:400px;"></a><br /><br />
 
-<p>The raid matches the output displayed by RaidCrawler, once you have confirmed a match you can either capture the raid for yourself, or reset the game and host the raid for members of the community. <u>Make sure to disable Autosave and then
-    manually save the game before entering the raid if you intend to share it with other players.</u></p>
+<p>The raid matches the output displayed by RaidCrawler, once you have confirmed a match you can either capture the raid for yourself, or reset the game and host the raid for members of the community.</p>
 
-<span class="fw-bold">That's all there is to it!</span> You can now repeat everything you have learned from this guide to effectively hunt for any Tera Raids that you desire.
+<blockquote>Autosave should be disabled, and the game should be manually saved before entering the raid if you intend to share with other players.</blockquote>
+  
+<p><span class="fw-bold">That's all there is to it!</span> You can now repeat everything you have learned from this guide to effectively hunt for any Tera Raids that you desire.</p>
