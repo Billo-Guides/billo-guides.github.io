@@ -21,13 +21,22 @@ permalink: /cfw/swsh/overworld
   td {
     border: 1px solid black;
   }
+
+  blockquote {
+  background: #c5c5c5;
+  border: 1px solid #9e9e9e;
+  border-left: 5px solid #0c0038;
+  margin: 1.5em 2px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  }
 </style>
     
 <div class="title" style="background-color: #0c0038;">
   <h1 class="text-light text-center pt-3 pb-3">Overworld RNG Guide (CFW)</h1>
 </div><hr />
 
-<p>This guide provides in-depth coverage about how to RNG abuse overworld-based (Wild) encounters in Sword/Shield, using the <a href="https://github.com/LegoFigure11/swsh-overworld-rng-gui/releases">SWSH OWRNG Generator GUI</a> created by <a href="https://github.com/LegoFigure11">LegoFigure11</a>. Overworld RNG abuse can be used to obtain Shiny and/or Marked Pokémon from wild encounters! This can also be used to calculate other values such as IVs, Nature, & Gender.</p>
+<p>This guide provides in-depth coverage of how to use SWSH OWRNG Generator GUI by <a href="https://github.com/LegoFigure11">LegoFigure11</a> to RNG abuse wild encounters in Sword/Shield. With overworld RNG abuse, you can obtain Shiny or Marked Pokémon and calculate IVs, Nature, and Gender.
 
 <p><span class="fw-bold" style="color: #b60606;">From here it is assumed you are using a CFW Switch console running <a href="https://github.com/Atmosphere-NX/Atmosphere/releases">Atmosphere</a>.</span></p>
 
@@ -67,7 +76,7 @@ permalink: /cfw/swsh/overworld
   <h1 class="text-light text-center pt-3 pb-3">RNG Tool Setup</h1>
 </div><hr />
 
-<p>This section will cover the essential details you need to know in order to use the Generator. If you do not yet have a complete understanding of how each of the tabs, follow along with this section of the guide as it will provide a relevant information & usage tips.</p>
+<p>This section will cover the essential details you need to know in order to use the Generator. If you do not yet have a complete understanding of how each of the tabs, follow along with this section for relevant information & usage tips.</p>
 
 <span class="fw-bold">Figure 1 -</span> Main window<p></p>
 <a href="overworld/images/main-page/figure-1-main-window-overview-cfw.gif" target="_blank"><img src="overworld/images/main-page/figure-1-main-window-overview-cfw.gif" style="width:675px;height:400px;"></a><br /><br />
@@ -77,20 +86,27 @@ permalink: /cfw/swsh/overworld
     <span class="fw-bold text-light">Main Window Overview</span>
   </div>
   <div class="card-body card-bg">
-    <p>Pictured above is the main window, this window is used to calculate upcoming target frames based on your search parameters. Here we can connect the Switch console to the program and automatically track our current RNG seed.</p>
+    <p>The main window (pictured above), calculates upcoming target frames based on your search parameters. Here, you can connect the console to the program and automatically track your current RNG seed in real-time.</p>
 
-    <p>Type the local IP address of your Switch console into the <code span class="fw-bold">Switch IP:</code> field, then open the game. Once you are inside the overworld clicking the <code span class="fw-bold">Connect</code> button, your current seeds and TID/SID combination will be filled into the correct field automatically. Do not tweak these values after connecting to the generator.</p>
-    <hr />
+    <h6><span class="fw-bold">Connecting to the program:</span></h6>
+    <p>Type the local IP address of your Switch console into the <code span class="fw-bold">Switch IP:</code> field, then open the game and enter the overworld. Once you are in the overworld click the <code span class="fw-bold">Connect</code> button, you should now notice your current seed is being monitored.</p>
+
+    <p><blockquote>You may notice that your 5 digit TID/SID have been entered into the designated fields automatically. Avoid tweaking these values after connecting to the program.</blockquote></p>
+
+    <h6><span class="fw-bold">Feature descriptions:</span></h6>
 
     <ul>
-      <li><code span class="fw-bold">Init. adv.</code> displays the amount of advances that have passed since connecting to the generator.</li>
-      <li>The <code span class="fw-bold">+</code> field is the amount of frames to search through, set this to an amount you are comfortable with.</li>
-      <li><code span class="fw-bold">Shiny Charm</code> & <code span class="fw-bold">Mark Charm</code> checkboxes should be checked if you have these items unlocked, otherwise leave these unchecked.</li>
+      <li><code span class="fw-bold">Init. adv.</code> displays the amount of advances that have passed since connecting to the program.</li>
+      <li>The <code span class="fw-bold">+</code> field is the amount of frames to search through, set this to a comfortable amount.</li>
+      <li>Click the <code span class="fw-bold">Shiny Charm</code> checkbox if you have the Shiny Charm in your save file.</li>
+      <li>Click the <code span class="fw-bold">Mark Charm</code> checkbox if you have the Mark Charm in your save file.</li>
       <li>The middle section contains search filters, here you can set filters for specific Shininess, IVs, Nature, Marks, etc.</li>
-      <li><code span class="fw-bold">Read Encounter</code> is used to read the details of wild Pokemon while in-battle, useful for troubleshooting delays.</li>
-      <li><code span class="fw-bold">Skip</code> is used to automate the process of advancing frames using a CFW device, using the <code span class="fw-bold">Days</code> and <code span class="fw-bold">Adv.</code> buttons.</li>
-      <li>The rest of the boxes on the left-hand side can be filled out automatically using the <a href="#encounter-lookup-overview-cfw">Encounter Lookup tab</a>.</li>
+      <li><code span class="fw-bold">Read Encounter</code> is used to read the details of wild Pokémon while in-battle, useful for troubleshooting delays.</li>
+      <li><code span class="fw-bold">Skip</code> is used to automate the process of advancing frames.</li>
     </ul>
+
+    <p><blockquote>The rest of the information on the left hand side can be automatically filled using the Encounter Lookup sub window (explained below).</blockquote></p>
+    
   </div>
 </div><br>
 
