@@ -209,20 +209,18 @@ permalink: /cfw/swsh/overworld
       <summary><span class="fw-bold" id="luxray-skip">Skipping using Luxray (recommended):</span></summary><p></p>
       <p>Luxray is a calculator-style application that can be launched through the Switch Homebrew Menu. It has a variety of features, such as:</p>
 
-      <p>The <code span class="fw-bold">Set</code> button, which sets the network time to a desired date. For example, typing 1 into the calculator then clicking <code span class="fw-bold">Set</code> will change the network time 1 day into the future. This is useful for setting the correct weather conditions (not used for frame advancements).</p>
-      <p>The <code span class="fw-bold">Step</code> button, which is used to automate date advancement. Type the number of days you wish to skip into the calculator, then click <code span class="fw-bold">Step</code> to begin advancing the date. Make sure the game is unpaused before doing so.</p>
-      <p>The <code span class="fw-bold">NTP</code> button, which initiates the Network Time Protocol, this is used to restore the correct date after using <code span class="fw-bold">Set</code>. Make sure to use NTP after every session if you care about having the correct time/date on your console.</p>
-      <hr />
+      <ol>
+        <li>><span class="fw-bold">Set -</span> Sets the network time to a desired date, based on the figure typed into the calculator. Useful for changing the weather.</li>
+        <li>><span class="fw-bold">Step -</span> Initiates date skipping, based on the figure amount typed into the calculator. Used to automate date-skipping.</li>
+        <li>><span class="fw-bold">NTP -</span> Sets the date and time back to network time, this should be done after every date-skipping session.</li>
+      </ol>
     </details><p></p>
 
     <details>
       <summary><span class="fw-bold" id="owrngtool-skip">Skipping using OWRNG tool:</span></summary><p></p>
-      <p>To skip using SWSH_OWRNG_Generator_GUI, type the number into the <code span class="fw-bold">Skip</code>, then click the <code span class="fw-bold">Days</code> button. You must wait for the countdown to finish before attempting to day-skip again.</p>
+      <p>To skip using SWSH_OWRNG_Generator_GUI, type the number into the <code span class="fw-bold">Skip</code>, then click the <code span class="fw-bold">Days</code> button. You will need to wait for the countdown to finish before attempting to day-skip again.</p>
 
-      <p>This method does not include a <code span class="fw-bold">NTP</code> or <code span class="fw-bold">Set</code> function like Luxray does, which means you will be unable to manipulate the weather condition as the system time and date needs to be synced via the internet. You will also need to restart the console or use Luxrays NTP to set the console back to the correct time and date.</p>
-
-      <p>If nothing happens when pressing the <code span class="fw-bold">Days</code> button, this is likely due to using the wrong type of connection, if sys-usb-botbase is configured for USB, you must connect your PC to your switch via USB in order to use day-skipping features. <a href="#setup-and-install-swsh-cfw">See above</a> for information regarding how to change sys-usb-botbase connection to Wi-Fi.</p>
-
+      <p>This method does not include an <code span class="fw-bold">NTP</code> function, you will also need to set the correct weather condition after finishing the date skipping process. This can be done safely by changing the date backwards until the correct weather conditions have been met. Changing the date backwards will not cause unwanted advancements.</p>
     </details>
   </div>
 </div><br>
