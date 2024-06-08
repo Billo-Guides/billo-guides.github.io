@@ -98,15 +98,14 @@ permalink: /cfw/swsh/overworld
     <ul>
       <li><code span class="fw-bold">Init. adv.</code> displays the amount of advances that have passed since connecting to the program.</li>
       <li>The <code span class="fw-bold">+</code> field is the amount of frames to search through, set this to a comfortable amount.</li>
-      <li>Click the <code span class="fw-bold">Shiny Charm</code> checkbox if you have the Shiny Charm in your save file.</li>
-      <li>Click the <code span class="fw-bold">Mark Charm</code> checkbox if you have the Mark Charm in your save file.</li>
+      <li>Click the <code span class="fw-bold">Shiny Charm</code> checkbox if you have the Shiny Charm in your save file, otherwise leave unchecked.</li>
+      <li>Click the <code span class="fw-bold">Mark Charm</code> checkbox if you have the Mark Charm in your save file, otherwise leave unchecked.</li>
       <li>The middle section contains search filters, here you can set filters for specific Shininess, IVs, Nature, Marks, etc.</li>
       <li><code span class="fw-bold">Read Encounter</code> is used to read the details of wild Pokémon while in-battle, useful for troubleshooting delays.</li>
       <li><code span class="fw-bold">Skip</code> is used to automate the process of advancing frames.</li>
     </ul>
 
     <p><blockquote>The rest of the information on the left hand side can be automatically filled using the Encounter Lookup sub window (explained below).</blockquote></p>
-    
   </div>
 </div><br>
 
@@ -118,15 +117,16 @@ permalink: /cfw/swsh/overworld
     <span class="fw-bold text-light">Encounter Lookup Overview</span>
   </div>
   <div class="card-body card-bg">
-    <p>Pictured above is the Encounter Lookup tab, here we can search for specific Pokémon species names to generate a list of every possible encounter for that specific Pokémon in the game.</p>
-
+    <p>The Encounter Lookup tab (pictured above), allows you to search for the encounter details of specific Pokémon and generate a list of every possible encounter for that Pokémon in the game.</p>
+    
     <h6 span class="fw-bold">How to use Encounter Lookup:</h6>
     <ol>
-      <li>Open the <code span class="fw-bold">Encounter Lookup</code> tab, then set the correct game version according to the game you are currently playing.</li>
-      <li>Type the species name of your chosen target Pokémon, then select it from the dropdown menu to see a list of all the possible encounters.</li>
-      <li>Choose an encounter type; Static, Symbol or Hidden. Once you have decided, select one of the rows from the list by single clicking on it.</li>
-      <li>The details of the encounter should now be automatically filled into the main window, Encounter Lookup can now be closed.</li>
+      <li>Open the <code class="fw-bold">Encounter Lookup</code> tab and set the correct game version.</li>
+      <li>Type the species name of your target Pokémon, then select it from the dropdown menu to produce a list.</li>
+      <li>Choose an encounter type: Static, Symbol, or Hidden. Select a row from the list by single-clicking on it.</li>
     </ol>
+
+    <blockquote>After selecting your desired encounter, the details will be entered into the Main Window automatically and the Encounter Lookup tab can be closed.</blockquote>
   </div>
 </div><br>
 
@@ -138,14 +138,14 @@ permalink: /cfw/swsh/overworld
     <span class="fw-bold text-light">Menu Close Advances Viewer Overview</span>
   </div>
   <div class="card-body card-bg">
-    <p>Pictured above is the Menu Close Advances Viewer tab, here we can predict the amount of advancements that will occur from closing the pause menu. After entering your seeds and hitting search a table will appear, as seen in the image above.</p>
+    <p>The Menu Close Advances Viewer tab (pictured above), predicts the number of advancements from closing the pause menu. After entering your seeds and hitting search, a table will appear.</p>
 
-    <p>The <code span class="fw-bold">Jump</code> column will display the amount of advancements that will occur from closing the pause menu, this number will vary depending on the amount of NPCs that are in the area that you plan to RNG abuse in.</p> 
-      
-    <p>An area can have a large number of NPCs even if you can not visually see any, so it is important to properly calibrate your NPC count depending on the area you are in so that an accurate Jump is produced by the Menu Close Advances Viewer tab.</p>
+    <p>The <code class="fw-bold">Jump</code> column displays the number of advancements that occur from closing the pause menu. This number varies based on the number of NPCs in the area you plan to RNG abuse.</p>
 
-    <p>Menu close prediction is recommended for closing in on target frames, closing the pause menu will freeze the RNG state for a few seconds, which make it an extremely useful method that will significantly increase your chances of hitting the correct target frame in most cases.</p>
+    <p>An area may have NPCs even if none are visible, so it’s important to calibrate your NPC count accurately for an accurate Jump prediction.</p>
 
+    <p>Menu close prediction is recommended for hitting specific target frames with high accuracy. Closing the pause menu freezes the RNG state for a few seconds, making it a useful method to increase your chances of hitting the correct target frame.</p>
+    
     <p>How to effectively calculate NPC count will be covered at a later stage of the guide.</p>
   </div>
 </div><br>
@@ -154,11 +154,11 @@ permalink: /cfw/swsh/overworld
   <h1 class="text-light text-center pt-3 pb-3">Advancing The RNG State</h1>
 </div><hr />
 
-<p>The RNG state will advance naturally depending on your location, the weather of the location, and the spawned Pokémon/NPCs that are present. The best case scenario is to target a Pokemon in an area where the RNG state naturally advances at a slow rate, however, sometimes you will be forced into unstable conditions depending on the Pokémon you are hunting.</p>
+<p>The RNG state advances naturally based on your location, the weather, and the presence of spawned Pokémon & NPCs. Ideally, you should target a Pokémon in an area where the RNG state advances slowly. However, in some cases you may be forced into unstable conditions depending on the Pokémon you are hunting.</p>
 
-<p><span class="fw-bold">Avoid rain/thunderstorm weather where possible!</span> These weather types cause the RNG state to advance in a rapid & inconsistent manner that will make hitting a desired target frame much more difficult. Any other weather should be easy enough to work with.</p>
+<p><span class="fw-bold">Avoid rain and thunderstorm weather when possible!</span> These weather types cause rapid and inconsistent advances, making it significantly harder to hit the desired target frame. Other weather conditions are generally easier to manage.</p>
 
-<p>In-game actions can also be used to advance the RNG state with varying influence, the most useful actions can be found in the below table.</p>
+<p>In-game actions can also be used to advance the RNG state with varying influence, the most useful actions can be found in the table below.</p>
 
 <table class="table table-striped" style="width:100%">
   <thead class="table text-white" style="background-color: #0c0038;" id="advancement-table-cfw">
