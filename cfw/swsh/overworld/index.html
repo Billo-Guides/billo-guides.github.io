@@ -138,15 +138,21 @@ permalink: /cfw/swsh/overworld
     <span class="fw-bold text-light">Menu Close Advances Viewer Overview</span>
   </div>
   <div class="card-body card-bg">
-    <p>The Menu Close Advances Viewer tab (pictured above), predicts the number of advancements from closing the pause menu. After entering your seeds and hitting search, a table will appear.</p>
+    <p>The Menu Close Advances Viewer tab (pictured above), predicts the number of advancements from closing the pause menu. This advancement method is recommended as closing the pause menu freezes the RNG state for a few seconds, making it an extremely consistent method of hitting an exact target frame.</p>
+      
+    <p>After entering your seeds and hitting search, a table will appear. The <code class="fw-bold">Jump</code> column of the table displays the amount of advancements that will occur from closing the pause menu, this number varies based on the amount of NPCs in your area.</p>
 
-    <p>The <code class="fw-bold">Jump</code> column displays the number of advancements that occur from closing the pause menu. This number varies based on the number of NPCs in the area you plan to RNG abuse.</p>
+    <p><blockquote>An area may have a higher NPC count than what is currently visible on screen, it’s important to calibrate your NPC count accurately for an accurate <code class="fw-bold">Jump</code> prediction.</blockquote></p>
 
-    <p>An area may have NPCs even if none are visible, so it’s important to calibrate your NPC count accurately for an accurate Jump prediction.</p>
+    <h6 span class="fw-bold">NPC Calibration</h6>
+      <ol>
+        <li>Pause the game then disconnect and reconnect to the program, if done correctly, the number inside the <code span class="fw-bold">Curr. Adv</code> field of the Main Window should now be 0.</li><p></p>
+        <li>Click the <code span class="fw-bold">Menu Close Advances Viewer</code> button at the top of the Main Window to open the sub window. Your seeds should be visible in the correct fields automatically.</li><p></p>
+        <li>Close the pause menu then re-open it, take note of the number of advancements that have occurred according to the <code span class="fw-bold">Curr. Adv</code> field after doing so.</li><p></p>
+        <li>Type 0 into the <code span class="fw-bold">NPCs</code> field and search. Gradually increase by 1 until the number inside the top row of the <code span class="fw-bold">Jump</code> column matches the number inside the <code span class="fw-bold">Curr. Adv</code> field.</li>
+        <li>Close and re-open the pause menu a few times to make sure that the calculated NPC count is correct.</li>
+      </ol>
 
-    <p>Menu close prediction is recommended for hitting specific target frames with high accuracy. Closing the pause menu freezes the RNG state for a few seconds, making it a useful method to increase your chances of hitting the correct target frame.</p>
-    
-    <p>How to effectively calculate NPC count will be covered at a later stage of the guide.</p>
   </div>
 </div><br>
 
