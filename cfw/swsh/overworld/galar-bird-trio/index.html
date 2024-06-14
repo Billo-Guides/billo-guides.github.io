@@ -88,19 +88,19 @@ permalink: /cfw/swsh/overworld/galar-bird-trio
 <span class="fw-bold">Figure 3 -</span> Recommended Fly Points<p></p>
 <a href="./images/galar-bird-trio/figure-3-fly-points.gif" target="_blank"><img src="./images/galar-bird-trio/figure-3-fly-points.gif" style="width:675px;height:400px;"></a><br /><br />
 
-   <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="game-setup-roaming-cfw">
-      <span class="fw-bold text-light">Game Setup:</span>
-    </div>
-    <div class="card-body card-bg">
-      <p>These three fly points are suggested as they're close to the spawn point of each of the birds, meaning we can encounter them more quickly. This is helpful as it may take several attempts to spawn the bird on the correct frame.</p>
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="game-setup-roaming-cfw">
+    <span class="fw-bold text-light">Game Setup:</span>
+  </div>
+<div class="card-body card-bg">
+  <p>These three fly points are suggested as they're close to the spawn point of each of the birds, meaning we can encounter them more quickly. This is helpful as it may take several attempts to spawn the bird on the correct frame.</p>
 
-      <p>Unlock the above fly points, and have your party Pokemon ready for battle, you can use a Pokemon with the ability Syncronize in the first slot of your party to determine the nature of the encountered bird.</p>
+  <p>Unlock the above fly points, and have your party Pokemon ready for battle, you can use a Pokemon with the ability Syncronize in the first slot of your party to determine the nature of the encountered bird.</p>
 
-      <p>Once you have the fly points unlocked, fly to the area that contains your chosen bird then save the game.</p>
+  <p>Once you have the fly points unlocked, fly to the area that contains your chosen bird then save the game.</p>
 
-    </div>
-    </div><br>
+  </div>
+</div><br>
 
 <span class="fw-bold">Figure 4 -</span> Target found!<p></p>
 <a href="./images/galar-bird-trio/figure-4-target-found-zapdos.png" target="_blank"><img src="./images/galar-bird-trio/figure-4-target-found-zapdos.png" style="width:675px;height:400px;"></a><br /><br />
@@ -148,47 +148,37 @@ permalink: /cfw/swsh/overworld/galar-bird-trio
    </div>
  </div><br>
 
-  <p>Take note of the calculated delay, you will need this information in order to reach the correct target frame later. Do not change position after calculating the delay, as this is subject to change depending on positioning.</p>
+ <p>Take note of the calculated delay, you will need this information in order to reach the correct target frame later. Do not change position after calculating the delay, as this is subject to change depending on positioning.</p>
 
-  <div class="card border-dark">
+ <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c0038;" id="hitting-target-frame-roaming-cfw">
       <span class="fw-bold text-light">Hitting Your Target Frame:</span>
     </div>
     <div class="card-body card-bg">
-
       <h6 class="fw-bold">Step-by-step tutorial:</h6>
-      <ul>
-        <li>Advance towards your target frame using any of the methods listed inside the table on the <a href="https://billo-guides.github.io/cfw/swsh/overworld">main page</a>. Consider date skipping to advance large distances.</li><p></p>
-        <li>Once you are close a few thousand frames away from the target, head back to the correct position in-game (see Figure 2).</li><p></p>
-        <li>Pause the game, then disconnect and reconnect to the Main Window and press the search button again. This will be the new target frame.</li><p></p>
-      </ul>
-
-      <div class="alert" style="background-color: #c0bdbd;">
-        From this point it is recommended to advance towards the target using only menu close prediction & animations. These types of advancements advance in small increments and are easy to keep track of. 
-      </div>
 
       <ul>
+        <li>Advance towards your target frame using any method listed in the table on the main page (consider date-skipping for long distance-advancements).</li><p></p>
+        <li>Fly to the recommended fly point of your chosen bird (see Figure 3) when you are a few hundred frames away from the target.</li><p></p>
         <li>Open the map, take note of the amount of advancements that occur from doing so, repeat this a few times to get an average number from the results.</li><p></p>
-        <li>Open the party menu and advance the remainder of required advancements using animations & menu close, factor in the delay that was calculated earlier.</li><p></p>
+        <li>Pause the game, then disconnect and reconnect to the Main Window, and press the search button again to set a new target frame.</li><p></p>
+        <li>Advance to your target frame using animations, factor in the delay (calculated earlier), and the amount of frames that occur from opening the map.</li><p></p>
       </ul>
 
-      <div class="alert" style="background-color: #c0bdbd;">
-        E.g - If the calculated delay is 130, and your target frame is frame 1000, the new target frame will be 870. If an average of 2 advancements occur from opening the map, this means you should aim to open the map on frame 868 (1000-130-2). 
-      </div>
+      <blockquote><span class="fw-bold">Example -</span> If 2 advancements occur from opening the map, and we calculated an average delay of 30 for our chosen bird, we will aim to open the map 32 frames before the frame displayed in the generator search results.</blockquote>
 
       <ul>
-        <li>Open the map on the correct target frame, then fly into the area that contains your chosen bird.</li><p></p>
-        <li>Initate the encounter! Confirm you have hit the expected result by clicking the <code span class="fw-bold">Read Encounter</code> button when in battle.</li>
+        <li>Open the map on the calculated target frame after taking into account both, map advancements and delay, then fly to the recommended fly point of your chosen bird.</li><p></p>
+        <li>e.g <code span class="fw-bold">580 (target) - 2 (map advancements) - 30 (delay) = 548 (frame to fly into location)</code></li><p></p>  
+        <li>Chase down your bird and initiate the encounter, check you hit the correct target frame using the <code span class="fw-bold">Read Encounter</code> button on the GUI. If the result is not what you expected, find the bird you hit and adjust accordingly.</li><p></p>
       </ul>
 
-      <div class="alert" style="background-color: #c0bdbd;">
-       If you encountered an unexpected result, this either means you missed your target frame (too slow) or your delay is incorrect. Confirm your delay using the <a href="#delay-npc-count-symbol-cfw">above mentioned method</a> and try again from the beginning.
-      </div>
-
+      <blockquote>Do note that it may take a few attempts to hit your target frame, this is due to a variable delay. If you have found a delay that is consistent for you, stick with it until you eventually reach your goal.</blockquote>
+      
     </div>
-    </div><br>
-
-   <p><span class="fw-bold">By using animations and the <code>Curr. Adv.</code> field of the generator to keep track of inputs, we were able to hit out target frame!</span></p>
+  </div><br>
+  
+<p><span class="fw-bold">By using animations and the <code>Curr. Adv.</code> field of the generator to keep track of inputs, we were able to hit out target frame!</span></p>
 
 <span class="fw-bold">Figure 5/6/7 -</span> Result Found!<p></p>
 <a href="./images/galar-bird-trio/figure-5-in-battle-encounter-read-zapdos.png" target="_blank"><img src="./images/galar-bird-trio/figure-5-in-battle-encounter-read-zapdos.png" style="width:675px;height:400px;"></a><br /><br />
@@ -196,10 +186,3 @@ permalink: /cfw/swsh/overworld/galar-bird-trio
 <a href="./images/galar-bird-trio/figure-7-summary-screen-switch-zapdos.jpg" target="_blank"><img src="./images/galar-bird-trio/figure-7-summary-screen-switch-zapdos.jpg" style="width:675px;height:400px;"></a><br /><br />
 
 <p><span class="fw-bold">The Zapdos matches what is expected by the tool, mission accomplished!</span></p>
-
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/overworld">
-  <span class="fw-bold">Send me back to the main page!</span>
-  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-  </svg>
-</a>
