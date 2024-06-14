@@ -4,44 +4,76 @@ title: Finding TID/SID
 permalink: /retail/swsh/finding-tid-sid
 ---
 
-<div class="title" style="background-color: #222644;">
- <h1 class="text-light text-center pt-3 pb-3">Finding Your TID/SID (Retail)</h1>
-</div>
-<hr />
+<style>
+  mark {
+    background-color: #FFD700;
+    color: black;
+  }
 
-This tutorial will provide coverage of how to find your 5 digit TID/SID so that you can RNG abuse overworld encounters to the fullest extent. TID/SID are values that determine if a wild Pokémon will be shiny, so it's important that we know what these
-values are before starting!<br /><br />
+  .card-bg {
+    background-color: #d1d1d1;
+    border-bottom-right-radius: 0.20rem !important;
+    border-bottom-left-radius: 0.20rem !important;
+  }
 
-<div class="accordion" id="GettingStartedTIDSID">
-  <div class="card">
-    <div class="card-header text-white" style="background-color: #222644;">
-    <div class="card-header" id="GettingStartedTIDSID">
-      <h5 class="mb-0">
-        <span class="fw-bold">Possible Methods:</span>
-      </h5>
-    </div>
-    <div class="card-body" style="background-color: #ffffff36;">
+  table,
+  th,
+  td {
+    border: 1px solid black;
+  }
 
-      In Sword/Shield you cannot RNG abuse your TID/SID, this tutorial is only for finding your TID/SID <u>in an existing save file.</u> There are three possible methods you can use to find your TID/SID combination.<br /><br />
+  blockquote {
+  background: #c5c5c5;
+  border: 1px solid #9e9e9e;
+  border-left: 5px solid #0c0038;
+  margin: 1.5em 2px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  }
+</style>
+    
+<div class="title" style="background-color: #0c0038;">
+  <h1 class="text-light text-center pt-3 pb-3">Sword/Shield Finding 5 Digit TID/SID</h1>
+</div><hr />
 
-      <span class="fw-bold">These are:</span><br />
-      <ul>
-        <li>Using a Discord bot, such as Sysbot.NET, to dump a self-obtained Pokémon, then using PKHeX to inspect the internal values that contains your 5 digit TID/SID combination. (Recommended - Nintendo Switch Online required)</li><br />
-        <li>Asking a friend running Switch Custom Firmware to check your TID/SID combination for you, using PKHeX. (Option for non-Windows users)</li><br />
-        <li>Finding a shiny Pokémon in the wild, then identifying your current seed after the capture and reverse searching to find the TID/SID combination that made the Pokémon you found a shiny. (Requires the most time and luck)</li>
-      </ul>
-      </div>
-    </div>
+<p>This tutorial provides a range of methods for how you can find your 5 digit TID/SID combination in Sword/Shield. Knowing these values is necessary if you wish to RNG abuse Shiny Pokémon from overworld encounters.</p>
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="possible-methods-tidsid">
+    <span class="fw-bold text-light">Possible Methods:</span>
   </div>
-<br />
+  <div class="card-body card-bg">
+   <p>It is not possible to RNG abuse your TID or SID in Sword/Shield. This tutorial is only for finding your internal TID/SID on an existing save file. There are three possible methods you can use.</p>
 
-<span class="fw-bold">Pick the method that applies to you and scroll down for a tutorial!</span>
+   <h6><span class="fw-bold">Using SysBot.NET</span></h6>
+   <p>SysBot.NET is a bot service hosted by members of the community, typically found in Discord servers. If you do not have access to a SysBot, you can find a public server with a quick Google search.</p>
 
-<hr />
-<div class="title" style="background-color: #222644;">
-  <h1 class="text-light text-center pt-3 pb-3">Using Switch CFW</h1>
-</div>
-<hr />
+   <p>SysBots come with dump functionality, which dumps the data of the shown Pokémon into a <code span class="fw-bold">.pk8</code> file, this file is then shared into your Discord messages with the bot.</p>
+
+   <p>The file can then be manually inspected using a program like PKHeX to view your TID/SID combination. This method is recommended as it takes the least effort, but does require a Nintendo Switch Online subscription.</p>
+   <hr />
+
+   <h6><span class="fw-bold">Help from a friend</span></h6>
+   <p>If you have a friend with a CFW Switch console, they are capable of dumping the file for you, but they will need access to PKHeX to do so.</p>
+
+   <p>You can also have a friend check your TID/SID combination if you do not have access to PKHeX. PKHeX only works on Windows devices. This method is only recommended if you do not have any access to a Sword/Shield SysBot.</p>
+   <hr />
+
+   <h6><span class="fw-bold">Finding a shiny Pokémon without RNG abuse</span></h6>
+   <p>If you do not have access to the above options at all, you will need to manually search for a shiny Pokémon in the wild. It is possible to trace back to the frame that generated the shiny using SWSH OWRNG GENERATOR GUI.</p>
+
+   <p>This method is the most time consuming and luck dependent, and requires you to leave the game open immediately after capturing a shiny Pokémon.</p>
+
+  </div>
+</div><br>
+
+<p>Pick the method you wish to use, and find the relevant section of the page that applies to you down below.</p>
+
+<hr /><div class="title" style="background-color: #0c0038;">
+  <h1 class="text-light text-center pt-3 pb-3">Finding TID/SID using CFW.</h1>
+</div><hr />
+
+<p>As mentioned above, by having access to a CFW Switch console we can easily find our TID/SID combination.</p>
 
 As mentioned above, a Discord bot such as Sysbot.NET is capable of dumping Pokemon data for use with PKHeX, and from there we can easily find the TID/SID combination of the dumped Pokemon. You can find many servers that are hosting Sysbot.NET by a quick Google search.<br /><br /> 
 
