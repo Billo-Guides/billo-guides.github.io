@@ -190,61 +190,44 @@ permalink: /retail/swsh/overworld/static
 
  <p>At this stage you should now know have calibrated both the NPC count and the delay for the encounter, take note of both of these values as they are significantly important for hitting target frames consistently.</p>
 
-<div class="accordion" id="AdvancingToTargetStatic">
-  <div class="card">
-    <div class="card-header text-white" style="background-color: #0c0038;">
-    <div class="card-header" id="AdvancingToTargetStatic">
-      <h5 class="mb-0">
-        <span class="fw-bold">Hitting your target frame</span>
-      </h5>
+  <div class="anchored card-header" style="background-color: #0c0038;" id="hitting-target-frame-static-retail">
+      <span class="fw-bold text-light">Hitting Your Target Frame:</span>
     </div>
-    <div class="card-body" style="background-color: #ffffff36;">
+    <div class="card-body card-bg">
+      <h6 class="fw-bold">Step-by-step tutorial:</h6>
 
-      <span class="fw-bold">Step-by-step tutorial:</span><br /><br />
-      <ol>
-        <li>Advance towards your target frame using any of the methods listed inside the table on <a href="https://billo-guides.github.io/retail/swsh/overworld">main page of this guide</a>. Consider day skipping to advance large distances.</li><br />
+      <ul>
+        <li>Advance towards your target frame using any method listed in the table on the main page (consider date-skipping for long distance-advancements).</li><p></p>
+        <li>Return to the correct position in-game when you are a few thousand frames away from the desired target. Ensure the target is despawned.</li><p></p>
+        <li>Pause the game, then re-identify your current seed. Press the search button again to set a new target frame.</li><p></p>
+      </ul>
+
+      <blockquote>At this stage, we recommend using menu close prediction & animation advancements for accurate, small, and manageable advancement increments.</blockquote>
+
+      <ul>
+        <li>Open the Menu Close Advances Viewer tab, and enter the number of NPCs calculated earlier in the <code span class="fw-bold">NPCs</code> field.</li><p></p>
+        <li>Enter your target frame into the empty <code span class="fw-bold">+</code> field, factor in your calibrated delay (e.g <code span class="fw-bold">1000 (target) - 3 (delay) = 997 (new target)</code>).</li><p></p>
+        <li>Hit search, you should now see a list of frames in the table, see if your exact target frame, great! This means menu close prediction can be used to hit it.</li><p></p>
+        <li>If you do not see your target frame in the search results, use animation advancements to increment the RNG state by 1, then repeat the above steps until visible.</li><p></p>
+      </ul>
+
+      <blockquote><p>If you are nudging the RNG state, you will need to grab your seed from the main window search results. It should be relatively simple enough to track your seed this way using animations.</p>
+
+      <p>In rare cases, you may not be able to hit the desired frame using menu close prediction alone. Use it to get as close as possible, then use movement advances to reach your target instead.</blockquote>
+
+      <ul>
+        <li>Open and close the pause menu until a single menu close lands you onto (or as close as possible) the target frame.</li><p></p>
+        <li>Unpause the game, then move towards the spawn point of your desired Pokémon to spawn it in the overworld as quickly as possible.</li><p></p>
+      </ul>
+
+      <blockquote>If you do not land directly onto your target frame, this is the point where you should use movement advancements, do so before spawning your desired Pokémon in the overworld.</blockquote>
+
+      <ul>
+        <li>Initiate the encounter to check if you've hit the correct target frame. If the result is unexpected, recalibrate your NPC count and delay, then retry. Be quick to spawn your Pokémon in the overworld to avoid overshooting.</li>
+      </ul>
       
-        <li>Once you are within a few thousand frames of your target, stand near to the spawn point of the Pokémon you are hunting.</li><br />
-      
-        <li>Pause the game using the <code>X</code> button, re-identify your current seed using the <code>Retail Advances Tracker</code>, then search for your target again.</li><br />
-
-        <div class="card-body" class="text-light" style="background-color: #0c0038;">
-        From this point it's recommended to only advance using <code>menu close & animations</code> as they only advance in small increments, making them easy to keep track of.
-       </div><br />
-
-        <li>Open the <code>Menu Close Advances Viewer</code> window and work out the amount of NPCs that are in the area, (NPC calculation is explained on the <a href="https://billo-guides.github.io/retail/swsh/overworld">main page</a> if you are unsure.) Take note of this number as you will need it later.</li><br />
-
-        <li>Re-identify your current seed once again. You should be roughly a few hundred frames away from the target at this stage.</li> <br /> 
-          
-        <li>Open the <code>Menu Close Advances Viewer</code> window again and enter your target frame & amount of NPCs into the correct fields then search again.</li><br /> 
-        
-        <div class="card-body" class="text-light" style="background-color: #0c0038;">
-        If you are unable to find your target frame in the search results, this means the target cannot be hit based on your seed. This can be resolved using animations to advance the RNG state slightly, then searching again. <br /><br />
-
-          <details>
-            <summary><u>How To:</u><br /></summary>
-          <ol>
-            <li>Open the Pokemon summary screen and press the <code>L3</code> button to advance the RNG state by a single frame.</li>
-            <li>Open the main window, and set the IV/Shiny/Mark filters to the default settings.</li>
-            <li>Set the search radius to a small amount, then press search.</li>
-            <li>You should now be able to see (and track) your current seed (<code>State0</code> and <code>State1</code> based on your search results.</li>
-            <li>Enter your new current seed, target frame, and the amount of NPCs calculated earlier into the <code>Retail Menu Advances Viewer</code> window, and search again.</li>
-          </ol>
-        </details>
-       </div><br />
-
-        <li>Use animations to advance to the a point where closing the pause menu once will land directly onto your target frame, according to the <code>Menu Close Advances Viewer</code> prediction.</li><br />
-      
-        <li>Close the pause menu and quickly run towards the spawn point of your Pokémon! Encounter and capture it, make sure all the internal details match the output shown on the generator.</li><br />
-
-      <div class="card-body" class="text-light" style="background-color: #0c0038;">
-       You can be creative with the methods you use to advance the RNG state. Menu close prediction is not necessary but will make for a much easier time hitting target frames and is extremely helpful in areas of the game where the RNG advances at a quick pace.
-     </div>
-       </ol>
-      </div>
     </div>
-  </div>
-<br />
+  </div><br>
 
 <span class="fw-bold">Figure 5 -</span> Target Frame Hit!<p></p>
 <a href="./images/static/figure-5-static-hit-aerodactyl.png" target="_blank"><img src="./images/static/figure-5-static-hit-aerodactyl.png" style="width:675px;height:400px;"></a><br /><br />
@@ -255,7 +238,7 @@ permalink: /retail/swsh/overworld/static
 <a href="./images/static/figure-6-static-in-battle.jpg" target="_blank"><img src="./images/static/figure-6-static-in-battle.jpg" style="width:675px;height:400px;"></a><br /><br />
 <a href="./images/static/figure-7-static-summary-screen.jpg" target="_blank"><img src="./images/static/figure-7-static-summary-screen.jpg" style="width:675px;height:400px;"></a><br /><br />
 
-<p><span class="fw-bold">The Aerodactyl matches the output of the generator, mission accomplished!</span></p>
+<p><span class="fw-bold">The Aerodactyl matches what is expected by the tool, you should now understand how to RNG abuse Pokémon from Static encounters.</span></p>
 
 <p>Different areas & environments can have a drastic influence on delay, if you are missing targets when you believe you should be finding results, you should consider reading the <code span class="fw-bold">Troubleshooting Encounters</code> page by clicking the button directly down below.</p>
 
@@ -265,8 +248,3 @@ permalink: /retail/swsh/overworld/static
     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
   </svg>
 </a><br />
-
-<p><span class="fw-bold">The Aerodactyl matches what is expected by the tool, you should now understand how to RNG abuse Pokémon from Static encounters.</span></p>
-
-Head back to the main page if you wish to learn how to RNG abuse different types of encounters.
-
