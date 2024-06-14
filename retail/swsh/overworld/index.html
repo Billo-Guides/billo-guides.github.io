@@ -5,105 +5,130 @@ permalink: /retail/swsh/overworld
 ---
 
 <style>
-      table,
-      th,
-      td {
-        border: 1px solid #302e2e;
-      }
+  mark {
+    background-color: #FFD700;
+    color: black;
+  }
+
+  .card-bg {
+    background-color: #d1d1d1;
+    border-bottom-right-radius: 0.20rem !important;
+    border-bottom-left-radius: 0.20rem !important;
+  }
+
+  table,
+  th,
+  td {
+    border: 1px solid black;
+  }
+
+  blockquote {
+  background: #c5c5c5;
+  border: 1px solid #9e9e9e;
+  border-left: 5px solid #0c0038;
+  margin: 1.5em 2px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  }
 </style>
-
+    
 <div class="title" style="background-color: #0c0038;">
-   <h1 class="text-light text-center pt-3 pb-3">Overworld RNG Guide (Retail)</h1>
-</div>
+  <h1 class="text-light text-center pt-3 pb-3">Overworld RNG Guide (RETAIL)</h1>
+</div><hr />
 
-<hr />
+<p>This guide provides in-depth coverage of how to use SWSH OWRNG Generator GUI by <a href="https://github.com/LegoFigure11">LegoFigure11</a> to RNG abuse wild encounters in Sword/Shield. With overworld RNG abuse, you can obtain Shiny or Marked Pokémon and calculate IVs, Nature, and Gender.
 
-This guide will provide in-depth coverage of how to RNG abuse all types of overworld-based encounters in Sword/Shield by using the SWSH Overworld RNG Generator by <a href="https://github.com/LegoFigure11">LegoFigure11</a>.
-Overworld RNG abuse can be used to obtain shiny and/or marked Pokémon from wild encounters! This can also be used to calculate other internal values such as IVs, nature, and gender.<br /> <br />
-
-<span class="fw-bold">This guide assumes you are using a vanilla Switch console running official stock firmware.</span><br /> <br />
+<p><span class="fw-bold" style="color: #b60606;">From here it is assumed you are using an unmodified console on stock firmware.</span></p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/overworld">
-  Click here if you are using a switch console running CFW!
+  Running a modified console? <span class="fw-bold">Click here for the CFW focused guide!</span>
   <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
   </svg>
-</a>
-<br>
+</a><br>
+      
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="setup-and-install-swsh-retail">
+    <span class="fw-bold text-light">Setup Instructions:</span>
+  </div>
+  <div class="card-body card-bg">
+    <h5><span class="fw-bold">You will need:</span></h5>
+    <ul>
+      <li><a href="https://github.com/LegoFigure11/swsh-overworld-rng-gui/releases">SWSH Overworld RNG Generator</a></li>
+      <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-6.0.413-windows-x64-installer">.NET 6.0</a></li>
+      <li>A calculator</li>
+    </ul>
+      
+    <h6><span class="fw-bold">Installation Instructions:</span></h6>
+    <ol>
+      <li>Extract <code span class="fw-bold">SWSH_OWRNG_Generator_GUI.zip</code> into an empty folder on your PC in a known location.</li>
+      <li>Download <code span class="fw-bold">.NET 6.0 Runtime</code>, then run the executable file and follow the setup instructions.</li>
+      <li>Launch <code span class="fw-bold">SWSH OWRNG Generator GUI</code> and make sure it works as intended.</li>
+    </ol>
 
-<h3><span class="fw-bold">Getting Started:</span></h3>
-<u>You will need:</u>
-<ul>
-  <li><a href="https://github.com/LegoFigure11/swsh-overworld-rng-gui/releases">SWSH Overworld RNG Generator - Latest release</a></li>
-  <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/6.0">.NET 6.0</a> - Generator dependency</li>
-  <li>A standard calculator</li>
-</ul>
+  </div>
+</div><br>
 
-Download and extract all the contents from the <code>SWSH_OWRNG_Generator_GUI.zip</code> into an empty folder and run the <code>.exe</code> file.<br /><br />
+<hr /><div class="title" style="background-color: #0c0038;">
+  <h1 class="text-light text-center pt-3 pb-3">RNG Tool Setup</h1>
+</div><hr />
 
-<h3><span class="fw-bold">Tool Setup:</span></h3>
+<p>This section will cover the essential details you need to know in order to use the Generator. If you do not yet have a complete understanding of how each of the tabs, follow along with this section for relevant information & usage tips.</p>
 
-<span class="fw-bold">Figure 1 -</span> Main window overview<br />
+<span class="fw-bold">Figure 1 -</span> Main Window Overview<br />
 <a href="./overworld/images/main-page/figure-1-main-window-overview-retail.png" target="_blank"><img src="./overworld/images/main-page/figure-1-main-window-overview-retail.png" style="width:675px;height:400px;"></a><br /><br />
 
-<div class="accordion" id="MainWindowOverviewRetail">
-  <div class="card">
-    <div class="card-header text-white" style="background-color: #0c0038;">
-    <div class="card-header" id="MainWindowOverviewRetail">
-      <h5 class="mb-0">
-        <span class="fw-bold">Main Window Overview</span>
-      </h5>
-    </div>
-    <div class="card-body" style="background-color: #ffffff36;">
-      Pictured above is the Main Window of the generator. This window is used to calculate upcoming target frames based on our search parameters.<br /><br />
-
-      Retail RNG abuse cannot take advantage of the Switch connectivity or Skip features. These features are exclusive to CFW Switch consoles. This means we will need to find values such as current seed, and TID/SID manually.<br /><br />
-      <ul>
-        <li>The TID/SID fields expects inputs of the 5 digit TID/SID from the save file you are using to RNG abuse. This is in order to accurately predict upcoming shinies.</li><br />
-        <li><code>Init. adv.</code> is the amount of frames that have passed since connecting to the generator. The <code>+</code> field below is the amount of frames to search through. Set this to an amount you are comfortable with.</li><br />
-        <li>The checkboxes on the left-hand side should be filled out according to your desired target. We can quickly find this information using the <code>Encounter Lookup</code> tab. The <code>Shiny Charm</code> & <code>Mark Charm</code> checkboxes should be checked if those items are present your save file.</li><br />
-        <li>The middle portion of the window is for filtering search results. Here we can search for IVs, nature, mark, shininess, & Brilliant Aura!</li><br />
-        <li>The right-hand portion of this window contains the <code>Retail Advances Tracker</code>. This is frequently used for (re)identifying seeds and keeping track of advancements.</li>
-      </ul>
-      </div>
-    </div>
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="main-window-overview-retail">
+    <span class="fw-bold text-light">Main Window Overview</span>
   </div>
-<br />
+  <div class="card-body card-bg">
+    <p>The main window (pictured above), calculates upcoming target frames based on your search parameters. Here, we can assign encounter and search filters to search for specific target frames.</p>
 
-<span class="fw-bold">Figure 2 -</span> Retail Seed Finder overview<br />
+    <h6><span class="fw-bold">Feature descriptions:</span></h6>
+    <ul>
+      <li>The <code span class="fw-bold">TID</code> & <code span class="fw-bold">SID</code> fields expect your 5 digit TID/SID combination, you will need this to find Shiny Pokémon.</li>
+      <li><code span class="fw-bold">Init. adv.</code> is where you enter the amount of advances that have passed since you began monitoring your seed.</li>
+      <li>The <code span class="fw-bold">+</code> field is the amount of frames to search through, you should set this to a comfortable amount.</li>
+      <li>Click the <code span class="fw-bold">Shiny Charm</code> checkbox if you have the Shiny Charm in your save file, otherwise leave unchecked.</li>
+      <li>Click the <code span class="fw-bold">Mark Charm</code> checkbox if you have the Mark Charm in your save file, otherwise leave unchecked.</li>
+      <li>The rest of the details on the left-hand side are encounter filters, these can be filled automatically using the Encounter Lookup sub window (explained below).</li>
+      <li>The middle section contains search filters, here you can set filters for specific Shininess, IVs, Nature, Marks, etc.</li>
+    </ul>
+
+    <blockquote>The <code span class="fw-bold">Connect</code>, <code span class="fw-bold">Read Encounter</code> & <code span class="fw-bold">Skip</code> features are exclusive to users running Custom Firmware (CFW), attempting to use these features on a retail device will cause issues.</blockquote>
+  </div>
+</div><br>
+
+<span class="fw-bold">Figure 2 -</span> Retail Seed Finder Overview<br />
 <a href="./overworld/images/main-page/figure-2-seedfinder-window-overview-retail.gif" target="_blank"><img src="./overworld/images/main-page/figure-2-seedfinder-window-overview-retail.gif" style="width:675px;height:400px;"></a><br /><br />
 
-<div class="accordion" id="SeedFinderOverview">
-  <div class="card">
-    <div class="card-header text-white" style="background-color: #0c0038;">
-    <div class="card-header" id="SeedFinderOverview">
-      <h5 class="mb-0">
-        <span class="fw-bold">Retail Seed Finder Overview</span>
-      </h5>
-    </div>
-    <div class="card-body" style="background-color: #ffffff36;">
-      This is the <code>Retail Seed Finder</code> tab. Here, you will record a sequence of 128 motions/animations in order to find your current seed, as seen in the image above.<br /><br />
-
-      <h6><span class="fw-bold">What are Motions/Animations?</span></h6>
-      This term refers to a feature of the Pokémon summary page. When pressing the <code>L3</code> button, your Pokémon will do one of two animations, physical or special. Animations will advance 1 frame per input, which makes it easy to keep track of your current seeds.<br /><br />
-
-      Animations can be used on the party menu and Pokémon summary screens. When identifying your current seed, you should use the summary screen to avoid any unwanted advancements from the party menu.<br /><br />
-
-      <details>
-      <summary><span class="fw-bold">How to find current seeds using the Retail Seed Finder:</span></summary> <br />
-      <ol>
-        <li>Open the <code>Retail Seed Finder</code> window and open the pause menu in-game.</li><br />
-        <li>Open the Pokemon party menu, select a Pokemon, then click summary.</li><br />
-        <li>Begin making your Pokemon animate by using the <code>L3</code> button, take note of the type of animation. (Physical or special).</li><br />
-        <li>If the animation was physical, click the <code>(0)Physical</code> button, if the animation was special, click the <code>(1)Special</code> button.<br /><br />
-        If you don't feel like clicking the button, you can use your keyboard too! Simply type <code>0</code> or <code>,</code> for a physical animation, and <code>1</code> or <code>.</code> for a special animation.</li><br />
-        <li>Repeat this process 128 times, if done correctly your current seeds will now be visible on-screen. Click <code>Update Main Form</code>. At this stage it is safe to close the Retail Seed Finder window.</li>
-      </ol>
-      </details>
-      </div>
-    </div>
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="seed-finder-overview">
+    <span class="fw-bold text-light">Retail Seed Finder Overview</span>
   </div>
-<br />
+  <div class="card-body card-bg">
+    <p>The Retail Seed Finder sub-window is where players can calculate their current seed, this is done by recording a sequence of 128 motions/animations in a row.</p>
+          
+    <h6><span class="fw-bold">What are motions/animations?</span></h6>
+        
+    <p>This refers to an in-game feature on the Pokémon summary screen or party menu. Pressing <code span class="fw-bold">L3 (pressing the left stick)</code> will cause your Pokémon to perform one of 2 animations, these will be referred to as "physical" and "special" animations.</p>
+        
+    <p>It is recommended to pick a Pokémon with a clear physical/special animation to record your seed with, good examples include Drilbur or Espeon. Animation differences can be found in the below image if needed (figure 3).</p>
+
+    <h6><span class="fw-bold">Seed finding instructions:</span></h6>
+      <ol>
+        <li>Open the pause menu in-game, then open the <code span class="fw-bold">Retail Seed Finder</code> sub-window on SwSh OWRNG Generator GUI.</li>
+        <li>Open the party menu, select the Pokémon you will use to record animations, then click <code span class="fw-bold">Summary</code>.</li>
+        <li>Use the <code span class="fw-bold">L3</code> button to cause an animation, take note of if the animation was physical or special.</li>
+        <li>If the animation was physical, press the <code span class="fw-bold">(0) Physical</code> button. If the animation was special, press the <code span class="fw-bold">(1) Special</code> button.</li>
+        <li>Repeat this process 128 times in a row and a seed will be produced. Click the <code span class="fw-bold">Update Main Form</code> button to paste it into the main window.</li>
+        <li>If a seed was not produced this indicates that the animations were not recorded properly, try again.</li>
+      </ol>
+
+    <blockquote>Recording animations through the Pokémon summary screen is recommended, this is due to the party menu advancing +1 per button clicked, the summary screen advances +1 per animation, making it easier to keep track of.</blockquote>
+  </div>
+</div><br>
 
 <span class="fw-bold">Figure 3 -</span> Animation differences<br />
 <a href="./overworld/images/main-page/figure-3-animations-retail.gif" target="_blank"><img src="./overworld/images/main-page/figure-3-animations-retail.gif" style="width:675px;height:400px;"></a><br /><br />
