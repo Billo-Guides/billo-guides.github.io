@@ -83,7 +83,7 @@ permalink: /retail/swsh/overworld
     <span class="fw-bold text-light">Main Window Overview</span>
   </div>
   <div class="card-body card-bg">
-    <p>The main window (pictured above), calculates upcoming target frames based on your search parameters. Here, we can assign encounter and search filters to search for specific target frames.</p>
+    <p>The main window (pictured above), calculates upcoming target frames based on your search parameters. Here, we can assign encounter and search filters to search for specific targets.</p>
 
     <h6><span class="fw-bold">Feature descriptions:</span></h6>
     <ul>
@@ -96,9 +96,16 @@ permalink: /retail/swsh/overworld
       <li>The middle section contains search filters, here you can set filters for specific Shininess, IVs, Nature, Marks, etc.</li>
     </ul>
 
-    <blockquote>The <code span class="fw-bold">Connect</code>, <code span class="fw-bold">Read Encounter</code> & <code span class="fw-bold">Skip</code> features are exclusive to users running Custom Firmware (CFW), attempting to use these features on a retail device will cause issues.</blockquote>
+    <blockquote>The <code span class="fw-bold">Connect</code>, <code span class="fw-bold">Read Encounter</code>, & <code span class="fw-bold">Skip</code> features are exclusive to users running Custom Firmware (CFW), attempting to use these features on a retail device will cause issues.</blockquote>
   </div>
 </div><br>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/finding-tid-sid">
+  Don't know your 5 digit TID/SID? <span class="fw-bold">Click here for a tutorial!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a>
 
 <span class="fw-bold">Figure 2 -</span> Retail Seed Finder Overview<br />
 <a href="./overworld/images/main-page/figure-2-seedfinder-window-overview-retail.gif" target="_blank"><img src="./overworld/images/main-page/figure-2-seedfinder-window-overview-retail.gif" style="width:675px;height:400px;"></a><br /><br />
@@ -116,7 +123,7 @@ permalink: /retail/swsh/overworld
         
     <p>It is recommended to pick a Pokémon with a clear physical/special animation to record your seed with, good examples include Drilbur or Espeon. Animation differences can be found in the below image if needed (figure 3).</p>
 
-    <h6><span class="fw-bold">Seed finding instructions:</span></h6>
+    <h6><span class="fw-bold">Initial Seed finding instructions:</span></h6>
       <ol>
         <li>Open the pause menu in-game, then open the <code span class="fw-bold">Retail Seed Finder</code> sub-window on SwSh OWRNG Generator GUI.</li>
         <li>Open the party menu, select the Pokémon you will use to record animations, then click <code span class="fw-bold">Summary</code>.</li>
@@ -126,88 +133,98 @@ permalink: /retail/swsh/overworld
         <li>If a seed was not produced this indicates that the animations were not recorded properly, try again.</li>
       </ol>
 
+    <h6><span class="fw-bold">Seed re-identification:</span></h6>
+    <p>Re-identifying your current seed is done using the Retail Advances Tracker feature of the Main Window, and is essentially a simplified version of finding your seed using animations.</p>
+    
+      <ol>
+        <li>Click the <code span class="fw-bold">Generate Pattern</code> button after initially identifying your seed.</li>
+        <li>Record a sequence of 8-20 animations using the above mentioned method, the amount can vary but should be relatively quick.</li>
+        <li>Once a seed has been produced, click the <code span class="fw-bold">Update States</code> button to paste your current seed into the top-left of the main window.</li>
+      </ol>
+
     <blockquote>Recording animations through the Pokémon summary screen is recommended, this is due to the party menu advancing +1 per button clicked, the summary screen advances +1 per animation, making it easier to keep track of.</blockquote>
+    
   </div>
 </div><br>
 
 <span class="fw-bold">Figure 3 -</span> Animation differences<br />
 <a href="./overworld/images/main-page/figure-3-animations-retail.gif" target="_blank"><img src="./overworld/images/main-page/figure-3-animations-retail.gif" style="width:675px;height:400px;"></a><br /><br />
 
-<ol>
-  <li>In the first animation, we can see Espeon lunging towards the screen. (Physical)</li>
-  <li>In the second animation, we can see Espeon remaining in place using psychic. (Special)</li>
-</ol>
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="animation-differences-retail">
+    <span class="fw-bold text-light">Animation Differences</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>In the above image, we can see Espeon performing 2 different types of animation.</p>
+
+    <ol>
+      <li>In the first animation we can see Espeon lunging towards the screen, this is clearly Espeons physical animation.</li>
+      <li>In the second animation we can see Espeon standing in place using telekinesis, this is clearly Espeons special animation.</li>
+    </ol>
+
+    <blockquote>As stated above, it is important to pick a Pokémon with a clear physical/special example. This can be anything you want, just make sure the animation difference is obvious to you.</blockquote>
+    
+  </div>
+</div><br>
 
 <span class="fw-bold">Figure 4 -</span> Encounter Lookup tab overview<br />
 <a href="./overworld/images/main-page/figure-4-encounter-lookup-retail.gif" target="_blank"><img src="./overworld/images/main-page/figure-4-encounter-lookup-retail.gif" style="width:675px;height:400px;"></a><br /><br />
 
-<div class="accordion" id="EncounterLookupOverview">
-  <div class="card">
-    <div class="card-header text-white" style="background-color: #0c0038;">
-    <div class="card-header" id="EncounterLookupOverview">
-      <h5 class="mb-0">
-        <span class="fw-bold">Encounter Lookup Overview</span>
-      </h5>
-    </div>
-    <div class="card-body" style="background-color: #ffffff36;">
-      This is the <code>Encounter Lookup</code> window. Searching for a specific species in the dropdown list will bring up a list of every possible wild encounter for that Pokémon in the entire game.<br /><br />
-
-      <details>
-      <summary><span class="fw-bold">How to use the Encounter Lookup:</span></summary> <br />
-      <ol>
-        <li>Open the <code>Encounter Lookup</code> window and set the game version to the game you are currently playing.</li><br />
-        <li>Type the species name of your chosen target Pokémon, then select it from the dropdown menu. You should now see a list of all possible encounters for that specific Pokémon in the table.</li><br />
-        <li>Choose an encounter type; Static, Symbol or Hidden. Once you have decided, select one of the rows from the list by single clicking on it.</li><br />
-        <li>The details of the encounter should now be automatically filled into the main window, and the <code>Encounter Lookup</code> window can now be closed.</li><br />
-      </ol>
-      </details>
-      </div>
-    </div>
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="encounter-lookup-overview-retail">
+    <span class="fw-bold text-light">Encounter Lookup Overview</span>
   </div>
-<br />
+  <div class="card-body card-bg">
+    <p>The Encounter Lookup tab (pictured above), allows you to search for the encounter details of specific Pokémon and generate a list of every possible encounter for that Pokémon in the game.</p>
+    
+    <h6 span class="fw-bold">How to use Encounter Lookup:</h6>
+    <ol>
+      <li>Open the <code class="fw-bold">Encounter Lookup</code> tab and set the correct game version.</li>
+      <li>Type the species name of your target Pokémon, then select it from the dropdown menu to produce a list.</li>
+      <li>Choose an encounter type: Static, Symbol, or Hidden. Select a row from the list by single-clicking on it.</li>
+    </ol>
+
+    <blockquote>After selecting your desired encounter, the details will be entered into the Main Window automatically and the Encounter Lookup tab can be closed.</blockquote>
+  </div>
+</div><br>
 
 <span class="fw-bold">Figure 5 -</span> Menu Close Advances Viewer window overview<br />
 <a href="./overworld/images/main-page/figure-5-menu-close-advances-viewer-overview-retail.gif" target="_blank"><img src="./overworld/images/main-page/figure-5-menu-close-advances-viewer-overview-retail.gif" style="width:675px;height:400px;"></a><br /><br />
 
-<div class="accordion" id="MenuClosePredictionRetail">
-  <div class="card">
-    <div class="card-header text-white" style="background-color: #0c0038;">
-    <div class="card-header" id="MenuClosePredictionRetail">
-      <h5 class="mb-0">
-        <span class="fw-bold">Menu Close Prediction Overview</span>
-      </h5>
-    </div>
-    <div class="card-body" style="background-color: #ffffff36;">
-     The <code>Menu Close Advances Viewer</code> can be used to predict the amount of advancements that will pass from closing the pause menu. Closing the pause menu also has an added effect of freezing the RNG state in the area for a a few seconds, this makes it a great option for closing in on any target frames as it provides a lot more consistency in doing so.<br /><br />
-
-     By knowing how many advancements will occur from closing the pause menu, and having a window of silence to run into position and spawn the encounter, we can near guarantee to hit any potential target frames.<br /><br />
-
-    <details>
-      <summary><span class="fw-bold">How to calculate the number of NPCs in an area:</span></summary> <br />
-      <ol>
-        <li>Attempt to count the number of NPCs in the area of your target manually if possible. If this is impossible, starting from 0 NPCs and working forward is acceptable.</li><br />
-        <li>Identify your current seeds using the <code>Retail Seed Finder</code>, as explained above, keep the game paused after doing so. This will ensure that the amount of advancements that have occurred since finding your seed will remain at 0.</li><br />
-        <li>Click the <code>Menu Close Advances Viewer</code> button at the top of the generator to open a smaller window.</li><br />
-        <li>Take your seeds from the <code>State[0] & State[1]</code> fields of the Main Window, and enter them into the same fields of the Menu Close Advances Viewer window.</li><br />
-        <li>Take the number of NPCs you counted earlier and put it into the <code>NPCs</code> field.</li><br />
-        <li>Enter your number of advancements into the <code>Init Adv.</code> field. If the above steps were closely followed, this number should be 0.</li><br />
-        <li>Enter the search range into the <code>+</code> field, then hit search, you should then close and reopen the menu and re-identify your current seed.</li><br />
-        <li>Subtract the amount of advancements that were consumed by re-identifying your current seed from the total amount of advancements that have occurred. (For example, if 18 advancements have occurred, and it took 14 advancements to re-identify the current seed, then 4 frames passed from opening and closing the pause menu)</li><br />
-        <li>If the values do not match, tweak the number in the NPCs field until it matches. (Decrease the value if the number of advances you got was lower than expected, increase if it was higher)</li>
-      </hr>
-      </ol>
-    </details>
-    <br />
-      </div>
-    </div>
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="menu-close-overview-cfw">
+    <span class="fw-bold text-light">Menu Close Advances Viewer Overview</span>
   </div>
-<br />
+  <div class="card-body card-bg">
+    <p>The Menu Close Advances Viewer sub window (pictured above), predicts the number of advancements from closing the pause menu. This advancement method is recommended as closing the pause menu freezes the RNG state for a few seconds, making it an extremely consistent method of hitting an exact target frame.</p>
+      
+    <p>After entering your seeds and hitting search, a table will appear. The <code class="fw-bold">Jump</code> column of the table displays the amount of advancements that will occur from closing the pause menu, this number varies based on the amount of NPCs in your area.</p>
 
-<hr />
-<div class="bg-dark title">
+    <p>An area may have a higher NPC count than what is currently visible on screen, it’s important to calibrate your NPC count accurately for an accurate <code class="fw-bold">Jump</code> prediction.</p><hr />
+
+    <h6 span class="fw-bold">How to calibrate NPC count:</h6>
+      <ul>
+        <li>Use <code span class="fw-bold">Retail Seed Finder</code> to identify your current seed, make sure to click <code span class="fw-bold">Update Main Form</code> button after doing so.</li>
+        <li>Close the pause menu once and quickly re-open it, this will advance the RNG state. From here you will need to re-identify your current seed using the above mentioned method. DO NOT UPDATE STATES.</li>
+        <li>Take note of the amount of advancements that have occurred between re-opening the pause menu and re-identifying your seed, and take note of how many animations were used to re-identify your seed.</li>
+      </ul>
+
+    <blockquote><span class="fw-bold">Example -</span> If 15 advancements have occured after re-identification, and it only took 8 animations to re-identify, 7 advancement occured from closing and re-opening the pause menu.</blockquote>
+
+      <ul>
+        <li>Open the <code span class="fw-bold">Menu Close Advances Viewer</code> sub window, then copy your seeds from the Main Window over into the correct fields.</li>
+        <li>Search with 0 NPCs, If the number inside the <code class="fw-bold">Jump</code> column does not match, increase the number of NPCs by 1 until everything aligns properly with what is expected.</li>
+        <li>In this example, we expect to see +7 in the <code class="fw-bold">Jump</code> column, so we gradually increase the NPC value until +7 appears.</li>
+      </ul>
+
+    <blockquote>We highly recommend becoming familiar with NPC count calibration before continuing with the guide. This method is used in almost all cases as it provides the most consistency.</blockquote>
+
+  </div>
+</div><br>
+
+<hr /><div class="bg-dark title">
   <h1 class="text-light text-center pt-3 pb-3">Advancing the RNG State</h1>
-</div>
-<hr />
+</div><hr />
   
 The RNG state will naturally advance, and the pace of the advancements will vary depending on your location, the weather of the location, and the spawned Pokemon that are present. In all cases, it's best to target a Pokémon in a "quiet" area with calm weather conditions. However, sometimes you will be forced into an unstable environment due to a lack of options.<br /><br />
 
@@ -304,27 +321,13 @@ Multiple in-game actions can also be used to advance the RNG state with varying 
 </div>
 <br />
 
-<hr />
-<div class="bg-dark title">
+<hr /><div class="bg-dark title">
   <h1 class="text-light text-center pt-3 pb-3">The Process</h1>
-</div>
-<hr />
+</div><hr />
 
-<span class="fw-bold">From this point the guide assumes you know your 5 digit TID/SID combination.</span> You must have this information on-hand if you plan to RNG abuse shiny Pokemon.<br /><br />
+<p><span class="fw-bold">From this point the guide assumes you know your 5 digit TID/SID combination.</span> You must have this information on-hand if you plan to RNG abuse shiny Pokemon.</p>
 
-Already know your TID/SID combination or have no interest in RNG abusing shiny Pokémon? Great! You can continue reading the information on this page. If you do not know your 5 digit TID/SID combination, click the button directly below for a tutorial.<br /><br />
-
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/finding-tid-sid">
-  Click here for a tutorial on finding your 5 digit TID/SID!
-  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-  </svg>
-</a>
-<br>
-
-<hr />
-
-There are four types of encounters: Static, Symbol, Hidden, & Fishing. It's important to understand the types of encounters before making attempts. See the table below for the different types of encounters and their definitions.<br /><br />
+<p>There are four types of encounters: Static, Symbol, Hidden, & Fishing. It's important to understand the types of encounters before making attempts. See the table below for the different types of encounters and their definitions.</p>
 
 <table class="table table-striped" style="width:100%">
   <thead class="table text-white" style="background-color: #0c0038;">
