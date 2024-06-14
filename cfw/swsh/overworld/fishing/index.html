@@ -174,42 +174,45 @@ permalink: /cfw/swsh/overworld/fishing
 
  <p>After setting up your search filters and standing in the correct position in-game, you will need to calculate the amount of NPCs in the area and the base delay of the encounter. Doing both of these things will provide the best possible chances of hitting the correct target frame.</p>
 
-  <div class="card border-dark">
+<div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c0038;" id="hitting-target-frame-fishing-cfw">
       <span class="fw-bold text-light">Hitting Your Target Frame:</span>
     </div>
     <div class="card-body card-bg">
       <h6 class="fw-bold">Step-by-step tutorial:</h6>
-      <ul>
-        <li>Advance towards your target frame using any of the methods listed inside the table on the <a href="https://billo-guides.github.io/cfw/swsh/overworld">main page</a>. Consider date skipping to advance large distances.</li><p></p>
-        <li>Once you are close a few thousand frames away from the target, head back to the correct position in-game (see Figure 2).</li><p></p>
-        <li>Pause the game, then disconnect and reconnect to the Main Window and press the search button again. This will be the new target frame.</li><p></p>
-      </ul>
-
-      <blockquote>From this point it is recommended to advance towards the target using only menu close prediction & animation advancements. These methods advance frames in small increments, making them easy to keep track of.</blockquote>
 
       <ul>
-        <li>Open the Menu Close Advances Viewer tab, and type the number of NPCs (calculated earlier) into the <code span class="fw-bold">NPCs</code> field.</li><p></p>
-        <li>Then type your target frame into the <code span class="fw-bold">+</code> field and search, factor in the delay that was calculated earlier (Example: <code span class="fw-bold">1000 (target) - 3 (delay) = 997 (new target)</code>).</li><p></p>
+        <li>Advance towards your target frame using any method listed in the table on the main page (consider date-skipping for long distance-advancements).</li><p></p>
+        <li>Return to the correct position in-game when you are a few thousand frames away from the desired target. Ensure the target fishing pool is despawned.</li><p></p>
+        <li>Pause the game, then disconnect and reconnect to the Main Window, and press the search button again to set a new target frame.</li><p></p>
       </ul>
 
-      <blockquote>If you are unable to find your target frame in the search results, use animations to advance the RNG state by 1, click the <code span class="fw-bold">Update States</code> button on the main window & repeat the above step. Do this until your target frame is visible.</blockquote>
+      <blockquote>At this stage, we recommend using menu close prediction & animation advancements for accurate, small, and manageable advancement increments.</blockquote>
 
       <ul>
-        <li>If it is possible to land directly onto your target frame using menu close prediction, open and close the pause menu until closing the pause menu a single time will land you onto your target frame.</li><p></p>
-        <li>If you cannot hit your target using menu close prediction, get as close as you can using this method. You will then need to be ready to use movement animations to hit your target after the final unpause instead.</li>
+        <li>Open the Menu Close Advances Viewer tab, and enter the number of NPCs calculated earlier in the <code span class="fw-bold">NPCs</code> field.</li><p></p>
+        <li>Enter your target frame into the empty <code span class="fw-bold">+</code> field, factor in your calibrated delay (e.g <code span class="fw-bold">1000 (target) - 3 (delay) = 997 (new target)</code>).</li><p></p>
+        <li>Hit search, you should now see a list of frames in the table, see if your exact target frame, great! This means menu close prediction can be used to hit it.</li><p></p>
+        <li>If you do not see your target frame in the search results, use animation advancements to increment the RNG state by 1, then repeat the above steps until visible.</li><p></p>
       </ul>
 
-      <blockquote>Be sure to test how many advancements occur from movement to get an idea of how many movements you need to do to hit the target frame. Typically a single movement will advance 1-2 frames depending on your location.</blockquote>
+      <blockquote><p>In rare cases, you may not be able to hit the desired frame using menu close prediction alone. Use it to get as close as possible, then use movement advances to reach your target instead.</p>
+
+      Test how many advancements occur per movement to determine the number needed. Typically, this method advances the RNG state by 1-2 frames each time.</blockquote>
 
       <ul>
-        <li>Close the pause menu (do movement advancements here if necessary). Once you have landed onto your target frame, quickly run around without letting go of the control stick to spawn the fishing pool, then fish the Pokémon to initiate a battle.</li>
+        <li>Open and close the pause menu until a single menu close lands you onto (or as close as possible) the target frame.</li><p></p>
+        <li>Unpause the game, then wait for the fishing pool to spawn in the overworld, do not mount your bike after doing so.</li><p></p>
       </ul>
 
-      <blockquote>If you encountered an unexpected result, this either means you missed your target frame (too slow), the encounter did not spawn on time, or your delay is incorrect. Confirm your delay using the <a href="#delay-npc-count-symbol-cfw">above mentioned method</a> and retry.</blockquote>
+      <blockquote>If you do not land directly onto your target frame, this is the point where you should use movement advancements, do this before spawning the fishing pool in the overworld.</blockquote>
 
+      <ul>
+        <li>Initiate the encounter with the Pokémon that spawned first to check if you've hit the correct target frame. If the result is unexpected, recalibrate your NPC count and delay, then retry.</li>
+      </ul>
+      
     </div>
-    </div><br>
+  </div><br>
 
 <p>By using menu close prediction and animations to keep track of inputs/advancements, we were able to hit out target frame.</p>
 
