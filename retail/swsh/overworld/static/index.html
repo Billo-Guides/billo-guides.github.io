@@ -162,7 +162,33 @@ permalink: /retail/swsh/overworld/static
   <h1 class="text-light text-center pt-3 pb-3">Advancing Towards the Target!</h1>
 </div><hr />
 
-The generator displays the target on frame 196-199. Based on local testing, the delay for this static encounter is 0. This means the target remains at frame 196-199.<br /><br />
+<p>First, you will need to calculate the rough delay for the encounter. Doing this step will provide the best possible chances of hitting your target frame. Delay is the difference in advancements between spawning the Pokémon in the overworld and the actual frame the Pokémon was generated on.</p>
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="delay-calculation-retail">
+    <span class="fw-bold text-light">Delay Calculation</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>From here it is assumed you already know the number of NPCs inside the area you plan to RNG abuse, if you do not have this number, find it now using the method on the main page.</p>
+    
+    <h6 span class="fw-bold">Delay Calculation</h6>
+    <ol>
+      <li>Stand in an ideal in-game position with a clear line between you and your target Pokémon, you should be standing far enough away for it to be despawned.</li><p></p>
+      <li>Calculate the number of NPCs at this stage if you have not already done so, then open the <code class="fw-bold">Menu Close Advances Viewer</code> sub window.</li><p></p>
+      <li>Type the number of NPCs into the <code class="fw-bold">NPCs</code> field, and click search. This will provide you with the correct <code class="fw-bold">Jump</code> value.</li><p></p>
+      <li>With the game still paused, re-identify your current seed using the <code class="fw-bold">Retail Advances Tracker </code> on the main window, update the states and perform a filterless search.</li><p></p>
+      <li>Unpause the game, run towards the spawn point of your target Pokémon, then initiate the encounter, keep in mind the amount of advances that were consumed from closing the pause menu.</li><p></p>
+      <li>Catch the Pokémon, then enter the stats into any IV calculator to get a rough idea of the IVs of the Pokémon you hit. Also take note of the nature of the Pokémon you found.</li><p></p>
+      <li>Find the Pokémon you hit in the search results of the GUI, this should be relatively close to your start frame. Check to see which advancement generated your Pokémon.</li><p></p>
+      <li>Subtract the amount of advancements that were consumed by closing the pause menu, this figure will then be your delay for this particular encounter.</li><p></p> 
+    </ol>
+
+    <blockquote><span class="fw-bold">Example:</span> If the Pokémon was generated on frame 10, and 7 frames were consumed from closing the pause menu, this means the delay for this encounter is 3.</blockquote>
+
+   </div>
+ </div><br>
+
+ <p>At this stage you should now know have calibrated both the NPC count and the delay for the encounter, take note of both of these values as they are significantly important for hitting target frames consistently.</p>
 
 <div class="accordion" id="AdvancingToTargetStatic">
   <div class="card">
@@ -220,29 +246,27 @@ The generator displays the target on frame 196-199. Based on local testing, the 
   </div>
 <br />
 
-<span class="fw-bold">Figure 5 -</span> Target Frame Hit!<br />
+<span class="fw-bold">Figure 5 -</span> Target Frame Hit!<p></p>
 <a href="./images/static/figure-5-static-hit-aerodactyl.png" target="_blank"><img src="./images/static/figure-5-static-hit-aerodactyl.png" style="width:675px;height:400px;"></a><br /><br />
 
-<span class="fw-bold">By using animations and a standard calculator to keep track of inputs, we were able to hit out target frame!</span><br /><br />
+<p>By using menu close prediction and animations to keep track of inputs/advancements, we were able to hit out target frame.</p>
 
-<span class="fw-bold">Figure 6/7 -</span> Result Found!<br />
+<span class="fw-bold">Figure 6/7 -</span> Result Found!<p></p>
 <a href="./images/static/figure-6-static-in-battle.jpg" target="_blank"><img src="./images/static/figure-6-static-in-battle.jpg" style="width:675px;height:400px;"></a><br /><br />
 <a href="./images/static/figure-7-static-summary-screen.jpg" target="_blank"><img src="./images/static/figure-7-static-summary-screen.jpg" style="width:675px;height:400px;"></a><br /><br />
 
-<span class="fw-bold">The Aerodactyl matches the output of the generator, mission accomplished!</span><br /><br />
+<p><span class="fw-bold">The Aerodactyl matches the output of the generator, mission accomplished!</span></p>
 
-Different areas & environments can have a drastic influence on delay, if you are missing targets when you believe you should be finding results, you should consider reading the <code>Troubleshooting Encounters</code> page by clicking the button directly down below.<br /><br />
+<p>Different areas & environments can have a drastic influence on delay, if you are missing targets when you believe you should be finding results, you should consider reading the <code span class="fw-bold">Troubleshooting Encounters</code> page by clicking the button directly down below.</p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/overworld/troubleshooting">
-  Click here to be redirected to the Troubleshooting Encounters page!
+  Having trouble finding results? <span class="fw-bold">View the Troubleshooting Encounters guide!</span>
   <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
   </svg>
 </a><br />
 
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/overworld">
-  Send me back!
-  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-  </svg>
-</a>
+<p><span class="fw-bold">The Aerodactyl matches what is expected by the tool, you should now understand how to RNG abuse Pokémon from Static encounters.</span></p>
+
+Head back to the main page if you wish to learn how to RNG abuse different types of encounters.
+
