@@ -98,70 +98,69 @@ permalink: /retail/swsh/overworld/static
   </div>
 </div><br>
 
-<span class="fw-bold">Figure 3 -</span> Seed identification<br />
+<span class="fw-bold">Figure 3 -</span> Seed identification<p></p>
 <a href="./images/static/figure-3-seed-identification-static.gif" target="_blank"><img src="./images/static/figure-3-seed-identification-static.gif" style="width:675px;height:400px;"></a><br /><br />
 
 <p>You cannot search for targets without knowing your current seed. This is achieved by using the <code span class="fw-bold">Retail Seed Finder</code> window. If you already know how to find and monitor your seed you can skip this section and begin finding your current seed.</p>
 
-<div class="accordion" id="SeedIdentification">
-  <div class="card">
-    <div class="card-header text-white" style="background-color: #0c0038;">
-    <div class="card-header" id="SeedIdentification">
-      <h5 class="mb-0">
-        <span class="fw-bold">Seed (Re)Identification:</span>
-      </h5>
-    </div>
-    <div class="card-body" style="background-color: #ffffff36;">
-
-      <span class="fw-bold">How to identify current seeds using the Retail Seed Finder:</span><br /><br />
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="seed-finding-retail">
+    <span class="fw-bold text-light">(Re)Identifying your seed</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>The Retail Seed Finder sub-window is where players can calculate their current seed, this is done by recording a sequence of 128 motions/animations in a row. If you are unsure what an animation is at this stage, go back and read the information on the main page.</p>
+          
+    <h6><span class="fw-bold">Initial Seed finding instructions:</span></h6>
       <ol>
-        <li>Open the <code>Retail Seed Finder</code> window and open the pause menu in-game.</li><br />
-        <li>Open the Pokemon party menu, select a Pokemon, then click summary.</li><br />
-        <li>Begin making your Pokemon animate by using the <code>L3</code> button, take note of the type of animation. (Physical or special).</li><br />
-        <li>If the animation was physical, click the <code>(0)Physical</code> button, if the animation was special, click the <code>(1)Special</code> button.<br /><br />
-        If you don't feel like clicking the button, you can use your keyboard too! Simply type <code>0</code> or <code>,</code> for a physical animation, and <code>1</code> or <code>.</code> for a special animation.</li><br />
-        <li>Repeat this process 128 times, if done correctly your current seeds will now be visible on-screen. Click <code>Update Main Form</code>. At this stage it is safe to close the Retail Seed Finder window.</li><br />
-        <li>After identifying your current seed you can now begin searching for target frames!</li>
-      </ol><hr />
-
-      <span class="fw-bold">How to re-identify current seeds using the Retail Advances Tracker:</span><br /><br />
-      <ol>
-        <li>Click the <code>Generate Pattern</code> button on the main window after identifying your current seed.</li><br />
-        <li>Open the Pokemon party menu, select a Pokemon, then click summary.</li><br />
-        <li>Record 10-20 animations until you are left with 1 result.</li><br />
-        <li>Click <code>Update States</code> after doing so to input your new current seed into the <code>State[0]</code> and <code>Stete[1]</code> fields automatically.</li><br />
-        <li>Search for your target frame again and confirm the seed re-identification was correct.</li>
+        <li>Open the pause menu in-game, then open the <code span class="fw-bold">Retail Seed Finder</code> sub-window on SwSh OWRNG Generator GUI.</li>
+        <li>Open the party menu, select the Pokémon you will use to record animations, then click <code span class="fw-bold">Summary</code>.</li>
+        <li>Use the <code span class="fw-bold">L3</code> button to cause an animation, take note of if the animation was physical or special.</li>
+        <li>If the animation was physical, press the <code span class="fw-bold">(0) Physical</code> button. If the animation was special, press the <code span class="fw-bold">(1) Special</code> button.</li>
+        <li>Repeat this process 128 times in a row and a seed will be produced. Click the <code span class="fw-bold">Update Main Form</code> button to paste it into the main window.</li>
+        <li>If a seed was not produced this indicates that the animations were not recorded properly, try again.</li>
       </ol>
 
-      <details>
-        <summary><span class="fw-bold">Seed Identification Troubleshooting:</span><br /></summary>
-      <div class="card-body" class="text-light" style="background-color: #0c0038;">
-        If you do not find a result after re-identification, or your target frame disappears, this is because either:<br /><br />
-        <ul>
-          <li>The initial seed identification (using the <code>Retail Seed Finder</code>) was incorrect. Which is a result of not recording the animations properly.</li>
-          <li>The re-identification animations were not recorded properly, and produced an invalid result.</li>
-        </ul>
-        To resolve this you will need to re-identify your current seed from the start, pay close attention to the sequence of animations to avoid producing incorrect results!<br /><br />
+    <h6><span class="fw-bold">Seed re-identification:</span></h6>
+    <p>Re-identifying your current seed is done using the Retail Advances Tracker feature of the Main Window, and is essentially a simplified version of finding your seed using animations.</p>
+    
+      <ol>
+        <li>Click the <code span class="fw-bold">Generate Pattern</code> button after initially identifying your seed.</li>
+        <li>Record a sequence of 8-20 animations using the above mentioned method, the amount can vary but should be relatively quick.</li>
+        <li>Once a seed has been produced, click the <code span class="fw-bold">Update States</code> button to paste your current seed into the top-left of the main window.</li>
+        <li>Search for your target again using the main window. If you see the same target, your re-identification was correct. Otherwise you will need to try again.</li>
+      </ol>
 
-        Seed re-identification plays a big role in advancing towards a target frame, and also helps to find out how many advancements will occur from a specific in-game action.</details>
-       </div>
-      </div>
-    </div>
+    <blockquote>Recording animations through the Pokémon summary screen is recommended, this is due to the party menu advancing +1 per button clicked, the summary screen advances +1 per animation, making it easier to keep track of.</blockquote>
+    
   </div>
-<br />
+</div><br>
 
-<span class="fw-bold">If your results are not desirable, you will need to reset the game and identify your current seeds again.</span><br /><br />
-
-<span class="fw-bold">Figure 4 -</span> Target found!<br />
+<span class="fw-bold">Figure 4 -</span> Target found!<p></p>
 <a href="./images/static/figure-4-static-search-aerodactyl.png" target="_blank"><img src="./images/static/figure-4-static-search-aerodactyl.png" style="width:675px;height:400px;"></a><br /><br />
 
-<span class="fw-bold">We found one!</span> A shiny, Gentle natured Aerodactyl in a cluster on advances 196-199. These are the "target frames" and the aim will be to spawn Aerodactyl in the overworld on any of these frames.<br />
+<p>After searching a desired result, we've found a shiny, Gentle natured Aerodactyl in a cluster on advances 196-199. Target frames often appear in clusters, which are multiple frames in a row yield the same result. A larger cluster increases your chances of hitting the target frame.</p>
 
-<hr />
-<div class="title" style="background-color: #0c0038;" id="ThirdTitleStatic">
-  <h1 class="text-light text-center pt-3 pb-3">Advancing Towards A Target!</h1>
-</div>
-<hr />
+<details>
+  <summary><span class="fw-bold">Undesirable result?</span></summary>
+  <ol>
+    <li>Disconnect from the program, and restart the game to refresh the seed.</li>
+    <li>Enter the overworld, pause the game, then identify your current seed again.</li>
+    <li>Search for a new target frame, repeat this process until a desirable result shows in the generator search results.</li>
+  </ol>
+</details><p></p>
+
+<p>Once you have found a good position, have calibrated the NPC count, and found a desirable result, you can continue following the guide.</p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/overworld#menu-close-overview-retail">
+  Trouble calibrating NPC count? <span class="fw-bold">Click here for the tutorial!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a><br>
+
+<hr /><div class="title" style="background-color: #0c0038;">
+  <h1 class="text-light text-center pt-3 pb-3">Advancing Towards the Target!</h1>
+</div><hr />
 
 The generator displays the target on frame 196-199. Based on local testing, the delay for this static encounter is 0. This means the target remains at frame 196-199.<br /><br />
 
