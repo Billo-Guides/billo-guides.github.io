@@ -5,17 +5,33 @@ permalink: /cfw/lgpe/bird-watching
 ---
 
 <style>
-  .card-bg {
-  background-color: #d1d1d1;
-  border-bottom-right-radius: 0.20rem !important;
-  border-bottom-left-radius: 0.20rem !important;
+<style>
+  mark {
+    background-color: #FFD700;
+    color: black;
   }
+
+  .card-bg {
+    background-color: #d1d1d1;
+    border-bottom-right-radius: 0.20rem !important;
+    border-bottom-left-radius: 0.20rem !important;
+  }
+
   table,
   th,
   td {
     border: 1px solid black;
   }
-  </style>
+
+  blockquote {
+  background: #c5c5c5;
+  border: 1px solid #9e9e9e;
+  border-left: 5px solid #0c5b74;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  }
+</style>
 
 
 <div class="title" style="background-color: #0c5b74;">
@@ -23,7 +39,41 @@ permalink: /cfw/lgpe/bird-watching
  </div>
  <hr />
 
- <p>This guide provides coverage on how to use the <a href="https://github.com/Lusamine/SysBot.NET/tree/moarencounterbots">Moarencounterbots</a> sysbot branch by <a href="https://github.com/Lusamine">Lusamine</a> to automate the process of hunting overworld legendary birds (Articuno, Zapdos & Moltres) in Let's Go! Pikachu & Eevee.</p>
+ <p>This guide provides coverage on how to <a href="https://github.com/Lusamine/SysBot.NET/tree/moarencounterbots">Moarencounterbots</a>, a branch of a SysBot.NET fork by <a href="https://github.com/Lusamine">Lusamine</a>. This program is used to automate the process of hunting overworld legendary birds (Articuno, Zapdos & Moltres) in Let's Go! Pikachu & Eevee.</p>
+
+ <p><span class="fw-bold" style="color: #b60606;">From here it is assumed you are using a CFW Switch console running <a href="https://github.com/Atmosphere-NX/Atmosphere/releases">Atmosphere</a>. There is no alternative for this type of RNG abuse at this point in time.</span></p>
+
+  <div class="card border-dark">
+   <div class="anchored card-header" style="background-color: #0c5b74;" id="requirements-birdwatch">
+     <span class="fw-bold text-light">Getting Started</span>
+   </div>
+   <div class="card-body card-bg">
+     <h6><span class="fw-bold">You will need:</span></h6>
+     <ul>
+       <li><a href="https://github.com/Lusamine/SysBot.NET/tree/moarencounterbots">Moarencounterbots</a></li>
+       <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0">.NET 8.0</a></li>
+       <li><a href="https://github.com/olliz0r/sys-botbase/releases/">Sys-botbase</a></li>
+     </ul>
+
+     <h6><span class="fw-bold">Installation instructions:</span></h6>
+     <ul>
+       <li>Download .NET 8.0 SDK and run the installation file until complete. This is a dependency for Moarencounterbots.</li>
+       <li>Download the latest sys-botbase release and extract the <code span class="fw-bold">atmosphere</code> folder to the root of your Switch SD card.</li>
+       <li>Reboot the console into SysCFW.</li>
+     </ul>
+
+     <blockquote>Moarencounterbots does not come with pre-compiled releases, this means you are expected to build the application from source code using Visual Studio. If you are unfamiliar with how to do this, click the button below for a tutorial.</blockquote>
+
+    </div>
+  </div>
+
+ <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/general/spawner-rng">
+  Click here if the Pokemon you wish to RNG abuse is tied to <span class="fw-bold">Spawner RNG</span>!
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a>
+
 
  <p>Moarencounterbots is a fork of SysBot.NET that provides extra encounterbots that cannot be found in the base program, including <code class="fw-bold">EncBotBirdWatchLGPE</code>. This encounterbot checks the RNG state to determine when an overworld legendary bird will spawn and will continually enter Mt. Moon PokeCénter until it finds a close enough target.</p>
 
