@@ -5,7 +5,6 @@ permalink: /cfw/lgpe/bird-watching
 ---
 
 <style>
-<style>
   mark {
     background-color: #FFD700;
     color: black;
@@ -36,8 +35,7 @@ permalink: /cfw/lgpe/bird-watching
 
 <div class="title" style="background-color: #0c5b74;">
   <h1 class="text-light text-center pt-3 pb-3">Legendary Bird Hunting (LGPE)</h1>
- </div>
- <hr />
+</div><hr />
 
  <p>This guide provides coverage on how to <a href="https://github.com/Lusamine/SysBot.NET/tree/moarencounterbots">Moarencounterbots</a>, a branch of a SysBot.NET fork by <a href="https://github.com/Lusamine">Lusamine</a>. This program is used to automate the process of hunting overworld legendary birds (Articuno, Zapdos & Moltres) in Let's Go! Pikachu & Eevee.</p>
 
@@ -59,7 +57,7 @@ permalink: /cfw/lgpe/bird-watching
      <ul>
        <li>Download .NET 8.0 SDK and run the installation file until complete. This is a dependency for Moarencounterbots.</li>
        <li>Download the latest sys-botbase release and extract the <code span class="fw-bold">atmosphere</code> folder to the root of your Switch SD card.</li>
-       <li>Reboot the console into SysCFW.</li>
+       <li>Put the SD card back into the console, then reboot the console into SysCFW.</li>
      </ul>
 
      <blockquote>Moarencounterbots does not come with pre-compiled releases, this means you are expected to build the application from source code using Visual Studio. If you are unfamiliar with how to do this, click the button below for a tutorial.</blockquote>
@@ -67,48 +65,16 @@ permalink: /cfw/lgpe/bird-watching
     </div>
   </div>
 
- <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/general/spawner-rng">
-  Click here if the Pokemon you wish to RNG abuse is tied to <span class="fw-bold">Spawner RNG</span>!
+ <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/misc/moarencounterbots/">
+  Click here for a <span class="fw-bold">Moarencounterbots build guide</span>!
   <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
   </svg>
 </a>
 
-
- <p>Moarencounterbots is a fork of SysBot.NET that provides extra encounterbots that cannot be found in the base program, including <code class="fw-bold">EncBotBirdWatchLGPE</code>. This encounterbot checks the RNG state to determine when an overworld legendary bird will spawn and will continually enter Mt. Moon PokeCénter until it finds a close enough target.</p>
-
- <p>It's possible to configure the bot to look for a specific bird target OR any of the three, it's also possible to hunt for only Shiny targets.</p>
-
-<p><span class="fw-bold" style="color: #b60606;">From here this guide assumes you are using a CFW Switch console running Atmosphere.</span></p>
-
-<h3><span class="fw-bold">Getting Started:</span></h3>
-<u>You will need:</u>
-<ul>
-<li><a href="https://github.com/Lusamine/SysBot.NET/tree/moarencounterbots">SysBot.NET Moarencounterbots</a> - Latest commit</li>
-<li><a href="https://github.com/olliz0r/sys-botbase/releases/">sys-botbase</a> - Latest Release</li>
-</ul>
-
-<u>For building the program:</u>
-<ul>
-<li><a href="https://dotnet.microsoft.com/en-us/download/dotnet-framework/net47">.NET 4.7 SDK</a></li>
-<li><a href="https://visualstudio.microsoft.com/vs/">Visual Studio 2022</a></li>
-</ul>
-
-<details>
-<summary><u>Unsure why you need extra components?</u></summary>
-<ul>
-<li>sys-botbase is a Switch system module which allows the console to communicate with your computer, SysBot.NET is unable to connect to your console without sys-botbase properly installed.</li>
-<li>.NET 4.7 SDK is required to build the application, Visual Studio is the application that will allow you to build the application.</li>
-</ul>
-
-<p>You will need to compile the source code as this program does not provide a pre-compiled release. Read through the documentation found on the Official Sysbot.NET Wiki for more information on how to <a href="https://github.com/kwsch/SysBot.NET/wiki/Building-the-.sln">compile the application using Visual Studio</a> & <a href="https://github.com/kwsch/SysBot.NET/wiki/Bot-Startup-Details#general-program-usage">sys-botbase installation</a>. For further instructions consider visiting <a href="https://billo-guides.github.io/misc/moarencounterbots/">my other guide</a> which covers how to compile this application in some extra detail.</p>
-</details>
-<hr />
-
 <div class="title" style="background-color: #0c5b74;">
   <h1 class="text-light text-center pt-3 pb-3">SysBot Tab Overview</h1>
- </div>
- <hr />
+ </div><hr />
 
  <p>This portion of the guide covers all the information you need to know about each of the tabs in order to run <code class="fw-bold">EncBotBirdWatchLGPE</code>.</p>
 
@@ -116,11 +82,11 @@ permalink: /cfw/lgpe/bird-watching
 
  <p>After changing the mode, then running <code class="fw-bold">SysBot.exe</code> again you will be presented with a screen similar to the one shown below in Figure 1.</p>
 
- <span class="fw-bold">Figure 1 -</span> SysBot overview<br />
-<a href="./images/bird-watching/sysbotmain.gif" target="_blank"><img src="./images/bird-watching/sysbotmain.gif" style="width:675px;height:400px;"></a><br /><br /><hr />
+ <span class="fw-bold">Figure 1 -</span> SysBot overview<p></p>
+ <a href="./images/bird-watching/sysbotmain.gif" target="_blank"><img src="./images/bird-watching/sysbotmain.gif" style="width:675px;height:400px;"></a><br /><br /><hr />
 
-<span class="fw-bold">Figure 2 -</span> Hub tab overview<br />
-<a href="./images/bird-watching/hub.gif" target="_blank"><img src="./images/bird-watching/hub.gif" style="width:675px;height:400px;"></a><br /><br />
+ <span class="fw-bold">Figure 2 -</span> Hub tab overview<p></p>
+ <a href="./images/bird-watching/hub.gif" target="_blank"><img src="./images/bird-watching/hub.gif" style="width:675px;height:400px;"></a><br /><br />
 
 <div class="card border-dark">
   <div class="card-header" style="background-color: #0c5b74;" id="HubOverview">
@@ -133,7 +99,7 @@ permalink: /cfw/lgpe/bird-watching
   </div>
 </div><hr />
 
-<span class="fw-bold">Figure 3 -</span> Logs tab overview<br />
+<span class="fw-bold">Figure 3 -</span> Logs tab overview<p></p>
 <a href="./images/bird-watching/logs.gif" target="_blank"><img src="./images/bird-watching/logs.gif" style="width:675px;height:400px;"></a><br /><br />
 
 <div class="card border-dark">
@@ -145,7 +111,7 @@ permalink: /cfw/lgpe/bird-watching
   </div>
 </div><hr />
 
-<span class="fw-bold">Figure 4 -</span> Bots tab overview<br />
+<span class="fw-bold">Figure 4 -</span> Bots tab overview<p></p>
 <a href="./images/bird-watching/bots.gif" target="_blank"><img src="./images/bird-watching/bots.gif" style="width:675px;height:400px;"></a><br /><br />
 
 <div class="card border-dark">
@@ -188,32 +154,31 @@ permalink: /cfw/lgpe/bird-watching
       </div>
     </div><hr />
 
-<span class="fw-bold">Figure 5 -</span> Game Setup<br />
+<span class="fw-bold">Figure 5 -</span> Game Setup<p></p>
 <a href="./images/bird-watching/gamesetup.jpg" target="_blank"><img src="./images/bird-watching/gamesetup.jpg" style="width:675px;height:400px;"></a><br /><br />
 
 <p>Once you are stood outside Mt. Moon and have your bot configured properly, click <code>Start All</code> and head over to the Logs tab.</p>
 
-<span class="fw-bold">Figure 6 -</span> Bot Started<br />
+<span class="fw-bold">Figure 6 -</span> Bot Started<p></p>
 <a href="./images/bird-watching/botstarted.gif" target="_blank"><img src="./images/bird-watching/botstarted.gif" style="width:675px;height:400px;"></a><br /><br />
 
 <p>The bot should now begin hunting for birds by exiting the Pokecénter then checking your RNG states. If you are having trouble exiting/entering the Pokecénter consider adjusting your timing settings.</p>
 
-<span class="fw-bold">Figure 7 -</span> Target Found!<br />
+<span class="fw-bold">Figure 7 -</span> Target Found!<p></p>
 <a href="./images/bird-watching/targetfound.png" target="_blank"><img src="./images/bird-watching/targetfound.png" style="width:675px;height:400px;"></a><br /><br />
 
 <p>The bot will now begin waiting for your bird to spawn in the overworld. Once it detects the encounter, it will pause the game if it meets your stop conditions. Otherwise it will continue looking for results.</p>
 
-<span class="fw-bold">Figure 8/9 -</span> Result Found!<br />
+<span class="fw-bold">Figure 8/9 -</span> Result Found!<p></p>
 <a href="./images/bird-watching/resultfoundbot.png" target="_blank"><img src="./images/bird-watching/resultfoundbot.png" style="width:675px;height:400px;"></a><br /><br />
 <a href="./images/bird-watching/resultfoundgame.jpg" target="_blank"><img src="./images/bird-watching/resultfoundgame.jpg" style="width:675px;height:400px;"></a><br /><br />
 
 <p>We found a Zapdos in the overworld! Time to catch it to boost the shiny odds of the next Zapdos we find.</p>
 
-<span class="fw-bold">Figure 10 -</span> Result captured!<br />
+<span class="fw-bold">Figure 10 -</span> Result captured!<p></p>
 <a href="./images/bird-watching/resultcaptured.jpg" target="_blank"><img src="./images/bird-watching/resultcaptured.jpg" style="width:675px;height:400px;"></a><br /><br />
 
 <p>You can now repeat this process and farm as many birds as you desire!</p>
 
-<u>Disclaimer:</u>
-- This method does not guarantee shiny results, only the species. You may need to run the bot for a long time for one of them to appear as shiny.<br /><br />
+<blockquote><span class="fw-bold">Disclaimer -</span> This method does not guarantee shiny results, only the species. You may need to run the bot for a long time for one of them to appear as shiny.</blockquote>
 
