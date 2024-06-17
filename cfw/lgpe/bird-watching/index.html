@@ -115,7 +115,7 @@ permalink: /cfw/lgpe/bird-watching
 </a><br>
 
 <span class="fw-bold">Figure 1 -</span> SysBot overview<p></p>
-<a href="./images/bird-watching/sysbotmain.gif" target="_blank"><img src="./images/bird-watching/sysbotmain.gif" style="width:675px;height:400px;"></a><br /><br /><hr />
+<a href="./images/bird-watching/sysbotmain.gif" target="_blank"><img src="./images/bird-watching/sysbotmain.gif" style="width:675px;height:400px;"></a><br /><br />
 
 <p>SysBot typically has 3 tabs, labeled <code span class="fw-bold">Bots</code>, <code span class="fw-bold">Hub</code> & <code span class="fw-bold">Logs</code>, and they all come with their respective uses, described below with images.</p>
 
@@ -127,7 +127,7 @@ permalink: /cfw/lgpe/bird-watching
 <ol>
   <li>Scroll to the <code class="fw-bold">EncounterLGPE</code> dropdown menu and set your conditions, such as the amount of frames to search through. Clicking the fields will provide a short description about what they do.</li>
   <li>Scroll to the <code class="fw-bold">StopConditions</code> dropdown menu, here you will decide the conditions which will stop the bot if it finds a result. You can filter for Species, IVs, and/or Shininess if you wish.</li>
-  <li>If you filter for shininess or specific IVs, the bot may take a long time before it stops on a desirable result.</li>
+  <li>If you only wish to filter for shiny birds, set <code class="fw-bold">StopOnAllBirdsLGPE</code> to FALSE. You can also filter for specific IVs and/or species, but this may take a long time to find a result.</li>
 </ol>
 
 <span class="fw-bold">Figure 3 -</span> Logs tab overview<p></p>
@@ -146,38 +146,30 @@ permalink: /cfw/lgpe/bird-watching
   <h1 class="text-light text-center pt-3 pb-3">Let's Go to Work!</h1>
 </div><hr />
 
-  <p>The goal is to spawn the legendary bird of choice in the overworld. we will use the bot to predict when a bird will spawn and to advance towards our target. It will then output the result and pause the game using the home button so that we can catch it!</p>
+<p>The goal is to spawn the legendary bird of choice in the overworld. we will use the bot to predict when a bird will spawn and to advance towards our target. It will then output the result and pause the game using the Home button so that you can resume the game and capture it.</p>
 
-  <details>
-    <summary><u>Notes and tips:</u></summary>
-    <ul>
-    <li>If you do not want the bot to stop on non-shiny results set the <code class="fw-bold">StopOnAllBirdsLGPE</code> setting to FALSE in <code>StopConditions</code></li>
-    <li>If you wish to hunt for a specific bird you must set the <code class="fw-bold">StopOnSpecies</code> setting to your bird of choice in <code>StopConditions</code></li>
-    <li>The bot assumes you are using the Pokécenter at Mt. Moon and have defeated/caught the legendary bird trio in their original static locations.</li>
-    <li>The legendary birds are sky spawns, meaning you must have unlocked the ability to encounter sky spawns in-game, given shortly after defeating the Elite 4.</li>
-    </ul>
-   </details><p></p>
+<p>The bot assumes that you are standing directly outside the PokeCenter at Mt. Moon, have defeated the static spawns of the legendary bird trio, and have defeated the Elite 4 to access sky spawns.</p>
 
-    <div class="card border-dark">
-      <div class="card-header" style="background-color: #0c5b74;" id="ShinyHuntingStrat">
-        <span class="fw-bold text-light">Shiny Hunting Strategy</span>
-      </div>
-      <div class="card-body card-bg">
-        <p>To get optimal chances of finding a shiny legendary bird you should capture every bird that spawns of your chosen species. Upon capturing a Pokemon your shiny odds will increase for the next Pokemon that spawns of the same species.</p>
-        <p>For this reason it's recommended to have <code class="fw-bold">StopOnAllBirdsLGPE</code> set to TRUE, you can then chain capture your chosen species for boosted shiny odds.</p>
-        <p>In this example we will be looking for any legendary bird at Mt. Moon Pokécenter, you can be more specific with the filters if you wish, such as filtering for a specific or shiny bird.</p>
-      </div>
-    </div><hr />
+<div class="card border-dark">
+  <div class="card-header" style="background-color: #0c5b74;" id="ShinyHuntingStrat">
+    <span class="fw-bold text-light">Shiny Hunting Strategy</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>To get optimal chances of finding a shiny legendary bird you should capture every bird that spawns of your chosen species. Upon capturing a Pokemon your shiny odds will increase for the next Pokemon that spawns of the same species.</p>
+    <p>For this reason it's recommended to have <code class="fw-bold">StopOnAllBirdsLGPE</code> set to TRUE, you can then chain capture your chosen species for boosted shiny odds.</p>
+    <p>In this example we will be looking for any legendary bird at Mt. Moon Pokécenter, you can be more specific with the filters if you wish, such as filtering for a specific or shiny bird.</p>
+  </div>
+</div><hr />
 
 <span class="fw-bold">Figure 5 -</span> Game Setup<p></p>
 <a href="./images/bird-watching/gamesetup.jpg" target="_blank"><img src="./images/bird-watching/gamesetup.jpg" style="width:675px;height:400px;"></a><br /><br />
 
-<p>Once you are stood outside Mt. Moon and have your bot configured properly, click <code>Start All</code> and head over to the Logs tab.</p>
+<p>Once you are stood outside Mt. Moon and have your bot configured properly, click <code class="fw-bold">Start All</code> and head over to the Logs tab.</p>
 
 <span class="fw-bold">Figure 6 -</span> Bot Started<p></p>
 <a href="./images/bird-watching/botstarted.gif" target="_blank"><img src="./images/bird-watching/botstarted.gif" style="width:675px;height:400px;"></a><br /><br />
 
-<p>The bot should now begin hunting for birds by exiting the Pokecénter then checking your RNG states. If you are having trouble exiting/entering the Pokecénter consider adjusting your timing settings.</p>
+<p>The bot should now begin hunting for birds by exiting the PokeCenter then checking your RNG states. If you are having trouble exiting/entering the PokeCenter consider adjusting your timing settings.</p>
 
 <span class="fw-bold">Figure 7 -</span> Target Found!<p></p>
 <a href="./images/bird-watching/targetfound.png" target="_blank"><img src="./images/bird-watching/targetfound.png" style="width:675px;height:400px;"></a><br /><br />
@@ -195,5 +187,5 @@ permalink: /cfw/lgpe/bird-watching
 
 <p>You can now repeat this process and farm as many birds as you desire!</p>
 
-<blockquote><span class="fw-bold">Disclaimer -</span> This method does not guarantee shiny results, only the species. You may need to run the bot for a long time for one of them to appear as shiny.</blockquote>
+<blockquote><span class="fw-bold" style="color: #b60606;">Disclaimer -</span> This method does not guarantee shiny results, only the species. You may need to run the bot for a long time for one of them to appear as shiny.</blockquote>
 
