@@ -72,15 +72,39 @@ permalink: /cfw/lgpe/bird-watching
   </svg>
 </a>
 
-<div class="title" style="background-color: #0c5b74;">
+<hr /><div class="title" style="background-color: #0c5b74;">
   <h1 class="text-light text-center pt-3 pb-3">SysBot Tab Overview</h1>
  </div><hr />
 
- <p>This portion of the guide covers all the information you need to know about each of the tabs in order to run <code class="fw-bold">EncBotBirdWatchLGPE</code>.</p>
+<p>In this guide will be using a bot routine called <code class="fw-bold">EncBotBirdWatchLGPE</code>. This section will cover the information you will need to know to run this bot.</p>
 
- <p>The default configuration is for Scarlet/Violet, you will first need to change the current game settings to use Let's Go encounterbots. Upon launching the program for the first time and closing it, a file named <code class="fw-bold">config.json</code> will appear, right click and open it in any text editor and change the <code class="fw-bold">Mode</code> to <code class="fw-bold">100</code>.</p>
+<p><span class="fw-bold" style="color: #b60606;">At this stage you should now have Moarencounterbots compiled and stored in a known location on your computer. Click the above guide if you have not yet done so.</span></p>
 
- <p>After changing the mode, then running <code class="fw-bold">SysBot.exe</code> again you will be presented with a screen similar to the one shown below in Figure 1.</p>
+<div class="card border-dark">
+   <div class="anchored card-header" style="background-color: #0c5b74;" id="initial-setup-birdwatch">
+     <span class="fw-bold text-light">EncBotBirdWatchLGPE Overview</span>
+   </div>
+   <div class="card-body card-bg">
+     <h6><span class="fw-bold">What is EncBotBirdWatchLGPE?</span></h6>
+     
+     <p>This is a routine that leaves and re-enters the PokeCenter outside Mt.Moon, while constantly monitoring the RNG state to determine if and when a legendary bird will spawn. We can use this method to effectively hunt for shiny and/or low level legendary birds.</p>
+
+     <p>We can not do anything more than determine exactly when a bird will spawn. This means we can not set search filters for specific IVs, Shininess or Level. These values are not generated in a way that can be controlled with RNG manipulation.</p>
+
+     <h6><span class="fw-bold">Initial bot setup:</span></h6>
+     <p>By default SysBot.NET is pre-configured to be used with Scarlet/Violet. Follow these instructions to configre the bot into LGPE mode.</p>
+
+     <ol>
+       <li>After compiling the application, open <code span class="fw-bold">SysBot.exe</code>, then close it to generate a file named <code span class="fw-bold">config.json</code>.</li>
+       <li>Open <code span class="fw-bold">config.json</code> with a text editor (e.g Notepad), then change the <code span class="fw-bold">Mode</code> value to 100.</li>
+       <li>Save the changes and open <code span class="fw-bold">SysBot.exe</code> again, you should now see in the header that the program has been configured for LGPE.</li>
+       <li>Type the local IP address of your Switch console into the empty field. You are now ready to configure <code class="fw-bold">EncBotBirdWatchLGPE</code>.</li>
+     </ol>
+
+     <blockquote>The information written on the Moarencounterbots wiki provides useful information about how to use the program. If you are familiar with using SysBot.NET this should be all you need to set up and use the bot, otherwise continue following this guide.</blockquote>
+
+    </div>
+  </div><br>
 
  <span class="fw-bold">Figure 1 -</span> SysBot overview<p></p>
  <a href="./images/bird-watching/sysbotmain.gif" target="_blank"><img src="./images/bird-watching/sysbotmain.gif" style="width:675px;height:400px;"></a><br /><br /><hr />
