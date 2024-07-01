@@ -1,0 +1,86 @@
+---
+layout: default
+title: BDSP RNG (CFW)
+permalink: /cfw/bdsp/general
+---
+
+<style>
+  mark {
+    background-color: #FFD700;
+    color: black;
+  }
+
+  .card-bg {
+    background-color: #d1d1d1;
+    border-bottom-right-radius: 0.20rem !important;
+    border-bottom-left-radius: 0.20rem !important;
+  }
+
+  table,
+  th,
+  td {
+    border: 1px solid black;
+  }
+
+  blockquote {
+  background: #c5c5c5;
+  border: 1px solid #9e9e9e;
+  border-left: 5px solid #96324c;
+  margin: 1.5em 2px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  }
+</style>
+    
+<div class="title" style="background-color: #96324c;">
+  <h1 class="text-light text-center pt-3 pb-3">Brilliant Diamond & Shining Pearl RNG (CFW)</h1>
+</div><hr />
+
+<p>This guide provides in-depth coverage of how to RNG abuse encounters, gifts and eggs in Brilliant Diamond & Shining Pearl using tools & scripts developed by <a href="https://github.com/Lusamine">Lusamine</a> & <a href="https://github.com/Admiral-Fish">AdmiralFish</a>. Using RNG abuse you can obtain Shiny, high IV Pokemon with desirable natures, as well as calculating other values such as gender and size.</p>
+
+<p><span class="fw-bold" style="color: #b60606;">From here it is assumed you are using a CFW Switch console running <a href="https://github.com/Atmosphere-NX/Atmosphere/releases">Atmosphere</a>, this guide is also geared towards users running Windows OS machines.</span></p>
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="setup-and-install-bdsp-cfw">
+    <span class="fw-bold text-light">Setup Instructions:</span>
+  </div>
+  <div class="card-body card-bg">
+    <h5><span class="fw-bold">You will need:</span></h5>
+    <ul>
+      <li><a href="https://github.com/Admiral-Fish/PokeFinder/releases">PokeFinder</a></li>
+      <li><a href="https://github.com/Lusamine/SysBot.NET/tree/moarencounterbots">SysBot.NET - Moarencounterbots</a></li>
+      <li><a href="https://github.com/olliz0r/sys-botbase/releases">sys-botbase</a></li>
+    </ul>
+
+    <blockquote><a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Microsoft C++ Redistributable</a> is required to run Pokefinder on Windows machines. <a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.302-windows-x64-installer">.NET 8.0 SDK</a> is required to run .NET based applications. Ensure both of these dependencies are properly installed before continuing.</blockquote>
+    <hr />
+    
+     <h6><span class="fw-bold">Installation Instructions:</span></h6>
+     <ol>
+       <li>Download <code span class="fw-bold">PokeFinder.zip</code>, then extract the contents into a known location on your computer.</li>
+       <li>Download the <code span class="fw-bold">SysBot.NET - Moarencounterbots</code> source  code, then extract the contents into a known location on your computer.</li>
+       <li>Download <code span class="fw-bold">sys-botbase.zip</code> and extract the <code span class="fw-bold">atmosphere</code> folder to the root of your Switch SD card. Reboot the console into SysCFW.</li>
+       <li>Reboot your console into SysCFW, a blue light should appear around the Home button if sys-botbase was properly installed.</li>
+     </ol>
+
+    <blockquote>Upon rebooting the console, a <a href="https://github.com/olliz0r/sys-botbase/blob/master/joycon-glow.gif">blue light</a> should appear around the Home button of your Player 1 controller to indicate that sys-botbase has been properly installed. If you do not see a blue light you will need to start the installation process again.</blockquote>
+  </div>
+</div><br>
+
+<p>It is recommended to build the latest commit of Moarencounterbots if you are able to do so, most recent commits increase general program stability. A pre-compiled download link is included above to assist those who are unable to build the program by themselves for any reason. If you wish to compile the application yourself, click the button directly below.</p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/misc/moarencounterbots/">
+  <span class="fw-bold">Click here for the Moarencounterbots build guide!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a><br>
+
+<p><span class="fw-bold" style="color: #b60606;">From here it is assumed that you are able to run PokeFinder & Moarencounterbots, and that sys-botbase has been properly installed to your CFW Switch console.</span></p>
+
+<hr /><div class="title" style="background-color: #96324c;">
+  <h1 class="text-light text-center pt-3 pb-3">Getting Started</h1>
+</div><hr />
+
+
+
