@@ -36,7 +36,7 @@ permalink: /cfw/bdsp/
   <h1 class="text-light text-center pt-3 pb-3">BDSP RNG (CFW)</h1>
 </div><hr />
 
-<p>This guide provides in-depth coverage of how to RNG abuse encounters, gifts and eggs in Brilliant Diamond & Shining Pearl using tools & scripts developed by <a href="https://github.com/Lusamine">Lusamine</a> & <a href="https://github.com/Admiral-Fish">AdmiralFish</a>. Using RNG abuse you can obtain Shiny, high IV Pokemon with desirable natures, as well as calculating other values such as gender and size.</p>
+<p>This guide offers a in-depth coverage of how to use RNG abuse to manipulate encounters, gifts, and eggs in Pokémon Brilliant Diamond & Shining Pearl, using tools and scripts developed by <a href="https://github.com/Lusamine">Lusamine</a> and <a href="https://github.com/Admiral-Fish">Admiral Fish</a>. You can utilize RNG abuse to obtain shiny Pokémon with high IVs and desirable natures, as well as determine other attributes like gender and size.</p>
 
 <p><span class="fw-bold" style="color: #b60606;">From here it is assumed you are using a CFW Switch console running <a href="https://github.com/Atmosphere-NX/Atmosphere/releases">Atmosphere</a>, this guide is also geared towards users running Windows OS machines.</span></p>
 
@@ -93,23 +93,21 @@ permalink: /cfw/bdsp/
     <span class="fw-bold text-light">PokeFinder Overview:</span>
   </div>
   <div class="card-body card-bg">
-    <p>PokeFinder is used for predicting upcoming advancements based on a given RNG seed. Launching PokeFinder for the first time you will be presented with a small window, this is where you will select the game you wish to RNG abuse in, in this case you will be searching for Brilliant Diamond & Shining Pearl found under the Generation 8 tab. After selecting it, a larger "main window" will appear.</p>
-
-    <p>Pictured above is the main window, this is where all of the relevant information about the Pokemon you plan to RNG abuse will be entered, this window is the centralized hub used for most types of RNG abuse in Brilliant Diamond & Shining Pearl.</p>
-
+    <p>PokeFinder is used to predict upcoming RNG advancements based on a given seed. When you first launch PokeFinder, you'll see a small window where you can select your game. For Brilliant Diamond & Shining Pearl, look under the Generation 8 tab. After selecting the game, a larger "main window" will appear.</p>
+    
     <ul>
       <li>The left hand side is for search conditions, here we can select the type of encounter, enter our seeds, and input the amount of advances to search through.</li>
       <li>The central portion is where specific details about the Pokemon will be entered, such as species, and parents if the chosen type of encounter is an egg.</li>
       <li>The right hand side is for inputting search filters, this is used for finding specific desirable results, such as only outputting shiny or high IV frames.</li>
-      <li>The top portion is for profile management, input your trainer information such as OT, TID, SID, Game & Variables. Your 5 digit TID/SID is only required for Egg RNG abuse.</li>
+      <li>The top portion is for profile management, input your trainer information such as OT, TID, SID, Game & Variables. Your 5 digit (internal) TID/SID is only required for Egg RNG abuse.</li>
     </ul>
 
     <details>
-      <summary><span class="fw-bold">Finding your TID/SID</summary>
-      <p>It is recommended to use PKHeX in order to find your 5 digit TID/SID combination. You will need the latest version of PKHeX and a way to extract your save file to do this. Tutorials can be found online.</p>
+      <summary><span class="fw-bold">Finding your internal TID/SID</summary>
+      <p>We recommend using ><a href="https://projectpokemon.org/home/files/file/1-pkhex/">PKHeX</a> to find your 5 digit TID/SID combination. You will need to <a href="https://projectpokemon.org/home/tutorials/save-editing/managing-switch-saves/">extract your save file</a> from your console to use this method.</p>
       
       <ul>
-        <li>Open your save file in PKHeX with at least 1 self obtained Pokemon in your party or boxes.</li>
+        <li>Open your save file in PKHeX with at least one self obtained Pokemon in your party or boxes.</li>
         <li>View any Pokemon by right clicking it, then clicking the <code span class="fw-bold">View</code> button.</li>
         <li>Navigate to the <code span class="fw-bold">OT/Misc</code> tab, here you will see the trainer details of the Pokemon.</li>
         <li>Hover over the <code span class="fw-bold">TID</code> field using your mouse, you will see two 5 digit values (e.g 12345(TID)/54321(SID).</li>
@@ -129,7 +127,7 @@ permalink: /cfw/bdsp/
     <span class="fw-bold text-light">Moarencounterbots Overview:</span>
   </div>
   <div class="card-body card-bg">
-    <p>Pictured above is the window you are presented with upon launching <code span class="fw-bold">Moarencounterbots - SysBot.exe.</code>. Moarencounterbots is used for monitoring RNG seeds and automating the main bulk of the RNG advancement process.</p>
+    <p>Pictured above is the window you are presented with upon launching <code span class="fw-bold">Moarencounterbots - SysBot.exe</code>. Moarencounterbots is used for monitoring RNG seeds and automating the main bulk of the RNG advancement process.</p>
 
     <p>To connect your console to SysBot.NET you will need the local IP address, this can be found by opening the Homebrew Menu on your console, then pressing the Y Button. Enter this IP address into the assigned field on SysBot. Bot type can then be selected using the drop-down menu on the right.</p>
                                                                                                                                                                                                                                                               
@@ -172,3 +170,49 @@ permalink: /cfw/bdsp/
 </div><br>
 
 <p>You should now have a general understanding of how to use the necessary tools, it's time to get to work!</p>
+
+<hr /><div class="title" style="background-color: #96324c;">
+  <h1 class="text-light text-center pt-3 pb-3">The Process</h1>
+</div><hr />
+
+<p>First, you will need to understand the different types of encounter, see the below table for encounter type definitions. Everything listed in the table can be RNG abused, with difficulty varying depending on the location and setup.</p>
+
+<table class="table table-striped" style="width:100%">
+  <thead class="table text-white" style="background-color: #96324c;">
+      <th scope="col" style="width:25%" class="text-center">Encounter Type</th>
+      <th scope="col" class="text-center">Description & Examples</th>
+   </tr>
+       </thead>
+       <tbody>
+   <tr>
+      <td><span class="fw-bold">Static Encounter</span></td>
+      <td>Encounters in fixed locations that are initiated by an A button press, examples include Legendary/Mythicals, Drifloon, Spiritomb & Honey Tree.</td>
+   </tr>
+   <tr>
+      <td><span class="fw-bold">Wild Encounter</span></td>
+      <td>Encounters in grass, caves, buildings or water that are initiated randomly by using moving around or when using Sweet Scent/Honey.</td>
+   </tr>
+    <tr>
+      <td><span class="fw-bold">Fishing Encounter</span></td>
+      <td>Encounters in water that are initiated by using any of the fishing rods.</td>
+    </tr>
+   <tr>
+      <td><span class="fw-bold">Gift Redemption</span></td>
+      <td>Gifts given to a player either by an NPC in game or via the Mystery Gift feature, examples include Starters, Jirachi, Mew, Eevee (Bebe), Riolu (Riley), Happiny (Hiker) & Fossils.</td>
+   </tr>
+   <tr>
+      <td><span class="fw-bold">Egg Redemption</span></td>
+      <td>Eggs recieved from the day-care couple in Solaceon Town.</td>
+   </tr>
+   <tr>
+      <td><span class="fw-bold">Underground Encounter</span></td>
+      <td>Encounters in the Grand Underground, these encounters generate when you enter a cave while underground.</td>
+   </tr>
+   <tr>
+      <td><span class="fw-bold">PokeRadar Encounter</span></td>
+      <td>Patches of grass generated by using the PokeRadar.</td>
+   </tr>
+     </tbody>
+</table>
+
+
