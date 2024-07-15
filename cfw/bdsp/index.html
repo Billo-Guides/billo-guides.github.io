@@ -68,8 +68,8 @@ permalink: /cfw/bdsp/
   </div>
 </div><br>
 
-<p>It is recommended to build the latest commit of Moarencounterbots if you are able to do so. A pre-compiled download is included above to assist those who are unable to build the program themselves. If you wish to compile the application yourself, click the button directly below.</p>
-
+<p>It is recommended to build the latest commit of Moarencounterbots if you have the ability. For those who cannot compile the program themselves, a pre-compiled version is available above. If you prefer to compile the application on your own, click the button directly below for a guide.</p>
+  
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/misc/moarencounterbots/">
   <span class="fw-bold">Moarencounterbots build guide!</span>
   <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -81,9 +81,9 @@ permalink: /cfw/bdsp/
   <h1 class="text-light text-center pt-3 pb-3">Getting Started</h1>
 </div><hr />
 
-<p><span class="fw-bold" style="color: #b60606;">From ths point onwards, it is assumed that you are able to run all of the above mentioned applications, and that sys-botbase has been properly installed.</span></p>
+<p><span class="fw-bold" style="color: #b60606;">From ths point onwards, we assume that you are able to run all of the above mentioned applications, and that sys-botbase has been properly installed.</span></p>
 
-<p>It is important to understand how to use each of the applications used for the RNG abuse process. If you are unfamiliar with how to use PokeFinder, Moarencounterbots or PokeViewer, this is the place to start.</p>
+<p>Firstly you will need an understanding of how to use each application involved in the RNG manipulation process. If you are not familiar with PokeFinder, Moarencounterbots, or PokeViewer, start by learning about these tools here.</p>
 
 <span class="fw-bold">Figure 1 -</span> PokeFinder Overview<p></p>
 <a href="overworld/images/main-page/figure-1-pokefinder-overview.gif" target="_blank"><img src="overworld/images/main-page/figure-1-pokefinder-overview.gif" style="width:675px;height:400px;"></a><br /><br />
@@ -94,28 +94,29 @@ permalink: /cfw/bdsp/
   </div>
   <div class="card-body card-bg">
     <p>PokeFinder is used to predict upcoming RNG advancements based on a given seed. When you first launch PokeFinder, you'll see a small window where you can select your game. For Brilliant Diamond & Shining Pearl, look under the Generation 8 tab. After selecting the game, a larger "main window" will appear.</p>
-    
+
     <ul>
-      <li>The left hand side is for search conditions, here we can select the type of encounter, enter our seeds, and input the amount of advances to search through.</li>
-      <li>The central portion is where specific details about the Pokemon will be entered, such as species, and parents if the chosen type of encounter is an egg.</li>
-      <li>The right hand side is for inputting search filters, this is used for finding specific desirable results, such as only outputting shiny or high IV frames.</li>
-      <li>The top portion is for profile management, input your trainer information such as OT, TID, SID, Game & Variables. Your 5 digit (internal) TID/SID is only required for Egg RNG abuse.</li>
+     <li>The left-hand side is for search conditions. Here, you can select the type of encounter, enter your seeds, and input the number of advances to search through.</li><p></p>
+     <li>The central portion is where you will enter specific details about the Pokémon, such as species, and parents if the chosen type of encounter is an egg.</li><p></p>
+     <li>The right-hand side is for inputting search filters. This is used for finding specific desirable results, such as only outputting shiny or high IV frames.</li><p></p>
+     <li>The top portion is for profile management. Enter your trainer information such as OT, Internal TID/SID, Game, and if you have the Shiny or Oval Charm.</li>
     </ul>
 
     <details>
       <summary><span class="fw-bold">Finding your internal TID/SID</summary>
-      <p>We recommend using ><a href="https://projectpokemon.org/home/files/file/1-pkhex/">PKHeX</a> to find your 5 digit TID/SID combination. You will need to <a href="https://projectpokemon.org/home/tutorials/save-editing/managing-switch-saves/">extract your save file</a> from your console to use this method.</p>
+      <p>We recommend using <a href="https://projectpokemon.org/home/files/file/1-pkhex/">PKHeX</a> to find your 5 digit TID/SID combination. You will need to <a href="https://projectpokemon.org/home/tutorials/save-editing/managing-switch-saves/">extract your save file</a> from your console to use this method.</p>
       
       <ul>
-        <li>Open your save file in PKHeX with at least one self obtained Pokemon in your party or boxes.</li>
-        <li>View any Pokemon by right clicking it, then clicking the <code span class="fw-bold">View</code> button.</li>
-        <li>Navigate to the <code span class="fw-bold">OT/Misc</code> tab, here you will see the trainer details of the Pokemon.</li>
-        <li>Hover over the <code span class="fw-bold">TID</code> field using your mouse, you will see two 5 digit values (e.g 12345(TID)/54321(SID).</li>
-        <li>Take note of these values and enter them into the profiles sub-window of PokeFinder, then save and close the window.</li>
+        <li>Open your save file in PKHeX with at least one self obtained Pokemon in your party or boxes.</li><p></p>
+        <li>View any Pokemon by right clicking it, then clicking the <code span class="fw-bold">View</code> button.</li><p></p>
+        <li>Navigate to the <code span class="fw-bold">OT/Misc</code> tab, here you will see the trainer details of the Pokemon.</li><p></p>
+        <li>Hover over the <code span class="fw-bold">TID</code> field with your mouse, you'll see two 5 digit values (e.g 12345(TID)/54321(SID).</li><p></p>
+        <li>Enter these IDs into the profiles sub-window of PokeFinder, then save and close the window.</li>
       </ul>
     </details><p></p>
 
-    <blockquote>Ensure you have the correct profile loaded for the save file you are currently using! Especially if you intend to RNG abuse eggs. Eggs are the only encounter type that have a shiny odds increase from the Shiny Charm.</blockquote>
+    <blockquote>Ensure you have the correct profile loaded for the save file you are currently using, especially if you intend to RNG abuse day-care eggs.</blockquote>
+
   </div>
 </div><br>
 
@@ -129,7 +130,7 @@ permalink: /cfw/bdsp/
   <div class="card-body card-bg">
     <p>Pictured above is the window you are presented with upon launching <code span class="fw-bold">Moarencounterbots - SysBot.exe</code>. Moarencounterbots is used for monitoring RNG seeds and automating the main bulk of the RNG advancement process.</p>
 
-    <p>To connect your console to SysBot.NET you will need the local IP address, this can be found by opening the Homebrew Menu on your console, then pressing the Y Button. Enter this IP address into the assigned field on SysBot. Bot type can then be selected using the drop-down menu on the right.</p>
+    <p>To connect your console to SysBot.NET, you will need the local IP address. This can be found by opening the Homebrew Menu on your console and pressing the Y Button. Enter this IP address into the assigned field on SysBot. You can then select the bot type using the drop-down menu on the right.</p>
                                                                                                                                                                                                                                                               
     <p>There are four bot types that will be used throughout this guide, these are:</p>
 
@@ -155,10 +156,8 @@ permalink: /cfw/bdsp/
   <div class="card-body card-bg">
     <p>Pictured above is the window you are presented with upon launching <code span class="fw-bold">PokeViewer.exe</code>. PokeViewer is used to read the details of a Pokemon during a battle or found inside boxes, which is necessary for troubleshooting after missing a target.</p>
 
-    <p>To connect your console to PokeViewer.NET you will need the local IP address, this can be found by opening the Homebrew Menu on your console, then pressing the Y Button. Enter this IP address into the assigned field on PokeViewer, then connect after launching the game.</p>
-                                                                                                                                                                                                                                                              
-    <p>There are two main features used throughout this guide, these are:</p>
-
+    <p>You will also need the local IP address of your console to connect to PokeViewer.NET, how to find this has already been described above. There are two main features of PokeViewer.NET used throughout this guide, these are:</p>
+                                                                                                                                                                                                                                                             
     <ol>
       <li><code span class="fw-bold">EncounterView</code> - Used to view the details of an opposing Pokemon during a battle.</li>
       <li><code span class="fw-bold">BoxView</code> - Used to view the details of a Pokemon located inside boxes.</li>
@@ -175,7 +174,7 @@ permalink: /cfw/bdsp/
   <h1 class="text-light text-center pt-3 pb-3">The Process</h1>
 </div><hr />
 
-<p>First, you will need to understand the different types of encounter, see the below table for encounter type definitions. Everything listed in the table can be RNG abused, with difficulty varying depending on the location and setup.</p>
+<p>The table below contains information about each encounter type. Everything inside the table can be RNG abused, with the difficulty and setup varying based on setup and in-game location.</p>
 
 <table class="table table-striped" style="width:100%">
   <thead class="table text-white" style="background-color: #96324c;">
