@@ -30,3 +30,89 @@ permalink: /cfw/bdsp/trainer-id/
 <div class="title" style="background-color: #96324c;">
   <h1 class="text-light text-center pt-3 pb-3">BDSP Trainer ID RNG (CFW)</h1>
 </div><hr />
+
+<p>This section of the guide covers how to RNG manipulate your Trainer ID. TID RNG abuse has no practical application in BDSP and is not required for manipulating specific spreads or Shiny Pokemon. Continue reading if you want to manipulate your TID for aesthetic or cosmetic reasons.</p>
+
+<p><span class="fw-bold" style="color: #b60606;">From here it is assumed that you have read and followed all of the setup and installation instructions found on the initial page of this guide.</span></p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp">
+  Missed some setup instructions? <span class="fw-bold">Click here to go back!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a>
+<br>
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #96324c;" id="tid-rng-setup">
+    <span class="fw-bold text-light">TID RNG Setup:</span>
+  </div>
+  <div class="card-body card-bg">
+    <h6><span class="fw-bold">What is TID RNG?</span></h6>
+    <p>This type of RNG abuse allows you to RNG abuse your visual (6 digit) TID to have a save file that has the exact trainer ID value you desire. As stated above, this is purely for cosmetic purposes.</p>
+
+    <p>Moarencounterbots is capable of automating 95% of the process by using the bot routine <code span class="fw-bold">EncBotTIDBS</code>. You will need to configure the bot properly in order to search for desirable target frames first.</p>
+
+    <h6><span class="fw-bold">Settings Configuration</span></h6>
+    <p>Settings can be found by opening the <code span class="fw-bold">Hub</code> tab, here we can toggle the # of frames to search through and create a list of desired Trainer IDs to stop on by doing the following:</p>
+
+    <ul>
+      <li>In the <code span class="fw-bold">EncounterRNGBS</code> dropdown menu, navigate to <code span class="fw-bold">MaxTIDAdvances</code>, then set the amount of advances to search through (10000 advances takes roughly 2.5 hours).</li><p></p>
+      <li>In the <code span class="fw-bold">StopConditions</code> dropdown menu, navigate to <code span class="fw-bold">TargetTIDBS</code>, then enter a comma seperated list of acceptable TIDs (e.g 000001, 010101, 111111, etc.).</li><p></p>
+    </ul>
+
+    <p>Once you have configured your settings, it is good practice to restart the bot entirely to lock them in place. After doing so, add the <code span class="fw-bold">EncBotTIDBS</code> bot by doing the following:</p>
+
+    <ol>
+      <li>Type the Local IP address of your console into the assigned field (how to find your Local IP is covered on the main page).</li>
+      <li>Select the <code span class="fw-bold">EncBotTIDBS</code> routine from the dropdown menu on the right of the SysBot window.</li>
+      <li>Click the <code span class="fw-bold">Add</code> button, you should now see the bot has been added to the list on the <code span class="fw-bold">Bots</code> tab.</li>
+      <li>Open the game with no save file loaded, you should be on the language select screen at this stage, now disconnect any controllers and click <code span class="fw-bold">Start All</code>.</li>
+      <li>The bot will now begin cycling through frames and resetting the game until a result has been found, then advance to roughly ~15 frames from the target and enter the home menu once complete.</li>
+    </ol>
+
+    <blockquote>The bot assumes that your desired language is first on the selection screen, change your Switch language setting to your desired language if you have not already done so.</blockquote>
+  </div>
+</div><br>
+
+<span class="fw-bold">Figure 1 -</span> SysBot Setup<p></p>
+<a href="cfw/bdsp/trainer-id/figure-1-sysbot-setup-tid.gif" target="_blank"><img src="cfw/bdsp/trainer-id/figure-1-sysbot-setup-tid.gif" style="width:675px;height:400px;"></a><br /><br />
+
+<p>Pictured above is a rough idea of how your SysBot settings should look before adding the bot. Your amount of advances to search through and TID list may differ.</p>
+
+<span class="fw-bold">Figure 2 -</span> Routine Added<p></p>
+<a href="cfw/bdsp/trainer-id/figure-2-sysbot-routine-added.gif" target="_blank"><img src="cfw/bdsp/trainer-id/figure-2-sysbot-routine-added.gif" style="width:675px;height:400px;"></a><br /><br />
+
+<p>We have now correctly configured the settings and added the bot routine to the list of active bots, it is now time to set up the game properly by entering the language select screen.</p>
+
+<span class="fw-bold">Figure 3 -</span> Game Setup<p></p>
+<a href="cfw/bdsp/trainer-id/figure-3-game-setup-tid.jpg" target="_blank"><img src="cfw/bdsp/trainer-id/figure-3-game-setup-tid.jpg" style="width:675px;height:400px;"></a><br /><br />
+
+<p>Great! We now have the correct screen loaded in game, it is now time to disconnect any controllers and start the bot, then wait until a desired result has been found.</p>
+
+<span class="fw-bold">Figure 4 -</span> Result Found<p></p>
+<a href="cfw/bdsp/trainer-id/figure-4-result-found-tid.png" target="_blank"><img src="cfw/bdsp/trainer-id/figure-4-result-found-tid.png" style="width:675px;height:400px;"></a><br /><br />
+
+<p>We found a TID! Enter the <code span class="fw-bold">Logs</code> tab of SysBot to see which of your desired TIDs has been found, keep the game paused on the Home Menu at this stage.</p>
+
+<p>In this example the bot stopped on TID 123456, 15 frames away from the target, we now need to understand how to hit the correct target frame in order to get our desired TID.</p>
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #96324c;" id="hitting-desired-tid">
+    <span class="fw-bold text-light">Hitting A Desired Result:</span>
+  </div>
+  <div class="card-body card-bg">
+    <h6><span class="fw-bold">Monitoring the RNG state:</span></h6>
+    
+
+  </div>
+</div><br>
+
+<span class="fw-bold">Figure 5 -</span> Target Frame Hit<p></p>
+<a href="cfw/bdsp/trainer-id/figure-5-target-frame-hit.gif" target="_blank"><img src="cfw/bdsp/trainer-id/figure-5-target-frame-hit.gif" style="width:675px;height:400px;"></a><br /><br />
+
+<p>We pressed A on the TID that we expect contains the desired TID from the search result, mash through the tutorial of the game until you can view your trainer card, then open it to view your TID.</p>
+
+<span class="fw-bold">Figure 6 -</span> In-game Result<p></p>
+<a href="cfw/bdsp/trainer-id/figure-6-in-game-result.jpg" target="_blank"><img src="cfw/bdsp/trainer-id/figure-6-in-game-result.jpg" style="width:675px;height:400px;"></a><br /><br />
+
