@@ -102,8 +102,12 @@ permalink: /cfw/bdsp
     <span class="fw-bold text-light">PokeFinder Overview:</span>
   </div>
   <div class="card-body card-bg">
-    <p>PokeFinder is used to predict upcoming RNG advancements based on a given seed. When you first launch PokeFinder, you'll see a small window where you can select your game. For Brilliant Diamond & Shining Pearl, look under the Generation 8 tab. After selecting the game, a larger "main window" will appear.</p>
+    <p>PokeFinder is used to calculate upcoming RNG advancements based on a given seed. Upon launching the program, a small window will be displayed with multiple selectable tabs. Everything relevant to Brilliant Diamond & Shining Pearl is found within the Gen 8 tab.</p>
 
+    <p>There are different options to choose from depending on the type of RNG manipulation, static encompasses all static encounters (including gifts), wild is for random encounters, etc. This should be fairly self explanatory.</p>
+
+    <p>After selecting one of the options, a window similar to the above image will open, this will be referred to as the "main window" of PokeFinder throughout this guide.</p>
+      
     <ul>
      <li>The left-hand side is for search conditions. Here, you can select the type of encounter, enter your seeds, and input the number of advances to search through.</li><p></p>
      <li>The central portion is where you will enter specific details about the Pokémon, such as species, and parents if the chosen type of encounter is an egg.</li><p></p>
@@ -111,23 +115,18 @@ permalink: /cfw/bdsp
      <li>The top portion is for profile management. Enter your trainer information such as OT, Internal TID/SID, Game, and if you have the Shiny or Oval Charm.</li>
     </ul>
 
-    <details>
-      <summary><span class="fw-bold">Finding your internal TID/SID</summary>
-      <p>We recommend using <a href="https://projectpokemon.org/home/files/file/1-pkhex/">PKHeX</a> to find your 5 digit TID/SID combination. You will need to <a href="https://projectpokemon.org/home/tutorials/save-editing/managing-switch-saves/">extract your save file</a> from your console to use this method.</p>
-      
-      <ul>
-        <li>Open your save file in PKHeX with at least one self obtained Pokemon in your party or boxes.</li><p></p>
-        <li>View any Pokemon by right clicking it, then clicking the <code span class="fw-bold">View</code> button.</li><p></p>
-        <li>Navigate to the <code span class="fw-bold">OT/Misc</code> tab, here you will see the trainer details of the Pokemon.</li><p></p>
-        <li>Hover over the <code span class="fw-bold">TID</code> field with your mouse, you'll see two 5 digit values (e.g 12345(TID)/54321(SID).</li><p></p>
-        <li>Enter these IDs into the profiles sub-window of PokeFinder, then save and close the window.</li>
-      </ul>
-    </details><p></p>
-
-    <blockquote>Ensure you have the correct profile loaded for the save file you are currently using, especially if you intend to RNG abuse day-care eggs.</blockquote>
+    <blockquote>Ensure that you have the correct profile loaded for the game you are currently using, your internal TID/SID is important for the tool to output correct results, especially if you intend to RNG abuse eggs. If you do not know your internal TID/SID a tutorial can be found below, follow it before continuing.</blockquote>
 
   </div>
 </div><br>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/misc/bdsp/internal-tid-sid">
+  <span class="fw-bold">Internal TID/SID guide!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a>
+<br>
 
 <span class="fw-bold">Figure 2 -</span> Moarencounterbots Overview<p></p>
 <a href="overworld/images/main-page/figure-2-moarencounterbots-overview.gif" target="_blank"><img src="overworld/images/main-page/figure-2-moarencounterbots-overview.gif" style="width:675px;height:400px;"></a><br /><br />
