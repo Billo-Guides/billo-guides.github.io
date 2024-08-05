@@ -1,7 +1,7 @@
 ---
 layout: default
 title: BDSP RNG (CFW)
-permalink: /cfw/bdsp/
+permalink: /cfw/bdsp
 ---
 
 <style>
@@ -52,9 +52,6 @@ permalink: /cfw/bdsp/
       <li><a href="https://github.com/zyro670/PokeViewer.NET">PokeViewer.NET</a></li>
       <li><a href="https://github.com/olliz0r/sys-botbase/releases">Sys-botbase</a></li>
     </ul>
-
-    <blockquote><a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Microsoft C++ Redistributable</a> is required to run Pokefinder on Windows machines. <a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.302-windows-x64-installer">.NET 8.0 SDK</a> is required to run .NET based applications. Ensure both of these dependencies are properly installed before continuing.</blockquote>
-    <hr />
     
      <h6><span class="fw-bold">Installation Instructions:</span></h6>
      <ol>
@@ -64,7 +61,19 @@ permalink: /cfw/bdsp/
        <li>Download <code span class="fw-bold">sys-botbase.zip</code> and extract the <code span class="fw-bold">atmosphere</code> folder to the root of your Switch SD card. Reboot the console into SysCFW.</li>
      </ol>
 
-    <blockquote>Upon rebooting the console, a <a href="https://github.com/olliz0r/sys-botbase/blob/master/joycon-glow.gif">blue light</a> should appear around the Home button of your Player 1 controller to indicate that sys-botbase has been properly installed. If you do not see a blue light you will need to start the installation process again.</blockquote>
+    <details>
+      <summary><span class="fw-bold">Troubleshooting</span></summary>
+
+      <p>Programs may be unable to run on your machine unless you install the following dependencies:</p>
+      
+      <ul>
+        <li><span class="fw-bold">PokeFinder</span> - <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Microsoft C++ Redistributable</a></li>
+        <li><span class="fw-bold">.NET applications</span> - <a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.302-windows-x64-installer">.NET 8.0 SDK</a></li>
+      </ul>
+
+      <p>Upon rebooting the console, a <a href="https://github.com/olliz0r/sys-botbase/blob/master/joycon-glow.gif">blue light</a> should appear around the Home button of your Player 1 controller to indicate that sys-botbase has been properly installed. If you do not see a blue light you will need to start the installation process again.</p>   
+    </details>
+
   </div>
 </div><br>
 
@@ -130,7 +139,7 @@ permalink: /cfw/bdsp/
   <div class="card-body card-bg">
     <p>Pictured above is the window you are presented with upon launching <code span class="fw-bold">Moarencounterbots - SysBot.exe</code>. Moarencounterbots is used for monitoring RNG seeds and automating the main bulk of the RNG advancement process.</p>
 
-    <p>To connect your console to SysBot.NET, you will need the local IP address. This can be found by opening the Homebrew Menu on your console and pressing the Y Button. Enter this IP address into the assigned field on SysBot. You can then select the bot type using the drop-down menu on the right.</p>
+    <p>To connect your console to SysBot.NET you will need the local IP address of your console. This can be found by opening the Homebrew Menu on your console and pressing the Y Button. Enter this IP address into the assigned field on SysBot. You can then select the bot type using the drop-down menu on the right.</p>
                                                                                                                                                                                                                                                               
     <p>There are four bot types that will be used throughout this guide, these are:</p>
 
@@ -168,7 +177,7 @@ permalink: /cfw/bdsp/
   </div>
 </div><br>
 
-<p>You should now have a general understanding of how to use the necessary tools, it's time to get to work!</p>
+<p>You should have all of the necessary tools installed and a general understanding of how to use them. Now we can work on understanding the process.</p>
 
 <hr /><div class="title" style="background-color: #96324c;">
   <h1 class="text-light text-center pt-3 pb-3">The Process</h1>
@@ -229,4 +238,61 @@ permalink: /cfw/bdsp/
      </tbody>
 </table>
 
+<p>Identify which Pokemon or encounter type that you wish to RNG abuse, then click the button that applies to you to get started.</p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/static">
+  <span class="fw-bold">STATIC ENCOUNTER!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a>
+<br>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/wild">
+  <span class="fw-bold">WILD ENCOUNTER!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a>
+<br>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/gift">
+  <span class="fw-bold">GIFT REDEMPTION!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a>
+<br>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/egg">
+  <span class="fw-bold">EGG REDEMPTION!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a>
+<br>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/fishing">
+  <span class="fw-bold">FISHING ENCOUNTER!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a>
+<br>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/grand-underground">
+  <span class="fw-bold">GRAND UNDERGROUND ENCOUNTER!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a>
+<br>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/radar">
+  <span class="fw-bold">POKERADAR ENCOUNTER!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a>
+<br>
 
