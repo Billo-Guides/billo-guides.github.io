@@ -33,6 +33,8 @@ permalink: /cfw/bdsp/trainer-id/
 
 <p>This section of the guide covers how to RNG manipulate your Trainer ID. TID RNG abuse has no practical application in BDSP and is not required for manipulating specific spreads or Shiny Pokemon. Continue reading if you want to manipulate your TID for aesthetic or cosmetic reasons.</p>
 
+<p>During gameplay, BDSP is constantly updating the seed that determines the internal details of a Pokemon, (IVs, Nature, Shiny etc.), this state also controls which trainer ID the player will receive upon starting the game. We can utilize Moarencounterbots to monitor the RNG state in order to achieve the perfect Trainer ID.</p>
+
 <p><span class="fw-bold" style="color: #b60606;">From here it is assumed that you have read and followed all of the setup and installation instructions found on the initial page of this guide.</span></p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp">
@@ -58,6 +60,7 @@ permalink: /cfw/bdsp/trainer-id/
 
     <ul>
       <li>In the <code span class="fw-bold">EncounterRNGBS</code> dropdown menu, navigate to <code span class="fw-bold">MaxTIDAdvances</code>, then set the amount of advances to search through (10000 advances takes roughly 2.5 hours).</li><p></p>
+      <li>In the same dropdown (<code span class="fw-bold">EncounterRNGBS</code>), set the <code span class="fw-bold">MonitorRefreshRate</code> to 0, this will be important for the 5% of work we need to do ourselves.</li><p></p>
       <li>In the <code span class="fw-bold">StopConditions</code> dropdown menu, navigate to <code span class="fw-bold">TargetTIDBS</code>, then enter a comma seperated list of acceptable TIDs (e.g 000001, 010101, 111111, etc.).</li><p></p>
     </ul>
 
@@ -103,16 +106,32 @@ permalink: /cfw/bdsp/trainer-id/
   </div>
   <div class="card-body card-bg">
     <h6><span class="fw-bold">Monitoring the RNG state:</span></h6>
-    
+    <p>Moarencounterbots is capable of monitoring the Main RNG state in real time and able to track the amount of advances that have occured since monitoring began. This is done using the <code span class="fw-bold">EncBotRNGMonitorBS</code> routine.</p>
 
+    <p>If you followed the settings configuration instructions above, your <code span class="fw-bold">MonitorRefreshRate</code> should be set to 0.</p>
+
+    <p>With the console still in the Home menu, add <code span class="fw-bold">EncBotRNGMonitorBS</code> and start the bot, you should now see that it has started to monitor the RNG state.</p>
+
+    <p>Watch the <code span class="fw-bold">Logs</code> tab until the correct amount of advancements have occured (e.g if there are 12 advancements until you hit your target, wait until advance 12), then quickly press the A button, your TID will be generated at this stage.</p>
+      
+    <p>Name your character, then mash through the tutorial until you get your Trainer Card, open your Trainer Card to inspect your TID and confirm that the correct frame has been hit.</p>
+
+    <blockquote>Avoid backing out of the character naming screen, doing this will advance the RNG state and cause you to miss your target frame.</blockquote>
+  
   </div>
 </div><br>
 
 <span class="fw-bold">Figure 5 -</span> Target Frame Hit<p></p>
 <a href="cfw/bdsp/trainer-id/figure-5-target-frame-hit.gif" target="_blank"><img src="cfw/bdsp/trainer-id/figure-5-target-frame-hit.gif" style="width:675px;height:400px;"></a><br /><br />
 
-<p>We pressed A on the TID that we expect contains the desired TID from the search result, mash through the tutorial of the game until you can view your trainer card, then open it to view your TID.</p>
-
 <span class="fw-bold">Figure 6 -</span> In-game Result<p></p>
 <a href="cfw/bdsp/trainer-id/figure-6-in-game-result.jpg" target="_blank"><img src="cfw/bdsp/trainer-id/figure-6-in-game-result.jpg" style="width:675px;height:400px;"></a><br /><br />
 
+<span class="fw-bold">The trainer card confirms that the correct target frame has been hit, mission accomplished!</span>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp">
+  <span class="fw-bold">Click here to go back to the main page!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a>
