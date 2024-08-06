@@ -77,8 +77,8 @@ permalink: /cfw/swsh/item/
   <h1 class="text-light text-center pt-3 pb-3">Important Information</h1>
 </div><hr />
 
-<p>SWSH_OWRNG_Generator_GUI can be used to track the current RNG state, and the amount of advancements that have passed since connecting to the program. Frames will advance naturally depending on your location and the amount of NPCs that are present. Since both machines are located in-doors, these are the only variables that we need to consider.</p>
-  
+<p>SWSH_OWRNG_Generator_GUI tracks the current RNG state and the number of advancements since connecting to the program. The RNG state advances naturally based on your location, the weather, and the number of NPCs present or active.</p>
+
 <p>Different in-game actions can also be used to advance the RNG state with varying influence, the most useful actions can be found in the table directly below.</p>
 
 <table class="table table-striped" style="width:100%" id="advancementtable">
@@ -124,8 +124,8 @@ permalink: /cfw/swsh/item/
     <span class="fw-bold text-light">Menu Close Advancement Prediction:</span>
   </div>
   <div class="card-body card-bg">
-    <p>The <code class="fw-bold">Menu Close Advances Viewer</code> window can be used to predict the amount of advancements that will pass from closing the pause menu. Closing the pause menu also has an added effect of freezing the RNG state in the area for a a few seconds, this makes it a great option for closing in on any target frames as it provides a lot more consistency in doing so.</p>
-
+    <p>The <code class="fw-bold">Menu Close Advances Viewer</code> window predicts the number of advancements that occur when closing the pause menu. This action also temporarily freezes the RNG state, making it easier to hit target frames consistently due the window of "silence".</p>
+    
     <p><span class="fw-bold">NPC Counts are likely as follows:</span></p>
     <ul>
       <li>Wedgehurst Pokemon Center (Loto) = 5 NPCs</li>
@@ -133,9 +133,8 @@ permalink: /cfw/swsh/item/
       <li>Snowslide Slope (Watt Trader)= 1-2 NPCs, requires calibration</li>
     </ul>
 
-    <p>By knowing how many advancements will occur from closing the pause menu, and having a window of silence to interact with the machine, we can near guarantee to hit any potential target frames.</p>
-
-    <p>When using the <code class="fw-bold">Consider menu close</code> feature of the <code class="fw-bold">Menu Close Advances Viewer</code>, the result output will be for the frame you should close the pause menu on. Doing this should place you directly onto your target advancement/frame and you can then follow interact with the machine/NPC to lock in your item.</p>
+    <h6><span class="fw-bold">Consider Menu Close</span></h6>
+    <p>Using the <code class="fw-bold">Consider menu close</code> feature in any of the sub windows, the output will indicate the frame to close the pause menu on, not the frame to interact with the NPC or Machine. This should align you directly with your target frame, allowing you to interact with the machine or NPC at this stage to lock in your item during the window of silence mentioned above.</p>
 
     <details>
       <summary><span class="fw-bold">Manually Calculating NPC Count:</span></summary>
