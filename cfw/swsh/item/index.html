@@ -181,20 +181,26 @@ permalink: /cfw/swsh/item/
   </div>
 </div><br>
 
-<span class="fw-bold">With all the required reading out of the way, let's get into it!</span>
+<p><span class="fw-bold">With all the required reading out of the way, let's get into it!</span> Click one of the below links to jump to the section that applies to you.</p>
+
+<ul>
+  <li><a href="#cram-o-matic-rng-abuse">Cram-o-Matic</a></li>
+  <li><a href="#loto-rng-abuse">Rotom PC Lottery</a></li>
+  <li><a href="#watt-trader-rng-abuse">Watt Trader</a></li>
+</ul>
 
 <hr /><div class="title" style="background-color: #0c0038;">
   <h1 class="text-light text-center pt-3 pb-3" id="cram-o-matic-rng-abuse">Cram-o-matic RNG abuse</h1>
 </div><hr />
 
-<p>The goal is to interact with the Cram-o-matic on the calculated target frame given to us by the <code class="fw-bold">Cram-o-matic</code> window of the generator. We will be using the advancement methods listed in the table above to hit the target frame.</p>
+<p>The goal is to interact with the Cram-o-Matic machine on the calculated target frame given to us by the <code class="fw-bold">Cram-o-Matic</code> window of the generator, we will be using the advancement methods listed in the table above to hit the target frame, most notably, animation advancements and date skipping.</p>
 
 <p>In this example we will be aiming for a 5 Level Balls. You can be more specific with the filters if you wish, such as filtering for a specific rare items.</p>
 
 <span class="fw-bold">Figure 1 -</span> Tool setup<br />
 <a href="./images/cram-o-matic/figure-1-tool-setup-cram.gif" target="_blank"><img src="./images/cram-o-matic/figure-1-tool-setup-cram.gif" style="width:675px;height:400px;"></a><br /><br />
 
-<p><span class="fw-bold">Awesome, everything looks good!</span> We can see our current seeds on the <code class="fw-bold">Cram-o-matic</code> tab and have our filters set properly. Time to stand near the Cram-o-matic!</p>
+<p><span class="fw-bold">Awesome, everything looks good!</span> We can see our current seeds on the <code class="fw-bold">Cram-o-Matic</code> tab and have our filters set properly. Time to stand near the Cram-o-Matic machine in-game!</p>
 
 <span class="fw-bold">Figure 2 -</span> Game setup<br />
 <a href="./images/cram-o-matic/figure-2-game-setup-cram.jpg" target="_blank"><img src="./images/cram-o-matic/figure-2-game-setup-cram.jpg" style="width:675px;height:400px;"></a><br /><br />
@@ -208,8 +214,8 @@ permalink: /cfw/swsh/item/
       <li>Progress to the point of having access to the Cram-o-Matic</li>
       <li>Have at least 4 apricorns in your inventory to throw into the machine.</li>
       <li>Stand near to the Cram-o-Matic, press the <code class="fw-bold">X</code> button to pause the game.</li>
-      <li>Connect to SWSH_OWRNG_Generator_GUI at this point.</li>
-      <li>Open the <code class="fw-bold">Cram-o-Matic</code> tab, then set the filters & NPC count.</li>
+      <li>Connect to SWSH_OWRNG_Generator_GUI at this point and open the <code class="fw-bold">Cram-o-Matic</code> tab.</li>
+      <li>Set the filters & NPC count, if you did not calibrate your NPC count, do this now.</li>
       <li>Search for a desirable target frame.</li>
     </ol>
 
@@ -226,15 +232,15 @@ permalink: /cfw/swsh/item/
 <span class="fw-bold">Figure 3 -</span> Target found!<br />
 <a href="./images/cram-o-matic/figure-3-target-found-cram.png" target="_blank"><img src="./images/cram-o-matic/figure-3-target-found-cram.png" style="width:675px;height:400px;"></a><br /><br />
 
-<p><span class="fw-bold">We found a target frame!</span> 5 Level Balls on advance 795.</p>
+<p><span class="fw-bold">We found a target frame!</span> 5 Level Balls on advance 795. This is the advancement that we will aim to interact with the Cram-o-Matic machine on.</p>
 
 <hr /><div class="title" style="background-color: #0c0038;">
   <h1 class="text-light text-center pt-3 pb-3">Advancing Towards The Target</h1>
 </div><hr />
 
-<p>The Cram-o-Matic window of SWSH_OWRNG_Generator_GUI displays the target on frame 795, we do not need to account for any delay. This means we will aim to interact with the Cram-o-matic on frame 795.</p>
+<p>The <code class="fw-bold">Cram-o-Matic</code> window of SWSH_OWRNG_Generator_GUI displays the target on frame 795, we do not need to account for any delay. This means we will aim to interact with the Cram-o-Matic machine on frame 795 to hit our target seed.</p>
 
-<p>Earlier we calculated that there are 21 NPCs in the area, we need this information to accurately predict the amount of advancements that will occur from closing the pause menu.</p>
+<p>Using the <a href="#menu-close-overview-cfw">above mentioned method</a>, we calculated that there are 21 NPCs inside the Dojo. This number is consistently upon resetting the game but subject to change based on story progression.</p>
 
 <div class="card border-dark">
   <div class="anchored card-header" style="background-color: #0c0038;" id="advancing-to-target-cram-cfw">
@@ -243,35 +249,38 @@ permalink: /cfw/swsh/item/
   <div class="card-body card-bg">
 
     <ul>
-      <li>Advance towards your target frame using any method listed inside the <a href="#advancementtable">table above</a></li><p></p>
-      <li>Once you are within a few hundred frames of your target, stand within distance of the Cram-o-matic so that you can immediately interact with it in a single <code class="fw-bold">A</code> press.</li><p></p>
-      <li>Pause the game using the <code class="fw-bold">X</code> button, then disconnect and reconnect to the main window, then search for your target again in the <code class="fw-bold">Cram-o-matic</code> window.</li>
+      <li>Advance towards your target frame using <code class="fw-bold">date skipping</code> (large distances) or <code class="fw-bold">menu close</code> + <code class="fw-bold">animations</code> (small distances)</a></li><p></p>
+      <li>Once you are within a few hundred advancements away from your target, stand facing the Cram-o-Matic machine, near enough to interact with it in a single <code class="fw-bold">A</code> button press.</li><p></p>
+      <li>Pause the game using the <code class="fw-bold">X</code> button, then disconnect and reconnect to the GUI, alternatively you can press the <code class="fw-bold">Update States</code> button inside the Main Window for the same effect.</li><p></p>
     </ul>
 
     <blockquote>From this point it's recommended to only use <code class="fw-bold">menu close</code> & <code class="fw-bold">amimation</code> advancements as they advance in small increments, making them easy to keep track of.</blockquote>
 
-      <ul>
-        <li>Open the <code class="fw-bold">Cram-o-Matic</code> window, enter your target frame into the <code class="fw-bold">+</code> field and the amount of NPCs into the <code class="fw-bold">NPCs</code> field, then click search.</li>
-      </ul>
+    <ul>
+      <li>Close the <code class="fw-bold">Cram-o-Matic</code> window and re-open it to apply the newly updated RNG state to the sub window, then search for your target again. This will provide your new target frame.</li><p></p>
+      <li>Enter the amount of NPCs (calibrated earlier) into the NPCs field of the sub window, then search. Check to see if your target frame is still visible. If it is visible, ignore the next step.</li><p></p>
+      <li>In cases where your target frame is not visible, do a single animation advancement to nudge the RNG state by 1, update your states again in the <code class="fw-bold">Cram-o-Matic</code> window, and search for your target. Repeat until your target is visible.</li>
+    </ul>
 
-      <blockquote>If you are unable to find your target frame in the search results, this means the target cannot be hit based on your seed. Use animations to advance the RNG state slightly, then close and re-open the <code class="fw-bold">Cram-o-matic</code> window and search for your target frame again. Repeat this process until your target frame is visible.</blockquote>
+    <blockquote>If you are unable to find your target frame at all, aim to get as close as you can using menu close prediction, you will need to use a combination of menu close & player movement advancements to hit your target seed instead.</blockquote>
 
-      <ul>
-        <li>Open and close the pause menu until closing the menu a single time lands onto your target frame, according to the <code class="fw-bold">Cram-o-Matic</code> window prediction. Pay attention to the <code class="fw-bold">Curr. Adv</code> field of the main window to avoid overshooting your target.</li><p></p>
-        <li>Close the pause menu and quickly interact with the Cram-o-matic, if you believe you hit your target frame, feed it the appropriate apricorns to claim your reward.</li>
-      </ul>
+    <ul>
+       <li>Open and close the pause menu until closing the menu a single time lands onto your target frame. Pay attention to the <code class="fw-bold">Curr. Adv</code> field of the main window to avoid overshooting your target.</li><p></p>
+       <li>Close the pause menu, this should have landed you on (or close to) your target frame. If you did not land on your target frame use movement advancements at this point until you reach your target, then quickly interact with the Cram-o-Matic machine.</li><p></p>
+    </ul>
 
-      <p>You can be creative with the methods you use to advance the RNG state. Menu close prediction is not necessary but will make for a much easier time hitting target frames and is extremely helpful in areas of the game where the RNG advances at a quick pace.</p>
- </div>
+    <blockquote>Remember, the goal is to interact with the machine on the correct frame, as long as you hit your target seed and stayed within the dialogue without backing out, you will achieve your desired result.</blockquote>
+
+   </div>
 </div><br />
 
 <span class="fw-bold">Figure 4/5 -</span> Result Found!<br />
 <a href="./images/cram-o-matic/figure-4-result-found-gui-cram.png" target="_blank"><img src="./images/cram-o-matic/figure-4-result-found-gui-cram.png" style="width:675px;height:400px;"></a><br /><br />
 <a href="./images/cram-o-matic/figure-5-result-found-switch-cram.jpg" target="_blank"><img src="./images/cram-o-matic/figure-5-result-found-switch-cram.jpg" style="width:675px;height:400px;"></a><br /><br />
 
-<p>The result matches the output of the generator, mission accomplished! We got 5 Level Balls from the Scam-o... er... Cram-o-matic on our first attempt!</p>
+<p>The result matches the output given by the <code class="fw-bold">Cram-o-Matic</code> sub window, mission accomplished! We got 5 Level Balls from the Cram-o-Matic machine on the first attempt!</p>
 
-<p><span class="fw-bold">That's all there is to RNG abusing the Cram-o-matic!</span></p>
+<p><span class="fw-bold">That's all there is to RNG abusing the Cram-o-Matic!</span></p>
 
 <hr /><div class="title" style="background-color: #0c0038;">
   <h1 class="text-light text-center pt-3 pb-3" id="loto-rng-abuse">Rotom Lottery RNG Abuse</h1>
