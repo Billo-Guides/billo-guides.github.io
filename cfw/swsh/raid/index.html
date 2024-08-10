@@ -1,0 +1,70 @@
+t: default
+title: SwSh Raid RNG (CFW)
+permalink: /cfw/swsh/raid
+---
+
+<style>
+  mark {
+    background-color: #FFD700;
+    color: black;
+  }
+
+  .card-bg {
+    background-color: #d1d1d1;
+    border-bottom-right-radius: 0.20rem !important;
+    border-bottom-left-radius: 0.20rem !important;
+  }
+
+  table,
+  th,
+  td {
+    border: 1px solid black;
+  }
+
+  blockquote {
+  background: #c5c5c5;
+  border: 1px solid #9e9e9e;
+  border-left: 5px solid #0c0038;
+  margin: 1.5em 2px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  }
+</style>
+    
+<div class="title" style="background-color: #0c0038;">
+  <h1 class="text-light text-center pt-3 pb-3">Max Raid RNG Guide (CFW)</h1>
+</div><hr />
+
+<p>This guide provides in-depth coverage of how to use PokeFinder by AdmiralFish to RNG abuse Max Raid Battles in Sword/Shield. Using raid RNG abuse you can predict the internal values of upcoming raids (IVs, Nature, Shiny Status etc.) and filter for desirable results.</p>
+  
+<p><span class="fw-bold" style="color: #b60606;">From here it is assumed you are using a CFW Switch console running <a href="https://github.com/Atmosphere-NX/Atmosphere/releases">Atmosphere</a>.</span></p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/raid">
+  Don't have CFW installed? <span class="fw-bold">Click here for the retail focused guide!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a><br>
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="setup-and-install-swsh-raid-cfw">
+    <span class="fw-bold text-light">Setup Instructions:</span>
+  </div>
+  <div class="card-body card-bg">
+    <h5><span class="fw-bold">You will need:</span></h5>
+    <ul>
+      <li><a href="https://github.com/Admiral-Fish/PokeFinder/releases">PokeFinder</a></li>
+      <li><a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads">Visual C++ Redistributable</a> (Windows OS)</li>
+      <li><a href="https://github.com/3096/luxray/releases/download/0.1.0/luxray-r0.1.0-0.zip">Luxray Date-skipper</a></li>
+    </ul>
+
+    <h6><span class="fw-bold">Installation Instructions:</span></h6>
+    <ol>
+      <li>Download the latest version of <code span class="fw-bold">PokeFinder</code>, make sure to download the version specific to the OS you are using, then extract it into a clean, empty folder.</li>
+      <li>For Windows machines, download <code span class="fw-bold">Visual C++ Redistributable</code> and click the installer file, go through all of the setup instructions.</li>
+      <li>Download <code span class="fw-bold">Luxray.zip</code>, and extract the contents of the folder into an empty folder in a known location on your computer.</li>
+      <li>Move the <code span class="fw-bold">atmosphere</code> and <code span class="fw-bold">switch</code> folders from the Luxray download to the root of your Switch SD card, then reboot the console into SysCFW.</li>
+    </ol>
+
+  </div>
+</div><br>
