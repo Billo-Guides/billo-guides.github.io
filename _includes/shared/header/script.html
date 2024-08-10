@@ -1,13 +1,18 @@
 <script type="text/javascript">
   var url = window.location.pathname;
-  var pathname = url.slice(url.indexOf("/", 1) + 1, url.indexOf("/", url.indexOf("/", 1) + 1)).toLowerCase();
+  var pathname = url.slice(url.indexOf("/") + 1, url.indexOf("/", url.indexOf("/") + 1)).toLowerCase();
+  console.log(pathname)
   switch (pathname) {
-    case "swsh":
-      $("#SwordShieldDropdown").addClass("active").css("color", "#fff");
+    case "cfw":
+      $("#nav-cfw-drop").addClass("active").css("color", "#fff");
       break;
 
-    case "lgpe":
-      $("#LGPEDropdown").addClass("active").css("color", "#fff");
+    case "retail":
+      $("#nav-ret-drop").addClass("active").css("color", "#fff");
+      break;
+
+    case "misc":
+      $("#nav-misc-drop").addClass("active").css("color", "#fff");
       break;
 
     default:

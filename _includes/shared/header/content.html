@@ -7,49 +7,98 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <!-- HOME -->
         <li class="nav-item">
           <a id="nav-home" class="nav-link" href="/">Home</a>
         </li>
-        <li id="nav-rules" class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="ScarletVioletDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Scarlet/Violet
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="ScarletVioletDropdown">
-          <li><a class="dropdown-item" href="/cfw/sv/raidcrawler">RaidCrawler Usage Guide</a></li>
-        </ul>
-        <li id="nav-rules" class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="SwordShieldDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Sword/Shield
+
+        <!-- CFW -->
+        <li id="nav-cfw" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="nav-cfw-drop" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+            CFW Guides
           </a>
-          <ul class="dropdown-menu" aria-labelledby="SwordShieldDropdown">
-            <li><a class="dropdown-item" href="/retail/swsh/overworld">Overworld RNG (Retail)</a></li>
-            <li><a class="dropdown-item" href="/cfw/swsh/overworld">Overworld RNG (CFW)</a></li>
-            <li><a class="dropdown-item" href="/retail/swsh/item">Item RNG (Retail)</a></li>
-            <li><a class="dropdown-item" href="/cfw/swsh/item">Item RNG (CFW)</a></li>
+
+          <ul class="dropdown-menu dropend" aria-labelledby="nav-cfw-drop">
+
+            <li id="nav-cfw-sv" class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-dark" href="#" id="nav-cfw-sv-drop" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                Scarlet &amp; Violet
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="nav-cfw-sv-drop">
+                <li><a class="dropdown-item" href="/cfw/sv/raidcrawler">RaidCrawler Usage Guide</a></li>
+              </ul>
+            </li>
+
+            <li id="nav-cfw-swsh" class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-dark" href="#" id="nav-cfw-swsh-drop" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                Sword &amp; Shield
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="nav-cfw-swsh-drop">
+                <li><a class="dropdown-item" href="/cfw/swsh/overworld">Overworld RNG</a></li>
+                <li><a class="dropdown-item" href="/cfw/swsh/item">Item RNG</a></li>
+              </ul>
+            </li>
+
+            <li id="nav-cfw-pla" class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-dark" href="#" id="nav-cfw-pla-drop" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                Legends: Arceus
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="nav-cfw-pla-drop">
+                <li><a class="dropdown-item" href="/cfw/la/general">Legendary RNG</a></li>
+              </ul>
+            </li>
+
+            <li id="nav-cfw-lgpe" class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-dark" href="#" id="nav-cfw-lgpe-drop" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                Let&apos;s Go Pikachu &amp; Eevee
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="nav-cfw-lgpe-drop">
+                <li><a class="dropdown-item" href="/cfw/lgpe/bird-watching">Bird Watching (Botting)</a></li>
+              </ul>
+            </li>
           </ul>
-          <li id="nav-rules" class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="LegendsArceusDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Legends: Arceus
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="LegendsArceusDropdown">
-              <li><a class="dropdown-item" href="/cfw/la/general">Legendary RNG (CFW)</a></li>
-              <li><a class="dropdown-item" href="/retail/la/legendary">Legendary RNG (Retail)</a></li>
-            </ul>
-        <li id="nav-rules" class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="LGPEDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Let's Go Pikachu/Eevee
+        </li>
+
+        <!-- RETAIL -->
+         <li id="nav-ret" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="nav-ret-drop" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+            Retail Guides
           </a>
-          <ul class="dropdown-menu" aria-labelledby="LGPEDropdown">
-            <li><a class="dropdown-item" href="/cfw/lgpe/bird-watching">Bird Watching (CFW Botting)</a></li>
+
+          <ul class="dropdown-menu dropend" aria-labelledby="nav-ret-drop">
+
+            <li id="nav-ret-swsh" class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-dark" href="#" id="nav-ret-swsh-drop" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                Sword &amp; Shield
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="nav-ret-swsh-drop">
+                <li><a class="dropdown-item" href="/retail/swsh/overworld">Overworld RNG</a></li>
+                <li><a class="dropdown-item" href="/retail/swsh/item">Item RNG</a></li>
+              </ul>
+            </li>
+
+            <li id="nav-ret-pla" class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-dark" href="#" id="nav-ret-pla-drop" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                Legends: Arceus
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="nav-ret-pla-drop">
+                <li><a class="dropdown-item" href="/retail/la/legendary">Legendary RNG</a></li>
+              </ul>
+            </li>
           </ul>
-         <li id="nav-rules" class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="MiscDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        </li>
+
+        <!-- MISC -->
+         <li id="nav-misc" class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="nav-misc-drop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Misc
             </a>
-            <ul class="dropdown-menu" aria-labelledby="MiscDropdown">
+            <ul class="dropdown-menu" aria-labelledby="nav-misc-drop">
               <li><a class="dropdown-item" href="/misc/moarencounterbots">Building & Editing Moarencounterbots</a></li>
             </ul>
         </li>
+
       </ul>
     </div>
   </div>
