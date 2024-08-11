@@ -1,0 +1,234 @@
+---
+layout: default
+title: SwSh Raid RNG (CFW)
+permalink: /cfw/swsh/raid
+---
+
+
+<style>
+  mark {
+    background-color: #FFD700;
+    color: black;
+  }
+
+  .card-bg {
+    background-color: #d1d1d1;
+    border-bottom-right-radius: 0.20rem !important;
+    border-bottom-left-radius: 0.20rem !important;
+  }
+
+  table,
+  th,
+  td {
+    border: 1px solid black;
+  }
+
+  blockquote {
+  background: #c5c5c5;
+  border: 1px solid #9e9e9e;
+  border-left: 5px solid #0c0038;
+  margin: 1.5em 2px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  }
+</style>
+    
+<div class="title" style="background-color: #0c0038;">
+  <h1 class="text-light text-center pt-3 pb-3">Max Raid RNG Guide (CFW)</h1>
+</div><hr />
+
+<p>This guide provides in-depth coverage of how to use PokeFinder by AdmiralFish to RNG abuse Max Raid Battles in Sword/Shield. Using raid RNG abuse you can predict the internal values of upcoming raids (IVs, Nature, Shiny Status etc.) and filter for desirable results.</p>
+
+<p>Each raid is given a randomly assigned "den seed", this seed is used to determine which Pokemon will be inside a den. Every day that passes will increment the den seed by 1 in a predictable manner, making Raid RNG abuse entirely possible using a process known as "date skipping". Simply skip the required amount to reach your desired seed.</p>
+  
+<p><span class="fw-bold" style="color: #b60606;">From here it is assumed you are using an unmodified Switch console.</span></p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/raid">
+  Have CFW installed? <span class="fw-bold">Click here for the CFW focused guide!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a><br>
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="setup-and-install-swsh-raid-retail">
+    <span class="fw-bold text-light">Setup Instructions:</span>
+  </div>
+  <div class="card-body card-bg">
+    <h6><span class="fw-bold">You will need:</span><h6>
+    <ul>
+      <li><a href="https://github.com/Admiral-Fish/PokeFinder/releases">PokeFinder</a></li>
+      <li><a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads">Visual C++ Redistributable</a> (Program dependency, windows only)</li>
+      <li>Access to a SysBot running Sword/Shield (recommended), or a friend running a custom firmware Switch console.</li>
+    </ul>
+
+    <h6><span class="fw-bold">Instructions:</span></h6>
+    <ol>
+      <li>WINDOWS ONLY - Download <code span class="fw-bold">Visual C++ Redistributable</code> then run the installer files until fully complete.</li>
+      <li>Download the latest version of <code span class="fw-bold">PokeFinder</code> for Windows, then extract all the contents into a clean, empty folder.</li>
+      <li>Use google to locate a Discord server that runs a Sword/Shield SysBot, or a friend with a Switch console running CFW.</li>
+    </ol>
+
+    <blockquote>SysBot (or CFW in general) is used to identify your current raid seed, this is the most efficent method and so will be the recommended and used method throughout this guide.</blockquote>
+
+  </div>
+</div><br>
+
+<hr /><div class="title" style="background-color: #0c0038;">
+  <h1 class="text-light text-center pt-3 pb-3">Tool Overview & Seed Checking</h1>
+</div><hr />
+
+<p>This section will cover the essential details you need to know in order to use each of the required tools. If you do not yet have a complete understanding of how each of the tools, follow along with this section.</p>
+
+<span class="fw-bold" id="figure-1">Figure 1 -</span> PokeFinder Overview<p></p>
+<a href="raid/images/figure-1-pokefinder-overview-retail.gif" target="_blank"><img src="raid/images/figure-1-pokefinder-overview-retail.gif" style="width:675px;height:400px;"></a><br /><br />
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="pokefinder-overview-retail">
+    <span class="fw-bold text-light">PokeFinder Overview</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>Pictured above is the window you will be presented with after opening the Gen 8 Raid section of PokeFinder for the first time. For the purposes of this guide, this window will be referred to as the "main" window. Here is where we can calculate upcoming target frames based on our search parameters.</p>
+
+    <h6><span class="fw-bold">Feature Overview:</span></h6>
+    <ul>
+      <li><span class="fw-bold">Left Side -</span> Enter search conditions, select a specific raid, and input seed and # of advances.</li>
+      <li><span class="fw-bold">Center -</span> Specify raid details, such as species, raid type (common/rare), and difficulty (star level).</li>
+      <li><span class="fw-bold">Right Side -</span> Search filter details, filter for high IV, specific nature, and/or shiny target frames.</li>
+      <li><span class="fw-bold">Top -</span> Profile management, enter your 5 digit IDs & trainer information from your save file here.</li>
+      <li><span class="fw-bold">Bottom -</span> Search result output, any result that matches your filters will be displayed here.</li>
+    </ul>
+
+    <p>By clicking <code span class="fw-bold">Gen 8 Tools</code> at the top of the main window, you can select the <code span class="fw-bold">Den Map</code> button to open a sub window which contains a map of the Wild Area. Here you can look at the exact location of raid you currently have selected, this is indicated by the red circle on the map display.</p>
+
+    <p>You can use the Den Map to quickly navigate to your desired den in-game, as using other sources to locate raid locations can often be confusing.</p>
+  </div>
+</div><br>
+
+<span class="fw-bold" id="figure-2">Figure 2 -</span> Finding Your Current Seed<p></p>
+<a href="raid/images/figure-2-sysbot-seed-output.png" target="_blank"><img src="raid/images/figure-2-sysbot-seed-output.png" style="width:675px;height:400px;"></a><br /><br />
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="seed-finding-retail">
+    <span class="fw-bold text-light">Finding Your Current Seed</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>Showing a Pokemon caught from a raid to a SysBot (as pictured in Figure 2), will produce the seed expected by PokeFinder. This is the most simplistic and recommended process of obtaining a den seed.</p>
+
+    <h6><span class="fw-bold">Step-by-step:</span></h6>
+    <ol>
+      <li>Throw a Wishing Piece into the den you wish to seed check.</li>
+      <li>Capture the Pokemon from the raid, DO NOT SAVE AFTER THIS POINT.</li>
+      <li>Locate a Discord server hosting a SysBot using Google.</li>
+      <li>Find the channel the Sword/Shield not operates in.</li>
+      <li>Initiate a <code span class="fw-bold">seedcheck</code> trade (ask the host for help).</li>
+      <li>Wait for the bot to message you a trade code, then meet with it in-game.</li>
+      <li>Show the bot the caught Pokemon and wait for it to message you a den seed.</li>
+      <li>Reset the game, you should now be back at the active den and also have your den seed.</li>
+    </ol>
+
+    <blockquote>There are methods to aquire your seed without the use of SysBot or Custom Firmware at all, but this is an unnecessarily lengthy process that will not be covered in this guide. Visit the <a href="https://www.smogon.com/ingame/rng/raid_rng">Smogon Raid RNG Guide</a> to find out more.</blockquote>
+    
+  </div>
+</div><br>
+
+<span class="fw-bold" id="figure-3">Figure 3 -</span> Searching For Results<p></p>
+<a href="raid/images/figure-3-results-search.png" target="_blank"><img src="raid/images/figure-3-results-search.png" style="width:675px;height:400px;"></a><br /><br />
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="seed-searching-retail">
+    <span class="fw-bold text-light">Searching For Results</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>In the above image (Figure 3), the seed aquired above has been entered into the assigned field in PokeFinder, the search range has been set to 10,000, and the search filters (on the right) are set to look for any frame that produces a Shiny Pokemon.</p>
+
+    <p>At the bottom of the window a result has been produced, a shiny frame will occur in x advances. By changing the filters in the middle to different Pokemon we can observe that different IV/Nature combinations will occur depending on the Pokemon we choose, the raid type & star count.</p>
+
+    <h6><span class="fw-bold">Setting Correct Filters:</span></h6>
+    <ul>
+      <li>Using the <code span class="fw-bold">Gen 8 Tools -> Den Map</code> feature of PokeFinder, locate the den you are currently standing at in-game, take note of the ID after doing so.</li>
+      <li>Select the Den ID in the dropdown list inside the main PokeFinder window, then set the correct beam type (<code span class="fw-bold">Common</code> = RED | <code span class="fw-bold">Rare</code> = PURPLE).</li>
+      <li>Set the filters on the right to search for your desired Pokemon, in Figure 3 we are only filtering for any shiny Pokemon. You can be more specific if you wish.</li>
+      <li>Paste the seed produced by the bot into the <code span class="fw-bold">Seed</code> field, set your search range (10,000 recommended), then click <code span class="fw-bold">Search</code></li>
+      <li>If your result is not desirable, you will need to restart the <a href="#seed-finding-retail">seed checking process</a> listed above by throwing a new Wishing Piece into your desired den.</li>
+    </ul>
+
+    <blockquote>If your den is from a promotional event distribution, be sure to select <code span class="fw-bold">Event</code> in the <code span class="fw-bold">Location</code> dropdown menu on the left, then select the exact distribution in the dropdown directly below.</blockquote>
+  </div>
+</div><br>
+
+<span class="fw-bold" id="figure-4">Figure 4 -</span> Target Found<p></p>
+<a href="raid/images/figure-4-target-found.png" target="_blank"><img src="raid/images/figure-4-target-found.png" style="width:675px;height:400px;"></a><br /><br />
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="frame-advancement-retail">
+    <span class="fw-bold text-light">Advancing Towards The Target</span>
+  </div>
+  <div class="card-body card-bg">
+    <p><span class="fw-bold">Target frame found!</span> in Figure 4 we can see that a Shiny, x natured y has been found in z advancements, and that the den we are searching in has a Rare (PURPLE) beam. It is now time to begin advancing towards the target.</p>
+
+    <p>Frames are advanced by 1 per day that has passed, which means we will need to advance x amount of days to hit our target shiny frame. We can trick the game into thinking a day has passed using the date skipping exploit.</p>
+
+    <h6><span class="fw-bold">How to date skip:</span></h6>
+    <p>Date-skipping on retail hardware is a manual process that requires some initial setup, there are two methods you can use, the faster method requires a Nintendo Switch Online subscription or multiple consoles/games, while the slower method does not.</p>
+
+    <p>Use one of the below methods to advance towards your target frame, try to keep track of the rough amount of advancements you have done so far. You can use SysBot to check your current seed once you are closer to your target frame.</p>
+    
+    <h6><span class="fw-bold">Fast method:</span></h6>
+    <ol>
+      <li>Enter an online single or double battle, you can search without a code for quicker wait times.</li>
+      <li>Enter airplane mode once you enter the battle. Alternatively you can play out the whole battle if you wish.</li>
+      <li>From here navigate to the System Settings and change the date ahead by one day, then re-open the game.</li>
+      <li>If done correctly your raid should now give off Watts again, as if you have not interacted with it in the first place.</li>
+      <li>From here you can date-skip easily by repeating step 3. This exploit needs to be re-activated every time the game is reset.</li>
+    </ol>
+
+    <p>If your target is >1000 advancements away and you intend to use the fast method, it is recommended to re-locate to an indoor location to do your advancements to avoid crashing the game.</p>
+
+    <details>
+      <summary><span class="fw-bold">Slow method:</span></summary>
+      <ol>
+        <li>Find an active Max Raid, interact with it, then click "Invite Others".</li>
+        <li>From here navigate to the System Settings and change the date ahead by one day.</li>
+        <li>Exit back to the main menu of the home screen and reopen the game.</li>
+        <li>If done correctly your raid should now give off Watts again, as if you have not interacted with it in the first place.</li>  
+        <li>To repeat this process you will need to start again from step 1.</li>
+      </ol>
+    </details>
+
+    <blockquote><span class="fw-bold">Note -</span> If you wish to manipulate the species inside the den you must save 3 advancements (or date skips) away from your target! The first 2 days are locked onto a specific species and the third one is decided at random.</blockquote>
+
+  </div>
+</div><br>
+
+<span class="fw-bold" id="figure-5">Figure 5 -</span> Species Manipulation<p></p>
+<a href="raid/images/figure-5-species-manip.png" target="_blank"><img src="raid/images/figure-5-species-manip.png" style="width:675px;height:400px;"></a><br /><br />
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="frame-advancement-retail">
+    <span class="fw-bold text-light">Advancing Towards The Target</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>At this stage you should be exactly 3 frames away from your target (today(0), second day(1), third day(2), target day(3)), from here you can manipulate the species on the "target day".</p>
+
+    <p>In the above image (Figure 5), we saved 3 frames away from the target and advanced the seed 3 times, but the species is incorrect, here is how to resolve this problem!</p>
+
+    <h6><span class="fw-bold">Species Manipulation Tutorial:</span></h6>
+    <ol>
+      <li>First, save the game once you are confident that you are 3 frames away from your target den.</li>
+      <li>Advance 3 days, then enter the raid to confirm that it is what you expect (check if shiny, capture if specific stats and non shiny).</li>
+      <li>Reset the game and re-enter the overworld, you should now be stood back at your raid den, 3 advanced away from the target.</li>
+      <li>Advance 3 days, you should now see that the species has changed, repeat this step until your desired species appears.</li>
+      <li>Save once you hit your desired species if you wish to share the raid with others!</li>
+    </ol>
+    
+  </div>
+</div><br>
+
+<span class="fw-bold" id="figure-6">Figure 5 -</span> Result Found!<p></p>
+<a href="raid/images/figure-6-result-found.gif" target="_blank"><img src="raid/images/figure-6-result-found.gif" style="width:675px;height:400px;"></a><br /><br />
+
+<p>The den now contains the desired species, in this case, a 5 star x species! We can now reset the game and share the raid with friends, or just capture it for ourselves.</p>
+
+<p><span class="fw-bold">That's all there is to manipulating Max Raid Battles on retail hardware!</span>
+      
