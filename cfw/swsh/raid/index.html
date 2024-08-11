@@ -72,7 +72,7 @@ permalink: /cfw/swsh/raid
       <li>Download <code span class="fw-bold">Visual C++ Redistributable</code> & <code span class="fw-bold">.NET 8.0 SDK</code>, then run the installer files until fully complete.</li>
       <li>Download the latest version of <code span class="fw-bold">PokeFinder</code> for Windows, then extract all the contents into a clean, empty folder.</li>
       <li>Download the latest version of the <code span class="fw-bold">PKHeX Plugins</code> installer (<code span class="fw-bold">setup_stable.exe</code>), then extract it into a clean, empty folder.</li>
-      <li><code span class="fw-bold">setup_stable.exe</code>, after setup is complete you will see <code span class="fw-bold">PKHeX.exe</code> and a <code span class="fw-bold">plugins</code> folder in the same directory.</li>
+      <li>Run <code span class="fw-bold">setup_stable.exe</code>, after the setup is complete you will see <code span class="fw-bold">PKHeX.exe</code> and a <code span class="fw-bold">plugins</code> folder in the same directory.</li>
       <li>Download and extract the contents of the <code span class="fw-bold">sys-botbase</code> download into an empty folder inside a known location on your computer. Then download <code span class="fw-bold">Luxray.zip</code> and extract the contents into the SAME folder.</li>
       <li>You should now two folders named <code span class="fw-bold">atmosphere</code> and <code span class="fw-bold">switch</code>, move these folders to the root of your Switch SD card, then reboot the console into SysCFW.</li>
     </ol>
@@ -124,13 +124,15 @@ permalink: /cfw/swsh/raid
   </div>
 </div><br>
 
+<p><span class="fw-bold" style="color: #b60606;">Ensure that all of the programs have been set up correctly before continuing, as from here onwards it will be assumed that everything has been set up properly and is working as intended.</span></p>
+
 <hr /><div class="title" style="background-color: #0c0038;">
   <h1 class="text-light text-center pt-3 pb-3">Tool Overviews</h1>
 </div><hr />
 
 <p>This section will cover the essential details you need to know in order to use each of the required tools. If you do not yet have a complete understanding of how each of the tools, follow along with this section.</p>
 
-<span class="fw-bold">Figure 1 -</span> PokeFinder Overview<p></p>
+<span class="fw-bold" id="figure-1">Figure 1 -</span> PokeFinder Overview<p></p>
 <a href="raid/images/figure-1-pokefinder-overview-cfw.gif" target="_blank"><img src="raid/images/figure-1-pokefinder-overview-cfw.gif" style="width:675px;height:400px;"></a><br /><br />
 
 <div class="card border-dark">
@@ -166,7 +168,7 @@ permalink: /cfw/swsh/raid
   </div>
 </div><br>
 
-<span class="fw-bold">Figure 2 -</span> PKHeX/Livehex Overview<p></p>
+<span class="fw-bold" id="figure-2">Figure 2 -</span> PKHeX/Livehex Overview<p></p>
 <a href="raid/images/figure-2-livehex-overview-cfw.gif" target="_blank"><img src="raid/images/figure-2-livehex-overview-cfw.gif" style="width:675px;height:400px;"></a><br /><br />
 
 <div class="card border-dark">
@@ -174,10 +176,44 @@ permalink: /cfw/swsh/raid
     <span class="fw-bold text-light">PKHeX/Livehex Overview</span>
   </div>
   <div class="card-body card-bg">
+    <p><span class="fw-bold" style="color: #b60606;">THIS SECTION IS FOR WINDOWS ONLY.<a href="#figure-3">JUMP TO FIGURE 3</a> INSTEAD FOR MAC / LINUX.</span></p>
+    
+    <p>This is the window you will be presented with after opening PKHeX for the first time. By default PKHeX is configured to be used with the latest game, which is not the game we intend to use. So first we will need to change the save file version, this can be done one of two ways:</p>
+
+    <ol>
+      <li>Opening a Sword/Shield save file by dragging it into the PKHeX window or opening it using <code span class="fw-bold">File</code> -> <code span class="fw-bold">Open SAV</code>.</li>
+      <li>Navigating to <code span class="fw-bold">Options</code> -> <code span class="fw-bold">Settings</code>, then changing the <code span class="fw-bold">Blank Save File</code> to Sword or Shield.</li>
+    </ol>
+
+    <p>Once you have changed the save file version you can connect to LiveHeX (as seen in figure 2), and from here we can live view raid seeds by viewing the raid block.</p>
+
+    <h6><span class="fw-bold">Connecting To Livehex:</span></h6>
+    <ul>
+      <li>In the main PKHeX window, navigate to <code span class="fw-bold">Tools</code> -> <code span class="fw-bold">Auto Legality Mod</code> -> <code span class="fw-bold">Open Livehex</code>.</li>
+      <li>On your Switch, open the Homebrew menu and press the <code span class="fw-bold">Y</code> button, take note of the IP address for easy access.</li>
+      <li>In the LiveHeX window, enter the IP address given to you from following step 2 into the designated field, then click <code span class="fw-bold">Connect</code>.</li>
+      <li>If done correctly, you should now see the Pokemon from your boxes inside the main PKHeX Window, if you can, this means that Livehex is as intended.</li>
+      <li>In the dropdown menu at the bottom of the LiveHeX window, select the <code span class="fw-bold">Raids</code> option in the dropdown menu. This will open the raid block editor.</li>
+    </ul>
+
+    <p>In the raid block editor all of the seeds for raid dens are visible. The den IDs should match perfectly with PokeFinder, making it quick and easy to find a seed for any specific den.</p>
     
   </div>
 </div><br>
 
+<span class="fw-bold" id="figure-3">Figure 3 -</span> Capturesight Overview<p></p>
+<a href="raid/images/figure-3-capturesight-overview-cfw.gif" target="_blank"><img src="raid/images/figure-3-capturesight-overview-cfw.gif" style="width:675px;height:400px;"></a><br /><br />
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="capturesight-overview-cfw">
+    <span class="fw-bold text-light">Capturesight Overview</span>
+  </div>
+  <div class="card-body card-bg">
+    <p><span class="fw-bold" style="color: #b60606;">THIS SECTION IS FOR MAC / LINUX ONLY.<a href="#figure-3">JUMP TO FIGURE 2</a> INSTEAD FOR WINDOWS OS.</span></p>
+    
+    
+  </div>
+</div><br>
 
 
 
