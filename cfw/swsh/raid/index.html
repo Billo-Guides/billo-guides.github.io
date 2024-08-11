@@ -38,6 +38,8 @@ permalink: /cfw/swsh/raid
 </div><hr />
 
 <p>This guide provides in-depth coverage of how to use PokeFinder by AdmiralFish to RNG abuse Max Raid Battles in Sword/Shield. Using raid RNG abuse you can predict the internal values of upcoming raids (IVs, Nature, Shiny Status etc.) and filter for desirable results.</p>
+
+<p>Each raid is given a randomly assigned "den seed", this seed is used to determine which Pokemon will be inside a den. Every day that passes will increment the den seed by 1 in a predictable manner, making Raid RNG abuse entirely possible using a process known as "date skipping". Simply skip the required amount to reach your desired seed.</p>
   
 <p><span class="fw-bold" style="color: #b60606;">From here it is assumed you are using a CFW Switch console running <a href="https://github.com/Atmosphere-NX/Atmosphere/releases">Atmosphere</a>.</span></p>
 
@@ -211,11 +213,47 @@ permalink: /cfw/swsh/raid
   <div class="card-body card-bg">
     <p><span class="fw-bold" style="color: #b60606;">THIS SECTION IS FOR MAC / LINUX ONLY. <a href="#figure-2">JUMP TO FIGURE 2</a> INSTEAD FOR WINDOWS OS.</span></p>
 
-    
-    
+    <p>Upon launching Tesla Menu on your switch, you will be presented with something similar to Figure 3. Here is where you will launch the Capturesight (and Luxray) overlays. CaptureSight is used to find your current raid den seed.</p>
+
+    <h6><span class="fw-bold">Using Capturesight:</span></h6>
+    <ul>
+      <li>Open the Tesla Menu, then launch capturesight by pressing the <code span class="fw-bold">A</code> button.</li>
+      <li>Scroll down to the <code span class="fw-bold">Dens</code> sub heading, this is where you can view a list of dens relevant to the map you are in.</li>
+      <li><code span class="fw-bold">Active Dens</code> is used for wishing piece RNG, and <code span class="fw-bold">All Dens</code> is used for "natural" spawned raid RNG.</li>
+      <li>You can now click around and view the den seed of any active or inactive Max Raid, become familiar with using CaptureSight before continuing.</li>
+    </ul>
+
+    <p>In capturesight all of the seeds for raid dens are visible. The den IDs should match perfectly with PokeFinder, making it quick and easy to find a seed for any specific den.</p>
     
   </div>
 </div><br>
 
+<span class="fw-bold" id="figure-4">Figure 4 -</span> Luxray Overview<p></p>
+<a href="raid/images/figure-4-luxray-overview-cfw.gif" target="_blank"><img src="raid/images/figure-4-luxray-overview-cfw.gif" style="width:675px;height:400px;"></a><br /><br />
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="luxray-overview-cfw">
+    <span class="fw-bold text-light">Luxray Overview</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>Luxray is a tool used for automating the (otherwise tedious) date skipping process. As mentioned above, the den seed increments by one after each day that passes. Luxray can be used to alter the system clock and make the game believe that a day has passed, thus incrementing any den seeds.</p>
+
+    <h6><span class="fw-bold">Using Luxray:</span></h6>
+    <p>Upon launching, you will be presented with a calculator-style application with three main features, these are:</p>
+
+    <ol>
+        <li><span class="fw-bold">Set -</span> Sets the network time to a desired date, based on the figure typed into the calculator. Useful for changing the weather.</li>
+        <li><span class="fw-bold">Step -</span> Initiates date skipping, based on the figure amount typed into the calculator. Used to automate date-skipping.</li>
+        <li><span class="fw-bold">NTP -</span> Sets the date and time back to network time, this should be done after every date-skipping session.</li>
+    </ol>
+
+    <blockquote>Date & Time must be synced via the internet in order to use Luxray, as it takes advantage of System time manipulation.</blockquote>
+    
+  </div>
+</div><br>
+
+
+
+      
 
 
