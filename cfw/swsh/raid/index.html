@@ -55,39 +55,37 @@ permalink: /cfw/swsh/raid
   <div class="card-body card-bg">
     <p>The requirements will differ depending on the type of Operating System you are running, while the rest of this guide will be focused on Windows OS, other platforms can still follow along using their own set of tools. Open the dropdown menu specific to the operating system you are using and follow all of the setup & installation instructions.</p>
 
-    <p>Dependencies are required to run programs on Windows OS, download <a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads">Visual C++ Redistributable</a> & <a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0">.NET 8.0 SDK</a>, then run the installer before continuing, most people will require the <code span class="fw-bold">x64 (64 bit)</code> versions.</p>
-
     <details>
     <summary><span class="fw-bold">WINDOWS OS</summary></span><p></p>
     <h6><span class="fw-bold">You will need:</span><h6>
     
     <ul>
+      <li><a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads">Visual C++ Redistributable</a> & <a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0">.NET 8.0 SDK</a> (Program dependencies)</li>
       <li><a href="https://github.com/Admiral-Fish/PokeFinder/releases">PokeFinder</a></li>
-      <li><a href="https://github.com/santacrab2/PKHeX-Plugins/releases">PKHeX + LiveHeX</a></li>
+      <li><a href="https://github.com/santacrab2/PKHeX-Plugins/releases">PKHeX + LiveHeX Plugin</a></li>
       <li><a href="https://github.com/olliz0r/sys-botbase/releases">sys-botbase</a></li>
       <li><a href="https://github.com/3096/luxray/releases/download/0.1.0/luxray-r0.1.0-0.zip">Luxray Date-skipper</a></li>
     </ul>
 
     <h6><span class="fw-bold">Instructions:</span></h6>
     <ol>
-      <li>Download the latest version of <code span class="fw-bold">PokeFinder</code> for Windows, then extract it into a clean, empty folder.</li>
+      <li>Download <code span class="fw-bold">Visual C++ Redistributable</code> & <code span class="fw-bold">.NET 8.0 SDK</code>, then run the installer files until fully complete.</li>
+      <li>Download the latest version of <code span class="fw-bold">PokeFinder</code> for Windows, then extract all the contents into a clean, empty folder.</li>
       <li>Download the latest version of the <code span class="fw-bold">PKHeX Plugins</code> installer (<code span class="fw-bold">setup_stable.exe</code>), then extract it into a clean, empty folder.</li>
       <li><code span class="fw-bold">setup_stable.exe</code>, after setup is complete you will see <code span class="fw-bold">PKHeX.exe</code> and a <code span class="fw-bold">plugins</code> folder in the same directory.</li>
       <li>Download and extract the contents of the <code span class="fw-bold">sys-botbase</code> download into an empty folder inside a known location on your computer. Then download <code span class="fw-bold">Luxray.zip</code> and extract the contents into the SAME folder.</li>
       <li>You should now two folders named <code span class="fw-bold">atmosphere</code> and <code span class="fw-bold">switch</code>, move these folders to the root of your Switch SD card, then reboot the console into SysCFW.</li>
     </ol>
 
-    <blockquote>
-      <p>Confirm that everything has been set up properly before continuing.</p>
-      <ul>
-        <li>PokeFinder should launch and run properly with no issues or pop ups.</li>
-        <li>PKHeX should launch and run properly with no issues, and the taskbar icon should be BLUE to indicate that plugins were installed correctly.</li>
-        <li>Sys-botbase should make the Home button of your controller glow BLUE when installed to the console correctly.</li>
-        <li>Luxray should be present in the Homebrew menu and should launch and function with no issues.</li>
-      </ul>
+    <h6><span class="fw-bold">Checklist:</span></h6>
+    <ol>
+      <li>PokeFinder and PKHeX launch properly with no issues, meaning the dependencies were correctly installed ✅</li>
+      <li>PKHeX should have a blue icon in the taskbar, indicating that the plugins were correctly installed ✅</li>
+      <li>When launching your console, a blue light should appear around the Home button on your cotroller (sys-botbase) ✅</li>
+      <li>In the Homebrew menu, Luxray is visible in the list of applications and launches with no issues ✅</li>
+    </ol>
 
-      If you are running into issues installing PKHeX or Sys-botbase visit the <a href="https://github.com/architdate/PKHeX-Plugins/wiki/Installing-LiveHeX">LiveHeX Wiki</a> for more detailed instructions & troubleshooting advice.
-    </blockquote>
+    <blockquote>If you are running into issues installing any of the above programs, visit the relevant support pages for more information and troubleshooting advice. (<a href="https://github.com/architdate/PKHeX-Plugins/wiki/Installing-LiveHeX">LiveHeX/Sys-botbase Wiki</a>.</blockquote>
     </details><p></p>
 
     <details>
@@ -105,7 +103,7 @@ permalink: /cfw/swsh/raid
     <h6><span class="fw-bold">Instructions:</span></h6>
       
     <ol>
-      <li>Download the latest version of <code span class="fw-bold">PokeFinder</code> for Mac/Linux, then extract it into a clean, empty folder.</li>
+      <li>Download the latest version of <code span class="fw-bold">PokeFinder</code> for Mac/Linux, then extract all the contents, empty folder.</li>
       <li>Download & extract the latest versions of <code span class="fw-bold">Tesla Menu</code> & <code span class="fw-bold">NXOvloader</code> into a known location on your computer.</li>
       <li>You should now two folders named <code span class="fw-bold">atmosphere</code> and <code span class="fw-bold">switch</code>, move these folders to the root of your Switch SD card.</li>  
       <li>Download & extract the latest versions of <code span class="fw-bold">CaptureSight</code> & <code span class="fw-bold">Luxray</code> into a known location on your computer.</li>
@@ -113,13 +111,14 @@ permalink: /cfw/swsh/raid
       <li>Plug the SD card back into your console, then launch SysCFW and confirm that everything has been installed properly.</li>
     </ol>
 
-    <blockquote>
-      <ul>
-        <li>PokeFinder should launch and run properly with no issues or pop ups.</li>
-        <li>Tesla Menu should open properly on your console when using the button combination (<a href="https://gbatemp.net/threads/tesla-the-nintendo-switch-overlay-menu.557362/">how to launch Tesla Menu)</a>.</li>
-        <li>Capturesight and Luxray should be present and launchable inside the list of overlays found in the Tesla Menu hub.</li>
-      </ul>
-    </blockquote>
+    <h6><span class="fw-bold">Checklist:</span></h6>
+    <ol>
+      <li>PokeFinder launches properly with no issues or pop ups ✅</li>
+      <li>Tesla Menu opens properly when pressing the button combination ✅</li>
+      <li>Luxray & Capturesight overlays are present in the list Tesla overlays ✅</li>
+    </ol>
+
+    <blockquote>Tesla Menu requires a button combination to launch the program, this is done by pressing and holding the <code span class="fw-bold">L</code> button, <code span class="fw-bold">DPAD Right</code>, and pressing in the right stick at the same time (<a href="https://gbatemp.net/threads/tesla-the-nintendo-switch-overlay-menu.557362/">how to launch Tesla Menu)</a>.</blockquote>
     </details>     
 
   </div>
