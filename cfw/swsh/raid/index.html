@@ -56,7 +56,7 @@ permalink: /cfw/swsh/raid
     <p>The requirements will differ depending on the type of Operating System you are running, while the rest of this guide will be focused on Windows OS, other platforms can still follow along using their own set of tools. Open the dropdown menu specific to the operating system you are using and follow all of the setup & installation instructions.</p>
 
     <details>
-    <summary><span class="fw-bold">WINDOWS OS</summary><p></p>
+    <summary><span class="fw-bold">WINDOWS OS</summary></span><p></p>
     <h6><span class="fw-bold">You will need:</span><h6>
     
     <ul>
@@ -91,39 +91,41 @@ permalink: /cfw/swsh/raid
     </details><p></p>
 
     <details>
-    <summary><span class="fw-bold">MAC / LINUX OS</summary><p></p>
+    <summary><span class="fw-bold">MAC / LINUX OS</summary></span><p></p>
     <h6><span class="fw-bold">You will need:</span><h6>
     
     <ul>
       <li><a href="https://github.com/Admiral-Fish/PokeFinder/releases">PokeFinder</a></li>
-      <li><a href="https://github.com/santacrab2/PKHeX-Plugins/releases">Tesla Menu</a></li>
-      <li><a href="https://github.com/santacrab2/PKHeX-Plugins/releases">NXOvloader</a></li>
-      <li><a href="https://github.com/olliz0r/sys-botbase/releases">Capturesight Overlay</a></li>
-      <li><a href="https://github.com/3096/luxray/releases/download/0.1.0/luxray-r0.1.0-0.zip">Luxray Overlay</a></li>
+      <li><a href="https://github.com/WerWolv/Tesla-Menu">Tesla Menu</a></li>
+      <li><a href="https://github.com/WerWolv/nx-ovlloader">NXOvloader</a></li>
+      <li><a href="https://github.com/zaksabeast/CaptureSight/releases/download/v0.12.8/capturesight.ovl">Capturesight Overlay</a></li>
+      <li><a href="https://github.com/3096/luxray/releases/download/0.1.0/luxray-r0.1.0-1-ovlloader.zip">Luxray Overlay</a></li>
     </ul>
 
     <h6><span class="fw-bold">Instructions:</span></h6>
       
     <ol>
       <li>Download the latest version of <code span class="fw-bold">PokeFinder</code> for Windows, then extract it into a clean, empty folder.</li>
-      <li>Download the latest version of the <code span class="fw-bold">PKHeX Plugins</code> installer (<code span class="fw-bold">setup_stable.exe</code>), then extract it into a clean, empty folder.</li>
-      <li><code span class="fw-bold">setup_stable.exe</code>, after setup is complete you will see <code span class="fw-bold">PKHeX.exe</code> and a <code span class="fw-bold">plugins</code> folder in the same directory.</li>
-      <li>Download and extract the contents of the <code span class="fw-bold">sys-botbase</code> download into an empty folder inside a known location on your computer. Then download <code span class="fw-bold">Luxray.zip</code> and extract the contents into the SAME folder.</li>
-      <li>You should now two folders named <code span class="fw-bold">atmosphere</code> and <code span class="fw-bold">switch</code>, move these folders to the root of your Switch SD card, then reboot the console into SysCFW.</li>
+      <li>Download & extract the latest versions of <code span class="fw-bold">Tesla Menu</code> & <code span class="fw-bold">NXOvloader</code> into a known location on your computer.</li>
+      <li>You should now two folders named <code span class="fw-bold">atmosphere</code> and <code span class="fw-bold">switch</code>, move these folders to the root of your Switch SD card.</li>  
+      <li>Download & extract the latest versions of <code span class="fw-bold">CaptureSight</code> & <code span class="fw-bold">Luxray</code> into a known location on your computer.</li>
+      <li>Open the <code span class="fw-bold">/switch/.overlays/</code> directory on your SD card, then drag <code span class="fw-bold">capturesight.ovl</code> & <code span class="fw-bold">luxray.ovl</code> into this folder.</li>
+      <li>Plug the SD card back into your console, then launch SysCFW and confirm that everything has been installed properly.</li>
     </ol>
 
     <blockquote>
-      <p>Confirm that everything has been set up properly before continuing.</p>
       <ul>
         <li>PokeFinder should launch and run properly with no issues or pop ups.</li>
-        <li>PKHeX should launch and run properly with no issues, and the taskbar icon should be BLUE to indicate that plugins were installed correctly.</li>
-        <li>Sys-botbase should make the Home button of your controller glow BLUE when installed to the console correctly.</li>
-        <li>Luxray should be present in the Homebrew menu and should launch and function with no issues.</li>
+        <li>Tesla Menu should open properly on your console when using the button combination (<a href="https://gbatemp.net/threads/tesla-the-nintendo-switch-overlay-menu.557362/">how to launch Tesla Menu).</li>
+        <li>Capturesight and Luxray should be present and launchable inside the list of overlays found in the Tesla Menu hub.</li>
       </ul>
-
-      If you are running into issues installing PKHeX or Sys-botbase, visit the relevant Wiki pages found on the GitHub repository.
     </blockquote>
-    </details><p></p>
+    </details>     
 
   </div>
 </div><br>
+
+
+
+
+
