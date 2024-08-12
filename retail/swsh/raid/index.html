@@ -73,6 +73,8 @@ permalink: /retail/swsh/raid
   </div>
 </div><br>
 
+<p><span class="fw-bold" style="color: #b60606;">Ensure that you have access to a SysBot running Sword/Shield, or a friend running Custom Firmware (CFW) before continuing.</span></p>
+
 <hr /><div class="title" style="background-color: #0c0038;">
   <h1 class="text-light text-center pt-3 pb-3">Tool Overview & Seed Checking</h1>
 </div><hr />
@@ -98,9 +100,12 @@ permalink: /retail/swsh/raid
       <li><span class="fw-bold">Bottom -</span> Search result output, any result that matches your filters will be displayed here.</li>
     </ul>
 
-    <p>By clicking <code span class="fw-bold">Gen 8 Tools</code> at the top of the main window, you can select the <code span class="fw-bold">Den Map</code> button to open a sub window which contains a map of the Wild Area. Here you can look at the exact location of raid you currently have selected, this is indicated by the red circle on the map display.</p>
+    <p>Upon opening PokeFinder, prior to opening the main Window, a smaller window is available on screen to select the type of RNG abuse you wish to do. There are small tabs across the top of this window, one of them is labeled <code span class="fw-bold">Gen 8 Tools</code>.</p>
 
-    <p>You can use the Den Map to quickly navigate to your desired den in-game, as using other sources to locate raid locations can often be confusing.</p>
+    <p>In the <code span class="fw-bold">Gen 8 Tools</code> dropdown menu, select <code span class="fw-bold">Den Map</code>, this will open a sub window containing a map of each of the wild areas. Here you can select any Den and find it's rough location on the map, indicated by the red circle icon on the map display.</p>
+
+    <p>Matching your in-game Raid Den with the Den ID of PokeFinder can be a long or confusing process, so we can take advantage of this feature to more easily narrow down the Den ID we need. This will be visualized later on in the guide.</p>
+      
   </div>
 </div><br>
 
@@ -112,14 +117,13 @@ permalink: /retail/swsh/raid
     <span class="fw-bold text-light">Finding Your Current Seed</span>
   </div>
   <div class="card-body card-bg">
-    <p>Showing a Pokemon caught from a raid to a SysBot (as pictured in Figure 2), will produce the seed expected by PokeFinder. This is the most simplistic and recommended process of obtaining a den seed.</p>
+    <p>Showing a Pokemon caught from a Max Raid Battle to a SysBot will produce a "Raid seed", (as pictured in Figure 2), this is what PokeFinder uses to predict upcoming advancements.</p>
 
     <h6><span class="fw-bold">Step-by-step:</span></h6>
     <ol>
       <li>Throw a Wishing Piece into the den you wish to seed check.</li>
       <li>Capture the Pokemon from the raid, DO NOT SAVE AFTER THIS POINT.</li>
-      <li>Locate a Discord server hosting a SysBot using Google.</li>
-      <li>Find the channel the Sword/Shield not operates in.</li>
+      <li>Navigate to the server that contains the SysBot, enter the channel for inputting commands.</li>
       <li>Initiate a <code span class="fw-bold">seedcheck</code> trade (command syntax may vary between hosts).</li>
       <li>Wait for the bot to message you a trade code, then meet with it in-game.</li>
       <li>Show the bot the caught Pokemon and wait for it to message you a den seed.</li>
@@ -139,21 +143,29 @@ permalink: /retail/swsh/raid
     <span class="fw-bold text-light">Searching For Results</span>
   </div>
   <div class="card-body card-bg">
-    <p>In the above image (Figure 3), the seed aquired above has been entered into the assigned field in PokeFinder, the search range has been set to 10,000, and the search filters (on the right) are set to look for any frame that produces a Shiny Pokemon.</p>
+    <p>In the above image (Figure 3), the seed aquired from the SysBot seed check has been entered into the <code span class="fw-bold">Seed</code> field in PokeFinder, the search range has been set to 10,000, and the search filters are set to look for any frame that produces a Shiny Pokemon.</p>
 
-    <p>At the bottom of the window a result has been produced, a shiny frame will occur in x advances. By changing the filters in the middle to different Pokemon we can observe that different IV/Nature combinations will occur depending on the Pokemon we choose, the raid type & star count.</p>
-
+    <p>At the bottom of the window various result has been produced, the earliest frame that will produce a shiny Pokemon will occur in 1708 advances. Depending on the chosen species, raid type and star count, the internal details (such as IVs and Nature) will be different.</p>
+      
     <h6><span class="fw-bold">Setting Correct Filters:</span></h6>
     <ul>
       <li>Using the <code span class="fw-bold">Gen 8 Tools -> Den Map</code> feature of PokeFinder, locate the den you are currently standing at in-game, take note of the ID after doing so.</li>
       <li>Select the Den ID in the dropdown list inside the main PokeFinder window, then set the correct beam type (<code span class="fw-bold">Common</code> = RED | <code span class="fw-bold">Rare</code> = PURPLE).</li>
       <li>Set the filters on the right to search for your desired Pokemon, in Figure 3 we are only filtering for any shiny Pokemon. You can be more specific if you wish.</li>
-      <li>Paste the seed produced by the bot into the <code span class="fw-bold">Seed</code> field, set your search range (10,000 recommended), then click <code span class="fw-bold">Search</code></li>
-      <li>If your result is not desirable, you will need to restart the <a href="#seed-finding-retail">seed checking process</a> listed above by throwing a new Wishing Piece into your desired den.</li>
+      <li>Paste the seed produced by the SysBot into the <code span class="fw-bold">Seed</code> field, set your search range (10,000 recommended), then click <code span class="fw-bold">Search</code>.</li>
     </ul>
 
-    <blockquote>If your den is from a promotional event distribution, be sure to select <code span class="fw-bold">Event</code> in the <code span class="fw-bold">Location</code> dropdown menu on the left, then select the exact distribution in the dropdown directly below.</blockquote>
-  </div>
+    <details>
+      <summary><span class="fw-bold">If your result is undesirable, repeat the following:</span></summary>
+      <ol>
+        <li>Throw a Wishing Piece into a random raid den to despawn the current den.</li>
+        <li>Go back to your chosen den and throw in a new Wishing Piece to reset the seed.</li>
+        <li>Follow the <a href="#seed-finding-retail">seed checking process</a> again to get a new seed.</li>
+        <li>Enter the new seed into PokeFinder and check for desirable results.</li>
+        <li>Repeat this process until a desirable result has been found.</li>
+      </ol>
+    </details>
+   </div>
 </div><br>
 
 <hr /><div class="title" style="background-color: #0c0038;">
@@ -170,13 +182,11 @@ permalink: /retail/swsh/raid
     <span class="fw-bold text-light">Den Finding & Search Filters</span>
   </div>
   <div class="card-body card-bg">
-    <p>First, you will need to find a matching Den ID using the <code span class="fw-bold">Den Map</code> feature of PokeFinder. An example of how to do this is seen in the above image (Figure 4). You can compare the species inside the den by date skipping to make sure everything matches up properly.</p>
+    <p>First, you will need to find a matching Den ID using the <code span class="fw-bold">Den Map</code> feature of PokeFinder. An example of how to do this is seen in the above image (Figure 4). You can compare the species inside the Raid Den by date skipping to make sure everything matches up properly.</p>
 
-    <p>After determining the correct Den ID, you will need to set your search filters. In the above example we will be searching for any shiny Pokemon, and we used the Den Map to work out that the Den ID is 7. You can be more specific with the search filters if you wish.</p>
+    <p>After determining the correct Den ID, you will need to set your search filters. In the above example we will be searching for any shiny Pokemon, and we used the Den Map to work out that the Den ID is 7. You can be more specific with the search filters if you wish, such as filtering for specific IVs or Nature values.</p>
 
-    <p>You can now begin seed checking and searching for a good target frame. If you do not find a desirable result after searching, you will need to throw a Wishing Piece into a different den to despawn the Raid at your target den, then navigate back to the target den and throw a new Wishing Piece inside to create a fresh seed.</p>
-
-    <blockquote>If your desired den is from an event distribution, you will not need to search for a specific Den ID, as these dens can be positioned anywhere at random. Just select <code span class="fw-bold">Event</code> in the <code span class="fw-bold">Location</code> dropdown of PokeFinder.</blockquote>
+    <blockquote>If your den is from a promotional event distribution, select <code span class="fw-bold">Event</code> in the <code span class="fw-bold">Location</code> dropdown menu on the left, then select the exact distribution in the dropdown directly below. You do not need to track your Raid Den location for event distributions.</blockquote>
 
   </div>
 </div><br>
@@ -189,7 +199,7 @@ permalink: /retail/swsh/raid
     <span class="fw-bold text-light">Advancing Towards The Target</span>
   </div>
   <div class="card-body card-bg">
-    <p><span class="fw-bold">Target frame found!</span> in Figure 4 we can see that a Shiny, Adamant natured Bewear has been found in 78 advancements, and that the den we are searching in has a common (RED) beam. It is now time to begin advancing towards the target.</p>
+    <p><span class="fw-bold">Target frame found!</span> in Figure 5 we can see that a Shiny, Adamant natured Bewear has been found in 78 advancements, and that the den we are searching in has a common (RED) beam. It is now time to begin advancing towards the target.</p>
 
     <p>Frames are advanced by 1 per day that has passed, which means we will need to advance 78 days to hit our target shiny frame. We can trick the game into thinking a day has passed using the date skipping exploit.</p>
 
@@ -260,6 +270,3 @@ permalink: /retail/swsh/raid
 <p>When sharing the raid with friends, ensure the System Time does not pass 00:00 (Midnight) as this will cause the seed to advance naturally. Since you should be saved on a raid, you can simply change the date back to the date you saved on to preserve the current seed and share the raid across multiple days.</p>
 
 <p><span class="fw-bold">That's all there is to manipulating Max Raid Battles on retail hardware!</span>
-      
-
-      
