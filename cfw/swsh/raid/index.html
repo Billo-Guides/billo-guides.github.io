@@ -55,44 +55,7 @@ permalink: /cfw/swsh/raid
     <span class="fw-bold text-light">Setup Instructions:</span>
   </div>
   <div class="card-body card-bg">
-    <p>The requirements will differ depending on the type of Operating System you are running, while the rest of this guide will be focused on Windows OS, other platforms can still follow along using their own set of tools. Open the dropdown menu specific to the operating system you are using and follow all of the setup & installation instructions.</p>
-
-    <details>
-    <summary><span class="fw-bold">WINDOWS OS</summary></span><p></p>
-    <h6><span class="fw-bold">You will need:</span><h6>
-    
-    <ul>
-      <li><a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads">Visual C++ Redistributable</a> & <a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0">.NET 8.0 SDK</a> (Program dependencies)</li>
-      <li><a href="https://github.com/Admiral-Fish/PokeFinder/releases">PokeFinder</a></li>
-      <li><a href="https://github.com/santacrab2/PKHeX-Plugins/releases">PKHeX + LiveHeX Plugin</a></li>
-      <li><a href="https://github.com/olliz0r/sys-botbase/releases">sys-botbase</a></li>
-      <li><a href="https://github.com/3096/luxray/releases/download/0.1.0/luxray-r0.1.0-0.zip">Luxray Date-skipper</a></li>
-    </ul>
-
-    <h6><span class="fw-bold">Instructions:</span></h6>
-    <ol>
-      <li>Download <code span class="fw-bold">Visual C++ Redistributable</code> & <code span class="fw-bold">.NET 8.0 SDK</code>, then run the installer files until fully complete.</li>
-      <li>Download the latest version of <code span class="fw-bold">PokeFinder</code> for Windows, then extract all the contents into a clean, empty folder.</li>
-      <li>Download the latest version of the <code span class="fw-bold">PKHeX Plugins</code> installer (<code span class="fw-bold">setup_stable.exe</code>), then extract it into a clean, empty folder.</li>
-      <li>Run <code span class="fw-bold">setup_stable.exe</code>, after the setup is complete you will see <code span class="fw-bold">PKHeX.exe</code> and a <code span class="fw-bold">plugins</code> folder in the same directory.</li>
-      <li>Download and extract the contents of the <code span class="fw-bold">sys-botbase</code> download into an empty folder inside a known location on your computer. Then download <code span class="fw-bold">Luxray.zip</code> and extract the contents into the SAME folder.</li>
-      <li>You should now two folders named <code span class="fw-bold">atmosphere</code> and <code span class="fw-bold">switch</code>, move these folders to the root of your Switch SD card, then reboot the console into SysCFW.</li>
-    </ol>
-
-    <h6><span class="fw-bold">Checklist:</span></h6>
-    <ol>
-      <li>PokeFinder and PKHeX launch properly with no issues, meaning the dependencies were correctly installed ✅</li>
-      <li>PKHeX should have a blue icon in the taskbar, indicating that the plugins were correctly installed ✅</li>
-      <li>When launching your console, a <a href="raid/images/sysbotbase-joycon-glow.gif">blue light</a> should appear around the Home button on your cotroller (sys-botbase) ✅</li>
-      <li>In the Homebrew menu, Luxray is visible in the list of applications and launches with no issues ✅</li>
-    </ol>
-
-    <blockquote>If you are running into issues installing any of the above programs, visit the relevant support pages for more information and troubleshooting advice. (<a href="https://github.com/architdate/PKHeX-Plugins/wiki/Installing-LiveHeX">LiveHeX/Sys-botbase Wiki</a>).</blockquote>
-    </details><p></p>
-
-    <details>
-    <summary><span class="fw-bold">MAC / LINUX OS</summary></span><p></p>
-    <h6><span class="fw-bold">You will need:</span><h6>
+    <h5><span class="fw-bold">You will need:</span></h5>
     
     <ul>
       <li><a href="https://github.com/Admiral-Fish/PokeFinder/releases">PokeFinder</a></li>
@@ -105,7 +68,7 @@ permalink: /cfw/swsh/raid
     <h6><span class="fw-bold">Instructions:</span></h6>
       
     <ol>
-      <li>Download the latest version of <code span class="fw-bold">PokeFinder</code> for Mac/Linux, then extract all the contents, empty folder.</li>
+      <li>Download the latest version of <code span class="fw-bold">PokeFinder</code> for your operating system, then extract all the contents into a clean, empty folder.</li>
       <li>Download & extract the latest versions of <code span class="fw-bold">Tesla Menu</code> & <code span class="fw-bold">NXOvloader</code> into a known location on your computer.</li>
       <li>You should now two folders named <code span class="fw-bold">atmosphere</code> and <code span class="fw-bold">switch</code>, move these folders to the root of your Switch SD card.</li>  
       <li>Download & extract the latest versions of <code span class="fw-bold">CaptureSight</code> & <code span class="fw-bold">Luxray</code> into a known location on your computer.</li>
@@ -115,13 +78,12 @@ permalink: /cfw/swsh/raid
 
     <h6><span class="fw-bold">Checklist:</span></h6>
     <ol>
-      <li>PokeFinder launches properly with no issues or pop ups ✅</li>
+      <li>PokeFinder launches properly with no issues or pop ups (install <a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads">Visual C++ Redistributable</a>) ✅</li>
       <li>Tesla Menu opens properly when pressing the button combination ✅</li>
       <li>Luxray & Capturesight overlays are present in the list Tesla overlays ✅</li>
     </ol>
 
-    <blockquote>Tesla Menu requires a button combination to launch the program, this is done by pressing and holding the <code span class="fw-bold">L</code> button, <code span class="fw-bold">DPAD Down</code>, and pressing in the <code span class="fw-bold">Right Stick</code> at the same time (<a href="https://gbatemp.net/threads/tesla-the-nintendo-switch-overlay-menu.557362/">how to launch Tesla Menu)</a>.</blockquote>
-    </details>     
+    <blockquote>Tesla Menu requires a button combination to launch the program, this is done by pressing and holding the <code span class="fw-bold">L</code> button, <code span class="fw-bold">DPAD Down</code>, and pressing in the <code span class="fw-bold">Right Stick</code> at the same time (<a href="https://gbatemp.net/threads/tesla-the-nintendo-switch-overlay-menu.557362/">how to launch Tesla Menu)</a>.</blockquote>     
 
   </div>
 </div><br>
@@ -170,40 +132,7 @@ permalink: /cfw/swsh/raid
   </div>
 </div><br>
 
-<span class="fw-bold" id="figure-2">Figure 2 -</span> PKHeX/Livehex Overview<p></p>
-<a href="raid/images/figure-2-livehex-overview-cfw.gif" target="_blank"><img src="raid/images/figure-2-livehex-overview-cfw.gif" style="width:675px;height:400px;"></a><br /><br />
-
-<div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="livehex-overview-cfw">
-    <span class="fw-bold text-light">PKHeX/Livehex Overview</span>
-  </div>
-  <div class="card-body card-bg">
-    <p><span class="fw-bold" style="color: #b60606;">THIS SECTION IS FOR WINDOWS ONLY. <a href="#figure-3">JUMP TO FIGURE 3</a> INSTEAD FOR MAC / LINUX.</span></p>
-    
-    <p>This is the window you will be presented with after opening PKHeX for the first time. By default PKHeX is configured to be used with the latest game, which is not the game we intend to use. So first we will need to change the save file version, this can be done one of two ways:</p>
-
-    <ol>
-      <li>Opening a Sword/Shield save file by dragging it into the PKHeX window or opening it using <code span class="fw-bold">File</code> -> <code span class="fw-bold">Open SAV</code>.</li>
-      <li>Navigating to <code span class="fw-bold">Options</code> -> <code span class="fw-bold">Settings</code>, then changing the <code span class="fw-bold">Blank Save File</code> to Sword or Shield.</li>
-    </ol>
-
-    <p>Once you have changed the save file version you can connect to LiveHeX (as seen in figure 2), and from here we can live view raid seeds by viewing the raid block.</p>
-
-    <h6><span class="fw-bold">Connecting To Livehex:</span></h6>
-    <ul>
-      <li>In the main PKHeX window, navigate to <code span class="fw-bold">Tools</code> -> <code span class="fw-bold">Auto Legality Mod</code> -> <code span class="fw-bold">Open Livehex</code>.</li>
-      <li>On your Switch, open the Homebrew menu and press the <code span class="fw-bold">Y</code> button, take note of the IP address for easy access.</li>
-      <li>In the LiveHeX window, enter the IP address given to you from following step 2 into the designated field, then click <code span class="fw-bold">Connect</code>.</li>
-      <li>If done correctly, you should now see the Pokemon from your boxes inside the main PKHeX Window, if you can, this means that LiveheX is working as intended.</li>
-      <li>In the dropdown menu at the bottom of the LiveHeX window, select the <code span class="fw-bold">Raids</code> option in the dropdown menu. This will open the raid block editor.</li>
-    </ul>
-
-    <p>In the raid block editor all of the seeds for raid dens are visible. The den IDs should match perfectly with PokeFinder, making it quick and easy to find a seed for any specific den.</p>
-    
-  </div>
-</div><br>
-
-<span class="fw-bold" id="figure-3">Figure 3 -</span> Capturesight Overview<p></p>
+<span class="fw-bold" id="figure-2">Figure 2 -</span> Capturesight Overview<p></p>
 <a href="raid/images/figure-3-capturesight-overview-cfw.gif" target="_blank"><img src="raid/images/figure-3-capturesight-overview-cfw.gif" style="width:675px;height:400px;"></a><br /><br />
 
 <div class="card border-dark">
@@ -211,9 +140,7 @@ permalink: /cfw/swsh/raid
     <span class="fw-bold text-light">Capturesight Overview</span>
   </div>
   <div class="card-body card-bg">
-    <p><span class="fw-bold" style="color: #b60606;">THIS SECTION IS FOR MAC / LINUX ONLY. <a href="#figure-2">JUMP TO FIGURE 2</a> INSTEAD FOR WINDOWS OS.</span></p>
-
-    <p>Upon launching Tesla Menu on your switch, you will be presented with something similar to Figure 3. Here is where you will launch the Capturesight (and Luxray) overlays. CaptureSight is used to find your current raid den seed.</p>
+    <p>Upon launching Tesla Menu on your switch, you will be presented with something similar to the above image. Here is where you will launch the Capturesight (and Luxray) overlays. CaptureSight is used to find your current Raid Den seed.</p>
 
     <h6><span class="fw-bold">Using Capturesight:</span></h6>
     <ul>
@@ -223,12 +150,12 @@ permalink: /cfw/swsh/raid
       <li>You can now click around and view the den seed of any active or inactive Max Raid, become familiar with using CaptureSight before continuing.</li>
     </ul>
 
-    <p>In capturesight all of the seeds for raid dens are visible. The den IDs should match perfectly with PokeFinder, making it quick and easy to find a seed for any specific den.</p>
+    <p>In capturesight all of the seeds for raid dens are visible. The Den IDs displayed on Capturesight should line up with the Den IDs displayed by PokeFinder, making it quick and easy to find a seed for any specific Raid Den.</p>
     
   </div>
 </div><br>
 
-<span class="fw-bold" id="figure-4">Figure 4 -</span> Luxray Overview<p></p>
+<span class="fw-bold" id="figure-3">Figure 3 -</span> Luxray Overview<p></p>
 <a href="raid/images/figure-4-luxray-overview-cfw.png" target="_blank"><img src="raid/images/figure-4-luxray-overview-cfw.png" style="width:675px;height:400px;"></a><br /><br />
 
 <div class="card border-dark">
@@ -252,16 +179,33 @@ permalink: /cfw/swsh/raid
   </div>
 </div><br>
 
-<p>You should have gained a good understanding of how to use each of the tools. Now it's time to pick the type of Raid RNG you wish to do, Wish Piece (Beginner) or Natural (Advanced).</p>
+<p>You should have gained a good understanding of how to use each of the tools. Now it's time to pick the type of Raid RNG you wish to do.</p>
 
-<p><span class="fw-bold">Wishing Piece RNG -</span> Throwing a Wishing Piece into a raid den and advancing the seed until you reach your target frame.</p>
-
-<p><span class="fw-bold">Natural RNG -</span> Advancing the seed of a random (non Wishing Piece spawned) raid den, then brute forcing a den encounter into the correct den on the target frame using date skipping.</p>
+<table class="table table-striped" style="width:100%">
+  <thead class="table text-white" style="background-color: #0c0038;">
+      <th scope="col" style="width:25%" class="text-center">RNG Type</th>
+      <th scope="col" class="text-center">Description Of RNG</th>
+      <th scope="col" class="text-center">Difficulty</th>
+   </tr>
+       </thead>
+       <tbody id="results">
+   <tr>
+      <td><span class="fw-bold">Wishing Piece</span></td>
+      <td>Throwing a Wishing Piece into a raid den and advancing the seed until you reach your target frame.</td>
+      <td><span class="fw-bold">Beginner</span></td>
+   </tr>
+   <tr>
+     <td><span class="fw-bold">Natural</span></td>
+     <td>Advancing the seed of a random (non Wishing Piece spawned) raid den, then brute forcing a den encounter into the correct den on the target frame using date skipping.</td>
+     <td><span class="fw-bold">Advanced</span></td>
+   </tr>
+     </tbody>
+</table>
 
 <p><span class="fw-bold">Click on the button that applies to you to get started!</span></p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/raid/wishing-piece">
-  <span class="fw-bold">Wishing Piece RNG (Beginner)!</span>
+  <span class="fw-bold">Wishing Piece RNG!</span>
   <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
   </svg>
@@ -269,7 +213,7 @@ permalink: /cfw/swsh/raid
 <br>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/raid/natural">
-  <span class="fw-bold">Natural Den RNG (Advanced)!</span>
+  <span class="fw-bold">Natural Den RNG!</span>
   <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
   </svg>
