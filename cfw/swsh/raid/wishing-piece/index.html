@@ -48,30 +48,32 @@ permalink: /cfw/swsh/raid/wishing-piece
 </a><br>
 
 <span class="fw-bold" id="figure-1">Figure 1 -</span> Den Finding & Search Filters <p></p>
-<a href="raid/images/figure-1-den-finding.gif" target="_blank"><img src="raid/images/figure-1-den-finding.gif" style="width:675px;height:400px;"></a><br /><br />
+<a href=".raid/images/wishing-piece/figure-1-den-finding.gif" target="_blank"><img src=".raid/images/wishing-piece/figure-1-den-finding.gif" style="width:675px;height:400px;"></a><br /><br />
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="den-and-filter-settings-cfw">
-    <span class="fw-bold text-light">Den Finding & Search Filters</span>
+  <div class="anchored card-header" style="background-color: #0c0038;" id="den-id-config-cfw">
+    <span class="fw-bold text-light">Finding Your Den ID:</span>
   </div>
   <div class="card-body card-bg">
     <p>Before anything else, you will need to pick the Den or Pokemon you wish to RNG abuse in. This is best achieved using an online resource, such as the <a href="https://www.serebii.net/swordshield/maxraidbattledens.shtml">Serebii.net Raid Encounter Tables</a>.</p>
 
-    <p>Navigate to your desired Raid Den in the game and defeat the Pokemon if one is present. Then, throw in a Wishing Piece to save the game. Next, you’ll need to match the in-game den with the corresponding Den ID in PokeFinder. You can refer to the image above for an example of how to do this.</p>
+    <p>Navigate to your desired Raid Den in the game and defeat the Pokemon if one is present. Then, throw in a Wishing Piece to save the game. Next, you'll need to match the in-game den with the corresponding Den ID in PokeFinder. You can refer to the image above for an example of how to do this or follow these steps:</p>
 
     <h6><span class="fw-bold">Finding the Den ID:</span></h6>
     <ol>
       <li>Open the <code span class="fw-bold">Den Map</code> found in the <code span class="fw-bold">Gen 8 Tools</code> dropdown menu of PokeFinder.</li>
       <li>Select the map that corrisponds to the map which contains your desired Pokemon (Wild Area | IoA | CT).</li>
       <li>Select different Den IDs until you find one in the rough location of where you are standing in-game.</li>
-      <li>Select the Den ID in the PokeFinder main window and confirm the species match on PokeFinder and in-game.</li>
+      <li>Once you are confident that you have found your den, select the Den ID in the main window of PokeFinder.</li>
+      <li>In the central portion of PokeFinder, select the den rarity if you are not hunting an event distribution den.</li>
+      <li>Compare the species list inside the dropdown menu and make sure it matches the species that you are observing in-game.</li>
     </ol>
 
     <p>To obtain the correct raid type, especially if your Pokémon appears only in a Rare (PURPLE beam) raid, follow these steps:</p>
 
     <ul>
       <li><span class="fw-bold">Wishing Piece Method -</span> Continuously throw Wishing Pieces into the den until the correct rarity raid appears. Clear the den or throw wishing pieces elsewhere to despawn the raid if necessary.</li>
-      <li><span class="fw-bold">Restart Method -</span> Throw a Wishing Piece into your chosen den, press the Home button once the beam appears. If it’s not the desired rarity, restart the game.</li>
+      <li><span class="fw-bold">Restart Method -</span> Throw a Wishing Piece into your chosen den, press the Home button once the beam appears. If it's not the desired rarity, restart the game.</li>
     </ul>
 
     <p>For event distribution dens, use the first method as event distributions also have red beams.</p>
@@ -81,22 +83,14 @@ permalink: /cfw/swsh/raid/wishing-piece
 </div><br>
 
 <span class="fw-bold" id="figure-2">Figure 2 -</span> Finding Your Current Seed <p></p>
-<a href="raid/images/figure-2-seed-finding.gif" target="_blank"><img src="raid/images/figure-2-seed-finding.gif" style="width:675px;height:400px;"></a><br /><br />
+<a href=".raid/images/wishing-piece/figure-2-seed-finding.png" target="_blank"><img src=".raid/images/wishing-piece/figure-2-seed-finding.png" style="width:675px;height:400px;"></a><br /><br />
 
 <div class="card border-dark">
   <div class="anchored card-header" style="background-color: #0c0038;" id="seed-finding-raid-cfw">
     <span class="fw-bold text-light">Finding Your Current Seed</span>
   </div>
   <div class="card-body card-bg">
-    <p>After finding your Den ID using the recommended method you can begin searching for your current seed. This can be done using either PKHeX or Capturesight, depending on which tools you initially set up.</p>
-
-    <h6><span class="fw-bold">Using PKHeX/LiveHeX:</span></h6>
-    <ol>
-      <li>Open PKHeX, then connect open the LiveHeX sub window and enter the IP of your Switch console, then click <code span class="fw-bold">Connect</code>.</li>
-      <li>Once connected, open the dropdown menu and select one of the Raid options, depending on the map location your desired raid is in.</li>
-      <li>Select your Den ID in the dropdown menu, this should match the Den ID displayed by PokeFinder. The raid information will appear on screen.</li>
-      <li>Confirm that the Den on PKHeX has <code span class="fw-bold">isWishingPiece</code> set to true, then copy the seed and paste into the <code span class="fw-bold">Seed</code> field of PokeFinder.</li>
-    </ol>
+    <p>After finding your Den ID using the above method, you can begin searching for your current seed. This is done by opening the Tesla Menu on your console and launching the CaptureSight overlay.</p>
 
     <h6><span class="fw-bold">Using CaptureSight:</span></h6>
     <ol>
@@ -105,37 +99,38 @@ permalink: /cfw/swsh/raid/wishing-piece
       <li>Select the raid that has a matching Den ID, you should now see the seed of the raid den.</li>
       <li>Manually type the seed given by CaptureSight into the <code span class="fw-bold">Seed</code> field of PokeFinder.</li>
     </ol>
-
-    <p>After finding the correct den type (common, rare, event), and checking the current seed you can begin searching for potential results.</p>
     
   </div>
 </div><br>
 
 <span class="fw-bold" id="figure-3">Figure 3 -</span> Searching For Results<p></p>
-<a href="raid/images/figure-3-result-searching.gif" target="_blank"><img src="raid/images/figure-3-result-searching.gif" style="width:675px;height:400px;"></a><br /><br />
+<a href=".raid/images/wishing-piece/figure-3-result-searching.png" target="_blank"><img src=".raid/images/wishing-piece/figure-3-result-searching.png" style="width:675px;height:400px;"></a><br /><br />
 
 <div class="card border-dark">
   <div class="anchored card-header" style="background-color: #0c0038;" id="result-searching-raid-cfw">
     <span class="fw-bold text-light">Searching For Results</span>
   </div>
   <div class="card-body card-bg">
-    <p>Use one of the methods listed above to find your current seed, then set your Search filters in PokeFinder to match what you are looking for. In the above example we will be searching for any Shiny x, which can be found in common raids with 5* Rarity.</p>
+    <p>At this stage you should know your Den ID and location and have these fields configured properly in the main PokeFinder window. After using CaptureSight find your den seed, set the search filters in PokeFinder to match what you are searching for.</p>
 
+    <h6><span class="fw-bold">Setting search filters:</span></h6>
     <ol>
-      <li>Paste or type your seed into the <code span class="fw-bold">Seed</code> field of PokeFinder.</li>
-      <li>In the central portion, select the raid rarity and desired species to hunt.</li>
-      <li>Set your search filters on the right, such as filtering any shiny raid.</li>
-      <li>Click <code span class="fw-bold">Search</code>, if no results are found or the result is not desirable, repeat the seed checking process mentioned above.</li>
+      <li>Type the seed given by CaptureSight into the <code span class="fw-bold">Seed</code> field of PokeFinder.</li>
+      <li>In the central portion, check that the <code span class="fw-bold">Rarity</code> field has been configured properly.</li>
+      <li>In the <code span class="fw-bold">Species</code> dropdown menu, select your desired species and star count.</li>
+      <li>On the right set your search filters, such as filtering for IVs, Shininess, Nature etc.</li>
+      <li>Click <code span class="fw-bold">Search</code>, if you do not find a desirable result, increase your search range or find a new seed.</li>
     </ol>
 
-    <blockquote>It may take a number of seed checks to find a result, depending on your search filters and amount of frames to search through. Consider being less specific with search filters where possible, or increase the search range for a better chance of finding results.</blockquote>
-  </div>
+    <blockquote>In the above example (Figure 3), after searching we found no desirable results. So we now need to throw a Wishing Piece into a random Raid Den, then head back to ours and throw another Wishing Piece inside to regenerate the seed, then search for results again.</blockquote>
+
+   </div>
 </div><br>
 
 <span class="fw-bold" id="figure-4">Figure 4 -</span> Target Found!<p></p>
-<a href="raid/images/figure-4-target-found.gif" target="_blank"><img src="raid/images/figure-4-target-found.gif" style="width:675px;height:400px;"></a><br /><br />
+<a href=".raid/images/wishing-piece/figure-4-target-found.png" target="_blank"><img src=".raid/images/wishing-piece/figure-4-target-found.png" style="width:675px;height:400px;"></a><br /><br />
 
-<p>We found a Shiny, x Natured Bewear on advance x, it's now time to begin advancing towards the target frame!</p>
+<p>We found a Shiny, Naive Natured Coalossal on advance 85, it's now time to begin advancing towards the target frame!</p>
 
 <hr /><div class="title" style="background-color: #0c0038;">
   <h1 class="text-light text-center pt-3 pb-3">Advancing Towards A Target</h1>
@@ -148,14 +143,16 @@ permalink: /cfw/swsh/raid/wishing-piece
     <span class="fw-bold text-light">Advancing Towards The Target</span>
   </div>
   <div class="card-body card-bg">
-    <p><span class="fw-bold">Target frame found!</span> in Figure 4 we can see that a Shiny, x natured y has been found in z advancements, and that the den we are searching in has a common (RED) beam. It is now time to begin advancing towards the target.</p>
+    <p><span class="fw-bold">Target frame found!</span> in Figure 4 we can see that a Shiny, Naive natured Coalossal has been found in 85 advancements, and that the den we are searching in has a common (RED) beam. It is now time to begin advancing towards the target.</p>
 
     <p>Frames are advanced by 1 per day that has passed, which means we will need to advance x days to hit our target shiny frame. We can trick the game into thinking a day has passed using the date skipping exploit.</p>
+    <hr />
 
-    <h6><span class="fw-bold">How to date skip:</span></h6>
+    <h6><span class="fw-bold">Date Skipping Methods:</span></h6>
     <p>Date-skipping using CFW can be automated using Luxray, which can be opened from the Tesla Menu. Date skipping any other way is a lengthy, manual process.</p>
 
-    <h6><span class="fw-bold">Using Luxray (Recommended):</span></h6>
+    <details open>
+    <summary span class="fw-bold">Using Luxray (Recommended):</summary></h6>
     <ol>
       <li>Open the Tesla Menu, then open Luxray, a calculator will appear.</li>
       <li>Type the number of advancements you wish to do into the calculator.</li>
@@ -163,10 +160,13 @@ permalink: /cfw/swsh/raid/wishing-piece
       <li>Wait for the calculator to count down to 0, then head to your Raid Den (~7000 advances per hour).</li>
     </ol>
 
-    <details>
-      <summary><span class="fw-bold">Manual Methods</span></summary>
+    <p>If your target is >1000 advancements, it is recommended to re-locate to an indoor location to do your advancements to avoid crashing the game.</p>
+  </details><p></p>
 
-    <h6><span class="fw-bold">Fast Method:</span></h6>
+    <details>
+    <summary><span class="fw-bold">Manual Methods</span></summary><p></p>
+
+    <h6><span class="fw-bold">Fast Manual Method:</span></h6>
     <ol>
       <li>Enter an online single or double battle, you can search without a code for quicker wait times.</li>
       <li>Enter airplane mode once you enter the battle. Alternatively you can play out the whole battle if you wish.</li>
@@ -174,10 +174,8 @@ permalink: /cfw/swsh/raid/wishing-piece
       <li>If done correctly your raid should now give off Watts again, as if you have not interacted with it in the first place.</li>
       <li>From here you can date-skip easily by repeating step 3. This exploit needs to be re-activated every time the game is reset.</li>
     </ol>
-
-    <p>If your target is >1000 advancements away and you intend to use the fast method, it is recommended to re-locate to an indoor location to do your advancements to avoid crashing the game.</p>
     
-      <h6><span class="fw-bold">Slow Method:</span></h6>
+      <h6><span class="fw-bold">Slow Manual Method:</span></h6>
       <ol>
         <li>Find an active Max Raid, interact with it, then click "Invite Others".</li>
         <li>From here navigate to the System Settings and change the date ahead by one day.</li>
@@ -187,13 +185,15 @@ permalink: /cfw/swsh/raid/wishing-piece
       </ol>
     </details>
 
-    <blockquote><span class="fw-bold">Note -</span> If you wish to manipulate the species inside the den you must save 3 advancements (or date skips) away from your target! The first 2 days are locked onto a specific species and the third one is decided at random.</blockquote>
+    <blockquote><span class="fw-bold">If you wish to manipulate the den species, you must stop advancing 3 frames before your target!</span> In this example our target is frame 85, so we should do 82 advances if we wish to manipulate the species.</blockquote>
 
   </div>
 </div><br>
 
+<p>Due to the behaviour of raid dens, the 3 day method is vital for manipulating the species. The first 2 advances will have the species locked in place, while the third advance (or the third day) will be able to be manipulated using the method below.</p>
+
 <span class="fw-bold" id="figure-5">Figure 5 -</span> Species Manipulation<p></p>
-<a href="raid/images/figure-5-species-manip.png" target="_blank"><img src="raid/images/figure-5-species-manip.png" style="width:675px;height:400px;"></a><br /><br />
+<a href=".raid/images/wishing-piece/figure-5-species-manip.png" target="_blank"><img src=".raid/images/wishing-piece/figure-5-species-manip.png" style="width:675px;height:400px;"></a><br /><br />
 
 <div class="card border-dark">
   <div class="anchored card-header" style="background-color: #0c0038;" id="frame-advancement-retail">
@@ -202,7 +202,7 @@ permalink: /cfw/swsh/raid/wishing-piece
   <div class="card-body card-bg">
     <p>At this stage you should be exactly 3 frames/advances/days away from your target (today(0), second day(1), third day(2), target day(3)), from here you can manipulate the species on the "target day".</p>
 
-    <p>In the above image, we saved 3 frames away from the target and advanced the seed 3 times, but the species is incorrect, this problem can be corrected by doing the following:</p>
+    <p>In the above image, the game has been saved and we are 3 frames away from the target. After advancing the seed 3 times, the species is incorrect, this problem can be corrected by doing the following:</p>
 
     <h6><span class="fw-bold">Species Manipulation Tutorial:</span></h6>
     <ol>
@@ -219,8 +219,8 @@ permalink: /cfw/swsh/raid/wishing-piece
 </div><br>
 
 <span class="fw-bold" id="figure-6">Figure 6 -</span> Result Found!<p></p>
-<a href="raid/images/figure-6-result-found.gif" target="_blank"><img src="raid/images/figure-6-result-found.gif" style="width:675px;height:400px;"></a><br /><br />
+<a href=".raid/images/wishing-piece/figure-6-result-found.gif" target="_blank"><img src=".raid/images/wishing-piece/figure-6-result-found.gif" style="width:675px;height:400px;"></a><br /><br />
 
-<p>The den now contains the desired species, in this case, a 5 star Bewear! We can now capture the Pokemon or share the raid with friends.</p>
+<p>The den now contains the desired species, in this case, a 5 star Coalossal! We can now capture the Pokemon or share the raid with friends.</p>
 
 <p><span class="fw-bold">That's all there is to manipulating Max Raid Battles using Custom Firmware!</span>
