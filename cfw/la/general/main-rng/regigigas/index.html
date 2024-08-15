@@ -59,7 +59,7 @@ permalink: /cfw/la/legendary/main-rng/regigigas
 
         <h5><span class="fw-bold">Calculating Delay (Step-By-Step)</span></h5>
         <ul>
-            <li>Save outside Regigigas then walk towards it to begin the cutscene, a text box will appear, this is the screen of the <a href="/cfw/la/general/images/main-rng/regigigas/regigigas-final-a-press.png" target="_blank">final A press</a>.</li>
+            <li>Save outside Regigigas then walk towards it to begin the cutscene, a text box will appear, this is the screen of the <a href="/cfw/la/general/images/main-rng/regigigas/regigigas-final-a-press.jpg" target="_blank">final A press</a>.</li>
             <li>Press the <code span class="fw-bold">Home button (⌂)</code> to freeze the RNG state, then check your current seed by running <code span class="fw-bold">EncBotCopySeedLA</code> in Moarencounterbots.</li>
             <li>Paste your seed produced in the <code span class="fw-bold">Logs</code> tab into the Main RNG script, then search without filters. This will provide the starting frame.</li>
             <li>Quickly unpause the game, then mash the <code span class="fw-bold">A Button</code> as quickly as possible to initiate the cutscene and enter the battle.</li>
@@ -76,7 +76,7 @@ permalink: /cfw/la/legendary/main-rng/regigigas
 <br />
 <br />
 
-<p>After following the delay calculation steps and searching for the PID of the encountered Regigigas, we find that it was generated on frame x. Therefore, our delay for this attempt is x. After 5 attempts, we have the following delay values:</p>
+<p>After following the delay calculation steps and searching for the PID of the encountered Regigigas, we find that it was generated on frame 13. Therefore, our delay for this attempt is 13. After 5 attempts, we have the following delay values:</p>
 
 <table class="table table-striped" style="width:100%">
     <thead class="table text-white" style="background-color: #0c0038;">
@@ -87,29 +87,29 @@ permalink: /cfw/la/legendary/main-rng/regigigas
     <tbody>
         <tr>
             <td><span class="fw-bold">Attempt 1</span></td>
-            <td>x</td>
+            <td>13</td>
         </tr>
         <tr>
             <td><span class="fw-bold">Attempt 2</span></td>
-            <td>x</td>
+            <td>13</td>
         </tr>
         <tr>
             <td><span class="fw-bold">Attempt 3</span></td>
-            <td>x</td>
+            <td>10</td>
         </tr>
         <tr>
             <td><span class="fw-bold">Attempt 4</span></td>
-            <td>x</td>
+            <td>11</td>
         </tr>
         <tr>
             <td><span class="fw-bold">Attempt 5</span></td>
-            <td>x</td>
+            <td>16</td>
         </tr>
 
     </tbody>
 </table>
 
-<p>This means a safe delay value to target in future attempts is x-x. The delay values shown here are based on how quickly I was able to mash the A button to get into the battle, your results may vary.</p>
+<p>This means a safe delay value to target in future attempts is 10-16. The delay values shown here are based on how quickly I was able to mash the A button to get into the battle, your results may vary.</p>
 
 <p><span class="fw-bold">Now that we have a rough delay range, it's time to focus on finding a suitable seed and target frame.</span></p>
 
@@ -121,11 +121,11 @@ permalink: /cfw/la/legendary/main-rng/regigigas
 <p>In this example, the filters are configured to search for any Regigigas with 6 perfect IVs (31/31/31/31/31/31). You can further customize the filters if desired, such as specifying a particular nature or optimizing for 0 IV values, such as 0 Attack.</p>
 
 <span class="fw-bold">Figure 3 -</span> Target Frame Found<p></p>
-<a href="/cfw/la/general/images/main-rng/regigigas/target-frame-found-regigigas.gif" target="_blank"><img src="/cfw/la/general/images/main-rng/regigigas/target-frame-found-regigigas.gif" style="width:675px;height:400px;"></a>
+<a href="/cfw/la/general/images/main-rng/regigigas/target-frame-found-regigigas.png" target="_blank"><img src="/cfw/la/general/images/main-rng/regigigas/target-frame-found-regigigas.png" style="width:675px;height:400px;"></a>
 <br />
 <br />
 
-<p>Great! We discovered a xyz natured Regigigas in xyz advances within a cluster of y. A cluster refers to a group of frames that produce the same end result; the larger the cluster, the greater the chances of hitting the correct target frame.</p>
+<p>Great! We discovered a xyz natured Regigigas in 1888 advances within a cluster of 8. A cluster refers to a group of frames that produce the same end result; the larger the cluster, the greater the chances of hitting the correct target frame.</p>
 
 <p>Now, we need to advance close to our target frame. Monitor your RNG state by running <code span class="fw-bold">EncBotRNGMonitorLA</code> in Moarencounterbots; this will track the number of advancements that occur in real time.</p>
 
@@ -148,10 +148,10 @@ permalink: /cfw/la/legendary/main-rng/regigigas
 <br />
 <br />
 
-<p>We are now back next to Regigigas and xyz frames away from the target, now it is time to get to the screen of the final A press and wait for the optimal time to initiate the battle.</p>
+<p>We are now back next to Regigigas and 194 frames away from the target, now it is time to get to the screen of the final A press and wait for the optimal time to initiate the battle.</p>
     
 <span class="fw-bold">Figure 6 -</span> Screen Of Final Button Press<p></p>
-<a href="/cfw/la/general/images/main-rng/regigigas/regigigas-final-a-press.png" target="_blank"><img src="/cfw/la/general/images/main-rng/regigigas/regigigas-final-a-press.png" style="width:675px;height:400px;"></a>
+<a href="/cfw/la/general/images/main-rng/regigigas/regigigas-final-a-press.jpg" target="_blank"><img src="/cfw/la/general/images/main-rng/regigigas/regigigas-final-a-press.jpg" style="width:675px;height:400px;"></a>
 <br />
 <br />
 
@@ -164,12 +164,12 @@ permalink: /cfw/la/legendary/main-rng/regigigas
 <br />
 <br />
 
-<p>Here we can see the target is now on frame x after re-entering the seed into the script. The calculated delay from earlier is roughly y. This means that once the SysBot log output displays that we are on frame z we have reached the desired target frame.</p>
+<p>Here we can see the target is now on frame 92 after re-entering the seed into the script. The calculated delay from earlier is roughly 10-16. This means that once the SysBot log output displays that we are on frame ~82 we have reached the desired target frame.</p>
 
 <p>Once you reach the expected target frame, begin spamming the <code span class="fw-bold">A button</code> as quickly as possible, then inspect the Regigigas using <a href="https://github.com/zyro670/PokeViewer.NET/wiki/">PokeViewer.NET View function</a> to see if we hit the correct target.</p>
 
 <span class="fw-bold">Figure 8 -</span> Result Found!<p></p>
-<a href="/cfw/la/general/images/main-rng/regigigas/result-found-regigigas.png" target="_blank"><img src="/cfw/la/general/images/main-rng/regigigas/result-found-regigigas.png" style="width:675px;height:400px;"></a>
+<a href="/cfw/la/general/images/main-rng/regigigas/result-found-regigigas.jpg" target="_blank"><img src="/cfw/la/general/images/main-rng/regigigas/result-found-regigigas.jpg" style="width:675px;height:400px;"></a>
 <br />
 <br />
 
