@@ -54,30 +54,31 @@ permalink: /cfw/sv/raidcrawler/
       <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0">.NET 8.0</a></li>
     </ul>
 
-    <blockquote>.NET 8.0 is a program dependency, this means that RaidCrawler will be unable to function without having this installed onto your computer.</blockquote>
-
     <h6><span class="fw-bold">Installation Instructions:</span></h6>
     <ol>
-      <li>Download and extract all the contents from the <code class="fw-bold">RaidCrawler.zip</code> into an empty folder.</li>
+      <li>Download and extract the contents from the <code class="fw-bold">RaidCrawler.zip</code> into an empty folder.</li>
       <li>Move the <code class="fw-bold">atmosphere</code> folder (sys-botbase) to the root of your Switch SD card then reboot the console.</li>
       <li>Download and run <code class="fw-bold">dotnet-sdk-8.0.x-win-x64.exe</code>, then go through the setup instructions.</li> 
     </ol>
 
-    <blockquote>Latest versions of RaidCrawler are bundled with a sys-botbase fork, this is required to remotely communicate with your console and utilize application features.</blockquote>
+    <h6><span class="fw-bold">Connectivity Instructions:</span></h6>
+    <ol>
+      <li>Follow all the installation instructions listed above.</li>
+      <li>Launch SysCFW on your console, then enter the Homebrew menu.</li>
+      <li>Press the <code class="fw-bold">Y</code> button to display the local IP address.</li>
+      <li>Type the IP address into the <code class="fw-bold">Switch IP:</code> field of RaidCrawler.</li>
+      <li>Click the <code class="fw-bold">Connect</code> button, you should now see that RaidCrawler has began to scan story progression values.</li>   
+    </ol>
 
     <details>
-      <summary><span class="fw-bold">How to connect to RaidCrawler:</span></summary>
-      <ol>
-        <li>Open the Homebrew menu by clicking the album button on the Switch home screen, then press the Y Button, this will provide the local IP address of the console.</li>
-        <li>Enter the local IP address into the assigned <code class="fw-bold">Switch IP:</code> field on the top left of the RaidCrawler window, then click the <code class="fw-bold">Connect</code> button.</li>
-        <li>If the installation instructions were followed correctly you should now see that RaidCrawler has began to scan the contents of your save file, such as story progression values.</li>
-        <li>Once the <code class="fw-bold">Status</code> at the bottom of the window has changed to <code class="fw-bold">Completed</code>, you should see the contents of all of the active Tera Raid dens.</li>
-      </ol>
+      <summary><span class="fw-bold">Troubleshooting:</span></summary><p></p>
+      <ul>
+        <li>If RaidCrawler does not open, ensure .NET has been properly installed.</li>
+        <li>If your console does not connect to RaidCrawler, ensure Sys-botbass has been properly installed.</li>
+        <li>If RaidCrawler is struggling to communicate with the console, remove any interfering cheats or applications.</li>
+      </ul>
 
-      <blockquote>
-      <p>For read errors, remove all overlays (Tesla, Capturesight etc.) & cheats (Edizon etc.) then reboot the console.</p>
-      For connection errors, re-install sys-botbase and check that your PC and console are using the same network.
-      </blockquote>
+      <small><span class="fw-bold">Common causes of interference -</span> Tesla Menu, Edizon, CaptureSight, Mods & Cheat Codes.</small>
     </details>
     
   </div>
@@ -89,9 +90,9 @@ permalink: /cfw/sv/raidcrawler/
   <h1 class="text-light text-center pt-3 pb-3">Program Setup</h1>
 </div><hr />
 
-<p>The below image displays the window you will be presented with after opening RaidCrawler for the first time. For the purposes of this guide, this is referred to as the "Main window".</p>
+<p><span class="fw-bold" style="color: #b60606;">Ensure that the setup & installation instructions have been properly followed, and that RaidCrawler is able to communicate with your console before continuing.</span></p>
 
-<span class="fw-bold">Figure 1 -</span> RaidCrawler Setup<br />
+<span class="fw-bold">Figure 1 -</span> RaidCrawler Setup<p></p>
 <a href="/cfw/sv/images/raidcrawler/Figure1.gif" target="_blank"><img src="/cfw/sv/images/raidcrawler/Figure1.gif" style="width:675px;height:400px;"></a><br /><br />
 
 <div class="card border-dark">
@@ -99,6 +100,8 @@ permalink: /cfw/sv/raidcrawler/
     <span class="fw-bold text-light">Feature Overview:</span>
   </div>
   <div class="card-body card-bg">
+    <p>Figure 1 displays the window that you will be presented with after opening RaidCrawler for the first time. For the purposes of this guide, this window will be referred to as the "Main Window".</p>
+
     <p>Inside the <code class="fw-bold">Raid Controls</code> box on the main window we can see various buttons, here's some information about what each button does:</p>
     <ul>
       <li><code class="fw-bold">Read Raids</code> - Re-scans for active raids at any given point.</li>
@@ -115,7 +118,7 @@ permalink: /cfw/sv/raidcrawler/
 
 <p>After taking some time to understand the various features of the main window, you will then need to apply the relevant search filters & configure the program settings.</p>
 
-<span class="fw-bold">Figure 2 -</span> Filter Overview<br />
+<span class="fw-bold">Figure 2 -</span> Filter Overview<p></p>
 <a href="/cfw/sv/images/raidcrawler/Figure2.gif" target="_blank"><img src="/cfw/sv/images/raidcrawler/Figure2.gif" style="width:675px;height:400px;"></a><br /><br />
 
 <div class="card border-dark">
@@ -142,7 +145,7 @@ permalink: /cfw/sv/raidcrawler/
   </div>
 </div><br />
 
-<span class="fw-bold">Figure 3 -</span> Settings Overview<br />
+<span class="fw-bold">Figure 3 -</span> Settings Overview<p></p>
 <a href="/cfw/sv/images/raidcrawler/Figure3.gif" target="_blank"><img src="/cfw/sv/images/raidcrawler/Figure3.gif" style="width:675px;height:400px;"></a><br /><br />
 
 <div class="card border-dark">
@@ -152,7 +155,7 @@ permalink: /cfw/sv/raidcrawler/
   <div class="card-body card-bg">
     <p>Clicking the <code span class="fw-bold">Open Settings</code> button will open the RaidCrawler Settings sub-window. Here we can change a bunch of settings that determine how the program operates.</p>
 
-    <p>There are 6 tabs inside this sub window (as seen in Figure 3), these are:</p>
+    <p>There are 6 tabs inside this sub window, these are:</p>
     <ul>
       <li><code class="fw-bold">General</code> - Shows game information such as story progress.</li>
       <li><code class="fw-bold">Match</code> - Decide how you want to be notified when a result has been found.</li>
@@ -162,8 +165,9 @@ permalink: /cfw/sv/raidcrawler/
       <li><code class="fw-bold">About</code> - Shows current program build and developer information.</li>
     </ul>
 
-    <blockquote><a href="https://docs.google.com/document/d/1XDw_sPBv7AfYDiAzZdYie11ZXpw2inG0zOuMp9gRY5o/edit?usp=sharing">This Google document</a> (written by kaylub_iso on Discord) expands on webhooks integration in great detail.</p></blockquote>
-  </div>
+    <blockquote><a href="https://docs.google.com/document/d/1XDw_sPBv7AfYDiAzZdYie11ZXpw2inG0zOuMp9gRY5o/edit?usp=sharing">A simple guide for Discord Webhook integration</a>.</blockquote>
+      
+   </div>
 </div><br />
 
 <div class="card border-dark">
@@ -220,16 +224,18 @@ permalink: /cfw/sv/raidcrawler/
     
   </div>
 </div><br />
-
-<p>From this point the guide assumes you have a stable connection to the program and both the settings & filters have been configured properly. <span class="fw-bold">It's time to begin searching for a target!</span></p>
-
+  
+<p><span class="fw-bold">It's now time to begin searching for a target raid!</span></p>
+  
 <hr /><div class="title" style="background-color: #0c0038;">
   <h1 class="anchored   text-light text-center pt-3 pb-3">The Process</h1>
 </div><hr />
 
+<p><span class="fw-bold" style="color: #b60606;">From this point the guide assumes you have a stable connection to the program and both the settings & filters have been configured properly.</span></p>
+
 <p>In this example we will be searching for any shiny Pokemon, you can be more specific with the filters if you wish, such as filtering for a specific species or IV values.</p>
 
-<span class="fw-bold">Figure 4 -</span> Filter Configuration<br />
+<span class="fw-bold">Figure 4 -</span> Filter Configuration<p></p>
 <a href="/cfw/sv/images/raidcrawler/Figure4.png" target="_blank"><img src="/cfw/sv/images/raidcrawler/Figure4.png" style="width:675px;height:400px;"></a><br /><br />
 
 <div class="card border-dark">
@@ -237,7 +243,7 @@ permalink: /cfw/sv/raidcrawler/
     <span class="fw-bold text-light">Filter Configuration</span>
   </div>
   <div class="card-body card-bg">
-    <p>The filters have been set to search for any shiny Pokemon (as seen in figure 4), we can now close this sub-window and begin scanning for a desired raid.</p>
+    <p>In Figure 4, the filters have been set to search for any shiny Pokemon, we can now close this sub-window and begin scanning for a desired raid.</p>
 
     <p>Enter the overworld in-game and pause to open the map, then click <code class="fw-bold">Connect</code> on the main window of RaidCrawler. After you have connected and have the map open, desync any controllers that are currently connected. This will allow us to effectively use the date skipping routine and automate the hunting process.</p>
 
@@ -245,7 +251,7 @@ permalink: /cfw/sv/raidcrawler/
   </div>
 </div><br />
 
-<span class="fw-bold">Figure 5 -</span> Target Found!<br />
+<span class="fw-bold">Figure 5 -</span> Target Found!<p></p>
 <a href="/cfw/sv/images/raidcrawler/Figure5.gif" target="_blank"><img src="/cfw/sv/images/raidcrawler/Figure5.gif" style="width:675px;height:400px;"></a><br /><br />
 
 <div class="card border-dark">
@@ -267,11 +273,11 @@ permalink: /cfw/sv/raidcrawler/
   </div>
 </div><br />
 
-<span class="fw-bold">Figure 6 -</span> Result Found!<br />
+<span class="fw-bold">Figure 6 -</span> Result Found!<p></p>
 <a href="/cfw/sv/images/raidcrawler/Figure6.jpg" target="_blank"><img src="/cfw/sv/images/raidcrawler/Figure6.jpg" style="width:675px;height:400px;"></a><br /><br />
 
 <p>The raid matches the output displayed by RaidCrawler, once you have confirmed a match you can either capture the raid for yourself, or reset the game and host the raid for members of the community.</p>
 
-<blockquote>Autosave should be disabled, and the game should be manually saved before entering the raid if you intend to share with other players.</blockquote>
+<p>Autosave should be disabled, and the game should be manually saved before entering the raid if you intend to share with other players.
   
 <p><span class="fw-bold">That's all there is to it!</span> You can now repeat everything you have learned from this guide to effectively hunt for any Tera Raids that you desire.</p>
