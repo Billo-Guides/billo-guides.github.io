@@ -30,3 +30,95 @@ permalink: /cfw/bdsp/static/encounter/
 <div class="title" style="background-color: #96324c;">
   <h1 class="text-light text-center pt-3 pb-3">BDSP Static Encounter RNG (CFW)</h1>
 </div><hr />
+
+<p>This section of the guide covers how to RNG manipulate Pokemon from static encounters. Static encounters are defined as Pokemon that engage in a wild battle after interacting with them, not to be confused randomly occuring wild encounters.</p>
+
+<p><span class="fw-bold" style="color: #b60606;">From here it is assumed that you have read and followed all of the setup and installation instructions found on the initial page of this guide.</span></p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp">
+  Missed some setup instructions? <span class="fw-bold">Click here to go back!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a>
+<br>
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #96324c;" id="explaining-bdsp-rng">
+    <span class="fw-bold text-light">How Does This Work?</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>BDSP has a constantly advancing seed which controls all random in-game events, such as which Pokemon you will encounter, if the Pokemon will be shiny, what stats it has etc.</p>
+
+    <p>We can use Moarencounterbots to monitor seeds in real time, as well as display how many advancements have occured from the starting seed, it can automatically advance the seed until a given point, then pause the game after a certain number of advancements have occured.</p>
+
+    <p>Essentially, Moarencounterbots is capable of doing the "chore" work automatically so you don't have to. You just need to search for targets yourself, let Moarencounterbots advance the RNG state, and actually hit the correct seed that produces the result you want.</p>
+
+  </div>
+</div><br>
+
+<p>For static encounters, you will need to account for what is known as a "delay". In BDSP, the term delay is used to describe the amount of frames the game requires to generate a Pokemon, this needs to be factored in order to hit the correct target frame. A list of recommended delays can be found in the table below.</p>
+
+<table class="table table-striped" style="width:100%">
+  <thead class="table text-white" style="background-color: #96324c;">
+      <th scope="col" style="width:25%" class="text-center">Type Of Encounter</th>
+      <th scope="col" style="width:25%" class="text-center">Recommended Delay</th>
+   </tr>
+       </thead>
+       <tbody>
+    <tr>
+      <td class="text-center"><span class="fw-bold">Starter Pokemon</span></td>
+      <td class="text-center">65</td>
+    </tr>
+    <tr>
+      <td class="text-center"><span class="fw-bold">Honey Tree</span></td>
+      <td class="text-center">2</td>
+    </tr>
+    <tr>
+      <td class="text-center"><span class="fw-bold">Dialga/Palkia</span></td>
+      <td class="text-center">84</td>
+    </tr>
+    <tr>
+      <td class="text-center"><span class="fw-bold">Uxie/Mesprit/Azelf</span></td>
+      <td class="text-center">85</td>
+    </tr>
+    <tr>
+      <td class="text-center"><span class="fw-bold">Giratina/Heatran/Regigigas</span></td>
+      <td class="text-center">84-85</td>
+    </tr>
+    <tr>
+      <td class="text-center"><span class="fw-bold">Cresselia</span></td>
+      <td class="text-center">102-104</td>
+    </tr>
+    <tr>
+      <td class="text-center"><span class="fw-bold">Ramanas Park Legends</span></td>
+      <td class="text-center">84</td>
+    </tr>
+    <tr>
+      <td class="text-center"><span class="fw-bold">Shaymin</span></td>
+      <td class="text-center">1350-1385</td>
+    </tr>
+    <tr>
+      <td class="text-center"><span class="fw-bold">Darkrai</span></td>
+      <td class="text-center">84-85</td>
+    </tr>
+    <tr>
+      <td class="text-center"><span class="fw-bold">Arceus</span></td>
+      <td class="text-center">84-85</td>
+    </tr>
+    <tr>
+      <td class="text-center"><span class="fw-bold">Rotom</span></td>
+      <td class="text-center">89-90</td>
+    </tr>
+    <tr>
+      <td class="text-center"><span class="fw-bold">Drifloon</span></td>
+      <td class="text-center">84</td>
+    </tr>
+    <tr>
+      <td class="text-center"><span class="fw-bold">Spiritomb</span></td>
+      <td class="text-center">84</td>
+    </tr>
+
+     </tbody>
+</table>
+
