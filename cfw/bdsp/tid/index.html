@@ -58,51 +58,50 @@ permalink: /cfw/bdsp/trainer-id/
 </div><br>
 
 <span class="fw-bold">Figure 1 -</span> SysBot Setup<p></p>
-<a href=".cfw/bdsp/trainer-id/figure-1-sysbot-setup-tid.gif" target="_blank"><img src="cfw/bdsp/trainer-id/figure-1-sysbot-setup-tid.gif" style="width:675px;height:400px;"></a><br /><br />
+<a href="/cfw/bdsp/trainer-id/figure-1-sysbot-setup-tid.gif" target="_blank"><img src="/cfw/bdsp/trainer-id/figure-1-sysbot-setup-tid.gif" class="img-fluid"></a><br /><br />
 
 <div class="card border-dark">
   <div class="anchored card-header" style="background-color: #96324c;" id="tid-rng-setup">
-    <span class="fw-bold text-light">TID RNG Bot Setup:</span>
+    <span class="fw-bold text-light">Bot Setup (TID):</span>
   </div>
   <div class="card-body card-bg">
+    <p>Opening the <code span class="fw-bold">Hub</code> tab displays the bot settings, here we can configure the bot to search for specific TIDs within any given number of advancements. Figure 1 displays a rough idea of what your settings should look like after proper configuration.</p>
+
     <h6><span class="fw-bold">Settings Configuration:</span></h6>
-    <p>Settings can be found by opening the <code span class="fw-bold">Hub</code> tab, here we can toggle the # of frames to search through and create a list of desired Trainer IDs to stop on by doing the following:</p>
-
     <ul>
-      <li>In the <code span class="fw-bold">EncounterRNGBS</code> dropdown menu, navigate to <code span class="fw-bold">MaxTIDAdvances</code>, then set the amount of advances to search through (10000 advances takes roughly 2.5 hours).</li><p></p>
-      <li>In the same dropdown (<code span class="fw-bold">EncounterRNGBS</code>), set the <code span class="fw-bold">MonitorRefreshRate</code> to 0, this will be important for the 5% of work we need to do ourselves.</li><p></p>
-      <li>In the <code span class="fw-bold">StopConditions</code> dropdown menu, navigate to <code span class="fw-bold">TargetTIDBS</code>, then enter a comma seperated list of acceptable TIDs (e.g 000001, 010101, 111111, etc.).</li><p></p>
+      <li>Navigate to the <code span class="fw-bold">Hub</code> tab, then open the <code span class="fw-bold">EncounterRNGBS</code> dropdown menu.</li>
+      <li>Set the <code span class="fw-bold">MaxTIDAdvances</code> to a suitable number (10,000 advances takes ~2 hours).</li>
+      <li>Set the <code span class="fw-bold">MonitorRefreshRate</code> to 0 if you have not already done so.</li>
+      <li>Now open the <code span class="fw-bold">StopConditions</code> dropdown menu and navigate to <code span class="fw-bold">TargetTIDBS</code>.</li>
+      <li>Enter a comma separated list of acceptable TIDs (123456, 111111, 123123, etc.), then close and re-open SysBot.exe.</li>
     </ul>
-    
+
     <h6><span class="fw-bold">Bot Activation:</span></h6>
-    <p>Once you have configured your settings, it is good practice to restart the bot entirely to lock them in place. After doing so, add the <code span class="fw-bold">EncBotTIDBS</code> bot by doing the following:</p>
+    <ul>
+      <li>Navigate to the <code span class="fw-bold">Bots</code> tab, then type the local IP address of your console into the assigned field.</li>
+      <li>Select <code span class="fw-bold">EncBotTIDBS</code> from the dropdown menu on the right and click the <code span class="fw-bold">Add</code> button.</li>
+      <li>Open the game on your console with no save file loaded. You should now be on the language select screen.</li>
+      <li>Disconnect all controllers (JoyCons, Pro Controllers etc.), then click the <code span class="fw-bold">Start All</code> button on SysBot.</li>
+      <li>Observe your console and the SysBot <code span class="fw-bold">Logs</code> tab to confirm that the bot is functioning as intended.</li>
+    </ul>
 
-    <ol>
-      <li>Type the Local IP address of your console into the assigned field (how to find your Local IP is covered on the main page).</li><p></p>
-      <li>Select the <code span class="fw-bold">EncBotTIDBS</code> routine from the dropdown menu on the right of the SysBot window.</li><p></p>
-      <li>Click the <code span class="fw-bold">Add</code> button, you should now see the bot has been added to the list on the <code span class="fw-bold">Bots</code> tab.</li><p></p>
-      <li>Open the game with no save file loaded, you should be on the language select screen at this stage, now disconnect any controllers and click <code span class="fw-bold">Start All</code>.</li><p></p>
-      <li>The bot will now begin cycling through frames and resetting the game until a result has been found, then advance to roughly ~15 frames from the target and enter the home menu once complete.</li>
-    </ol>
+    <p>The bot should have began to cycle through frames and resetting the game if done correctly. It will repeat this process until a result has been found and advance roughly 15 frames from your target, then pause the game by entering the Home Menu.</p>
 
-    <blockquote>The bot assumes that your desired language is first on the selection screen, change your Switch language setting to your desired language if you have not already done so.</blockquote>
-  </div>
+   </div>
 </div><br>
 
-<p>Figure 1 displays a rough idea of how your SysBot settings should look before adding the bot. The amount of advances to search through and TID list may differ depending on your search filters.</p>
-
 <span class="fw-bold">Figure 2 -</span> Routine Added<p></p>
-<a href=".cfw/bdsp/trainer-id/figure-2-sysbot-routine-added.gif" target="_blank"><img src="cfw/bdsp/trainer-id/figure-2-sysbot-routine-added.gif" style="width:675px;height:400px;"></a><br /><br />
+<a href="/cfw/bdsp/trainer-id/figure-2-sysbot-routine-added.gif" target="_blank"><img src="/cfw/bdsp/trainer-id/figure-2-sysbot-routine-added.gif" class="img-fluid"></a><br /><br />
 
 <p>Settings have been properly configured and <code span class="fw-bold">EncBotTIDBS</code> has been added to the list of active bots, it is now time to set up the game properly by opening a new save file on the language select screen.</p>
 
 <span class="fw-bold">Figure 3 -</span> Game Setup<p></p>
-<a href=".cfw/bdsp/trainer-id/figure-3-game-setup-tid.jpg" target="_blank"><img src="cfw/bdsp/trainer-id/figure-3-game-setup-tid.jpg" style="width:675px;height:400px;"></a><br /><br />
+<a href="/cfw/bdsp/trainer-id/figure-3-game-setup-tid.jpg" target="_blank"><img src="/cfw/bdsp/trainer-id/figure-3-game-setup-tid.jpg" class="img-fluid"></a><br /><br />
 
 <p>Once you have entered the language select screen, disconnect all controllers, then press the <code span class="fw-bold">Start All</code> button to initiate the routine. We will then wait until a desired result has been found (this may take a while).</p>
 
-<span class="fw-bold">Figure 4 -</span> Result Found<p></p>
-<a href=".cfw/bdsp/trainer-id/figure-4-result-found-tid.png" target="_blank"><img src="cfw/bdsp/trainer-id/figure-4-result-found-tid.png" style="width:675px;height:400px;"></a><br /><br />
+<span class="fw-bold">Figure 4 -</span> Target Found<p></p>
+<a href="/cfw/bdsp/trainer-id/figure-4-result-found-tid.png" target="_blank"><img src="/cfw/bdsp/trainer-id/figure-4-result-found-tid.png" class="img-fluid"></a><br /><br />
 
 <p>TID found! View the <code span class="fw-bold">Logs</code> tab to see which of your desired TIDs has been found, keep the game paused on the Home Menu at this stage to avoid any unwanted advancements.</p>
 
@@ -114,14 +113,16 @@ permalink: /cfw/bdsp/trainer-id/
   </div>
   <div class="card-body card-bg">
     <h6><span class="fw-bold">Monitoring the RNG state:</span></h6>
-    <p>Moarencounterbots is capable of monitoring the Main RNG state in real time and able to track the amount of advances that have occured since monitoring began. This is done using the <code span class="fw-bold">EncBotRNGMonitorBS</code> routine:</p>
-
+    
     <ol>
-      <li>Confirm that <code span class="fw-bold">MonitorRefreshRate</code> is set to <code span class="fw-bold">0</code>, as described above.</li><p></p>
-      <li>With the console in the in the HOME menu, navigate to the <code span class="fw-bold">Bots</code> tab of Moarencounterbots, then add <code span class="fw-bold">EncBotRNGMonitorBS</code>.</li><p></p>
-      <li>Click the <code span class="fw-bold">Start All</code> button to run the bot, you should now see that the RNG state is being monitored in the <code span class="fw-bold">Logs</code> tab.</li><p></p>
-      <li>Watch the logs until the correct amount of advancements have passed, then quickly press the <code span class="fw-bold">A</code> button, your TID will be generated at this point.</li><p></p>
-      <li>Name your character and mash through all the dialogue until you are standing in the overworld in-game, then reconnect the bot. You should see your OT and Trainer ID in the logs.</li>
+      <li>Take note of the amount of advancements required to reach your target frame according to the <code span class="fw-bold">Logs</code> tab of SysBot.</li><p></p>
+      <li>With the console still in the Home Menu, navigate to the <code span class="fw-bold">Bots</code> tab, right click <code span class="fw-bold">EncBotTIDBS</code> to remove it.</li><p></p>
+      <li>Open the dropdown menu on the right once more, this time add <code span class="fw-bold">EncBotRNGMonitorBS</code> to the list of active bots instead.</li><p></p>
+      <li>Click the <code span class="fw-bold">Start All</code> button and navigate to the <code span class="fw-bold">Logs</code> tab to monitor the RNG state.</li><p></p>
+      <li>Monitor the amount of advancements that have occured in the logs tab until the correct amount of advancements have occured.</li><p></p>
+      <li>Press the <code span class="fw-bold">A</code> button once you see the correct number of advancements on screen, this will lock in your TID unless you back out.</li><p></p>
+      <li>Name your character, then mash through the dialogue until you are standing in the overworld, reconnect the bot at this stage.</li><p></p>
+      <li>You should now see your Trainer ID and player name inside the <code span class="fw-bold">Logs</code> tab, confirm that this matches your expected TID.</li>
     </ol>
 
     <blockquote><span class="fw-bold">Example -</span> If there are 12 advancements until we reach the target frame, wait until 12 advancements have passed according to the logs before pressing the <code span class="fw-bold">A</code> button.</blockquote>
@@ -129,10 +130,12 @@ permalink: /cfw/bdsp/trainer-id/
 </div><br>
 
 <span class="fw-bold">Figure 5 -</span> Target Frame Hit<p></p>
-<a href=".cfw/bdsp/trainer-id/figure-5-target-frame-hit.gif" target="_blank"><img src="cfw/bdsp/trainer-id/figure-5-target-frame-hit.gif" style="width:675px;height:400px;"></a><br /><br />
+<a href="/cfw/bdsp/trainer-id/figure-5-target-frame-hit.gif" target="_blank"><img src="/cfw/bdsp/trainer-id/figure-5-target-frame-hit.gif" class="img-fluid"></a><br /><br />
+
+<p>We can see that 15 advancements have occured, so we should quickly lock in the TID at this point and head into the overworld in-game to confirm the TID.</p>
 
 <span class="fw-bold">Figure 6 -</span> In-game Result<p></p>
-<a href=".cfw/bdsp/trainer-id/figure-6-in-game-result.jpg" target="_blank"><img src="cfw/bdsp/trainer-id/figure-6-in-game-result.jpg" style="width:675px;height:400px;"></a><br /><br />
+<a href="/cfw/bdsp/trainer-id/figure-6-in-game-result.png" target="_blank"><img src="/cfw/bdsp/trainer-id/figure-6-in-game-result.png" class="img-fluid"></a><br /><br />
 
 <p><span class="fw-bold">The logs confirm that the correct target frame has been hit, mission accomplished!</span></p>
 
