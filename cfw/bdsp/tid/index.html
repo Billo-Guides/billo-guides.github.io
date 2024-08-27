@@ -58,7 +58,7 @@ permalink: /cfw/bdsp/trainer-id/
 </div><br>
 
 <span class="fw-bold">Figure 1 -</span> SysBot Setup<p></p>
-<a href="/cfw/bdsp/trainer-id/figure-1-sysbot-setup-tid.gif" target="_blank"><img src="/cfw/bdsp/trainer-id/figure-1-sysbot-setup-tid.gif" class="img-fluid"></a><br /><br />
+<a href="/cfw/bdsp/trainer-id/figure-1-sysbot-setup-tid.png" target="_blank"><img src="/cfw/bdsp/trainer-id/figure-1-sysbot-setup-tid.png" class="img-fluid"></a><br /><br />
 
 <div class="card border-dark">
   <div class="anchored card-header" style="background-color: #96324c;" id="tid-rng-setup">
@@ -91,21 +91,21 @@ permalink: /cfw/bdsp/trainer-id/
 </div><br>
 
 <span class="fw-bold">Figure 2 -</span> Routine Added<p></p>
-<a href="/cfw/bdsp/trainer-id/figure-2-sysbot-routine-added.gif" target="_blank"><img src="/cfw/bdsp/trainer-id/figure-2-sysbot-routine-added.gif" class="img-fluid"></a><br /><br />
+<a href="/cfw/bdsp/trainer-id/figure-2-sysbot-routine-added.png" target="_blank"><img src="/cfw/bdsp/trainer-id/figure-2-sysbot-routine-added.png" class="img-fluid"></a><br /><br />
 
 <p>Settings have been properly configured and <code span class="fw-bold">EncBotTIDBS</code> has been added to the list of active bots, it is now time to set up the game properly by opening a new save file on the language select screen.</p>
 
 <span class="fw-bold">Figure 3 -</span> Game Setup<p></p>
-<a href="/cfw/bdsp/trainer-id/figure-3-game-setup-tid.jpg" target="_blank"><img src="/cfw/bdsp/trainer-id/figure-3-game-setup-tid.jpg" class="img-fluid"></a><br /><br />
+<a href="/cfw/bdsp/trainer-id/figure-3-game-setup-tid.png" target="_blank"><img src="/cfw/bdsp/trainer-id/figure-3-game-setup-tid.png" class="img-fluid"></a><br /><br />
 
 <p>Once you have entered the language select screen, disconnect all controllers, then press the <code span class="fw-bold">Start All</code> button to initiate the routine. We will then wait until a desired result has been found (this may take a while).</p>
 
 <span class="fw-bold">Figure 4 -</span> Target Found<p></p>
-<a href="/cfw/bdsp/trainer-id/figure-4-result-found-tid.png" target="_blank"><img src="/cfw/bdsp/trainer-id/figure-4-result-found-tid.png" class="img-fluid"></a><br /><br />
+<a href="/cfw/bdsp/trainer-id/figure-4-target-found-tid.png" target="_blank"><img src="/cfw/bdsp/trainer-id/figure-4-target-found-tid.png" class="img-fluid"></a><br /><br />
 
 <p>TID found! View the <code span class="fw-bold">Logs</code> tab to see which of your desired TIDs has been found, keep the game paused on the Home Menu at this stage to avoid any unwanted advancements.</p>
 
-<p>In this example the bot has found a TID value of <code span class="fw-bold">123456</code>, and has paused 15 frames away from the target, we now need to understand how to hit the correct target frame in order to get our desired TID.</p>
+<p>In this example the bot has found a TID value of <code span class="fw-bold">000005</code>, and has paused 14 frames away from the target, we now need to understand how to hit the correct target frame in order to get our desired TID.</p>
 
 <div class="card border-dark">
   <div class="anchored card-header" style="background-color: #96324c;" id="hitting-desired-tid">
@@ -118,21 +118,20 @@ permalink: /cfw/bdsp/trainer-id/
       <li>Take note of the amount of advancements required to reach your target frame according to the <code span class="fw-bold">Logs</code> tab of SysBot.</li><p></p>
       <li>With the console still in the Home Menu, navigate to the <code span class="fw-bold">Bots</code> tab, right click <code span class="fw-bold">EncBotTIDBS</code> to remove it.</li><p></p>
       <li>Open the dropdown menu on the right once more, this time add <code span class="fw-bold">EncBotRNGMonitorBS</code> to the list of active bots instead.</li><p></p>
-      <li>Click the <code span class="fw-bold">Start All</code> button and navigate to the <code span class="fw-bold">Logs</code> tab to monitor the RNG state.</li><p></p>
-      <li>Monitor the amount of advancements that have occured in the logs tab until the correct amount of advancements have occured.</li><p></p>
+      <li>Click the <code span class="fw-bold">Start All</code> button and navigate to the <code span class="fw-bold">Logs</code> tab to monitor the RNG state until the target frame has been reached.</li><p></p>
       <li>Press the <code span class="fw-bold">A</code> button once you see the correct number of advancements on screen, this will lock in your TID unless you back out.</li><p></p>
-      <li>Name your character, then mash through the dialogue until you are standing in the overworld, reconnect the bot at this stage.</li><p></p>
+      <li>Name your character, then mash through the dialogue until you are standing in the overworld outside of the players home, reconnect the bot at this stage.</li><p></p>
       <li>You should now see your Trainer ID and player name inside the <code span class="fw-bold">Logs</code> tab, confirm that this matches your expected TID.</li>
     </ol>
 
-    <blockquote><span class="fw-bold">Example -</span> If there are 12 advancements until we reach the target frame, wait until 12 advancements have passed according to the logs before pressing the <code span class="fw-bold">A</code> button.</blockquote>
+    <blockquote><span class="fw-bold">Example -</span> If there are 14 advancements until we reach the target frame, wait until 14 advancements have passed according to the logs before pressing the <code span class="fw-bold">A</code> button.</blockquote>
   </div>
 </div><br>
 
 <span class="fw-bold">Figure 5 -</span> Target Frame Hit<p></p>
-<a href="/cfw/bdsp/trainer-id/figure-5-target-frame-hit.gif" target="_blank"><img src="/cfw/bdsp/trainer-id/figure-5-target-frame-hit.gif" class="img-fluid"></a><br /><br />
+<a href="/cfw/bdsp/trainer-id/figure-5-target-frame-hit.png" target="_blank"><img src="/cfw/bdsp/trainer-id/figure-5-target-frame-hit.png" class="img-fluid"></a><br /><br />
 
-<p>We can see that 15 advancements have occured, so we should quickly lock in the TID at this point and head into the overworld in-game to confirm the TID.</p>
+<p>We can see that 14 advancements have occured, so we should quickly press the A button to lock in the TID at this point, then head into the overworld in-game to confirm the TID.</p>
 
 <span class="fw-bold">Figure 6 -</span> In-game Result<p></p>
 <a href="/cfw/bdsp/trainer-id/figure-6-in-game-result.png" target="_blank"><img src="/cfw/bdsp/trainer-id/figure-6-in-game-result.png" class="img-fluid"></a><br /><br />
