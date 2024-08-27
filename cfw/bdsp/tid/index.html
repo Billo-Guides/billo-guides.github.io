@@ -48,6 +48,23 @@ permalink: /cfw/bdsp/trainer-id/
 <br>
 
 <div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #96324c;" id="explaining-bdsp-rng">
+    <span class="fw-bold text-light">How Does This Work?</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>BDSP has a constantly advancing seed which controls all random in-game events, such as which Pokemon you will encounter, if the Pokemon will be shiny, what stats it has etc. This same value also determines what Trainer ID a player will receive upon starting a new save file.</p>
+
+    <p>We can use Moarencounterbots to monitor seeds in real time, as well as display how many advancements have occured from the starting seed, it can automatically advance the seed until a given point, then pause the game after a certain amount of advancements have occured.</p>
+
+    <p>Essentially, Moarencounterbots is capable of doing the "chore" work automatically so you don't have to. You just need to search for targets yourself, and actually the correct seed that produces the result you want.</p>
+
+  </div>
+</div><br>
+
+<span class="fw-bold">Figure 1 -</span> SysBot Setup<p></p>
+<a href=".cfw/bdsp/trainer-id/figure-1-sysbot-setup-tid.gif" target="_blank"><img src="cfw/bdsp/trainer-id/figure-1-sysbot-setup-tid.gif" style="width:675px;height:400px;"></a><br /><br />
+
+<div class="card border-dark">
   <div class="anchored card-header" style="background-color: #96324c;" id="tid-rng-setup">
     <span class="fw-bold text-light">TID RNG Bot Setup:</span>
   </div>
@@ -76,25 +93,22 @@ permalink: /cfw/bdsp/trainer-id/
   </div>
 </div><br>
 
-<span class="fw-bold">Figure 1 -</span> SysBot Setup<p></p>
-<a href=".cfw/bdsp/trainer-id/figure-1-sysbot-setup-tid.gif" target="_blank"><img src="cfw/bdsp/trainer-id/figure-1-sysbot-setup-tid.gif" style="width:675px;height:400px;"></a><br /><br />
-
 <p>Figure 1 displays a rough idea of how your SysBot settings should look before adding the bot. The amount of advances to search through and TID list may differ depending on your search filters.</p>
 
 <span class="fw-bold">Figure 2 -</span> Routine Added<p></p>
 <a href=".cfw/bdsp/trainer-id/figure-2-sysbot-routine-added.gif" target="_blank"><img src="cfw/bdsp/trainer-id/figure-2-sysbot-routine-added.gif" style="width:675px;height:400px;"></a><br /><br />
 
-<p>We have now correctly configured the settings and added <code span class="fw-bold">EncBotTIDBS</code> to the list of active bots, it is now time to set up the game properly by opening a new save file on the language select screen.</p>
+<p>Settings have been properly configured and <code span class="fw-bold">EncBotTIDBS</code> has been added to the list of active bots, it is now time to set up the game properly by opening a new save file on the language select screen.</p>
 
 <span class="fw-bold">Figure 3 -</span> Game Setup<p></p>
 <a href=".cfw/bdsp/trainer-id/figure-3-game-setup-tid.jpg" target="_blank"><img src="cfw/bdsp/trainer-id/figure-3-game-setup-tid.jpg" style="width:675px;height:400px;"></a><br /><br />
 
-<p>Great! Now disconnect all controllers (JoyCons, Pro Controllers etc.) and press the <code span class="fw-bold">Start All</code> button to initiate the routine. We will then wait until a desired result has been found (this may take a while).</p>
+<p>Once you have entered the language select screen, disconnect all controllers, then press the <code span class="fw-bold">Start All</code> button to initiate the routine. We will then wait until a desired result has been found (this may take a while).</p>
 
 <span class="fw-bold">Figure 4 -</span> Result Found<p></p>
 <a href=".cfw/bdsp/trainer-id/figure-4-result-found-tid.png" target="_blank"><img src="cfw/bdsp/trainer-id/figure-4-result-found-tid.png" style="width:675px;height:400px;"></a><br /><br />
 
-<p>We found a TID! Enter the <code span class="fw-bold">Logs</code> tab to see which of your desired TIDs has been found, keep the game paused on the Home Menu at this stage to avoid any unwanted advancements.</p>
+<p>TID found! View the <code span class="fw-bold">Logs</code> tab to see which of your desired TIDs has been found, keep the game paused on the Home Menu at this stage to avoid any unwanted advancements.</p>
 
 <p>In this example the bot has found a TID value of <code span class="fw-bold">123456</code>, and has paused 15 frames away from the target, we now need to understand how to hit the correct target frame in order to get our desired TID.</p>
 
