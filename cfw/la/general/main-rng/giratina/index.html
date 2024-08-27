@@ -74,9 +74,7 @@ permalink: /cfw/la/legendary/main-rng/giratina
 <br>
 
 <span class="fw-bold">Figure 1 -</span> Calculating Delay<p></p>
-<a href="/cfw/la/general/images/main-rng/giratina/delay-calc-giratina.gif" target="_blank"><img src="/cfw/la/general/images/main-rng/giratina/delay-calc-giratina.gif" style="width:675px;height:400px;"></a>
-<br />
-<br />
+<a href="/cfw/la/general/images/main-rng/giratina/delay-calc-giratina.gif" target="_blank"><img src="/cfw/la/general/images/main-rng/giratina/delay-calc-giratina.gif" class="img-fluid"></a><br /><br />
 
 <p>After following the delay calculation steps and searching for the PID of the encountered Giratina, we find that it was generated on frame x. Therefore, our delay for this attempt is x. After 5 attempts, we have the following delay values:</p>
 
@@ -116,14 +114,14 @@ permalink: /cfw/la/legendary/main-rng/giratina
 <p><span class="fw-bold">Now that we have a rough delay range, it's time to focus on finding a suitable seed and target frame.</span></p>
 
 <span class="fw-bold">Figure 2 -</span> Setting Filters<p></p>
-<a href="/cfw/la/general/images/main-rng/giratina/filters-giratina.gif" target="_blank"><img src="/cfw/la/general/images/main-rng/giratina/filters-giratina.gif" style="width:675px;height:400px;"></a>
+<a href="/cfw/la/general/images/main-rng/giratina/filters-giratina.gif" target="_blank"><img src="/cfw/la/general/images/main-rng/giratina/filters-giratina.gif" class="img-fluid"></a>
 <br />
 <br />
 
 <p>In this example, the filters are configured to search for any Giratina with 6 perfect IVs (31/31/31/31/31/31). You can further customize the filters if desired, such as specifying a particular nature or optimizing for 0 IV values, such as 0 Attack.</p>
 
 <span class="fw-bold">Figure 3 -</span> Target Frame Found<p></p>
-<a href="/cfw/la/general/images/main-rng/giratina/target-frame-found-giratina.png" target="_blank"><img src="/cfw/la/general/images/main-rng/giratina/target-frame-found-giratina.png" style="width:675px;height:400px;"></a>
+<a href="/cfw/la/general/images/main-rng/giratina/target-frame-found-giratina.png" target="_blank"><img src="/cfw/la/general/images/main-rng/giratina/target-frame-found-giratina.png" class="img-fluid"></a>
 <br />
 <br />
 
@@ -132,9 +130,7 @@ permalink: /cfw/la/legendary/main-rng/giratina
 <p>Now, we need to advance close to our target frame. Monitor your RNG state by running <code span class="fw-bold">EncBotRNGMonitorLA</code> in Moarencounterbots; this will track the number of advancements that occur in real time.</p>
 
 <span class="fw-bold">Figure 4 -</span> RNG State Monitoring Using EncBotRNGMonitorLA<p></p>
-<a href="/cfw/la/general/images/main-rng/giratina/rng-state-monitoring.gif" target="_blank"><img src="/cfw/la/general/images/main-rng/giratina/rng-state-monitoring.gif" style="width:675px;height:400px;"></a>
-<br />
-<br />
+<a href="/cfw/la/general/images/main-rng/giratina/rng-state-monitoring.gif" target="_blank"><img src="/cfw/la/general/images/main-rng/giratina/rng-state-monitoring.gif" class="img-fluid"></a><br /><br />
 
 <p>The RNG state at in Turnback Cave advances at a slow rate. Moving to a more populated area allows you to advance the RNG state much more quickly. In the example image above, the player is standing next to a large body of water in an area densely populated with Pokemon.</p>
 
@@ -146,7 +142,7 @@ permalink: /cfw/la/legendary/main-rng/giratina
 </details><p></p>
 
 <span class="fw-bold">Figure 5 -</span> Advancing To The Target<p></p>
-<a href="/cfw/la/general/images/main-rng/giratina/advancing-to-target-giratina.png" target="_blank"><img src="/cfw/la/general/images/main-rng/giratina/advancing-to-target-giratina.png" style="width:675px;height:400px;"></a>
+<a href="/cfw/la/general/images/main-rng/giratina/advancing-to-target-giratina.png" target="_blank"><img src="/cfw/la/general/images/main-rng/giratina/advancing-to-target-giratina.png" class="img-fluid"></a>
 <br />
 <br />
 
@@ -157,9 +153,7 @@ permalink: /cfw/la/legendary/main-rng/giratina
 <p><code span class="fw-bold">x (earliest target frame) - y (delay) = z (frame to press A)</code></p>
 
 <span class="fw-bold">Figure 6 -</span> Hitting The Target Frame<p></p>
-<a href="/cfw/la/general/images/main-rng/giratina/hitting-target-frame-giratina.png" target="_blank"><img src="/cfw/la/general/images/main-rng/giratina/hitting-target-frame-giratina.png" style="width:675px;height:400px;"></a>
-<br />
-<br />
+<a href="/cfw/la/general/images/main-rng/giratina/hitting-target-frame-giratina.png" target="_blank"><img src="/cfw/la/general/images/main-rng/giratina/hitting-target-frame-giratina.png" class="img-fluid"></a><br /><br />
 
 <p>Here we can see the target is now on frame 97-102 after re-entering the seed into the script. The calculated delay from earlier is roughly ~45. This means that once the SysBot log output displays that we are on frame 52 we have reached the desired target frame and can use the tumble method to initiate the Giratina cutscene.</p>
 
@@ -168,8 +162,6 @@ permalink: /cfw/la/legendary/main-rng/giratina
 <p>In the example above, we tumbled into the Giratina cutscene zone on frame 52, and hit frame 101, which should produce an Adamant natured, 6IV Giratina.</p>
 
 <span class="fw-bold">Figure 7 -</span> Result Found!<p></p>
-<a href="/cfw/la/general/images/main-rng/giratina/result-found-giratina.png" target="_blank"><img src="/cfw/la/general/images/main-rng/giratina/result-found-giratina.png" style="width:675px;height:400px;"></a>
-<br />
-<br />
+<a href="/cfw/la/general/images/main-rng/giratina/result-found-giratina.png" target="_blank"><img src="/cfw/la/general/images/main-rng/giratina/result-found-giratina.png" class="img-fluid"></a><br /><br />
 
 <p><span class="fw-bold">We hit our target frame and have secured a Giratina with 6 perfect IVs! That's all there is to it!</span></p>
