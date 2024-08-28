@@ -59,7 +59,7 @@ permalink: /cfw/bdsp/static/encounter/
 
 <p>For static encounters, you will need to account for what is known as a "delay". In BDSP, the term delay is used to describe the amount of frames the game requires to generate a Pokemon, this needs to be factored in order to hit the correct target frame. A list of recommended delays can be found in the table below.</p>
 
-<table class="table table-striped" style="width:100%">
+<table class="table table-striped" style="width:100%" id="delay-table">
   <thead class="table text-white" style="background-color: #96324c;">
       <th scope="col" style="width:25%" class="text-center">Type Of Encounter</th>
       <th scope="col" style="width:25%" class="text-center">Recommended Delay</th>
@@ -284,7 +284,7 @@ permalink: /cfw/bdsp/static/encounter/
     <blockquote>You may optionally choose to manually advance the RNG state by scrolling the Pokedex. Be careful not to overshoot your target!</blockquote>
 
     <ul>
-      <li>Interact with your chosen encounter, reach the screen of the final button press (see the above table), then pause the game using the Home Menu.</li><p></p>
+      <li>Interact with your chosen encounter, reach the screen of the final button press (see the <a href="#delay-table">delay table</a> if unsure), then pause the game using the Home Menu.</li><p></p>
       <li>Repeat Step 1, 2, & 3, then resume the game and monitor your RNG state again, if done correctly the logs should be monitoring from advance 0.</li><p></p>
       <li>Observe the RNG state until the correct number of advancements have passed for you reach your target frame, according to the PokeFinder search results.</li><p></p>
     </ul>
@@ -295,7 +295,7 @@ permalink: /cfw/bdsp/static/encounter/
       <li>Once you believe you have hit your target frame, quickly mash the <code span class="fw-bold">A</code> button to initiate the encounter, if done correctly the encounter should match what is expected by PokeFinder.</li>
     </ul>
 
-    <blockquote>You can comnect to PokeViewer.NET and use the <code span class="fw-bold">Battle View</code> function to read the details of the Pokemon you are in battle with to confirm a match.</blockquote>
+    <blockquote>You can use PokeViewer.NET's <code span class="fw-bold">Battle View</code> function to read the details of the Pokemon you are in battle with to confirm a match.</blockquote>
 
     <details>
       <summary><span class="fw-bold">Shaymin Specifics</span></summary>
@@ -306,9 +306,9 @@ permalink: /cfw/bdsp/static/encounter/
         <li>Using the Grand Underground, where the RNG state advances much slower, to attempt to hit the correct target (more consistent).</li>
       </ol>
 
-      <p>If you are using the second method, the goal will be to resurface from the underground on the correct target frame then mash the A button to initiate a battle with Shaymin. The recommended delay range in the table above is for using the Grand Underground method.</p>
+      <p>If you are using the second method, the goal will be to resurface from the underground on the correct target frame then mash the A button to initiate a battle with Shaymin. The recommended delay range in the <a href="#delay-table">delay table</a> is for using the Grand Underground method.</p>
 
-      <p>Regardless of thr method used, expect Shaymin to take a large number of attempts before actually achieving your result.</p>
+      <p>Regardless of the method used, expect Shaymin to take a large number of attempts before actually achieving your result.</p>
     </details>
   </div>
 </div><br>
