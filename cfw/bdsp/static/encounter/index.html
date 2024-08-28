@@ -83,7 +83,7 @@ permalink: /cfw/bdsp/static/encounter/
       <td class="text-center">84</td>
     </tr>
     <tr>
-      <td class="text-center"><span class="fw-bold">Uxie/</span></td>
+      <td class="text-center"><span class="fw-bold">Uxie</span></td>
       <td class="text-center">85</td>
     </tr>
     <tr>
@@ -141,7 +141,7 @@ permalink: /cfw/bdsp/static/encounter/
      </tbody>
 </table>
 
-<p>The final button press screenshot can be seen by clicking the hyperlinks in the table. For all Ramanas Park legendaries the final button press is the same (the last text box before the battle initiates.</p>
+<p>The final button press screenshot can be seen by clicking the hyperlinks in the table. For all Ramanas Park encounters the final button press is the same (the last text box before the battle initiates.</p>
 
 <p><span class="fw-bold">With all the require reading out of the way, it's time to get to work!</span></p>
 
@@ -149,3 +149,89 @@ permalink: /cfw/bdsp/static/encounter/
   <h1 class="text-light text-center pt-3 pb-3">The Process</h1>
 </div><hr />
 
+<p>First, you will need to configure PokeFinder to match the details of the Pokemon you are hunting, then set the desired search filters.</p>
+
+<span class="fw-bold">Figure 1 -</span> PokeFinder Setup<p></p>
+<a href="/cfw/bdsp/images/static/encounter/figure-1-pokefinder-setup-static-encounter.gif" target="_blank"><img src="/cfw/bdsp/images/static/encounter/figure-1-pokefinder-setup-static-encounter.gif" class="img-fluid"></a><br /><br />
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #96324c;" id="pokefinder-setup-static-encounter">
+    <span class="fw-bold text-light">PokeFinder Setup</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>Click the <code span class="fw-bold">Gen 8 -> Static</code> button after launching PokeFinder to open the main window for static Pokemon. Here is where we will fill in all the details about the Pokemon being hunted.</p>
+
+    <p>First, select the correct profile from the dropdown menu at the top if the window. If you do not have a profile set up at this point, you have missed some initial setup instructions and should return to the main page.</p>
+
+    <h6><span class="fw-bold">RNG Setup:</span></h6>
+    <ul>
+      <li>Select the <code span class="fw-bold">Lead</code> if you are using a Pokemon with an influencing ability (like Synchronize).</li>
+      <li>In the <code span class="fw-bold">Max Advances</code> field, enter the amount of frames you are willing to search through.</li>
+      <li>In the <code span class="fw-bold">Settings</code> section in the middle, specify Pokemon and encounter details (e.g Roamer, Mesprit).</li>
+      <li>Configure your search filters on the right, such as searching for any Shiny, or a 6IV Pokemon. Filters can be also combined.</li>
+      <li>Enter the delay from the table above inside the <code span class="fw-bold">Delay</code> field, pick the lowest possible number.</li>
+    </ul>
+
+    <blockquote>Having a Pokemon with the ability Syncronize in the first slot of your party will grant huge benefits. This ability forces the nature of the static encounter to match the nature of your Pokemon (for example, an Adamant natured Synchronize Pokemon in the first slot of your party will force the static encounter to be Adamant every time).</blockquote>
+
+  </div>
+</div><br>
+
+<p>Next, you will need to find your current seed, this can be done using Moarencounterbots (SysBot.NET).</p>
+
+<span class="fw-bold">Figure 2 -</span> Finding Current Seed<p></p>
+<a href="/cfw/bdsp/images/static/encounter/figure-2-finding-current-seed.gif" target="_blank"><img src="/cfw/bdsp/images/static/encounter/figure-2-finding-current-seed.gif" class="img-fluid"></a><br /><br />
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #96324c;" id="seed-searching-moarencounterbots">
+    <span class="fw-bold text-light">Finding Current Seed</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>To easily obtain your current seed at any given point you can use the <code span class="fw-bold">EncBotCopySeedBS</code> bot routine in Moarencounterbots. You will need to toggle a few settings in the <code span class="fw-bold">Hub</code> tab for use with PokeFinder.</p>
+
+    <h6><span class="fw-bold">CopySeed Setup:</span></h6>
+    <ul>
+      <li>In the <code span class="fw-bold">Hub</code> tab, open the <code span class="fw-bold">EncounterRNGBS</code> dropdown menu.</li>
+      <li>Select <code span class="fw-bold">Bit64PokeFinder</code> in <code span class="fw-bold">DisplaySeedMode</code>.</li>
+      <li>Set the <code span class="fw-bold">MonitorRefreshRate</code> to 0, this will be needed later.</li>
+      <li>In the <code span class="fw-bold">Bots</code> tab, type the local IP address of the console.</li>
+      <li>In the dropdown menu on the right, select <code span class="fw-bold">EncBotCopySeedBS</code> and add the bot.</li>
+    </ul>
+
+    <p>When starting the <code span class="fw-bold">EncBotCopySeedBS</code> bot at any point your seed will be produced inside the <code span class="fw-bold">Logs</code> tab. These seeds can be pasted into the <code span class="fw-bold">Seed 0</code> & <code span class="fw-bold">Seed 1 </code> fields of PokeFinder to search for targets that match your search parameters.</p>  
+  </div>
+</div><br>
+
+<p>Save the game, then run <code span class="fw-bold">EncBotCopySeedBS</code> and paste the seeds into PokeFinder and hit search, repeat this process until a result that matches your search parameters has been found.</p>
+
+<span class="fw-bold">Figure 3 -</span> Target Frame Found!<p></p>
+<a href="/cfw/bdsp/images/static/encounter/figure-3-target-frame-found.gif" target="_blank"><img src="/cfw/bdsp/images/static/encounter/figure-3-target-frame-found.gif" class="img-fluid"></a><br /><br />
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #96324c;" id="target-frame-found-static">
+    <span class="fw-bold text-light">Target Frame Found!</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>In Figure 3, we can see that a Shiny Dialga has been produced in xyz amount of advances, since delay has been entered on the right, this is the frame that we will aim to press the A button to initiate the encounter.</p>
+
+    <h6><span class="fw-bold">Undesirable Result?</span></h6>
+    <ul>
+      <li>Reset the game to refresh the seed, then enter the overworld.</li>
+      <li>Run <code span class="fw-bold">EncBotCopySeedBS</code> again to produce a new seed.</li>
+      <li>Paste the new seeds into PokeFinder and search again.</li>
+      <li>Repeat until a desirable result has been found.</li>
+    </ul>
+
+    <p>Consider increasing the search range if you are consistently finding "bad" seeds. Moarencounterbots is capable of advancing millions of frames with ease using the <code span class="fw-bold">EncBotDexFlipBS</code> routine. Alternatively you can opt to use less strict search filters.</p>
+
+    <blockquote><span class="fw-bold">Note -</span> EncBotDexFlipBS cannot be used if you are manipulating starter Pokemon, as it relies on having access to the Pokedex.</blockquote>
+    
+  </div>
+</div><br>
+
+<p>From here you will need to advance towards your target frame. The majority of the work can be done using Moarencounterbots, but again this will require changing settings inside the <code span class="fw-bold">Hub</code> tab.</p>
+
+<span class="fw-bold">Figure 4 -</span> Advancement Setup<p></p>
+<a href="/cfw/bdsp/images/static/encounter/figure-4-advancement-setup.gif" target="_blank"><img src="/cfw/bdsp/images/static/encounter/figure-4-advancement-setup.gif" class="img-fluid"></a><br /><br />
+
+  
