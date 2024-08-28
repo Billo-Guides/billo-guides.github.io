@@ -234,4 +234,30 @@ permalink: /cfw/bdsp/static/encounter/
 <span class="fw-bold">Figure 4 -</span> Advancement Setup<p></p>
 <a href="/cfw/bdsp/images/static/encounter/figure-4-advancement-setup.gif" target="_blank"><img src="/cfw/bdsp/images/static/encounter/figure-4-advancement-setup.gif" class="img-fluid"></a><br /><br />
 
-  
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #96324c;" id="advancement-setup">
+    <span class="fw-bold text-light">Advancement Setup</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>In order to advance large distances as quickly as possible, you will need to use the <code span class="fw-bold">EncBotDexFlipBS</code> mentioned above, a description of this routine can be found <a href="https://github.com/Lusamine/SysBot.NET/wiki/BDSP-EncounterBots#dex-flip-bot-encbotdexflipbs">here</a></p>
+
+    <p>Having a decent chunk of your Pokedex complete (seen data) is crucial for using this method. For this reason it is recommended to fill as much of the Pokedex as you can.</p>
+
+    <h6><span class="fw-bold">Settings Toggles:</span></h6>
+    <ul>
+      <li>In the <code span class="fw-bold">Hub</code> tab, open the <code span class="fw-bold">EncounterRNGBS</code> dropdown menu.</li>
+      <li>Set the <code span class="fw-bold">MaxTotalAdvances</code> value to ~10,000 frames before your target (e.g if Target is at 100,000, set to 90,000).</li>
+      <li>In the <code span class="fw-bold">Bots</code> tab, type the local IP address into the assigned field and remove any other active bots.</li>
+      <li>In the dropdown menu on the right, add both <code span class="fw-bold">EncBotDexFlipBS</code> and <code span class="fw-bold">EncBotRNGMonitorBS</code></li>
+    </ul>
+
+    <p>After the settings have been properly toggled, open the Pokedex in game, disconnect all controllers using the unsync button, then start the bot (pictured in Figure 4). You should now see the bot has started to flick between Pokedex entries, advancing the RNG state rapidly. The game will then automatically pause to the Home menu when the <code span class="fw-bold">MaxTotalAdvances</code> has been reached.</p>
+
+    <blockquote>If you are RNG abusing your starter Pokemon you will not have access to the Pokedex, meaning you cannot use the Dex Flip routine. You will instead need to wait in the overworld while monitoring seeds using <code span class="fw-bold">EncBotRNGMonitorBS</code>.</blockquote>
+        
+  </div>
+</div><br>
+
+<p>Once the Dex Flip routine has finished and you are on the Home screen, you will need to advance the rest of the way and hit your target frame manually, using <code span class="fw-bold">EncBotRNGMonitorBS</code> to monitor your seed.</p>
+
+
