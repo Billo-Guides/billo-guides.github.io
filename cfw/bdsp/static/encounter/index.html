@@ -174,7 +174,7 @@ permalink: /cfw/bdsp/static/encounter/
       <li>Configure your search filters on the right, such as searching for any Shiny, or a 6IV Pokemon. Filters can be also combined.</li>
     </ul>
 
-    <blockquote>Having a Pokemon with the ability Syncronize in the first slot of your party will grant huge benefits. This ability forces the nature of the static encounter to match the nature of your Pokemon (for example, an Adamant natured Synchronize Pokemon in the first slot of your party will force the static encounter to be Adamant every time).</blockquote>
+    <blockquote>Having a Pokemon with the ability Syncronize ensures that all encountered Pokemon have the same nature as your Pokemon. Your synchronizer needs to be first in your party in order to work.</blockquote>
 
   </div>
 </div><br>
@@ -241,9 +241,7 @@ permalink: /cfw/bdsp/static/encounter/
     <span class="fw-bold text-light">Advancement Setup</span>
   </div>
   <div class="card-body card-bg">
-    <p>In order to advance large distances as quickly as possible, you will need to use the <code span class="fw-bold">EncBotDexFlipBS</code> mentioned above, a description of this routine can be found <a href="https://github.com/Lusamine/SysBot.NET/wiki/BDSP-EncounterBots#dex-flip-bot-encbotdexflipbs">here</a>.</p>
-
-    <p>Having a decent chunk of your Pokedex complete (seen data) is crucial for using this method. For this reason it is recommended to fill as much of the Pokedex as you can.</p>
+    <p>To advance large distances as quickly as possible, use the <code span class="fw-bold">EncBotDexFlipBS</code> routine. A description of this routine can be found <a href="https://github.com/Lusamine/SysBot.NET/wiki/BDSP-EncounterBots#dex-flip-bot-encbotdexflipbs">here</a>. Having a decent chunk of your Pokedex completed is important for optimizing this method.</p>
 
     <h6><span class="fw-bold">Settings Toggles:</span></h6>
     <ul>
@@ -253,8 +251,8 @@ permalink: /cfw/bdsp/static/encounter/
       <li>In the dropdown menu on the right, add both <code span class="fw-bold">EncBotDexFlipBS</code> and <code span class="fw-bold">EncBotRNGMonitorBS</code></li>
     </ul>
 
-    <p>After the settings have been properly toggled, open the Pokedex in game, disconnect all controllers using the unsync button, then start the bot (pictured in Figure 4). You should now see the bot has started to flick between Pokedex entries, advancing the RNG state rapidly. The game will then automatically pause to the Home menu when the <code span class="fw-bold">MaxTotalAdvances</code> has been reached.</p>
-
+    <p>After the settings have been properly toggled, open the Pokedex in game, disconnect all controllers using the unsync button, then start the bot (pictured in Figure 4). This bot sill automatically pause the game when the <code span class="fw-bold">MaxTotalAdvances</code> has been reached.</p>
+      
     <blockquote>If you are RNG abusing your starter Pokemon you will not have access to the Pokedex, meaning you cannot use the Dex Flip routine. You will instead need to wait in the overworld while monitoring seeds using <code span class="fw-bold">EncBotRNGMonitorBS</code>.</blockquote>
         
   </div>
