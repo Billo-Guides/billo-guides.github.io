@@ -169,7 +169,7 @@ permalink: /cfw/bdsp/static/encounter/
       <li>In the <code span class="fw-bold">Max Advances</code> field, enter the amount of frames you are willing to search through.</li>
       <li>In the <code span class="fw-bold">Settings</code> section in the middle, specify Pokemon and encounter details (e.g Roamer, Mesprit).</li>
       <li>Configure your search filters on the right, such as searching for any Shiny, or a 6IV Pokemon. Filters can be also combined.</li>
-      <li>Enter the delay from the table above inside the <code span class="fw-bold">Delay</code> field, pick the lowest possible number.</li>
+      <li>Enter the delay (refer to table) inside the <code span class="fw-bold">Delay</code> field, pick the lowest possible number.</li>
     </ul>
 
     <blockquote>Having a Pokemon with the ability Syncronize in the first slot of your party will grant huge benefits. This ability forces the nature of the static encounter to match the nature of your Pokemon (for example, an Adamant natured Synchronize Pokemon in the first slot of your party will force the static encounter to be Adamant every time).</blockquote>
@@ -239,7 +239,7 @@ permalink: /cfw/bdsp/static/encounter/
     <span class="fw-bold text-light">Advancement Setup</span>
   </div>
   <div class="card-body card-bg">
-    <p>In order to advance large distances as quickly as possible, you will need to use the <code span class="fw-bold">EncBotDexFlipBS</code> mentioned above, a description of this routine can be found <a href="https://github.com/Lusamine/SysBot.NET/wiki/BDSP-EncounterBots#dex-flip-bot-encbotdexflipbs">here</a></p>
+    <p>In order to advance large distances as quickly as possible, you will need to use the <code span class="fw-bold">EncBotDexFlipBS</code> mentioned above, a description of this routine can be found <a href="https://github.com/Lusamine/SysBot.NET/wiki/BDSP-EncounterBots#dex-flip-bot-encbotdexflipbs">here</a>.</p>
 
     <p>Having a decent chunk of your Pokedex complete (seen data) is crucial for using this method. For this reason it is recommended to fill as much of the Pokedex as you can.</p>
 
@@ -258,6 +258,75 @@ permalink: /cfw/bdsp/static/encounter/
   </div>
 </div><br>
 
-<p>Once the Dex Flip routine has finished and you are on the Home screen, you will need to advance the rest of the way and hit your target frame manually, using <code span class="fw-bold">EncBotRNGMonitorBS</code> to monitor your seed.</p>
+<div class="title" style="background-color: #96324c;">
+  <h1 class="text-light text-center pt-3 pb-3">Final Advancements</h1>
+</div><hr />
 
+<p><span class="fw-bold" style="color: #b60606;">At this stage you should be close (within 10,000 frames) of your target frame.</span></p>
 
+<p>Once the Dex Flip routine has finished and you are on the Home screen, you will need to advance the rest of the way and hit your target frame manually using <code span class="fw-bold">EncBotRNGMonitorBS</code> to monitor your seed.</p>
+
+<span class="fw-bold">Figure 5 -</span> Dex Flip Complete<p></p>
+<a href="/cfw/bdsp/images/static/encounter/figure-5-dex-flip-complete.png" target="_blank"><img src="/cfw/bdsp/images/static/encounter/figure-5-dex-flip-complete.png" class="img-fluid"></a><br /><br />
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #96324c;" id="final-advancements-static">
+    <span class="fw-bold text-light">Final Advancements</span>
+  </div>
+  <div class="card-body card-bg">
+    <ul>
+      <li>With the game in the Home Menu, remove all active bots and add <code span class="fw-bold">EncBotCopySeedBS</code> to the bot list.</li><p></p>
+      <li>Click the <code span class="fw-bold">Start All</code> button, then paste your seeds into PokeFinder. This will provide your new target frame.</li><p></p>
+      <li>Remove <code span class="fw-bold">EncBotCopySeedBS</code> and add <code span class="fw-bold">EncBotRNGMonitorBS</code> instead, then start the bot to begin monitoring your seed.</li><p></p>
+      <li>Unpause the game, stand within a single A press distance of your target encounter, then let the RNG state advance until you are within ~1000 frames of the target.</li>
+    </ul>
+
+    <blockquote>You may optionally choose to manually advance the RNG state by scrolling the Pokedex. Be careful not to overshoot your target!</blockquote>
+
+    <ul>
+      <li>Interact with your chosen encounter, reach the screen of the final button press (see the above table), then pause the game using the Home Menu.</li><p></p>
+      <li>Repeat Step 1, 2, & 3, then resume the game and monitor your RNG state again, if done correctly the logs should be monitoring from advance 0.</li><p></p>
+      <li>Observe the RNG state until the correct number of advancements have passed for you reach your target frame, according to the PokeFinder search results.</li><p></p>
+    </ul>
+
+    <blockquote>You can quickly press the home button twice to resume and pause the game. This method is very useful for inching towards target frames with precision, particularly if you are in an area where the RNG state advances quickly by default.</blockquote>
+
+    <ul>
+      <li>Once you believe you have hit your target frame, quickly mash the <code span class="fw-bold">A</code> button to initiate the encounter, if done correctly the encounter should match what is expected by PokeFinder.</li>
+    </ul>
+
+    <blockquote>You can comnect to PokeViewer.NET and use the <code span class="fw-bold">Battle View</code> function to read the details of the Pokemon you are in battle with to confirm a match.</blockquote>
+
+    <details>
+      <summary><span class="fw-bold">Shaymin Specifics</span></summary>
+      <p>Shaymin is located in an area where the RNG state advances rapidly, making it mostly uncontrollable and very difficult to hit your target frame. So far, there are two main methods:</p>
+
+      <ol>
+        <li>Using the above method to try hitting a target, often advances the RNG state rapidly in multiples of 8 (inconsistent).</li>
+        <li>Using the Grand Underground, where the RNG state advances much slower, to attempt to hit the correct target (more consistent).</li>
+      </ol>
+
+      <p>If you are using the second method, the goal will be to resurface from the underground on the correct target frame then mash the A button to initiate a battle with Shaymin. The recommended delay range in the table above is for using the Grand Underground method.</p>
+
+      <p>Regardless of thr method used, expect Shaymin to take a large number of attempts before actually achieving your result.</p>
+    </details>
+  </div>
+</div><br>
+
+<span class="fw-bold">Figure 6 -</span> Target Frame Hit<p></p>
+<a href="/cfw/bdsp/images/static/encounter/figure-6-target-frame-hit-static.png" target="_blank"><img src="/cfw/bdsp/images/static/encounter/figure-6-target-frame-hit-static.png" class="img-fluid"></a><br /><br />
+
+<p>In Figure 6, PokeFinder displays the target on advance x, delay is already factored in on the right (y), and SysBot logs indicate that z number of advancements have occured, so we can now mash the <code span class="fw-bold">A</code> button to initiate the encounter and see if the correct target frame has been hit.</p>
+
+<span class="fw-bold">Figure 7 -</span> Result Found<p></p>
+<a href="/cfw/bdsp/images/static/encounter/figure-7-result-found-static.png" target="_blank"><img src="/cfw/bdsp/images/static/encounter/figure-7-result-found-static.png" class="img-fluid"></a><br /><br />
+
+<p>After opening PokeViewer.NET and using the <code span class="fw-bold">Battle View</code> function to view the Pokemon, we can see that the Pokemon matches PokeFinder, mission accomplished!</p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/troubleshooting">
+  Missed target frame? <span class="fw-bold">Click here to troubleshoot encounters</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a>
+<br>
