@@ -56,10 +56,12 @@ permalink: /cfw/bdsp/static/encounter/
 
     <p>Essentially, Moarencounterbots is capable of doing the "chore" work automatically so you don't have to. You just need to search for targets yourself, let Moarencounterbots advance the RNG state, and actually hit the correct seed that produces the result you want.</p>
 
+    <p>For static encounters you will need to account for what is known as a "delay". This term is used to describe the amount of frames the gane requires to generate a Pokemon after the final button press. So for example if there is a 84 delay and the target is frame 100, we would aim to initiate the encounter on frame 16 (16+84=100).</p>
+
   </div>
 </div><br>
 
-<p>For static encounters, you will need to account for what is known as a "delay". In BDSP, the term delay is used to describe the amount of frames the game requires to generate a Pokemon, this needs to be factored in order to hit the correct target frame. A list of recommended delays can be found in the table below.</p>
+<p>A list of recommended delays can be found in the table below, clicking the hyperlinks will also provide a screenshot of the final screen that you should be on when attempting to hit your target frame.</p>
 
 <table class="table table-striped" style="width:100%" id="delay-table">
   <thead class="table text-white" style="background-color: #96324c;">
@@ -142,8 +144,6 @@ permalink: /cfw/bdsp/static/encounter/
     </tr>
      </tbody>
 </table>
-
-<p>The final button press screenshot can be seen by clicking the hyperlinks in the table. For all Ramanas Park encounters the final button press is the same (the last text box before the battle initiates.</p>
 
 <p><span class="fw-bold">With all the require reading out of the way, it's time to get to work!</span></p>
 
