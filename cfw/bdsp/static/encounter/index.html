@@ -202,7 +202,7 @@ permalink: /cfw/bdsp/static/encounter/
 <p>Save the game, then run <code span class="fw-bold">EncBotCopySeedBS</code> and paste the seeds into PokeFinder and hit search, repeat this process until a result that matches your search parameters has been found.</p>
 
 <span class="fw-bold">Figure 3 -</span> Target Frame Found!<p></p>
-<a href="/cfw/bdsp/images/static/encounter/figure-3-target-frame-found.gif" target="_blank"><img src="/cfw/bdsp/images/static/encounter/figure-3-target-frame-found.gif" class="img-fluid"></a><br /><br />
+<a href="/cfw/bdsp/images/static/encounter/figure-3-target-frame-found.png" target="_blank"><img src="/cfw/bdsp/images/static/encounter/figure-3-target-frame-found.png" class="img-fluid"></a><br /><br />
 
 <div class="card border-dark">
   <div class="anchored card-header" style="background-color: #96324c;" id="target-frame-found-static">
@@ -262,29 +262,24 @@ permalink: /cfw/bdsp/static/encounter/
 
 <p>Once you are close to your target frame (within ~10,000 frames), you will need to advance the rest of the way and hit your target frame slowly using <code span class="fw-bold">EncBotRNGMonitorBS</code> to monitor your seed.</p>
 
+<p>The recommended method of hitting a target frame accurately (particularly in fast paced environments), is by pressing the home button twice to resume and pause the game, this technique is known as "home mashing". While you can hit targets without using this technique, it is considered less consistent.</p>
+
 <div class="card border-dark">
   <div class="anchored card-header" style="background-color: #96324c;" id="final-advancements-static">
     <span class="fw-bold text-light">Final Advancements</span>
   </div>
   <div class="card-body card-bg">
     <ul>
-      <li>With the game in the Home Menu, remove all active bots and add <code span class="fw-bold">EncBotCopySeedBS</code> to the bot list.</li><p></p>
-      <li>Click the <code span class="fw-bold">Start All</code> button, then paste your seeds into PokeFinder. This will provide your new target frame.</li><p></p>
-      <li>Remove <code span class="fw-bold">EncBotCopySeedBS</code> and add <code span class="fw-bold">EncBotRNGMonitorBS</code> instead, then start the bot to begin monitoring your seed.</li><p></p>
-      <li>Unpause the game, stand within a single A press distance of your target encounter, then let the RNG state advance until you are within ~1000 frames of the target.</li>
+      <li>With the game in the Home Menu, remove all active bots and add <code span class="fw-bold">EncBotCopySeedBS</code> to the bot list, then click the <code span class="fw-bold">Start All</code> button and paste your new seeds into PokeFinder, this will provide your new starting frame.</li><p></p>
+      <li>Remove <code span class="fw-bold">EncBotCopySeedBS</code> and add <code span class="fw-bold">EncBotRNGMonitorBS</code> instead, then start the bot to begin monitoring your seed. If done correctly the logs should start from advance 0.</li><p></p>
+      <li>Unpause the game, stand within a single <code span class="fw-bold">A</code> button press of your target encounter, then let the RNG state advance until you are within a few hundred frames of the target.</li>
     </ul>
 
     <blockquote>You may optionally choose to manually advance the RNG state by scrolling the Pokedex. Be careful not to overshoot your target!</blockquote>
 
     <ul>
       <li>Interact with your chosen encounter, reach the screen of the final button press (see the <a href="#delay-table">delay table</a> if unsure), then pause the game using the Home Menu.</li><p></p>
-      <li>Repeat Step 1, 2, & 3, then resume the game and monitor your RNG state again, if done correctly the logs should be monitoring from advance 0.</li><p></p>
-    </ul>
-
-    <blockquote>The recommended method of hitting a target frame accurately (particularly in fast paced environments), is by pressing the home button twice to resume and pause the game, this technique is known as "home mashing".</blockquote>
-
-    <ul>
-      <li>Use the home mashing technique to inch towards your target frame slowly, once you hit the correct target frame keep the game paused on the Home Menu.</li><p></p>
+      <li>Use the home mashing technique mentioned above to inch towards your target frame slowly, once you hit the correct target frame keep the game paused on the Home Menu.</li><p></p>
       <li>Quickly spam the <code span class="fw-bold">A</code> button to initiate the encounter, if done correctly the encounter should match what is expected by PokeFinder.</li>
     </ul>
 
@@ -309,7 +304,7 @@ permalink: /cfw/bdsp/static/encounter/
 <span class="fw-bold">Figure 6 -</span> Target Frame Hit<p></p>
 <a href="/cfw/bdsp/images/static/encounter/figure-6-target-frame-hit-static.png" target="_blank"><img src="/cfw/bdsp/images/static/encounter/figure-6-target-frame-hit-static.png" class="img-fluid"></a><br /><br />
 
-<p>In Figure 6, PokeFinder displays the target on advance x, delay is already factored in on the right (y), and SysBot logs indicate that z number of advancements have occured, so we can now mash the <code span class="fw-bold">A</code> button to initiate the encounter and see if the correct target frame has been hit.</p>
+<p>In Figure 6, PokeFinder displays the target on advance 8991, delay has already been entered into the <code span class="fw-bold">Battle View</code> field (85), and SysBot logs indicate that 8991 number of advancements have occured, so we can now mash the <code span class="fw-bold">A</code> button to initiate the encounter and see if the correct target frame has been hit.</p>
 
 <span class="fw-bold">Figure 7 -</span> Result Found (PokeViewer.NET Confirmation)<p></p>
 <a href="/cfw/bdsp/images/static/encounter/figure-7-result-found-static.png" target="_blank"><img src="/cfw/bdsp/images/static/encounter/figure-7-result-found-static.png" class="img-fluid"></a><br /><br />
@@ -323,3 +318,4 @@ permalink: /cfw/bdsp/static/encounter/
   </svg>
 </a>
 <br>
+
