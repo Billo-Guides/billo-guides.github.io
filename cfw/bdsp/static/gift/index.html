@@ -172,7 +172,7 @@ permalink: /cfw/bdsp/static/gift/
     <span class="fw-bold text-light">Target Frame Found!</span>
   </div>
   <div class="card-body card-bg">
-    <p>In Figure 3, we can see that a 6IV Jirachi that matches the search filters has been produced in x advances, since this encounter has a delay of 0 according to the delay table, this is the frame that we will aim to press the A button to initiate the gift redemption.</p>
+    <p>In Figure 3, we can see that a 6IV Jirachi that matches the search filters has been produced in x-y advances, and the same spread is produced 4 advances in a row, this is known as a "frame cluster". This means we can aim to hit any of these frames to hit the desired result, the higher the cluster, the better the chance there is of hitting the correct frame.</p> 
 
     <h6><span class="fw-bold">Undesirable Result?</span></h6>
     <ul>
@@ -183,6 +183,8 @@ permalink: /cfw/bdsp/static/gift/
     </ul>
 
     <p>Consider increasing the search range if you are consistently finding "bad" seeds. Moarencounterbots is capable of advancing millions of frames with ease using the <code span class="fw-bold">EncBotDexFlipBS</code> routine. Alternatively you can opt to use less strict search filters.</p>
+
+    <blockquote>Clusters only appear for non-shiny Pokemon, if the gift is not shiny locked (e.g Riolu, Happiny, Eevee), and you are searching for a shiny, you will not be able to find clusters.</blockquote>
 
   </div>
 </div><br>
@@ -262,7 +264,7 @@ permalink: /cfw/bdsp/static/gift/
 
 <p>After opening PokeViewer.NET and using the <code span class="fw-bold">Box View</code> function, we can see that the Pokemon matches the PokeFinder search result. Mission accomplished!</p>
 
-<span class="fw-bold">Note -</span> You will need to double click the box slot that contains your Pokemon to view the full details.
+<p><span class="fw-bold">Note -</span> You will need to double click the box slot that contains your Pokemon to view the full details.</p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/troubleshooting">
   Missing target frames? <span class="fw-bold">Click here for an encounter troubleshooting guide!</span>
