@@ -31,7 +31,7 @@ permalink: /cfw/bdsp/wild/random-encounter/
   <h1 class="text-light text-center pt-3 pb-3">BDSP Wild Encounter RNG (CFW)</h1>
 </div><hr />
 
-<p>This section of the guide covers how to RNG manipulate Pokemon from static encounters. Wild encounters are defined as encounters that are generated randomly while running through tall grass, in caves, and in the water.</p>
+<p>This section of the guide covers how to RNG manipulate Pokemon from Wild encounters. Wild encounters are defined as encounters that are generated randomly while running through tall grass, in caves, and in the water.</p>
 
 <p>Ensure that the autosave feature is disabled, and that you have enough resouces (Pokeballs, healing items, etc.) to successfully capture the Pokemon you plan to RNG manipulate.</p>
 
@@ -56,28 +56,32 @@ permalink: /cfw/bdsp/wild/random-encounter/
 
     <p>Essentially, Moarencounterbots is capable of doing the "chore" work automatically so you don't have to. You just need to search for targets yourself, let Moarencounterbots advance the RNG state, and actually hit the correct seed that produces the result you want.</p>
 
-    <p>For some wild encounters, you may need to account for what is known as a "delay". This term is used to describe the amount of frames the gane requires to generate a Pokemon after the final button press. So for example if there is a 84 delay and the target is frame 100, we would aim to initiate the encounter on frame 16 (16+84=100).</p>
+    <p>For some wild encounters, you may need to account for what is known as a "delay". This term is used to describe the amount of frames the gane requires to generate a Pokemon after the final button press. So for example if there is a delay if 1, and the target is frame 100, we would aim to initiate the encounter on frame 99 (100-1=99).</p>
 
   </div>
 </div><br>
 
-<p>A list of recommended delays can be found in the table below, clicking the hyperlinks will also provide a screenshot of the final screen that you should be on when attempting to hit your target frame.</p>
-
+<p>A list of recommended delays can be found in the table below, and the final screen that you should be on when attempting to hit your target frame is the <a href="/cfw/bdsp/images/final-a-presses/honey-sweet-scent.gif">Honey selection screen</a>.</p>
+  
 <table class="table table-striped" style="width:100%" id="delay-table">
   <thead class="table text-white" style="background-color: #96324c;">
-      <th scope="col" style="width:25%" class="text-center">Type Of Encounter</th>
+      <th scope="col" style="width:25%" class="text-center">Location / Pokemon</th>
       <th scope="col" style="width:25%" class="text-center">Recommended Delay</th>
    </tr>
        </thead>
        <tbody>
     <tr>
-      <td class="text-center"><span class="fw-bold"><a href="/cfw/bdsp/images/final-a-presses/starters.jpg">Unown</a></span></td>
+      <td class="text-center"><span class="fw-bold">Most cases</span></span></td>
+      <td class="text-center">0</td>
+    </tr>
+    <tr>
+      <td class="text-center"><span class="fw-bold">Unown</span></span></td>
       <td class="text-center">1-2</td>
     </tr>
      </tbody>
 </table>
 
-<p>More specific cases like Unown can be added to the list on request.</p>
+<p>More specific cases like Unown can be added to the list on request. Contact me if you are interested in contributing (contact details can be found at the bottom of any page).</p>
 
 <p><span class="fw-bold">With all the required reading out of the way, it's time to get to work!</span></p>
 
@@ -147,7 +151,7 @@ permalink: /cfw/bdsp/wild/random-encounter/
     <span class="fw-bold text-light">Target Frame Found!</span>
   </div>
   <div class="card-body card-bg">
-    <p>In Figure 3, we can see that a Shiny Unown that matches the search filters has been produced in x advances, since delay has been entered into the assigned field (1), so this is the frame that we will aim to press the A button to use Honey in order to initiate the encounter.</p>
+    <p>In Figure 3, we can see that a Shiny Unown that matches the search filters has been produced in 187500 advances, this is the frame that we will aim to press the A button to use Honey and initiate the encounter.</p>
 
     <h6><span class="fw-bold">Undesirable Result?</span></h6>
     <ul>
@@ -184,10 +188,8 @@ permalink: /cfw/bdsp/wild/random-encounter/
 
     <p>After the settings have been properly toggled, open the Pokedex in game, disconnect all controllers using the unsync button, then start the bot. The bot will automatically pause the game when the <code span class="fw-bold">MaxTotalAdvances</code> has been reached.</p>
 
-    <p>You do not need to use the Dex Flip routine if your target is of a small distance away, scrolling the Pokedex manually while monitoring your seed is effective enough in these cases</p>
+    <blockquote>You do not need to use the Dex Flip routine if your target is of a small distance away, scrolling the Pokedex manually while monitoring your seed is effective enough in these cases.</blockquote>
       
-    <blockquote>If you are RNG abusing your starter Pokemon you will not have access to the Pokedex. You will need to wait in the overworld while monitoring seeds using <code span class="fw-bold">EncBotRNGMonitorBS</code> instead.</blockquote>
-        
   </div>
 </div><br>
 
@@ -212,13 +214,12 @@ permalink: /cfw/bdsp/wild/random-encounter/
     <ul>
       <li>With the game in the Home Menu, remove all active bots and add <code span class="fw-bold">EncBotCopySeedBS</code> to the bot list, then click the <code span class="fw-bold">Start All</code> button and paste your new seeds into PokeFinder, this will provide your new starting frame.</li><p></p>
       <li>Remove <code span class="fw-bold">EncBotCopySeedBS</code> and add <code span class="fw-bold">EncBotRNGMonitorBS</code> instead, then start the bot to begin monitoring your seed. If done correctly the logs should start from advance 0.</li><p></p>
-      <li>Unpause the game, and enter your bag when you are within a few hundred frames of your target encounter, then find where the Honey item is located, select it to put you on the screen of the final A press (aka the <code span class="fw-bold">Yes/No</code> selection for Honey).</li>
+      <li>Unpause the game, and enter your bag when you are within a few hundred frames of your target encounter, find where the Honey item is located, the select the <code span class="fw-bold">Yes/No</code> selection for Honey.</li>
     </ul>
 
     <blockquote>You may optionally choose to manually advance the RNG state by scrolling the Pokedex. Be careful not to overshoot your target!</blockquote>
 
     <ul>
-
       <li>Use the home mashing technique mentioned above to inch towards your target frame slowly, once you hit the correct target frame keep the game paused on the Home Menu.</li><p></p>
       <li>Quickly spam the <code span class="fw-bold">A</code> button to use Honey, this will initiate the encounter, if done correctly the encounter should match what is expected by PokeFinder.</li>
     </ul>
@@ -231,7 +232,7 @@ permalink: /cfw/bdsp/wild/random-encounter/
 <span class="fw-bold">Figure 6 -</span> Target Frame Hit<p></p>
 <a href="/cfw/bdsp/images/wild/random-encounter/figure-6-target-frame-hit-wild.gif" target="_blank"><img src="/cfw/bdsp/images/wild/random-encounter/figure-6-target-frame-hit-wild.gif" class="img-fluid"></a><br /><br />
 
-<p>In Figure 6, PokeFinder displays the target on advance 8991, delay has already been entered into the <code span class="fw-bold">Delay</code> field (85), and SysBot logs indicate that 8991 number of advancements have occured, so we can now mash the <code span class="fw-bold">A</code> button to initiate the encounter and see if we hit the correct target frame.</p>
+<p>In Figure 6, PokeFinder displays the target on advance 6847, delay has already been entered into the <code span class="fw-bold">Delay</code> field (1), and SysBot logs indicate that 6847 number of advancements have occured, so we can now mash the <code span class="fw-bold">A</code> button to initiate the encounter and see if we hit the correct target frame.</p>
 
 <span class="fw-bold">Figure 7 -</span> Result Found (PokeViewer.NET Confirmation)<p></p>
 <a href="/cfw/bdsp/images/wild/random-encounter/figure-7-result-found-wild.png" target="_blank"><img src="/cfw/bdsp/images/wild/random-encounter/figure-7-result-found-wild.png" class="img-fluid"></a><br /><br />
