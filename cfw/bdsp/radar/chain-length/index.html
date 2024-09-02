@@ -52,20 +52,80 @@ permalink: /cfw/bdsp/radar/chain-length/
 
     <ul>
       <li><a href="https://www.linqpad.net/GetFile.aspx?LINQPad8Setup.exe">LINQPad</a></li>
-      <li><a href="https://projectpokemon.org/home/files/file/2445-pkhex-development-build/?do=download&csrfKey=78034c335d8cc2617a4f3fa1271a4ed3">PKHeX Development Build</a></li>
-      <li><a href="/cfw/bdsp/scripts.zip">PokeRadar Chain Length Script</a></li>
+      <li><a href="/cfw/bdsp/scripts.zip">PokeRadar Script & PKHeX.Core.dll</a></li>
     </ul>
 
     <h6><span class="fw-bold">Installation Instructions:</span></h6>
      <ol>
        <li>Download <code span class="fw-bold">LINQPad</code>, then run the installer and go through all the setup instructions.</li>
-       <li>Create a called <code span class="fw-bold">dlls</code> next to the LINQPad launcher.</li>
-       <li>Download <code span class="fw-bold">PKHeX Development Build</code> and search for a file named <code span class="fw-bold">PKHeX.Core.dll</code>.</li>
-       <li>Copy <code span class="fw-bold">PKHeX.Core.dll</code> into the <code span class="fw-bold">dlls</code> folder.</li>
-       <li>Download <code span class="fw-bold">pokeradar-script.zip</code>, then extract <code span class="fw-bold">scripts.zip</code> next to the LINQPad launcher.</li>
+       <li>Download <code span class="fw-bold">scripts.zip</code> and extract the contents into the same folder as LINQPad.</li>
      </ol>
 
     <blockquote>Your folder structure should look something similar to <a href="/cfw/bdsp/images/radar/chain-length/folder-structure.gif">this image</a> if everything was done correctly. Launch LINQPad and open the script after comfirming the installation was done correctly.</blockquote>
+
+  </div>
+</div><br>
+
+<span class="fw-bold">Figure 1 -</span> LINQPad Script Setup<p></p>
+<a href="/cfw/bdsp/images/radar/chain-length/figure-1-linqpad-script-setup.gif" target="_blank"><img src="/cfw/bdsp/images/radar/chain-length/figure-1-linqpad-script-setup.gif" class="img-fluid"></a><br /><br />
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #96324c;" id="linqpad-script-setup">
+    <span class="fw-bold text-light">LINQPad Script Setup:</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>Upon opening the script in LINQPad, you should see something similar to the above image. The script should work fine with no modifications, if you are running into issues, do the following:</p>
+
+    <h6><span class="fw-bold">Leveraging PKHeX.Core.dll</span></h6>
+    <ul>
+      <li>With the script open, press F4 to bring up the <code span class="fw-bold">Query Properties</code> sub-window.</li>
+      <li>In the <code span class="fw-bold">Additional References</code> tab, click the <code span class="fw-bold">Add/Browse</code> button</li>
+      <li>Select <code span class="fw-bold">PKHeX.Core.dll</code>, this should be found inside the <code span class="fw-bold">dlls</code> file created earlier.</li>
+      <li>Open the <code span class="fw-bold">Namespace Imports</code> tab then type <code span class="fw-bold">PKHeX.Core</code>.</li>
+      <li>Click the <code span class="fw-bold">OK</code> button at the bottom left of the sub-window to confirm these changes.</li>
+      <li>Run the script, you should see that an output has been produced at the bottom of the main window.</li>
+    </ul>
+
+    <blockquote>Ensure that the script is being ran as a <code span class="fw-bold">C# Program</code>, this is visible in the top bar of the main window. Use Figure 1 as a reference point if you are struggling to leverage PKHeX.Core.dll.</blockquote>
+  </div>
+</div><br>
+
+<span class="fw-bold">Figure 2 -</span> Finding Current Seed<p></p>
+<a href="/cfw/bdsp/images/radar/chain-length/figure-2-finding-current-seed.gif" target="_blank"><img src="/cfw/bdsp/images/radar/chain-length/figure-2-finding-current-seed.gif" class="img-fluid"></a><br /><br />
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #96324c;" id="seed-searching-moarencounterbots">
+    <span class="fw-bold text-light">Finding Current Seed</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>To easily obtain your current seed at any given point you can use the <code span class="fw-bold">EncBotCopySeedBS</code> bot routine in Moarencounterbots. You will need to toggle a few settings in the <code span class="fw-bold">Hub</code> tab for use with PokeFinder.</p>
+
+    <h6><span class="fw-bold">CopySeed Setup:</span></h6>
+    <ul>
+      <li>In the <code span class="fw-bold">Hub</code> tab, open the <code span class="fw-bold">EncounterRNGBS</code> dropdown menu.</li>
+      <li>Select <code span class="fw-bold">Bit128</code> in the <code span class="fw-bold">DisplaySeedMode</code> dropdown menu.</li>
+      <li>Set the <code span class="fw-bold">MonitorRefreshRate</code> to 0, this will be needed later.</li>
+      <li>In the <code span class="fw-bold">Bots</code> tab, type the local IP address of the console.</li>
+      <li>In the dropdown menu on the right, select <code span class="fw-bold">EncBotCopySeedBS</code> and add the bot.</li>
+      <li>Click the <code span class="fw-bold">Start All</code> button, your seed will be produced inside the <code span class="fw-bold">Logs</code> tab.</li>
+    </ul>
+
+    <p>These seeds can be pasted into the <code span class="fw-bold">string ram = "0123456789ABCDEF0123456789ABCDEF";</code> field of the script to search for frames that will not break your chain (paste your seed between the two "").</p> 
+
+    <blockquote>It is not recommended to change any other aspects of the script code unless you know what you are doing, this will result in inaccuracies going forward.</blockquote>
+    
+  </div>
+</div><br>
+
+<span class="fw-bold">Figure 3 -</span> In-game Setup<p></p>
+<a href="/cfw/bdsp/images/radar/chain-length/figure-3-in-game-setup.gif" target="_blank"><img src="/cfw/bdsp/images/radar/chain-length/figure-3-in-game-setup.gif" class="img-fluid"></a><br /><br />
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #96324c;" id="in-game-setup-radar">
+    <span class="fw-bold text-light">In-game Setup</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>First, you will need to understand the "rules" of the PokeRadar, not understanding how PokeRadar works is the main cause of a broken chain.</p>
 
   </div>
 </div><br>
