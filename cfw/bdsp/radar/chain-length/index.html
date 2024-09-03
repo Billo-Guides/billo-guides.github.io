@@ -31,12 +31,12 @@ permalink: /cfw/bdsp/radar/chain-length/
   <h1 class="text-light text-center pt-3 pb-3">BDSP PokeRadar Chain RNG (CFW)</h1>
 </div><hr />
 
-<p>This section of the guide covers how to RNG PokeRadar chain length, this type of RNG can be used to reach IV/Shiny bonuses with the PokeRadar. Chain length RNG abuse currently requires specific tools and raw scripts, so some additional download & setup instructions are required.</p>
+<p>This page covers how to manipulate your PokeRadar chain length. This type of RNG manipulation is used to reach high chains to be granted high IV/Shiny odd bonuses. The PokeRadar chain length RNG abuse script is capable of outputting frames that will break your chain based on your current seed.</p>
 
-<p><span class="fw-bold" style="color: #b60606;">It is still assumed that you have followed all of the setup & install instructions found on the main page of this guide, as some of these tools will be used here, despite the need for additional downloads.</span></p>
+<p><span class="fw-bold" style="color: #b60606;">From here it is assumed that you have read and followed all of the information found on the initial page of the PokeRadar guide.</span></p>
 
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp">
-  Missed some setup instructions? <span class="fw-bold">Click here to go back!</span>
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/radar/">
+  Missed the initial setup? <span class="fw-bold">Click here to go back!</span>
   <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
   </svg>
@@ -44,120 +44,26 @@ permalink: /cfw/bdsp/radar/chain-length/
 <br>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #96324c;" id="setup-and-install-bdsp-radar">
-    <span class="fw-bold text-light">PokeRadar Setup Instructions:</span>
+  <div class="anchored card-header" style="background-color: #96324c;" id="important-information-radar-chain">
+    <span class="fw-bold text-light">Important Information</span>
   </div>
   <div class="card-body card-bg">
-    <h5><span class="fw-bold">You will need:</span></h5>
-
-    <ul>
-      <li><a href="https://www.linqpad.net/GetFile.aspx?LINQPad8Setup.exe">LINQPad</a></li>
-      <li><a href="/cfw/bdsp/scripts.zip">PokeRadar Script & PKHeX.Core.dll</a></li>
-    </ul>
-
-    <h6><span class="fw-bold">Installation Instructions:</span></h6>
-     <ol>
-       <li>Download <code span class="fw-bold">LINQPad</code>, then run the installer and go through all the setup instructions.</li>
-       <li>Download <code span class="fw-bold">scripts.zip</code> and extract the contents into the same folder as LINQPad.</li>
-     </ol>
-
-    <blockquote>Your folder structure should look something similar to <a href="/cfw/bdsp/images/radar/chain-length/folder-structure.gif">this image</a> if everything was done correctly. Launch LINQPad and open the script after comfirming the installation was done correctly.</blockquote>
-
-  </div>
-</div><br>
-
-<span class="fw-bold">Figure 1 -</span> LINQPad Script Setup<p></p>
-<a href="/cfw/bdsp/images/radar/chain-length/figure-1-linqpad-script-setup.gif" target="_blank"><img src="/cfw/bdsp/images/radar/chain-length/figure-1-linqpad-script-setup.gif" class="img-fluid"></a><br /><br />
-
-<div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #96324c;" id="linqpad-script-setup">
-    <span class="fw-bold text-light">LINQPad Script Setup:</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>Upon opening the script in LINQPad, you should see something similar to the above image. The script should work fine with no modifications, if you are running into issues, do the following:</p>
-
-    <h6><span class="fw-bold">Leveraging PKHeX.Core.dll</span></h6>
-    <ul>
-      <li>With the script open, press F4 to bring up the <code span class="fw-bold">Query Properties</code> sub-window.</li>
-      <li>In the <code span class="fw-bold">Additional References</code> tab, click the <code span class="fw-bold">Add/Browse</code> button</li>
-      <li>Select <code span class="fw-bold">PKHeX.Core.dll</code>, this should be found inside the <code span class="fw-bold">dlls</code> file created earlier.</li>
-      <li>Open the <code span class="fw-bold">Namespace Imports</code> tab then type <code span class="fw-bold">PKHeX.Core</code>.</li>
-      <li>Click the <code span class="fw-bold">OK</code> button at the bottom left of the sub-window to confirm these changes.</li>
-      <li>Run the script, you should see that an output has been produced at the bottom of the main window.</li>
-    </ul>
-
-    <blockquote>Ensure that the script is being ran as a <code span class="fw-bold">C# Program</code>, this is visible in the top bar of the main window. Use Figure 1 as a reference point if you are struggling to leverage PKHeX.Core.dll.</blockquote>
-  </div>
-</div><br>
-
-<span class="fw-bold">Figure 2 -</span> Finding Current Seed<p></p>
-<a href="/cfw/bdsp/images/radar/chain-length/figure-2-finding-current-seed.gif" target="_blank"><img src="/cfw/bdsp/images/radar/chain-length/figure-2-finding-current-seed.gif" class="img-fluid"></a><br /><br />
-
-<div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #96324c;" id="seed-searching-moarencounterbots">
-    <span class="fw-bold text-light">Finding Current Seed</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>To easily obtain your current seed at any given point you can use the <code span class="fw-bold">EncBotCopySeedBS</code> bot routine in Moarencounterbots. You will need to toggle a few settings in the <code span class="fw-bold">Hub</code> tab for use with PokeFinder.</p>
-
-    <h6><span class="fw-bold">CopySeed Setup:</span></h6>
-    <ul>
-      <li>In the <code span class="fw-bold">Hub</code> tab, open the <code span class="fw-bold">EncounterRNGBS</code> dropdown menu.</li>
-      <li>Select <code span class="fw-bold">Bit128</code> in the <code span class="fw-bold">DisplaySeedMode</code> dropdown menu.</li>
-      <li>Set the <code span class="fw-bold">MonitorRefreshRate</code> to 0, this will be needed later.</li>
-      <li>In the <code span class="fw-bold">Bots</code> tab, type the local IP address of the console.</li>
-      <li>In the dropdown menu on the right, select <code span class="fw-bold">EncBotCopySeedBS</code> and add the bot.</li>
-      <li>Click the <code span class="fw-bold">Start All</code> button, your seed will be produced inside the <code span class="fw-bold">Logs</code> tab.</li>
-    </ul>
-
-    <p>These seeds can be pasted into the <code span class="fw-bold">string ram = "0123456789ABCDEF0123456789ABCDEF";</code> field of the script to search for frames that will not break your chain (paste your seed between the two "").</p> 
-
-    <blockquote>It is not recommended to change any other aspects of the script code unless you know what you are doing, this will result in inaccuracies going forward.</blockquote>
+    <p>PokeRadar chains have a chance of breaking based on multiple factors, it is important to understand how to play to achieve maximum odds of keeping your chain alive, as the PokeRadar Chain Length script assumes that you are playing perfectly and have the highest odds of maintaining a chain.</p>
     
+    <h6><span class="fw-bold">What is "perfect play"?</span></h6>
+    <ul>
+      <li>Starting a chain using a Radar patch that is 4 tiles away from the player.</li>
+      <li>Capturing the Pokemon that spawns instead of defeating it.</li>
+      <li>Avoid doing anything that is guaranteed to break a chain, found on the initial page.</li>
+    </ul>
+
+    <p>Doing all of the above will grant a 93% chance of maintaining a chain, you cannot boost your odds any further. By knowing this information, we can use the PokeRadar Chain Length script to predict which advancements will break the chain, and avoid them.</p> 
+
+    <blockquote>Contrary to common belief, the game decides if the chain will end at the end of the battle, shortly after the exp gain screen.</blockquote>
   </div>
 </div><br>
 
-<span class="fw-bold">Figure 3 -</span> PokeRadar Rules<p></p>
-<a href="/cfw/bdsp/images/radar/chain-length/figure-3-radar-rules.png" target="_blank"><img src="/cfw/bdsp/images/radar/chain-length/figure-3-radar-rules.png" class="img-fluid"></a><br /><br />
-
-<div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #96324c;" id="pokeradar-rules">
-    <span class="fw-bold text-light">PokeRadar Rules</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>You will need to understand the fundamentals of the PokeRadar, <a href="https://www.serebii.net/brilliantdiamondshiningpearl/pokeradar.shtml">Serebii's BDSP PokeRadar page</a> contains a lot of useful information about chain continuation and shiny odds.</p>
-
-    <p>The script assumes you have the highest odds of keeping the chain alive, achieved by targeting grass patches 4 tiles away and capturing the Pokemon (93%).</p><hr />
-
-    <h6><span class="fw-bold">Guaranteed Chain Breaks</span></h6>
-    <ul>
-      <li>Encountering a random wild Pokemon</li>
-      <li>Running from a radar encounter</li>
-      <li>Mounting your bike</li>
-      <li>Leaving the area</li>
-    </ul>
-
-    <h6><span class="fw-bold">Increase Chain Continue Odds</span></h6>
-    <ul>
-      <li>ONLY Encounter Pokemon 4 tiles away from the player</li>
-      <li>Capture the Pokemon instead of defeating it</li>
-      <li>Keep a repel active at all times to avoid unwanted encounters</li>
-    </ul>
-
-    <h6><span class="fw-bold">Tips & Recommendations</span></h6>
-    <ul>
-      <li>Bring enough repels and disable autosave in case of a failed chain</li>
-      <li>Find a large patch of grass capable of spawning all 4 radar tiles</li>
-      <li>Bring a high leveled Pokemon with False Swipe (or Master Balls) to easily capture Pokemon</li>
-      <li>Take the bike off the list of registered key items to avoid using it</li>
-    </ul>
-
-    <blockquote>Your capture Pokemon should be a higher level than the wild Pokemon in the area to utilize the repel trick, but it should also not be level 100. The script also relies on your Pokemon being able to gain exp after a battle.</blockquote>
-
-  </div>
-</div><br>
-
-<span class="fw-bold">Figure 4 -</span> In-game Setup<p></p>
+<span class="fw-bold">Figure 1 -</span> In-game Setup<p></p>
 <a href="/cfw/bdsp/images/radar/chain-length/figure-4-in-game-setup.gif" target="_blank"><img src="/cfw/bdsp/images/radar/chain-length/figure-4-in-game-setup.gif" class="img-fluid"></a><br /><br />
 
 <div class="card border-dark">
@@ -165,49 +71,46 @@ permalink: /cfw/bdsp/radar/chain-length/
     <span class="fw-bold text-light">In-game Setup</span>
   </div>
   <div class="card-body card-bg">
-    <p>In Figure 4, the player activate a Max Repel, and is standing in the middle a large patch of grass with the PokeRadar chain app open on the Poketch to keep track of chain length (aquired after visiting Ramanas Park).</p>
+    <p>In Figure 1, the player activate a Max Repel, and is standing in the middle a large patch of grass with the PokeRadar chain app open on the Poketch to keep track of chain length.</p>
 
-    <p>After using the PokeRadar, 4 patches of grass have appeared. The player then initiated a battle by entering the outer-most grass patch and encountered the desired Pokemon (Ditto).</p>
+    <p>After using the PokeRadar 4 patches of grass have appeared. We then initiated a battle by entering a grass patch 4 tiles away from the player, and encountered the desired Pokemon, if the species you encountered is not desirable, restart the chain by running from the battle and using the PokeRadar again.</p>
 
-    <h6><span class="fw-bold">Undesirable species?</span></h6>
-    <ol>
-      <li>Run from the battle to end the chain</li>
-      <li>Recharge the PokeRadar by running around</li>
-      <li>Stand back in position and use the PokeRadar again</li>
-      <li>Encounter a Pokemon on the outer-most tile</li>
-      <li>Repeat until you find your desired species</li>
-    </ol>
+    <p>We then captured Ditto, granting a 93% chance of continuing the chain. Once the exp gain screen appeared, the Home button was pressed to pause the game (freezing the RNG state).</p>
 
-    <blockquote>After encountering your desired species, capture the Pokemon and wait on the exp gain screen, use the Home button to freeze the game and freeze the RNG state.</blockquote>
-  </div>
+    <p><span class="fw-bold">Important -</span> bring at least 1 Pokemon on your team that is capable of gaining exp, this will make the RNG abuse process more stable as it is possible to freeze the RNG state on the Exp gain screen, then end the battle at any given point.</p>
+
+    <blockquote>If you do not have access to plenty of Master Balls to capture Pokemon, it is recommended to bring a Pokemon that you can use to effectively capture the Pokemon from the PokeRadar chain, such as a Pokemon with the move False Swipe and a high attack stat.</blockquote>
+   </div>
 </div><br>
 
-<span class="fw-bold">Figure 5 -</span> Final Actions<p></p>
-<a href="/cfw/bdsp/images/radar/chain-length/figure-5-final-actions.gif" target="_blank"><img src="/cfw/bdsp/images/radar/chain-length/figure-5-final-actions.gif" class="img-fluid"></a><br /><br />
+<span class="fw-bold">Figure 2 -</span> Using The Script<p></p>
+<a href="/cfw/bdsp/images/radar/chain-length/figure-2-using-the-script.gif" target="_blank"><img src="/cfw/bdsp/images/radar/chain-length/figure-2-using-the-script.gif" class="img-fluid"></a><br /><br />
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #96324c;" id="final-actions-radar">
+  <div class="anchored card-header" style="background-color: #96324c;" id="using-the-script">
     <span class="fw-bold text-light">Final Actions</span>
   </div>
   <div class="card-body card-bg">
-    <p>The game paused using the Home menu on the exp gain screen, the final screen before the battle ends. After pasting the seed from Moarencounterbots into the script, a result has been produced with lots of frames that can potentially break the chain (marked with an <code span class="fw-bold">*</code>). As there are a large number of frames that will potentially break the chain, this would be an undesirable time to end the encounter.</p>
-      
-    <p>The amount of frames consumed after ending a battle is variable. So it is important to wait until there is a large enough group of frames that will not break your chain, the recommended delay is 25-130, so you should aim for as little frames marked with an <code span class="fw-bold">*</code> within this space before ending the battle.</p>
-      
-    <p>Press the Home button to freeze the RNG state, then use <code span class="fw-bold">EncBotCopySeedBS</code> to check your seed until a safe enough time to end the battle has been produced, this may take a while.</p>
+    <p>In the above image, the game is paused using the Home menu on the Exp gain screen, then <code span class="fw-bold">EncBotCopySeedBS</code> was used to obtain the current seed, this seed was then pasted into the script and a result was produced.</p>
+
+    <p>The produced result is unsafe, as there are many frames that we can potentially land on that will break the chain (frames that will cause the chain to break are marked with an <code span class="fw-bold">*</code>). Now the goal is to wait for a safe frame.</p>
+
+    <p>The amount of frames consumed after leaving a battle is variable, typically between 25-80 frames, so you should aim to look for a frame with as little frames to break the chain as possible (ideally 0), this may take a while.</p>
+
+    <p>Simply unpause the game, allow wait a few seconds to allow the RNG state to advance, then pause the game with the Home menu and check your seed again, repeat until you find a safe enough frame to end the battle on.</p>
 
    </div>
 </div><br>
 
-<span class="fw-bold">Figure 6 -</span> Safe Frame Found<p></p>
-<a href="/cfw/bdsp/images/radar/chain-length/figure-6-safe-frame-found.gif" target="_blank"><img src="/cfw/bdsp/images/radar/chain-length/figure-6-safe-frame-found.gif" class="img-fluid"></a><br /><br />
+<span class="fw-bold">Figure 3 -</span> Safe Frame Found<p></p>
+<a href="/cfw/bdsp/images/radar/chain-length/figure-3-safe-frame-found.gif" target="_blank"><img src="/cfw/bdsp/images/radar/chain-length/figure-3-safe-frame-found.gif" class="img-fluid"></a><br /><br />
 
 <div class="card border-dark">
   <div class="anchored card-header" style="background-color: #96324c;" id="safe-frame-found-radar">
     <span class="fw-bold text-light">Safe Frame Found</span>
   </div>
   <div class="card-body card-bg">
-    <p>After finding a safe enough frame (the Figure 6 example only has 1 frame that will cause a chain break), quickly spam the <code span class="fw-bold">A</code> button to end the battle, if done correctly your chain will continue. Repeat this process to reach your desired chain length.</p>
+    <p>After finding a safe enough frame (the Figure 3 example only has 1 frame that will cause a chain break), quickly spam the <code span class="fw-bold">A</code> button to end the battle, if done correctly your chain will continue. Repeat this process to reach your desired chain length.</p>
 
     <span class="fw-bold">ENSURE THAT YOU ARE ONLY ENCOUNTERING POKEMON THAT ARE IN PATCHES 4 TILES AWAY FROM THE PLAYER!</span> Stand in the middle of the grass patch and use the PokeRadar again if no ideal patches are produced.</p>
 
@@ -225,12 +128,20 @@ permalink: /cfw/bdsp/radar/chain-length/
    </div>
 </div><br>
 
-<span class="fw-bold">Figure 7 -</span> Chain Length Hit<p></p>
-<a href="/cfw/bdsp/images/radar/chain-length/figure-7-chain-length-hit.png" target="_blank"><img src="/cfw/bdsp/images/radar/chain-length/figure-7-chain-length-hit.png" class="img-fluid"></a><br /><br />
+<span class="fw-bold">Figure 4 -</span> Chain Length Hit<p></p>
+<a href="/cfw/bdsp/images/radar/chain-length/figure-4-chain-length-hit.png" target="_blank"><img src="/cfw/bdsp/images/radar/chain-length/figure-4-chain-length-hit.png" class="img-fluid"></a><br /><br />
 
 <p>After repeating the method explained above, a chain of 39 has now been reached according to the PokeRadar, which means the next encountered Pokemon in the chain will have 3 guaranteed IVs. Now we can continually spam the radar while avoiding encounters until a shiny patch appears.</p>
 
-<span class="fw-bold">Figure 8 -</span> Shiny Patch Found<p></p>
-<a href="/cfw/bdsp/images/radar/chain-length/figure-8-shiny-patch-found.png" target="_blank"><img src="/cfw/bdsp/images/radar/chain-length/figure-8-shiny-patch-found.png" class="img-fluid"></a><br /><br />
+<span class="fw-bold">Figure 5 -</span> Shiny Patch Found<p></p>
+<a href="/cfw/bdsp/images/radar/chain-length/figure-5-shiny-patch-found.png" target="_blank"><img src="/cfw/bdsp/images/radar/chain-length/figure-5-shiny-patch-found.png" class="img-fluid"></a><br /><br />
 
 <p>A shiny patch has been found on a chain of 39, granting a guaranteed shiny Pokemon with 3 perfect IVs. <span class="fw-bold">Mission accomplished!</span></p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/radar/encounter/">
+  Wanting to learn encounter manipulation? <span class="fw-bold">Visit this guide!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a>
+<br>
