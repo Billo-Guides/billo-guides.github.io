@@ -31,7 +31,7 @@ permalink: /cfw/bdsp/radar/
   <h1 class="text-light text-center pt-3 pb-3">BDSP PokeRadar Chain RNG (CFW)</h1>
 </div><hr />
 
-<p>This section of the guide covers how to RNG abuse the PokeRadar, this can be utilized to achieve high chain lengths (to grant IV & Shiny bonuses), or to simply RNG abuse the internal details of a Pokemon in a PokeRadar patch (IVs, Nature, etc).</p>
+<p>This section of the guide covers how to RNG abuse the PokeRadar, this can be utilized to achieve high chain lengths to grant IV & Shiny bonuses, or to simply RNG abuse the internal details of a Pokemon in a PokeRadar patch (IVs, Nature, etc). The RNG abuse scripts being used in this guide are created by <a href="https://gist.github.com/Lusamine">Lusamine</a>.</p>
 
 <div class="card border-dark">
   <div class="anchored card-header" style="background-color: #96324c;" id="setup-and-install-bdsp-radar">
@@ -41,12 +41,14 @@ permalink: /cfw/bdsp/radar/
     <h5><span class="fw-bold">You will need:</span></h5>
 
     <ul>
+      <li><a href="/cfw/bdsp/SysBot.NET - Moarencounterbots.zip">SysBot.NET - Moarencounterbots</a></li>
       <li><a href="https://www.linqpad.net/GetFile.aspx?LINQPad8Setup.exe">LINQPad</a></li>
-      <li><a href="/cfw/bdsp/scripts.zip">PokeRadar Script & PKHeX.Core.dll</a></li>
+      <li><a href="/cfw/bdsp/scripts.zip">PokeRadar Scripts & PKHeX.Core.dll</a></li>
     </ul>
 
     <h6><span class="fw-bold">Installation Instructions:</span></h6>
      <ol>
+       <li>Download <code span class="fw-bold">SysBot.NET - Moarencounterbots</code>, then extract the contents into a known location.</li>
        <li>Download <code span class="fw-bold">LINQPad</code>, then run the installer and go through all the setup instructions.</li>
        <li>Download <code span class="fw-bold">scripts.zip</code> and extract the contents into the same folder as LINQPad.</li>
      </ol>
@@ -64,7 +66,7 @@ permalink: /cfw/bdsp/radar/
     <span class="fw-bold text-light">LINQPad Script Setup:</span>
   </div>
   <div class="card-body card-bg">
-    <p>Upon opening each of the scripts in LINQPad, you should see something similar to the above image. These scripts should run as intended without modifications, but if you are running into issues running either script, do the following:</p>
+    <p>Upon opening each of the scripts in LINQPad, you should see something similar to the above image. These scripts should run as intended without modifications. If you are running into issues running either script, do the following:</p>
 
     <h6><span class="fw-bold">Leveraging PKHeX.Core.dll</span></h6>
     <ul>
@@ -76,7 +78,7 @@ permalink: /cfw/bdsp/radar/
       <li>Run the script, you should see that an output has been produced at the bottom of the main window.</li>
     </ul>
 
-    <blockquote>Ensure that the script is being ran as a <code span class="fw-bold">C# Program</code>, this is visible in the top bar of the main window. Use Figure 1 as a reference point if you are struggling to leverage PKHeX.Core.dll.</blockquote>
+    <blockquote>Ensure that the script is being ran as a <code span class="fw-bold">C# Program</code>, this is visible in the top bar of the main window. Use Figure 1 as a reference point if you are struggling with leveraging PKHeX.Core.dll.</blockquote>
   </div>
 </div><br>
 
@@ -88,7 +90,7 @@ permalink: /cfw/bdsp/radar/
     <span class="fw-bold text-light">Finding Current Seed</span>
   </div>
   <div class="card-body card-bg">
-    <p>To easily obtain your current seed at any given point you can use the <code span class="fw-bold">EncBotCopySeedBS</code> bot routine in Moarencounterbots. You will need to toggle a few settings in the <code span class="fw-bold">Hub</code> tab for use with PokeFinder.</p>
+    <p>To easily obtain your current seed at any given point you can use the <code span class="fw-bold">EncBotCopySeedBS</code> bot routine in Moarencounterbots. You will need to toggle a few settings in the <code span class="fw-bold">Hub</code> tab for use with Lusamine's RNG scripts.</p>
 
     <h6><span class="fw-bold">Moarencounterbots Setup:</span></h6>
     <ul>
@@ -109,8 +111,8 @@ permalink: /cfw/bdsp/radar/
 <a href="/cfw/bdsp/images/radar/chain-length/figure-3-radar-rules.png" target="_blank"><img src="/cfw/bdsp/images/radar/chain-length/figure-3-radar-rules.png" class="img-fluid"></a><br /><br />
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #96324c;" id="pokeradar-rules">
-    <span class="fw-bold text-light">PokeRadar Rules</span>
+  <div class="anchored card-header" style="background-color: #96324c;" id="understanding-pokeradar">
+    <span class="fw-bold text-light">Understanding PokeRadar</span>
   </div>
   <div class="card-body card-bg">
     <p>You will need to understand the fundamentals of the PokeRadar, <a href="https://www.serebii.net/brilliantdiamondshiningpearl/pokeradar.shtml">Serebii's BDSP PokeRadar page</a> contains a lot of useful information about chain continuation and shiny odds.</p>
