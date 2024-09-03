@@ -139,7 +139,7 @@ permalink: /cfw/bdsp/radar/chain-length/
 
     <h6><span class="fw-bold">Increase Chain Continue Odds</span></h6>
     <ul>
-      <li>Encounter Pokemon 4 tiles away from the player</li>
+      <li>ONLY Encounter Pokemon 4 tiles away from the player</li>
       <li>Capture the Pokemon instead of defeating it</li>
       <li>Keep a repel active at all times to avoid unwanted encounters</li>
     </ul>
@@ -190,13 +190,13 @@ permalink: /cfw/bdsp/radar/chain-length/
     <span class="fw-bold text-light">Final Actions</span>
   </div>
   <div class="card-body card-bg">
-    <p>In Figure 5, the game is frozen on the screen of the final button press that ends the battle, after pasting the seed from moarencounterbots the script, a result has been produced.</p>
+    <p>In Figure 5, the game is frozen on the screen of the final button press that ends the battle, after pasting the seed from Moarencounterbots into the script, a result has been produced.</p>
       
     <p>Any frame marked with an <code span class="fw-bold">*</code> will cause your chain to break, so the goal is to avoid ending the battle at an "unsafe" time (aka during a period with a lot of frames that will break the chain).</p>
 
     <p>The amount of frames consumed after ending a battle is variable. So it is important to wait until there is a large enough group of frames that will not break your chain, the recommended delay is 25-130.</p>
 
-    <p>Keep checking the RNG state by pressing the Home button and using <code span class="fw-bold">EncBotCopySeedBS</code> until you find a safe enough time to end the battle (sometimes you may be waiting a while for this to show up).</p>
+    <p>Keep checking the RNG state by pressing the Home button and using <code span class="fw-bold">EncBotCopySeedBS</code> until you find a safe enough time to end the battle, sometimes you may be waiting a while for this to show up.</p>
 
     <blockquote>In the above example there are a lot of frames marked with an <code span class="fw-bold">*</code>, meaning we now need to wait until there is a safe enough group of frames to end the battle on.</blockquote>
    </div>
@@ -205,11 +205,25 @@ permalink: /cfw/bdsp/radar/chain-length/
 <span class="fw-bold">Figure 6 -</span> Safe Frame Found<p></p>
 <a href="/cfw/bdsp/images/radar/chain-length/figure-6-safe-frame-found.gif" target="_blank"><img src="/cfw/bdsp/images/radar/chain-length/figure-6-safe-frame-found.gif" class="img-fluid"></a><br /><br />
 
-<div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #96324c;" id="safe-frame-found-radar">
-    <span class="fw-bold text-light">Safe Frame Found</span>
-  </div>
-  <div class="card-body card-bg">
-    
-   </div>
-</div><br>
+<p>After finding a safe enough frame (like the example in Figure 6), quickly spam the <code span class="fw-bold">A</code> button to end the battle, if done correctly your chain will continue. Repeat this process to reach your desired chain length.</p>
+
+<span class="fw-bold">ENSURE THAT YOU ARE ONLY ENCOUNTERING POKEMON THAT ARE IN PATCHES 4 TILES AWAY FROM THE PLAYER!</span> Stand in the middle of the grass patch and use the PokeRadar again if no ideal patches are produced.</p>
+
+<h6><span class="fw-bold">Desirable Chain Lengths</span></h6>
+<ul>
+  <li>40+ grants the best possible shiny odds.</li>
+  <li>A chain of exactly 20 grants 1 flawless IV.</li>
+  <li>A chain of exactly 30 grants 2 flawless IVs.</li>
+  <li>A chain of exactly 40 grants 3 flawless IVs.</li>
+  <li>A chain of exactly 100 grants 5 flawless IVs.</li>
+</ul>
+
+<span class="fw-bold">Figure 7 -</span> Chain Length Hit<p></p>
+<a href="/cfw/bdsp/images/radar/chain-length/figure-7-chain-length-hit.png" target="_blank"><img src="/cfw/bdsp/images/radar/chain-length/figure-7-chain-length-hit.png" class="img-fluid"></a><br /><br />
+
+<p>After repeating the method explained above, a chain of 40 has now been reached according to the PokeRadar, you can now continually spam the radar while avoiding encounters until a shiny patch appears.</p>
+
+<span class="fw-bold">Figure 8 -</span> Shiny Patch Found<p></p>
+<a href="/cfw/bdsp/images/radar/chain-length/figure-8-shiny-patch-found.png" target="_blank"><img src="/cfw/bdsp/images/radar/chain-length/figure-8-shiny-patch-found.png" class="img-fluid"></a><br /><br />
+
+<p>A shiny patch has been found on a chain of 40, granting 3 perfect IVs. <span class="fw-bold">Mission accomplished!</span></p>
