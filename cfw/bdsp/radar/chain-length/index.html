@@ -121,11 +121,11 @@ permalink: /cfw/bdsp/radar/chain-length/
 <a href="/cfw/bdsp/images/radar/chain-length/figure-3-radar-rules.gif" target="_blank"><img src="/cfw/bdsp/images/radar/chain-length/figure-3-radar-rules.gif" class="img-fluid"></a><br /><br />
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #96324c;" id="in-game-setup-radar">
+  <div class="anchored card-header" style="background-color: #96324c;" id=pokeradar-rules">
     <span class="fw-bold text-light">PokeRadar Rules</span>
   </div>
   <div class="card-body card-bg">
-    <p>First, you will need to understand the fundamentals of the PokeRadar, <a href="https://www.serebii.net/brilliantdiamondshiningpearl/pokeradar.shtml">Serebii's BDSP PokeRadar page</a> contains a lot of useful information about chain continuation and shiny odds.</p>
+    <p>You will need to understand the fundamentals of the PokeRadar, <a href="https://www.serebii.net/brilliantdiamondshiningpearl/pokeradar.shtml">Serebii's BDSP PokeRadar page</a> contains a lot of useful information about chain continuation and shiny odds.</p>
 
     <p>The script assumes you have the highest odds of keeping the chain alive, achieved by targeting grass patches 4 tiles away and capturing the Pokemon (93%).</p><hr />
 
@@ -148,7 +148,7 @@ permalink: /cfw/bdsp/radar/chain-length/
     <ul>
       <li>Bring enough repels and disable autosave in case of a failed chain</li>
       <li>Find a large patch of grass capable of spawning all 4 radar tiles</li>
-      <li>Bring a high leveled Breloom (or alternative) to easily capture Pokemon</li>
+      <li>Bring a high leveled Pokemon with False Swipe (or Master Balls) to easily capture Pokemon</li>
       <li>Take the bike off the list of registered key items to avoid using it</li>
     </ul>
 
@@ -157,3 +157,59 @@ permalink: /cfw/bdsp/radar/chain-length/
   </div>
 </div><br>
 
+<span class="fw-bold">Figure 4 -</span> In-game Setup<p></p>
+<a href="/cfw/bdsp/images/radar/chain-length/figure-4-in-game-setup.gif" target="_blank"><img src="/cfw/bdsp/images/radar/chain-length/figure-4-in-game-setup.gif" class="img-fluid"></a><br /><br />
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #96324c;" id="in-game-setup-radar">
+    <span class="fw-bold text-light">In-game Setup</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>In Figure 4, the player activate a Max Repel, and is standing in the middle a large patch of grass with the PokeRadar chain app open on the Poketch to keep track of chain length (aquired after visiting Ramanas Park).</p>
+
+    <p>After using the PokeRadar, 4 patches of grass have appeared. The player then initiated a battle by entering the outer-most grass patch and encountered the desired Pokemon (Ditto).</p>
+
+    <h6><span class="fw-bold">Undesirable species?</span></h6>
+    <ol>
+      <li>Run from the battle to end the chain</li>
+      <li>Recharge the PokeRadar by running around</li>
+      <li>Stand back in position and use the PokeRadar again</li>
+      <li>Encounter a Pokemon on the outer-most tile</li>
+      <li>Repeat until you find your desired species</li>
+    </ol>
+
+    <blockquote>After encountering your desired species, capture the Pokemon and wait on the exp gain screen, use the Home button to freeze the game and freeze the RNG state.</blockquote>
+  </div>
+</div><br>
+
+<span class="fw-bold">Figure 5 -</span> Final Actions<p></p>
+<a href="/cfw/bdsp/images/radar/chain-length/figure-5-final-actions.gif" target="_blank"><img src="/cfw/bdsp/images/radar/chain-length/figure-5-final-actions.gif" class="img-fluid"></a><br /><br />
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #96324c;" id="final-actions-radar">
+    <span class="fw-bold text-light">Final Actions</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>In Figure 5, the game is frozen on the screen of the final button press that ends the battle, after pasting the seed from moarencounterbots the script, a result has been produced.</p>
+      
+    <p>Any frame marked with an <code span class="fw-bold">*</code> will cause your chain to break, so the goal is to avoid ending the battle at an "unsafe" time (aka during a period with a lot of frames that will break the chain).</p>
+
+    <p>The amount of frames consumed after ending a battle is variable. So it is important to wait until there is a large enough group of frames that will not break your chain, the recommended delay is 25-130.</p>
+
+    <p>Keep checking the RNG state by pressing the Home button and using <code span class="fw-bold">EncBotCopySeedBS</code> until you find a safe enough time to end the battle (sometimes you may be waiting a while for this to show up).</p>
+
+    <blockquote>In the above example there are a lot of frames marked with an <code span class="fw-bold">*</code>, meaning we now need to wait until there is a safe enough group of frames to end the battle on.</blockquote>
+   </div>
+</div><br>
+
+<span class="fw-bold">Figure 6 -</span> Safe Frame Found<p></p>
+<a href="/cfw/bdsp/images/radar/chain-length/figure-6-safe-frame-found.gif" target="_blank"><img src="/cfw/bdsp/images/radar/chain-length/figure-6-safe-frame-found.gif" class="img-fluid"></a><br /><br />
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #96324c;" id="safe-frame-found-radar">
+    <span class="fw-bold text-light">Safe Frame Found</span>
+  </div>
+  <div class="card-body card-bg">
+    
+   </div>
+</div><br>
