@@ -118,10 +118,10 @@ permalink: /cfw/bdsp/radar/chain-length/
 </div><br>
 
 <span class="fw-bold">Figure 3 -</span> PokeRadar Rules<p></p>
-<a href="/cfw/bdsp/images/radar/chain-length/figure-3-radar-rules.gif" target="_blank"><img src="/cfw/bdsp/images/radar/chain-length/figure-3-radar-rules.gif" class="img-fluid"></a><br /><br />
+<a href="/cfw/bdsp/images/radar/chain-length/figure-3-radar-rules.png" target="_blank"><img src="/cfw/bdsp/images/radar/chain-length/figure-3-radar-rules.png" class="img-fluid"></a><br /><br />
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #96324c;" id=pokeradar-rules">
+  <div class="anchored card-header" style="background-color: #96324c;" id="pokeradar-rules">
     <span class="fw-bold text-light">PokeRadar Rules</span>
   </div>
   <div class="card-body card-bg">
@@ -190,15 +190,12 @@ permalink: /cfw/bdsp/radar/chain-length/
     <span class="fw-bold text-light">Final Actions</span>
   </div>
   <div class="card-body card-bg">
-    <p>In Figure 5, the game is frozen on the screen of the final button press that ends the battle, after pasting the seed from Moarencounterbots into the script, a result has been produced.</p>
+    <p>The game paused using the Home menu on the exp gain screen, the final screen before the battle ends. After pasting the seed from Moarencounterbots into the script, a result has been produced with lots of frames that can potentially break the chain (marked with an <code span class="fw-bold">*</code>). As there are a large number of frames that will potentially break the chain, this would be an undesirable time to end the encounter.</p>
       
-    <p>Any frame marked with an <code span class="fw-bold">*</code> will cause your chain to break, so the goal is to avoid ending the battle at an "unsafe" time (aka during a period with a lot of frames that will break the chain).</p>
+    <p>The amount of frames consumed after ending a battle is variable. So it is important to wait until there is a large enough group of frames that will not break your chain, the recommended delay is 25-130, so you should aim for as little frames marked with an <code span class="fw-bold">*</code> within this space before ending the battle.</p>
+      
+    <p>Press the Home button to freeze the RNG state, then use <code span class="fw-bold">EncBotCopySeedBS</code> to check your seed until a safe enough time to end the battle has been produced, this may take a while.</p>
 
-    <p>The amount of frames consumed after ending a battle is variable. So it is important to wait until there is a large enough group of frames that will not break your chain, the recommended delay is 25-130.</p>
-
-    <p>Keep checking the RNG state by pressing the Home button and using <code span class="fw-bold">EncBotCopySeedBS</code> until you find a safe enough time to end the battle, sometimes you may be waiting a while for this to show up.</p>
-
-    <blockquote>In the above example there are a lot of frames marked with an <code span class="fw-bold">*</code>, meaning we now need to wait until there is a safe enough group of frames to end the battle on.</blockquote>
    </div>
 </div><br>
 
@@ -210,7 +207,7 @@ permalink: /cfw/bdsp/radar/chain-length/
     <span class="fw-bold text-light">Safe Frame Found</span>
   </div>
   <div class="card-body card-bg">
-    <p>After finding a safe enough frame (like the example in Figure 6), quickly spam the <code span class="fw-bold">A</code> button to end the battle, if done correctly your chain will continue. Repeat this process to reach your desired chain length.</p>
+    <p>After finding a safe enough frame (the Figure 6 example only has 1 frame that will cause a chain break), quickly spam the <code span class="fw-bold">A</code> button to end the battle, if done correctly your chain will continue. Repeat this process to reach your desired chain length.</p>
 
     <span class="fw-bold">ENSURE THAT YOU ARE ONLY ENCOUNTERING POKEMON THAT ARE IN PATCHES 4 TILES AWAY FROM THE PLAYER!</span> Stand in the middle of the grass patch and use the PokeRadar again if no ideal patches are produced.</p>
 
