@@ -64,11 +64,20 @@ permalink: /cfw/bdsp/radar/encounter/
 
 <div class="card border-dark">
   <div class="anchored card-header" style="background-color: #96324c;" id="script-setup-radar-encounter">
-    <span class="fw-bold text-light">Delay Calibration</span>
+    <span class="fw-bold text-light">Script Setup</span>
   </div>
   <div class="card-body card-bg">
-    <p>First, you will need to configure the script properly depending on the Pokemon you are hunting.</p>
-    
+    <p>First, you will need to configure the script properly for delay calibration, script setup will vary slightly depending on the Pokemon you are hunting. Different variables like gender ratios and current chain length need to be considered.</p>
+     
+    <p>Take note of the gender ratio of the Pokemon you are hunting, each of these have an assigned number value (found at the very top of the script).</p>
+
+    <ul>
+      <li>In the <code span class="fw-bold">int GenderCompare</code> line, change the number value to match the gender ratio of the Pokemon you are hunting.</li>
+      <li>In the <code span class="fw-bold">int FlawlessIVs</code> line, make sure this value is set to <code span class="fw-bold">0</code> (you should not have a long chain when testing delays).</li>
+      <li>Ensure the search filters at the bottom of the script are written as comments when testing delays (comments are green and the line starts with <code class="fw-bold" style="color: #0a7a00;">//</code>).</li>
+    </ul>
+
+    <p>In the above example, we are hunting for Ditto, which has a gender value of <code span class="fw-bold">-1</code> (genderless), and do not have a chain length that guarantees flawless IVs, the search filters are also written as comments for now as we are calibrating delay values.</p>
     
    </div>
 </div><br>
@@ -96,3 +105,55 @@ permalink: /cfw/bdsp/radar/encounter/
     
    </div>
 </div><br>
+
+<p>After 10 attempts, the following delays were calculated:</p>
+
+<table class="table table-striped" style="width:100%" id="delay-table">
+  <thead class="table text-white" style="background-color: #96324c;">
+      <th scope="col" style="width:25%" class="text-center">Attempt</th>
+      <th scope="col" style="width:25%" class="text-center">Delay</th>
+   </tr>
+       </thead>
+       <tbody>
+    <tr>
+      <td class="text-center"><span class="fw-bold">Attempt 1</span></td>
+      <td class="text-center">x</td>
+    </tr>
+    <tr>
+      <td class="text-center"><span class="fw-bold">Attempt 2</span></td>
+      <td class="text-center">x</td>
+    </tr>
+    <tr>
+      <td class="text-center"><span class="fw-bold">Attempt 3</span></td>
+      <td class="text-center">x</td>
+    </tr>
+    <tr>
+      <td class="text-center"><span class="fw-bold">Attempt 4</span></td>
+      <td class="text-center">x</td>
+    </tr>
+    <tr>
+      <td class="text-center"><span class="fw-bold">Attempt 5</span></td>
+      <td class="text-center">x</td>
+    </tr>
+    <tr>
+      <td class="text-center"><span class="fw-bold">Attempt 6</span></td>
+      <td class="text-center">x</td>
+    </tr>
+    <tr>
+      <td class="text-center"><span class="fw-bold">Attempt 7</span></td>
+      <td class="text-center">x</td>
+    </tr>
+    <tr>
+      <td class="text-center"><span class="fw-bold">Attempt 8</span></td>
+      <td class="text-center">x</td>
+    </tr>
+    <tr>
+      <td class="text-center"><span class="fw-bold">Attempt 9</span></td>
+      <td class="text-center">x</td>
+    </tr>
+    <tr>
+      <td class="text-center"><span class="fw-bold">Attempt 10</span></td>
+      <td class="text-center">x</td>
+    </tr>
+     </tbody>
+</table>
