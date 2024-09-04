@@ -30,3 +30,69 @@ permalink: /cfw/bdsp/radar/encounter/
 <div class="title" style="background-color: #96324c;">
   <h1 class="text-light text-center pt-3 pb-3">BDSP PokeRadar Encounter RNG (CFW)</h1>
 </div><hr />
+
+<p>This page covers how to manipulate your PokeRadar encounters. This type of RNG manipulation can be used to manipulate Pokemon with ideal stats/natures from PokeRadar chains, and is best used in tandem with PokeRadar chain length manipulation on order to achieve shiny Pokemon with high IV values.</p>
+  
+<p><span class="fw-bold" style="color: #b60606;">From here it is assumed that you have read and followed all of the information found on the initial page of the PokeRadar guide.</span></p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/radar/">
+  Missed the initial setup? <span class="fw-bold">Click here to go back!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a>
+<br>
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #96324c;" id="important-information-radar-encounter">
+    <span class="fw-bold text-light">Important Information</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>The frame you enter a PokeRadar grass patch on determines the internal values of the Pokemon inside, such as IVs, Nature, Gender etc. The species can be controlled however, as once you are committed to a chain, the Pokemon is guaranteed to be the same species until the chain breaks.</p>
+
+    <p>The PokeRadar can produce "shiny patches", these are patches of grass that will always contain shiny Pokemon. Shiny patches have a clear visual indicator making them hard to miss. On specific chain lengths the PokeRadar also grants a Pokemon with guaranteed flawless IVs.</p>
+
+    <p>Having a Pokemon with the ability Synchronize first on your party will force every PokeRadar encounter to match the nature of your Pokemon, for example, if you have an Adamant Pokemon with the ability syncronize first on your party, every encounter will have an Adamant nature as well.</p>
+
+    <p>We can use this knowledge, along with Lusamine's BDSP Wild RNG Abuse script to obtain shiny Pokemon and/or Pokemon with desirable IV/Nature values.</p>
+
+   </div>
+</div><br>
+
+<span class="fw-bold">Figure 1 -</span> Script Setup<p></p>
+<a href="/cfw/bdsp/images/radar/encounter/figure-1-script-setup.gif" target="_blank"><img src="/cfw/bdsp/images/radar/encounter/figure-1-script-setup.gif" class="img-fluid"></a><br /><br />
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #96324c;" id="script-setup-radar-encounter">
+    <span class="fw-bold text-light">Delay Calibration</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>First, you will need to configure the script properly depending on the Pokemon you are hunting.</p>
+    
+    
+   </div>
+</div><br>
+
+<span class="fw-bold">Figure 2 -</span> Delay Calibration<p></p>
+<a href="/cfw/bdsp/images/radar/encounter/figure-2-delay-calibration.gif" target="_blank"><img src="/cfw/bdsp/images/radar/encounter/figure-2-delay-calibration.gif" class="img-fluid"></a><br /><br />
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #96324c;" id="delay-calibration-radar-encounter">
+    <span class="fw-bold text-light">Delay Calibration</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>It is important to calculate the delay for your encounter, in this sense, the term "delay" is used to describe the amount of frames that are consumed from walking into a PokeRadar patch and generating a Pokemon.</p>
+
+    <h6><span class="fw-bold">Step-by-step</span></h6>
+    <ul>
+      <li>Activate a chain and stand next to a radar tile, then press the Home button to freeze the RNG state.</li>
+      <li>Run <code span class="fw-bold">EncBotCopySeedBS</code> to obtain your current seed, then paste it into the script.</li>
+      <li>Unpause the game by pressing the Home button, while walking in the direction of the radar patch.</li>
+      <li>Use PokeViewer.NET's <code span class="fw-bold">Wild View</code> feature to read the details of the Pokemon you are in battle with.</li>
+      <li>Copy the PID from PokeViewer, then press <code span class="fw-bold">Crtl+F</code> on your keyboard in the LINQPad results.</li>
+      <li>Paste the PID to find the frame that generated the Pokemon you are in battle with, this will be your delay.</li>
+      <li>Since delay is variable, repeat this process a few times to get a rough average delay value.</li>
+    </ul>
+    
+   </div>
+</div><br>
