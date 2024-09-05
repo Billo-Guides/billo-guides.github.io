@@ -48,11 +48,11 @@ permalink: /cfw/bdsp/radar/encounter/
     <span class="fw-bold text-light">Important Information</span>
   </div>
   <div class="card-body card-bg">
-    <p>The frame you enter a PokeRadar grass patch on determines the internal values of the Pokemon inside, such as IVs, Nature, Gender etc. The species can be controlled however, as once you are committed to a chain, the Pokemon is guaranteed to be the same species until the chain breaks.</p>
+    <p>The frame at which you enter a PokeRadar grass patch determines the internal values (IVs, Nature, Gender, etc.) of the Pokemon inside. However, the species remains consistent throughout a chain. Once a chain starts, all encounters will be the same species until the chain breaks.</p>
 
-    <p>Having a Pokemon with the ability Synchronize first on your party will force every PokeRadar encounter to match the nature of your Pokemon, for example, if you have an Adamant Pokemon with the ability syncronize first on your party, every encounter will have an Adamant nature as well.</p>
+    <p>If your party leads with a Pokémon that has the Synchronize ability, every PokéRadar encounter will match the nature of that Pokémon. For example, if you have an Adamant Pokémon with Synchronize first on your party, all encounters will have an Adamant nature.</p>
 
-    <p>We can use this knowledge, along with Lusamine's BDSP Wild RNG Abuse script to obtain shiny Pokemon and/or Pokemon with desirable IV/Nature values.</p>
+    <p>Using this information, along with Lusamine's BDSP scripts, you can manipulate encounters to obtain shiny Pokémon with ideal IVs and Natures from PokeRadar chains.</p>
 
    </div>
 </div><br>
@@ -65,9 +65,7 @@ permalink: /cfw/bdsp/radar/encounter/
     <span class="fw-bold text-light">Script Setup (Delay)</span>
   </div>
   <div class="card-body card-bg">
-    <p>First, you will need to configure the script properly for delay calibration, script setup will vary slightly depending on the Pokemon you are hunting. Different variables like gender ratios and current chain length need to be considered.</p>
-     
-    <p>Take note of the gender ratio of the Pokemon you are hunting, each of these have an assigned number value (found at the very top of the script).</p>
+    <p>First, you'll need to configure the script for delay calibration. The setup will vary slightly depending on the Pokémon you're hunting, as factors like gender ratios and chain length need to be taken into account. Take note of the gender ratio of the Pokémon you're targeting, each ratio has an assigned value (listed at the top of the script).</p>
 
     <ul>
       <li>In the <code span class="fw-bold">int GenderCompare</code> line, change the number value to match the gender ratio of the Pokemon you are hunting.</li>
@@ -75,7 +73,7 @@ permalink: /cfw/bdsp/radar/encounter/
       <li>Ensure the search filters at the bottom of the script are written as comments when testing delays (comments are green and the line starts with <code class="fw-bold" style="color: #0a7a00;">//</code>).</li>
     </ul>
 
-    <blockquote>In this example we are hunting for Ditto, which has a gender value of <code span class="fw-bold">-1</code>. We also do not have a significant chain length that guarantees flawless IVs.</blockquote>
+    <blockquote>In this example we are hunting for Ditto, which has a gender value of <code span class="fw-bold">-1</code>. We also do not have a significant chain length that guarantees flawless IVs so this value has not been modified.</blockquote>
 
    </div>
 </div><br>
@@ -88,8 +86,8 @@ permalink: /cfw/bdsp/radar/encounter/
     <span class="fw-bold text-light">Delay Calibration</span>
   </div>
   <div class="card-body card-bg">
-    <p>It is important to calculate the delay for your encounter, in this sense, the term "delay" is used to describe the amount of frames that are consumed from walking into a PokeRadar patch and generating a Pokemon.</p> 
-
+    <p>It is improtant to calculate the delay for your encounter. In this context, "delay" refers to the number of frames consumed between walking into a PokéRadar patch and the generation of the Pokémon.</p>
+  
     <h6><span class="fw-bold">Step-by-step</span></h6>
     <ul>
       <li>Activate a chain and stand next to a radar tile, then press the Home button to freeze the RNG state.</li>
@@ -103,7 +101,7 @@ permalink: /cfw/bdsp/radar/encounter/
 
     <p>You can use the directional pad (DPAD) to take exact steps in order to stand the same distance away from the grass patch every time, using this method will provide a slightly more consistent setup.</p>
 
-    <blockquote>Delay is variable between areas, you will need to calibrate your delay each time you move to a different location.</blockquote>
+    <blockquote>Delay is variable between areas, you will need to re-calibrate your delay each time you move to a different location.</blockquote>
    </div>
 </div><br>
 
