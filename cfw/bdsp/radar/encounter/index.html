@@ -88,20 +88,22 @@ permalink: /cfw/bdsp/radar/encounter/
     <span class="fw-bold text-light">Delay Calibration</span>
   </div>
   <div class="card-body card-bg">
-    <p>It is important to calculate the delay for your encounter, in this sense, the term "delay" is used to describe the amount of frames that are consumed from walking into a PokeRadar patch and generating a Pokemon. <span class="fw-bold">Delay is variable between areas, you will need to calibrate your delay each time you move to a different location.</span></p>
+    <p>It is important to calculate the delay for your encounter, in this sense, the term "delay" is used to describe the amount of frames that are consumed from walking into a PokeRadar patch and generating a Pokemon.</p> 
 
     <h6><span class="fw-bold">Step-by-step</span></h6>
     <ul>
       <li>Activate a chain and stand next to a radar tile, then press the Home button to freeze the RNG state.</li>
-      <li>Run <code span class="fw-bold">EncBotCopySeedBS</code> to obtain your current seed, then paste it into the script.</li>
-      <li>Unpause the game by pressing the Home button, while walking in the direction of the radar patch.</li>
+      <li>Start <code span class="fw-bold">EncBotCopySeedBS</code> to obtain your current seed, then paste it into the script, run the script after doing so (<code span class="fw-bold">▶ Play Button</code>).</li>
+      <li>Unpause the game by pressing the Home button while walking in the direction of the radar patch.</li>
       <li>Use PokeViewer.NET's <code span class="fw-bold">Wild View</code> feature to read the details of the Pokemon you are in battle with.</li>
       <li>Copy the PID from PokeViewer, then press <code span class="fw-bold">Crtl+F</code> on your keyboard in the LINQPad results.</li>
       <li>Paste the PID to find the frame that generated the Pokemon you are in battle with, this will be your delay.</li>
       <li>Since delay is variable, repeat this process a few times to get a rough average delay value for the area you are in.</li>
     </ul>
 
-    <blockquote>You can use the directional pad (DPAD) to take exact steps in order to stand the same distance away from the grass patch every time, using this method will provide a slightly more consistent setup.</blockquote>
+    <p>You can use the directional pad (DPAD) to take exact steps in order to stand the same distance away from the grass patch every time, using this method will provide a slightly more consistent setup.</p>
+
+    <blockquote>Delay is variable between areas, you will need to calibrate your delay each time you move to a different location.</blockquote>
    </div>
 </div><br>
 
@@ -116,48 +118,48 @@ permalink: /cfw/bdsp/radar/encounter/
        <tbody>
     <tr>
       <td class="text-center"><span class="fw-bold">Attempt 1</span></td>
-      <td class="text-center">x</td>
+      <td class="text-center">134</td>
     </tr>
     <tr>
       <td class="text-center"><span class="fw-bold">Attempt 2</span></td>
-      <td class="text-center">x</td>
+      <td class="text-center">131</td>
     </tr>
     <tr>
       <td class="text-center"><span class="fw-bold">Attempt 3</span></td>
-      <td class="text-center">x</td>
+      <td class="text-center">132</td>
     </tr>
     <tr>
       <td class="text-center"><span class="fw-bold">Attempt 4</span></td>
-      <td class="text-center">x</td>
+      <td class="text-center">132</td>
     </tr>
     <tr>
       <td class="text-center"><span class="fw-bold">Attempt 5</span></td>
-      <td class="text-center">x</td>
+      <td class="text-center">134</td>
     </tr>
     <tr>
       <td class="text-center"><span class="fw-bold">Attempt 6</span></td>
-      <td class="text-center">x</td>
+      <td class="text-center">132</td>
     </tr>
     <tr>
       <td class="text-center"><span class="fw-bold">Attempt 7</span></td>
-      <td class="text-center">x</td>
+      <td class="text-center">131</td>
     </tr>
     <tr>
       <td class="text-center"><span class="fw-bold">Attempt 8</span></td>
-      <td class="text-center">x</td>
+      <td class="text-center">135</td>
     </tr>
     <tr>
       <td class="text-center"><span class="fw-bold">Attempt 9</span></td>
-      <td class="text-center">x</td>
+      <td class="text-center">133</td>
     </tr>
     <tr>
       <td class="text-center"><span class="fw-bold">Attempt 10</span></td>
-      <td class="text-center">x</td>
+      <td class="text-center">132</td>
     </tr>
      </tbody>
 </table>
 
-<p><span class="fw-bold">We can see a common delay of x, so we can take this value and factor it in when attempting to hit a target frame.</span></p>
+<p><span class="fw-bold">We can see a common delay of 131-135, so we can take these value and factor them in when attempting to hit a target frame.</span></p>
 
 <p><code span class="fw-bold">Target Frame - Delay = Frame to step into grass</code></p>
 
@@ -197,7 +199,7 @@ permalink: /cfw/bdsp/radar/encounter/
       <li>If you have a chain of any other value, set the Flawless IVs to <code span class="fw-bold">0</code>.</li>
     </ul>
 
-    <p>Now you will need to set your search filters, these can be found at the bottom of the script, use the above example as a reference point if needed. Removing the <code class="fw-bold" style="color: #0a7a00;">//</code> before a filter will make the filter become active, adding the <code class="fw-bold" style="color: #0a7a00;">//</code> will ignore the filter.</p>
+    <p>Now you will need to set your search filters, these can be found at the bottom of the script. Use the above example as a reference point if needed. Removing the <code class="fw-bold" style="color: #0a7a00;">//</code> before a filter will make the filter become active, adding the <code class="fw-bold" style="color: #0a7a00;">//</code> will ignore the filter.</p>
 
     <blockquote>In the above example the filters have been set to search for any 6IV Pokemon, as we will be attempting to hit a 6IV Ditto and do not care about other variables, you can add or remove other filters if you wish.</blockquote>
 
@@ -242,14 +244,20 @@ permalink: /cfw/bdsp/radar/encounter/
       <li>In the dropdown menu on the right, add both <code span class="fw-bold">EncBotDexFlipBS</code> and <code span class="fw-bold">EncBotRNGMonitorBS</code></li>
     </ul>
 
-    <p>After the settings have been properly toggled, open the Pokedex in game, disconnect all controllers using the unsync button, then start the bot. The bot will automatically pause the game when the <code span class="fw-bold">MaxTotalAdvances</code> has been reached.</p>
+    <p>After the settings have been properly toggled, open the Pokedex in game, disconnect all controllers using the unsync button, then start the bot. The bot will automatically pause the game when the <code span class="fw-bold">MaxTotalAdvances</code> has been reached. You can then reconnect the controller once the routine has ended.</p>
+
+    <details>
+      <summary><span class="fw-bold">Controller Connectivity Troubleshooting</span></summary>
+      <ul>
+        <li><span class="fw-bold">JoyCons -</span> Slide the JoyCons onto the Joycon rail then press any button to sync them to the console.</li>
+        <li><span class="fw-bold">Pro Controller -</span> Reconnect the controller from the controller settings if you are having issues with automatically connecting, or the controller is synced as a second controller.</li>
+      </ul>
+    </details>
 
     <blockquote>You do not need to use the Dex Flip routine if your target is of a small distance away, scrolling the Pokedex manually while monitoring your seed is effective enough in these cases.</blockquote>
       
   </div>
 </div><br>
-
-<p>Reconnect your controller after the Dex Flip routine has ended. If you are using JoyCons simply slide them onto the rails as you would normally. If you are using a pro controller and it does not automatically sync (or registers as a second controller), you will need to reconnect your controller from the controller settings.</p>
 
 <div class="title" style="background-color: #96324c;">
   <h1 class="text-light text-center pt-3 pb-3">Final Advancements</h1>
@@ -299,3 +307,4 @@ permalink: /cfw/bdsp/radar/encounter/
   </svg>
 </a>
 <br>
+
