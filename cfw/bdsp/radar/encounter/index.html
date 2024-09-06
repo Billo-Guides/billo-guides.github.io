@@ -199,7 +199,7 @@ permalink: /cfw/bdsp/radar/encounter/
 
     <p>Now you will need to set your search filters, these can be found at the bottom of the script. Use the above example as a reference point if needed. Removing the <code class="fw-bold" style="color: #0a7a00;">//</code> before a filter will make the filter become active, adding the <code class="fw-bold" style="color: #0a7a00;">//</code> will ignore the filter.</p>
 
-    <blockquote>In the above example the filters have been set to search for any 6IV Pokemon, as we will be attempting to hit a 6IV Ditto and do not care about other variables, you can add or remove other filters if you wish.</blockquote>
+    <blockquote>In the above example the filters have been set to search for any 6IV Pokemon, as we will be attempting to hit a 6IV Ditto on a chain of 99 and do not care about other variables. You can add or remove other filters if you wish.</blockquote>
 
    </div>
 </div><br>
@@ -212,11 +212,11 @@ permalink: /cfw/bdsp/radar/encounter/
     <span class="fw-bold text-light">Target Frame Found</span>
   </div>
   <div class="card-body card-bg">
-    <p>A 6IV frame has been found in a cluster on advances x-y, a cluster is a group of frames in a row that produce the same end result. Clusters only appear if you are searching for non-shiny targets, but if you are attempting to RNG abuse the IVs on a shiny patch, you can still search for a cluster as the Pokemon will be forced shiny regardless.</p>
+    <p>A 6IV frame has been found in a cluster on advances 24,378-24,391, a cluster is a group of frames in a row that produce the same end result. Clusters only appear if you are searching for non-shiny targets, but if you are attempting to RNG abuse the IVs on a shiny patch, you can still search for a cluster as the Pokemon will be forced shiny regardless.</p>
 
-    <p>A large cluster has been produced because earlier we manipulated a chain of 99, which means the next Pokemon we encounter will have 5IVs naturally.</p>
+    <p>A large cluster has been produced because earlier we manipulated a chain of 99, which means the next Pokemon we encounter will have 5IVs naturally, making it much easier to find a 6IV target frame.</p>
 
-    <p>Now you will need to spam the PokeRadar until a shiny patch appears and stand directly next to it and press the Home button, as you would when calibrating delay.</p>
+    <p>If you are searching for a shiny patch, spam the PokeRadar until one appears, then stand 1 tile away from the patch and press the Home button, as you would when calibrating delay.</p>
 
     <blockquote>If you are not aiming for a shiny Pokemon you do not need to spam for a shiny patch. Simply stand next to your target patch and press the Home button.</blockquote>
    </div>
@@ -285,13 +285,15 @@ permalink: /cfw/bdsp/radar/encounter/
       <li>Quickly unpause the game and move in the direction of your patch to initiate the encounter, if done correctly the encounter should match what is expected by the script.</li>
     </ul>
 
+    <blockquote>It may take multiple attempts to hit a target frame due to the fast paced nature of advancement coming from the swaying grass patches. The best advice is to seek a new target frame if you are not sure that your current target is actually hittable.</blockquote>
+
   </div>
 </div><br>
 
 <span class="fw-bold">Figure 6 -</span> Target Frame Hit<p></p>
 <a href="/cfw/bdsp/images/radar/encounter/figure-6-target-frame-hit-radar-encounter.png" target="_blank"><img src="/cfw/bdsp/images/radar/encounter/figure-6-target-frame-hit-radar-encounter.png" class="img-fluid"></a><br /><br />
 
-<p>The script displays the target on advance x, taking delay into account (y), the frame to move into the encounter is frame z, SysBot logs indicate that 8991 number of advancements have occured, so we can now unpause the game and walk into the patch to initiate the encounter and see if we hit the correct target frame.</p>
+<p>The script displays the target on advance 8601-8614, taking delay into account (131), the frame to move into the encounter is any time between frame 8470 & 8483, SysBot logs indicate that 8481 advancements have occured, so we can now unpause the game and walk into the patch to initiate the encounter and see if we hit the correct target frame.</p>
 
 <span class="fw-bold">Figure 7 -</span> Result Found (PokeViewer.NET Confirmation)<p></p>
 <a href="/cfw/bdsp/images/radar/encounter/figure-7-result-found-radar-encounter.png" target="_blank"><img src="/cfw/bdsp/images/radar/encounter/figure-7-result-found-radar-encounter.png" class="img-fluid"></a><br /><br />
