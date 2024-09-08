@@ -50,19 +50,15 @@ permalink: /cfw/bdsp/wild/random-encounter/
     <span class="fw-bold text-light">How Does This Work?</span>
   </div>
   <div class="card-body card-bg">
-    <p>BDSP has a constantly advancing seed which controls all random in-game events, such as which Pokemon you will encounter, if the Pokemon will be shiny, what stats it has etc.</p>
+    <p>In BDSP, the game operates on a constantly advancing RNG seed, which determines all random events such as shininess, and stats of encounters. Moarencounterbots can track & monitor seeds in real-time and even automate seed progression to a specific point. This automation handles the tedious RNG work, allowing you to focus on finding and hitting targets instead.</p>
 
-    <p>We can use Moarencounterbots to monitor seeds in real time, as well as display how many advancements have occured from the starting seed, it can automatically advance the seed until a given point, then pause the game after a certain number of advancements have occured.</p>
+    <p>For some wild encounters, you will need to consider the "delay", which is the number of frames the game takes to generate a Pokémon after input. For example, if the target is on frame 100 with an 1-frame delay, initiate the encounter 1 frames beforehand (100-1=99). A recommended list of delays for specific encounter can be found inside the table below.</p>
 
-    <p>Essentially, Moarencounterbots is capable of doing the "chore" work automatically so you don't have to. You just need to search for targets yourself, let Moarencounterbots advance the RNG state, and actually hit the correct seed that produces the result you want.</p>
-
-    <p>For some wild encounters, you may need to account for what is known as a "delay". This term is used to describe the amount of frames the gane requires to generate a Pokemon after the final button press. So for example if there is a delay if 1, and the target is frame 100, we would aim to initiate the encounter on frame 99 (100-1=99).</p>
+    <blockquote>In any case, the screen of the final button input should be on the <a href="/cfw/bdsp/images/final-a-presses/honey-sweet-scent.gif">Honey selection screen</a></blockquote>
 
   </div>
 </div><br>
 
-<p>A list of recommended delays can be found in the table below, and the final screen that you should be on when attempting to hit your target frame is the <a href="/cfw/bdsp/images/final-a-presses/honey-sweet-scent.gif">Honey selection screen</a>.</p>
-  
 <table class="table table-striped" style="width:100%" id="delay-table">
   <thead class="table text-white" style="background-color: #96324c;">
       <th scope="col" style="width:25%" class="text-center">Location / Pokemon</th>
@@ -188,6 +184,14 @@ permalink: /cfw/bdsp/wild/random-encounter/
 
     <p>After the settings have been properly toggled, open the Pokedex in game, disconnect all controllers using the unsync button, then start the bot. The bot will automatically pause the game when the <code span class="fw-bold">MaxTotalAdvances</code> has been reached.</p>
 
+    <details>
+      <summary><span class="fw-bold">Controller Connectivity Troubleshooting</span></summary>
+      <ul>
+        <li><span class="fw-bold">JoyCons -</span> Slide the JoyCons onto the Joycon rail then press any button to sync them to the console.</li>
+        <li><span class="fw-bold">Pro Controller -</span> Reconnect the controller from the controller settings if you are having issues with automatically connecting, or the controller is synced as a second controller.</li>
+      </ul>
+    </details>
+
     <blockquote>You do not need to use the Dex Flip routine if your target is of a small distance away, scrolling the Pokedex manually while monitoring your seed is effective enough in these cases.</blockquote>
       
   </div>
@@ -195,8 +199,6 @@ permalink: /cfw/bdsp/wild/random-encounter/
 
 <span class="fw-bold">Figure 5 -</span> Dex Flip Complete<p></p>
 <a href="/cfw/bdsp/images/wild/random-encounter/figure-5-dex-flip-complete.png" target="_blank"><img src="/cfw/bdsp/images/wild/random-encounter/figure-5-dex-flip-complete.png" class="img-fluid"></a><br /><br />
-
-<p>Reconnect your controller after the Dex Flip routine has ended. If you are using JoyCons simply slide them onto the rails as you would normally. If you are using a pro controller and it does not automatically sync (or registers as a second controller), you will need to reconnect your controller from the controller settings.</p>
 
 <div class="title" style="background-color: #96324c;">
   <h1 class="text-light text-center pt-3 pb-3">Final Advancements</h1>
