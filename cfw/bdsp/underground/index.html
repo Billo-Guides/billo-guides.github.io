@@ -31,9 +31,7 @@ permalink: /cfw/bdsp/underground/
   <h1 class="text-light text-center pt-3 pb-3">BDSP Grand Underground RNG (CFW)</h1>
 </div><hr />
 
-<p>This section of the guide covers how to RNG manipulate Pokemon from static encounters. Static encounters are defined as Pokemon that engage in a wild battle after interacting with them, not to be confused randomly occuring wild encounters.</p>
-
-<p>Ensure that the autosave feature is disabled, and that you have enough resouces (Pokeballs, healing items, etc.) to successfully capture the Pokemon you plan to RNG manipulate.</p>
+<p>This section of the guide covers how to RNG manipulate Pokemon in the Grand Underground. Grand Underground Pokemon are generated upon entering the an underground cave and the Pokemon will remain the same until leaving the cave.</p>
 
 <p><span class="fw-bold" style="color: #b60606;">At this stage you should have already followed all of the setup and installation instructions found on the initial page of this guide.</span></p>
 
@@ -74,7 +72,7 @@ permalink: /cfw/bdsp/underground/
     <span class="fw-bold text-light">Game Setup</span>
   </div>
   <div class="card-body card-bg">
-    <p>First, ensure you have all the required items and Pokemon you will need to successfully capture a Pokemon, after doing so, set your game up in this specific state:</p>
+    <p>Ensure you have all the required items and Pokemon you will need to successfully capture a Pokemon, after doing so, set your game up in this specific state:</p>
 
     <ul>
       <li>Use the Explorer Kit to bring up the Grand Underground connectivity options, select the <code span class="fw-bold">Play alone</code> option.</li>
@@ -145,7 +143,7 @@ permalink: /cfw/bdsp/underground/
     <span class="fw-bold text-light">Target Frame Found!</span>
   </div>
   <div class="card-body card-bg">
-    <p>In Figure 3, we can see that a Shiny x that matches the search filters has been produced in x advances, this is the frame that we will aim to enter the Underground cave that contains the desired encounter.</p>
+    <p>In Figure 3, we can see that a Shiny Munchlax that matches the search filters has been produced in 165110 advances. This is the frame that we will aim to enter the Underground cave that contains the desired encounter.</p>
 
     <h6><span class="fw-bold">Undesirable Result?</span></h6>
     <ul>
@@ -180,8 +178,16 @@ permalink: /cfw/bdsp/underground/
       <li>In the dropdown menu on the right, add both <code span class="fw-bold">EncBotDexFlipBS</code> and <code span class="fw-bold">EncBotRNGMonitorBS</code></li>
     </ul>
 
-    <p>After the settings have been properly toggled, open the Pokedex in game, disconnect all controllers using the unsync button, then start the bot. The bot will automatically pause the game when the <code span class="fw-bold">MaxTotalAdvances</code> has been reached.</p>
+    <p>After the settings have been properly toggled, open the Pokedex in game, disconnect all controllers using the unsync button, then start the bot. The bot will automatically pause the game when the <code span class="fw-bold">MaxTotalAdvances</code> has been reached. You can then reconnect the controller once the routine has ended.</p>
 
+    <details>
+      <summary><span class="fw-bold">Controller Connectivity Troubleshooting</span></summary>
+      <ul>
+        <li><span class="fw-bold">JoyCons -</span> Slide the JoyCons onto the Joycon rail then press any button to sync them to the console.</li>
+        <li><span class="fw-bold">Pro Controller -</span> Reconnect the controller from the controller settings if you are having issues with automatically connecting, or the controller is synced as a second controller.</li>
+      </ul>
+    </details>
+    
     <blockquote>You do not need to use the Dex Flip routine if your target is of a small distance away, scrolling the Pokedex manually while monitoring your seed is effective enough in these cases.</blockquote>
         
   </div>
@@ -189,8 +195,6 @@ permalink: /cfw/bdsp/underground/
 
 <span class="fw-bold">Figure 6 -</span> Dex Flip Complete<p></p>
 <a href="/cfw/bdsp/images/underground/figure-6-dex-flip-complete.png" target="_blank"><img src="/cfw/bdsp/images/underground/figure-6-dex-flip-complete.png" class="img-fluid"></a><br /><br />
-
-<p>Reconnect your controller after the Dex Flip routine has ended. If you are using JoyCons simply slide them onto the rails as you would normally. If you are using a pro controller and it does not automatically sync (or registers as a second controller), you will need to reconnect your controller from the controller settings.</p>
 
 <div class="title" style="background-color: #96324c;">
   <h1 class="text-light text-center pt-3 pb-3">Final Advancements</h1>
@@ -214,7 +218,8 @@ permalink: /cfw/bdsp/underground/
     <blockquote>You may optionally choose to manually advance the RNG state by scrolling the Pokedex. Be careful not to overshoot your target!</blockquote>
 
     <ul>
-      <li>Use the home mashing technique mentioned above to inch towards your target frame slowly, once you hit the correct target frame keep the game paused on the Home Menu.</li><p></p>
+      <li>Remove all active bots, then run <code span class="fw-bold">EncBotCopySeedBS</code> and paste your seeds into PokeFinder, then search for your target frame again. Now re-add <code span class="fw-bold">EncBotRNGMonitorBS</code> once more.</li><p></p>
+      <li>Run <code span class="fw-bold">EncBotRNGMonitorBS</code> and use the home mashing technique mentioned above to inch towards your target frame slowly, once you hit the correct target frame keep the game paused on the Home Menu.</li><p></p>
       <li>Unpause the game and quickly enter the cave by holding your joystick in the direction of the cave enterance, then find the expected species and initiate the encounter. If done correctly the encounter should match what is expected by PokeFinder.</li>
     </ul>
   </div>
@@ -223,7 +228,7 @@ permalink: /cfw/bdsp/underground/
 <span class="fw-bold">Figure 7 -</span> Target Frame Hit<p></p>
 <a href="/cfw/bdsp/images/underground/figure-7-target-frame-hit-underground.gif" target="_blank"><img src="/cfw/bdsp/images/underground/figure-7-target-frame-hit-underground.gif" class="img-fluid"></a><br /><br />
 
-<p>PokeFinder displays the target on advance x, there is no delay for this encounter, and SysBot logs indicate that x number of advancements have occured, so we can now enter the room and locate the Pokemon that we believe should be shiny (in this case, Munchlax), then initiate the encounter and see if we hit the correct target frame.</p>
+<p>PokeFinder displays the target on advance 118, and SysBot logs indicate that 118 advancements have occured, so we can now enter the room and locate the Pokemon that we believe should be shiny (in this case, Munchlax), then initiate the encounter and see if we hit the correct target frame.</p>
 
 <span class="fw-bold">Figure 8 -</span> Result Found (PokeViewer.NET Confirmation)<p></p>
 <a href="/cfw/bdsp/images/underground/figure-8-result-found-underground.png" target="_blank"><img src="/cfw/bdsp/images/underground/figure-8-result-found-underground.png" class="img-fluid"></a><br /><br />
