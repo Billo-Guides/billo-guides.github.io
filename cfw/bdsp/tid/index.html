@@ -48,12 +48,7 @@ permalink: /cfw/bdsp/trainer-id/
     <span class="fw-bold text-light">How Does This Work?</span>
   </div>
   <div class="card-body card-bg">
-    <p>BDSP has a constantly advancing seed which controls all random in-game events, such as which Pokemon you will encounter, if the Pokemon will be shiny, what stats it has etc. This same value also determines what Trainer ID a player will receive upon starting a new save file.</p>
-
-    <p>We can use Moarencounterbots to monitor seeds in real time, as well as display how many advancements have occured from the starting seed, it can automatically advance the seed until a given point, then pause the game after a certain number of advancements have occured.</p>
-
-    <p>Essentially, Moarencounterbots is capable of doing the "chore" work automatically so you don't have to. You just need to search for targets yourself, and actually hit the correct seed that produces the result you want.</p>
-
+    <p>In BDSP, the game operates on a constantly advancing RNG seed, which determines all random events such as which Trainer ID you will be given upon starting a new save file. Moarencounterbots can track & monitor seeds in real-time and even automate seed progression to a specific point. This automation handles the tedious RNG work, allowing you to focus on hitting targets instead.</p>
   </div>
 </div><br>
 
@@ -85,8 +80,8 @@ permalink: /cfw/bdsp/trainer-id/
       <li>Observe your console and the SysBot <code span class="fw-bold">Logs</code> tab to confirm that the bot is functioning as intended.</li>
     </ul>
 
-    <p>The bot should have began to cycle through frames and resetting the game if done correctly. It will repeat this process until a result has been found and advance roughly 15 frames from your target, then pause the game by entering the Home Menu.</p>
-
+    <p>The bot should begin to cycle through frames and reset the game, if configured correctly. This will be repeated until a result that matches the stop conditions has been found. After finding a target, the bot will then advance the RNG state until you are roughly 15 advancements away from your desired TID.</p>
+      
    </div>
 </div><br>
 
@@ -105,7 +100,7 @@ permalink: /cfw/bdsp/trainer-id/
 
 <p>TID found! View the <code span class="fw-bold">Logs</code> tab to see which of your desired TIDs has been found, keep the game paused on the Home Menu at this stage to avoid any unwanted advancements.</p>
 
-<p>In this example the bot has found a TID value of <code span class="fw-bold">000005</code>, and has paused 14 frames away from the target, we now need to understand how to hit the correct target frame in order to get our desired TID.</p>
+<p>In this example the bot has found the TID <code span class="fw-bold">000005</code>, and has paused 14 frames away from the target, we now need to understand how to hit the correct target frame in order to get our desired TID.</p>
 
 <div class="card border-dark">
   <div class="anchored card-header" style="background-color: #96324c;" id="hitting-desired-tid">
@@ -131,12 +126,12 @@ permalink: /cfw/bdsp/trainer-id/
 <span class="fw-bold">Figure 5 -</span> Target Frame Hit<p></p>
 <a href="/cfw/bdsp/images/trainer-id/figure-5-target-frame-hit.png" target="_blank"><img src="/cfw/bdsp/images/trainer-id/figure-5-target-frame-hit.png" class="img-fluid"></a><br /><br />
 
-<p>We can see that 14 advancements have occured, so we should quickly press the A button to lock in the TID at this point, then head into the overworld in-game to confirm the TID.</p>
+<p>We can see that 14 advancements have occured, so we should quickly press the <code span class="fw-bold">A</code> button to lock in the TID at this point, then head into the overworld in-game to confirm the TID.</p>
 
 <span class="fw-bold">Figure 6 -</span> In-game Result<p></p>
 <a href="/cfw/bdsp/images/trainer-id/figure-6-in-game-result.png" target="_blank"><img src="/cfw/bdsp/images/trainer-id/figure-6-in-game-result.png" class="img-fluid"></a><br /><br />
 
-<p><span class="fw-bold">The logs confirm that the correct target frame has been hit, mission accomplished!</span></p>
+<p>The logs confirm that the correct target frame has been hit, mission accomplished!</p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp">
   <span class="fw-bold">Click here to go back to the main page!</span>
