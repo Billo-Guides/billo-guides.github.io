@@ -51,51 +51,42 @@ permalink: /misc/bdsp/internal-tid-sid
   </svg>
 </a><br>
 
-<p>First, launch PKHeX and change the blank save file to the game you are currently using in the settings (pictured below). In this case we will be changing the game to either Brilliant Diamond or Shining Pearl.</p>
-
 <span class="fw-bold">Figure 1 -</span> PKHeX Settings<p></p>
 <a href="/misc/bdsp-internal-tid-sid/images/figure-1-pkhex-settings.gif" target="_blank"><img src="/misc/bdsp-internal-tid-sid/images/figure-1-pkhex-settings.gif" class="img-fluid"></a><br /><br />
 
-<p>After the settings have been configured properly, you will now need a means to view a Pokemon within your safe file.</p>
+<p>First, launch PKHeX and change the blank save file to the game you are currently using in the settings. In this case we will be changing the game to either Brilliant Diamond or Shining Pearl.</p>
+
+<p>After the settings have been configured properly, you will now need a means to view a Pokemon within your save file, this can be done by dumping your save file using CFW applications, or using a hosted SysBot on a retail device.</p>
 
 <div class="card border-dark">
   <div class="anchored card-header" style="background-color: #96324c;" id="file-dump-tidsid">
     <span class="fw-bold text-light">Dumping Relevant Files:</span>
   </div>
   <div class="card-body card-bg">
-    <p>The method used to dump the Pokemon files will differ depending on if you are using Custom Firmware or Retail hardware. You will either:</p>
-
-    <ol>
-      <li>Dump your save file and open it using PKHeX to inspect a Pokemon (CFW)</li>
-      <li>Use a SysBot to dump a Pokemon file to inspect using PKHeX (RETAIL)</li>
-    </ol>
-    <hr />
-
-    <h6><span class="fw-bold">Dumping Save Files:</span></h6>
+    <h6><span class="fw-bold">Dumping Save Files (CFW):</span></h6>
     <p>Save files can be dumped and inspected using PKHeX through the use of save management homebrew. Typically you will use either JKSV or CheckPoint (linked above)</p>
 
     <ul>
-      <li>Press the <code span class="fw-bold">Album</code> button on your Switch to launch the Homebrew menu</li>
-      <li>Select either <code span class="fw-bold">JKSV</code> or <code span class="fw-bold">CheckPoint</code> to launch the application</li>
-      <li>Dump the save file of the game you wish to inspect the TID/SID of</li>
-      <li>Exit the application and open the contents your Switch SD card on your computer</li>
-      <li>Locate your save file and move it into a known location on your computer (e.g Desktop)</li>
-      <li>Drag the save file into the PKHeX window, this will have PKHeX properly load your save file</li>
-      <li>Right click any self obtained Pokemon, then click <code span class="fw-bold">View</code>. You should now see the details on screen</li>
+      <li>Press the <code span class="fw-bold">Album</code> button on your Switch to launch the Homebrew menu.</li>
+      <li>Select either <code span class="fw-bold">JKSV</code> or <code span class="fw-bold">CheckPoint</code> to launch the application.</li>
+      <li>Dump the save file of the game you wish to inspect the TID/SID of.</li>
+      <li>Exit the application and open the contents your Switch SD card on your computer.</li>
+      <li>Locate your save file and move it into a known location on your computer (e.g Desktop).</li>
+      <li>Drag the save file into the PKHeX window, this will have PKHeX properly load your save file.</li>
     </ul>
 
     <p>Comprehensive guides for dumping save files using Homebrew can be found <a href="https://projectpokemon.org/home/tutorials/save-editing/managing-switch-saves/using-jksv-r88/">here (JKSV)</a> or <a href="https://projectpokemon.org/home/tutorials/save-editing/managing-switch-saves/using-checkpoint-r67/">here (CheckPoint)</a></p>
     <hr />
 
-    <h6><span class="fw-bold">Dumping Pokemon Files:</span></h6>
+    <h6><span class="fw-bold">Dumping Pokemon Files (RETAIL):</span></h6>
     <p>If you are using retail hardware, Pokemon files can be dumped by communicating with a SysBot running the game you wish to use. SysBots are typically located inside Discord servers and can be found with a quick Google search.</p>
 
     <ul>
-      <li>Find a SysBot that facilitates trading in the game you are using (in this case BDSP)</li>
-      <li>Initiate a <code span class="fw-bold">Dump Trade</code> with the bot, ask the bot owner for help if you are struggling with this step</li>
-      <li>Show the bot your Pokemon, a file will then be provided in your private messages on Discord</li>
-      <li>Download the file, and save it to a known location on your computer (e.g Desktop)</li>
-      <li>Drag the downloaded file into the PKHeX window, you should now see the details of your Pokemon on screen</li>
+      <li>Find a SysBot that facilitates trading in the game you are using (in this case BDSP).</li>
+      <li>Initiate a <code span class="fw-bold">Dump Trade</code> with the bot, ask the bot owner for help if you are struggling with this step.</li>
+      <li>Show the bot your Pokemon, a file will then be provided in your private messages on Discord.</li>
+      <li>Download the file, and save it to a known location on your computer (e.g Desktop).</li>
+      <li>Drag the downloaded file into the PKHeX window, you should now see the details of your Pokemon on screen.</li>
     </ul>
 
     <p>If you cannot find a SysBot, you can ask a friend running CFW to help dump the Pokemon for you, they will be able to send you the file instead (you may need to physically trade the Pokemon in this case).</p>
@@ -103,7 +94,7 @@ permalink: /misc/bdsp/internal-tid-sid
   </div>
 </div><br>
 
-<p>After following the above steps, you should now have PKHeX correctly configured and you should have your save file loaded into the program, or a self obtained Pokemon in the <code span class="fw-bold">View Window</code>, navigate to the <code span class="fw-bold">OT/Misc</code> tab to see the trainer information of your Pokemon.</p>
+<p>After following the above steps, you should now have PKHeX correctly configured and you should have your save file loaded into the program, or a self obtained Pokemon in the <code span class="fw-bold">View Window</code>. Navigate to the <code span class="fw-bold">OT/Misc</code> tab to see the trainer information of your Pokemon.</p>
 
 <span class="fw-bold">Figure 2 -</span> PKHeX Navigation<p></p>
 <a href="/misc/bdsp-internal-tid-sid/images/figure-2-pkhex-ot-misc.gif" target="_blank"><img src="/misc/bdsp-internal-tid-sid/images/figure-2-pkhex-ot-misc.gif" class="img-fluid"></a><br /><br />
