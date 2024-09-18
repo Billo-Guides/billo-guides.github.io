@@ -36,7 +36,7 @@ permalink: /retail/swsh/overworld
   <h1 class="text-light text-center pt-3 pb-3">Overworld RNG Guide (RETAIL)</h1>
 </div><hr />
 
-<p>This guide provides in-depth coverage of how to use SWSH OWRNG Generator GUI by <a href="https://github.com/LegoFigure11">LegoFigure11</a> to RNG abuse wild encounters in Sword/Shield. With overworld RNG abuse, you can obtain Shiny or Marked Pokémon and calculate IVs, Nature, and Gender.
+<p>This guide provides in-depth coverage of how to use SWSH OWRNG Generator GUI by <a href="https://github.com/LegoFigure11">LegoFigure11</a> to RNG abuse wild encounters in Sword/Shield. With overworld RNG abuse, you can obtain Shiny or Marked Pokémon and calculate IVs, Nature, Gender, and other values.</p>
 
 <p><span class="fw-bold" style="color: #b60606;">From here it is assumed you are using an unmodified console on stock firmware.</span></p>
 
@@ -73,30 +73,31 @@ permalink: /retail/swsh/overworld
   <h1 class="text-light text-center pt-3 pb-3">RNG Tool Setup</h1>
 </div><hr />
 
-<p>This section will cover the essential details you need to know in order to use the Generator. If you do not yet have a complete understanding of how each of the tabs, follow along with this section for relevant information & usage tips.</p>
+<p>This section will cover the essential details you need to know in order to use the RNG tool. If you do not yet have a complete understanding of how each of the tabs, follow along with this section for relevant information & usage tips.</p>
 
 <span class="fw-bold">Figure 1 -</span> Main Window Overview<p></p>
-<a href="./overworld/images/main-page/figure-1-main-window-overview-retail.png" target="_blank"><img src="./overworld/images/main-page/figure-1-main-window-overview-retail.png" style="width:675px;height:400px;"></a><br /><br />
+<a href="./overworld/images/main-page/figure-1-main-window-overview-retail.png" target="_blank"><img src="./overworld/images/main-page/figure-1-main-window-overview-retail.png" class="img-fluid"></a><br /><br />
 
 <div class="card border-dark">
   <div class="anchored card-header" style="background-color: #0c0038;" id="main-window-overview-retail">
     <span class="fw-bold text-light">Main Window Overview</span>
   </div>
   <div class="card-body card-bg">
-    <p>The main window (pictured above), calculates upcoming target frames based on your search parameters. Here, we can assign encounter and search filters to search for specific targets.</p>
+    <p>The main window calculates upcoming target frames based on your search parameters. Here, we can assign encounter and search filters to search for specific targets.</p>
 
     <h6><span class="fw-bold">Feature descriptions:</span></h6>
     <ul>
       <li>The <code span class="fw-bold">TID</code> & <code span class="fw-bold">SID</code> fields expect your 5 digit TID/SID combination, you will need this to find Shiny Pokémon.</li>
       <li><code span class="fw-bold">Init. adv.</code> is where you enter the amount of advances that have passed since you began monitoring your seed.</li>
       <li>The <code span class="fw-bold">+</code> field is the amount of frames to search through, you should set this to a comfortable amount.</li>
-      <li>Click the <code span class="fw-bold">Shiny Charm</code> checkbox if you have the Shiny Charm in your save file, otherwise leave unchecked.</li>
-      <li>Click the <code span class="fw-bold">Mark Charm</code> checkbox if you have the Mark Charm in your save file, otherwise leave unchecked.</li>
-      <li>The rest of the details on the left-hand side are encounter filters, these can be filled automatically using the Encounter Lookup sub window (explained below).</li>
+      <li>Click the <code span class="fw-bold">Shiny Charm</code> & <code span class="fw-bold">Mark Charm</code> checkboxes if you have these items in your save file, otherwise leave unchecked.</li>
+      <li>The rest of the details on the left-hand side are encounter filters, these can be filled automatically using the <code span class="fw-bold">Encounter Lookup</code> sub window.</li>
       <li>The middle section contains search filters, here you can set filters for specific Shininess, IVs, Nature, Marks, etc.</li>
+      <li><code span class="fw-bold">Connect</code>, <code span class="fw-bold">Read Encounter</code> & <code span class="fw-bold">Skip</code> are features exclusive to Custom Firmware. These will not work for retail devices.</li>
     </ul>
 
-    <blockquote>The <code span class="fw-bold">Connect</code>, <code span class="fw-bold">Read Encounter</code>, & <code span class="fw-bold">Skip</code> features are exclusive to users running Custom Firmware (CFW), attempting to use these features on a retail device will cause issues.</blockquote>
+    <blockquote>Your 5 digit (or internal) TID/SID is required if you wish to search for Shiny Pokemon. If you do not yet know these values, click the button directly below to view the tutorial before contunuing.</blockquote>
+
   </div>
 </div><br>
 
@@ -108,18 +109,18 @@ permalink: /retail/swsh/overworld
 </a><p></p>
 
 <span class="fw-bold">Figure 2 -</span> Retail Seed Finder Overview<p></p>
-<a href="./overworld/images/main-page/figure-2-seedfinder-window-overview-retail.gif" target="_blank"><img src="./overworld/images/main-page/figure-2-seedfinder-window-overview-retail.gif" style="width:675px;height:400px;"></a><br /><br />
+<a href="./overworld/images/main-page/figure-2-seedfinder-window-overview-retail.gif" target="_blank"><img src="./overworld/images/main-page/figure-2-seedfinder-window-overview-retail.gif" class="img-fluid"></a><br /><br />
 
 <div class="card border-dark">
   <div class="anchored card-header" style="background-color: #0c0038;" id="seed-finder-overview">
     <span class="fw-bold text-light">Retail Seed Finder Overview</span>
   </div>
   <div class="card-body card-bg">
-    <p>The Retail Seed Finder sub-window is where players can calculate their current seed, this is done by recording a sequence of 128 motions/animations in a row.</p>
+    <p>The Retail Seed Finder sub-window is where players can calculate the current seed, this is done by recording a sequence of 128 motions/animations in a row.</p>
           
     <h6><span class="fw-bold">What are motions/animations?</span></h6>
         
-    <p>This refers to an in-game feature on the Pokémon summary screen or party menu. Pressing <code span class="fw-bold">L3 (pressing the left stick)</code> will cause your Pokémon to perform one of 2 animations, these will be referred to as "physical" and "special" animations.</p>
+    <p>This refers to an in-game feature on the Pokémon summary screen or party menu. Pressing <code span class="fw-bold">L3 (pressing the left stick)</code> will cause your Pokémon to perform one of 2 animations, these will be referred to as "physical" and "special" animations. The animations of some Pokemon may be easier to diffrenciate than others.</p>
         
     <h6><span class="fw-bold">Initial Seed finding instructions:</span></h6>
       <ol>
@@ -146,7 +147,7 @@ permalink: /retail/swsh/overworld
 </div><br>
 
 <span class="fw-bold">Figure 3 -</span> Animation differences<p></p>
-<a href="./overworld/images/main-page/figure-3-animations-retail.gif" target="_blank"><img src="./overworld/images/main-page/figure-3-animations-retail.gif" style="width:675px;height:400px;"></a><br /><br />
+<a href="./overworld/images/main-page/figure-3-animations-retail.gif" target="_blank"><img src="./overworld/images/main-page/figure-3-animations-retail.gif" class="img-fluid"></a><br /><br />
 
 <div class="card border-dark">
   <div class="anchored card-header" style="background-color: #0c0038;" id="animation-differences-retail">
@@ -166,14 +167,14 @@ permalink: /retail/swsh/overworld
 </div><br>
 
 <span class="fw-bold">Figure 4 -</span> Encounter Lookup tab overview<p></p>
-<a href="./overworld/images/main-page/figure-4-encounter-lookup-retail.gif" target="_blank"><img src="./overworld/images/main-page/figure-4-encounter-lookup-retail.gif" style="width:675px;height:400px;"></a><br /><br />
+<a href="./overworld/images/main-page/figure-4-encounter-lookup-retail.gif" target="_blank"><img src="./overworld/images/main-page/figure-4-encounter-lookup-retail.gif" class="img-fluid"></a><br /><br />
 
 <div class="card border-dark">
   <div class="anchored card-header" style="background-color: #0c0038;" id="encounter-lookup-overview-retail">
     <span class="fw-bold text-light">Encounter Lookup Overview</span>
   </div>
   <div class="card-body card-bg">
-    <p>The Encounter Lookup tab (pictured above), allows you to search for the encounter details of specific Pokémon and generate a list of every possible encounter for that Pokémon in the game.</p>
+    <p>The Encounter Lookup is capable of searching for the encounter details of specific Pokémon and generate a list of every possible encounter for that Pokémon.</p>
     
     <h6 span class="fw-bold">How to use Encounter Lookup:</h6>
     <ol>
@@ -187,14 +188,14 @@ permalink: /retail/swsh/overworld
 </div><br>
 
 <span class="fw-bold">Figure 5 -</span> Menu Close Advances Viewer window overview<p></p>
-<a href="./overworld/images/main-page/figure-5-menu-close-advances-viewer-overview-retail.gif" target="_blank"><img src="./overworld/images/main-page/figure-5-menu-close-advances-viewer-overview-retail.gif" style="width:675px;height:400px;"></a><br /><br />
+<a href="./overworld/images/main-page/figure-5-menu-close-advances-viewer-overview-retail.gif" target="_blank"><img src="./overworld/images/main-page/figure-5-menu-close-advances-viewer-overview-retail.gif" class="img-fluid"></a><br /><br />
 
 <div class="card border-dark">
   <div class="anchored card-header" style="background-color: #0c0038;" id="menu-close-overview-retail">
     <span class="fw-bold text-light">Menu Close Advances Viewer Overview</span>
   </div>
   <div class="card-body card-bg">
-    <p>The Menu Close Advances Viewer sub window (pictured above), predicts the number of advancements from closing the pause menu. This advancement method is recommended as closing the pause menu freezes the RNG state for a few seconds, making it an extremely consistent method of hitting an exact target frame.</p>
+    <p>The Menu Close Advances Viewer sub window predicts the number of advancements from closing the pause menu. This advancement method is recommended as closing the pause menu freezes the RNG state for a few seconds, making it an extremely consistent method of hitting an exact target frame.</p>
       
     <p>After entering your seeds and hitting search, a table will appear. The <code class="fw-bold">Jump</code> column of the table displays the amount of advancements that will occur from closing the pause menu, this number varies based on the amount of NPCs in your area.</p>
 
@@ -215,7 +216,7 @@ permalink: /retail/swsh/overworld
         <li>In this example, we expect to see +7 in the <code class="fw-bold">Jump</code> column, so we gradually increase the NPC value until +7 appears.</li>
       </ul>
 
-    <blockquote>We highly recommend becoming familiar with NPC count calibration before continuing with the guide. This method is used in almost all cases as it provides the most consistency.</blockquote>
+    <blockquote>It is highly recommended to become familiar with NPC count calibration before continuing. This method is used in almost all cases as it provides the most consistency.</blockquote>
 
   </div>
 </div><br>
@@ -315,9 +316,9 @@ permalink: /retail/swsh/overworld
   <h1 class="text-light text-center pt-3 pb-3">The Process</h1>
 </div><hr />
 
-<p><span class="fw-bold">From this point the guide assumes you know your 5 digit TID/SID combination.</span> You must have this information on-hand if you plan to RNG abuse shiny Pokemon.</p>
+<p><span class="fw-bold">From this point onwards, it is assumed you know your 5 digit TID/SID combination and have a basic understanding of how to use each of the above mentioned features of the RNG tool. If you are not familiar with usage, go back and take the time to learn. You can also keep this page open as a reference point.</span></p>
 
-<p>There are four types of encounters: Static, Symbol, Hidden, & Fishing. It's important to understand the types of encounters before making attempts. See the table below for the different types of encounters and their definitions.</p>
+<p>There are four types of encounters: Static, Symbol, Hidden, & Fishing. See the table for the different types of encounters and their definitions.</p>
 
 <table class="table table-striped" style="width:100%">
   <thead class="table text-white" style="background-color: #0c0038;">
@@ -349,7 +350,7 @@ permalink: /retail/swsh/overworld
      </tbody>
 </table>
 
-<p>Search the species you wish to hunt on the <code span class="fw-bold">Encounter Lookup</code> tab, then pick one of the encounters from the list. Take note of the type of encounter you have chosen and click on one of the buttons below to be sent to the page that applies to you!</p>
+<p>Search for the species you wish to hunt using the <code span class="fw-bold">Encounter Lookup</code> tab, then pick one of the encounters from the list. Take note of the type of encounter you have chosen. Click on one of the buttons below to be sent to the page that applies to your chosen encounter.</p>
 <hr />
   
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/overworld/static">
