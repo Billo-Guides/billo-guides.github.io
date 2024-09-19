@@ -36,92 +36,65 @@ permalink: /retail/swsh/overworld/symbol
   <h1 class="text-light text-center pt-3 pb-3">Sword/Shield Symbol RNG</h1>
 </div><hr />
 
-<p>This guide explains how to RNG abuse Pokémon from Symbol encounters. It covers the entire process, from choosing a location to obtaining the desired Pokémon.</p>
-
-<p>Symbol encounters aren't guaranteed to be the same species each time. The species is determined by an encounter slot value of 0-99, which changes with the weather. The weather can change every day at midnight (00:00). Be mindful of the Switch system time to avoid spawning unexpected Pokémon due to incorrect weather conditions.</p>
-
-<p><span class="fw-bold" style="color: #b60606;">From here it is assumed that you have read the initial page of this guide and have a general idea of how to use SWSH OWRNG Generator GUI, as well as understanding how to find and monitor your seed.</span></p>
-
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/overworld">
-  Picked the wrong type of encounter? <span class="fw-bold">Click here to go back!</span>
-  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-  </svg>
-</a><br>
+<p>This section explains how to RNG abuse Pokémon from Symbol encounters on retail hardware. It covers the entire process, from choosing a location to obtaining the desired Pokémon.</p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="getting-started-retail">
-    <span class="fw-bold text-light">Getting Started:</span>
+  <div class="anchored card-header" style="background-color: #0c0038;" id="understanding-symbol-encounters-retail">
+    <span class="fw-bold text-light">About Symbol Encounters:</span>
   </div>
   <div class="card-body card-bg">
-    <ol>
-      <li>Open SWSH_OWRNG_Generator_GUI, then type your 5 digit TID/SID into the correct fields of the main window if you plan to RNG abuse shiny Pokémon.</li><p></p>
-      <li>Open the <code span class="fw-bold">Encounter Lookup</code> sub window, then type the species name of the Pokémon you plan to RNG abuse.</li><p></p>
-      <li>Select a row that appeals to you from the list of encounters, this will fill in all of the encounter filters on the main window automatically.</li><p></p>
-      <li>Confirm that the filters have been set properly inside the Main Window, encounter filters can be found on the left-hand side.</li><p></p>
-      <li>Set your search filters inside the middle portion of the Main Window. You can filter for specific Marks, IVs, Shininess, etc.</li><p></p>
-      <li>Fly to the correct location in-game and save. Make sure you are standing far enough away from your target Pokémon to properly despawn it.</li><p></p>
-    </ol>
+    <p>Symbol spawners are NOT guaranteed to produce the same species every time, the species is instead derived from the encounterslot value (0-99), the Pokémon that occupy encounterslots will vary depending on weather and location.</p>
 
-    <blockquote>Avoid rain or thunderstorm when picking an encounter where possible, rain causes advancements to occur at an extreme rate, making it difficult to hit target frames.</blockquote>
+    <h6><span class="fw-bold">Brilliant Aura Mechanics</span></h6>
+    <p>Symbol encounters can potentially spawn Pokémon with Brilliant Aura, which boosts the amount of guaranteed max IVs the Pokémon will have. Players searching for high IV targets may opt for manipulating Symbol encounters for this purpose.</p>
+
+    <p>Brilliant Aura Pokémon can also have increased shiny odds, which is based on the Pokedex KO count. This value can be seen by viewing the Pokedex entry of any Pokémon. <a href="https://bulbapedia.bulbagarden.net/wiki/Brilliant_Pok%C3%A9mon#Appearance_rate">Bulbapedia</a> contains useful information about the increased rates.</p>
+
+    <p>For maximum optimization with this encounter type, it is recommended to have access to the Shiny Charm and have 500 KOs on the Pokémon you are hunting, this is a time consuming process however.</p>
+    <hr />
+
+    <h6><span class="fw-bold">Pokemon Behaviour Mechanics</span></h6>
+    <p>Pokémon have different behaviour classes, some will be aggressive and target the player, others will be relaxed, and in some cases the Pokémon will be timid and flee when they notice the player, causing them to despawn entirely. Pokémon with flee behaviour need to be encountered quickly before they escape.</p>
+
+    <u>Pokémon with flee behaviour:</u><br>
+    <p>Butterfree, Vulpix, Chansey, Horsea, Dunsparce, Blissey, Ralts, Whismur, Drilbur, Audino, Trubbish, Zorua, Ferroseed, Inkay, Phantump, Noibat, Wimpod, Skwovet & Silicobra.</p>
+    
+    <p>If the Pokémon you intend to hunt appears in this list, take note and proceed with caution when attempting to hit your target frame.</p>
+    <hr />
+
+    <h6><span class="fw-bold">Dex Recommendations & Ability Boosts (NOT CURRENTLY SUPPORTED)</span></h6>
+
+    <p>Dex recommendations can be found by opening the Pokedex, when a Pokémon is recommended the encounterslot value for that specific Pokémon is boosted. Storm Drain, Lightning Rod & Harvest abilities will also boost the encounterslot value of Pokémon of the corrisponding type (e.g Harvest boosts grass types).</p>
+
+    <p>Neither of these boosting methods are supported in the RNG tool at this point in time, avoid using them as this will produce inaccurate results.</p>
+
   </div>
 </div><br>
 
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/finding-tid-sid">
-  Don't know your 5 digit TID/SID? <span class="fw-bold">Click here for a tutorial!</span>
-  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-  </svg>
-</a><p></p>
+<p><span class="fw-bold">With all the required reading out of the way, begin by configuring the RNG tool and standing in the correct position in-game.</span></p>
 
 <span class="fw-bold">Figure 1 -</span> Tool setup<p></p>
 <a href="./images/symbol/figure-1-encounter-lookup-symbol.gif" target="_blank"><img src="./images/symbol/figure-1-encounter-lookup-symbol.gif" style="width:675px;height:400px;"></a><br /><br />
 
-<h6><span class="fw-bold">Using Phantump as the example:</span></h6>
-<p>The Encounter Lookup specifies Slippery Slope with Overcast weather for this encounter. Clicking the row of the table automatically fills in all of the relevant encounter information on the left-hand side of the main window.</p>
-
-<p>KO Count has been manually configured to match the amount displayed in Swablus PokeDex entry for my save file (500 KOs applies maximum Brilliant Aura bonus).</p>
-
-<p>The search filters, in the middle of the main window, were manually configured to search for any shiny with any mark, you can be more specific with the filters if you wish, such as filtering for IVs/Nature.</p>
-
-<details>
-    <summary><span class="fw-bold">Important Information:</span></summary><p></p>
-  <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="important-info-symbol-cfw">
-      <span class="fw-bold text-light">Important Information:</span>
-    </div>
-    <div class="card-body card-bg">
-      <h6><span class="fw-bold">The KO mechanic & Brilliant Aura</span></h6>
-      <p>The KO Mechanic provides a boost to the rates of Shiny & Brilliant Aura Pokémon, you can find the correct value by opening the Pokedéx screen of the Pokémon you are hunting. You can find more details about the odds boosts on <a href="https://bulbapedia.bulbagarden.net/wiki/Brilliant_Pok%C3%A9mon#Appearance_rate">Bulbapedia</a>.</p>
-
-      <p>Brilliant Aura boosts the amount of guaranteed 31 IVs a Pokémon has, only Pokémon from symbol encounters can have this trait. This makes symbol encounters ideal for those who are hunting for high IV wild Pokémon.</p><hr />
-
-      <h6><span class="fw-bold">Pokémon Behaviours</span></h6>
-      <p>Pokémon have different behaviour classes, some will be aggressive and target the player, others will be relaxed, and in some cases the Pokemon will be timid and flee when they notice the player. Pokémon with flee behaviour need to be encountered quickly before they escape.</p>
-
-      <u>Pokemon with flee behaviour:</u><br>
-      <p>Butterfree, Vulpix, Chansey, Horsea, Dunsparce, Blissey, Ralts, Whismur, Drilbur, Audino, Trubbish, Zorua, Ferroseed, Inkay, Phantump, Noibat, Wimpod, Skwovet & Silicobra.</p><hr />
-
-      <h6><span class="fw-bold">Dex Recommendations & Ability Boosts</span></h6>
-
-      <p>Dex recommendations can be found by opening the Pokedex, when a Pokemon is recommended the encounterslot value for that specific Pokemon is boosted.</p>
-
-      <p>Abilities like Lightning Rod, Harvest & Storm Drain boost the encounterslot value for Pokemon of specific types.</p>
-
-      <p>Both of these boosting methods are NOT accounted for inside SWSH_OWRNG_Generator_GUI. Avoid using Dexrec or ability boosts in case of inaccuracies.</p>
-    </div>
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="tool-setup-symbol-retail">
+    <span class="fw-bold text-light">Tool Setup:</span>
   </div>
-</details><p></p>
+  <div class="card-body card-bg"> 
+    <ol>
+      <li>Open SWSH_OWRNG_Generator_GUI, then type your 5 digit TID/SID into the correct fields of the main window (for shiny Pokémon only).</li><p></p>
+      <li>Open the <code span class="fw-bold">Encounter Lookup</code> sub window, then type the species name of the Pokémon you plan to RNG abuse, select an appealing symbol encounter.</li><p></p>
+      <li>Confirm that the filters have been set properly inside the Main Window, encounter filters can be found on the left-hand side.</li><p></p>
+      <li>Set the correct KO count inside the assigned field on the left, this should match the value displayed by the Pokedex for the Pokémon being hunted.</li><p></p>
+      <li>Set your search filters inside the middle portion of the Main Window. You can filter for specific Marks, IVs, Shininess, etc.</li>
+    </ol>
 
-<p><span class="fw-bold">With all the setup instructions out of the way, let's get to work.</span></p>
+    <blockquote><span class="fw-bold">Example -</span> Encounter Lookup specifies Slippery Slope in overcast weather for Swablu, this information has been automatically filled inside the main window. The KO count for Swablu according to the Pokedex is 500, and the search filters were also manually configured to search for a Shiny Swablu with any mark.</blockquote>
 
-<hr /><div class="title" style="background-color: #0c0038;">
-  <h1 class="text-light text-center pt-3 pb-3">The Process</h1>
-</div><hr />
+  </div>
+</div><br>
 
-<p>The end goal is to spawn the Pokémon on the calculated target frame provided by the generator search results. Once a Pokémon spawns in the overworld, its stats and details are fixed.</p>
-
-<p>Ensure your encounter and search filters are properly configured before continuing (see Figure 1). The advancement methods used to achieve the result are listed in the table found on the main page.</p>
+<p>Ensure that the encounter and search filters are properly configured before continuing. The advancement methods used to achieve the result are listed in the table found on the main page.</p>
 
 <span class="fw-bold">Figure 2 -</span> Game setup<p></p>
 <a href="./images/symbol/figure-2-in-game-setup.gif" target="_blank"><img src="./images/symbol/figure-2-in-game-setup.gif" style="width:675px;height:400px;"></a><br /><br />
@@ -133,7 +106,7 @@ permalink: /retail/swsh/overworld/symbol
   <div class="card-body card-bg">
     <p>For Symbol encounters, stand where there is a clear, straight line between you and the target Pokémon. Avoid areas that trigger other Wild/Static spawns. Once you have good positioning, calibrate your NPC count.</p>
 
-    <p>The location in the above image is ideal: Minimal NPCs, no extra spawned Pokémon, and a clear line to the target patch of grass.</p>
+    <p>The location in the above image is ideal: Minimal NPCs, no extra spawned Pokémon, and a clear line to the target patch of grass that contains the target Pokémon.</p>
 
     <p>Slippery Slope, in the Crown Tundra Wild Area, is notably "quiet" in calm weather. Remember, advancement speed (aka noise) depends on location, NPC count, and weather. The more quiet the area, the better.</p>
 
