@@ -87,8 +87,8 @@ permalink: /retail/swsh/overworld
     
     <h6><span class="fw-bold">Feature Descriptions:</span></h6>
     <ul>
-      <li><span class="fw-bold">TID & SID</span> - Enter your 5-digit Trainer ID (TID) and Secret ID (SID) here. this is only necessary when searching for Shiny Pokémon.</li>
-      <li><span class="fw-bold">Init. adv. -</span> - Input the number of advances that have passed since you started monitoring your seed.</li>
+      <li><span class="fw-bold">TID & SID -</span> Enter your 5-digit Trainer ID (TID) and Secret ID (SID) here. this is only necessary when searching for Shiny Pokémon.</li>
+      <li><span class="fw-bold">Init. adv. -</span> Input the number of advances that have passed since you started monitoring your seed.</li>
       <li><span class="fw-bold">+ field -</span> Set the number of frames to search through; choose an amount you’re comfortable with.</li>
       <li><span class="fw-bold">Shiny/Mark Charm -</span> Check these boxes if you have the items in your save file; leave unchecked if not.</li>
       <li><span class="fw-bold">Encounter Filters -</span> Filters located on the left; these can be auto-filled using the <code span class="fw-bold">Encounter Lookup</code> sub-window.</li>
@@ -130,8 +130,9 @@ permalink: /retail/swsh/overworld
     <ol>
       <li>Open the <code span class="fw-bold">Retail Seed Finder</code> sub-window, then open the in-game pause menu and the summary screen of any party Pokémon.</li>
       <li>Press <code span class="fw-bold">L3</code> to trigger an animation. Note if it’s physical or special, click <code span class="fw-bold">(0) Physical</code> or <code span class="fw-bold">(1) Special</code> accordingly.</li>
-      <li>Repeat this 128 times to generate a seed, once a seed has been produced, click <code span class="fw-bold">Update Main Form</code> to paste it into the main window (if no seed is produced, the animations may not have been recorded correctly — try again).</li>
-    </ol><hr />
+      <li>Repeat this 128 times to generate a seed, once a seed has been produced, click <code span class="fw-bold">Update Main Form</code> to paste it into the main window.</li>
+    </ol>
+    <hr />
 
     <h6><span class="fw-bold">Seed re-identification:</span></h6>
     <p>Re-identify your current RNG state at any point by using the <code span class="fw-bold">Retail Advances Tracker</code> feature on the right-hand side of the Main Window. This process is a simplified version of finding your seed through animations.</p>
@@ -141,6 +142,8 @@ permalink: /retail/swsh/overworld
       <li>Record 8-20 animations using the same method as above. This should be quick and efficient.</li>
       <li>Once a seed is produced, click Update States to paste your current seed into the top-left of the main window.</li>
     </ol>
+
+    <blockquote>If no seed was produced when identifying or re-identifying seeds, animations have not been recorded properly — try again.</blockquote>
 
   </div>
 </div><br>
@@ -153,17 +156,17 @@ permalink: /retail/swsh/overworld
     <span class="fw-bold text-light">Encounter Lookup Overview</span>
   </div>
   <div class="card-body card-bg">
-    <p>The Encounter Lookup is capable of searching for the encounter details of specific Pokémon and generate a list of every possible encounter for that Pokémon.</p>
+    <p>The Encounter Lookup feature searches encounter details for specific Pokémon and generates a list of every possible encounter for that species.</p>
     
-    <h6 span class="fw-bold">How to use Encounter Lookup:</h6>
+    <h6 span class="fw-bold">Using Encounter Lookup:</h6>
     <ol>
-      <li>Open the <code class="fw-bold">Encounter Lookup</code> tab and set the correct game version.</li>
-      <li>Type the species name of your target Pokémon, then select it from the dropdown menu to produce a list.</li>
-      <li>Choose an encounter type: Static, Symbol, or Hidden. Select a row from the list by single-clicking on it.</li>
-      <li>After selecting the encounter, the sub window can be closed. You should see the details have been entered into the Main Window automatically.</li>
+      <li>Open the Encounter Lookup tab and select your game version.</li>
+      <li>Type target Pokémon’s species name and select it from the dropdown menu.</li>
+      <li>Pick an encounter type: Static, Symbol, Fishing or Hidden.</li>
+      <li>Click an appealing encounter to select it, then close the sub-window. The encounter details will automatically populate inside the Main Window.</li>
     </ol>
 
-    <blockquote>For retail players it is recommended to avoid Rain or Thunderstorm based encounters. These are considered to be borderline impossible at this point in time due to instability.</blockquote>
+    <blockquote>Avoid hidden encounters, and rain or thunderstorm based encounters where possible. These encounter types are extremely inconsistent at this point in time due to noise/instability.</blockquote>
 
     </div>
 </div><br>
@@ -176,31 +179,28 @@ permalink: /retail/swsh/overworld
     <span class="fw-bold text-light">Menu Close Advances Viewer Overview</span>
   </div>
   <div class="card-body card-bg">
-    <p>The Menu Close Advances Viewer sub window predicts the number of advancements from closing the pause menu. This advancement method is recommended as closing the pause menu freezes the RNG state for a few seconds, making it an extremely consistent method of hitting an exact target frame.</p>
-      
-    <p>After entering your seeds and hitting search, a table will appear. The <code class="fw-bold">Jump</code> column of the table displays the amount of advancements that will occur from closing the pause menu, this number varies based on the amount of NPCs in your area.</p>
+    <p>The Menu Close Advances Viewer predicts the number of advancements that occur when closing the pause menu. This method is highly recommended because closing the pause menu temporarily freezes the RNG state, making it easier to hit your exact target frame.</p>
 
-    <p>An area may have a higher NPC count than what is currently visible on screen, it’s important to calibrate your NPC count accurately for an accurate <code class="fw-bold">Jump</code> prediction.</p><hr />
+    <p>Enter your seeds and hit search to produce a table. The <code class="fw-bold">Jump</code> column shows the number of advancements from closing the pause menu, this value varies based on the number of NPCs in the area. Calibrate NPC count accurately for correct predictions.</p>
+    <hr />
+    
+    <h6 span class="fw-bold">Calibrating NPC count:</h6>
+    <ol>
+      <li>Use Retail Seed Finder method (mentioned above) to identify your seed and click <code class="fw-bold">Update Main Form</code> after doing so.</li>
+      <li>Click the <code span class="fw-bold">Generate Pattern</code> button on the main window after identifying your seed, keep pause menu open.</li>
+      <li>Close and quickly re-open the pause menu to advance the RNG state, then re-identify your seed (without updating states).</li>
+      <li>Take note of the total amount of advancements that were consumed between closing and opening the pause menu and re-identifying your seed.</li>
+      <li>Subtract the amount of advancements that were used to re-identify your seed from the total amount of advancements consumed throughout.</li>
+      <li>Open Menu Close Advances Viewer and input your seeds if necessary. Search with 0 NPCs and look at the <code class="fw-bold">Jump</code> value.</li>
+      <li>If the <code class="fw-bold">Jump</code> value does not match, increment the number of NPCs by 1 until a matching value has been found.</li>
+    </ol>
 
-    <h6 span class="fw-bold">How to calibrate NPC count:</h6>
-      <ul>
-        <li>Use <code span class="fw-bold">Retail Seed Finder</code> to identify your current seed, make sure to click <code span class="fw-bold">Update Main Form</code> button after doing so.</li>
-        <li>Close the pause menu once and quickly re-open it, this will advance the RNG state. From here you will need to re-identify your current seed using the above mentioned method. DO NOT UPDATE STATES.</li>
-        <li>Take note of the amount of advancements that have occurred between re-opening the pause menu and re-identifying your seed, and take note of how many animations were used to re-identify your seed.</li>
-      </ul>
-
-    <blockquote><span class="fw-bold">Example -</span> If 15 advancements have occured after re-identification, and it only took 8 animations to re-identify, 7 advancement occured from closing and re-opening the pause menu.</blockquote>
-
-      <ul>
-        <li>Open the <code span class="fw-bold">Menu Close Advances Viewer</code> sub window, then copy your seeds from the Main Window over into the correct fields.</li>
-        <li>Search with 0 NPCs, If the number inside the <code class="fw-bold">Jump</code> column does not match, increase the number of NPCs by 1 until everything aligns properly with what is expected.</li>
-        <li>In this example, we expect to see +7 in the <code class="fw-bold">Jump</code> column, so we gradually increase the NPC value until +7 appears.</li>
-      </ul>
-
-    <blockquote>It is highly recommended to become familiar with NPC count calibration before continuing. This method is used in almost all cases as it provides the most consistency.</blockquote>
-
+    <blockquote><span class="fw-bold">Example -</span> If 15 advancements were consumed in total, and 10 advancements were used to re-identify seeds, then 5 frames were consumed from closing the pause menu. So we would now increment the number of NPCs in the Menu Close Advances Viewer until a Jump value of +5 appears.</blockquote>
+    
   </div>
 </div><br>
+
+<p>Menu Close prediction is the recommended method used to hit target frames and is referenced multiple times throughout this guide. It is highly recommended to become familiar with the process of calibrating NPC counts before continuing.</p>
 
 <hr /><div class="title" style="background-color: #0c0038;">
   <h1 class="text-light text-center pt-3 pb-3">Advancing The RNG State</h1>
