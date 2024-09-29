@@ -83,21 +83,20 @@ permalink: /retail/swsh/overworld
     <span class="fw-bold text-light">Main Window Overview</span>
   </div>
   <div class="card-body card-bg">
-    <p>The main window calculates upcoming target frames based on your search parameters. Here, we can assign encounter and search filters to search for specific targets.</p>
-
-    <h6><span class="fw-bold">Feature descriptions:</span></h6>
+    <p>The main window calculates upcoming target frames based on your search criteria. You can set encounter and search filters here to search for specific targets.</p>
+    
+    <h6><span class="fw-bold">Feature Descriptions:</span></h6>
     <ul>
-      <li>The <code span class="fw-bold">TID</code> & <code span class="fw-bold">SID</code> fields expect your 5 digit TID/SID combination, you will need this to find Shiny Pokémon.</li>
-      <li><code span class="fw-bold">Init. adv.</code> is where you enter the amount of advances that have passed since you began monitoring your seed.</li>
-      <li>The <code span class="fw-bold">+</code> field is the amount of frames to search through, you should set this to a comfortable amount.</li>
-      <li>Click the <code span class="fw-bold">Shiny Charm</code> & <code span class="fw-bold">Mark Charm</code> checkboxes if you have these items in your save file, otherwise leave unchecked.</li>
-      <li>The rest of the details on the left-hand side are encounter filters, these can be filled automatically using the <code span class="fw-bold">Encounter Lookup</code> sub window.</li>
-      <li>The middle section contains search filters, here you can set filters for specific Shininess, IVs, Nature, Marks, etc.</li>
-      <li><code span class="fw-bold">Connect</code>, <code span class="fw-bold">Read Encounter</code> & <code span class="fw-bold">Skip</code> are features exclusive to Custom Firmware. These will not work for retail devices.</li>
+      <li><span class="fw-bold">TID & SID</span> - Enter your 5-digit Trainer ID (TID) and Secret ID (SID) here. this is only necessary when searching for Shiny Pokémon.</li>
+      <li><span class="fw-bold">Init. adv. -</span> - Input the number of advances that have passed since you started monitoring your seed.</li>
+      <li><span class="fw-bold">+ field -</span> Set the number of frames to search through; choose an amount you’re comfortable with.</li>
+      <li><span class="fw-bold">Shiny/Mark Charm -</span> Check these boxes if you have the items in your save file; leave unchecked if not.</li>
+      <li><span class="fw-bold">Encounter Filters -</span> Filters located on the left; these can be auto-filled using the <code span class="fw-bold">Encounter Lookup</code> sub-window.</li>
+      <li><span class="fw-bold">Search Filters -</span> Filters located in the center; use these to filter for Shininess, IVs, Nature, Marks, etc. depending on your target.</li>
+      <li><span class="fw-bold">Connect, Read Encounter & Skip -</span> These features are exclusive to Custom Firmware and won’t work on retail devices, can be ignored.</li>
     </ul>
 
-    <blockquote>Your 5 digit (or internal) TID/SID is required if you wish to search for Shiny Pokemon. If you do not yet know these values, click the button directly below to view the tutorial before contunuing.</blockquote>
-
+    <blockquote>If you wish to search for shiny Pokémon and do not know your 5-digit TID/SID, click the button below to view the tutorial before continuing.</blockquote>
   </div>
 </div><br>
 
@@ -111,57 +110,38 @@ permalink: /retail/swsh/overworld
 <span class="fw-bold">Figure 2 -</span> Retail Seed Finder Overview<p></p>
 <a href="./overworld/images/main-page/figure-2-seedfinder-window-overview-retail.gif" target="_blank"><img src="./overworld/images/main-page/figure-2-seedfinder-window-overview-retail.gif" class="img-fluid"></a><br /><br />
 
+<span class="fw-bold">Figure 3 -</span> Animation Differences<p></p>
+<a href="./overworld/images/main-page/figure-3-animations-retail.gif" target="_blank"><img src="./overworld/images/main-page/figure-3-animations-retail.gif" class="img-fluid"></a><br /><br />
+
 <div class="card border-dark">
   <div class="anchored card-header" style="background-color: #0c0038;" id="seed-finder-overview">
     <span class="fw-bold text-light">Retail Seed Finder Overview</span>
   </div>
   <div class="card-body card-bg">
-    <p>The Retail Seed Finder sub-window is where players can calculate the current seed, this is done by recording a sequence of 128 motions/animations in a row.</p>
+    <p>Sub windows are located at the top of the GUI. Retail Seed Finder calculates the current RNG state by recording a sequence of 128 motions/animations in a row.</p>
           
     <h6><span class="fw-bold">What are motions/animations?</span></h6>
-    <p>This refers to an in-game feature on the Pokémon summary screen or party menu. Pressing <code span class="fw-bold">L3</code> (pressing the left stick) will cause your Pokémon to perform one of 2 animations, these will be referred to as "physical" and "special" animations.</p>
+    <p>This refers to the feature on the Pokémon summary screen or party menu. Pressing L3 (clicking the left stick) will make your Pokémon perform one of two animations: "physical" or "special."</p>
+
+    <p>Figure 3 displays Espeon performing both types of animation (physical followed by special). It is important to pick a Pokémon with an obvious animation difference, such as Espeon or Drilbur.</p>
     <hr />
     
     <h6><span class="fw-bold">Initial Seed finding instructions:</span></h6>
-      <ol>
-        <li>Open the pause menu in-game, then open the <code span class="fw-bold">Retail Seed Finder</code> sub-window on SwSh OWRNG Generator GUI.</li>
-        <li>Open the party menu, select the Pokémon you will use to record animations, then click <code span class="fw-bold">Summary</code>.</li>
-        <li>Use the <code span class="fw-bold">L3</code> button to cause an animation, take note of if the animation was physical or special.</li>
-        <li>If the animation was physical, press the <code span class="fw-bold">(0) Physical</code> button. If the animation was special, press the <code span class="fw-bold">(1) Special</code> button.</li>
-        <li>Repeat this process 128 times in a row and a seed will be produced. Click the <code span class="fw-bold">Update Main Form</code> button to paste it into the main window.</li>
-        <li>If a seed was not produced this indicates that the animations were not recorded properly, try again.</li>
-      </ol>
-    <hr />
+    <ol>
+      <li>Open the <code span class="fw-bold">Retail Seed Finder</code> sub-window, then open the in-game pause menu and the summary screen of any party Pokémon.</li>
+      <li>Press <code span class="fw-bold">L3</code> to trigger an animation. Note if it’s physical or special, click <code span class="fw-bold">(0) Physical</code> or <code span class="fw-bold">(1) Special</code> accordingly.</li>
+      <li>Repeat this 128 times to generate a seed, once a seed has been produced, click <code span class="fw-bold">Update Main Form</code> to paste it into the main window (if no seed is produced, the animations may not have been recorded correctly — try again).</li>
+    </ol><hr />
 
     <h6><span class="fw-bold">Seed re-identification:</span></h6>
-    <p>Re-identifying your current seed is done using the Retail Advances Tracker feature of the Main Window, and is essentially a simplified version of finding your seed using animations.</p>
+    <p>Re-identify your current RNG state at any point by using the <code span class="fw-bold">Retail Advances Tracker</code> feature on the right-hand side of the Main Window. This process is a simplified version of finding your seed through animations.</p>
     
-      <ol>
-        <li>Click the <code span class="fw-bold">Generate Pattern</code> button after initially identifying your seed.</li>
-        <li>Record a sequence of 8-20 animations using the above mentioned method, the amount can vary but should be relatively quick.</li>
-        <li>Once a seed has been produced, click the <code span class="fw-bold">Update States</code> button to paste your current seed into the top-left of the main window.</li>
-      </ol>
-
-  </div>
-</div><br>
-
-<span class="fw-bold">Figure 3 -</span> Animation Differences<p></p>
-<a href="./overworld/images/main-page/figure-3-animations-retail.gif" target="_blank"><img src="./overworld/images/main-page/figure-3-animations-retail.gif" class="img-fluid"></a><br /><br />
-
-<div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="animation-differences-retail">
-    <span class="fw-bold text-light">Animation Differences</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>In Figure 3, we can see Espeon performing 2 different types of animation. It is important to pick a Pokémon with an obvious animation difference, such as Espeon or Drilbur.</p>
-
     <ol>
-      <li>In the first animation Espeon lunged towards the screen, which is a physical action.</li>
-      <li>In the second animation Espeon stands in place, which is a special animation.</li>
+      <li>Click the <code span class="fw-bold">Generate Pattern</code> button any time after initially identifying your seed.</li>
+      <li>Record 8-20 animations using the same method as above. This should be quick and efficient.</li>
+      <li>Once a seed is produced, click Update States to paste your current seed into the top-left of the main window.</li>
     </ol>
 
-    <blockquote>Recording animations through the Pokémon summary screen is recommended, this is due to the party menu advancing +1 per button clicked, the summary screen advances +1 per animation, making it easier to keep track of.</blockquote>
-    
   </div>
 </div><br>
 
