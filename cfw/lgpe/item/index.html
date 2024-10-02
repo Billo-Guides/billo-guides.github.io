@@ -152,7 +152,14 @@ permalink: /cfw/lgpe/item
   <div class="card-body card-bg">
     <p>The item given from interacting with a hidden item spot is determined on the frame it was picked up. For this reason your item needs to be spawned and able to be picked up before doing anything else.</p>
 
-    <p>The respawn mechanics of the items in these areas is different. For Cerulean Cave, items have a chance of spawning every time the player walks 256 steps. In the game corner, the items are respawned each time a day has passed.</p>
+    <p>In this example we are searching for a Master Ball in Cerulean Cave, in Figure 3 the player is stood next to a Pokeball Spawner in Cerulean Cave. We have confirmed that an item is present, then reset the game to respawn it.</p>
+
+    <ul>
+      <li>A list of table item rates, and spots for item spawners can be found <a href="https://github.com/Lusamine/SysBot.NET/tree/moarencounterbots">here</a></li>
+    </ul>
+
+    <h6><span class="fw-bold">Respawn Mechanics</span></h6>
+    <p>The conditions to respawn collected items is different depending on location. For Cerulean Cave, items have a chance of spawning every time the player walks 256 steps. In the game corner, the items are respawned each time a day has passed.</p>
 
     <p>To trick the game into believing that a day has passed naturally (which will respawn the items in the Game Corner immediately if yours are despawned), you will need to follow these steps:</p>
 
@@ -201,28 +208,9 @@ permalink: /cfw/lgpe/item
   </div>
 </div><br>
 
-<p>After setting the script properly, navigate to the correct in-game location.</p>
+<p>After setting the script properly, applying filters and standing in the correct in-game location, you can begin searching for desirable target frames.</p>
 
-<span class="fw-bold">Figure 5 -</span> Location Setup<p></p>
-<a href="./images/item/location-setup.gif" target="_blank"><img src="./images/item/location-setup.gif" class="img-fluid"></a><br /><br />
-
-<div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c5b74;" id="location-setup-lgpe-item">
-    <span class="fw-bold text-light">Location Setup:</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>In this example we are searching for a Master Ball in Cerulean Cave, in Figure 5 the player is stood next to a Pokeball Spawner in Cerulean Cave.</p>
-
-    <ul>
-      <li>A list of table item rates, and spots for item spawners can be found <a href="https://github.com/Lusamine/SysBot.NET/tree/moarencounterbots">here</a></li>
-    </ul>
-
-    <p>After standing in the correct in-game position, double check the item spawner is as expected by saving progress, interacting with the item spot, then restarting the game (to respawn the item).</p>
-    
-  </div>
-</div><br>
-
-<span class="fw-bold">Figure 6 -</span> Searching For A Target<p></p>
+<span class="fw-bold">Figure 5 -</span> Searching For A Target<p></p>
 <a href="./images/item/searching-target-frames.gif" target="_blank"><img src="./images/item/searching-target-frames.gif" class="img-fluid"></a><br /><br />
 
 <div class="card border-dark">
@@ -245,7 +233,7 @@ permalink: /cfw/lgpe/item
   </div>
 </div><br>
 
-<span class="fw-bold">Figure 7 -</span> Target Found!<p></p>
+<span class="fw-bold">Figure 6 -</span> Target Found!<p></p>
 <a href="./images/item/target-found.png" target="_blank"><img src="./images/item/target-found.png" class="img-fluid"></a><br /><br />
 
 <p>A target has been found! A Master Ball on advances x-y, these are the exact advances that we will aim to interact with a spawner that contains our desired item on.</p>
@@ -282,12 +270,12 @@ permalink: /cfw/lgpe/item
 
 <p>If you are manipulating items in Cerulean Cave, ensure that a repel is active when doing the last ~50 advancements to avoid overshooting your target frame, as frames are consumed every time a wild Pokemon spawns.</p>
 
-<span class="fw-bold">Figure 8 -</span> Target Frame Hit!<p></p>
+<span class="fw-bold">Figure 7 -</span> Target Frame Hit!<p></p>
 <a href="./images/item/target-hit.png" target="_blank"><img src="./images/item/target-hit.png" class="img-fluid"></a><br /><br />
 
 <p>According to the search results, a Master Ball will be produced after interacting with the item spot on frame x, according to the SysBot logs, x amount of advancements have occured since we began monitoring, so it is now time to interact with the hidden item spot to claim our item.</p>
 
-<span class="fw-bold">Figure 9 -</span> Result Found!<p></p>
+<span class="fw-bold">Figure 8 -</span> Result Found!<p></p>
 <a href="./images/item/result-found.png" target="_blank"><img src="./images/item/result-found.png" class="img-fluid"></a><br /><br />
 
 <p>A Master Ball was produced as expected, that's all there is to RNG manipulating valuable items in LGPE!</p>
