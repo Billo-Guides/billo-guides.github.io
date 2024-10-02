@@ -80,7 +80,7 @@ permalink: /cfw/lgpe/item
   </svg>
 </a>
 
-<div class="title" style="background-color: #0c5b74;">
+<hr /><div class="title" style="background-color: #0c5b74;">
   <h1 class="text-light text-center pt-3 pb-3">Configurations & Setup</h1>
 </div><hr />
 
@@ -150,8 +150,35 @@ permalink: /cfw/lgpe/item
     <span class="fw-bold text-light">Game Setup:</span>
   </div>
   <div class="card-body card-bg">
-    <p>Items should be collectable, as the item is determined on the frame it has been picked up. You can confirm that </p>
+    <p>The item given from interacting with a hidden item spot is determined on the frame it was picked up. For this reason your item needs to be spawned and able to be picked up before doing anything else.</p>
     
+    <ul>
+      <li>A list of Cerulean Cave spots can be found here</li>
+      <li>A list of Game Corner spots can be found here</li>
+    </ul>
+
+    <p>The respawn mechanics of the items in these areas is different. For Cerulean Cave, items have a chance of spawning every time the player walks 256 steps. In the game corner, the items are respawned each time a day has passed.</p>
+
+    <p>To trick the game into believing that a day has passed naturally (which will respawn the items immediately if yours are despawned), you will need to follow these steps:</p>
+
+    <ol>
+      <li>Open the pause menu and click Communicate.</li>
+      <li>Select the Play with others option.</li>
+      <li>Select Nearby Player, then Link Trade.</li>
+      <li>Enter any link code, then search for a trade.</li>
+      <li>Press the home button and navigate to System Settings.</li>
+      <li>Change the system date forward by one day, this will respawn the items.</li>
+    </ol>
+    
+    <blockquote>If you are planning to manipulate items in Cerulean Cave, carry plenty of repels to avoid unwanted advancements and increase frame advancement stability.</blockquote>
     
   </div>
 </div><br>
+
+<p>After following all of the setup instructions, navigate to the area that contains the item you wish to manipulate (e.g For Master Balls/Berries/Fossils, visit Cerulean Cave. For Bottle Caps/PP Max/Candy, visit the Game Corner), item drop tables for each location can be found in the LINQPad script.</p>
+
+<hr /><div class="title" style="background-color: #0c5b74;">
+  <h1 class="text-light text-center pt-3 pb-3">The Process</h1>
+</div><hr />
+
+
