@@ -151,11 +151,6 @@ permalink: /cfw/lgpe/item
   </div>
   <div class="card-body card-bg">
     <p>The item given from interacting with a hidden item spot is determined on the frame it was picked up. For this reason your item needs to be spawned and able to be picked up before doing anything else.</p>
-    
-    <ul>
-      <li>A list of Cerulean Cave spots can be found here</li>
-      <li>A list of Game Corner spots can be found here</li>
-    </ul>
 
     <p>The respawn mechanics of the items in these areas is different. For Cerulean Cave, items have a chance of spawning every time the player walks 256 steps. In the game corner, the items are respawned each time a day has passed.</p>
 
@@ -219,8 +214,7 @@ permalink: /cfw/lgpe/item
     <p>In this example we are searching for a Master Ball in Cerulean Cave, in Figure 5 the player is stood next to a Pokeball Spawner in Cerulean Cave.</p>
 
     <ul>
-      <li>A list of Cerulean Cave spots can be found here</li>
-      <li>A list of Game Corner spots can be found here</li>
+      <li>A list of table item rates, and spots for item spawners can be found <a href="https://github.com/Lusamine/SysBot.NET/tree/moarencounterbots">here</a></li>
     </ul>
 
     <p>After standing in the correct in-game position, double check the item spawner is as expected by saving progress, interacting with the item spot, then restarting the game (to respawn the item).</p>
@@ -259,5 +253,43 @@ permalink: /cfw/lgpe/item
 <hr /><div class="title" style="background-color: #0c5b74;">
   <h1 class="text-light text-center pt-3 pb-3">Advancing Towards The Target</h1>
 </div><hr />
+
+<p>The following actions are considered to be the best methods to advance the RNG state:</p>
+
+<table class="table table-striped" style="width:100%">
+  <thead class="table text-white" style="background-color: #0c0038;">
+      <th scope="col" style="width:25%" class="text-center">Advancement Method</th>
+      <th scope="col" class="text-center">Description Of Method</th>
+   </tr>
+       </thead>
+       <tbody id="results">
+   <tr>
+      <td><span class="fw-bold">Follow Pokemon Interaction</span></td>
+      <td>Using the Pokemon follow feature to either ride a Pokemon or have it trail behind you, then interacting with it.</td>
+   </tr>
+   <tr>
+     <td><span class="fw-bold">Spawning Wild Pokemon</span></td>
+     <td>Spawning wild Pokemon in the overworld will advance the RNG state a certain amount depending on the Pokemon spawned.</td>
+   </tr>
+   <tr>
+     <td><span class="fw-bold">Pikachu/Eevee Interaction</span></td>
+     <td>Opening the "Play with Pikachu/Eevee" menu will advance the RNG state in small increments, useful for the last few advances.</td>
+   </tr>
+     </tbody>
+</table>
+
+<p>Monitor the <code span class="fw-bold">Logs</code> tab of SysBot.NET until you reach your target frame. It is recommended to remain close to the area that contains your desired item where possible.</p>
+
+<p>If you are manipulating items in Cerulean Cave, ensure that a repel is active when doing the last ~50 advancements to avoid overshooting your target frame, as frames are consumed every time a wild Pokemon spawns.</p>
+
+<span class="fw-bold">Figure 8 -</span> Target Frame Hit!<p></p>
+<a href="./images/item/target-hit.png" target="_blank"><img src="./images/item/target-hit.png" class="img-fluid"></a><br /><br />
+
+<p>According to the search results, a Master Ball will be produced after interacting with the item spot on frame x, according to the SysBot logs, x amount of advancements have occured since we began monitoring, so it is now time to interact with the hidden item spot to claim our item.</p>
+
+<span class="fw-bold">Figure 9 -</span> Result Found!<p></p>
+<a href="./images/item/result-found.png" target="_blank"><img src="./images/item/result-found.png" class="img-fluid"></a><br /><br />
+
+<p>A Master Ball was produced as expected, that's all there is to RNG manipulating valuable items in LGPE!</p>
 
 
