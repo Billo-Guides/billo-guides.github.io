@@ -33,10 +33,10 @@ permalink: /cfw/lgpe/item
 </style>
 
 <div class="title" style="background-color: #0c5b74;">
-  <h1 class="text-light text-center pt-3 pb-3">Item RNG (LGPE)</h1>
+  <h1 class="text-light text-center pt-3 pb-3">Hidden Item RNG (LGPE)</h1>
 </div><hr />
 
-<p>This guide provides coverage on how to RNG manipulate valuable items in Let's Go Pikachu & Eevee's Cerulean Cave and Celadon City Game Corner. This most useful application of this type of RNG is for farming Master Balls and Gold Bottle Caps. The tools and scripts used throughout this guide were created by <a href="https://github.com/Lusamine">Lusamine</a>.</p>
+<p>This guide provides coverage on how to RNG manipulate valuable items in Let's Go Pikachu & Eevee's Cerulean Cave and Celadon City Game Corner. This most useful application of this type of RNG is for farming Master Balls, PP Max & Bottle Caps. The tools and scripts used throughout this guide were created by <a href="https://github.com/Lusamine">Lusamine</a>.</p>
 
 <p><span class="fw-bold" style="color: #b60606;">From here it is assumed you are using a CFW Switch console running <a href="https://github.com/Atmosphere-NX/Atmosphere/releases">Atmosphere</a>.</span></p>
 
@@ -55,7 +55,7 @@ permalink: /cfw/lgpe/item
      <h6><span class="fw-bold">Dependencies:</span></h6>
      <ul>
        <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0">.NET 8.0</a></li>
-       <li><a href="https://projectpokemon.org/home/files/file/2445-pkhex-development-build/">PKHeX Development Build</a></li>
+       <li><a href="https://projectpokemon.org/home/files/file/2445-pkhex-development-build/">PKHeX Development Build (for PKHeX.Core.dll)</a></li>
        <li><a href="https://github.com/olliz0r/sys-botbase/releases/">Sys-botbase</a></li>
      </ul>
 
@@ -80,4 +80,78 @@ permalink: /cfw/lgpe/item
   </svg>
 </a>
 
+<div class="title" style="background-color: #0c5b74;">
+  <h1 class="text-light text-center pt-3 pb-3">Configurations & Setup</h1>
+</div><hr />
 
+<p>Before doing anything else, you will need to set up Sysbot, LINQPad (for using the script), and your save file. All three of these should be properly configured before starting.</p>
+
+<span class="fw-bold">Figure 1 -</span> SysBot Setup<p></p>
+<a href="./images/item/sysbot-setup.gif" target="_blank"><img src="./images/item/sysbot-setup.gif" class="img-fluid"></a><br /><br />
+
+<div class="card border-dark">
+  <div class="card-header" style="background-color: #0c5b74;" id="sysbot-setup-lgpe-item">
+    <span class="fw-bold text-light">SysBot Setup</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>Opon opening SysBot.exe for the first time, it will default to function in Scarlet & Violet, indicated by the program header. To change the bot to LGPE mode, do the following:</p>
+
+    <ol>
+      <li>Launch and close SysBot.exe at least once to generate a file named <code span class="fw-bold">config.json</code>.</li>
+      <li>Open <code span class="fw-bold">config.json</code> with your favourite text editor (e.g Notepad).</li>
+      <li>Change the <code span class="fw-bold">Mode</code> value to 100 (100 represents LGPE).</li>
+      <li>Launch the application, you should now see that the bot header has changed to support LGPE.</li>
+    </ol>
+
+    <p>After you have successfully launched the bot in LGPE mode, you will need to toggle the settings for the bot you plan to use, here's how:</p>
+
+    <ol>
+      <li>In the <code span class="fw-bold">Hub</code> tab, open the <code span class="fw-bold">EncounterRNGLGPE</code> dropdown menu.</li>
+      <li>Select <code span class="fw-bold">Bit128</code> in the <code span class="fw-bold">DisplaySeedMode</code> dropdown menu.</li>
+      <li>Set the <code span class="fw-bold">MonitorRefreshRate</code> to 0, this will be needed later.</li>
+      <li>In the <code span class="fw-bold">Bots</code> tab, type the local IP address of the console.</li>
+      <li>In the dropdown menu on the right, select <code span class="fw-bold">EncBotRNGMonitorLGPE</code> and add the bot.</li>
+    </ol>
+
+    <blockquote>At this point you should now see LGPE in the SysBot header and have the RNG monitor added to the list of currently active bots. If you need a visual example to follow, refer to Figure 1.</blockquote>
+
+  </div>
+</div>
+
+<span class="fw-bold">Figure 2 -</span> Script Setup<p></p>
+<a href="./images/item/script-setup.gif" target="_blank"><img src="./images/item/script-setup.gif" class="img-fluid"></a><br /><br />
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c5b74;" id="linqpad-script-setup-lgpe-item">
+    <span class="fw-bold text-light">LINQPad Script Setup:</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>Upon launching LINQPad, you should see something similar to the above image, the links at the top of this page show where the raw script used for item RNG manipulation is located.</p>
+      
+    <h6><span class="fw-bold">Initial Script Setup</span></h6>
+    <ul>
+      <li>Change the Language (found at the top of the window) to <code span class="fw-bold">C# program</code>, delete any existing code that appears from doing so.</li>
+      <li>Copy the LGPE Hidden Floor Item Calculator script directly into the main window, then press F4 to open the <code span class="fw-bold">Query Properties</code> sub-window.</li>
+      <li>In the <code span class="fw-bold">Additional References</code> tab, click the <code span class="fw-bold">Add/Browse</code> button and select <code span class="fw-bold">PKHeX.Core.dll</code> (downloaded earlier).</li>
+      <li>Open the <code span class="fw-bold">Namespace Imports</code> tab then type <code span class="fw-bold">PKHeX.Core</code>.</li>
+      <li>Click the <code span class="fw-bold">OK</code> button at the bottom left of the sub-window to confirm these changes.</li>
+      <li>Run the script, you should see that an output has been produced at the bottom of the main window if setup was done correctly.</li>
+    </ul>
+
+    <blockquote>Ensure that the script is being ran as a <code span class="fw-bold">C# Program</code>, this is visible in the top bar of the main window. Use Figure 2 as a reference point if you are struggling with leveraging PKHeX.Core.dll.</blockquote>
+  </div>
+</div><br>
+
+<span class="fw-bold">Figure 3 -</span> Game Setup<p></p>
+<a href="./images/item/game-setup.gif" target="_blank"><img src="./images/item/game-setup.gif" class="img-fluid"></a><br /><br />
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c5b74;" id="game-setup-lgpe-item">
+    <span class="fw-bold text-light">Game Setup:</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>Items should be collectable, as the item is determined on the frame it has been picked up. You can confirm that </p>
+    
+    
+  </div>
+</div><br>
