@@ -116,7 +116,7 @@ permalink: /cfw/lgpe/item
     <blockquote>At this point you should now see LGPE in the SysBot header and have the RNG monitor added to the list of currently active bots. If you need a visual example to follow, refer to Figure 1.</blockquote>
 
   </div>
-</div>
+</div><br>
 
 <span class="fw-bold">Figure 2 -</span> Script Setup<p></p>
 <a href="./images/item/script-setup.gif" target="_blank"><img src="./images/item/script-setup.gif" class="img-fluid"></a><br /><br />
@@ -159,14 +159,14 @@ permalink: /cfw/lgpe/item
 
     <p>The respawn mechanics of the items in these areas is different. For Cerulean Cave, items have a chance of spawning every time the player walks 256 steps. In the game corner, the items are respawned each time a day has passed.</p>
 
-    <p>To trick the game into believing that a day has passed naturally (which will respawn the items immediately if yours are despawned), you will need to follow these steps:</p>
+    <p>To trick the game into believing that a day has passed naturally (which will respawn the items in the Game Corner immediately if yours are despawned), you will need to follow these steps:</p>
 
     <ol>
-      <li>Open the pause menu and click Communicate.</li>
-      <li>Select the Play with others option.</li>
-      <li>Select Nearby Player, then Link Trade.</li>
+      <li>Open the pause menu and click <code span class="fw-bold">Communicate</code>.</li>
+      <li>Select the <code span class="fw-bold">Play with others</code> option.</li>
+      <li>Select <code span class="fw-bold">Nearby Player</code>, then <code span class="fw-bold">Link Trade</code>.</li>
       <li>Enter any link code, then search for a trade.</li>
-      <li>Press the home button and navigate to System Settings.</li>
+      <li>Press the home button and navigate to <code span class="fw-bold">System Settings</code>.</li>
       <li>Change the system date forward by one day, this will respawn the items.</li>
     </ol>
     
@@ -175,10 +175,89 @@ permalink: /cfw/lgpe/item
   </div>
 </div><br>
 
-<p>After following all of the setup instructions, navigate to the area that contains the item you wish to manipulate (e.g For Master Balls/Berries/Fossils, visit Cerulean Cave. For Bottle Caps/PP Max/Candy, visit the Game Corner), item drop tables for each location can be found in the LINQPad script.</p>
+<p><span class="fw-bold" style="color: #b60606;">Ensure that all of the setup instructions have been closely followed before continuing, from here it is assumed that SysBot.NET, LINQPad, and the save file have been properly configured.</span></p>
 
 <hr /><div class="title" style="background-color: #0c5b74;">
   <h1 class="text-light text-center pt-3 pb-3">The Process</h1>
+</div><hr />
+
+<p>First, decide which item you plan to manipulate and navigate to the corresponding location. Full item tables can be found inside the LINQPad script. In this example we will be manipulating a Master Ball, and the hidden item spawners can be found inside Cerulean Cave.</p>
+
+<p>Next, you will need to set your search filters in the LINQPad script, this will tell the script which item table is being used and which item to search for.</p>
+
+<span class="fw-bold">Figure 4 -</span> Script Filters<p></p>
+<a href="./images/item/script-filters.gif" target="_blank"><img src="./images/item/script-filters.gif" class="img-fluid"></a><br /><br />
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c5b74;" id="script-filters-lgpe-item">
+    <span class="fw-bold text-light">Script Filters:</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>By default, the script is configured to search for Master Balls within 2000 advances, using the Cerulean Cave Pokeball table. If you are seeking a different item these filters can be adjusted accordingly.</p>
+
+    <ul>
+      <li>To modify the table, change line 16 to match the table you wish to use, possible table selections are written directly above line 16.</li>
+      <li>To modify the selected item, change line 41 to match the item you wish to filter for, the entered name must be exact.</li>
+      <li>To adjust the amount of frames the script will search through, modify the number in line 20, it is not recommended to increase this number.</li>
+    </ul>
+
+    <p>Examples of how to change each of the search filters can be found in Figure 4.</p>
+    
+  </div>
+</div><br>
+
+<p>After setting the script properly, navigate to the correct in-game location.</p>
+
+<span class="fw-bold">Figure 5 -</span> Location Setup<p></p>
+<a href="./images/item/location-setup.gif" target="_blank"><img src="./images/item/location-setup.gif" class="img-fluid"></a><br /><br />
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c5b74;" id="location-setup-lgpe-item">
+    <span class="fw-bold text-light">Location Setup:</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>In this example we are searching for a Master Ball in Cerulean Cave, in Figure 5 the player is stood next to a Pokeball Spawner in Cerulean Cave.</p>
+
+    <ul>
+      <li>A list of Cerulean Cave spots can be found here</li>
+      <li>A list of Game Corner spots can be found here</li>
+    </ul>
+
+    <p>After standing in the correct in-game position, double check the item spawner is as expected by saving progress, interacting with the item spot, then restarting the game (to respawn the item).</p>
+    
+  </div>
+</div><br>
+
+<span class="fw-bold">Figure 6 -</span> Searching For A Target<p></p>
+<a href="./images/item/searching-target-frames.gif" target="_blank"><img src="./images/item/searching-target-frames.gif" class="img-fluid"></a><br /><br />
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c5b74;" id="target-search-lgpe-item">
+    <span class="fw-bold text-light">Searching For A Target:</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>Your current seed can be monitored at any point using the EncBotRNGMonitorLGPE routine in SysBot.NET, if this guide was followed properly, you should already have the bot in the active bot.</p>
+
+    <h6><span class="fw-bold">Using SysBot.NET</span></h6>
+    <ul>
+      <li>Stand in the overworld in-game, then click the <code span class="fw-bold">Start All</code> button on SysBot.NET to run the EncBotRNGMonitorLGPE routine.</li>
+      <li>A seed will be produced inside the <code span class="fw-bold">Logs</code> tab, copy it if necessary.</li>
+      <li>Paste the seed into line 4, inside the <code span class="fw-bold">""</code>, then press the play button at the top of the window.</li>
+      <li>Results should now appear at the bottom of the main window, restart the game and repeat if the result is not desirable.</li>
+    </ul>
+
+    <blockquote>It is recommended to search for a cluster where possible, a cluster is multiple frames in a row that produce the same end result. This provides more opportunities to spawn the correct item.</blockquote>
+    
+  </div>
+</div><br>
+
+<span class="fw-bold">Figure 7 -</span> Target Found!<p></p>
+<a href="./images/item/target-found.png" target="_blank"><img src="./images/item/target-found.png" class="img-fluid"></a><br /><br />
+
+<p>A target has been found! A Master Ball on advances x-y, these are the exact advances that we will aim to interact with a spawner that contains our desired item on.</p>
+
+<hr /><div class="title" style="background-color: #0c5b74;">
+  <h1 class="text-light text-center pt-3 pb-3">Advancing Towards The Target</h1>
 </div><hr />
 
 
