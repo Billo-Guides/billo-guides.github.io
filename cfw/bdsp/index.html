@@ -117,10 +117,24 @@ permalink: /cfw/bdsp/
     <span class="fw-bold text-light">Moarencounterbots Overview:</span>
   </div>
   <div class="card-body card-bg">
-    <p>Pictured above is the window you are presented with upon launching <code span class="fw-bold">Moarencounterbots - SysBot.exe</code>. Moarencounterbots is used for monitoring RNG seeds and automating the main bulk of the RNG advancement process.</p>
+    <p>Pictured above is the window you are presented with upon launching <code span class="fw-bold">Moarencounterbots - SysBot.exe</code>. Moarencounterbots is used for monitoring RNG seeds and automating the main bulk of the RNG advancement process. By default the program is configured to work with the latest games (not BDSP), to change the mode, do the following:</p>
 
-    <p>To connect your console to SysBot.NET, find your console's local IP address by opening the Homebrew Menu and pressing the <code span class="fw-bold">Y Button</code>. Enter this IP address into the designated field. Use the drop-down menu on the right to select the correct bot type.</p>
-                                                                                                                                                                                                                                                              
+    <h6><span class="fw-bold">Initial Bot Configuration:</span></h6>
+    <ol>
+      <li>Open SysBot.exe at least once, then close it again to generate a file named <code span class="fw-bold">config.json</code>.</li>
+      <li>Open <code span class="fw-bold">config.json</code> in a text editor like Notepad.</li>
+      <li>Change the <code span class="fw-bold">mode</code> to 2 (this represents BDSP).</li>
+      <li>Save the changes then reboot the program, you should now see BDSP in the program header.</li>
+    </ol>
+
+    <h6><span class="fw-bold">Connectivity:</span></h6>
+    <ol>
+      <li>Open the homebrew menu on your console, then press the Y button.</li>
+      <li>Type the IP address written here into the assigned field on SysBot.NET.</li>
+      <li>Select any of the bots from the dropdown menu on the right of the SysBot window.</li>
+      <li>Add and start the bot to confirm that it functions properly (active and started bots should display a 🟩.</li>
+    </ol>
+                                                                                                                                                                                                                                                                  
     <h6><span class="fw-bold">Bot Types:</span></h6>
     <ol>
       <li><code span class="fw-bold">EncBotRNGMonitorBS</code> - Used to monitor your RNG seed in real time.</li>
