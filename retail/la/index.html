@@ -84,25 +84,25 @@ permalink: /retail/la/legendary
   <div class="card-body card-bg">
     <h6><span class="fw-bold">Downloads:</span></h6>
     <ol>
-      <li><a href="https://www.linqpad.net/">LINQPad</a>
+      <li><span class="fw-bold"><a href="https://www.linqpad.net/">LINQPad</a></span>
         <ul>
           <li>For running the scripts used throughout this guide, download the latest version and go through the setup instructions.</li>
         </ul>
       </li>
       
-      <li><a href="https://projectpokemon.org/home/files/file/2445-pkhex-development-build/">PKHeX Development Build</a>
+      <li><span class="fw-bold"><a href="https://projectpokemon.org/home/files/file/2445-pkhex-development-build/">PKHeX Development Build</a></span>
         <ul>
           <li>For PKHeX.Core.dll, a requirement for running the relevant RNG scripts. Download and extract <code span class="fw-bold">PKHeX.Core.dll</code> to a known location on your computer.</li>
         </ul>
       </li>
 
-      <li><a href="https://nuget.info/packages/Microsoft.Z3/">Libz3 & MicrosoftZ3</a>
+      <li><span class="fw-bold"><a href="https://nuget.info/packages/Microsoft.Z3/">Libz3 & MicrosoftZ3</a></span>
         <ul>
           <li>Other required dll files used for running the RNG scripts. Download and extract <code span class="fw-bold">Libz3.dll</code> & <code span class="fw-bold">Microsoftz3.dll</code> to the same location as <code span class="fw-bold">PKHeX.Core.dll</code> for easy access.</li>
         </ul>
       </li>
 
-      <li>Spawner RNG <a href="https://gist.github.com/Lusamine/950888ce3906d19b1bb654de7399743e">Calculator</a> & <a href="https://gist.github.com/Lusamine/1a7f9e4418b618daa75f7c9e9c2a9e91">Seed Solver</a> scripts
+      <li><span class="fw-bold">Spawner RNG <a href="https://gist.github.com/Lusamine/950888ce3906d19b1bb654de7399743e">Calculator</a> & <a href="https://gist.github.com/Lusamine/1a7f9e4418b618daa75f7c9e9c2a9e91">Seed Solver</a> scripts</span>
         <ul>
           <li>The raw scripts used for Spawner RNG, open both of these scripts inside a new browser tab. The calculator is used for predicting upcoming advancements, and the seed solver is used for finding a spawner seed on retail hardware.
         </ul>
@@ -117,9 +117,10 @@ permalink: /retail/la/legendary
 <span class="fw-bold">Figure 1 -</span> Spawner Calculation Script Setup<p></p>
 <a href="/retail/la/spawner/images/generator-script-initial-setup.gif" target="_blank"><img src="/retail/la/spawner/images/generator-script-initial-setup.gif" class="img-fluid"></a><br /><br />
 
-<div class="anchored card-header" style="background-color: #0c0038;" id="spawner-calc-script-setup">
-  <span class="fw-bold text-light">Spawner Calculation Script Setup:</span>
-</div>
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="spawner-calc-script-setup">
+    <span class="fw-bold text-light">Spawner Calculation Script Setup:</span>
+  </div>
 <div class="card-body card-bg">
   <p>Figure 1 displays what the <span class="fw-bold">Spawner Calculation Script</span> should look like after being configured correctly. To set up the script, follow these steps:</p>
 
@@ -141,9 +142,10 @@ permalink: /retail/la/legendary
 <span class="fw-bold">Figure 2 -</span> Spawner Seed Solver Script Setup<p></p>
 <a href="/retail/la/spawner/images/seed-solver-script-initial-setup.gif" target="_blank"><img src="/retail/la/spawner/images/seed-solver-script-initial-setup.gif" class="img-fluid"></a><br /><br />
 
-<div class="anchored card-header" style="background-color: #0c0038;" id="spawner-calc-script-setup">
-  <span class="fw-bold text-light">Spawner Seed Solver Script Setup:</span>
-</div>
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="spawner-calc-script-setup">
+    <span class="fw-bold text-light">Spawner Seed Solver Script Setup:</span>
+  </div>
 <div class="card-body card-bg">
   <p>Figure 2 displays what the <span class="fw-bold">Seed Solver Script</span> should look like after being configured correctly. To set up the script, follow these steps:</p>
 
@@ -181,35 +183,35 @@ permalink: /retail/la/legendary
   <h1 class="text-light text-center pt-3 pb-3">Seed Information</h1>
 </div><hr />
 
-  <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="finding-spawner-seed-retail">
-      <span class="fw-bold text-light">Finding Current Seed:</span>
-    </div>
-    <div class="card-body card-bg">
-      <p>To find your current seed you will need access to a SysBot. These bots are capable of dumping the <code class="fw-bold">.pa8</code> files required to use the seed solver script without needing to physically trade the Pokemon. Not saving gives the player the opportunity to reset the game if they are left with an undesirable seed.</p>
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="finding-spawner-seed-retail">
+    <span class="fw-bold text-light">Finding Current Seed:</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>To find your current seed you will need access to a SysBot. These bots are capable of dumping the <code class="fw-bold">.pa8</code> files required to use the seed solver script without needing to physically trade the Pokemon. Not saving gives the player the opportunity to reset the game if they are left with an undesirable seed.</p>
 
-      <p>Many free SysBots are hosted in community focused discord servers, these can be found with a quick google search. Make sure that the bot you are attempting to use is compatible with Legends: Arceus.</p>
+    <p>Many free SysBots are hosted in community focused discord servers, these can be found with a quick google search. Make sure that the bot you are attempting to use is compatible with Legends: Arceus.</p>
 
-      <h5><span class="fw-bold" id="finding-current-seed-using-sysbot">Using SysBot to find your current seed:</span></h5>
-      <ol>
-        <li>Open the game settings and disable autosave if you have not already done so.</li>
-        <li>Head into the map location of your desired Legendary, then manually save the game.</li>
-        <li>Capture the legendary, then return to Jubilife without saving the game.</li>
-        <li>Initiate a SysBot dump trade, then dump the Legendary Pokemon that you caught.</li>
-        <li>Reset the game, this time, KO the Pokemon instead of catching it.</li>
-        <li>Advance a single frame, then capture the next Legendary that spawns.</li>
-        <li>Initiate another SysBot trade, dump the Pokemon again and reset the game.</li>
-        <li>You should now have two sequencial pa8 files and be back in correct map location.</li>
-        <li>Put both of the dumped .pa8 files inside the <code class="fw-bold">pa8s</code> folder that was created earlier.</li>
-        <li>Run the Seed Solver script until a seed is produced.</li>
-      </ol>
+    <h5><span class="fw-bold" id="finding-current-seed-using-sysbot">Using SysBot to find your current seed:</span></h5>
+    <ol>
+      <li>Open the game settings and disable autosave if you have not already done so.</li>
+      <li>Head into the map location of your desired Legendary, then manually save the game.</li>
+      <li>Capture the legendary, then return to Jubilife without saving the game.</li>
+      <li>Initiate a SysBot dump trade, then dump the Legendary Pokemon that you caught.</li>
+      <li>Reset the game, this time, KO the Pokemon instead of catching it.</li>
+      <li>Advance a single frame, then capture the next Legendary that spawns.</li>
+      <li>Initiate another SysBot trade, dump the Pokemon again and reset the game.</li>
+      <li>You should now have two sequencial pa8 files and be back in correct map location.</li>
+      <li>Put both of the dumped .pa8 files inside the <code class="fw-bold">pa8s</code> folder that was created earlier.</li>
+      <li>Run the Seed Solver script until a seed is produced.</li>
+    </ol>
       
-      </div>
-    </div><br>
+  </div>
+</div><br>
 
-  <p>You can now paste your seed over the placeholder seed found in the Spawner RNG Calculation script, if your result seed is not desirable, repeat the above process from step 1. If you are uncertain how to advance the spawner seed (as per step 6), continue reading below.</p>
+<p>You can now paste your seed over the placeholder seed found in the Spawner RNG Calculation script, if your result seed is not desirable, repeat the above process from step 1. If you are uncertain how to advance the spawner seed (as per step 6), continue reading below.</p>
 
-  <div class="card border-dark">
+<div class="card border-dark">
   <div class="anchored card-header" style="background-color: #0c0038;" id="advancing-to-target-spawner">
     <span class="fw-bold text-light">Frame Advancements:</span>
   </div>
