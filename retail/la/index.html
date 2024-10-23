@@ -182,33 +182,34 @@ permalink: /retail/la/legendary
   <h1 class="text-light text-center pt-3 pb-3">Seed Information</h1>
 </div><hr />
 
+<p>This section covers information about finding and advancing the spawner seed. Ensure that autosave is disabled in the game settings before continuing, not saving lets you reset the game if the seed turns out to be undesirable. From here onwards it is assumed that autosave has been disabled.</p>
+
 <div class="card border-dark">
   <div class="anchored card-header" style="background-color: #0c0038;" id="finding-spawner-seed-retail">
-    <span class="fw-bold text-light">Finding Current Seed:</span>
+    <span class="fw-bold text-light">Finding A Spawner Seed:</span>
   </div>
   <div class="card-body card-bg">
-    <p>To find your current seed you will need access to a SysBot. These bots are capable of dumping the <code class="fw-bold">.pa8</code> files required to use the seed solver script without needing to physically trade the Pokemon. Not saving gives the player the opportunity to reset the game if they are left with an undesirable seed.</p>
+    <p>To find your spawner seed, you’ll need access to a SysBot. These bots can dump the <code class="fw-bold">.pa8</code> files needed for seed solving without requiring a physical trade, as trading will force a game save.</p>
 
-    <p>Many free SysBots are hosted in community focused discord servers, these can be found with a quick google search. Make sure that the bot you are attempting to use is compatible with Legends: Arceus.</p>
-
+    <p>Many free SysBots are available in community Discord servers—search online to find one compatible with Legends: Arceus.</p>
+    
     <h6><span class="fw-bold" id="finding-current-seed-using-sysbot">Using SysBot:</span></h6>
     <ol>
-      <li>Open the game settings and disable autosave if you have not already done so.</li>
-      <li>Head into the map location of your desired Legendary, then manually save the game.</li>
-      <li>Capture the legendary, then return to Jubilife without saving the game.</li>
-      <li>Initiate a SysBot dump trade, then dump the Legendary Pokemon that you caught.</li>
-      <li>Reset the game, this time, KO the Pokemon instead of catching it.</li>
-      <li>Advance a single frame, then capture the next Legendary that spawns.</li>
-      <li>Initiate another SysBot trade, dump the Pokemon again and reset the game.</li>
-      <li>You should now have two sequencial pa8 files and be back in correct map location.</li>
-      <li>Put both of the dumped .pa8 files inside the <code class="fw-bold">pa8s</code> folder that was created earlier.</li>
-      <li>Run the Seed Solver script until a seed is produced.</li>
+      <li>Go to the map location of your desired Legendary and manually save.</li>
+      <li>Capture the Pokemon, then return to Jubilife and head to the trade post.</li>
+      <li>Initiate a dump trade with the SysBot, then show it the captured Pokemon.</li>
+      <li>Reset the game, KO the Legendary this time, and advance the spawner seed once.</li>
+      <li>Capture the next Legendary spawn, perform another SysBot dump, and reset again.</li>
+      <li>Download the two <code class="fw-bold">.pa8</code> files provided by the bot (found in private messages).</li>
+      <li>Now you should have two sequential <code class="fw-bold">.pa8</code> files and be back at the correct map location.</li>  
     </ol>
+
+    <p>Place both .pa8 files in the previously created pa8s folder and run the Seed Solver script to generate a seed, this seed can then be pasted into the Spawner Calculation script to search for upcoming target frames.</p>
       
   </div>
 </div><br>
 
-<p>You can now paste your seed over the placeholder seed found in the Spawner RNG Calculation script, if your result seed is not desirable, repeat the above process from step 1. If you are uncertain how to advance the spawner seed (as per step 6), continue reading below.</p>
+<p>If you are unsure how to advance the spawner seed (as per Step 4), continue reading the section below.</p>
 
 <div class="card border-dark">
   <div class="anchored card-header" style="background-color: #0c0038;" id="advancing-to-target-spawner">
@@ -261,12 +262,10 @@ permalink: /retail/la/legendary
     </div>
   </div><br>
 
-  <p>You should now have a general understanding of how to use each of the scripts, have access to a SysBot and understand how to use it to dump <code class="fw-bold">.pa8</code> files, and how to advance the spawner seed of your desired Pokemon.</p>
-
-  <p>If further assistance is required, click on the button below to be directed to the next page which contains a worked example of the entire process from start to finish.</p>
+  <p>You should now have a general understanding of how to use each of the scripts, have access to a SysBot and understand how to use it to dump <code class="fw-bold">.pa8</code> files, and know how to advance the spawner seed of your desired Pokemon.</p>
 
   <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/la/legendary/spawner-rng/worked-example">
-    <span class="fw-bold">Getting Started</span>!
+    Want to follow a worked example? <span class="fw-bold">Click here</span>!
     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
     </svg>
