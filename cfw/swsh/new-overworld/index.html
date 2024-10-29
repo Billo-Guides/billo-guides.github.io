@@ -1,0 +1,284 @@
+---
+layout: default
+title: SwSh Overworld RNG (CFW)
+permalink: /cfw/swsh/new-overworld
+---
+
+<style>
+  mark {
+    background-color: #FFD700;
+    color: black;
+  }
+
+  .card-bg {
+    background-color: #d1d1d1;
+    border-bottom-right-radius: 0.20rem !important;
+    border-bottom-left-radius: 0.20rem !important;
+  }
+
+  table,
+  th,
+  td {
+    border: 1px solid black;
+  }
+
+  blockquote {
+  background: #c5c5c5;
+  border: 1px solid #9e9e9e;
+  border-left: 5px solid #0c0038;
+  margin: 1.5em 2px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  }
+</style>
+    
+<div class="title" style="background-color: #0c0038;">
+  <h1 class="text-light text-center pt-3 pb-3">Overworld RNG Guide (CFW)</h1>
+</div><hr />
+
+<p>This guide provides in-depth coverage of how to use the Sword/Shield RNG tool, developed by <a href="https://github.com/LegoFigure11">LegoFigure11</a>. Overworld RNG abuse can be used to manipulate the internal details of wild encounters, such as the IVs, Nature, Gender, Size, Marks, Shiny status and more.</p>
+
+<p><span class="fw-bold" style="color: #b60606;">From here it is assumed you are using a CFW Switch console running <a href="https://github.com/Atmosphere-NX/Atmosphere/releases">Atmosphere</a>.</span></p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/overworld">
+  Don't have CFW installed? <span class="fw-bold">Click here for the retail focused guide!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a><br>
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="setup-and-install-swsh-cfw">
+    <span class="fw-bold text-light">Setup Instructions:</span>
+  </div>
+  <div class="card-body card-bg">
+    <h5><span class="fw-bold">You will need:</span></h5>
+    <ul>
+      <li><a href="https://github.com/LegoFigure11/swsh-overworld-rng-gui/releases">Sword/Shield RNG Tool (owoow)</a></li>
+      <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.403-windows-x64-installer">.NET 8.0</a></li>
+      <li><a href="https://github.com/Lusamine/ldn_mitm/releases/latest">ldn-mitm</a></li>
+    </ul>
+
+      <h6><span class="fw-bold">Installation Instructions:</span></h6>
+      <ol>
+        <li>Download and extract <code span class="fw-bold">owoow.zip</code> into an empty folder in a known location on your computer.</li>
+        <li>Run the .NET 8.0 installer and go through the instructions given by the setup wizard, then confirm the RNG tool launches properly.</li>
+        <li>Download and extract <code span class="fw-bold">ldn-mitm.zip</code> into the same folder from earlier, if done correctly the <code span class="fw-bold">atmosphere</code> folder will merge automatically.</li>
+        <li>Open the <code span class="fw-bold">atmosphere</code> folder and confirm that there are two numbered folders inside <code span class="fw-bold">atmosphere/contents/</code> (sys-botbase and ldn-mitm).</li>
+        <li>Move the <code span class="fw-bold">atmosphere</code> folder to the root of your Switch SD card, then reboot the console into SysCFW.</li>
+      </ol>
+
+      <h6><span class="fw-bold">Program Connectivity Instructions:</span></h6>
+      <ol>
+        <li>Launch <code span class="fw-bold">owoow.exe</code>, then type the local IP address of the console into the <code span class="fw-bold">Switch IP:</code> field.</li>
+        <li>Head to the overworld in-game, then click the <code span class="fw-bold">Connect</code> button, if done correctly the program will begin reading the details of your save file.</li>
+        <li>If the seed fields (located on the upper left) have been populated, setup has been done correctly and you can continue following the guide.</li>
+      </ol>
+
+      <blockquote>If you are having issues when connecting to the program, ensure that sys-botbase and ldn-mitm have been properly installed, the console has been restarted and is using SysCFW, and that your console and PC are connected to the same network.</blockquote>
+
+  </div>
+</div><br>
+
+<hr /><div class="title" style="background-color: #0c0038;">
+  <h1 class="text-light text-center pt-3 pb-3">Tool Setup & Usage</h1>
+</div><hr />
+
+<p>This section will cover the essential details you need to know in order to use the RNG tool effectively. If you do not yet have a complete understanding of how each of the tabs, follow along with this section for relevant information & usage tips.</p>
+
+<span class="fw-bold">Figure 1 -</span> Main window<p></p>
+<a href="overworld/images/main-page/owoow-overview.gif" target="_blank"><img src="overworld/images/main-page/owoow-overview.gif.gif" class="img-fluid"></a><br /><br />
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="owoow-overview">
+    <span class="fw-bold text-light">RNG Tool Overview:</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>Upon launching the RNG tool (owoow) for the first time, you should see something similar to the above image. This tool calculates the details of upcoming Pokemon, then outputs the results in the table at the bottom, based on your search parameters.</p>
+
+    <h6><span class="fw-bold">Feature Overview:</span></h6>
+    <ul>
+      <li><span class="fw-bold">Left Side -</span> Provides seed information, connectivity features, and save file details.</li>
+      <li><span class="fw-bold">Center -</span> Select encounter details, calibrate NPC count, and enter search range.</li>
+      <li><span class="fw-bold">Right Side -</span> Input search criteria, automate RNG state advancements, and read encounter details.</li>
+    </ul>
+
+    <hr />
+
+    <h6><span class="fw-bold">RNG Seed Monitoring:</span></h6>
+    <p>This program allows real-time monitoring of your current RNG seed, automatically tracking the number of advancements that have occured since the console was connected. This creates a seamless experience for tracking seed changes.</p>
+
+    <p>In the <code class="fw-bold">Adv:</code> field, the first box shows the total advancements since connecting, while the second box displays advancements over the last ~500ms, which is useful for tracking how many advancements are consumed from performing specific in-game actions.</p>
+
+    <p>Upon connecting to the program, your 5 digit trainer IDs and Shiny/Mark Charm will be auto-filled, you do not need to tweak these values.</p>
+
+    <hr />
+
+    <h6><span class="fw-bold">Encounter Details:</span></h6>
+    <p>You can use the <code class="fw-bold">Encounter Lookup</code> button to open a sub-window, here, you can search for all the encounters in the entire game for each specific species. Simply type the name of your desired Pokemon and scroll through the table.</p>
+
+    <p>Before selecting an encounter, it is important to understand the differences of each of the four encounter types. Information and examples for each encounter type can be found in the table below.</p>
+
+    <p>After evaluating the table, pick an encounter that matches your skill level, then take note of the location and weather condition it can be found in. Avoid encounters in rain or thunderstorm where possible as these weather conditions create a lot of instability.</p>
+  </div>
+</div><br>
+
+<table class="table table-striped" style="width:100%">
+  <thead class="table text-white" style="background-color: #0c0038;">
+      <th scope="col" style="width:25%" class="text-center">Encounter</th>
+      <th scope="col" class="text-center">Description</th>
+      <th scope="col" class="text-center">Difficulty</th>
+   </tr>
+       </thead>
+       <tbody id="results">
+   <tr>
+      <td><span class="fw-bold">Static</span></td>
+      <td>100% chance encounter spawns that have an overworld model, does not stand in grass (includes the roaming legendary bird trio).<p></p>
+      <a href="/images/main-page/staticencounter.jpg">Example</a></td>
+      <td><span class="fw-bold" style="color: #018d18;">Beginner</span></td>
+   </tr>
+   <tr>
+     <td><span class="fw-bold">Symbol</span></td>
+     <td>Chance encounters in grass or water with an overworld mode, can have Brilliant Aura for boosted IVs/Shiny odds.<p></p>
+     <a href="/images/main-page/symbolencounter.jpg">Example</a></td>
+     <td><span class="fw-bold" style="color: #018d18;">Beginner</span></td>
+   </tr>
+   <tr>
+     <td><span class="fw-bold">Hidden</span></td>
+     <td>Chance encounters in grass that do not have an overworld model, these encounters are indicated by the "!" symbol when walking into grass.<p></p>
+     <a href="/images/main-page/hiddenencounter.jpg">Example</a></td>
+     <td><span class="fw-bold" style="color: #b60606;">Advanced</span></td>
+   </tr>
+   <tr>
+     <td><span class="fw-bold">Fishing</span></td>
+     <td>Chance encounters in the water that do not have an overworld model, indicated by rippling water and a fishing rod is required to encounter them, can have Brilliant Aura for boosted IVs/Shiny odds.<p></p>
+     <a href="/images/main-page/fishingencounter.jpg">Example</a></td>
+     <td><span class="fw-bold" style="color: #a89e07;">Experienced</span></td>
+    </tr>
+     </tbody>
+</table>
+
+<hr /><div class="title" style="background-color: #0c0038;">
+  <h1 class="text-light text-center pt-3 pb-3">Advancing The RNG State</h1>
+</div><hr />
+
+<p>The RNG state will naturally advance based on your location, the weather, and the presence of spawned Pokémon & NPCs. Ideally, you should target a Pokémon in an area where the RNG state advances slowly. However, in some cases you may be forced into unstable conditions depending on the type of encounter you are hunting.</p>
+
+<p>In-game actions can also be used to advance the RNG state with varying influence, the most useful actions can be found in the table below.</p>
+
+<table class="table table-striped" style="width:100%">
+  <thead class="table text-white" style="background-color: #0c0038;" id="advancement-table-cfw">
+      <th scope="col" class="text-center">Type of action</th>
+      <th scope="col" class="text-center">Description of action</th>
+      <th scope="col" class="text-center">Adv. influence</th>
+   </tr>
+       </thead>
+       <tbody id="results">
+   <tr>
+      <td><span class="fw-bold">Player Movement</span></td>
+      <td>Moving the control stick, then letting it fall back into it's resting state (includes whistle & bike bell).<p></p></td>
+      <td>1-3 Advancements per input.</td>
+  </tr>
+  <tr>
+     <td><span class="fw-bold">Rotom Bike</span></td>
+     <td>Mounting and dismounting the bike with the <code span class="fw-bold">+</code> button.<p></p></td>
+     <td>Variable depending on location and environment.</td>     
+  </tr>
+  <tr>
+     <td><span class="fw-bold">Menu Close</span></td>
+     <td>Opening and closing the pause menu using the <code span class="fw-bold">X</code> button.<p></p></td>
+     <td>Variable depending on location and environment, predictable.</td>     
+ </tr>
+<tr>
+     <td><span class="fw-bold">NPC Activation</span></td>
+     <td>Standing close to an an NPC to make them notice the player. Used to cover short distances quickly.<p></p></td>
+     <td>~2500 advancements per minute.</td>     
+</tr>
+<tr>
+     <td><span class="fw-bold">Town Map</span></td>
+     <td>Opening the map and flying into an area. This is only used for roaming encounters.<p></p></td>
+     <td>Can be influenced by the amount of Pokémon in your party.</td>     
+</tr>
+ <tr>
+     <td><span class="fw-bold">Animations/Motions</span></td>
+     <td>Pressing the <code span class="fw-bold">L3</code> button on the party menu or summary screen, or by using the <code span class="fw-bold">Skip</code> feature to make your Pokémon perform an action.<p></p></td>
+     <td>+1 <u>per animation</u> on the summary screen. <br>+1 <u>per input</u> on the party menu.</td>     
+</tr>
+<tr>
+     <td><span class="fw-bold">Date Skipping</span></td>
+     <td>Using the <code span class="fw-bold">Skip</code> feature of the RNG tool to advance towards targets, this is the quickest way to advance frames.<p></p></td> 
+     <td>Variable influence based on the amount of Pokémon stored inside boxes, up to 15,000~ per day skipped.</td>     
+</tr>
+</tbody>
+</table>
+
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c0038;" id="automating-advancements">
+    <span class="fw-bold text-light">Advancement Automation:</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>The program is capable of automating RNG advancements to an extent, date skipping can be automated for large distance advancements, and animation advancements can be automated for advancing a single frame at a time.</p>
+
+    <h6><span class="fw-bold">Date Skipping:</span></h6>
+    <p>Date-skipping is the fastest way to advance the RNG state in Sword/Shield, it is possible to advance upwards of 15,000 frames per day skipped. The amount of frames skipped by date skipping depends on the amount of Pokemon currently stored in box slots (not including eggs).</p>
+
+    <p>To automate the date-skipping process, simply type the amount of days you wish to skip into the empty field on the far right, then click the <code span class="fw-bold">Skip</code> button when standing in the overworld in-game. If done correctly you should notice that the RNG state has started to advance rapidly. After completing date skipping, you can use the <code span class="fw-bold">NTP</code> button to re-sync the system date according to the internet.</p>
+
+    <p>Take note of the amount of advancements that occur per day skipped, this will give you a rough idea of how many days need to be skipped in order to be close enough to your target frame. <code span class="fw-bold">Advancements per day / target frame = amount of days to skip</code>.</p>
+
+    <blockquote>Avoid standing in any of the Wild Areas when automating date-skipping as this may cause the game to crash. It is recommended to date skip inside an in-door location, like a PokeCenter.</blockquote>
+
+    <hr />
+
+    <h6><span class="fw-bold">Animations:</span></h6>
+    <p>When closing in on a target frame, you may wish to automate animation advancements instead of doing these manually. The process to do this is the same as date-skipping, simply type the number of animations you wish to automate, then press the <code span class="fw-bold">Adv.</code> button when on the party summary screen. If done correctly you should notice the RNG state advancing one-by-one automatically.</p>
+
+    <blockquote>If you are using joy-cons, ensure that they are attached to the console before attempting to automate animation advancements, if you are using the pro controller, ensure that it is fully disconnected. This is a requirement to using this feature.</blockquote>
+
+  </div>
+</div>
+
+<hr /><div class="title" style="background-color: #0c0038;">
+  <h1 class="text-light text-center pt-3 pb-3">Picking An Encounter Type</h1>
+</div><hr />
+
+<p>You should now have a basic understanding of how to use the RNG tool and each of it's features. Use the encounter lookup feature to pick your chosen encounter type, then click the button that applies to you to get started.</p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/new-overworld/static">
+  <span class="fw-bold">STATIC ENCOUNTER!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a>
+<br>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/new-overworld/symbol">
+  <span class="fw-bold">SYMBOL ENCOUNTER!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a>
+<br>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/new-overworld/hidden">
+ <span class="fw-bold">HIDDEN ENCOUNTER!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a>
+<br>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/new-overworld/fishing">
+  <span class="fw-bold">FISHING ENCOUNTER!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a>
+<br>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/new-overworld/galar-bird-trio">
+  <span class="fw-bold">ROAMING LEGENDARY ENCOUNTER!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a>
