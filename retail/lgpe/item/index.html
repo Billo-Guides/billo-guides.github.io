@@ -36,213 +36,148 @@ permalink: /retail/lgpe/item
   <h1 class="text-light text-center pt-3 pb-3">Hidden Item RNG (LGPE)</h1>
 </div><hr />
 
-<p>This guide provides coverage on how to RNG manipulate valuable items in Let's Go Pikachu & Eevee's Cerulean Cave and Celadon City Game Corner. This most useful application of this type of RNG is for farming Master Balls (Cerulean Cave), PP Max & Bottle Caps (Game Corner). The tools and scripts used throughout this guide were created by <a href="https://github.com/Lusamine">Lusamine</a>.</p>
+<p>This guide provides coverage on how to RNG manipulate valuable items in Let's Go Pikachu & Eevee's Cerulean Cave and Celadon City Game Corner. This most useful application of this type of RNG is for farming Master Balls (Cerulean Cave), PP Max & Bottle Caps (Game Corner). The LGPE Item RNG Tool used throughout this guide was created by <a href="https://github.com/Lincoln-LM/lgpe-item-rng-tool">Lincoln-LM</a>, this tool was created based on initial research from <a href="https://x.com/e52301147">e52301147</a>, <a href="https://x.com/Sibuna_Switch">Anubis</a> & <a href="https://x.com/lincolnlm_">Lincoln</a>.</p>
 
-<p><span class="fw-bold" style="color: #b60606;">From here it is assumed you are using a CFW Switch console running <a href="https://github.com/Atmosphere-NX/Atmosphere/releases">Atmosphere</a>.</span></p>
+<p><span class="fw-bold" style="color: #b60606;">From here you are using an unmodified Switch console running stock firmware.</span></p>
 
 <div class="card border-dark">
   <div class="anchored card-header" style="background-color: #0c5b74;" id="tool-requirements-lgpe-item">
     <span class="fw-bold text-light">You Will Need:</span>
  </div>
   <div class="card-body card-bg">
-    <h6><span class="fw-bold">Tools & Scripts:</span></h6>
     <ul>
-      <li><a href="https://www.linqpad.net/Download.aspx">LINQPad 8</a></li>
-      <li><a href="https://gist.github.com/Lusamine/f69f3861f5f4af5353b78526f3e6af82">LGPE Hidden Floor Item Script</a></li>
-      <li><a href="https://projectpokemon.org/home/files/file/2445-pkhex-development-build/">PKHeX Development Build</a> (For PKHeX.Core.dll)</li>
-      <li><a href="">LGPE Seed Solver</a></li>
+      <li><a href="https://nightly.link/Lincoln-LM/lgpe-item-rng-tool/workflows/main/main?preview">LGPE Item RNG Tool</a></li>
     </ul>
 
-    <h6><span class="fw-bold">Installation instructions:</span></h6>
-    <ul>
-      <li>Download and install LINQPad 8, then create a desktop shortcut or find the location it has been installed to.</li>
-      <li>Open the LGPE Hidden Floor Item Script in your browser, specific setup instructions are covered below.</li>
-      <li>Download the LGPE seed solver, then extract cotents to a known location on your computer.</li>
-      <li>Download the PKHeX Development Build, then extract <code span class="fw-bold">PKHeX.Core.dll</code> into a known location on your computer.</li>
-     </ul>
-
-    <blockquote>PKHeX.Core.dll is a required dependency for the LGPE Hidden Floor Item LINQPad Script, it does not function properly without it.</blockquote>
+    <blockquote>Download and extract the LGPE Item RNG Tool to a known location on your computer. After a few moments, the GUI should open properly.</blockquote>
   </div>
 </div><br>
-
-<div class="card border-dark">
-   <div class="anchored card-header" style="background-color: #0c5b74;" id="game-requirements-lgpe-item">
-     <span class="fw-bold text-light">In-game Requirements</span>
-   </div>
-   <div class="card-body card-bg">
-     <p>It is recommended to complete this list of in-game requirements before starting the guide to save time later on:</p>
-
-     <ul>
-       <li>Captured 128 Venomoth (used for seed identification).</li>
-       <li>Access to Cerulean Cave and/or Celadon Game Corner.</li>
-       <li>TM 05 (Rest) taught to partner Pikachu or Eevee.</li>
-       <li>Spare Repels to use in Cerulean Cave.</li>
-     </ul>
-
-     <details>
-       <summary><span class="fw-bold">Why do I need to capture 128 Venomoth?</span></summary>
-       <p>The method of finding your current seed involves transferring 128 Pokemon, no easier or less time consuming method has been found at this point in time.</p>
-         
-       <p>Save the game after capturing the required 128 Pokemon so you can reset as a failsafe.</p>
-
-       <blockquote>Ivysaur, Venusaur, Charmeleon, Wartortle, Butterfree, Beedrill, Ninetales, Parasect, Venomoth, Muk, Seadra & Tauros can also be used for seed identification, but Venomoth is recommended due to higher spawn rates.</blockquote>
-     </details>
-
-    </div>
-  </div><br>
 
 <hr /><div class="title" style="background-color: #0c5b74;">
-  <h1 class="text-light text-center pt-3 pb-3">Configurations & Setup</h1>
+  <h1 class="text-light text-center pt-3 pb-3">Getting Started</h1>
 </div><hr />
 
-<p>Agter completing the installation and game setup instructions, you will need to use LINQPad to configure the RNG scripts.</p>
+<p>After downloading the LGPE Item RNG Tool and checking that the program works as intended, ensure that you meet the in-game requirements found in the box below.</p>
   
-<span class="fw-bold">Figure 1 -</span> Script Configuration<p></p>
-<a href="./images/item/script-config.gif" target="_blank"><img src="./images/item/script-config.gif" class="img-fluid"></a><br /><br />
+<span class="fw-bold">Figure 1 -</span> In-Game Setup:<p></p>
+<a href="./images/item/seed-identification.gif" target="_blank"><img src="./images/item/seed-identification.gif" class="img-fluid"></a><br /><br />
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c5b74;" id="linqpad-script-setup-lgpe-item">
-    <span class="fw-bold text-light">LINQPad Script Setup:</span>
+  <div class="anchored card-header" style="background-color: #0c5b74;" id="in-game-requirements-lgpe-item">
+    <span class="fw-bold text-light">In-Game Setup</span>
   </div>
   <div class="card-body card-bg">
-    <p>Upon launching LINQPad, you should see something similar to the above image. The links at the top of this page displays links for the scripts used in this guide, they can all be configured the same way.</p>
-      
-    <h6><span class="fw-bold">Initial Script Setup</span></h6>
-    <ul>
-      <li>Change the Language (found at the top of the window) to <code span class="fw-bold">C# program</code>, delete any existing code that appears from doing so.</li>
-      <li>Copy the LGPE Hidden Floor Item Calculator script directly into the main window, then press F4 to open the <code span class="fw-bold">Query Properties</code> sub-window.</li>
-      <li>In the <code span class="fw-bold">Additional References</code> tab, click the <code span class="fw-bold">Add/Browse</code> button and select <code span class="fw-bold">PKHeX.Core.dll</code> (downloaded earlier).</li>
-      <li>Open the <code span class="fw-bold">Namespace Imports</code> tab then type <code span class="fw-bold">PKHeX.Core</code>.</li>
-      <li>Click the <code span class="fw-bold">OK</code> button at the bottom left of the sub-window to confirm these changes.</li>
-      <li>Run the script, you should see that an output has been produced at the bottom of the main window if setup was done correctly.</li>
-      <li>Repeat this process for all the scripts individually and confirm that they are all functioning as intended.</li>
-    </ul>
-
-    <blockquote>Ensure that the script is being ran as a <code span class="fw-bold">C# Program</code>, this is visible in the top bar of the main window. Use Figure 1 as a reference point if you are struggling with leveraging PKHeX.Core.dll.</blockquote>
-  </div>
-</div><br>
-
-<p>After making sure the script works as intended, it is recommended to become familiar with how they work, such as modifying search filters and item tables in the Floor Item Prediction Script.</p>
-
-<span class="fw-bold">Figure 2 -</span> Script Filters<p></p>
-<a href="./images/item/script-filters.gif" target="_blank"><img src="./images/item/script-filters.gif" class="img-fluid"></a><br /><br />
-
-<div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c5b74;" id="script-filters-lgpe-item">
-    <span class="fw-bold text-light">Floor Item Prediction Script Filters:</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>By default the LGPE Hidden Floor Item script is configured to search for Master Balls within 2000 advances, using the Cerulean Cave Pokeball table. If you are seeking a different item these filters can be by doing the following:</p>
-
-    <ul>
-      <li>To modify the table, change line 16 to match the table you wish to use, possible table selections are written directly above line 16.</li>
-      <li>To modify the selected item, change line 41 to match the item you wish to filter for, the entered name must be exact.</li>
-      <li>To adjust the amount of frames the script will search through, modify the number in line 20, it is not recommended to increase this number.</li>
-    </ul>
-
-    <p>Examples of how to change each of the search filters can be found in Figure 4.</p>
-    
-  </div>
-</div><br>
-
-<p>You should now have the script properly setup and have a general understanding of usage (such as applying search filters). Next, you will need to ensure that the item you plan to manipulate able to be picked up.</p>
-
-<span class="fw-bold">Figure 3 -</span> Game Setup<p></p>
-<a href="./images/item/game-setup.gif" target="_blank"><img src="./images/item/game-setup.gif" class="img-fluid"></a><br /><br />
-  
-<div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c5b74;" id="game-setup-lgpe-item">
-    <span class="fw-bold text-light">Game Setup:</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>The item given from interacting with a hidden item spot is determined on the frame it was picked up. For this reason your item needs to be spawned and able to be picked up before doing anything else. In this example we will be searching for a Master Ball in Cerulean Cave.</p>
-
-    <h6><span class="fw-bold">Item Confirmation</span></h6>
-    <p>Pikachu/Eevee will perform a tail wagging animation if the player is stood next to a hidden item, this animation is especially useful when respawning items in Cerulean Cave as the respawn is not guaranteed.</p>
-
-    <p>Stand next to your desired item spawner and confirm that an item is present by observing the tail of your partner Pokemon, once this has been confirmed, save the game.</p>
-
-    <ul>
-      <li>In Cerulean Cave, spawners are assigned to drop specific items, and the pool will never change (a Pokeball spawner will always drop Pokeballs, for example).</li>
-      <li>In the Game Corner, the berries will vary between spawners but the rare items can be found using any of the 6 hidden item spawn spots.</li>
-    </ul>
-
-    <p>Drop rates & Locations for Game Corner & Cerulean Cave item spawners can be found <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRrQhgQKyozIKZsDuoOzdt5anD_oRU3FNDmVZxbukG1VdgiKHdafvJuJsaydy0feiZZa0_i4WTkWSTn/pubhtml#">in this google sheet</a>. If you have already collected the items, see below for item respawn mechanics.</p>
-
-    <h6><span class="fw-bold">Respawn Mechanics</span></h6>
-    <p>The conditions to respawn collected items is different depending on location. For Cerulean Cave, items have a chance of spawning every time the player walks 256 steps. In the game corner, the items are respawned each time a day has passed.</p>
-
-    <p>To trick the game into believing that a day has passed naturally (which will respawn the items in the Game Corner immediately if yours are despawned), you will need to follow these steps:</p>
+    <h6><span class="fw-bold">You Will Need:</span></h6>
 
     <ol>
-      <li>Open the pause menu and click <code span class="fw-bold">Communicate</code>.</li>
-      <li>Select the <code span class="fw-bold">Play with others</code> option.</li>
-      <li>Select <code span class="fw-bold">Nearby Player</code>, then <code span class="fw-bold">Link Trade</code>.</li>
-      <li>Enter any link code, then search for a trade.</li>
-      <li>Press the home button and navigate to <code span class="fw-bold">System Settings</code>.</li>
-      <li>Change the system date forward by one day, this will respawn the items.</li>
+      <li><span class="fw-bold">Access to Cerulean Cave or the Celadon City Game Corner.</span></li>
+      <ul>
+        <li>Cerulean Cave for Master Balls, Game Corner for Bottle Caps and PP Maxes.</li>
+      </ul><p></p>
+
+      <li><span class="fw-bold">TM 05 (Rest) Taught to Partner Pikachu or Eevee.</span></li>
+      <ul>
+        <li>Used for seed identification, teach rest to Pikachu or Eevee then put it to sleep by entering a battle and using Rest. Switch the Pokemon out and complete the battle after sleep status has been inflicted.</li>
+      </ul><p></p>
+
+      <li><span class="fw-bold">Spare Repels to use in Cerulean Cave.</span></li>
+      <ul>
+        <li>Wild Pokemon spawning produces unwanted and unpredictable advancements, if you plan to RNG manipulate Master Balls, ensure that you have plenty of repels.</li>
+      </ul><p></p>
+
+      <li><span class="fw-bold">Navigate to the correct location and save, then reset the game.</span></li>
+      <ul>
+        <li>Seed identification is best done by starting from a freshly reset game on a brand new day, ensure the game is saved and reset after following all the other setup instructions.</li>
+      </ul><p></p>
     </ol>
-    
+
+    <blockquote>Each time the clock passes to 00:00, you will need to repeat step 4. Not doing so will result in being unable to identify your current seed using the recommended method.</blockquote>
+
   </div>
 </div><br>
 
-<p><span class="fw-bold">Great! At this stage everything has been setup properly, you can now begin the RNG manipulation process.</span></p>
-
-<hr /><div class="title" style="background-color: #0c5b74;">
-  <h1 class="text-light text-center pt-3 pb-3">The Process</h1>
-</div><hr />
-
-<p>To manipulate a desired result, you will first need to understand how to calculate, identify and advance your current seed.</p>
-
-<span class="fw-bold">Figure 4 -</span> Seed Identification<p></p>
+<span class="fw-bold">Figure 2 -</span> Seed Identification<p></p>
 <a href="./images/item/seed-identification.gif" target="_blank"><img src="./images/item/seed-identification.gif" class="img-fluid"></a><br /><br />
-  
+
 <div class="card border-dark">
-  <div class="card-header" style="background-color: #0c5b74;" id="seed-identification-lgpe-item">
+  <div class="anchored card-header" style="background-color: #0c5b74;" id="seed-identification-methods-lgpe-item">
     <span class="fw-bold text-light">Seed Identification</span>
   </div>
   <div class="card-body card-bg">
-    <p>To find your current seed, you will need to use the -filler- (pictured above) to record 128 actions in a row, doing so will produce a seed that can be pasted directly into the LINQPad script to search for results.</p>
+    <p>The above image displays the LGPE Item RNG tool, to find your current seed, you will need to use the <code span class="fw-bold">Seed Finding</code> tab. Finding your seed can be done one of two ways:</p>
 
-    <h6><span class="fw-bold">Step-by-step Instructions:</span></h6>
+    <ol>
+      <li><span class="fw-bold">Observing "sleep messages".</span></li>
+      <ul>
+        <li>With your partner Pokemon asleep, pause the game and select "Play with Pikachu" or "Play with Eevee" depending on the game you are playing, and observe sleep messages.</li>
+      </ul><p></p>
 
-    <blockquote>Keep the game paused, or identify your seed in an area where there are no wild Pokemon, such as a city/town/in-door location, to avoid unwanted advancements after identification.</blockquote>
+      <li><span class="fw-bold">Observing the candy obtained from transferring Pokemon.</span></li>
+      <ul>
+        <li>Transfer 128 Venomoth one-by-one to Professor Oak and observe the candies given. Venomoth is currently the only Pokemon supported by the RNG Tool, due to being the most common Pokemon that works for seed identification.</li>
+      </ul>
+    </ol><hr />
+
+    <h6><span class="fw-bold">Seed Identification - Sleep Messages:</span></h6>
+    <p>This method is recommended as the requirements are a lot less strict and time consuming, the only requirement is that you have saved and reset the game with your partner Pokemon asleep. The example image above uses this method</p>
+
+    <ol>
+      <li>Open the game and enter the overworld, if you are planning to manipulate items in Cerulean Cave, use a repel and save the game, then reset and enter the overworld again.</li>
+      <li>Open the Seed Finding tab of the LGPE Item RNG Tool, then select <code span class="fw-bold">Partner Observations Initial State</code> from the dropdown menu.</li>
+      <li>Pause the game then click "PLAY WITH PIKACHU / PLAY WITH EEVEE", then take note of the message produced.</li>
+      <li>If the message states "sleeping peacefully", type <code span class="fw-bold">p</code> into the <code span class="fw-bold">Partner Observations (d/p)</code> field.</li>
+      <li>If the message states "in a deep sleep", type <code span class="fw-bold">d</code> into the <code span class="fw-bold">Partner Observations (d/p)</code> field.</li>
+      <li>Repeat this process 64 times until a seed has been produced. Keep the game paused after identifying your seed to avoid any unwanted advancements.</li>
+    </ol>
+
+    <blockquote>You should be quick when observing sleep partner messages, staying in this menu over 3-5 seconds will cause extra unwanted advancements, observe the message, quickly back out, then note the message with a <code span class="fw-bold">p</code> or a <code span class="fw-bold">d</code> in the RNG tool.</blockquote>
+    <hr />
+
+    <h6><span class="fw-bold">Seed Identification - Candy Transfers:</span></h6>
+    <p>This method is slower, but is a more reliable method as it is guaranteed to find the correct seed if monitored correctly. Ensure that you save with the required 128 Pokemon caught in case of inaccurate observations.</p>
+
+    <ol>
+      <li>Open the game and enter the overworld, if you are planning to manipulate items in Cerulean Cave, use a repel and save the game, then reset and enter the overworld again.</li>
+      <li>Open the Seed Finding tab of the LGPE Item RNG Tool, then select <code span class="fw-bold">Candy Observations Arbitrary State</code> from the dropdown menu.</li>
+      <li>Open Pokemon Box, then find the group of Venomoth you wish to transfer.</li>
+      <li>Transfer the Pokemon one-by-one, and observe the candies given by Professor Oak.</li>
+      <li>If a Quick Candy was produced, type <code span class="fw-bold">q</code> into the <code span class="fw-bold">Candy Observations (q/s)</code> field.</li>
+      <li>If a Smart Candy was produced, type <code span class="fw-bold">s</code> into the <code span class="fw-bold">Candy Observations (q/s)</code> field.</li>
+      <li>Repeat this process 128 times until a seed has been produced. Keep the game paused after identifying your seed to avoid any unwanted advancements.</li>
+    </ol>
+
+    <blockquote>You can use <code span class="fw-bold">Candy Observations Arbitrary State</code> instead if you wish, this requires less transfers but can result in seed inaccuracies on rare occasions.</blockquote>
 
   </div>
 </div><br>
 
-<span class="fw-bold">Figure 5 -</span> Searching For A Target<p></p>
-<a href="./images/item/searching-target-frames.gif" target="_blank"><img src="./images/item/searching-target-frames.gif" class="img-fluid"></a><br /><br />
+<span class="fw-bold">Figure 3 -</span> Seed Found<p></p>
+<a href="./images/item/seed-found.gif" target="_blank"><img src="./images/item/seed-found.gif" class="img-fluid"></a><br /><br />
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c5b74;" id="target-search-lgpe-item">
-    <span class="fw-bold text-light">Searching For A Target:</span>
+  <div class="anchored card-header" style="background-color: #0c5b74;" id="target-frames-lgpe-item">
+    <span class="fw-bold text-light">Searching For Target Frames</span>
   </div>
   <div class="card-body card-bg">
-    <p>To search for a target, identify your seed using the method mentioned above, then paste it into the assigned field on the LINQpad script, then click the run button (▶️ button). When the script has finished, results will be produced at the bottom.</p>
-
-    <h6><span class="fw-bold">Undesirable Result?</span></h6>
-    <ul>
-      <li>Reset the game, and enter the overworld again.</li>
-      <li>Identify your current seed again and search for results.</li>
-      <li>Repeat until a desirable result has been found.</li>
-    </ul>
-
-    <blockquote>It is recommended to search for a cluster. A cluster is multiple frames in a row that produce the same end result. This provides more opportunities to spawn the correct item.</blockquote>
-    
+    <p>After a seed has been produced, open the <code span class="fw-bold">Item Prediction</code> tab, then select the item you wish to manipulate from the dropdown menu, and paste the seeds that were produced earlier into the assigned fields.</p>
+      
+    <p>Set the advance range to a comfortable amount (1000 recommended), and the Max Partner Menu Opens to 1, then click the search button to check for results that meet the search criteria.</p>
+      
+    <blockquote>If no desirable result has been found, consider increasing the search range, if you do not want to increase the search range, restart the game and re-identify your seed again.</blockquote>
+   
   </div>
 </div><br>
 
-<span class="fw-bold">Figure 6 -</span> Target Found!<p></p>
-<a href="./images/item/target-found.png" target="_blank"><img src="./images/item/target-found.png" class="img-fluid"></a><br /><br />
+<span class="fw-bold">Figure 4 -</span> Target Found<p></p>
+<a href="./images/item/script-filters.gif" target="_blank"><img src="./images/item/script-filters.gif" class="img-fluid"></a><br /><br />
 
-<p>A target has been found! A Master Ball on advances x-y, these are the exact advances that we will aim to interact with a spawner that contains our desired item on.</p>
+<p>A target has been found, a Master Ball in x advances, you can now begin advancing the RNG state.</p>
 
 <hr /><div class="title" style="background-color: #0c5b74;">
-  <h1 class="text-light text-center pt-3 pb-3">Advancing Towards The Target</h1>
+  <h1 class="text-light text-center pt-3 pb-3">Advancing The RNG State</h1>
 </div><hr />
 
-<p>The following actions are considered to be the best methods to advance the RNG state, for consistent advancements and speedy advancements:</p>
+<p>The following actions are considered to be the best methods to advance the RNG state for both consistency and speed:</p>
 
 <table class="table table-striped" style="width:100%">
   <thead class="table text-white" style="background-color: #0c5b74;">
@@ -266,7 +201,7 @@ permalink: /retail/lgpe/item
      </tbody>
 </table>
 
-<span class="fw-bold">Figure 7 -</span> Advancing RNG State<p></p>
+<span class="fw-bold">Figure 5 -</span> Advancing RNG State<p></p>
 <a href="./images/item/advancing-rng-state.gif" target="_blank"><img src="./images/item/advancing-rng-state.gif" class="img-fluid"></a><br /><br />
 
 <div class="card border-dark">
@@ -274,16 +209,30 @@ permalink: /retail/lgpe/item
     <span class="fw-bold text-light">Advancing RNG State</span>
   </div>
   <div class="card-body card-bg">
+    <p>Use any of the advancement methods in the table above to advance the RNG state. Seeds can be re-identified at any point by doing the following:</p> 
+
+    <ol>
+      <li>Open the <code span class="fw-bold">Seed Finder</code> tab again and click the <code span class="fw-bold">reidentification</code> checkbox.</li>
+      <li>Enter the last known RNG state into the <code span class="fw-bold">Reidentification State</code> fields.</li>
+      <li>Observe "sleep messages" again, if you have already forgotten how to do this, the method can be found <a href="#seed-identification-methods-lgpe-item">here</a></li>
+      <li>After a new RNG state is produced, enter it into the <code span class="fw-bold">Item Prediction</code> tab and search for your target again.</li>
+    </ol>
+
+    <blockquote>This process can be repeated as many times as needed, it is recommended to stop advancing the RNG state at random once you are within ~50 advances of the target.</blockquote>
     
   </div>
 </div><br>
 
-<span class="fw-bold">Figure 8 -</span> Target Frame Hit!<p></p>
+<span class="fw-bold">Figure 6 -</span> Close To Target<p></p>
 <a href="./images/item/target-hit.png" target="_blank"><img src="./images/item/target-hit.png" class="img-fluid"></a><br /><br />
 
-<p>According to the search results, a Master Ball will be produced after interacting with the item spot on frame 59. Our calculations indicate that 59 advancements have occured since we began monitoring advancements, so it is now time to interact with the hidden item spot to claim our item.</p>
+<p>After reidentifying the current seed, we are now x frames away from the target, and the player standing next to a hidden item spot that can contain our desired item. Now we need to advance the RNG state in a predictable manner, by either transferring viewing partner messages (advances the RNG state by 2), or transferring Venomoths (advances the RNG state by 1).</p>
 
-<span class="fw-bold">Figure 9 -</span> Result Found!<p></p>
+<p>It is recommended to use partner message advancements if your target is within a multiple of 2 from your current seed. You can transfer a single Pokemon to advance the RNG state by 1 if you are unable to hit your target using partner message advancements alone.</p>
+
+<span class="fw-bold">Figure 7 -</span> Result Found!<p></p>
 <a href="./images/item/result-found.png" target="_blank"><img src="./images/item/result-found.png" class="img-fluid"></a><br /><br />
+
+<p>According to the search results, a Master Ball will be produced after interacting with the item spot on advance x. Our calculations indicate that y advancements have occured (y partner message advancements), so it is now time to interact with the hidden item spot to claim our item.</p>
 
 <p>A Master Ball was produced as expected, that's all there is to RNG manipulating valuable items in LGPE on retail hardware!</p>
