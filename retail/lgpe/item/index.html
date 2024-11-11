@@ -100,7 +100,7 @@ permalink: /retail/lgpe/item
 
       <li><span class="fw-bold">Navigate to the correct location and save, then reset the game.</span></li>
       <ul>
-        <li>Seed identification is best done by starting from a freshly reset game on a brand new day, ensure the game is saved and reset after following all the other setup instructions. This step will need to be repeated every time a new day passes (00:00 on the system clock)</li>
+        <li>Seed identification is best done by starting from a freshly reset game on a brand new day, ensure the game is saved and reset after following all the other setup instructions. This step will need to be repeated every time a new day passes (00:00 on the system clock).</li>
       </ul><p></p>
     </ol>
 
@@ -227,7 +227,7 @@ permalink: /retail/lgpe/item
     <ol>
       <li>Open the <code span class="fw-bold">Seed Finder</code> tab again and click the <code span class="fw-bold">reidentification</code> checkbox.</li>
       <li>Enter the last known RNG state into the <code span class="fw-bold">Reidentification State</code> fields.</li>
-      <li>Observe "sleep messages" again, if you have already forgotten how to do this, the method can be found <a href="#seed-identification-methods-lgpe-item">here</a></li>
+      <li>Observe "sleep messages" again, if you have already forgotten how to do this, the method can be found <a href="#seed-identification-methods-lgpe-item">here</a>.</li>
       <li>After a new RNG state is produced, enter it into the <code span class="fw-bold">Item Prediction</code> tab and search for your target again.</li>
     </ol>
 
@@ -239,13 +239,28 @@ permalink: /retail/lgpe/item
 <span class="fw-bold">Figure 6 -</span> Close To Target<p></p>
 <a href="./images/item/target-hit.png" target="_blank"><img src="./images/item/target-hit.png" class="img-fluid"></a><br /><br />
 
-<p>After reidentifying the current seed, we are now x frames away from the target, and the player standing next to a hidden item spot that can contain our desired item. Now we need to advance the RNG state in a predictable manner, by either transferring viewing partner messages (advances the RNG state by 2), or transferring Venomoths (advances the RNG state by 1).</p>
+<div class="card border-dark">
+  <div class="anchored card-header" style="background-color: #0c5b74;" id="final-seed-advances-lgpe-item">
+    <span class="fw-bold text-light">Final RNG State Advances</span>
+  </div>
+  <div class="card-body card-bg">
+    <p>After re-identifying the current RNG state, the RNG tool displays that we are now x frames away from the target, and we have already relocated to a hidden item spot that can potentially contain the desired item.</p>
 
-<p>It is recommended to use partner message advancements if your target is within a multiple of 2 from your current seed. You can transfer a single Pokemon to advance the RNG state by 1 if you are unable to hit your target using partner message advancements alone.</p>
+    <p>We now need to advance the RNG state in a predcitable manner to reach the seed/advance that contains the desired item. As a reminder, this can be done in one of two ways:</p>
+
+    <ol>
+      <li>Viewing partner sleep messages (a consistent +2 advance).</li>
+      <li>Transferring Venomoths (a consistent +1 advance).</li>
+    </ol>
+
+    <p>Use sleep partner messages to get as close as you can to your target. If you are an even number of advances away from the target, you do not need to use Venomoth transfers. Venomoth transfers can be used to do the final advance if you are an odd number of advances away from the target.</p>
+    
+  </div>
+</div><br>
 
 <span class="fw-bold">Figure 7 -</span> Result Found!<p></p>
 <a href="./images/item/result-found.png" target="_blank"><img src="./images/item/result-found.png" class="img-fluid"></a><br /><br />
 
-<p>According to the search results, a Master Ball will be produced after interacting with the item spot on advance x. Our calculations indicate that y advancements have occured (y partner message advancements), so it is now time to interact with the hidden item spot to claim our item.</p>
+<p>According to the search results, a Master Ball will be produced after interacting with the item spot on advance x. Our calculations indicate that y advancements have occured (from doing y partner message advancements), so it is now time to interact with the hidden item spot to claim our item.</p>
 
 <p>A Master Ball was produced as expected, that's all there is to RNG manipulating valuable items in LGPE on retail hardware!</p>
