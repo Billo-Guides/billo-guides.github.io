@@ -1,0 +1,113 @@
+---
+layout: default
+title: Item RNG - Advancing The RNG State (CFW)
+permalink: /cfw/swsh/item/advancing-the-rng-state
+---
+
+<div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">Advancing The RNG State (CFW)</h1>
+</div>
+<hr />
+
+<p>The SwSh Overworld RNG Tool tracks the amount of advances that have occured since the initial connection to the program. Advancements can occur naturally based on the overworld environment, or can be forced by performing specific actions. The most useful actions can be found here.</p>
+
+<p>It is advised to try each advancement method listed on this page yourself to get an understanding of how everything works before continuing. You can also leave this page open as a future reference point.
+
+<table class="table table-striped" style="width:100%" id="advancement-table">
+    <thead class="table text-white" style="background-color: #0c0038;">
+    <th scope="col" class="text-center">Type of action</th>
+    <th scope="col" class="text-center">Description of action</th>
+    </thead>
+    <tbody id="results">
+        <tr>
+            <td><span class="fw-bold">Animations/Motions</span></td>
+            <td>Having your Pokémon animate on the summary screen or party menu by clicking in the <code class="fw-bold">L3</code> button, or by using the <code class="fw-bold">Skip</code> feature of the GUI.</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">Player Movement</span></td>
+            <td>Moving the player using the control stick, then letting the control stick fall back into it's resting state. This includes the player whistling animation and ringing the bike bell.</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">Menu Close</span></td>
+            <td>Opening and closing the pause menu using the <code class="fw-bold">X</code> button, the amount of advances consumed from doing this action is predictable (explained later).</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">Bike Mount</span></td>
+            <td>Mounting and dismounting the bike by pressing the code <code class="fw-bold">+</code> button causes the RNG state to advance quicker than player movement, useful for covering short distances quickly.</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">NPC Activation</span></td>
+            <td>Standing near an NPC to make them notice the player. Moving away from an NPC will cause them to "deactivate". Useful for covering short distances quickly.</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">Rain/Thunderstorm</span></td>
+            <td>Standing in the overworld in Rain or Thunderstorm weather (can be stacked with NPC activation for fast paced, natural advancements).</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">Date Skipping</span></td>
+            <td>The <code span class="fw-bold">Skip</code> feature of the GUI to advance towards targets, this is the quickest way to advance frames but is not a necessity.</td>
+        </tr>
+    </tbody>
+</table>
+<br />
+
+<span class="fw-bold">Figure 1 -</span> Animations Example<p></p>
+<img src="./images/advancing-the-rng-state/animations.gif" alt="advancing-the-rng-state-x" class="img-fluid clickable-image" data-image="./images/advancing-the-rng-state/animations.gif"><p></p>
+
+<p>When viewing the party list (shown in the image above), pressing the <code class="fw-bold">L3</code> button causes the RNG state to advance by +1 with each press. Similarly, selecting a Pokemon and viewing its summary advances the RNG state by +1 per animation (slower). Using the party list is the recommended method for performing this action.</p>
+
+<p>The primary use of this action is to provide a consistent and predictable way to advance toward a specific frame or RNG state, as each action advances the RNG state by exactly +1.</p>
+
+<span class="fw-bold">Figure 2 -</span> Player Movement Example<p></p>
+<img src="./images/advancing-the-rng-state/player-movement.gif" alt="advancing-the-rng-state-x" class="img-fluid clickable-image" data-image="./images/advancing-the-rng-state/player-movement.gif"><p></p>
+
+<p>Player movement involves either moving the control stick or making the player whistle by pressing the R3 button. This type of RNG advancement can also be performed while riding the bike.</p>
+
+<p>The primary purpose of this method is to fine-tune progression (or inch closer) toward a target frame, particularly when more precise and predictable methods, such as closing the pause menu, are insufficient for landing on a desired frame.</p>
+
+<span class="fw-bold">Figure 3 -</span> Menu Close Example<p></p>
+<img src="./images/advancing-the-rng-state/menu-close.gif" alt="advancing-the-rng-state-x" class="img-fluid clickable-image" data-image="./images/advancing-the-rng-state/menu-close.gif"><p></p>
+
+<p>Closing the pause menu advances the RNG state based in a predictable manner, based on the number of NPCs in the area. It is important to note that an NPC does not need to be visible in the overworld to contribute to the total number of advancements that occur when the pause menu is closed.</p>
+
+<p>This method requires calibration in order to be used effectively, calibrating your current NPC count can be done using the <code class="fw-bold">Menu Close Advances Viewer</code> sub-window, this method will be elaborated on in more detail later on in the guide.</p>
+
+<p>Menu close prediction also temporarily freezes RNG advancements for a brief period in most cases, in tandem with being predictable, this makes for the most consistent method of hitting the desired target frame.</p>
+
+<span class="fw-bold">Figure 4 -</span> Bike Mount Example<p></p>
+<img src="./images/advancing-the-rng-state/bike-mount.gif" alt="advancing-the-rng-state-x" class="img-fluid clickable-image" data-image="./images/advancing-the-rng-state/bike-mount.gif"><p></p>
+
+<p>Mounting and dismounting the bike advances the RNG state by a small amount. The exact number of advancements is variable and depends on the number of NPCs currently in the area.</p>
+
+<p>This method is useful for advancing smaller distances more quickly; however, it is not recommended for landing on exact target frames due to the variability and unpredictability of the advancements.</p>
+
+<span class="fw-bold">Figure 5 -</span> NPC Activation Example<p></p>
+<img src="./images/advancing-the-rng-state/npc-activation.gif" alt="advancing-the-rng-state-x" class="img-fluid clickable-image" data-image="./images/advancing-the-rng-state/npc-activation.gif"><p></p>
+
+<p>Standing next to an NPC causes them to become "active" and face the player (as shown in the image above). When this occurs, the RNG state advances rapidly until the player moves far enough away to deactivate the NPC.</p>
+
+<p>This method is effective for advancing medium to large distances quickly, as it consumes approximately 2,500 advancements per minute per NPC. Additionally, multiple active NPCs can be stacked, with more active NPCs resulting in a higher number of advancements per minute.</p>
+
+<span class="fw-bold">Figure 6 -</span> Rain/Thunderstorm Weather Example<p></p>
+<img src="./images/advancing-the-rng-state/weather.gif" alt="advancing-the-rng-state-x" class="img-fluid clickable-image" data-image="./images/advancing-the-rng-state/weather.gif"><p></p>
+
+<p>Changing the weather to rain or a thunderstorm causes the RNG state to advance rapidly. These rapid advancements will continue until the weather in the area changes or the player moves to a different area where it is no longer raining.</p>
+
+<p>Advancing in rainy weather is one of the most efficient methods for covering large distances of advancements quickly. This method can also be combined with active NPCs to further increase the number of advancements per minute, potentially reaching upwards of 10,000 advances per minute.</p>
+
+<span class="fw-bold">Figure 7 -</span> Date Skipping Example<p></p>
+<img src="./images/advancing-the-rng-state/date-skipping.gif" alt="advancing-the-rng-state-x" class="img-fluid clickable-image" data-image="./images/advancing-the-rng-state/date-skipping.gif"><p></p>
+
+<p>Using the <code span class="fw-bold">Skip</code> feature of the GUI artificially adjusts the Switch system clock. The number of days skipped is determined by the user-defined value entered into the field shown in the image above.</p>
+
+<p>The number of advancements consumed per day skipped varies based on the number of Pokémon currently stored in boxes (excluding eggs). With optimal box management, it is possible to consume more than 15,000 advancements per day skipped.</p>
+
+<!-- Popup modal for images goes at the bottom of any page, script.js follows. -->
+<div id="image-popup" class="popup">
+    <span class="popup-close" onclick="closePopup()">&times;</span>
+    <img id="popup-image" class="popup-image" src="" alt="Expanded Image">
+</div>
+
+<script src="script.js"></script>
+
+<!-- Image popup code ends here. -->
