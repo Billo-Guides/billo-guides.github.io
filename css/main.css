@@ -50,3 +50,8 @@ mark {
     .popup-close:hover {
         color: #f00;
     }
+
+.list-group-item-primary:hover {
+    background-color: #b3d4fc !important; /* Lighter blue on hover */
+    border-color: #b3d4fc !important; /* Match border color */
+}

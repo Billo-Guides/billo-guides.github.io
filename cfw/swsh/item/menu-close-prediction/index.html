@@ -1,0 +1,54 @@
+---
+layout: default
+title: Item RNG - Menu Close Prediction (CFW)
+permalink: /cfw/swsh/item/menu-close-prediction
+---
+
+<div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">Menu Close Prediction (CFW)</h1>
+</div>
+<hr />
+
+<p>This page contains information about calibrating your NPC count and using that knowledge to accurately hit target frames. As this technique is frequently used throughout the guide, it is important to develop a solid understanding of how it works.</p>
+
+<p>Closing and reopening the pause menu is a reliable technique used to advance the RNG state in a controlled and predictable manner. Typically, closing the menu also "freezes" natural RNG advancements for 2–3 seconds, which makes this method a highly consistent approach for targeting specific frames.</p>
+
+<span class="fw-bold">Figure 1 -</span> Menu Close Demonstration<p></p>
+<img src="./images/menu-close-prediction/demonstration.gif" alt="menu-close-prediction-1" class="img-fluid clickable-image" data-image="./images/menu-close-prediction/demonstration.gif"><p></p>
+
+<p>In Figure 1, we can observe that 25 advances were consumed from closing the pause menu (note, this figure will vary depending on the current RNG state, NPC count, and location). We now need to keep this figure in mind, and open the <code class="fw-bold">Menu Close Advances Viewer</code> sub-window, located at the top of the main window.</p>
+
+<span class="fw-bold">Figure 2 -</span> Menu Close Advances Viewer<p></p>
+<img src="./images/menu-close-prediction/menu-close-advances-viewer.gif" alt="menu-close-prediction-2" class="img-fluid clickable-image" data-image="./images/menu-close-prediction/menu-close-advances-viewer.gif"><p></p>
+
+<p>In Figure 2, the sub-window has been opened, after searching, a table has appeared, the goal is to tweak the value in the <code class="fw-bold">NPCs</code> field until we see that the first result inside the <code class="fw-bold">Jump</code> column matches the figure observed earlier (in this case, we are tweaking the NPC field until we see +25 in the <code>Jump</code> column of the table).</p>
+
+<span class="fw-bold">Figure 3 -</span> Finding NPC Count<p></p>
+<img src="./images/menu-close-prediction/finding-npc-count.gif" alt="menu-close-prediction-3" class="img-fluid clickable-image" data-image="./images/menu-close-prediction/finding-npc-count.gif"><p></p>
+
+<p>After tweaking the value inside the <code class="fw-bold">NPCs</code> field we can see that a +25 jump occurs when searching with 17 NPCs. You should now close and re-open the pause menu few times extra to make sure all of the values inside the <code class="fw-bold">Jump</code> column align properly (see Figure 3).</p>
+
+<div class="alert alert-success" style="border: 1px solid #28a745; border-radius: 5px; padding: 15px;">
+    <span class="fw-bold">Great!</span> You should now have a basic understanding of how to calibrate NPC counts, and how to apply that knowledge to accurately hit target frames (you can leave this page open for future reference).
+</div>
+<br />
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/item#the-basics" target="_blank">
+    Head back to the <span class="fw-bold">main page</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+
+
+
+
+<!-- Popup modal for images goes at the bottom of any page, script.js follows. -->
+<div id="image-popup" class="popup">
+    <span class="popup-close" onclick="closePopup()">&times;</span>
+    <img id="popup-image" class="popup-image" src="" alt="Expanded Image">
+</div>
+
+<script src="script.js"></script>
+
+<!-- Image popup code ends here. -->
