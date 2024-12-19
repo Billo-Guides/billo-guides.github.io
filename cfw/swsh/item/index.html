@@ -13,6 +13,11 @@ permalink: /cfw/swsh/item/
         padding: 0.5em 10px;
         quotes: "\201C""\201D""\2018""\2019";
     }
+
+    .list-group-item-primary:hover {
+        background-color: #b3d4fc !important; /* Lighter blue on hover */
+        border-color: #b3d4fc !important; /* Match border color */
+    }
 </style>
 
 <div class="title" style="background-color: #0c0038;">
@@ -22,54 +27,87 @@ permalink: /cfw/swsh/item/
 
 <p>This guide will cover the process of RNG abusing NPCs and item machines in Sword/Shield using the SwSh Overworld RNG Tool created by <a href="https://github.com/LegoFigure11">LegoFigure11</a>. This program is intended to be used on Windows machines, no support for other operating systems will be provided here.</p>
 
-<h6 span class="fw-bold">Introduction:</h6>
-<p>Item RNG manipulation offers an efficient method for farming rare items and in-game currency. By accurately predicting potential outcomes, players can maximize the effectiveness of their farming efforts, ensuring optimal use of time when farming for rare in-game resources by removing the element of luck. Currently, this guide supports the following methods:</p>
+<h5 span class="fw-bold" id="introduction-item-rng-cfw">Introduction:</h5>
+<p>Item RNG manipulation offers an efficient method for farming rare items and in-game currency. By accurately predicting potential outcomes, players can maximize the effectiveness of their farming efforts, ensuring optimal use of time when farming for rare in-game resources by removing the element of luck.</p>
 
 <table class="table table-striped" style="width:100%" id="item-rng-table">
     <thead class="table text-white" style="background-color: #0c0038;">
     <th scope="col" class="text-center" style="width:20%">Type Of RNG</th>
-    <th scope="col" class="text-center">Description, Location &amp; Use Cases</th>
+    <th scope="col" class="text-center">Use Cases, Location &amp; Requirements</th>
     <th scope="col" class="text-center">Difficulty</th>
     </thead>
     <tbody id="results">
         <tr>
-            <td><span class="fw-bold">Cram-o-matic</span></td>
-            <td>Manipulating the Cram-o-matic machine found in the Isle of Armor Dojo, this can be used to farm Rare PokeBalls (Apricorn, Safari, and Sport).</td>
+            <td><span class="fw-bold"><a href="./images/main-page/lottery.jpg" target="_blank" rel="noopener noreferrer">Lottery</a></span></td>
+            <td>
+                <p>Farm Master Balls, PP Max, and Rare Candies at any PokeCenter.</p>
+                <details>
+                    <summary span class="fw-bold">Requirements</summary>
+                    <ul>
+                        <li>Access to Wedgehurst PokeCenter (recommended)</li>
+                    </ul>
+                </details>
+            </td>
             <td><span class="fw-bold" style="color: #008000;">Easy</span></td>
         </tr>
         <tr>
-            <td><span class="fw-bold">Lottery</span></td>
-            <td>Manipulating the lottery function of the Rotom PC found in any PokeCenter, this can be used to farm Master Balls, PP Max and Rare Candies.</td>
+            <td><span class="fw-bold"><a href="./images/main-page/cram-o-matic.jpg" target="_blank" rel="noopener noreferrer">Cram-o-matic</a></span></td>
+            <td>
+                <p>Farm rare PokeBalls (Apricorn, Safari, Sport) in the Isle of Armor Dojo.</p>
+                <details>
+                    <summary span class="fw-bold">Requirements</summary>
+                    <ul>
+                        <li>Access to the Isle of Armor DLC</li>
+                        <li>Access to the Cram-o-matic machine</li>
+                        <li>Have plenty of apricorns to use on the machine</li>
+                    </ul>
+                </details>
+            </td>
             <td><span class="fw-bold" style="color: #008000;">Easy</span></td>
         </tr>
         <tr>
-            <td><span class="fw-bold">Watt Trader</span></td>
-            <td>Manipulating the Watt Trader NPC found at Snowslide Slope in the Crown Tundra, this can be used to farm rare PokeBalls (Dream and Beast).</td>
+            <td><span class="fw-bold"><a href="./images/main-page/watt-trader.jpg" target="_blank" rel="noopener noreferrer">Watt Trader</a></span></td>
+            <td>
+                <p>Farm rare PokeBalls (Dream, Beast) at Snowslide Slope in Crown Tundra.</p>
+                <details>
+                    <summary span class="fw-bold">Requirements</summary>
+                    <ul>
+                        <li>Access to the Crown Tundra DLC</li>
+                        <li>Have plenty of Watts (200,000+)</li>
+                        <li>Have spoken to the Watt Trader at least once</li>
+                    </ul>
+                </details>
+            </td>
             <td><span class="fw-bold" style="color: #996B00;">Intermediate</span></td>
         </tr>
         <tr>
-            <td><span class="fw-bold">Digging PA</span></td>
-            <td>Manipulating the Digging PA NPC located near the desert biome in the Isle of Armor, this can be used to to farm unlimited Watts, which can be used to purchase various useful in-game items.</td>
-            <td><span class="fw-bold" style="color: #b60606;">Advanced</span></td>
+            <td><span class="fw-bold"><a href="./images/main-page/digging-pa.jpg" target="_blank" rel="noopener noreferrer">Digging PA</a></span></td>
+            <td>
+                <p>Farm unlimited Watts at the Isle of Armor desert biome to exchange for valuable items.</p>
+                <details>
+                    <summary span class="fw-bold">Requirements</summary>
+                    <ul>
+                        <li>Access to the Isle of Armor DLC</li>
+                        <li>Have plenty Armorite Ore</li>
+                        <li>Have spoken to the Digging PA at least once</li>
+                    </ul>
+                </details>
+            </td>
+            <td><span class="fw-bold" style="color: #996B00;">Intermediate</span></td>
         </tr>
     </tbody>
 </table>
 
-<p class="fw-bold" style="color: #b60606;">This guide assumes you meet the in-game requirements for accessing the machine or NPC you wish to manipulate (e.g IoA DLC for Cram-o-matic or a PC for Lottery) and are using a modified Switch console running Atmosphere.</p>
-
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/item">
-    Click here if you are using a <span class="fw-bold">unmodified</span> Switch console!
-    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-    </svg>
-</a>
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 5px; padding: 15px;">
+    <span class="fw-bold">Note -</span> Check the in-game requirements for the type of RNG you wish to do. This guide also assumes that you are using a CFW Switch console running <a href="https://github.com/Atmosphere-NX" target="_blank" rel="noopener noreferrer">Atmosphère.</a> If you are using an unmodified console, <a href="/retail/swsh/item" target="_blank" rel="noopener noreferrer">visit the retail guide.</a>
+</div>
 
 <hr /><div class="title" style="background-color: #0c0038;">
-    <h1 class="text-light text-center pt-3 pb-3">Requirements</h1>
+    <h1 class="text-light text-center pt-3 pb-3">Setup Requirements</h1>
 </div>
 <hr />
 
-<p>The requirements may vary depending on the type of RNG you wish to do. Read through the instructions carefully to avoid complexities and troubleshooting.</p>
+<p>The required tools/applications you need may vary depending on the type of RNG you wish to do. Read through the instructions carefully to avoid complexities and potential troubleshooting.</p>
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c0038;" id="requirements-swsh-item">
@@ -85,7 +123,7 @@ permalink: /cfw/swsh/item/
 
         <h6><span class="fw-bold">Installation Instructions:</span></h6>
         <ol>
-            <li>Download and run the <code span class="fw-bold">NET 7.0 installer</code> until complete. This is a dependency of the RNG tool.</li>
+            <li>Download and run the <code span class="fw-bold">NET 7.0 installer</code> and go through the setup instructions.</li>
             <li>Extract the <code span class="fw-bold">SWSH_OWRNG_Generator_GUI.zip</code> into an empty folder on your computer.</li>
             <li>Move the <code span class="fw-bold">atmosphere</code> folder to the root of your Switch SD card.</li>
             <li>Extract the <code span class="fw-bold">ldn_mitm.zip</code> into an empty folder on your computer.</li>
@@ -104,17 +142,18 @@ permalink: /cfw/swsh/item/
 
         <h6><span class="fw-bold">Installation Instructions:</span></h6>
         <ol>
-            <li>Download and run the <code span class="fw-bold">NET 7.0 installer</code> and go through the setup instructions. This is a dependency of the Digging PA Calculator.</li>
+            <li>Download and run the <code span class="fw-bold">NET 9.0 installer</code> and go through the setup instructions.</li>
             <li>Download and run the <code span class="fw-bold">LINQPad installer</code> and go through the setup instructions.</li>
             <li>Download <code span class="fw-bold">PKHeX Development Build</code> and extract <code span class="fw-bold">PKHeX.Core.dll</code> to a known location.</li>
             <li>Open the <code span class="fw-bold">Digging PA Calculator</code> in your browser, this will be needed later.</li>
         </ol>
-        <hr />
-
-        <p>Verify that both the SwSh Overworld RNG tool and LINQPad launch correctly before proceeding. Additionally, ensure that the necessary Switch system modules are installed properly by attempting to connect to the RNG tool.</p>
     </div>
 </div>
 <br />
+
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 5px; padding: 15px;">
+    <span class="fw-bold">Note -</span> Verify that both the SwSh Overworld RNG tool and LINQPad launch correctly before proceeding. Additionally, ensure that the necessary Switch system modules have been properly installed by connecting to the RNG tool (see below).
+</div>
 
 <span class="fw-bold">Figure 1 -</span> Program Connectivity<p></p>
 <img src="./images/main-page/connection-successful.gif" alt="rng-tool-setup" class="img-fluid clickable-image" data-image="./images/main-page/connection-successful.gif"><p></p>
@@ -125,9 +164,9 @@ permalink: /cfw/swsh/item/
     </div>
     <div class="card-body card-bg">
         <ol>
-            <li>Open the Homebrew menu (typically done by pressing Album), then press the <code span class="fw-bold">Y button</code> to display the local IP address of your console.</li>
-            <li>Launch the game, then attempt to connect to the Overworld RNG tool by inputting the IP address into the <code span class="fw-bold">Switch IP:</code>, then click the <code span class="fw-bold">Connect</code> button.</li>
-            <li>If done correctly, you should see your current seed has been automatically entered into the fields on the top-left of the RNG tool (see the above image).</li>
+            <li>Open the Homebrew menu (typically done by pressing Album), then press the <code span class="fw-bold">Y button</code> to display the local IP address of your console.</li><p></p>
+            <li>Launch the game, then attempt to connect to the Overworld RNG tool by inputting the IP address into the <code span class="fw-bold">Switch IP:</code>, then click the <code span class="fw-bold">Connect</code> button.</li><p></p>
+            <li>If done correctly, you should see your current seed has been automatically entered into the fields on the top-left of the RNG tool (see the above image).</li><p></p>
             <li>If you do not see your seeds or you are getting connection errors, revisit the installation instructions above, disable any cheats/mods, then try again.</li>
         </ol>
     </div>
