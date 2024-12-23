@@ -55,3 +55,15 @@ mark {
     background-color: #b3d4fc !important; /* Lighter blue on hover */
     border-color: #b3d4fc !important; /* Match border color */
 }
+
+/* OWRNG Table Styling */
+
+#overworld-rng-table {
+    width: 100%;
+}
+
+#overworld-rng-table th,
+#overworld-rng-table td {
+    padding: 12px 20px;
+    vertical-align: middle;
+}
