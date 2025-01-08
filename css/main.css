@@ -16,6 +16,11 @@ mark {
     color: black;
 }
 
+small.subtext {
+    display: block; /* Ensures the text appears on a new line */
+    margin-top: 0; /* Removes extra spacing above the small text */
+}
+
 /* Popup styles for images */
 .popup {
     display: none; /* Initially hidden */

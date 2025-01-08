@@ -4,157 +4,111 @@ title: Legends Arceus RNG Guide
 permalink: /cfw/la/general/
 ---
 
-<style>
-  mark {
-    background-color: #FFD700;
-    color: black;
-  }
+<div class="title" style="background-color: #6f3b97; ">
+    <h1 class="text-light text-center pt-3 pb-3">Legendary/Mythical RNG (CFW)</h1>
+</div>
+<hr />
 
-  .card-bg {
-    background-color: #d1d1d1;
-    border-bottom-right-radius: 0.20rem !important;
-    border-bottom-left-radius: 0.20rem !important;
-  }
-
-  table,
-  th,
-  td {
-    border: 1px solid black;
-  }
-
-  blockquote {
-  background: #c5c5c5;
-  border: 1px solid #9e9e9e;
-  border-left: 5px solid #0c0038;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
-  }
-</style>
-
-<div class="title" style="background-color: #0c0038;">
-  <h1 class="text-light text-center pt-3 pb-3">Legends: Arceus RNG</h1>
-</div><hr />
-
-<p>This guide provides detailed instructions on RNG abusing Legendary Pokemon in Legends: Arceus, leveraging RNG generator scripts and Sysbot forks crafted by <a href="https://github.com/Lusamine">Lusamine</a> & <a href="https://github.com/zyro670">Zyro670</a>.</p>
-
-<p><span class="fw-bold" style="color: #b60606;">From here it is assumed you are using a CFW Switch console running <a href="https://github.com/Atmosphere-NX/Atmosphere/releases">Atmosphere</a>. This guide is also focused towards users running Windows OS.</span></p>
-
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/la/legendary">
-  Looking for a retail focused guide? You are in the wrong place! <span class="fw-bold">Click here!</span>
-  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-  </svg>
-</a>
-
-<hr /><div class="title" style="background-color: #0c0038;">
-  <h1 class="text-light text-center pt-3 pb-3">Required Reading</h1>
-</div><hr />
-
-<p>You can RNG manipulate every Legendary & Mythical encounter to attain desired IVs & Nature combinations. The method used will vary depending on whether the encounter is associated with Main RNG or Spawner RNG.</p> 
-
- <div class="card border-dark">
-   <div class="anchored card-header" style="background-color: #0c0038;" id="rng-type-distinctions">
-     <span class="fw-bold text-light">RNG Type Distinctions:</span>
-   </div>
-   <div class="card-body card-bg">
-     <h5><span class="fw-bold">What is Main RNG?</span></h5>
-
-     <p>Main RNG operates as a continually ticking hidden state, requiring precise timing of the final inputs before the Pokemon is generated in order to achieve the desired result.</p>
- 
-     <h6><span class="fw-bold">Main RNG Encounters:</span></h6>
-     <ul>
-       <li>Dialga or Palkia - Origin</li>
-       <li>Dialga or Palkia - Non-Origin</li>
-       <li>Giratina</li>
-       <li>Regigigas</li>
-       <li>Arceus</li>
-     </ul>
-     
-     <small><a href="https://github.com/Lusamine/SysBot.NET/tree/moarencounterbots">SysBot.NET - Moarencounterbots</a> is capable of accurately monitoring your Main RNG seeds in real time.</small>
-     <hr />
- 
-     <h5><span class="fw-bold">What is Spawner RNG?</span></h5>
-
-     <p>Spawners contain specific Pokemon visible in the overworld. When the Pokemon is knocked out and respawned, the spawner seed advances by 1 frame. Achieving the desired result involves respawning the Pokemon a certain number of times in succession until you reach your target frame.</p>
- 
-     <h6><span class="fw-bold">Spawner RNG Encounters:</span></h6>
-     <ul>
-       <li>Lake Trio - Uxie, Mesprit & Azelf</li>
-       <li>Weather Quartet - Tornadus, Thundurus, Landorus & Enamorus</li>
-       <li>Heatran</li>
-       <li>Cresselia</li>
-       <li>Manaphy/Phione</li>
-       <li>Shaymin</li>
-       <li>Darkrai</li>
-     </ul>
-
-     <small><a href="https://github.com/zyro670/NotForkBot.NET/tree/NotKoiTest">SysBot.NET - NotForkBot</a> is capable of accurately monitoring your Spawner RNG seeds in real time & automating the process of looking for a desirable seed.</small>
-    </div>
-  </div>
-
-<hr /><div class="title" style="background-color: #0c0038;">
-  <h1 class="text-light text-center pt-3 pb-3">Setup & Installation</h1>
-</div><hr />
-
-<p>The required downloads you will need will depend on the type of encounter you wish to RNG abuse. You do not need to follow Main RNG setup if you plan to RNG abuse a Pokemon on a spawner, and vice versa.</p>
+<p>In Legends: Arceus, Legendary and Mythical Pokemon can be RNG manipulated to achieve desirable IV and Nature combinations. The method used for a specific Pokemon depends on whether it is generated using "Main RNG" or "Spawner RNG". We can use <a href="https://github.com/Lusamine/">Anubis'</a> fork of SysBot.NET and RNG scripts to monitor both RNG states in real-time.</p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="setup-and-install-pla">
-    <span class="fw-bold text-light">Required Downloads:</span>
-  </div>
-  <div class="card-body card-bg">
-    <h5><span class="fw-bold">Main RNG Setup</span></h5>
-    <ul>
-      <li><a href="./downloads/moarencounterbots.zip" download>Sysbot.NET - Moarencounterbots</a></li>
-      <li><a href="https://www.linqpad.net/">LINQPad</a></li>
-      <li><a href="https://github.com/zyro670/PokeViewer.NET/releases/">PokeViewer.NET</a></li>
-      <li><a href="https://github.com/olliz0r/sys-botbase/releases/">sys-botbase</a></li>
-    </ul>
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="rng-type-distinctions-la">
+        <span class="fw-bold text-light">RNG Type Distinctions:</span>
+    </div>
+    <div class="card-body card-bg">
+        <h6 span class="fw-bold">Main RNG:</h6>
 
-    <small>
-      <ol>
-        <li>Extract the contents of <code span class="fw-bold">Moarencounterbots.zip</code> into an empty folder in a known location.</li>
-        <li>Download the latest version of <code span class="fw-bold">LINQPad</code> and place it in an empty folder.</li>
-        <li>Grab the latest release of <code span class="fw-bold">PokeViewer.NET</code>, then extract the contents into a fresh, empty folder.</li>
-        <li>Download the latest release of <code span class="fw-bold">sys-botbase</code> and extract the <code span class="fw-bold">atmosphere</code> folder to the root of your Switch SD card, then reboot the console.</li>
-      </ol>
-    </small>
-    
-    <blockquote>SysBot.NET does not come pre-configured to use with Legends: Arceus automatically. <a href="https://github.com/kwsch/SysBot.NET/wiki/Bot-Startup-Details#mode">Follow these instructions</a> before continuing.</blockquote><hr />
+        <p>Main RNG operates as a continuously and naturally advancing RNG state, requiring precise timing of the final inputs before the Pokemon is generated in order to achieve the desired outcome. Those experienced with RNG manipulation in other Pokemon games may find this method familiar.</p>
 
-    <h5><span class="fw-bold">Spawner RNG Setup</span></h5>
-    <ul>
-      <li><a href="https://github.com/zyro670/NotForkBot.NET/tree/NotKoiTest">SysBot.NET - NotForkBot</a></li>
-      <li><a href="https://github.com/zyro670/PokeViewer.NET/releases/">PokeViewer.NET</a></li>
-      <li><a href="https://github.com/olliz0r/sys-botbase/releases/">sys-botbase</a></li>
-    </ul>
-  
-    <small>
-      <ol>
-        <li>Download NotForkBot.NET by following the instructions on the <a href="https://github.com/zyro670/NotForkBot.NET/wiki/How-To-Download">NotForkBot Wiki</a>.</li>
-        <li>Extract the contents of <code span class="fw-bold">NotForkBot-x64.zip</code> into an empty folder in a known location.</li>
-        <li>Grab the latest release of <code span class="fw-bold">PokeViewer.NET</code>, then extract the contents into a fresh, empty folder.</li>
-        <li>Download the latest release of <code span class="fw-bold">sys-botbase</code> and extract the <code span class="fw-bold">atmosphere</code> folder to the root of your Switch SD card, then reboot the console.</li>
-      </ol>
-    </small>
-    
-    <blockquote>SysBot.NET does not come pre-configured to use with Legends: Arceus automatically. <a href="https://github.com/kwsch/SysBot.NET/wiki/Bot-Startup-Details#mode">Follow these instructions</a> before continuing.</blockquote>
-  </div>
-</div><br>
+        <h6 span class="fw-bold">Encounters:</h6>
+        <ul>
+            <li>Dialga or Palkia - Origin Form</li>
+            <li>Dialga or Palkia - Non-Origin Form</li>
+            <li>Giratina</li>
+            <li>Regigigas</li>
+            <li>Arceus</li>
+        </ul>
+        <hr />
 
-<p>To avoid complexity, each of the RNG methods will be covered on a seperate page. Click on the button(s) that apply to you to get started.</p><hr />
+        <h6 span class="fw-bold">Spawner RNG:</h6>
 
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/general/main-rng">
-  Click here if the Pokemon you wish to RNG abuse is tied to <span class="fw-bold">Main RNG</span>!
-  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-  </svg>
-</a><br>
+        <p>Some Legendary Pokemon are linked to overworld spawners. In short, when loading into the map, these Pokemon are assigned a "Spawner ID." To advance the seed, the Pokemon must be knocked out and then respawned. Achieving the desired outcome requires respawning the Pokemon a specific number of times in succession until the target has been reached.</p>
 
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/general/spawner-rng">
-  Click here if the Pokemon you wish to RNG abuse is tied to <span class="fw-bold">Spawner RNG</span>!
-  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-  </svg>
+        <h6 span class="fw-bold">Encounters:</h6>
+        <ul>
+            <li>Lake Trio - Uxie, Mesprit & Azelf</li>
+            <li>Weather Quartet - Tornadus, Thundurus, Landorus & Enamorus</li>
+            <li>Heatran</li>
+            <li>Cresselia</li>
+            <li>Manaphy/Phione</li>
+            <li>Shaymin</li>
+            <li>Darkrai</li>
+        </ul>
+
+    </div>
+</div>
+
+<hr /><div class="title" style="background-color: #6f3b97;">
+    <h1 class="text-light text-center pt-3 pb-3">Download & Installation</h1>
+</div>
+<hr />
+
+<p>The required downloads you will need will depend on the type of encounter you wish to RNG abuse. You do not need anything associated with Spawner RNG if you wish to manipulate a Main RNG encounter, and vice versa.</p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="setup-and-install-la">
+        <span class="fw-bold text-light">Required Downloads:</span>
+    </div>
+    <div class="card-body card-bg">
+        <h6 span class="fw-bold">Required Downloads:</h6>
+        <ul>
+            <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.404-windows-x64-installer" target="_blank" rel="noopener noreferrer">.NET 8.0</a></li>
+            <li><a href="./downloads/moarencounterbots.zip" download>Sysbot.NET - Moarencounterbots</a></li>
+            <li><a href="https://github.com/zyro670/PokeViewer.NET/releases/" target="_blank" rel="noopener noreferrer">PokeViewer.NET</a></li>
+            <li><a href="https://www.linqpad.net/" target="_blank" rel="noopener noreferrer">LINQPad 8</a></li>
+            <li><a href="https://github.com/olliz0r/sys-botbase/releases/" target="_blank" rel="noopener noreferrer">sys-botbase</a></li>
+            <li><a href="https://gist.github.com/Lusamine/87ecd66f2c07bc549a9ca0f42a39d74f" target="_blank" rel="noopener noreferrer">Main RNG Script</a></li>
+            <li><a href="https://gist.github.com/Lusamine/950888ce3906d19b1bb654de7399743e" target="_blank" rel="noopener noreferrer">Spawner RNG Script</a></li>
+        </ul>
+
+        <h6 span class="fw-bold">Installation Instructions:</h6>
+        <ol>
+            <li>Download and run the <code class="fw-bold">.NET installer</code>, then follow the setup instructions until fully complete. This is a required dependency.</li>
+            <li>Download and extract the contents of <code class="fw-bold">Moarencounterbots.zip</code> into an empty folder in a known location on your computer.</li>
+            <li>Download and extract the contents of <code class="fw-bold">PokeViewer.NET</code> into an empty folder in a known location on your computer.</li>
+            <li>Download the latest release of <code class="fw-bold">sys-botbase</code> and extract the <code class="fw-bold">atmosphere</code> folder to the root of your Switch SD card, then reboot the console.</li>
+            <li>Open the relevant script for the type of RNG manipulation you are performing in your browser, script setup will be expanded on later.</li>
+        </ol>
+
+    </div>
+</div>
+<br>
+
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Important -</span> This guide also comes with a pre-compiled download for SysBot.NET - Moarencounterbots. If you wish to use the absolute latest commit, you must build the project yourself by following <a href="https://billo-guides.github.io/misc/moarencounterbots/" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">this guide</a>.
+</div>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/general/main-rng/setup">
+    Continue to bot &amp; script setup <span class="fw-bold">Main RNG</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
 </a>
+<br>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/general/spawner-rng/setup">
+    Continue to bot &amp; script setup <span class="fw-bold">Spawner RNG</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+
+<!-- Popup modal for images goes at the bottom of any page, script.js follows. -->
+<div id="image-popup" class="popup">
+    <span class="popup-close" onclick="closePopup()">&times;</span>
+    <img id="popup-image" class="popup-image" src="" alt="Expanded Image">
+</div>
+
+<script src="script.js"></script>
+
+<!-- Image popup code ends here. -->

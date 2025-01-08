@@ -1,196 +1,196 @@
 ---
 layout: default
 title: Legends Arceus RNG Guide
-permalink: /cfw/la/general/main-rng
+permalink: /cfw/la/general/main-rng/setup
 ---
 
-<style>
-  .card-bg {
-    background-color: #d1d1d1;
-    border-bottom-right-radius: 0.20rem !important;
-    border-bottom-left-radius: 0.20rem !important;
-  }
+<div class="title" style="background-color: #6f3b97;">
+    <h1 class="text-light text-center pt-3 pb-3">Main RNG Setup</h1>
+</div>
+<hr />
 
-  table,
-  th,
-  td {
-    border: 1px solid black;
-  }
+<p>If you've made it this far, you're interested in RNG manipulation for Legendary and Mythical Pokemon that are associated with Main RNG. This page provides instructions for setting up the Main RNG Calculation Script, SysBot.NET, and PokeViewer. These programs help streamline the process of achieving desired results when using a CFW Switch console.</p>
 
-  blockquote {
-  background: #c5c5c5;
-  border: 1px solid #9e9e9e;
-  border-left: 5px solid #0c0038;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
-  }
-</style>
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Important -</span> From here it is assumed that you picked the correct RNG type for your desired encounter, and have followed all of the instruction instructions found on the main page of this guide. If you have not yet followed these instructions <a href="/cfw/la/general" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">click here to go back</a>.
+</div>
 
-<div class="title" style="background-color: #0c0038;">
-  <h1 class="text-light text-center pt-3 pb-3">Main RNG Legendary Abuse</h1>
-</div><hr />
-
-<p>This page offers guidance on RNG abusing Legendary Pokemon in Legends: Arceus that utilize Main RNG to generate internal values such as IVs and Nature. We will utilize RNG generator scripts and tools developed by <a href="https://github.com/Lusamine">Lusamine</a>.</p>
-
-<p><span class="fw-bold" style="color: #b60606;">From here it is assumed that you have already followed all of the setup instructions found on the introductory page of this guide.</span></p>
-
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/general/#setup-and-install-pla">
-  Didn't follow the setup instructions on the main page yet? <span class="fw-bold">Click here to go back</span>!
-  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-  </svg>
-</a><br>
+<span class="fw-bold">Figure 1 -</span> Main RNG Script Setup<p></p>
+<img src="/cfw/la/general/main-rng/images/setup/main-rng-script-setup.gif" alt="main-rng-setup-1" class="img-fluid clickable-image" data-image="/cfw/la/general/main-rng/images/setup/main-rng-script-setup.gif"><p></p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="requirements-main-rng">
-    <span class="fw-bold text-light">Scripts & Dependencies:</span>
-  </div>
-  <div class="card-body card-bg">
-    <h5><span class="fw-bold">You will need:</span></h5>
-    <ul>
-      <li><a href="https://gist.github.com/Lusamine/87ecd66f2c07bc549a9ca0f42a39d74f">Main RNG calculation script</a></li>
-      <li><a href="./downloads/PKHeX.Core.dll" download>PKHeX.Core.dll</a></li>
-    </ul>
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="main-script-setup-la">
+        <span class="fw-bold text-light">Main RNG Calculation Script Setup:</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>This script is used to calculate results based off of a given seed, it can be also be used to track your current advances when attempting to hit a target frame. Go through the following setup instructions to ensure that it is working properly before continuing.</p>
 
-    <h6><span class="fw-bold">Setup Instructions:</span></h6>
-    <ol>
-      <li>Open LINQPad, then change the <code span class="fw-bold">Language</code> in the header to C# program, delete any existing code left visible in the main window.</li>
-      <li>Copy the code from the Main RNG calculation script linked above, then paste it inside the main window.</li>
-      <li>Press F4 to open a sub window. Then click the <code span class="fw-bold">Add / Browse</code> button on the bottom left.</li>
-      <li>Locate <code span class="fw-bold">PKHeX.Core.dll</code> within your files and select it, this will add it to the <code span class="fw-bold">Additional References</code> tab.</li>
-      <li>Navigate to the <code span class="fw-bold">Namespace Imports</code> tab, then type "PKHeX.Core". Close the sub window once completed.</li>
-      <li>Enable compiler optimizations by clicking the small button at the bottom right of the main window.</li>
-      <li>Run the script by clicking the <code span class="fw-bold">▶ button</code>, You should now see the script output at the bottom of the window.</li>
-      <li>Once you have confirmed that the script is running correctly, save it in a known location on your computer.</li>
-    </ol>
+        <ol>
+            <li>Launch LINQPad, then change the <code class="fw-bold">Language</code> in the header to <code class="fw-bold">C# Program</code>, delete any extra code that appears after doing so.</li>
+            <p></p>
+            <li>Paste the contents of the <a href="https://gist.github.com/Lusamine/87ecd66f2c07bc549a9ca0f42a39d74f" target="_blank" rel="noopener noreferrer">Main RNG Script</a> into the main window of LINQPad, this is shown in the above image.</li>
+            <p></p>
+            <li>Press F4 to open the <code class="fw-bold">Query Properties</code> sub-window, then click the <code class="fw-bold">Add/Browse</code> button to open file explorer.</li>
+            <p></p>
+            <li>Navigate to the folder that contains the SysBot.NET download (this should be in a known location), then find and select <code class="fw-bold">PKHeX.Core.dll</code>.</li>
+            <p></p>
+            <li>Open the <code class="fw-bold">Namespace Imports</code> tab, then type <code class="fw-bold">PKHeX.Core</code>, then click the <code class="fw-bold">OK</code> button to close the sub window.</li>
+            <p></p>
+            <li>Enable compiler optimizations by pressing the button on the bottom-right of the main window, then run the script by pressing the <code class="fw-bold" style="color: green;">▶</code> button at the top of the window.</li>
+        </ol>
 
-    <details>
-      <summary><span class="fw-bold">Troubleshooting:</span></summary>
-      <ul>
-        <li>Ensure the Namespace Imports and Additional References are set up exactly as described above.</li>
-        <li>Ensure that Step 1 is followed exactly as described above, having extra unwanted code will cause the script to malfunction.</li>
-        <li>Having trouble with written instructions? Use <a href="https://billo-guides.github.io/cfw/la/general/images/main-rng/main-rng-script-setup.gif">this GIF</a> as a point of reference instead!</li>
-      </ul>
-    </details>
-  </div>
-</div><br>
+        <p>If done correctly, when pressing the <code class="fw-bold" style="color: green;">▶</code> button you should see a list of advances, this shows that the script is working as intended. Save the changes after confirming that the script is working properly.</p>
+
+    </div>
+</div>
+<br>
+
+<span class="fw-bold">Figure 2 -</span> Script Modifications (Filters)<p></p>
+<img src="/cfw/la/general/main-rng/images/setup/main-script-filters.gif" alt="main-rng-setup-2" class="img-fluid clickable-image" data-image="/cfw/la/general/main-rng/images/setup/main-script-filters.gif"><p></p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="pc-setup-main-rng">
-    <span class="fw-bold text-light">PC Setup:</span>
-  </div>
-  <div class="card-body card-bg">
-    <h5><span class="fw-bold">You will need:</span></h5>
-    <ul>
-      <li>Moarencounterbots open in Legends: Arceus mode.</li>
-      <li>PokeViewer.NET set up and ready to use.</li>
-    </ul>
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="main-script-filters-la">
+        <span class="fw-bold text-light">Script Modifications (Filters):</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>If you intend to search for specific IVs and Nature, you'll need to adjust the filters located towards the bottom of the script. By default, these filters are written as comments, meaning that any search will be conducted without applying any filters. To change the search filters, follow these steps:</p>
 
-    <h6><span class="fw-bold">Setup Instructions:</span></h6>
-    <ol>
-      <li>Open <code span class="fw-bold">Moarencounterbots</code> and confirm that <code span class="fw-bold">SysBot.NET Pokemon (LA)</code> is present in the header.</li>
-      <li>Navigate to the <code span class="fw-bold">Homebrew Menu</code> on your console, then press the <code span class="fw-bold">Y button</code>. Take note of the displayed IP address (NOT THE PORT).</li>
-      <li>Open <code span class="fw-bold">PokeViewer.NET</code> with Legends: Arceus open on your console, then type the local IP address of your console into the assigned field.</li>
-      <li>Click <code span class="fw-bold">Connect</code>, if you see a Legends: Arceus logo on screen, connection to the console was succesful.</li>
-    </ol>
+        <ol>
+            <li>Scroll down to the bottom of the script, until you reach the section that describes the search filter functionality (see Figure 2).</li>
+            <p></p>
+            <li>Remove the slashes <code class="fw-bold" style="color: green;">//</code> on the filters you wish to activate, or add them to filters you wish to deactivate.</li>
+            <p></p>
+            <li>Change the nature value if you are filtering for a specific nature, and set your desired IV values if you are filtering for IVs (IV order is HP/ATK/DEF/SPA/SPD/SPE).</li>
+            <p></p>
+            <li>Ensure that the gender filter is not active, as none of these legendary/mythical Pokemon have specific genders.</li>
+        </ol>
 
-    <details>
-      <summary><span class="fw-bold">Troubleshooting:</span></summary>
-      <p>Visit the relevant Wiki page for the program you are using to learn more about switching game modes, connectivity, and general program usage.</p>
-      <h6><span class="fw-bold">Wiki links:</span></h6>
-      <ul>
-        <li><a href="https://github.com/kwsch/SysBot.NET/wiki/Bot-Startup-Details#mode">Sysbot.NET</a></li>
-        <li><a href="https://github.com/zyro670/PokeViewer.NET/wiki">PokeViewer.NET</a></li>
-      </ul>
-    </details>
-  </div>
-</div><br>
+        <p>If you are searching for a rare target, such as a 6IV Pokemon with a specific nature, you may need to increase the search range. This can be done by scrolling to the top of the page and increasing the value inside the <code class="fw-bold">int maxAdvance</code> field.</p>
 
-<p><span class="fw-bold">Once you have confirmed that everything works as intended, you can move on to understanding how to use the script.</span></p>
+    </div>
+</div>
+<br>
 
-<hr /><div class="title" style="background-color: #0c0038;">
-  <h1 class="text-light text-center pt-3 pb-3">RNG Script Usage</h1>
-</div><hr />
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Important -</span> Ensure that the script is working as intended and that you have a basic understanding of how to apply/remove search filters. You should be comfortable with using the script before continuing.
+</div>
 
-<p>To execute the script, simply press the <code span class="fw-bold">▶ button</code>. This action enables us to view various spreads. It's important to note that these spreads correspond to the seed used in the script example (<code span class="fw-bold">E1CEA3FF1E3A9B5CB709ACB78FF71808</code>), not your current seed. You can confirm that the script is functioning correctly if results are displayed at the bottom of the LINQPad window.</p>
-
-<p>To determine your current Main RNG seed, you'll need to utilize Moarencounterbots. This program is essential for observing and tracking your current seed in real-time. Follow the step-by-step guide below to learn how to use the program effectively to find and monitor your current seed.</p>
+<span class="fw-bold">Figure 3 -</span> SysBot Setup<p></p>
+<img src="/cfw/la/general/main-rng/images/setup/initial-sysbot-setup.gif" alt="main-rng-setup-3" class="img-fluid clickable-image" data-image="/cfw/la/general/main-rng/images/setup/initial-sysbot-setup.gif"><p></p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="seed-information-main-rng">
-    <span class="fw-bold text-light">Finding & Monitoring Your Current Seed:</span>
-  </div>
-  <div class="card-body card-bg">
-    <h5 span class="fw-bold">Finding Your Current Seed:</h5>
-    <ul>
-      <li>Open Sysbot.NET and click the <code span class="fw-bold">Hub</code> tab, then open the <code span class="fw-bold">EncounterLA</code> dropdown menu.</li>
-      <li>Change <code span class="fw-bold">DisplaySeedMode</code> to Bit128 and <code span class="fw-bold">MonitorRefreshRate</code> to 0.</li>
-      <li>Head back to the <code span class="fw-bold">Bots</code> tab and select <code span class="fw-bold">EncBotCopySeedLA</code> in the dropdown menu.</li>
-      <li>Type the local IP address of your console into the assigned field, then add the bot (port should not be changed).</li>
-      <li>Open Legends: Arceus and press the <code span class="fw-bold">Home 🏠︎</code> button to freeze the RNG state.</li>
-      <li>Start the bot. You should now see your seed in the <code span class="fw-bold">Logs</code> tab, it will also automatically be copied to your clipboard.</li>
-    </ul><hr />
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="main-sysbot-setup-la">
+        <span class="fw-bold text-light">SysBot Setup:</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>SysBot.NET is used to find and monitor your current seed in real time, it does not come configured for use with Legends: Arceus automatically. If this is your first time using the program, follow the configuration intructions.</p>
 
-    <h5 span class="fw-bold">Monitoring Your Current Seed:</h5>
-    <ul>
-      <li>In the <code span class="fw-bold">Bots</code> tab, select <code span class="fw-bold">EncBotRNGMonitorLA</code> from the dropdown menu.</li>
-      <li>Type the local IP address of your console into the assigned field, then add the bot (port should not be changed).</li>
-      <li>Open Legends: Arceus and press the <code span class="fw-bold">Home 🏠︎</code> button to freeze the RNG state.</li>
-      <li>Start the bot then resume the game. You should now see your seed is being monitored inside the <code span class="fw-bold">Logs</code> tab in real time.</li>
-    </ul>
+        <h6 span class="fw-bold">Configuring SysBot.NET:</h6>
+        <ol>
+            <li>Launch <code class="fw-bold">SysBot.exe</code>, then close the program at least once to generate a file named <code class="fw-bold">config.json</code>.</li>
+            <p></p>
+            <li>Open <code class="fw-bold">config.json</code> in a text editor (e.g notepad or notepad++), then change the <code class="fw-bold">mode</code> to 3 and save the changes.</li>
+            <p></p>
+            <li>Re-launch <code class="fw-bold">SysBot.exe</code>, you should now see <code class="fw-bold">SysBot: Pokemon (LA)</code> in the program header, this means the bot can now be used with Legends: Arceus.</li>
+        </ol>
+        <hr />
 
-    <p>Once you have all everything configured properly inside the Hub, you can switch between <code span class="fw-bold">EncBotCopySeed</code> and <code span class="fw-bold">EncBotRNGMonitor</code> as often as you like without needing any further configuration.</p>
-  </div>
-</div><br>
+        <h6 span class="fw-bold">Finding Your Current Seed:</h6>
+        <ol>
+            <li>Open Sysbot.NET and click the <code span class="fw-bold">Hub</code> tab, then open the <code span class="fw-bold">EncounterLA</code> dropdown menu, then set <code span class="fw-bold">DisplaySeedMode</code> to Bit128, and set <code span class="fw-bold">MonitorRefreshRate</code> to 0.</li>
+            <p></p>
+            <li>Head back to the <code span class="fw-bold">Bots</code> tab and select <code span class="fw-bold">EncBotCopySeedLA</code> in the dropdown menu, type the IP address of your console into the assigned field, then add the bot (port should not be changed).</li>
+            <p></p>
+            <li>Open Legends: Arceus and enter the overworld, then press the <code span class="fw-bold">Home 🏠︎</code> button to freeze the RNG state, then start the bot. You should now see your current seed inside the <code span class="fw-bold">Logs</code> tab, it will be automatically copied to the clipboard.</li>
+            <p></p>
+        </ol>
+        <hr />
 
-<span class="fw-bold">Figure 1 -</span> Sysbot.NET Setup<p></p>
-<a href="/cfw/la/general/images/main-rng/moarencounterbots-setup.gif" target="_blank"><img src="/cfw/la/general/images/main-rng/moarencounterbots-setup.gif" class="img-fluid"></a><br /><br />
+        <h6 span class="fw-bold">Monitoring Your Current Seed:</h6>
+        <ol>
+            <li>In the <code span class="fw-bold">Bots</code> tab, select <code span class="fw-bold">EncBotRNGMonitorLA</code> from the dropdown menu, type the IP address of your console into the assigned field, then add the bot (port should not be changed).</li>
+            <p></p>
+            <li>Open Legends: Arceus and enter the overworld, then press the <code span class="fw-bold">Home 🏠︎</code> button to freeze the RNG state, then start the bot. You should now see your current seed is being monitored inside the <code span class="fw-bold">Logs</code> tab, it will be automatically copied to the clipboard.</li>
+            <p></p>
+            <li>Unpause the game and ensure that the RNG state is being monitored as intended before continuing. If you wish to begin monitoring from advance 0, you will need to remove and re-add the bot or restart the program.</li>
+        </ol>
 
-<p>Now that we have our current seed, we need to input it into the RNG script and set a range of frames to search through.</p>
+        <p>Once you have all everything configured properly inside the <code span class="fw-bold">Hub</code> tab, you can switch between <code span class="fw-bold">EncBotCopySeed</code> and <code span class="fw-bold">EncBotRNGMonitor</code> as often as you like without needing any further configuration.</p>
 
-<span class="fw-bold">Figure 2 -</span> Main RNG Script Configuration<p></p>
-<a href="/cfw/la/general/images/main-rng/script-config.gif" target="_blank"><img src="/cfw/la/general/images/main-rng/script-config.gif" class="img-fluid"></a><br /><br />
+    </div>
+</div>
+<br>
 
-<p>If you intend to search for specific IVs and Nature, you'll need to adjust the filters located towards the bottom of the script. By default, these filters are written as comments, meaning that any search will be conducted without applying any filters.</p>
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Important -</span> To refresh your seed, you'll need to restart the game and run <code span class="fw-bold">EncBotCopySeedLA</code> again until you find a desirable result. You should now have a general understanding of how to use the scripts and how to monitor your current seed using Moarencounterbots.
+</div>
 
-<p>A line of code that begins with <code class="fw-bold" style="color: #0a7a00;">//</code> is a comment. To activate the filters, simply remove the <code class="fw-bold" style="color: #0a7a00;">//</code> from the lines you wish to activate. Conversely, to deactivate a filter, add <code class="fw-bold" style="color: #0a7a00;">//</code> back onto the line (see below image).</p>
+<span class="fw-bold">Figure 4 -</span> PokeViewer Setup<p></p>
+<img src="/cfw/la/general/main-rng/images/setup/pokeviewer-setup.gif" alt="spawner-rng-setup-1" class="img-fluid clickable-image" data-image="/cfw/la/general/main-rng/images/setup/pokeviewer-setup.gif"><p></p>
 
-<span class="fw-bold">Figure 3 -</span> IV/Nature filtering<p></p>
-<a href="/cfw/la/general/images/main-rng/iv-nature-filters.gif" target="_blank"><img src="/cfw/la/general/images/main-rng/iv-nature-filters.gif" class="img-fluid"></a><br /><br />
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="spawner-pokeviewer-setup-la">
+        <span class="fw-bold text-light">PokeViewer Setup:</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>The main use of PokeViewer is to read the details of the Pokemon we are in battle with, this can then be compared with the Main RNG script to confirm that a target has been hit, and to help troubleshoot failed encounters.</p>
 
-<p>In this example, we've applied filters for a spread of 31/0/31/31/31/31 with a Calm nature by activating the IV and Nature filters. However, this seed requires a lengthy amount of advances before hitting the target frame, which could be considered to be an undesirable target frame.</p>
+        <ol>
+            <li>Launch <code class="fw-bold">PokeViewer.exe</code>, then type the local IP address of your console into the IP field, this can be found by opening the Homebrew Menu, then pressing the Y button.</li>
+            <p></p>
+            <li>Open the game and enter the overworld, then click the <code class="fw-bold">Connect</code> on PokeViewer. You should now see that the program is reading the details of your save file.</li>
+            <p></p>
+            <li>For Pokemon that engage in battle, navigate to the <code class="fw-bold">View</code> tab, after clicking the <code class="fw-bold">View</code> button, you should see the details of the Pokemon you are in battle with.</li>
+            <p></p>
+            <li>For Pokemon that go directly into a box slot (i.e. Origin Legend and Arceus), navigate to the <code class="fw-bold"> Box View</code> tab to view the details of the Pokemon instead.</li>
+        </ol>
 
-<p>To refresh your seed, you'll need to restart the game and run <code span class="fw-bold">EncBotCopySeedLA</code> again until you find a desirable result. You should now have a general understanding of how to use the scripts and how to monitor your current seed using Moarencounterbots.</p>
+    </div>
+</div>
+<br>
 
-<p>Each of these Legendaries will have slightly differing methods to use in order to RNG abuse them. For this reason each encounter will be covered on a seperate page. Click on the page of your desired hunt for a worked example of the entire process.</p>
+<div class="alert alert-success" style="border: 1px solid #28a745; border-radius: 5px; padding: 15px;">
+    <span class="fw-bold">Great!</span> You should now have a basic understanding of how to use each of the tools used for this type of RNG manipulation. Continue following the guide to see a worked example of how to perform each RNG from start to finish. The method used will vary slightly depending on your chosen target.
+</div>
 
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/legendary/main-rng/dialga-palkia">
-  <span class="fw-bold">For Dialga/Palkia, click here!</span>
-  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-  </svg>
-</a><br>
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/general/main-rng/dialga-palkia">
+    <span class="fw-bold">For Dialga/Palkia, click here!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+<br>
 
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/legendary/main-rng/arceus">
-  <span class="fw-bold">For Arceus, click here!</span>
-  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-  </svg>
-</a><br>
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/general/main-rng/arceus">
+    <span class="fw-bold">For Arceus, click here!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+<br>
 
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/legendary/main-rng/giratina">
-  <span class="fw-bold">For Giratina, click here!</span>
-  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-  </svg>
-</a><br>
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/general/main-rng/giratina">
+    <span class="fw-bold">For Giratina, click here!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+<br>
 
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/legendary/main-rng/regigigas">
-  <span class="fw-bold">For Regigigas, click here!</span>
-  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-  </svg>
-</a><br>
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/general/main-rng/regigigas">
+    <span class="fw-bold">For Regigigas, click here!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+<br>
 
-</div><hr />
+<!-- Popup modal for images goes at the bottom of any page, script.js follows. -->
+<div id="image-popup" class="popup">
+    <span class="popup-close" onclick="closePopup()">&times;</span>
+    <img id="popup-image" class="popup-image" src="" alt="Expanded Image">
+</div>
+
+<script src="script.js"></script>
+
+<!-- Image popup code ends here. -->

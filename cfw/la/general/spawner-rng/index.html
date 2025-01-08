@@ -1,195 +1,114 @@
 ---
 layout: default
-title: Legends Arceus RNG Guide
-permalink: /cfw/la/general/spawner-rng
+title: Spawner RNG Setup (CFW)
+permalink: /cfw/la/general/spawner-rng/setup
 ---
 
-<style>
-  mark {
-    background-color: #FFD700;
-    color: black;
-  }
+<div class="title" style="background-color: #6f3b97;">
+    <h1 class="text-light text-center pt-3 pb-3">Tool Setup (Spawner RNG)</h1>
+</div>
+<hr />
 
-  .card-bg {
-    background-color: #d1d1d1;
-    border-bottom-right-radius: 0.20rem !important;
-    border-bottom-left-radius: 0.20rem !important;
-  }
+<p>If you've made it this far, you're interested in RNG manipulation for Legendary and Mythical Pokemon that are associated with Spawner RNG. This page provides instructions for setting up SysBot.NET, the Spawner RNG Script, and PokeViewer. These programs help streamline the process of achieving desired results when using a CFW Switch console.</p>
 
-  table,
-  th,
-  td {
-    border: 1px solid black;
-  }
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Important -</span> From here it is assumed that you picked the correct RNG type for your desired encounter, and have followed all of the instruction instructions found on the main page of this guide. If you have not yet followed these instructions <a href="/cfw/la/general" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">click here to go back</a>.
+</div>
 
-  blockquote {
-  background: #c5c5c5;
-  border: 1px solid #9e9e9e;
-  border-left: 5px solid #0c0038;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
-  }
-</style>
+<span class="fw-bold">Figure 1 -</span> Spawner RNG Script Setup<p></p>
+<img src="./images/setup/spawner-script-setup.gif" alt="spawner-rng-setup-1" class="img-fluid clickable-image" data-image="./images/setup/spawner-script-setup.gif"><p></p>
 
-<div class="title" style="background-color: #0c0038;">
-  <h1 class="text-light text-center pt-3 pb-3">Spawner RNG Abuse</h1>
-</div><hr />
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="spawner-script-setup-la">
+        <span class="fw-bold text-light">Spawner RNG Script Setup:</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>The Spawner RNG script is technically optional, but is useful for tracking advances. It is recommended to go through the following setup instructions to ensure it is working properly:</p>
 
-<p>This page offers comprehensive guidance in RNG Legendary & Mythical abusing Pokemon that are associated with Spawner RNG. We'll utilize RNG automation programs developed by <a href="https://github.com/zyro670">Zyro670</a>, as referenced on the main page.</p>
+        <ol>
+            <li>Launch LINQPad, then change the <code class="fw-bold">Language</code> in the header to <code class="fw-bold">C# Program</code>, delete any extra code that appears after doing so.</li>
+            <p></p>
+            <li>Paste the contents of the <a href="https://gist.github.com/Lusamine/950888ce3906d19b1bb654de7399743e">Spawner RNG Script</a> into the main window of LINQPad, this is shown in the above image.</li>
+            <p></p>
+            <li>Press F4 to open the <code class="fw-bold">Query Properties</code> sub-window, then click the <code class="fw-bold">Add/Browse</code> button to open file explorer.</li>
+            <p></p>
+            <li>Navigate to the folder that contains the SysBot.NET download (this should be in a known location), then find and select <code class="fw-bold">PKHeX.Core.dll</code>.</li>
+            <p></p>
+            <li>Open the <code class="fw-bold">Namespace Imports</code> tab, then type <code class="fw-bold">PKHeX.Core</code>, then click the <code class="fw-bold">OK</code> button to close the sub window.</li>
+            <p></p>
+            <li>Enable compiler optimizations by pressing the button on the bottom-right of the main window, then run the script by pressing the <code class="fw-bold" style="color: green;">▶</code> button at the top of the window.</li>
+        </ol>
 
-<p><span class="fw-bold" style="color: #b60606;">From here it is assumed that you have already followed all of the relevant setup instructions & have read through all the information provided on the introductory page of this guide, including configuring SysBot.NET to be used with Legends: Arceus.</span></p>
+        <p>If done correctly, when pressing the <code class="fw-bold" style="color: green;">▶</code> button you should see a list of advances, this shows that the script is working as intended. Save the changes after confirming that the script is working properly.</p>
 
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/general">
-  Didn't follow the setup instructions on the main page yet? <span class="fw-bold">Click here to go back</span>!
-  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-  </svg>
+    </div>
+</div>
+<br>
+
+<span class="fw-bold">Figure 2 -</span> SysBot Setup<p></p>
+<img src="./images/setup/initial-sysbot-setup.gif" alt="spawner-rng-setup-1" class="img-fluid clickable-image" data-image="./images/setup/initial-sysbot-setup.gif"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="sysbot-setup-la">
+        <span class="fw-bold text-light">Initial SysBot Setup:</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>SysBot.NET does not come configured for use with Legends: Arceus automatically. If this is your first time using the program, follow these intructions:</p>
+
+        <ol>
+            <li>Launch <code class="fw-bold">SysBot.exe</code>, then close the program at least once to generate a file named <code class="fw-bold">config.json</code>.</li>
+            <p></p>
+            <li>Open <code class="fw-bold">config.json</code> in a text editor (e.g notepad or notepad++), then change the <code class="fw-bold">mode</code> to 3 and save the changes.</li>
+            <p></p>
+            <li>Re-launch <code class="fw-bold">SysBot.exe</code>, you should now see <code class="fw-bold">SysBot: Pokemon (LA)</code> in the program header, this means the bot can now be used with Legends: Arceus.</li>
+        </ol>
+
+        <p>This fork of SysBot.NET is used to automate the process of hunting for a desirable Pokemon. Finding a seed that matches your desired conditions may take a while, so removing the manual effort grants a singificant advantage. Setup for specific Pokemon will be covered later.</p>
+
+    </div>
+</div>
+<br>
+
+<span class="fw-bold">Figure 3 -</span> PokeViewer Setup<p></p>
+<img src="./images/setup/pokeviewer-setup.gif" alt="spawner-rng-setup-1" class="img-fluid clickable-image" data-image="./images/setup/pokeviewer-setup.gif"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="spawner-pokeviewer-setup-la">
+        <span class="fw-bold text-light">PokeViewer Setup:</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>The main use of PokeViewer is to read the details of the Pokemon we are in battle with, this can then be compared with the Spawner RNG script to track current advances and helps to avoid overshooting the target.</p>
+
+        <ol>
+            <li>Launch <code class="fw-bold">PokeViewer.exe</code>, then type the local IP address of your console into the IP field, this can be found by opening the Homebrew Menu, then pressing the Y button.</li>
+            <p></p>
+            <li>Open the game and enter the overworld, then click the <code class="fw-bold">Connect</code> on PokeViewer. You should now see that the program is reading the details of your save file.</li>
+            <p></p>
+            <li>Navigate to the <code class="fw-bold">View</code> tab, then enter a battle in-game, after clicking the <code class="fw-bold">View</code> button, you should see the details of the Pokemon you are in battle with.</li>
+        </ol>
+
+    </div>
+</div>
+<br>
+
+<div class="alert alert-success" style="border: 1px solid #28a745; border-radius: 5px; padding: 15px;">
+    <span class="fw-bold">Great!</span> You should now have a basic understanding of how to use each of the tools used for this type of RNG manipulation. Continue following the guide to see a worked example of how to perform the RNG from start to finish.
+</div>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/general/spawner-rng/worked-example">
+    Continue to the <span class="fw-bold">worked example</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
 </a>
 
-<hr /><div class="title" style="background-color: #0c0038;">
-  <h1 class="text-light text-center pt-3 pb-3">Getting Started</h1>
-</div><hr />
 
-<p>Firstly, you will need to adjust the settings inside the <code class="fw-bold">Hub</code> tab of SysBot.NET based on the specific details about Pokémon you want to hunt, such as the species and map location.</p>
+<!-- Popup modal for images goes at the bottom of any page, script.js follows. -->
+<div id="image-popup" class="popup">
+    <span class="popup-close" onclick="closePopup()">&times;</span>
+    <img id="popup-image" class="popup-image" src="" alt="Expanded Image">
+</div>
 
-<div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="sysbot-setup-spawner-rng">
-    <span class="fw-bold text-light">SysBot Setup:</span>
-  </div>
-  <div class="card-body card-bg">
-    <h5 class="fw-bold">Spawner RNG Setup:</h5>
-    <ol>
-      <li>In the <code class="fw-bold">ArceusLA</code> dropdown menu, set the <code class="fw-bold">BotType</code> to match the Pokemon you are hunting. For the Genies set this to <code class="fw-bold">GenieScanner</code> and for anything else use <code class="fw-bold">OtherLegendReset</code>.</li><p></p>
-      <li>Open the <code class="fw-bold">SpecialConditions</code> dropdown menu, then select the correct <code class="fw-bold">ScanLocation</code> based on the Pokemon you are hunting. If you have chosen <code class="fw-bold">OtherLegendReset</code>, select the correct Pokemon under <code class="fw-bold">TypeOfLegend</code> as well.</li><p></p>
-      <li>If your encounter is located within a cave, or if you have any issues with using character teleportation, set <code class="fw-bold">RunToProfessor</code> to <code class="fw-bold">True</code>, otherwise you can leave this set to <code class="fw-bold">False</code> to save time.</li><p></p>
-      <li>Set <code class="fw-bold">MaxAdvancesToSearch</code> to a comfortable amount; for Pokemon that do not immediately respawn, 50-100 advances are recommended as advancements can take a long time, 200-300 advances are recommended for everything else.</li><p></p>
-      <li>In the <code class="fw-bold">StopConditions</code> dropdown menu at the top, enter your desired IVs & Nature, you will need to close and re-open <code class="fw-bold">SysBot.exe</code> every time you change these settings to ensure they have been properly activated.</li><p></p>
-      <li>After re-opening <code class="fw-bold">SysBot.exe</code>, enter the local IP address of your console into the assigned field, and select <code class="fw-bold">ArceusLA</code> from the dropdown menu on the right, then add the bot to the list of active bots.</li><p></p>
-      <li>Active bots can then be started by using the <code class="fw-bold">Start All</code> button, and stopped using the <code class="fw-bold">Stop All</code> respectively. You can confirm that the bot is able to interact with the console at this stage if you wish.</li>
-    </ol>
+<script src="script.js"></script>
 
-    <blockquote>Ensure all controllers are disconnected, or that JoyCons are physically connected to the console before starting bots. Otherwise you will run into issues with the bots not accepting button inputs.</blockquote>
-  </div>
-</div><br>
-
-<span class="fw-bold">Figure 1 -</span> Sysbot.NET Setup<p></p>
-<a href="/cfw/la/general/images/spawner-rng/sysbot-setup-spawner.gif" target="_blank"><img src="/cfw/la/general/images/spawner-rng/sysbot-setup-spawner.gif" class="img-fluid"></a><br /><br />
-
-<p>Your setup should look similar to the above image, in this example the bot has been configured to search for an Enamorus with 6 perfect IVs.</p>
-
-  <details>
-      <summary><span class="fw-bold">More Information:</span></summary><p></p>
-      <ul>
-        <li><code class="fw-bold">BotType</code> is set to <code class="fw-bold">GenieScanner</code> because Enamorus is a genie.</li>
-        <li><code class="fw-bold">ScanLocation</code> has been set to Crimson Mirelands, because that is where Enamorus is located.</li>
-        <li><code class="fw-bold">StopConditions</code> have been set to search for an IV spread of 31/0/31/31/31/0.</li>
-      </ul>
-  </details><p></p>
-
-<div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="ingame-setup-spawner-rng">
-    <span class="fw-bold text-light">In-game Setup:</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>Setup will differ depending on which Pokemon you are hunting for, specifically if they are located in the main overworld or inside a cave.</p>
-
-    <h6 span class="fw-bold">Located in overworld:</h6>
-    <p>Start the game in Jubilife, then manually enter the map that contains your desired Pokemon.</p>
-
-    <blockquote><span class="fw-bold">These are -</span> Tornadus, Thundurus, Landorus, Enamorus, Cresselia, Shaymin & Darkrai.</blockquote><hr />
-
-    <h6 span class="fw-bold">Located in cave:</h6>
-    <p>Navigate to the cave that contains your desired Pokemon and stand directly outside the entrance.</p>
-    
-    <blockquote><span class="fw-bold">These are -</span> Uxie, Mesprit, Azelf, Heatran & Manaphy.</blockquote><hr />
-
-    <h6 span class="fw-bold">Recommendations:</h6>
-    <ul>
-      <li>Bring a strong Pokemon capable of quickly defeating the target.</li>
-      <li>Bring plenty of healing items (e.g Potions, Revives, Elixirs).</li>
-      <li>Bring plenty of throwable items (e.g Sticky Glob, Ball of Mud).</li>
-    </ul>
-  
-  </div>
-</div><br>
-
-<span class="fw-bold">Figure 2 -</span> In-game Setup (Overworld)<p></p>
-<a href="/cfw/la/general/images/spawner-rng/ingame-setup-spawner-overworld.gif" target="_blank"><img src="/cfw/la/general/images/spawner-rng/ingame-setup-spawner-overworld.gif" class="img-fluid"></a><br /><br />
-
-<span class="fw-bold">Figure 3 -</span> In-game Setup (Cave)<p></p>
-<a href="/cfw/la/general/images/spawner-rng/ingame-setup-spawner-cave.gif" target="_blank"><img src="/cfw/la/general/images/spawner-rng/ingame-setup-spawner-cave.gif" class="img-fluid"></a><br /><br />
-
-<p>The bot should now be configured properly and the player should now be correctly positioned in-game, after doing this you can now begin searching for a suitable target frame.</p>
-
-<span class="fw-bold">Figure 4 -</span> Searching For A Target<p></p>
-<a href="/cfw/la/general/images/spawner-rng/searching-for-a-target-spawner.gif" target="_blank"><img src="/cfw/la/general/images/spawner-rng/searching-for-a-target-spawner.gif" class="img-fluid"></a><br /><br />
-
-<p>After disconnecting the controllers and starting <code class="fw-bold">ArceusBot</code>, you will see that the bot has begun to automatically search for a desirable target seed, it will stop automatically when a result that matches your <code class="fw-bold">StopConditions</code> has been found.</p>
-  
-<span class="fw-bold">Figure 5 -</span> Target Found!<p></p>
-<a href="/cfw/la/general/images/spawner-rng/target-found-spawner.png" target="_blank"><img src="/cfw/la/general/images/spawner-rng/target-found-spawner.png" class="img-fluid"></a><br /><br />
-
-<p>A result has been found, in this case we have found a 31/0/31/31/31/0 Enamorus in 59 advances, it's now time to begin advancing towards the target frame until we reach the desired frame/advancement.</p>
-
-<div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="advancing-to-target-spawner">
-    <span class="fw-bold text-light">Advancing Towards The Target:</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>Frame advancement methods will differ depending on if your Pokemon is an forced capture or despawns when defeated, this section will cover how to advance frames in both of these scenarios.</p>
-
-    <h5 class="fw-bold">Despawns When Defeated:</h5>
-    <p><span class="fw-bold">These include -</span> Tornadus, Thundurus, Landorus, Enamorus, Shaymin & Darkrai.</p>
-
-    <ol>
-      <li>Knockout the legendary, then fly to a campsite.</li>
-      <li>Sleep until night, then sleep again until evening.</li>
-      <li>Fly to a cave and enter, then save and reboot the game.</li>
-      <li>(Optional but optimal) Fly to a campsite then sleep until evening.</li>
-      <li>Fly back to the legendary and wait 1 weather cycle for the legendary to respawn.</li>
-      <li>Repeat from step 1 until the desired frame has been hit.</li>
-    </ol>
-    
-    <blockquote><span class="fw-bold">Note -</span> Tornadus, Thundurus and Darkrai only respawn in certain conditions, Tornadus in a Blizzard, Thundurus in a Thunderstorm, and Darkrai at night.</blockquote>
-    <hr />
-
-    <h5 class="fw-bold">Forced Capture:</h5>
-    <p><span class="fw-bold">These include -</span> Uxie, Mesprit, Azelf, Heatran & Cresselia.</p>
-
-    <ol>
-      <li>Knockout the legendary.</li>
-      <li>Click through the menus until you regain control of your character.</li>
-      <li>Repeat from step 1 until the desired frame has been hit.</li>
-    </ol>
-
-    <blockquote><span class="fw-bold">Note - </span>All of these Pokemon are located in caves, with the exception of Cresselia, come well prepared to avoid needing to leave the area.</blockquote>
-    <hr />
-
-    <h5 class="fw-bold">Unique Cases:</h5>
-    <p><span class="fw-bold">These include -</span> Manaphy & Phione.</p>
-
-    <ol>
-      <li>Knockout the legendary, then fly to a campsite.</li>
-      <li>Sleep until night, then sleep again until evening.</li>
-      <li>Warp to Fire Pit Island and enter the cave, then save and reboot the game.</li>
-      <li>Fly back to the cave that contains Manaphy and wait 1 weather cycle for it to respawn.</li>
-      <li>Enter the cave, check to see if your Pokemon has respawned.</li>
-      <li>Repeat from step 1 until the desired frame has been hit.</li>
-    </ol>
-
-    <blockquote><span class="fw-bold">Note -</span> Manaphy & Phione are unique cases, they are contained inside a cave but do not immediately respawn. The method used to respawn these Pokemon is more akin to the method used for Overworld.</blockquote>
-
-  </div>
-</div><br>
-
-<p>NotForkBot offers an alternative method to advance frames that artificially alters the game time to simulate sleeping at a campsite, if you wish to use this method then see <a href="https://github.com/zyro670/NotForkBot.NET/wiki/">the Wiki</a> for more information instead.</li>
-
-<p>Use <a href="https://github.com/zyro670/PokeViewer.NET/wiki/1.-View">PokeViewer.NET's View function</a> if you lose track of your current frame. Compare the Pokémon's details (IVs, Nature, PID, EC) to the logs from SysBot.NET to determine your exact frame.</p> 
-  
-<span class="fw-bold">Figure 6 -</span> Result Found!<p></p>
-<a href="/cfw/la/general/images/spawner-rng/result-found-spawner.jpg" target="_blank"><img src="/cfw/la/general/images/spawner-rng/result-found-spawner.jpg" class="img-fluid"></a><br /><br />
-
-<p>After advancing 59 frames, the 31/0/31/31/31/0 Enamorus has been caught!</p>
-
-<p><span class="fw-bold">That's all there is to RNG abusing Legendary or Mythical Pokemon that are tied to Spawners!</span></p>
+<!-- Image popup code ends here. -->

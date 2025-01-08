@@ -1,0 +1,182 @@
+---
+layout: default
+title: Spawner RNG Worked Example (CFW)
+permalink: /cfw/la/general/spawner-rng/worked-example
+---
+
+<div class="title" style="background-color: #6f3b97;">
+    <h1 class="text-light text-center pt-3 pb-3">Spawner RNG Demonstration</h1>
+</div>
+<hr />
+
+<p>This page provides a worked example of how to effectively RNG manipulate Pokemon that are tied to spawner RNG, if you have made it this far, you should already know which Pokemon you wish to hunt, and have all of the relevant tools set up and ready to use.</p>
+
+<span class="fw-bold">Figure 1 -</span> In-Game Setup (Cave)<p></p>
+<img src="/cfw/la/general/spawner-rng/images/worked-example/ingame-setup-cave-spawner.jpg" alt="in-game-setup-1" class="img-fluid clickable-image" data-image="/cfw/la/general/spawner-rng/images/worked-example/ingame-setup-cave-spawner.jpg"><p></p>
+
+<span class="fw-bold">Figure 2 -</span> In-Game Setup (Overworld)<p></p>
+<img src="/cfw/la/general/spawner-rng/images/worked-example/ingame-setup-overworld-spawner.jpg" alt="in-game-setup-1" class="img-fluid clickable-image" data-image="/cfw/la/general/spawner-rng/images/worked-example/ingame-setup-overworld-spawner.jpg"><p></p>
+
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="ingame-setup-spawner-la">
+        <span class="fw-bold text-light">In-Game - Spawner RNG:</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Your in-game setup will vary depending on if your chosen Pokemon is located inside of a cave, or is wandering in the overworld. Follow the images above for an example of good positioning, then save the game after doing so.</p>
+
+        <ul>
+            <li>For Uxie, Mesprit, Azelf, Heatran &amp; Manaphy, stand directly outside the cave enterance (pictured in Figure 1).</li>
+            <p></p>
+            <li>For Cresselia, Shaymin, Darkrai, Tornadus, Thundurus, Landorus &amp; Enamorus, stand within talking distance of the guard in Jubilife (pictured in Figure 2)</li>
+        </ul>
+
+        <p>Advancing the RNG state for this type of encounter involves repeatedly knocking out, then respawning the Pokemon. For this reason you should stock up on PokeBalls (to capture the Pokemon), healing items (such as Elixirs and Potions), and throwable items (such as Mud Balls &amp; Sticky Glob), as you cannot leave back to Jubilife after finding a seed.</p>
+
+    </div>
+</div>
+<br />
+
+<span class="fw-bold">Figure 3 -</span> SysBot Setup<p></p>
+<img src="/cfw/la/general/spawner-rng/images/worked-example/sysbot-setup-spawner.gif" alt="sysbot-spawner-1" class="img-fluid clickable-image" data-image="/cfw/la/general/spawner-rng/images/worked-example/sysbot-setup-spawner.gif"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="sysbot-setup-spawner-la">
+        <span class="fw-bold text-light">SysBot Setup - Spawner RNG:</span>
+    </div>
+    <div class="card-body card-bg">
+        <h6 span class="fw-bold">SysBot Setup/Settings Toggles:</h6>
+        <ol>
+            <li>Launch <code class="fw-bold">SysBot.exe</code>, at this point you should already have the mode configured for Legends: Arceus. If you have not yet done this, visit this page.</li>
+            <p></p>
+            <li>Type the local IP address of your console into the IP field, your local IP can be found by opening the homebrew menu and pressing the Y button.</li>
+            <p></p>
+            <li>Open the <code class="fw-bold">Hub</code> tab, then navigate to the <code class="fw-bold">EncounterLA</code> dropdown menu, here you can configure the bot based on the Pokemon you are hunting.</li>
+            <p></p>
+            <li>Set the <code class="fw-bold">OWLegend</code> to the Pokemon you intend to hunt, then set the <code class="fw-bold">SearchDepth</code> to the amount of advances you wish to search through.</li>
+            <p></p>
+            <li>In the <code class="fw-bold">StopConditions</code> dropdown menu, set the IVs/Nature to match your desired Pokemon, close and re-open the program every time you change these settings.</li>
+            <p></p>
+            <li>Navigate back to the <code class="fw-bold">Bots</code> tab, then open the dropdown menu on the right, select <code class="fw-bold">EncBotOWLCheckRNGLA</code>, then click the <code class="fw-bold">Add</code> button.</li>
+        </ol>
+
+    </div>
+</div>
+<br>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="sysbot-setup-searchdepth">
+        <span class="fw-bold text-light">About SearchDepth:</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>The suggested <code class="fw-bold">SearchDepth</code> value will vary depending on the rarity of your Pokemon. You should also consider if your Pokemon respawns immediately or if in-game actions are required to respawn. Keep this in mind when choosing an appropriate <code class="fw-bold">SearchDepth</code> value.</p>
+
+        <p><span class="fw-bold">Uxie, Mesprit, Azelf, Heatran &amp; Cresselia -</span> These will take roughly 30-60 seconds per advance and will respawn immediately after being defeated.</p>
+
+        <p><span class="fw-bold">Manaphy, Shaymin, Darkrai, Tornadus, Thundurus, Landorus &amp; Enamorus -</span> These can take up to 5 minutes per advance and will require in-game actions to respawn them.</p>
+
+    </div>
+</div>
+<br>
+
+<hr /><div class="title" style="background-color: #6f3b97;">
+    <h1 class="text-light text-center pt-3 pb-3">Finding A Target Seed</h1>
+</div>
+<hr />
+
+<p>Ensure that the SysBot settings have been configured properly, stopconditions have been set, and you are standing in the correct position in-game before continuing. All of this information can be found above.</p>
+
+<p>After doing this, disconnect all controllers (or attach your joycons) then start the bot, you should now see that the bot has now began to automate the process of searching for a spawner seed.</p>
+
+<span class="fw-bold">Figure 4 -</span> Bot Started<p></p>
+<img src="/cfw/la/general/spawner-rng/images/worked-example/spawner-bot-started.gif" alt="sysbot-spawner-2" class="img-fluid clickable-image" data-image="/cfw/la/general/spawner-rng/images/worked-example/spawner-bot-started.gif"><p></p>
+
+<p>Based on the settings inside the SysBot <code class="fw-bold">Hub</code> tab, the bot has begun searching for an Enamorus within 10 advances that has an attack IV value of 0. The bot will now cycle through Jubilife until a result that meets these conditions has been found.</p>
+
+<span class="fw-bold">Figure 5 -</span> Target Found<p></p>
+<img src="/cfw/la/general/spawner-rng/images/worked-example/spawner-result-found.png" alt="result-found" class="img-fluid clickable-image" data-image="/cfw/la/general/spawner-rng/images/worked-example/spawner-result-found.png"><p></p>
+
+<p>The spawner seed and internal details of the Enamorus can be seen inside the <code class="fw-bold">Logs</code> tab. This seed can be entered into the Spawner RNG Script to help track your current RNG state if you wish, although this is technically optional as the bot can be restarted at any point to see how many advances remain until you reach your target.</p>
+
+<span class="fw-bold">Figure 6 -</span> Spawner RNG Script<p></p>
+<img src="/cfw/la/general/spawner-rng/images/worked-example/spawner-script-usage.gif" alt="spanwer-script-usage" class="img-fluid clickable-image" data-image="/cfw/la/general/spawner-rng/images/worked-example/spawner-script-usage.gif"><p></p>
+
+<p>Paste the seed into the Group Seed field at the top of the script (see image), set the search range, and start the search. If configured correctly, the script's search results should match the output produced by the bot. PokeViewer can be used to inspect the details of the Pokémon you are battling and compare them with the script to track your current advance.</p>
+
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Important -</span> If you are searching for Heatran while using the script, you will also need to modify the gender output, located at the top. Change the GenderCompare value to 127 instead of -1. Any other case should have this value set to -1.
+</div>
+
+<hr /><div class="title" style="background-color: #6f3b97;">
+    <h1 class="text-light text-center pt-3 pb-3">Advancing To The Target</h1>
+</div>
+<hr />
+
+<p>This section covers how to advance the RNG state to reach your desired result, the method used to advance the RNG state will vary depending on your desired Pokemon.</p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="advancing-to-target-spawner">
+        <span class="fw-bold text-light">Advancement Methods:</span>
+    </div>
+    <div class="card-body card-bg">
+
+        <span class="fw-bold">Despawns When Defeated:</span><br />
+        <p><small>Tornadus, Thundurus, Landorus, Enamorus, Shaymin &amp; Darkrai</small></p>
+
+        <ol>
+            <li>Knockout the legendary, then fly to a campsite.</li>
+            <li>Sleep 3 times, night -> morning -> evening.</li>
+            <li>Head to a cave and enter, then save and reboot the game.</li>
+            <li>Fly back to the legendary and wait for it to respawn.</li>
+            <li>Repeat from step 1 until the desired frame has been hit.</li>
+        </ol>
+
+        <span class="fw-bold">Note -</span> Tornadus, Thundurus and Darkrai only respawn in certain conditions, Tornadus in a Blizzard, Thundurus in a Thunderstorm, and Darkrai at night.
+        <hr />
+
+        <span class="fw-bold">Forced Capture:</span><br />
+        <p><small>Uxie, Mesprit, Azelf, Heatran &amp; Cresselia</small></p>
+
+        <ol>
+            <li>Knockout the legendary.</li>
+            <li>Click through the menus until you regain control of your character.</li>
+            <li>Repeat from step 1 until the desired frame has been hit.</li>
+        </ol>
+
+        <span class="fw-bold">Note - </span>All of these Pokemon are located in caves, with the exception of Cresselia, come well prepared to avoid needing to leave the area.
+        <hr />
+
+        <span class="fw-bold">Unique Cases:</span><br />
+        <p><small>Manaphy</small></p>
+
+        <ol>
+            <li>Knockout the legendary, then fly to a campsite.</li>
+            <li>Sleep 3 times, night -> morning -> evening.</li>
+            <li>Warp to Fire Pit Island and enter the cave, then save and reboot the game.</li>
+            <li>Fly back to Manaphy's cave, then wait until night time.</li>
+            <li>Enter the cave, check to see if Manaphy has respawned.</li>
+            <li>Repeat from step 1 until the desired frame has been hit.</li>
+        </ol>
+
+        <span class="fw-bold">Note -</span> Manaphy is a unique case, it is contained inside a cave but does not immediately respawn. The method used to respawn Manaphy is more akin to the method used for Overworld.
+
+    </div>
+</div>
+<br>
+
+<span class="fw-bold">Figure 7 -</span> Target Hit<p></p>
+<img src="/cfw/la/general/spawner-rng/images/worked-example/target-hit.png" alt="target-hit-spawner" class="img-fluid clickable-image" data-image="/cfw/la/general/spawner-rng/images/worked-example/target-hit.png"><p></p>
+
+<p>After advancing the required amount, then engaging in battle with Enamorus, you can use PokeViewer.NET to confirm that the stats of the Pokemon align with what is expected. You can also use the spawner RNG script to figure out exactly what advance you are on if the Pokemon does not match what is expected.</p>
+
+<p><span class="fw-bold">That's all there is to Spawner RNG for Legendary/Mythical Pokemon!</span></p>
+
+<!-- Popup modal for images goes at the bottom of any page, script.js follows. -->
+<div id="image-popup" class="popup">
+    <span class="popup-close" onclick="closePopup()">&times;</span>
+    <img id="popup-image" class="popup-image" src="" alt="Expanded Image">
+</div>
+
+<script src="script.js"></script>
+
+<!-- Image popup code ends here. -->
