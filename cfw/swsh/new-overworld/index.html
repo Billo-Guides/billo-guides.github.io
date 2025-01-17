@@ -12,46 +12,42 @@ permalink: /cfw/swsh/new-overworld
 <p>This guide provides in-depth coverage of how to use the Sword/Shield Overworld RNG tool (<a href="https://github.com/LegoFigure11/owoow/" target="_blank" rel="noopener noreferrer">owoow</a>), a tool created and developed by <a href="https://github.com/LegoFigure11" target="_blank" rel="noopener noreferrer">LegoFigure11</a>.</p>
 
 <h5 span class="fw-bold">Introduction</h5>
-<p>Overworld RNG manipulation is used to predict the internal details of upcoming wild encounters. It is possible to predict values such as IVs, Nature, Marks, Shiny Status, Size (Jumbo/Teensy Mark), Gender and more. This table contains information about the types of encounters that can be manipulated, provides example images, and outlines the benefits of picking each encounter type.</p>
+<p>Overworld RNG manipulation is used to predict the internal details of upcoming wild encounters. It is possible to predict values such as IVs, Nature, Marks, Shiny Status, Size (Jumbo/Teensy Mark), Gender and more. This table contains information about the types of encounters that can be manipulated, provides example images, and details of each encounter type.</p>
 
 <table class="table table-striped" style="width:100%" id="overworld-rng-table">
     <thead class="table text-white" style="background-color: #0c0038;">
         <tr>
-            <th scope="col" class="text-center" style="width:20%">Encounter</th>
+            <th scope="col" class="text-center" style="width:25%">Encounter</th>
             <th scope="col" class="text-center">Description</th>
-            <th scope="col" class="text-center">Difficulty</th>
+            <th scope="col" class="text-center" style="width:25%">Difficulty</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td class="text-center"><span class="fw-bold"><a href="./images/main-page/staticencounter.jpg" target="_blank" rel="noopener noreferrer">Static</a></span></td>
+            <td class="text-center"><span class="fw-bold"><a href="/cfw/swsh/new-overworld/images/main-page/encounter-types/staticsymbol.gif" target="_blank" rel="noopener noreferrer">Static Symbol</a></span></td>
             <td>
-                <p>Encounters that are guaranteed to produce a specific species, provided weather conditions remain unchanged.</p>
-                These encounters are not eligible for Brilliant Aura, meaning they cannot benefit from boosted shiny odds or IV bonuses.
+                Encounters in grass/water/caves that are guaranteed to produce a specific species, provided weather conditions remain unchanged.
             </td>
-            <td class="text-center"><span class="fw-bold" style="color: #008000;">Easy</span></td>
+            <td class="text-center"><span class="fw-bold" style="color: #008000;">Beginner</span></td>
         </tr>
         <tr>
-            <td class="text-center"><span class="fw-bold"><a href="./images/main-page/symbolencounter.jpg" target="_blank" rel="noopener noreferrer">Symbol</a></span></td>
+            <td class="text-center"><span class="fw-bold"><a href="/cfw/swsh/new-overworld/images/main-page/encounter-types/randomsymbol.gif" target="_blank" rel="noopener noreferrer">Random Symbol</a></span></td>
             <td>
-                <p>Random encounters that occur in grass, water, and caves, with species determined by an encounter slot value and current weather conditions.</p>
-                These encounters are eligible for Brilliant Aura, allowing for boosted shiny odds and IV bonuses. Players aiming for high IV targets may wish to prioritize this encounter type whenever possible.
+                Encounters in grass/water/caves where the species is determined at random by an encounter slot value (0-99) and current weather.
             </td>
-            <td class="text-center"><span class="fw-bold" style="color: #008000;">Easy</span></td>
+            <td class="text-center"><span class="fw-bold" style="color: #008000;">Beginner</span></td>
         </tr>
         <tr>
-            <td class="text-center"><span class="fw-bold"><a href="./images/main-page/hiddenencounter.jpg" target="_blank" rel="noopener noreferrer">Hidden</a></span></td>
+            <td class="text-center"><span class="fw-bold"><a href="/cfw/swsh/new-overworld/images/main-page/encounter-types/randomhidden.gif" target="_blank" rel="noopener noreferrer">Hidden</a></span></td>
             <td>
-                <p>Random encounters that occur in grass that do not have an overworld model. These encounters are indicated by the "!" symbol when walking into grass.</p>
-                These encounters are not eligible for Brilliant Aura, meaning they cannot benefit from boosted shiny odds or IV bonuses.
+                Random encounters in grass that do not have an overworld model, species is determined at random by an encounter slot value (0-99) and current weather.
             </td>
             <td class="text-center"><span class="fw-bold" style="color: #b60606;">Advanced</span></td>
         </tr>
         <tr>
-            <td class="text-center"><span class="fw-bold"><a href="./images/main-page/fishingencounter.jpg" target="_blank" rel="noopener noreferrer">Fishing</a></span></td>
+            <td class="text-center"><span class="fw-bold"><a href="/cfw/swsh/new-overworld/images/main-page/encounter-types/randomfishing.gif" target="_blank" rel="noopener noreferrer">Fishing</a></span></td>
             <td>
-                <p>Random encounters in fishing pools found in water, with species determined by an encounter slot value and current weather conditions.</p>
-                These encounters are eligible for Brilliant Aura, allowing for boosted shiny odds and IV bonuses. Players aiming for high IV targets may wish to prioritize this encounter type whenever possible.
+                Encounters in fishing pools where the species is determined at random by an encounter slot value (0-99) and current weather.
             </td>
             <td class="text-center"><span class="fw-bold" style="color: #996B00;">Intermediate</span></td>
         </tr>
@@ -117,7 +113,6 @@ permalink: /cfw/swsh/new-overworld
 <span class="fw-bold">Figure 2 -</span> Owoow Overview<p></p>
 <img src="./images/main-page/owoow-overview.gif" alt="owoow-overview" class="img-fluid clickable-image" data-image="./images/main-page/owoow-overview.gif"><p></p>
 
-
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c0038;" id="owoow-overview">
         <span class="fw-bold text-light">RNG Tool Overview:</span>
@@ -129,7 +124,7 @@ permalink: /cfw/swsh/new-overworld
         <h6><span class="fw-bold">Feature Overview:</span></h6>
         <ul>
             <li><span class="fw-bold">Left Side -</span> Provides seed information, connectivity features, and save file details such as Trainer IDs and Game Version.</li>
-            <li><span class="fw-bold">Center -</span> Select encounter details, calibrate NPC count, enter search range, and input other specific configurations.</li>
+            <li><span class="fw-bold">Center -</span> Select encounter details, calibrate NPC count, enter search range, and input other advanced configurations.</li>
             <li><span class="fw-bold">Right Side -</span> Input search filters, automate RNG state advancements, and read encounter details and more.</li>
         </ul>
         <hr />
