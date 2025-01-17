@@ -12,7 +12,7 @@ permalink: /cfw/swsh/new-overworld
 <p>This guide provides in-depth coverage of how to use the Sword/Shield Overworld RNG tool (<a href="https://github.com/LegoFigure11/owoow/" target="_blank" rel="noopener noreferrer">owoow</a>), a tool created and developed by <a href="https://github.com/LegoFigure11" target="_blank" rel="noopener noreferrer">LegoFigure11</a>.</p>
 
 <h5 span class="fw-bold">Introduction</h5>
-<p>Overworld RNG manipulation is used to predict the internal details of upcoming wild encounters. It is possible to predict values such as IVs, Nature, Marks, Shiny Status, Size (Jumbo/Teensy Mark), Gender and more. This table contains information about the types of encounters that can be manipulated, provides example images, and details of each encounter type.</p>
+<p>Overworld RNG manipulation is used to predict the details of upcoming wild encounters. It is possible to predict values such as IVs, Nature, Marks, Shiny Status, Size (Jumbo/Teensy Mark), Gender and more. This table contains information about the types of encounters that can be manipulated, provides example images, and details of each encounter type.</p>
 
 <table class="table table-striped" style="width:100%" id="overworld-rng-table">
     <thead class="table text-white" style="background-color: #0c0038;">
@@ -87,7 +87,6 @@ permalink: /cfw/swsh/new-overworld
             <li>Launch <code span class="fw-bold">owoow.exe</code>, ensure that the program launches properly with no issues.</li>
             <li>Type the local IP address of the console into the <code span class="fw-bold">Switch IP:</code> field.</li>
             <li>Enter the overworld in-game, then click <code span class="fw-bold">Connect</code> on owoow after doing so.</li>
-            <li>If done correctly, the program will now begin reading the details of your save file, and the seed fields on the top left will now be populated.</li>
         </ol>
 
     </div>
@@ -99,19 +98,18 @@ permalink: /cfw/swsh/new-overworld
 </div>
 
 <span class="fw-bold">Figure 1 -</span> Program Connectivity<p></p>
-<img src="./images/main-page/connection-successful.gif" alt="successful-connection" class="img-fluid clickable-image" data-image="./images/main-page/connection-successful.gif"><p></p>
+<img src="/cfw/swsh/new-overworld/images/main-page/connection-successful.gif" alt="successful-connection" class="img-fluid clickable-image" data-image="/cfw/swsh/new-overworld/images/main-page/connection-successful.gif"><p></p>
 
-<p>The above image shows what your program should look like after connecting, if all of the above steps were correctly followed.</p>
+<p>Figure 1 shows what the program should look like after connecting. If done correctly, you should see that the program has begun to read the details of your save file, and the seed fields on the top-left of the window have been populated.</p>
 
 <hr /><div class="title" style="background-color: #0c0038;">
     <h1 class="text-light text-center pt-3 pb-3">RNG Tool Overview</h1>
-</div>
-<hr />
+</div><hr />
 
 <p>This section provides program information and usage tips, if you do not already understand each of the features of the RNG tool, this is the place to be.</p>
 
 <span class="fw-bold">Figure 2 -</span> Owoow Overview<p></p>
-<img src="./images/main-page/owoow-overview.gif" alt="owoow-overview" class="img-fluid clickable-image" data-image="./images/main-page/owoow-overview.gif"><p></p>
+<img src="/cfw/swsh/new-overworld/images/main-page/owoow-overview.png" alt="owoow-overview" class="img-fluid clickable-image" data-image="/cfw/swsh/new-overworld/images/main-page/owoow-overview.png"><p></p>
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c0038;" id="owoow-overview">
@@ -119,18 +117,19 @@ permalink: /cfw/swsh/new-overworld
     </div>
     <div class="card-body card-bg">
         <p>Upon launching and connecting to owoow for the first time, you should see something similar to the above image. This tool calculates the details of upcoming Pokemon, then outputs the results in the table at the bottom (based on user-defined search parameters).</p>
-        <hr />
 
         <h6><span class="fw-bold">Feature Overview:</span></h6>
         <ul>
-            <li><span class="fw-bold">Left Side -</span> Provides seed information, connectivity features, and save file details such as Trainer IDs and Game Version.</li>
-            <li><span class="fw-bold">Center -</span> Select encounter details, calibrate NPC count, enter search range, and input other advanced configurations.</li>
-            <li><span class="fw-bold">Right Side -</span> Input search filters, automate RNG state advancements, and read encounter details and more.</li>
-        </ul>
-        <hr />
+            <li><span style="color: #E63946;" class="fw-bold">First Column -</span> Provides seed information, connectivity features, and save file details such as Trainer IDs and Game Version.</li>
+            <li><span style="color: #2A6F97;" class="fw-bold">Second Column -</span> Select any relevant encounter settings, enter encounter specific configurations, input search range, and calibrate NPC count.</li>
+            <li><span style="color: #7B2CBF;" class="fw-bold">Third Column -</span> Enter current Pokedex recommendations and input advanced settings for rain based and roaming encounters.</li>
+            <li><span style="color: #6B8E23;" class="fw-bold">Fourth Column -</span> Enter search filters, the more strict the search filters, the longer it will take to find a suitable target.</li>
+            <li><span style="color: #E87C3C;" class="fw-bold">Fifth Column -</span> Custom Firmware specific features, read encounter details, automate seed advances, reset for a desirable seed and more.</li>
 
-        <h6><span class="fw-bold">Automated Monitoring:</span></h6>
-        <p>After connecting to the program, the details of your save file (including IDs, Shiny/Mark Charm, and Game Version) will be automatically populated. Adjustments to these values are not required. Additionally, RNG seeds will be monitored in real-time, providing a seamless experience for tracking seed changes.</p>
+        </ul>
+
+        <h6><span class="fw-bold">Automated Seed Monitoring:</span></h6>
+        <p>After connecting to the program, the details of your save file will be automatically populated. Adjustments to these values are not required. Additionally, RNG seeds will be monitored in real-time, providing a seamless experience for tracking seed changes.</p>
 
         <p>The <code class="fw-bold">Adv:</code> field displays the total number of advancements since the initial connection in the first box, and the number of advancements occurring within the last ~500ms in the second box. The second box is primarily used to determine how many advancements a specific action consumes.</p>
     </div>
@@ -146,7 +145,7 @@ permalink: /cfw/swsh/new-overworld
 
 <h5 span class="fw-bold" id="advancing-the-rng-state">Advancing The RNG State:</h5>
 
-<p>There are various techniques used to advance the RNG state, some actions cause the RNG state to advance slowly, some actions advance in a predictable manner, and some cause the RNG state to advance rapidly in an unpredictable manner, read the information provided on the page below to learn more.</p>
+<p>Explore the various techniques used to advance the RNG state, some actions advance the RNG state slowly, some will advance in a predictable manner, and others will cause the state to advance in a rapid and unpredictable manner. Read the information provided on the page below to learn more.</p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/new-overworld/advancing-the-rng-state" target="_blank">
     Continue to <span class="fw-bold">advancing the RNG state</span>
@@ -158,7 +157,7 @@ permalink: /cfw/swsh/new-overworld
 
 <h5 span class="fw-bold" id="menu-close-prediction">Menu Close Prediction:</h5>
 
-<p>Menu close prediction is a technique used to advance the RNG state in a predictable manner in order to near guarantee success in hitting a specific target frame. This method is used extensively throughout the guide, regardless of the type of RNG you plan to do. It is highly recommended to understand how to utilize menu close prediction before continuing.</p>
+<p>This is a highly important technique used to advance the RNG state in a predictable manner. This helps to near guarantee success in hitting the correct target frame. Menu close prediction is used extensively throughout the guide, regardless of the type of RNG you choose to do.</p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/new-overworld/menu-close-prediction" target="_blank">
     Continue to <span class="fw-bold">menu close prediction</span>
@@ -169,8 +168,7 @@ permalink: /cfw/swsh/new-overworld
 <hr />
 
 <h5 span class="fw-bold" id="automation-methods">Automated Advancements &amp; Seed Resetting:</h5>
-
-<p>It is possible to automate certain methods used to advance the RNG state, such as date skipping and animations. It can also be used to automate the process of resetting for a desirable seed, this cuts out a significant portion of manual effort. It is recommended to read through the information in this page if you are interested in owoow's automation features.</p>
+<p>Using owoow's CFW features it is possible to automate certain methods used to advance the RNG state, such as date skipping and animations. The program also provides automation routines for resetting the game until a desirable seed has been found, which cuts out a significant portion of the manual effort.</p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/new-overworld/automation" target="_blank">
     Continue to <span class="fw-bold">automation methods</span>
@@ -179,11 +177,9 @@ permalink: /cfw/swsh/new-overworld
     </svg>
 </a>
 
-
 <hr /><div class="title" style="background-color: #0c0038;">
     <h1 class="text-light text-center pt-3 pb-3">Picking An Encounter Type</h1>
-</div>
-<hr />
+</div><hr />
 
 <p>By this stage, you should have all the necessary programs and tools functioning correctly, have a solid understanding of how to use the RNG tool, and be familiar with the methods used to advance the RNG state. Going forward, it will be assumed that you have a firm grasp of these three key concepts. If you are not yet familiar with the information presented on this page, please review the provided materials before selecting an encounter type.</p>
 
