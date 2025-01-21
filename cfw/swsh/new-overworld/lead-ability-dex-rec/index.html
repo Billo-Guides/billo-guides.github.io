@@ -1,0 +1,123 @@
+---
+layout: default
+title: Overworld RNG - Lead Ability And Dex Recommendations
+permalink: /cfw/swsh/new-overworld/lead-ability-dex-rec
+---
+
+<div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">Abilities &amp; Dex Recommendations</h1>
+</div>
+<hr />
+
+<p>This section explains advanced techniques involving the use of lead abilities and the using Pokedex recommendation feature. These methods are used to help determine:</p>
+
+<ul>
+    <li>The details of a spawned Pokemon (e.g., nature and gender).</li>
+    <li>The probability of spawning a particular Pokemon in the encounter table.</li>
+    <li>Increasing the likelihood of triggering a hidden encounter.</li>
+</ul>
+
+<p>This table provides information about each of the lead abilities and their use cases:</p>
+
+<table class="table table-striped" style="width:100%" id="overworld-rng-table">
+    <thead class="table text-white" style="background-color: #0c0038;">
+        <tr>
+            <th scope="col" class="text-center" style="width:30%">Ability</th>
+            <th scope="col" class="text-center">Overworld Effect</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td class="text-center"><span class="fw-bold">Synchronize</span></td>
+            <td>
+                The nature it has will apply to any encountered overworld Pokemon upon encountering, this can be used <u>after</u> the Pokemon has been spawned.
+            </td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold">Cute Charm</span></td>
+            <td>
+                If your lead Pokemon is the same species as the spawned Pokemon, increase the chances of that Pokemon having the opposite gender.
+            </td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold">Magnet Pull</span></td>
+            <td>
+                If there are STEEL TYPE Pokemon in the encounter table, increase the chances of spawning those Pokemon, otherwise, do nothing.
+            </td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold">Lightning Rod &amp; Static</span></td>
+            <td>
+                If there are ELECTRIC TYPE Pokemon in the encounter table, increase the chances of spawning those Pokemon, otherwise, do nothing.
+            </td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold">Flash Fire</span></td>
+            <td>
+                If there are FIRE TYPE Pokemon in the encounter table, increase the chances of spawning those Pokemon, otherwise, do nothing.
+            </td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold">Storm Drain</span></td>
+            <td>
+                If there are WATER TYPE Pokemon in the encounter table, increase the chances of spawning those Pokemon, otherwise, do nothing.
+            </td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold">Harvest</span></td>
+            <td>
+                If there are GRASS TYPE Pokemon in the encounter table, increase the chances of spawning those Pokemon, otherwise, do nothing.
+            </td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold">Compound Eyes &amp; Super Luck</span></td>
+            <td>
+                If the Pokemon can be spawned holding a random held item, increase the likelihood of this occuring, otherwise, do nothing.
+            </td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold">Arena Trap, Illuminate &amp; No Guard</span></td>
+            <td>
+                INCREASE the chances of spawning a hidden encounter, these abilities are important to use when manipulating hidden encounters.
+            </td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold">Quick Feet, Stench, White Smoke &amp; Infiltrator</span></td>
+            <td>
+                DECREASE the chances of spawning a hidden encounter, in most cases, these abilities should not be used on your lead Pokemon.
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+<hr /><div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">Pokedex Recommendations</h1>
+</div>
+<hr />
+
+<p>Upon opening the Pokedex, four Pokemon icons will be present on the left side of the screen, these four Pokemon are granted an increased spawn rate until the date is changed. This feature is commonly referred to as Pokedex recommendations or Dexrec. If the date has changed since the last time the Pokedex was opened, or if the Pokedex has not been opened at all, it is considered inactive. </p>
+
+<span class="fw-bold">Figure 1 -</span> Dexrec Example<p></p>
+<img src="/cfw/swsh/new-overworld/images/lead-ability-dex-rec/dex-rec-example.jpg" alt="dex-rec-1" class="img-fluid clickable-image" data-image="/cfw/swsh/new-overworld/images/lead-ability-dex-rec/dex-rec-example.jpg"><p></p>
+
+<p>In the above example, NidoranF, Sinistea, Heatmor and Magby are the currently boosted Pokemon, <span class="fw-bold">ANY encounter table that contains these Pokemon will have this boost applied!</span> This means that a particular Dexrec is global and not restricted to a specific area.</p>
+
+<p>Only the first form ID of a particular Pokemon will be boosted, for example, if our current Pokedex reccomendation is Sinistea, only the phony form will be boosted as this is considered to be Sinisteas first form, it is not possible to boost the antique form.</p>
+
+<p><small>Anubis has provided a <a href="https://x.com/Sibuna_Switch/status/1409064932113633282">research thread</a> about dex recommendation for those wanting to learn more.</small></p>
+
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <p><span class="fw-bold">Note -</span> Currently, we do not have any way to meaningfully control which Pokemon is boosted by Dexrec, for this reason, and combined with the fact that dex recommendations are cleared when using the date skipping advancement method, it will be difficult to utilize this method.</p> If you are not using date skipping, ensure that your dex recommendation has been set before you begin advancing towards a target, otherwise, leave the dex recommendation inactive.
+</div>
+
+<!-- Popup modal for images goes at the bottom of any page, script.js follows. -->
+<div id="image-popup" class="popup">
+    <span class="popup-close" onclick="closePopup()">&times;</span>
+    <img id="popup-image" class="popup-image" src="" alt="Expanded Image">
+</div>
+
+<script src="script.js"></script>
+
+<!-- Image popup code ends here. -->
