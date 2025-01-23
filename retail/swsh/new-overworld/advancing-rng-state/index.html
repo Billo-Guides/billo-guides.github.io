@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Overworld RNG - Advancing The RNG State
-permalink: /cfw/swsh/new-overworld/advancing-the-rng-state
+permalink: /retail/swsh/new-overworld/advancing-the-rng-state
 ---
 
 <div class="title" style="background-color: #0c0038;">
@@ -26,7 +26,7 @@ permalink: /cfw/swsh/new-overworld/advancing-the-rng-state
         <tr>
             <td class="text-center"><span class="fw-bold">Animations</span></td>
             <td>
-                Having your Pokemon animate on the party menu or summary screen by clicking in the <code class="fw-bold">L3</code> button, or by using the <code class="fw-bold">Skip</code> feature of the RNG tool.
+                Having your Pokemon animate on the party menu or summary screen by clicking in the <code class="fw-bold">L3</code> button (clicking in the left stick).
             </td>
             <td class="text-center">+1 advance per button input</td>
         </tr>
@@ -68,7 +68,7 @@ permalink: /cfw/swsh/new-overworld/advancing-the-rng-state
         <tr>
             <td class="text-center"><span class="fw-bold">Date Skipping</span></td>
             <td>
-                Using the <code span class="fw-bold">Skip</code> feature to advance towards targets, this is the quickest way to advance, but is often not a necessity unless you are seeking a very rare target.
+                Using the date skipping game exploit to advance towards targets, this is the quickest way to advance, but is often not a necessity unless you are seeking a very rare target.
             </td>
             <td class="text-center">Upwards of 16,000 advances per day skipped when optimized</td>
         </tr>
@@ -208,15 +208,38 @@ permalink: /cfw/swsh/new-overworld/advancing-the-rng-state
         <span class="fw-bold text-light">Advancement Method - Date Skipping</span>
     </div>
     <div class="card-body card-bg">
-        <p>The <code span class="fw-bold">Skip</code> feature of the RNG tool artificially adjusts the Switch system clock, which advances the RNG state rapidly. The number of advancements consumed per day skipped varies based on the number of Pokémon currently stored in boxes (excluding eggs). With optimal box management, it is possible to consume more than 16,000 advancements per day skipped.</p>
+        <p>Using the date skipping exploit to advance the RNG state rapidly. The number of advancements consumed per day skipped varies based on the number of Pokemon currently stored in boxes (excluding eggs). With optimal box management, it is possible to consume more than 16,000 advancements per day skipped.</p>
 
         <p><code span class="fw-bold">target frame / number of advances per day skipped = number of days to skip</code></p>
 
-        <h6 span class="fw-bold">Use cases:</h6>
-        <ul>
-            <li>Used to advance large distances, best suited when searching for very rare targets.</li>
-            <li>You can calculate the required amount of skips needed to reach a target frame.</li>
-        </ul>
+        <p>There are two versions of this exploit that can be used based on your setup, one requires partipating in a PVP battle, and the other requires interacting with a raid.</p>
+
+        <h6 span class="fw-bold">PVP Exploit (Recommended):</h6>
+        <ol>
+            <li>Open the game, enter any of the Wild Areas and visually observe raid locations.</li>
+            <li>Open the Y-Comm, connect to the internet, then select the Link Battle option.</li>
+            <li>Search for a battle with no code to find an online battle as quickly as possible.</li>
+            <li>Once you have entered the battle, concede by clicking the run button.</li>
+            <li>Change the console date forward in the System Settings, then enter the overworld.</li>
+            <li>If done correctly, you should see the currently active raids have changed location.</li>
+            <li>Navigate to an indoor location when skipping >1000 days to avoid crashing the game.</li>
+            <li>Repeat this process, the exploit will remain active until the game is restarted.</li>
+        </ol>
+
+        <p><small>Technically, you can activate the exploit without connecting online. This requires communicating in a local battle, which means you will need to have 2 switches and 2 copies of Sword/Shield to do so.</small></p>
+
+        <h6 span class="fw-bold">Raid Exploit (Slower):</h6>
+        <ol>
+            <li>Open the game, enter any of the Wild Areas find an inactive raid den.</li>
+            <li>Throw a Wishing Piece into the raid den, then interact with it.</li>
+            <li>Click invite others, then press the home button and navigate to System Settings.</li>
+            <li>Change the console date forward in the System Settings, then open the game again.</li>
+            <li>Back out of the raid and re-enter the overworld, and observe your raid den.</li>
+            <li>If done correctly, you should see that you are able to claim Watts from the den.</li>
+            <li>Repeat this process as much as you like.</li>
+        </ol>
+
+        <p><small>This exploit is much slower than the PVP exploit. Players should only use this method if they do not have NSO or access to a second console/game to communicate locally.</small></p>
     </div>
 </div>
 <br>
@@ -255,7 +278,7 @@ permalink: /cfw/swsh/new-overworld/advancing-the-rng-state
 </div>
 <br />
 
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/new-overworld#the-basics" target="_blank">
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/new-overworld#the-basics" target="_blank">
     Head back to the <span class="fw-bold">main page</span>
     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
