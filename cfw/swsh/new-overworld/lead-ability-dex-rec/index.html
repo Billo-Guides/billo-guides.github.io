@@ -12,7 +12,6 @@ permalink: /cfw/swsh/new-overworld/lead-ability-dex-rec
 </small>
 <hr />
 
-
 <p>This section explains advanced techniques involving the use of lead abilities and the using Pokedex recommendation feature. These methods are used to influence the following:</p>
 
 <ul>
@@ -106,21 +105,52 @@ permalink: /cfw/swsh/new-overworld/lead-ability-dex-rec
 
 <p>Upon opening the Pokedex, four Pokemon icons will be present on the left side of the screen, these four Pokemon are granted an increased spawn rate until the date is changed. This feature is commonly referred to as Pokedex recommendations or Dexrec. If the date has changed since the last time the Pokedex was opened, or if the Pokedex has not been opened at all, it is considered inactive. </p>
 
-<span class="fw-bold">Figure 1 -</span> Dexrec Example<p></p>
+<span class="fw-bold">Figure 1 -</span> Dexrec Overview<p></p>
 <img src="/cfw/swsh/new-overworld/images/lead-ability-dex-rec/dex-rec-example.jpg" alt="dex-rec-1" class="img-fluid clickable-image" data-image="/cfw/swsh/new-overworld/images/lead-ability-dex-rec/dex-rec-example.jpg"><p></p>
 
-<p>In the above example, NidoranF, Sinistea, Heatmor and Magby are the currently boosted Pokemon, <span class="fw-bold">ANY encounter table that contains these Pokemon will have this boost applied!</span> This means that a particular Dexrec is global and not restricted to a specific area.</p>
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="dexrec-overview">
+        <span class="fw-bold text-light">Dexrec Overview:</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>In the above example, NidoranF, Sinistea, Heatmor and Magby are the currently boosted Pokemon, although the Dexrec was triggered in Giant's Bed, these Pokemon will have their spawn rate boosted globally, regardless of the current area, as long as the boosted Pokemon is present within an encounter table.</p>
 
-<p>Only the first form ID of a particular Pokemon will be boosted, for example, if our current Pokedex reccomendation is Sinistea, only the phony form will be boosted as this is considered to be Sinisteas first form, it is not possible to boost the antique form.</p>
+        <p>Only the first form ID of a particular Pokemon will be boosted. For example, if our currently boosted Pokemon is Sinistea, this boost will only apply to the Phony form (the first form ID for Sinistea). This means that Sinistea-Antique cannot have an encounter rate boost from Dexrec at all.</p>
 
-<p>If you have not completed your Pokedex, the recommendations you will see will prioritize Pokemon that you have not yet captured. Completing your Pokedex will cause the game to boost random Pokemon, which is the suggested method to use when targeting something specific.</p>
+        <p>If your Pokemon can only be found within a specific weather, it is recommended to stand inside any of the Wild Areas and set your weather condition to match the Pokemon you wish to boost. Drampa is our desired Dexrec, and this Pokemon can found in Thunderstorm, so before starting, we have relocated to the Wild Area and are standing in Thunderstorm weather, exact location does not matter.</p>
 
-<p><small>Anubis has provided a <a href="https://x.com/Sibuna_Switch/status/1409064932113633282">research thread</a> about dex recommendation for those wanting to learn more.</small></p>
+    </div>
+</div>
+<br />
+
+<span class="fw-bold">Figure 2 -</span> Rolling For Dexrec<p></p>
+<img src="/cfw/swsh/new-overworld/images/lead-ability-dex-rec/dex-rolling.jpg" alt="dex-rec-2" class="img-fluid clickable-image" data-image="/cfw/swsh/new-overworld/images/lead-ability-dex-rec/dex-rec-example.jpg"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="dexrec-rolling">
+        <span class="fw-bold text-light">Dexrec Rolling:</span>
+    </div>
+    <div class="card-body card-bg">
+        <h6 span class="fw-bold">Step-By-Step:</h6>
+        <ol>
+            <li>Stand in any of the Wild Areas, then use the Encounter Lookup feature of owoow to search for your desired Pokemon.</li>
+            <li>Take note of the weather condition that your Pokemon can be spawned in, then change the current weather to match.</li>
+            <li>View the Pokedex to activate your daily dex recommendations, if this is not what you want, exit back into the overworld.</li>
+            <li>Use any method of date skipping to reset daily events, then view the map again, repeat until you have achieved your desired Dexrec.</li>
+        </ol>
+
+        <p>Ensure that you save after you have finished rolling for Dexrecs, as restarting the game will cause you to see the same Pokemon every single time due to the way the game stores the Dexrec seed.</p>
+
+        <h6 span class="fw-bold">About Date Skipping:</h6>
+        <p>The list of currently boosted Pokemon changes on every new day, this means that a dexrec cannot be stored past the day it was generated on. Due to having no real control over which Pokemon is boosted, this cannot be combined with the date skipping advancement method.</p>
+
+        <p>If you are not using date skipping, roll your desired Dexrec and save the game, take note of the date the game has been saved on to avoid unintentionally rolling the current recommendations due to natural time progression.</p>
+    </div>
+</div>
+<br />
 
 <div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
-    <p><span class="fw-bold">Note -</span> Currently, we do not have any way to meaningfully control which Pokemon are boosted by Dexrec. For this reason, and because dex recommendation is cleared on each new day, it will be extremely unlikely to have a desirable Dexrec when using the date skipping advancement method.</p>
-    <p>If you are not using date skipping, ensure that the correct dex recommendation has been set before you begin searching for/advancing to targets, otherwise, leave the dex recommendation inactive.</p>
-       The dex recommendation seed is constant, meaning if you reset the game and advance the dexrec seed, you will see the same results every time. To avoid this, ensure you save after advancing the dexrec seed.
+    <span class="fw-bold">Important -</span> For incomplete Pokedexes, the recommendations you will see will prioritize Pokemon that you have not yet captured. Completing your Pokedex will cause the game to boost random Pokemon, it is suggested to complete your Pokedex before rolling for Dexrec.
 </div>
 
 <!-- Popup modal for images goes at the bottom of any page, script.js follows. -->
