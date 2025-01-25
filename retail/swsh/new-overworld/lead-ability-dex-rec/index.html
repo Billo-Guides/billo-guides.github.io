@@ -12,7 +12,6 @@ permalink: /retail/swsh/new-overworld/lead-ability-dex-rec
 </small>
 <hr />
 
-
 <p>This section explains advanced techniques involving the use of lead abilities and the using Pokedex recommendation feature. These methods are used to influence the following:</p>
 
 <ul>
@@ -104,7 +103,13 @@ permalink: /retail/swsh/new-overworld/lead-ability-dex-rec
 </small>
 <hr />
 
-<p>Upon opening the Pokedex, four Pokemon icons will be present on the left side of the screen, these four Pokemon are granted an increased spawn rate until the date is changed. This feature is commonly referred to as Pokedex recommendations or Dexrec. If the date has changed since the last time the Pokedex was opened, or if the Pokedex has not been opened at all, it is considered inactive. </p>
+<p>Upon opening the Pokedex, you should see up to 4 Pokemon at a specific location on the map. These Pokemon have an increased spawn rate anywhere in the world as long as they are in the current encounter table. The order they are listed on the bottom right of the screen is from #1-#4 for the purpose of RNG manipulation. This feature is commonly referred to as "Pokedex Recommendations" or "DexRec".</p>
+
+<p>If you have not yet looked at your Pokedex, or the date has naturally rolled over or date skipping has been used since the last time the Pokedex was opened, the current DexRec is considered inactive until you look at the Pokedex again.</p>
+
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Important -</span> For incomplete Pokedexes, the recommendations you will see will prioritize Pokemon that you have not yet captured. Completing the Pokedex will cause the game to boost random Pokemon, it is suggested to complete your Pokedex before rolling DexRec.
+</div>
 
 <span class="fw-bold">Figure 1 -</span> Dexrec Overview<p></p>
 <img src="/cfw/swsh/new-overworld/images/lead-ability-dex-rec/dex-rec-example.jpg" alt="dex-rec-1" class="img-fluid clickable-image" data-image="/cfw/swsh/new-overworld/images/lead-ability-dex-rec/dex-rec-example.jpg"><p></p>
@@ -114,11 +119,16 @@ permalink: /retail/swsh/new-overworld/lead-ability-dex-rec
         <span class="fw-bold text-light">Dexrec Overview:</span>
     </div>
     <div class="card-body card-bg">
-        <p>In the above example, NidoranF, Sinistea, Heatmor and Magby are the currently boosted Pokemon, although the Dexrec was triggered in Giant's Bed, these Pokemon will have their spawn rate boosted globally, regardless of the current area, as long as the boosted Pokemon is present within an encounter table.</p>
+        <p>In the above example, NidoranF, Sinistea, Heatmor and Magby are the currently boosted Pokemon. Although the DexRec was triggered in Old Cemetery, these Pokemon will have their spawn rate boosted globally regardless of the current area, as long as the boosted Pokemon is present within an encounter table.</p>
 
-        <p>Only the first form ID of a particular Pokemon will be boosted. For example, if our currently boosted Pokemon is Sinistea, this boost will only apply to the Phony form (the first form ID for Sinistea). This means that Sinistea-Antique cannot have an encounter rate boost from Dexrec at all.</p>
+        <p>Only the first form ID of a particular Pokemon will be boosted. For example, if our currently boosted Pokemon is Sinistea the spawn rate boost will only apply to the Phony form (the first form ID for Sinistea). This means that Sinistea-Antique cannot have an encounter rate boost from DexRec at all.</p>
 
-        <p>If your Pokemon can only be found within a specific weather, it is recommended to stand inside any of the Wild Areas and set your weather condition to match the Pokemon you wish to boost. Drampa is our desired Dexrec, and this Pokemon can found in Thunderstorm, so before starting, we have relocated to the Wild Area and are standing in Thunderstorm weather, exact location does not matter.</p>
+        <p>For Pokemon can only be found in specific weather conditions, you will first need to find the location of your desired Pokemon, then set the weather condition <u>in that area</u> to match the required weather needed to spawn the Pokemon (example below). Owoows <code span class="fw-bold">Encounter Lookup</code> feature can be used to quickly find details about a particular Pokemon.</p>
+
+        <details>
+            <summary><span class="fw-bold">Example:</span></summary>
+            <p>If your desired DexRec is Drampa, which is found in the Lake of Outrage in Thunderstorm weather, you will need to change the current weather condition in the Lake of Outrage to Thunderstorm.</p>
+        </details>
 
     </div>
 </div>
@@ -135,23 +145,22 @@ permalink: /retail/swsh/new-overworld/lead-ability-dex-rec
         <h6 span class="fw-bold">Step-By-Step:</h6>
         <ol>
             <li>Stand in any of the Wild Areas, then use the Encounter Lookup feature of owoow to search for your desired Pokemon.</li>
-            <li>Take note of the weather condition that your Pokemon can be spawned in, then change the current weather to match.</li>
+            <li>Take note of the location that contains your desired Pokemon, and the weather condition required to spawn it.</li>
+            <li>Change the date within the System Settings until you get the desired weather condition in the correct location.</li>
             <li>View the Pokedex to activate your daily dex recommendations, if this is not what you want, exit back into the overworld.</li>
-            <li>Use any method of date skipping to reset daily events, then view the Pokedex again, repeat until you have achieved your desired Dexrec.</li>
+            <li>Use date skipping method to reset daily events, then view the Pokedex again, repeat until you have achieved your desired DexRec.</li>
         </ol>
 
-        <p>Ensure that you save after you have finished rolling for Dexrecs, as restarting the game will cause you to see the same Pokemon every single time due to the way the game stores the Dexrec seed.</p>
-
         <h6 span class="fw-bold">About Date Skipping:</h6>
-        <p>The list of currently boosted Pokemon changes on every new day, this means that a dexrec cannot be stored past the day it was generated on. Due to having no real control over which Pokemon is boosted, this cannot be combined with the date skipping advancement method.</p>
+        <p>DexRec is cleared after a day advances. You can change the date freely as long as you don't do the actual advance, but for obvious reasons, you cannot combine DexRec boosting and date skipping advancements.</p>
 
-        <p>If you are not using date skipping, roll your desired Dexrec and save the game, take note of the date the game has been saved on to avoid unintentionally rolling the current recommendations due to natural time progression.</p>
+        <p>If you are not using date skipping, roll your desired DexRec and save the game, take note of the date the game has been saved on to avoid unintentionally rolling the current recommendations due to natural time progression.</p>
     </div>
 </div>
 <br />
 
 <div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
-    <span class="fw-bold">Important -</span> For incomplete Pokedexes, the recommendations you will see will prioritize Pokemon that you have not yet captured. Completing your Pokedex will cause the game to boost random Pokemon, it is suggested to complete your Pokedex before rolling for Dexrec.
+    <span class="fw-bold">Important -</span> DexRec rolling is deterministic. If you roll 100 days, then reset and roll another 100 days, you will see the same results both times. You should save after you roll even if you did not get your desired DexRec.
 </div>
 
 <!-- Popup modal for images goes at the bottom of any page, script.js follows. -->
