@@ -1,0 +1,94 @@
+---
+layout: default
+title: Finding TID/SID (SwSh)
+permalink: /retail/swsh/new-overworld/tid-sid
+---
+
+<div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">5 Digit TID/SID</h1>
+</div>
+<hr />
+
+<p>This tutorial provides a range of methods for how you can find your 5 digit TID/SID combination in Sword/Shield. Knowing these values is necessary if you wish to RNG abuse Shiny Pokémon from overworld encounters.</p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="possible-methods-tidsid">
+        <span class="fw-bold text-light">Possible Methods:</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>It is not possible to RNG abuse your TID or SID in Sword/Shield. This tutorial is only for finding your internal TID/SID on an existing save file. There are three possible methods you can use, these are:</p>
+
+        <h6><span class="fw-bold">Using SysBot.NET</span></h6>
+        <p>SysBot.NET is a bot service hosted by members of the community, typically found in Discord servers. If you do not have access to a SysBot, you can find a public server with a quick Google search.</p>
+
+        <p>SysBots come with dump functionality, which dumps the data of the shown Pokémon into a <code span class="fw-bold">.pk8</code> file, this file is then shared into your Discord messages with the bot.</p>
+
+        <p>The file can then be manually inspected using a program like PKHeX to view your TID/SID combination. This method is recommended as it takes the least effort, but does require a Nintendo Switch Online subscription.</p>
+        <hr />
+
+        <h6><span class="fw-bold">Help from a friend</span></h6>
+        <p>If you have a friend with a CFW Switch console, they are capable of dumping the file for you, but they will need access to PKHeX to do so.</p>
+
+        <p>You can also have a friend check your TID/SID combination if you do not have access to PKHeX. PKHeX only works on Windows devices. This method is only recommended if you do not have any access to a Sword/Shield SysBot.</p>
+    </div>
+</div>
+<br>
+
+<hr /><div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">Finding TID/SID using CFW</h1>
+</div>
+<hr />
+
+<p>As mentioned above, by having access to a CFW Switch console we can easily find our TID/SID combination. The method will differ slightly depending on if you are using a SysBot, or asking a friend to help.</p>
+
+<p>Keep in mind that SysBot hosts are not constantly available. Join a public server that contains an active Sword/Shield bot, then follow the instructions given by the bot host. If you do not have a Discord account you will need to make one or ask a friend for help instead.</p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="cfw-method-tidsid">
+        <span class="fw-bold text-light">Using CFW - Instructions</span>
+    </div>
+    <div class="card-body card-bg">
+        <h6><span class="fw-bold">Requirements:</span></h6>
+        <ul>
+            <li><a href="https://projectpokemon.org/home/files/file/1-pkhex/">PKHeX</a></li>
+            <li>Nintendo Switch Online Subscription</li>
+            <li>A Discord account (If using SysBot.NET)</li>
+        </ul>
+
+        <h6><span class="fw-bold">Tutorial:</span></h6>
+        <ul>
+            <li>Extract the contents of the PKHeX download into an empty folder in a known location on your PC.</li>
+            <li>Click <code span class="fw-bold">Options</code> at the top of the window, then click <code span class="fw-bold">Settings</code>, change the Blank Save Version to Sword or Shield.</li>
+            <li>Dump the <code span class="fw-bold">.pk8</code> file of a Pokémon that was caught in the save file you wish to check the TID/SID on with a SysBot or with a friends help.</li>
+            <li>Download the file and drag it into the PKHeX window, you should now see the details on screen. Head over to the <code span class="fw-bold">OT/Misc</code> tab to view Trainer Information.</li>
+            <li>Hover over the TID field with your mouse, here you can see the 5 digit TID/SID combination. Take note of these values in a notepad file or similar.</li>
+        </ul>
+
+    </div>
+</div>
+<br>
+
+<span class="fw-bold">Figure 1 -</span> TID/SID Lookup<p></p>
+<img src="/retail/swsh/new-overworld/images/tid-sid/tid-lookup.gif" alt="tid-sid-1" class="img-fluid clickable-image" data-image="/retail/swsh/new-overworld/images/tid-sid/tid-lookup.gif"><p></p>
+
+<p>In this example we can see that the TID/SID combination is 28888/10267, now save this inside a text document, and into the assigned fields on Owoow.</p>
+
+<span class="fw-bold">Figure 2 -</span> Program Entry<p></p>
+<img src="/retail/swsh/new-overworld/images/tid-sid/program-entry.gif" alt="tid-sid-2" class="img-fluid clickable-image" data-image="/retail/swsh/new-overworld/images/tid-sid/program-entry.gif"><p></p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/new-overworld#the-basics" target="_blank">
+    Head back to the <span class="fw-bold">main page</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+
+<!-- Popup modal for images goes at the bottom of any page, script.js follows. -->
+<div id="image-popup" class="popup">
+    <span class="popup-close" onclick="closePopup()">&times;</span>
+    <img id="popup-image" class="popup-image" src="" alt="Expanded Image">
+</div>
+
+<script src="script.js"></script>
+
+<!-- Image popup code ends here. -->
