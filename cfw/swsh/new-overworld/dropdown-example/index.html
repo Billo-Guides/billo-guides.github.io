@@ -1,0 +1,89 @@
+---
+layout: default
+title: Dropdown Example
+permalink: /cfw/swsh/new-overworld/dropdown-example
+---
+
+<div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">Dropdown Example</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    Lorem ipsum dolor skibidi brainrot or whatever it is that the cool kids are saying these days.
+</small>
+<hr />
+
+<p>This page provides an example for using a HTML <code>&lt;select&gt;</code> element as well as JavaScript to display differing content on your page, depending on the dampness of your RNG.</p>
+
+<div class="mb-3 w-100">
+    <div class="row row-cols-1">
+        <div class="col">
+            <label for="moisture-select"><span class="fw-bold">Select required moistness level:</span></label>
+            <select id="moisture-select" class="form-select">
+                <option value=""></option>
+                <option value="dry">I am NOT in rain/thunderstorm!</option>
+                <option value="wet">I am in rain/thunderstorm!</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="info info-dry d-none">
+        {% include_relative dry.html %}
+    </div>
+    <div class="info info-wet d-none">
+        {% include_relative wet.html %}
+    </div>
+</div>
+
+<hr />
+
+<div class="alert alert-info" style="border: 1px solid #b6effb; border-radius: 5px; padding: 15px;">
+    The showing and hiding of information is controlled by the script in <code>dropdown-controls.js</code> in the same directory as this file. It works by:
+    <details>
+        <summary>Looking up the <code>&lt;select&gt;</code> element to target by its <code>id</code> attribute.</summary>
+        In jQuery (the library we are using), <code>#</code> denotes that whatever follows it is an <code>id</code>,
+        so in this case by typing <code>$("#moisture-select")</code> we are telling it to look for the HTML element 
+        with the <code>id</code> attribute <code>moisture-select</code>. You can change this to be whatever you want,
+        but remember that <code>id</code> attributes must always be unique on a page, and to update the <code>id</code>s
+        in both the HTML and script files. It is also important to change the <code>for</code> attribute of the
+        <code>&lt;label&gt;</code> element describing the select box to the new <code>id</code> in order to ensure
+        full accessibility functionality of the page.
+    </details>
+    <details>
+        <summary>Registering a function to run every time the targeted <code>&lt;select&gt;</code> element is changed.</summary>
+        This is done in jQuery by adding <code>.change(function() { // your code here });</code> to the initial selector,
+        as can be seen on Line 1 of the script file. I have shorthanded it to instead use a lambda function which looks like
+        <code>.change(() => { // your code here });</code> but functionally these are the same.
+    </details>
+    <details>
+        <summary>Get the value of the selected <code>&lt;option&gt;</code>.</summary>
+        Line 2 once again finds the <code>&lt;select&gt;</code> element by <code>id</code>, and then we use jQuery's 
+        <code>.val()</code> function to get the contents of the <code>value</code> property of its currently selected
+        <code>&lt;option&gt;</code> (see Line 22-24 of this HTML file). This is then stored into the variable 
+        <code>optionValue</code> so we can reference it later.
+    </details>
+    <details>
+        <summary>Hide every single element on the entire page with the class <code>info</code>.</summary>
+        We&apos;re using a separate <code>&lt;div&gt;</code> with the class <code>info</code> to act as a parent element
+        or container for every file we've added with <code>include_relative</code>. In jQuery, <code>.</code> denotes that
+        whatever follows is a <code>class</code> attribute. As <code>class</code>es, unlike <code>id</code>s, do not have
+        to be unique, <code>$(".info")</code> will automatically return ALL elements that have the class <code>info</code>.
+        Bootstrap (the other framework we use) provides a utility class <code>d-none</code> that will automatically hide an
+        element from view, and we can apply this to every element with the <code>info</code> class using jQuery's 
+        <code>.addClass(className)</code> function. This step, in full, looks like <code>$(".info").addClass("d-none");</code>
+        as seen on Line 4 of the script file.
+    </details>
+    <details>
+        <summary>Un-hiding the specific element containing the information we want to display.</summary>
+        The container <code>&lt;div&gt;</code>s also have <code>class</code>es specific to each option. The jQuery statement
+        <code>$(".info-" + optionValue).removeClass("d-none");</code> (Line 5) will first combine <code>.info-</code> and
+        the value of the variable <code>optionValue</code>, which we can recall is the <code>value</code> attribute of the
+        selected <code>option</code> (either blank, <code>dry</code>, or <code>wet</code> depending). jQuery then performs
+        a lookup for all elements matching either this <code>info-dry</code> or <code>info-wet</code> class, and attempts
+        to remove the <code>d-none</code> class from them. In the case of <code>optionValue</code> being blank (no option
+        selected), it will fail to find any elemnts matching the class <code>info-</code> and simply do nothing.
+    </details>
+</div>
+
+<script src="./dropdown-controls.js"></script>
