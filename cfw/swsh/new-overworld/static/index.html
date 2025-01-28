@@ -56,7 +56,6 @@ permalink: /cfw/swsh/new-overworld/static/
     </svg>
 </a><p></p>
 
-
 <span class="fw-bold">Figure 2 -</span> Game Setup<p></p>
 <img src="/cfw/swsh/new-overworld/images/static/game-setup-static.gif" alt="static-2" class="img-fluid clickable-image" data-image="/cfw/swsh/new-overworld/images/static/game-setup-static.gif"><p></p>
 
@@ -84,14 +83,23 @@ permalink: /cfw/swsh/new-overworld/static/
 </small>
 <hr />
 
-<p>Instructions for hitting a target frame depend on the selected weather condition. Rain and Thunderstorm are considered "advanced" and may be challenging for beginners. If this is your first time attempting this type of RNG manipulation, it is recommended to start with a different weather condition to familiarize yourself with the general process.</p>
+<p>The instructions for hitting a target frame depend on the selected weather condition. Rain and Thunderstorm are considered "advanced" and may be challenging for beginners. If this is your first time attempting this type of RNG manipulation, it is recommended to start with a different weather condition to familiarize yourself with the general process.</p>
+
+<p>At this point you should already know how to calibrate your NPC count, if you have forgotten how to do this, click the button directly below and revisit this page once complete.</p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/new-overworld/menu-close-prediction">
+    Forgot how to calibrate NPCs? <span class="fw-bold">click here to go back</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a><p></p>
 
 <div class="mb-3 w-100">
     <div class="row row-cols-1">
         <div class="col">
-            <label for="moisture-select"><span class="fw-bold">Select required moistness level:</span></label>
+            <label for="moisture-select"><span class="fw-bold">Select a weather condition:</span></label>
             <select id="moisture-select" class="form-select">
-                <option value="">Select a weather condition...</option>
+                <option value="">No weather condition selected...</option>
                 <option value="dry">I am NOT in Rain/Thunderstorm!</option>
                 <option value="wet">I am in Rain/Thunderstorm!</option>
             </select>

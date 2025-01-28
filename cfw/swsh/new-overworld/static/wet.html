@@ -1,1 +1,93 @@
-Oh no! Hope you brought an umbrella, or your code might get soggy. You can edit the contents of this example file in <code>cfw/swsh/new-overworld/dropdown-example/wet.html</code>.
+<span class="fw-bold">Figure 3 -</span> Calibrating Necessary Values<p></p>
+<img src="/cfw/swsh/new-overworld/images/static/calibrating-rain-ticks.gif" alt="static-3-wet" class="img-fluid clickable-image" data-image="/cfw/swsh/new-overworld/images/static/calibrating-rain-ticks.gif"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="calibrating-rain-ticks-static">
+        <span class="fw-bold text-light">Calibrating Necessary Values:</span>
+    </div>
+    <div class="card-body card-bg">
+        <h6 span class="fw-bold">What Are "Rain Ticks"?</h6>
+        <p>Rain ticks are the advances that occur as a result of Rain or Thunderstorm being active. Despite the sheer speed of advances caused by wet weather, the amount of advances that occur is predictable via calibration. Calibration can be done by using the <code span class="fw-bold">Advanced Settings</code> column of the main window.</p>
+
+        <h6 span class="fw-bold">Rain Tick Calibration</h6>
+        <ol>
+            <li>Save the game when stood as close to the spawn border of your target Pokemon as possible, do not reposition yourself after this point. Ideally you should be facing towards your Pokemon, so that holding up on your control stick triggers the spawner.</li>
+            <p></p>
+            <li>Calibrate your NPCs in any weather that is NOT Rain or Thunderstorm, then change the weather back after doing so. It is not possible to calibrate NPCs in wet weather.</li>
+            <p></p>
+            <li>Ensure that the <code span class="fw-bold">Consider Menu Close?</code> and <code span class="fw-bold">Holding Direction?</code> checkboxes on the main window are active, and enter your calibrated NPC count into the <code span class="fw-bold">NPCs</code> field.</li>
+            <p></p>
+            <li>In the <code span class="fw-bold">Advanced Settings</code> column, check the <code span class="fw-bold">Raining/Thunderstorming?</code> checkboxes. For now, keep the <code span class="fw-bold">Rain Ticks</code> value set to 0 for the sake of calibration.</li>
+            <p></p>
+            <li>Open the Pokemon party list, then disconnect and reconnect to owoow to reset your advances to 0. This step is important for an accurate calibration.</li>
+            <p></p>
+            <li>Back out from the party list to the main menu, then hold a direction on your control stick (hold whichever direction leads you to your target Pokemon).</li>
+            <p></p>
+            <li>Unpause the game while holding up on your control stick, then spawn the Pokemon in the overworld and initiate the encounter. Press the <code span class="fw-bold">Read Encounter</code> button on owoow when in-battle.</li>
+            <p></p>
+            <li>Press the <code span class="fw-bold">Copy IVs to Filters</code> button after reading the encounter, then click the <code span class="fw-bold">Calculate Rain Ticks</code> button, if done correctly, you should see a result pop-up.</li>
+            <p></p>
+            <li>Enter the calibrated value into the <code span class="fw-bold">Rain Ticks</code> field on the main owoow window, then restart the game and reconnect to the program. You can now begin searching for target frames.</li>
+        </ol>
+
+        <p>If there are multiple potential results when attempting to calibrate, consider repeating this process a few times until you get a common rain tick value. If you see "No results found", this means that you have done something wrong, try again.</p>
+
+    </div>
+</div>
+<br>
+
+<span class="fw-bold">Figure 4 -</span> Target Frame Found<p></p>
+<img src="/cfw/swsh/new-overworld/images/static/target-found-static-wet.png" alt="static-4-wet" class="img-fluid clickable-image" data-image="/cfw/swsh/new-overworld/images/static/target-found-static-wet.png"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="target-found-static-wet">
+        <span class="fw-bold text-light">Target Found:</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>In the above example, a Shiny, x Mark Duraludon can be found in a cluster of advances from x-y, a cluster is a group of frames that produce the same end result. It is recommended to target clusters where possible as this will further increase the chances of being able to hit your target frame.</p>
+
+        <h6 span class="fw-bold">Undesirable Result?</h6>
+        <ol>
+            <li>Close and re-open the game, then enter the overworld.</li>
+            <li>Disconnect and reconnect from the RNG tool.</li>
+            <li>Search for a new target frame until a desired result is found.</li>
+            <li>Alternatively, use owoows <code span class="fw-bold">Reset For Seed</code> feature to automate the reset process.</li>
+        </ol>
+
+    </div>
+</div>
+<br>
+
+<span class="fw-bold">Figure 5 -</span> Advancing To The Target<p></p>
+<img src="/cfw/swsh/new-overworld/images/static/advancing-to-the-target-wet.gif" alt="static-5-wet" class="img-fluid clickable-image" data-image="/cfw/swsh/new-overworld/images/static/advancing-to-the-target-wet.gif"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="advancing-to-target-static-wet">
+        <span class="fw-bold text-light">Advancing To The Target:</span>
+    </div>
+    <div class="card-body card-bg">
+        <h6 span class="fw-bold">Step-by-step:</h6>
+        <ol>
+            <li>Advance towards your target frame using wet weather advances or date skipping. Pause the game and open the party list once you are a few hundred frames away from your target.</li>
+            <p></p>
+            <li>Disconnect and reconnect to owoow, this will start your advances from 0. Double check that your NPC and Rain Tick values are set properly and search for your target frame again.</li>
+            <p></p>
+            <li>Ensure that the <code span class="fw-bold">Holding Direction?</code> checkbox is active, then back out from the party list into the main pause menu, hold a direction on your control stick at this point (towards the direction of the Pokemon spawner).</li>
+            <p></p>
+            <li>Unpause the game and run towards the spawner of your desired Pokemon, if done correctly, your Pokemon should have been spawned on the target frame, encounter it and check if it matches what is expected.</li>
+        </ol>
+    </div>
+</div>
+<br>
+
+<span class="fw-bold">Figure 6 -</span> Result Found!<p></p>
+<img src="/cfw/swsh/new-overworld/images/static/result-found-static-wet.gif" alt="static-6-wet" class="img-fluid clickable-image" data-image="/cfw/swsh/new-overworld/images/static/result-found-static-wet.gif"><p></p>
+
+<p><span class="fw-bold">That's all there is to RNG manipulating Static encounters in wet weather (CFW)!</span></p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/new-overworld/main-page">
+    Head back to the <span class="fw-bold">main page</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a><p></p>
