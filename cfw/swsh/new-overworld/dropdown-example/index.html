@@ -20,8 +20,8 @@ permalink: /cfw/swsh/new-overworld/dropdown-example/
             <label for="moisture-select"><span class="fw-bold">Select required moistness level:</span></label>
             <select id="moisture-select" class="form-select">
                 <option value=""></option>
-                <option value="dry">I am NOT in rain/thunderstorm!</option>
-                <option value="wet">I am in rain/thunderstorm!</option>
+                <option value="dry">I am NOT in Rain/Thunderstorm!</option>
+                <option value="wet">I am in Rain/Thunderstorm!</option>
             </select>
         </div>
     </div>
@@ -39,7 +39,7 @@ permalink: /cfw/swsh/new-overworld/dropdown-example/
 <hr />
 
 <div class="alert alert-info" style="border: 1px solid #b6effb; border-radius: 5px; padding: 15px;">
-    The showing and hiding of information is controlled by the script in <code>dropdown-controls.js</code> in the same directory as this file. It works by:
+    The showing and hiding of information is controlled by the script in <code>dropdown-controls.html</code> in the <code>_includes/shared/scripts/</code> directory. It works by:
     <details>
         <summary>Looking up the <code>&lt;select&gt;</code> element to target by its <code>id</code> attribute.</summary>
         In jQuery (the library we are using), <code>#</code> denotes that whatever follows it is an <code>id</code>,
@@ -85,5 +85,3 @@ permalink: /cfw/swsh/new-overworld/dropdown-example/
         selected), it will fail to find any elemnts matching the class <code>info-</code> and simply do nothing.
     </details>
 </div>
-
-<script src="./dropdown-controls.js"></script>

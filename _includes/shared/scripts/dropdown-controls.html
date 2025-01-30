@@ -1,0 +1,34 @@
+<script>
+$("#moisture-select").change(() => {
+    let optionValue = $("#moisture-select").val();
+
+    $(".info").addClass("d-none");
+    $(".info-" + optionValue).removeClass("d-none");
+
+    let url = window.location.href.split("?")[0];
+    console.log(url);   
+    if (!url.includes("#")) url += "#";
+    url += "?weather=" + optionValue;
+    console.log(url);
+    window.location.href = encodeURI(url);
+});
+
+$("document").ready(() => {
+    var qs = window.location.href.split("?");
+    if (qs.length > 1) {
+        var kv = qs.slice(1).join("").split("&");
+        for (const pair of kv) {
+            const [k, v] = pair.split("=");
+            switch (k) {
+                case "weather":
+                    if (v === "dry") {
+                        $("#moisture-select").val("dry").change();
+                    } else if (v === "wet") {
+                        $("#moisture-select").val("wet").change();
+                    }
+                    break;
+            }
+        }
+    }
+});
+</script>

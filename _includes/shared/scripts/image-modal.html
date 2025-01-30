@@ -1,3 +1,10 @@
+<!-- Popup modal for images goes at the bottom of any page -->
+<div id="image-popup" class="popup">
+    <span class="popup-close" onclick="closePopup()">&times;</span>
+    <img id="popup-image" class="popup-image" src="" alt="Expanded Image">
+</div>
+
+<script>
 $(document).ready(() => {
     // Get all clickable images
     const clickableImages = document.querySelectorAll(".clickable-image");
@@ -46,3 +53,4 @@ $(document).ready(() => {
         }
     }
 });
+</script>
