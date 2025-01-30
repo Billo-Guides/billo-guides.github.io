@@ -5,18 +5,16 @@ $("#moisture-select").change(() => {
     $(".info").addClass("d-none");
     $(".info-" + optionValue).removeClass("d-none");
 
-    let url = window.location.href.split("?")[0];
-    console.log(url);   
+    let url = window.location.href.split("?")[0]; 
     if (!url.includes("#")) url += "#";
     url += "?weather=" + optionValue;
-    console.log(url);
     window.location.href = encodeURI(url);
 });
 
 $("document").ready(() => {
-    var qs = window.location.href.split("?");
+    const qs = window.location.href.split("?");
     if (qs.length > 1) {
-        var kv = qs.slice(1).join("").split("&");
+        const kv = qs.slice(1).join("").split("&");
         for (const pair of kv) {
             const [k, v] = pair.split("=");
             switch (k) {
