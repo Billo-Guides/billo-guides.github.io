@@ -1,3 +1,5 @@
+<!--WET STATIC CFW-->
+
 <span class="fw-bold">Figure 3 -</span> Calibrating Necessary Values<p></p>
 <img src="/cfw/swsh/new-overworld/images/static/calibrating-rain-ticks.gif" alt="static-3-wet" class="img-fluid clickable-image" data-image="/cfw/swsh/new-overworld/images/static/calibrating-rain-ticks.gif"><p></p>
 
@@ -25,7 +27,7 @@
             <p></p>
             <li>Unpause the game while holding the correct direction on your control stick, then spawn the Pokemon in the overworld and initiate the encounter.</li>
             <p></p>
-            <li>On owoow, press the Press the <code span class="fw-bold">Read Encounter</code> button, then press <code span class="fw-bold">Copy IVs to Filters</code> button after reading the encounter.
+            <li>On owoow, press the Press the <code span class="fw-bold">Read Encounter</code> button, then press <code span class="fw-bold">Copy IVs to Filters</code> button after reading the encounter.</li>
             <p></p>
             <li>In <code span class="fw-bold">Advanced Settings</code>, click the <code span class="fw-bold">Calculate Rain Ticks</code> button, if done correctly you should see a result pop-up. Enter the calibrated value into the <code span class="fw-bold">Rain Ticks</code> field.</li>
             <p></p>
@@ -38,27 +40,35 @@
 </div>
 <br>
 
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Important -</span> DO NOT USE THE NPC FIELD INSIDE THE ADVANCED SETTINGS COLUMN, THIS IS ONLY USED FOR ROAMING ENCOUNTERS AND WILL RESULT IN INACCURACIES WHEN USED FOR ANYTHING ELSE.
+</div>
+
 <span class="fw-bold">Figure 4 -</span> Target Found<p></p>
 <img src="/cfw/swsh/new-overworld/images/static/target-found-static-wet.png" alt="static-4-wet" class="img-fluid clickable-image" data-image="/cfw/swsh/new-overworld/images/static/target-found-static-wet.png"><p></p>
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c0038;" id="advancing-to-target-static-wet">
-        <span class="fw-bold text-light">Advancing To The Target:</span>
+        <span class="fw-bold text-light">Advancing to the Target</span>
     </div>
     <div class="card-body card-bg">
-        <p>In Figure 4, a Shiny, Weather Mark Duraludon can be found in a cluster of advances from 9200-9203, a cluster is a group of frames that produce the same end result. It is recommended to target clusters where possible as this will further increase the chances of being able to hit your target frame.</p>
+        <p>In this example, a Shiny, Weather Mark Duraludon can be found in a cluster of advances from 9200-9203. Clusters are multiple frames that produce the same result, making them ideal for hitting the correct target frame. From here it is assumed that you have calibrated your current NPC and Rain Tick values.</p>
 
-        <h6 span class="fw-bold">Step-by-step:</h6>
+        <h6 class="fw-bold">Step-by-Step:</h6>
         <ol>
-            <li>Advance towards your target frame using wet weather advances or date skipping. Pause the game and open the party list once you are a few hundred frames away from your target.</li>
+            <li>Confirm that the <code class="fw-bold">Consider Menu Close?</code> &amp; <code class="fw-bold">Holding Direction?</code> boxes have been checked, and that your NPC count and Rain Ticks have been entered properly.</li>
             <p></p>
-            <li>Disconnect and reconnect to owoow, this will start your advances from 0. Double check that your NPC and Rain Tick values are set properly and search for your target frame again.</li>
+            <li>Advance towards your target using <u>wet weather</u> or <u>date-skipping</u> to maintain your current positioning and Rain Tick calibration.</li>
             <p></p>
-            <li>Use animations advancements to advance the rest of the way, do this until you reach your exact target frame (the image below displays the required amount of advances after re-connecting. In this case we would need advance 187 times using animations).</li>
+            <li>Pause the game, then open the Pokemon party list, this is where you will do the remainder of your advances using only <u>animations</u>.</li>
             <p></p>
-            <li>Ensure that the <code span class="fw-bold">Holding Direction?</code> checkbox is active, then back out from the party list into the main pause menu, hold a direction on your control stick at this point (towards the direction of the Pokemon spawner).</li>
+            <li>Disconnect and re-connect from owoow, this will reset your advances to 0. Keep the game paused on the party list from this point.</li>
             <p></p>
-            <li>Unpause the game and run towards the spawner of your desired Pokemon, if done correctly, your Pokemon should have been spawned on the target frame, encounter it and check if it matches what is expected.</li>
+            <li>Use <u>animations</u> to advance to your new target frame. Each <code class="fw-bold">L3</code> button input on the party list advances the RNG state by +1 (e.g., 100 inputs = 100 advances).</li>
+            <p></p>
+            <li>Back out from the party list into the main pause menu, then hold a direction on your control stick, pointing towards the spawner of your target Pokemon.</li>
+            <p></p>
+            <li>Unpause the game and quickly run toward the target Pokemon to spawn it in the overworld. Encounter the Pokemon and verify the results match what is expected.</li>
         </ol>
     </div>
 </div>

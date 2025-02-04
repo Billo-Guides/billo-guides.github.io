@@ -1,3 +1,5 @@
+<!--DRY STATIC CFW-->
+
 <span class="fw-bold">Figure 3 -</span> Relevant Calibration<p></p>
 <img src="/cfw/swsh/new-overworld/images/static/settings-toggles-static.gif" alt="static-3" class="img-fluid clickable-image" data-image="/cfw/swsh/new-overworld/images/static/settings-toggles-static.gif"><p></p>
 
@@ -13,7 +15,7 @@
             <p></p>
             <li>Search for your target again, if you can still see your result, great! If your target has disappeared, search again with the <code span class="fw-bold">Holding Direction?</code> checkbox checked. This may help with finding a hittable target frame.</li>
             <p></p>
-            <li>If you still cannot see a search result with both checkboxes active, this means that you cannot hit your target using menu close prediction. It is recommended to find a new target frame to avoid extra unnecessary complexity.</li>
+            <li>If you still cannot see a search result with both checkboxes active, this means that you cannot hit your target using menu close prediction. It is recommended to find a new target seed/frame to avoid extra unnecessary complexity.</li>
         </ol>
     </div>
 </div>
@@ -26,24 +28,29 @@
 <span class="fw-bold">Figure 4 -</span> Target Frame Found<p></p>
 <img src="/cfw/swsh/new-overworld/images/static/target-found-static.png" alt="static-4" class="img-fluid clickable-image" data-image="/cfw/swsh/new-overworld/images/static/target-found-static.png"><p></p>
 
+
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c0038;" id="advancing-to-target-static-dry">
-        <span class="fw-bold text-light">Advancing To The Target:</span>
+        <span class="fw-bold text-light">Advancing to the Target</span>
     </div>
     <div class="card-body card-bg">
         <p>In the above example, a Shiny, Rare Mark Duraludon can be found in a cluster of advances from 26,000-26003, a cluster is a group of frames that produce the same end result. It is recommended to target clusters where possible as this will further increase the chances of being able to hit your target frame.</p>
 
-        <h6 span class="fw-bold">Step-by-step:</h6>
+        <h6 class="fw-bold">Step-by-Step:</h6>
         <ol>
-            <li>Use any of the advancement methods found on <a href="/cfw/swsh/new-overworld/advancing-the-rng-state">this page</a> to advance as close to your target frame as possible. It is recommended to use date skipping or wet weather advances when attempting to advance large distances.</li>
+            <li>Ensure the <code class="fw-bold">Consider Menu Close?</code> checkbox is checked and your NPC count is entered correctly, search for your target again if needed.</li>
             <p></p>
-            <li>If you have moved location, leave yourself ample time to re-position yourself next to your target Pokemon, pause the game when you are a few hundred frames away from the target.</li>
+            <li>Advance toward your target using any of the methods listed on <a href="/cfw/swsh/new-overworld/advancing-the-rng-state" target="_blank">this page</a>. Consider using <u>wet weather</u> or <u>date skipping</u> to cover large distances efficiently.</li>
             <p></p>
-            <li>Disconnect and reconnect to owoow, this will start your advances from 0. Search for your target again after doing so, then use animation advances to reach the new target frame.</li>
+            <li>Take note of the amount of frames that have been advanced periodically. Stop a few thousand frames early and position yourself correctly outside the spawn point.</li>
             <p></p>
-            <li>Unpause the game. If you are using the <code span class="fw-bold">Holding Direction?</code> checkbox, ensure you are holding a direction on your control stick when unpausing, otherwise, ensure you are NOT holding a direction.</li>
+            <li>Use <u>animations</u> or <u>closing the pause menu</u> to advance your seed until you're approximately 100 frames from your target, then pause the game.</li>
             <p></p>
-            <li>Quickly run towards the spawner of your desired Pokemon, if done correctly, your Pokemon should have been spawned on the target frame, encounter it and check if it matches what is expected.</li>
+            <li>Reconnect to owoow and search for your target once more. From here, use <u>animations</u> to reach the exact target frame, then back out to the main pause menu.</li>
+            <p></p>
+            <li>Unpause the game. If you are using the <code class="fw-bold">Holding Direction?</code> checkbox, hold a direction on the control stick when unpausing, otherwise, DO NOT hold a direction.</li>
+            <p></p>
+            <li>Quickly run toward the target Pokemon to spawn it in the overworld. Encounter the Pokemon and verify the results match what is expected.</li>
         </ol>
     </div>
 </div>
