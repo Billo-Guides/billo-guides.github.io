@@ -1,0 +1,96 @@
+<!--WET FISHING CFW-->
+
+<span class="fw-bold">Figure 3 -</span> Calibrating Necessary Values<p></p>
+<img src="/cfw/swsh/new-overworld/images/fishing/calibrating-rain-ticks.gif" alt="fishing-3-wet" class="img-fluid clickable-image" data-image="/cfw/swsh/new-overworld/images/fishing/calibrating-rain-ticks.gif"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="calibrating-rain-ticks-fishing">
+        <span class="fw-bold text-light">Calibrating Necessary Values:</span>
+    </div>
+    <div class="card-body card-bg">
+        <h6 span class="fw-bold">What Are "Rain Ticks"?</h6>
+        <p>Rain ticks are the advances that occur as a result of Rain or Thunderstorm being active. Despite the sheer speed of advances caused by wet weather, the amount of advances that occur is predictable via calibration. Calibration can be done by using the <code span class="fw-bold">Advanced Settings</code> column of the main window.</p>
+
+        <h6 span class="fw-bold">Rain Tick Calibration</h6>
+        <ol>
+            <li>Save the game when stood as close to the spawn border of your target Pokemon as possible, do not reposition yourself after this point.</li>
+            <p></p>
+            <li>Calibrate your NPCs in any weather that is NOT Rain or Thunderstorm, then change the weather back after doing so. It is not possible to calibrate NPCs in wet weather.</li>
+            <p></p>
+            <li>Ensure that the <code span class="fw-bold">Consider Menu Close?</code> and <code span class="fw-bold">Holding Direction?</code> checkboxes on the main window are active, and enter your calibrated NPC count into the <code span class="fw-bold">NPCs</code> field.</li>
+            <p></p>
+            <li>In the <code span class="fw-bold">Advanced Settings</code> column, check the <code span class="fw-bold">Raining/Thunderstorming?</code> checkboxes. For now, keep the <code span class="fw-bold">Rain Ticks</code> value set to 0 for the sake of calibration.</li>
+            <p></p>
+            <li>Open the Pokemon party list, then disconnect and reconnect to owoow to reset your advances to 0. This step is important for an accurate calibration.</li>
+            <p></p>
+            <li>Back out from the party list to the main menu, then hold a direction on your control stick (hold whichever direction leads you towards the fishing pool).</li>
+            <p></p>
+            <li>Unpause the game while holding the correct direction on your control stick, then spawn the fishing pool in the overworld and initiate the encounter.</li>
+            <p></p>
+            <li>In owoow, click <code class="fw-bold">Read Encounter</code>, then <code class="fw-bold">Copy IVs to Filters</code>, and update the species in <code class="fw-bold">Encounter Settings</code> to match the species you are in-battle with.</li>
+            <p></p>
+            <li>In <code span class="fw-bold">Advanced Settings</code>, click the <code span class="fw-bold">Calculate Rain Ticks</code> button, if done correctly you should see a result pop-up. Enter the calibrated value into the <code span class="fw-bold">Rain Ticks</code> field.</li>
+            <p></p>
+            <li>Once you have calibrated your NPC count and Rain Ticks, restart the game and reconnect to the program. You can now begin searching for target frames.</li>
+        </ol>
+
+        <p>The calibration checkboxes (<code class="fw-bold">Consider Menu Close?</code>, <code class="fw-bold">Holding Direction?</code> &amp; <code class="fw-bold">Rain Ticks</code>) will account for the frames consumed when leaving the party list and closing the main pause menu. The search result table will show the exact frame you are expected to close the party list in order to spawn your target Pokemon in the overworld.</p>
+
+    </div>
+</div>
+<br>
+
+<div class="alert alert-danger" style="border: 1px solid #900505; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Troubleshooting -</span> If multiple potential results appear during calibration, you will need to repeat the process a few times or adjust your position until a consistent Rain Ticks value is found. If you see "No results found" something was done incorrectly. Retry while following the above steps more carefully.
+</div>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/new-overworld/menu-close-prediction" target="_blank" rel="noopener noreferrer">
+    Forgot how to calibrate NPC count? <span class="fw-bold">click here for a refresher</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a><p></p>
+
+<span class="fw-bold">Figure 4 -</span> Target Found<p></p>
+<img src="/cfw/swsh/new-overworld/images/fishing/target-found-fishing-wet.png" alt="fishing-4-wet" class="img-fluid clickable-image" data-image="/cfw/swsh/new-overworld/images/fishing/target-found-fishing-wet.png"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="advancing-to-target-fishing-wet">
+        <span class="fw-bold text-light">Advancing to the Target</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>In the above example, a Shiny, Weather Mark Feebas can be found in a cluster of advances from x-y, a cluster is a group of frames that produce the same end result. It is recommended to target clusters where possible as this will further increase the chances of being able to hit your target frame. From here it is assumed that you have calibrated your current NPC and Rain Tick values.</p>
+
+        <h6 class="fw-bold">Step-by-Step:</h6>
+        <ol>
+            <li>Confirm that the <code class="fw-bold">Consider Menu Close?</code> &amp; <code class="fw-bold">Holding Direction?</code> boxes have been checked, and that your NPC count and Rain Ticks have been entered properly.</li>
+            <p></p>
+            <li>Advance towards your target using <u>wet weather</u> or <u>date-skipping</u> to maintain your current positioning and Rain Tick calibration.</li>
+            <p></p>
+            <li>Take note of the amount of frames that have been advanced periodically. Stop a few hundred frames early and then pause the game.</li>
+            <p></p>
+            <li>Open the Pokemon party list, this is where you will do the remainder of your advances using only <u>animations</u>.</li>
+            <p></p>
+            <li>Disconnect and re-connect from owoow, this will reset your advances to 0. Keep the game paused on the party list from this point.</li>
+            <p></p>
+            <li>Use <u>animations</u> to advance to your new target frame. Each <code class="fw-bold">L3</code> button input on the party list advances the RNG state by +1 (e.g., 100 inputs = 100 advances).</li>
+            <p></p>
+            <li>Back out from the party list into the main pause menu, then hold a direction on your control stick, pointing towards the spawner of your target Pokemon.</li>
+            <p></p>
+            <li>Quickly run toward the fishing pool to spawn it in the overworld. Throw in your rod and reel the Pokemon in, then verify the results match what is expected.</li>
+        </ol>
+    </div>
+</div>
+<br>
+
+<span class="fw-bold">Figure 5 -</span> Result Found!<p></p>
+<img src="/cfw/swsh/new-overworld/images/fishing/result-found-fishing-wet.gif" alt="fishing-5-wet" class="img-fluid clickable-image" data-image="/cfw/swsh/new-overworld/images/fishing/result-found-fishing-wet.gif"><p></p>
+
+<p><span class="fw-bold">That's all there is to RNG manipulating Random Fishing encounters in wet weather (CFW)!</span></p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/new-overworld/main-page">
+    Head back to the <span class="fw-bold">main page</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a><p></p>
