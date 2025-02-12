@@ -72,3 +72,7 @@ small.subtext {
     padding: 12px 20px;
     vertical-align: middle;
 }
+
+.tooltip-underline {
+    border-bottom: 1px dotted black;
+}
