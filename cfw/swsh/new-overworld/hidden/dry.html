@@ -1,21 +1,19 @@
-<!--DRY HIDDEN CFW-->
+<!--DRY SYMBOL CFW-->
 
 <span class="fw-bold">Figure 3 -</span> Relevant Calibration<p></p>
-<img src="/cfw/swsh/new-overworld/images/symbol/settings-toggles-symbol.gif" alt="symbol-3" class="img-fluid clickable-image" data-image="/cfw/swsh/new-overworld/images/symbol/settings-toggles-symbol.gif"><p></p>
+<img src="/cfw/swsh/new-overworld/images/hidden/settings-toggles-hidden.gif" alt="hidden-3" class="img-fluid clickable-image" data-image="/cfw/swsh/new-overworld/images/hidden/settings-toggles-hidden.gif"><p></p>
 
 <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="settings-toggles-static-dry">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="settings-toggles-hidden-dry">
         <span class="fw-bold text-light">Settings Toggles:</span>
     </div>
     <div class="card-body card-bg">
         <ol>
-            <li>Search for a target frame. If you do not find any results consider increasing your search range or applying less strict search filters (e.g searching for a high IV Shiny will require the a high search range in most cases).</li>
+            <li>Calibrate your NPC count and close the <code span class="fw-bold">MenuCloseTimeline</code> sub-window. This will enter your current NPC count into the main window. Now check the <code span class="fw-bold">Consider Menu Close?</code> and <code class="fw-bold">Holding Direction?</code> checkboxes.</li>
             <p></p>
-            <li>Calibrate your NPC count and close the <code span class="fw-bold">MenuCloseTimeline</code> sub-window. This will enter your current NPC count into the main window, ensure the <code span class="fw-bold">Consider Menu Close?</code> checkbox remains checked.</li>
+            <li>Search for a target frame. You should aim to find a target that can be spawned within 1-2 steps, this will provide the most consistency. The steps needed to spawn a hidden encounter will be visible inside the results table (see the <code span class="fw-bold">Step</code> column).</li>
             <p></p>
-            <li>Search for your target again, if you can still see your result, great! If your target has disappeared, search again with the <code span class="fw-bold">Holding Direction?</code> checkbox checked. This may help with finding a hittable target frame.</li>
-            <p></p>
-            <li>If you still cannot see a search result with both checkboxes active, this means that you cannot hit your target using menu close prediction. It is recommended to find a new target seed/frame to avoid extra unnecessary complexity.</li>
+            <li>If you do not find any results at all, or do not find a result that spawns within a reasonable amount of steps, consider increasing your search range or applying less strict search filters.</li>
         </ol>
 
         <p>The calibration checkboxes (<code class="fw-bold">Consider Menu Close?</code>/<code class="fw-bold">Holding Direction?</code>) will account for the frames consumed when closing the pause menu, depending on if you are holding a direction on your control stick when unpausing. The search result table will show the exact frame you are expected to close the pause menu in order to spawn your target Pokemon in the overworld.</p>
@@ -31,15 +29,15 @@
 </a><p></p>
 
 <span class="fw-bold">Figure 4 -</span> Target Frame Found<p></p>
-<img src="/cfw/swsh/new-overworld/images/symbol/target-found-symbol.png" alt="symbol-4" class="img-fluid clickable-image" data-image="/cfw/swsh/new-overworld/images/symbol/target-found-symbol.png"><p></p>
+<img src="/cfw/swsh/new-overworld/images/hidden/target-found-hidden.png" alt="hidden-4" class="img-fluid clickable-image" data-image="/cfw/swsh/new-overworld/images/hidden/target-found-hidden.png"><p></p>
 
 <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="advancing-to-target-symbol-dry">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="advancing-to-target-hidden-dry">
         <span class="fw-bold text-light">Advancing to the Target</span>
     </div>
     <div class="card-body card-bg">
-        <p>In this example, a Shiny, Angry Mark Gurdurr appears in a {% include tooltips/clusters.html %} from advances 40,538-40,541. The calibrated NPC count is 3, and no direction should be held when closing the pause menu as this provides more chances of being able to hit the correct target frame in this specific case.</p>
-        
+        <p>In this example, a Shiny, x Mark Pokemon appears in a {% include tooltips/clusters.html %} from advances x-y. The calibrated NPC count is x, and a direction should be held on the control stick when attempting to hit your target Pokemon, this will make the process more consistent.</p>
+
         <p class="fw-bold" style="color: #c00000;"><small>Re-calibrate your NPC count if you have relocated or reset the game after a date advance.</small></p>
 
         <h6 class="fw-bold">Step-by-Step:</h6>
@@ -54,18 +52,18 @@
             <p></p>
             <li>Reconnect to owoow and search for your target once more. From here, use <u>animations</u> to reach the exact target frame, then back out to the main pause menu.</li>
             <p></p>
-            <li>Unpause the game. If you are using the <code class="fw-bold">Holding Direction?</code> checkbox, hold a direction on the control stick when unpausing, otherwise, DO NOT hold a direction.</li>
+            <li>Unpause the game while holding a direction on your control stick, this will cause the player to take steps in the grass, which should trigger the Hidden encounter.</li>
             <p></p>
-            <li>Quickly run toward the target Pokemon to spawn it in the overworld. Encounter the Pokemon and verify the results match what is expected.</li>
+            <li>Quickly initiate the encounter before it despawns (spawned Hidden encounters will despawn within a few seconds), then verify that the results match what is expected.</li>
         </ol>
     </div>
 </div>
 <br>
 
 <span class="fw-bold">Figure 5 -</span> Result Found!<p></p>
-<img src="/cfw/swsh/new-overworld/images/symbol/result-found-symbol.gif" alt="symbol-5" class="img-fluid clickable-image" data-image="/cfw/swsh/new-overworld/images/symbol/result-found-symbol.gif"><p></p>
+<img src="/cfw/swsh/new-overworld/images/hidden/result-found-hidden.gif" alt="hidden-5" class="img-fluid clickable-image" data-image="/cfw/swsh/new-overworld/images/hidden/result-found-hidden.gif"><p></p>
 
-<p><span class="fw-bold">That's all there is to RNG manipulating Random Symbol encounters in calm weather (CFW)!</span></p>
+<p><span class="fw-bold">That's all there is to RNG manipulating Hidden encounters in calm weather (CFW)!</span></p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/new-overworld/main-page">
     Head back to the <span class="fw-bold">main page</span>
