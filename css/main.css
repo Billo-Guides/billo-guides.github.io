@@ -4,6 +4,9 @@
     border-bottom-right-radius: 0.20rem !important;
     border-bottom-left-radius: 0.20rem !important;
 }
+.clickable-image {
+    cursor: pointer !important;
+}
 
 table,
 th,
