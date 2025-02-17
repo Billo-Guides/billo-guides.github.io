@@ -5,276 +5,287 @@ permalink: /cfw/lgpe/item
 ---
 
 <style>
-  mark {
-    background-color: #FFD700;
-    color: black;
-  }
+    mark {
+        background-color: #FFD700;
+        color: black;
+    }
 
-  .card-bg {
-    background-color: #d1d1d1;
-    border-bottom-right-radius: 0.20rem !important;
-    border-bottom-left-radius: 0.20rem !important;
-  }
+    .card-bg {
+        background-color: #d1d1d1;
+        border-bottom-right-radius: 0.20rem !important;
+        border-bottom-left-radius: 0.20rem !important;
+    }
 
-  table,
-  th,
-  td {
-    border: 1px solid black;
-  }
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
 
-  blockquote {
-  background: #c5c5c5;
-  border: 1px solid #9e9e9e;
-  border-left: 5px solid #0c5b74;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
-  }
+    blockquote {
+        background: #c5c5c5;
+        border: 1px solid #9e9e9e;
+        border-left: 5px solid #0c5b74;
+        margin: 1.5em 10px;
+        padding: 0.5em 10px;
+        quotes: "\201C""\201D""\2018""\2019";
+    }
 </style>
 
 <div class="title" style="background-color: #0c5b74;">
-  <h1 class="text-light text-center pt-3 pb-3">Hidden Item RNG (LGPE)</h1>
-</div><hr />
+    <h1 class="text-light text-center pt-3 pb-3">Hidden Item RNG (LGPE)</h1>
+</div>
+<hr />
 
 <p>This guide provides coverage on how to RNG manipulate valuable items in Let's Go Pikachu & Eevee's Cerulean Cave and Celadon City Game Corner. This most useful application of this type of RNG is for farming Master Balls, PP Max & Bottle Caps. The tools and scripts used throughout this guide were created by <a href="https://github.com/Lusamine">Lusamine</a>.</p>
 
 <p><span class="fw-bold" style="color: #b60606;">From here it is assumed you are using a CFW Switch console running <a href="https://github.com/Atmosphere-NX/Atmosphere/releases">Atmosphere</a>.</span></p>
 
-  <div class="card border-dark">
-   <div class="anchored card-header" style="background-color: #0c5b74;" id="requirements-lgpe-item">
-     <span class="fw-bold text-light">You Will Need:</span>
-   </div>
-   <div class="card-body card-bg">
-     <h6><span class="fw-bold">Tools & Scripts:</span></h6>
-     <ul>
-       <li><a href="https://github.com/Lusamine/SysBot.NET/tree/moarencounterbots">Moarencounterbots</a></li>
-       <li><a href="https://www.linqpad.net/Download.aspx">LINQPad 8</a></li>
-       <li><a href="https://gist.github.com/Lusamine/f69f3861f5f4af5353b78526f3e6af82">LGPE Hidden Floor Item Script</a></li>
-     </ul>
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c5b74;" id="requirements-lgpe-item">
+        <span class="fw-bold text-light">You Will Need:</span>
+    </div>
+    <div class="card-body card-bg">
+        <h6><span class="fw-bold">Tools & Scripts:</span></h6>
+        <ul>
+            <li><a href="/misc/downloads/moarencounterbots.zip" download>Sysbot.NET - Moarencounterbots</a></li>
+            <li><a href="https://www.linqpad.net/Download.aspx">LINQPad 8</a></li>
+            <li><a href="https://gist.github.com/Lusamine/f69f3861f5f4af5353b78526f3e6af82">LGPE Hidden Floor Item Script</a></li>
+        </ul>
 
-     <h6><span class="fw-bold">Dependencies:</span></h6>
-     <ul>
-       <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0">.NET 8.0</a></li>
-       <li><a href="https://projectpokemon.org/home/files/file/2445-pkhex-development-build/">PKHeX Development Build (for PKHeX.Core.dll)</a></li>
-       <li><a href="https://github.com/olliz0r/sys-botbase/releases/">Sys-botbase</a></li>
-     </ul>
+        <h6><span class="fw-bold">Dependencies:</span></h6>
+        <ul>
+            <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0">.NET 8.0</a></li>
+            <li><a href="https://projectpokemon.org/home/files/file/2445-pkhex-development-build/">PKHeX Development Build (for PKHeX.Core.dll)</a></li>
+            <li><a href="https://github.com/olliz0r/sys-botbase/releases/">Sys-botbase</a></li>
+        </ul>
 
-     <h6><span class="fw-bold">Installation instructions:</span></h6>
-     <ul>
-       <li>Download and install LINQPad 8, then create a desktop shortcut or find the location it has been installed to.</li>
-       <li>Download .NET 8.0 SDK and run the installation file until complete. This is a dependency for Moarencounterbots.</li>
-       <li>Download the PKHeX Development Build, then extract <code span class="fw-bold">PKHeX.Core.dll</code> into a known location on your computer. This is a dependency for the script.</li>
-       <li>Download the latest sys-botbase release and extract the <code span class="fw-bold">atmosphere</code> folder to the root of your Switch SD card.</li>
-       <li>Put the SD card back into the console, then reboot the console into SysCFW.</li>
-     </ul>
-
-     <blockquote>Moarencounterbots does not come with pre-compiled releases, this means you are expected to build the application from source code using Visual Studio. If you are unfamiliar with how to do this, click the button below for a tutorial.</blockquote>
+        <h6><span class="fw-bold">Installation instructions:</span></h6>
+        <ul>
+            <li>Download and install LINQPad 8, then create a desktop shortcut or find the location it has been installed to.</li>
+            <li>Download .NET 8.0 SDK and run the installation file until complete. This is a dependency for Moarencounterbots.</li>
+            <li>Download the PKHeX Development Build, then extract <code span class="fw-bold">PKHeX.Core.dll</code> into a known location on your computer. This is a dependency for the script.</li>
+            <li>Download the latest sys-botbase release and extract the <code span class="fw-bold">atmosphere</code> folder to the root of your Switch SD card.</li>
+            <li>Put the SD card back into the console, then reboot the console into SysCFW.</li>
+        </ul>
 
     </div>
-  </div><br>
+</div>
+<br>
 
- <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/misc/moarencounterbots/">
-  Click here for a <span class="fw-bold">Moarencounterbots build guide</span>!
-  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-  </svg>
+<p>A pre-compiled version of Moarencounterbots is provided in the download links above, and is considered fine for 99% of people. To use the latest commits of the program you will need to compile and configure it yourself using this guide.</p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/misc/moarencounterbots/">
+    <span class="fw-bold">Moarencounterbots build guide!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
 </a>
+<br>
 
 <hr /><div class="title" style="background-color: #0c5b74;">
-  <h1 class="text-light text-center pt-3 pb-3">Configurations & Setup</h1>
-</div><hr />
+    <h1 class="text-light text-center pt-3 pb-3">Configurations & Setup</h1>
+</div>
+<hr />
 
 <p>Before doing anything else, you will need to set up Sysbot, LINQPad (for using the script), and your save file. All three of these should be properly configured before starting.</p>
 
-<span class="fw-bold">Figure 1 -</span> SysBot Setup<p></p>
-<a href="./images/item/sysbot-setup.gif" target="_blank"><img src="./images/item/sysbot-setup.gif" class="img-fluid"></a><br /><br />
+<span class="fw-bold">Figure 1 -</span> SysBot.NET Setup<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/item/sysbot-setup.gif" alt="item-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/item/sysbot-setup.gif"><p></p>
 
 <div class="card border-dark">
-  <div class="card-header" style="background-color: #0c5b74;" id="sysbot-setup-lgpe-item">
-    <span class="fw-bold text-light">SysBot Setup</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>Upon opening SysBot.exe for the first time it will default to function in Scarlet & Violet, this is indicated by the program header. To change the bot to LGPE mode, do the following:</p>
+    <div class="card-header" style="background-color: #0c5b74;" id="sysbot-setup-lgpe-item">
+        <span class="fw-bold text-light">SysBot Setup</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Upon opening SysBot.exe for the first time it will default to function in Scarlet & Violet, this is indicated by the program header. To change the bot to LGPE mode, do the following:</p>
 
-    <ol>
-      <li>Launch and close SysBot.exe at least once to generate a file named <code span class="fw-bold">config.json</code>.</li>
-      <li>Open <code span class="fw-bold">config.json</code> with your favourite text editor (e.g Notepad).</li>
-      <li>Change the <code span class="fw-bold">Mode</code> value to 100 (100 represents LGPE).</li>
-      <li>Launch the application, you should now see that the bot header has changed to support LGPE.</li>
-    </ol>
+        <ol>
+            <li>Launch and close SysBot.exe at least once to generate a file named <code span class="fw-bold">config.json</code>.</li>
+            <li>Open <code span class="fw-bold">config.json</code> with your favourite text editor (e.g Notepad).</li>
+            <li>Change the <code span class="fw-bold">Mode</code> value to 100 (100 represents LGPE).</li>
+            <li>Launch the application, you should now see that the bot header has changed to support LGPE.</li>
+        </ol>
 
-    <p>After you have successfully launched the bot in LGPE mode, you will need to toggle the settings for the bot you plan to use, here's how:</p>
+        <p>After you have successfully launched the bot in LGPE mode, you will need to toggle the settings for the bot you plan to use, here's how:</p>
 
-    <ol>
-      <li>In the <code span class="fw-bold">Hub</code> tab, open the <code span class="fw-bold">EncounterRNGLGPE</code> dropdown menu.</li>
-      <li>Select <code span class="fw-bold">Bit128</code> in the <code span class="fw-bold">DisplaySeedMode</code> dropdown menu.</li>
-      <li>Set the <code span class="fw-bold">MonitorRefreshRate</code> to 0, this will be needed later.</li>
-      <li>In the <code span class="fw-bold">Bots</code> tab, type the local IP address of the console.</li>
-      <li>In the dropdown menu on the right, select <code span class="fw-bold">EncBotRNGMonitorLGPE</code> and add the bot.</li>
-    </ol>
+        <ol>
+            <li>In the <code span class="fw-bold">Hub</code> tab, open the <code span class="fw-bold">EncounterRNGLGPE</code> dropdown menu.</li>
+            <li>Select <code span class="fw-bold">Bit128</code> in the <code span class="fw-bold">DisplaySeedMode</code> dropdown menu.</li>
+            <li>Set the <code span class="fw-bold">MonitorRefreshRate</code> to 0, this will be needed later.</li>
+            <li>In the <code span class="fw-bold">Bots</code> tab, type the local IP address of the console.</li>
+            <li>In the dropdown menu on the right, select <code span class="fw-bold">EncBotRNGMonitorLGPE</code> and add the bot.</li>
+        </ol>
 
-    <blockquote>At this point you should now see LGPE in the SysBot header and have the RNG monitor added to the list of currently active bots. If you need a visual example to follow, refer to Figure 1.</blockquote>
+        <blockquote>At this point you should now see LGPE in the SysBot header and have the RNG monitor added to the list of currently active bots. If you need a visual example to follow, refer to Figure 1.</blockquote>
 
-  </div>
-</div><br>
+    </div>
+</div>
+<br>
 
 <span class="fw-bold">Figure 2 -</span> Script Setup<p></p>
-<a href="./images/item/script-setup.gif" target="_blank"><img src="./images/item/script-setup.gif" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/item/script-setup.gif" alt="item-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/item/script-setup.gif"><p></p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c5b74;" id="linqpad-script-setup-lgpe-item">
-    <span class="fw-bold text-light">LINQPad Script Setup:</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>Upon launching LINQPad, you should see something similar to the above image. The links at the top of this page show where the raw script used for item RNG manipulation is located.</p>
-      
-    <h6><span class="fw-bold">Initial Script Setup</span></h6>
-    <ul>
-      <li>Change the Language (found at the top of the window) to <code span class="fw-bold">C# program</code>, delete any existing code that appears from doing so.</li>
-      <li>Copy the LGPE Hidden Floor Item Calculator script directly into the main window, then press F4 to open the <code span class="fw-bold">Query Properties</code> sub-window.</li>
-      <li>In the <code span class="fw-bold">Additional References</code> tab, click the <code span class="fw-bold">Add/Browse</code> button and select <code span class="fw-bold">PKHeX.Core.dll</code> (downloaded earlier).</li>
-      <li>Open the <code span class="fw-bold">Namespace Imports</code> tab then type <code span class="fw-bold">PKHeX.Core</code>.</li>
-      <li>Click the <code span class="fw-bold">OK</code> button at the bottom left of the sub-window to confirm these changes.</li>
-      <li>Run the script, you should see that an output has been produced at the bottom of the main window if setup was done correctly.</li>
-    </ul>
+    <div class="anchored card-header" style="background-color: #0c5b74;" id="linqpad-script-setup-lgpe-item">
+        <span class="fw-bold text-light">LINQPad Script Setup:</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Upon launching LINQPad, you should see something similar to the above image. The links at the top of this page show where the raw script used for item RNG manipulation is located.</p>
 
-    <blockquote>Ensure that the script is being ran as a <code span class="fw-bold">C# Program</code>, this is visible in the top bar of the main window. Use Figure 2 as a reference point if you are struggling with leveraging PKHeX.Core.dll.</blockquote>
-  </div>
-</div><br>
+        <h6><span class="fw-bold">Initial Script Setup</span></h6>
+        <ul>
+            <li>Change the Language (found at the top of the window) to <code span class="fw-bold">C# program</code>, delete any existing code that appears from doing so.</li>
+            <li>Copy the LGPE Hidden Floor Item Calculator script directly into the main window, then press F4 to open the <code span class="fw-bold">Query Properties</code> sub-window.</li>
+            <li>In the <code span class="fw-bold">Additional References</code> tab, click the <code span class="fw-bold">Add/Browse</code> button and select <code span class="fw-bold">PKHeX.Core.dll</code> (downloaded earlier).</li>
+            <li>Open the <code span class="fw-bold">Namespace Imports</code> tab then type <code span class="fw-bold">PKHeX.Core</code>.</li>
+            <li>Click the <code span class="fw-bold">OK</code> button at the bottom left of the sub-window to confirm these changes.</li>
+            <li>Run the script, you should see that an output has been produced at the bottom of the main window if setup was done correctly.</li>
+        </ul>
+
+        <blockquote>Ensure that the script is being ran as a <code span class="fw-bold">C# Program</code>, this is visible in the top bar of the main window. Use Figure 2 as a reference point if you are struggling with leveraging PKHeX.Core.dll.</blockquote>
+    </div>
+</div>
+<br>
 
 <span class="fw-bold">Figure 3 -</span> Game Setup<p></p>
-<a href="./images/item/game-setup.gif" target="_blank"><img src="./images/item/game-setup.gif" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/item/game-setup.gif" alt="item-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/item/game-setup.gif"><p></p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c5b74;" id="game-setup-lgpe-item">
-    <span class="fw-bold text-light">Game Setup:</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>The item given from interacting with a hidden item spot is determined on the frame it was picked up. For this reason your item needs to be spawned and able to be picked up before doing anything else.</p>
+    <div class="anchored card-header" style="background-color: #0c5b74;" id="game-setup-lgpe-item">
+        <span class="fw-bold text-light">Game Setup:</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>The item given from interacting with a hidden item spot is determined on the frame it was picked up. For this reason your item needs to be spawned and able to be picked up before doing anything else.</p>
 
-    <p>In this example we are searching for a Master Ball in Cerulean Cave, in Figure 3 the player is stood next to a Pokeball Spawner in Cerulean Cave. We have confirmed that an item is present, then reset the game to respawn it.</p>
+        <p>In this example we are searching for a Master Ball in Cerulean Cave, in Figure 3 the player is stood next to a Pokeball Spawner in Cerulean Cave. We have confirmed that an item is present, then reset the game to respawn it.</p>
 
-    <ul>
-      <li>A list of table item rates and spots for item spawners can be found <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRrQhgQKyozIKZsDuoOzdt5anD_oRU3FNDmVZxbukG1VdgiKHdafvJuJsaydy0feiZZa0_i4WTkWSTn/pubhtml#">here</a></li>
-    </ul>
+        <ul>
+            <li>A list of table item rates and spots for item spawners can be found <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRrQhgQKyozIKZsDuoOzdt5anD_oRU3FNDmVZxbukG1VdgiKHdafvJuJsaydy0feiZZa0_i4WTkWSTn/pubhtml#">here</a></li>
+        </ul>
 
-    <h6><span class="fw-bold">Respawn Mechanics</span></h6>
-    <p>The conditions to respawn collected items is different depending on location. For Cerulean Cave, items have a chance of spawning every time the player walks 256 steps. In the game corner, the items are respawned each time a day has passed.</p>
+        <h6><span class="fw-bold">Respawn Mechanics</span></h6>
+        <p>The conditions to respawn collected items is different depending on location. For Cerulean Cave, items have a chance of spawning every time the player walks 256 steps. In the game corner, the items are respawned each time a day has passed.</p>
 
-    <p>To trick the game into believing that a day has passed naturally (which will respawn the items in the Game Corner immediately if yours are despawned), you will need to follow these steps:</p>
+        <p>To trick the game into believing that a day has passed naturally (which will respawn the items in the Game Corner immediately if yours are despawned), you will need to follow these steps:</p>
 
-    <ol>
-      <li>Open the pause menu and click <code span class="fw-bold">Communicate</code>.</li>
-      <li>Select the <code span class="fw-bold">Play with others</code> option.</li>
-      <li>Select <code span class="fw-bold">Nearby Player</code>, then <code span class="fw-bold">Link Trade</code>.</li>
-      <li>Enter any link code, then search for a trade.</li>
-      <li>Press the home button and navigate to <code span class="fw-bold">System Settings</code>.</li>
-      <li>Change the system date forward by one day, this will respawn the items.</li>
-    </ol>
-    
-    <blockquote>If you are planning to manipulate items in Cerulean Cave, carry plenty of repels to avoid unwanted advancements and increase frame advancement stability.</blockquote>
-    
-  </div>
-</div><br>
+        <ol>
+            <li>Open the pause menu and click <code span class="fw-bold">Communicate</code>.</li>
+            <li>Select the <code span class="fw-bold">Play with others</code> option.</li>
+            <li>Select <code span class="fw-bold">Nearby Player</code>, then <code span class="fw-bold">Link Trade</code>.</li>
+            <li>Enter any link code, then search for a trade.</li>
+            <li>Press the home button and navigate to <code span class="fw-bold">System Settings</code>.</li>
+            <li>Change the system date forward by one day, this will respawn the items.</li>
+        </ol>
+
+        <blockquote>If you are planning to manipulate items in Cerulean Cave, carry plenty of repels to avoid unwanted advancements and increase frame advancement stability.</blockquote>
+
+    </div>
+</div>
+<br>
 
 <p><span class="fw-bold" style="color: #b60606;">Ensure that all of the setup instructions have been closely followed before continuing, from here it is assumed that SysBot.NET, LINQPad, and the save file have been properly configured.</span></p>
 
 <hr /><div class="title" style="background-color: #0c5b74;">
-  <h1 class="text-light text-center pt-3 pb-3">The Process</h1>
-</div><hr />
+    <h1 class="text-light text-center pt-3 pb-3">The Process</h1>
+</div>
+<hr />
 
 <p>First, decide which item you plan to manipulate and navigate to the corresponding location. Full item tables can be found inside the LINQPad script. After finding the correct location you will need to set the appropriate search filters.</p>
 
 <span class="fw-bold">Figure 4 -</span> Script Filters<p></p>
-<a href="./images/item/script-filters.gif" target="_blank"><img src="./images/item/script-filters.gif" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/item/script-filters.gif" alt="item-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/item/script-filters.gif"><p></p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c5b74;" id="script-filters-lgpe-item">
-    <span class="fw-bold text-light">Script Filters:</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>By default the script is configured to search for Master Balls within 2000 advances, using the Cerulean Cave Pokeball table. If you are seeking a different item these filters can be adjusted accordingly.</p>
+    <div class="anchored card-header" style="background-color: #0c5b74;" id="script-filters-lgpe-item">
+        <span class="fw-bold text-light">Script Filters:</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>By default the script is configured to search for Master Balls within 2000 advances, using the Cerulean Cave Pokeball table. If you are seeking a different item these filters can be adjusted accordingly.</p>
 
-    <ul>
-      <li>To modify the table, change line 16 to match the table you wish to use, possible table selections are written directly above line 16.</li>
-      <li>To modify the selected item, change line 41 to match the item you wish to filter for, the entered name must be exact.</li>
-      <li>To adjust the amount of frames the script will search through, modify the number in line 20, it is not recommended to increase this number.</li>
-    </ul>
+        <ul>
+            <li>To modify the table, change line 16 to match the table you wish to use, possible table selections are written directly above line 16.</li>
+            <li>To modify the selected item, change line 41 to match the item you wish to filter for, the entered name must be exact.</li>
+            <li>To adjust the amount of frames the script will search through, modify the number in line 20, it is not recommended to increase this number.</li>
+        </ul>
 
-    <p>Examples of how to change each of the search filters can be found in Figure 4.</p>
-    
-  </div>
-</div><br>
+        <p>Examples of how to change each of the search filters can be found in Figure 4.</p>
+
+    </div>
+</div>
+<br>
 
 <p>After setting the script properly, applying filters and standing in the correct in-game location, you can begin searching for desirable target frames.</p>
 
 <span class="fw-bold">Figure 5 -</span> Searching For A Target<p></p>
-<a href="./images/item/searching-target-frames.gif" target="_blank"><img src="./images/item/searching-target-frames.gif" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/item/searching-target-frames.gif" alt="item-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/item/searching-target-frames.gif"><p></p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c5b74;" id="target-search-lgpe-item">
-    <span class="fw-bold text-light">Searching For A Target:</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>Your current seed can be monitored at any point using the EncBotRNGMonitorLGPE routine in SysBot.NET, if this guide was followed properly, you should already have the bot in the active bot.</p>
+    <div class="anchored card-header" style="background-color: #0c5b74;" id="target-search-lgpe-item">
+        <span class="fw-bold text-light">Searching For A Target:</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Your current seed can be monitored at any point using the EncBotRNGMonitorLGPE routine in SysBot.NET, if this guide was followed properly, you should already have the bot in the active bot.</p>
 
-    <h6><span class="fw-bold">Using SysBot.NET</span></h6>
-    <ul>
-      <li>Stand in the overworld in-game, then click the <code span class="fw-bold">Start All</code> button on SysBot.NET to run the EncBotRNGMonitorLGPE routine.</li>
-      <li>A seed will be produced inside the <code span class="fw-bold">Logs</code> tab, copy it if necessary.</li>
-      <li>Paste the seed into line 4, inside the <code span class="fw-bold">""</code>, then press the play button at the top of the window.</li>
-      <li>Results should now appear at the bottom of the main window, restart the game and repeat if the result is not desirable.</li>
-    </ul>
+        <h6><span class="fw-bold">Using SysBot.NET</span></h6>
+        <ul>
+            <li>Stand in the overworld in-game, then click the <code span class="fw-bold">Start All</code> button on SysBot.NET to run the EncBotRNGMonitorLGPE routine.</li>
+            <li>A seed will be produced inside the <code span class="fw-bold">Logs</code> tab, copy it if necessary.</li>
+            <li>Paste the seed into line 4, inside the <code span class="fw-bold">""</code>, then press the play button at the top of the window.</li>
+            <li>Results should now appear at the bottom of the main window, restart the game and repeat if the result is not desirable.</li>
+        </ul>
 
-    <blockquote>It is recommended to search for a cluster where possible, a cluster is multiple frames in a row that produce the same end result. This provides more opportunities to spawn the correct item.</blockquote>
-    
-  </div>
-</div><br>
+        <blockquote>It is recommended to search for a cluster where possible, a cluster is multiple frames in a row that produce the same end result. This provides more opportunities to spawn the correct item.</blockquote>
+
+    </div>
+</div>
+<br>
 
 <span class="fw-bold">Figure 6 -</span> Target Found!<p></p>
-<a href="./images/item/target-found.png" target="_blank"><img src="./images/item/target-found.png" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/item/target-found.png" alt="item-6" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/item/target-found.png"><p></p>
 
 <p>A target has been found! A Master Ball on advances 59-60, these are the exact advances that we will aim to interact with a spawner that contains our desired item on.</p>
 
 <hr /><div class="title" style="background-color: #0c5b74;">
-  <h1 class="text-light text-center pt-3 pb-3">Advancing Towards The Target</h1>
-</div><hr />
+    <h1 class="text-light text-center pt-3 pb-3">Advancing Towards The Target</h1>
+</div>
+<hr />
 
 <p>The following actions are considered to be the best methods to advance the RNG state:</p>
 
 <table class="table table-striped" style="width:100%">
-  <thead class="table text-white" style="background-color: #0c5b74;">
-      <th scope="col" style="width:25%" class="text-center">Advancement Method</th>
-      <th scope="col" class="text-center">Description Of Method</th>
-   </tr>
-       </thead>
-       <tbody id="results">
-   <tr>
-      <td><span class="fw-bold">Follow Pokemon Interaction</span></td>
-      <td>Using the Pokemon follow feature to either ride a Pokemon or have it trail behind you, then interacting with it.</td>
-   </tr>
-   <tr>
-     <td><span class="fw-bold">Spawning Wild Pokemon</span></td>
-     <td>Spawning wild Pokemon in the overworld will advance the RNG state a certain amount depending on the Pokemon spawned.</td>
-   </tr>
-   <tr>
-     <td><span class="fw-bold">Pikachu/Eevee Interaction</span></td>
-     <td>Opening the "Play with Pikachu/Eevee" menu will advance the RNG state in small increments, useful for the last few advances.</td>
-   </tr>
-     </tbody>
+    <thead class="table text-white" style="background-color: #0c5b74;">
+    <th scope="col" style="width:25%" class="text-center">Advancement Method</th>
+    <th scope="col" class="text-center">Description Of Method</th>
+    </tr>
+    </thead>
+    <tbody id="results">
+        <tr>
+            <td><span class="fw-bold">Follow Pokemon Interaction</span></td>
+            <td>Using the Pokemon follow feature to either ride a Pokemon or have it trail behind you, then interacting with it.</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">Spawning Wild Pokemon</span></td>
+            <td>Spawning wild Pokemon in the overworld will advance the RNG state a certain amount depending on the Pokemon spawned.</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">Pikachu/Eevee Interaction</span></td>
+            <td>Opening the "Play with Pikachu/Eevee" menu will advance the RNG state in small increments, useful for the last few advances.</td>
+        </tr>
+    </tbody>
 </table>
 
 <p>Monitor the <code span class="fw-bold">Logs</code> tab of SysBot.NET until you reach your target frame. It is recommended to remain close to the area that contains your desired item where possible.</p>
 
-<p>If you are manipulating items in Cerulean Cave, ensure that a repel is active when doing the last ~50 advancements to avoid overshooting your target frame, as frames are consumed every time a wild Pokemon spawns.</p>
+<p>If you are manipulating items in Cerulean Cave, ensure that a repel is active when doing the last ~50 advancements to avoid overshooting your target frame, as advances are consumed every time a wild Pokemon spawns.</p>
 
 <span class="fw-bold">Figure 7 -</span> Target Frame Hit!<p></p>
-<a href="./images/item/target-hit.png" target="_blank"><img src="./images/item/target-hit.png" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/item/target-hit.png" alt="item-7" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/item/target-hit.png"><p></p>
 
 <p>According to the search results, a Master Ball will be produced after interacting with the item spot on frame 59. The SysBot logs indicate that 59 advancements have occured since we began monitoring, so it is now time to interact with the hidden item spot to claim our item.</p>
 
 <span class="fw-bold">Figure 8 -</span> Result Found!<p></p>
-<a href="./images/item/result-found.png" target="_blank"><img src="./images/item/result-found.png" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/item/result-found.png" alt="item-8" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/item/result-found.png"><p></p>
 
 <p>A Master Ball was produced as expected, that's all there is to RNG manipulating valuable items in LGPE!</p>
 
