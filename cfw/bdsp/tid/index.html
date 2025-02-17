@@ -5,137 +5,147 @@ permalink: /cfw/bdsp/trainer-id/
 ---
 
 <style>
-  .card-bg {
-    background-color: #d1d1d1;
-    border-bottom-right-radius: 0.20rem !important;
-    border-bottom-left-radius: 0.20rem !important;
-  }
+    .card-bg {
+        background-color: #d1d1d1;
+        border-bottom-right-radius: 0.20rem !important;
+        border-bottom-left-radius: 0.20rem !important;
+    }
 
-  table,
-  th,
-  td {
-    border: 1px solid black;
-  }
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
 
-  blockquote {
-  background: #c5c5c5;
-  border: 1px solid #9e9e9e;
-  border-left: 5px solid #96324c;
-  margin: 1.5em 2px;
-  padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
-  }
+    blockquote {
+        background: #c5c5c5;
+        border: 1px solid #9e9e9e;
+        border-left: 5px solid #96324c;
+        margin: 1.5em 2px;
+        padding: 0.5em 10px;
+        quotes: "\201C""\201D""\2018""\2019";
+    }
 </style>
-    
+
 <div class="title" style="background-color: #96324c;">
-  <h1 class="text-light text-center pt-3 pb-3">BDSP Trainer ID RNG (CFW)</h1>
-</div><hr />
+    <h1 class="text-light text-center pt-3 pb-3">BDSP Trainer ID RNG (CFW)</h1>
+</div>
+<hr />
 
 <p>This section of the guide covers how to RNG manipulate your Trainer ID for cosmetic purposes. TID RNG abuse is not required for manipulating specific spreads or Shiny Pokemon. This can be skipped if you are not interested in specific TIDs.</p>
 
 <p><span class="fw-bold" style="color: #b60606;">From here it is assumed that you have read and followed all of the setup and installation instructions found on the initial page of this guide.</span></p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp">
-  Missed some setup instructions? <span class="fw-bold">Click here to go back!</span>
-  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-  </svg>
+    Missed some setup instructions? <span class="fw-bold">Click here to go back!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
 </a>
 <br>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #96324c;" id="explaining-bdsp-rng">
-    <span class="fw-bold text-light">How Does This Work?</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>In BDSP, the game operates on a constantly advancing RNG seed, which determines all random events such as which Trainer ID you will be given upon starting a new save file. Moarencounterbots can track & monitor seeds in real-time and even automate seed progression to a specific point. This automation handles the tedious RNG work, allowing you to focus on hitting targets instead.</p>
-  </div>
-</div><br>
+    <div class="anchored card-header" style="background-color: #96324c;" id="explaining-bdsp-rng">
+        <span class="fw-bold text-light">How Does This Work?</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>In BDSP, the game operates on a constantly advancing RNG seed, which determines all random events such as which Trainer ID you will be given upon starting a new save file. Moarencounterbots can track & monitor seeds in real-time and even automate seed progression to a specific point. This automation handles the tedious RNG work, allowing you to focus on hitting targets instead.</p>
+    </div>
+</div>
+<br>
 
 <span class="fw-bold">Figure 1 -</span> SysBot Setup<p></p>
-<a href="/cfw/bdsp/images/trainer-id/figure-1-sysbot-setup-tid.png" target="_blank"><img src="/cfw/bdsp/images/trainer-id/figure-1-sysbot-setup-tid.png" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/trainer-id/figure-1-sysbot-setup-tid.png" alt="tid-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/trainer-id/figure-1-sysbot-setup-tid.png"><p></p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #96324c;" id="tid-rng-setup">
-    <span class="fw-bold text-light">Bot Setup (TID):</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>Opening the <code span class="fw-bold">Hub</code> tab displays the bot settings, here we can configure the bot to search for specific TIDs within any given number of advancements. Figure 1 displays a rough idea of what your settings should look like after proper configuration.</p>
+    <div class="anchored card-header" style="background-color: #96324c;" id="tid-rng-setup">
+        <span class="fw-bold text-light">Bot Setup (TID):</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Opening the <code span class="fw-bold">Hub</code> tab displays the bot settings, here we can configure the bot to search for specific TIDs within any given number of advancements. Figure 1 displays a rough idea of what your settings should look like after proper configuration.</p>
 
-    <h6><span class="fw-bold">Settings Configuration:</span></h6>
-    <ul>
-      <li>Navigate to the <code span class="fw-bold">Hub</code> tab, then open the <code span class="fw-bold">EncounterRNGBS</code> dropdown menu.</li>
-      <li>Set the <code span class="fw-bold">MaxTIDAdvances</code> to a suitable number (10,000 advances takes ~2 hours).</li>
-      <li>Set the <code span class="fw-bold">MonitorRefreshRate</code> to 0 if you have not already done so.</li>
-      <li>Now open the <code span class="fw-bold">StopConditions</code> dropdown menu and navigate to <code span class="fw-bold">TargetTIDBS</code>.</li>
-      <li>Enter a comma separated list of acceptable TIDs (123456, 111111, 123123, etc.), then close and re-open SysBot.exe.</li>
-    </ul>
+        <h6><span class="fw-bold">Settings Configuration:</span></h6>
+        <ul>
+            <li>Navigate to the <code span class="fw-bold">Hub</code> tab, then open the <code span class="fw-bold">EncounterRNGBS</code> dropdown menu.</li>
+            <li>Set the <code span class="fw-bold">MaxTIDAdvances</code> to a suitable number (10,000 advances takes ~2 hours).</li>
+            <li>Set the <code span class="fw-bold">MonitorRefreshRate</code> to 0 if you have not already done so.</li>
+            <li>Now open the <code span class="fw-bold">StopConditions</code> dropdown menu and navigate to <code span class="fw-bold">TargetTIDBS</code>.</li>
+            <li>Enter a comma separated list of acceptable TIDs (123456, 111111, 123123, etc.), then close and re-open SysBot.exe.</li>
+        </ul>
 
-    <h6><span class="fw-bold">Bot Activation:</span></h6>
-    <ul>
-      <li>Navigate to the <code span class="fw-bold">Bots</code> tab, then type the local IP address of your console into the assigned field.</li>
-      <li>Select <code span class="fw-bold">EncBotTIDBS</code> from the dropdown menu on the right and click the <code span class="fw-bold">Add</code> button.</li>
-      <li>Open the game on your console with no save file loaded. You should now be on the language select screen.</li>
-      <li>Disconnect all controllers (JoyCons, Pro Controllers etc.), then click the <code span class="fw-bold">Start All</code> button on SysBot.</li>
-      <li>Observe your console and the SysBot <code span class="fw-bold">Logs</code> tab to confirm that the bot is functioning as intended.</li>
-    </ul>
+        <h6><span class="fw-bold">Bot Activation:</span></h6>
+        <ul>
+            <li>Navigate to the <code span class="fw-bold">Bots</code> tab, then type the local IP address of your console into the assigned field.</li>
+            <li>Select <code span class="fw-bold">EncBotTIDBS</code> from the dropdown menu on the right and click the <code span class="fw-bold">Add</code> button.</li>
+            <li>Open the game on your console with no save file loaded. You should now be on the language select screen.</li>
+            <li>Disconnect all controllers (JoyCons, Pro Controllers etc.), then click the <code span class="fw-bold">Start All</code> button on SysBot.</li>
+            <li>Observe your console and the SysBot <code span class="fw-bold">Logs</code> tab to confirm that the bot is functioning as intended.</li>
+        </ul>
 
-    <p>The bot should begin to cycle through frames and reset the game, if configured correctly. This will be repeated until a result that matches the stop conditions has been found. After finding a target, the bot will then advance the RNG state until you are roughly 15 advancements away from your desired TID.</p>
-      
-   </div>
-</div><br>
+        <p>The bot should begin to cycle through frames and reset the game, if configured correctly. This will be repeated until a result that matches the stop conditions has been found. After finding a target, the bot will then advance the RNG state until you are roughly 15 advancements away from your desired TID.</p>
+
+    </div>
+</div>
+<br>
 
 <span class="fw-bold">Figure 2 -</span> Routine Added<p></p>
-<a href="/cfw/bdsp/images/trainer-id/figure-2-sysbot-routine-added.png" target="_blank"><img src="/cfw/bdsp/images/trainer-id/figure-2-sysbot-routine-added.png" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/trainer-id/figure-2-sysbot-routine-added.png" alt="tid-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/trainer-id/figure-2-sysbot-routine-added.png"><p></p>
 
 <p>Settings have been properly configured and <code span class="fw-bold">EncBotTIDBS</code> has been added to the list of active bots, it is now time to set up the game properly by opening a new save file on the language select screen.</p>
 
 <span class="fw-bold">Figure 3 -</span> Game Setup<p></p>
-<a href="/cfw/bdsp/images/trainer-id/figure-3-game-setup-tid.png" target="_blank"><img src="/cfw/bdsp/images/trainer-id/figure-3-game-setup-tid.png" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/trainer-id/figure-3-game-setup-tid.png" alt="tid-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/trainer-id/figure-3-game-setup-tid.png"><p></p>
 
 <p>Once you have entered the language select screen, disconnect all controllers, then press the <code span class="fw-bold">Start All</code> button to initiate the routine. We will then wait until a desired result has been found (this may take a while).</p>
 
 <span class="fw-bold">Figure 4 -</span> Target Found<p></p>
-<a href="/cfw/bdsp/images/trainer-id/figure-4-target-found-tid.png" target="_blank"><img src="/cfw/bdsp/images/trainer-id/figure-4-target-found-tid.png" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/trainer-id/figure-4-target-found-tid.png" alt="tid-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/trainer-id/figure-4-target-found-tid.png"><p></p>
 
 <p>TID found! View the <code span class="fw-bold">Logs</code> tab to see which of your desired TIDs has been found, keep the game paused on the Home Menu at this stage to avoid any unwanted advancements.</p>
 
 <p>In this example the bot has found the TID <code span class="fw-bold">000005</code>, and has paused 14 frames away from the target, we now need to understand how to hit the correct target frame in order to get our desired TID.</p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #96324c;" id="hitting-desired-tid">
-    <span class="fw-bold text-light">Hitting A Desired Result:</span>
-  </div>
-  <div class="card-body card-bg">
-    <h6><span class="fw-bold">Monitoring the RNG state:</span></h6>
-    
-    <ol>
-      <li>Take note of the amount of advancements required to reach your target frame according to the <code span class="fw-bold">Logs</code> tab of SysBot.</li><p></p>
-      <li>With the console still in the Home Menu, navigate to the <code span class="fw-bold">Bots</code> tab, right click <code span class="fw-bold">EncBotTIDBS</code> to remove it.</li><p></p>
-      <li>Open the dropdown menu on the right once more, this time add <code span class="fw-bold">EncBotRNGMonitorBS</code> to the list of active bots instead.</li><p></p>
-      <li>Click the <code span class="fw-bold">Start All</code> button and navigate to the <code span class="fw-bold">Logs</code> tab to monitor the RNG state until the target frame has been reached.</li><p></p>
-      <li>Press the <code span class="fw-bold">A</code> button once you see the correct number of advancements on screen, this will lock in your TID unless you back out.</li><p></p>
-      <li>Name your character, then mash through the dialogue until you are standing in the overworld outside of the players home, reconnect the bot at this stage.</li><p></p>
-      <li>You should now see your Trainer ID and player name inside the <code span class="fw-bold">Logs</code> tab, confirm that this matches your expected TID.</li>
-    </ol>
+    <div class="anchored card-header" style="background-color: #96324c;" id="hitting-desired-tid">
+        <span class="fw-bold text-light">Hitting A Desired Result:</span>
+    </div>
+    <div class="card-body card-bg">
+        <h6><span class="fw-bold">Monitoring the RNG state:</span></h6>
 
-    <blockquote><span class="fw-bold">Example -</span> If there are 14 advancements until we reach the target frame, wait until 14 advancements have passed according to the logs before pressing the <code span class="fw-bold">A</code> button.</blockquote>
-  </div>
-</div><br>
+        <ol>
+            <li>Take note of the amount of advancements required to reach your target frame according to the <code span class="fw-bold">Logs</code> tab of SysBot.</li>
+            <p></p>
+            <li>With the console still in the Home Menu, navigate to the <code span class="fw-bold">Bots</code> tab, right click <code span class="fw-bold">EncBotTIDBS</code> to remove it.</li>
+            <p></p>
+            <li>Open the dropdown menu on the right once more, this time add <code span class="fw-bold">EncBotRNGMonitorBS</code> to the list of active bots instead.</li>
+            <p></p>
+            <li>Click the <code span class="fw-bold">Start All</code> button and navigate to the <code span class="fw-bold">Logs</code> tab to monitor the RNG state until the target frame has been reached.</li>
+            <p></p>
+            <li>Press the <code span class="fw-bold">A</code> button once you see the correct number of advancements on screen, this will lock in your TID unless you back out.</li>
+            <p></p>
+            <li>Name your character, then mash through the dialogue until you are standing in the overworld outside of the players home, reconnect the bot at this stage.</li>
+            <p></p>
+            <li>You should now see your Trainer ID and player name inside the <code span class="fw-bold">Logs</code> tab, confirm that this matches your expected TID.</li>
+        </ol>
+
+        <blockquote><span class="fw-bold">Example -</span> If there are 14 advancements until we reach the target frame, wait until 14 advancements have passed according to the logs before pressing the <code span class="fw-bold">A</code> button.</blockquote>
+    </div>
+</div>
+<br>
 
 <span class="fw-bold">Figure 5 -</span> Target Frame Hit<p></p>
-<a href="/cfw/bdsp/images/trainer-id/figure-5-target-frame-hit.png" target="_blank"><img src="/cfw/bdsp/images/trainer-id/figure-5-target-frame-hit.png" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/trainer-id/figure-5-target-frame-hit.png" alt="tid-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/trainer-id/figure-5-target-frame-hit.png"><p></p>
 
 <p>We can see that 14 advancements have occured, so we should quickly press the <code span class="fw-bold">A</code> button to lock in the TID at this point, then head into the overworld in-game to confirm the TID.</p>
 
 <span class="fw-bold">Figure 6 -</span> In-game Result<p></p>
-<a href="/cfw/bdsp/images/trainer-id/figure-6-in-game-result.png" target="_blank"><img src="/cfw/bdsp/images/trainer-id/figure-6-in-game-result.png" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/trainer-id/figure-6-in-game-result.png" alt="tid-6" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/trainer-id/figure-6-in-game-result.png"><p></p>
 
 <p>The logs confirm that the correct target frame has been hit, mission accomplished!</p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp">
-  <span class="fw-bold">Click here to go back to the main page!</span>
-  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-  </svg>
+    <span class="fw-bold">Click here to go back to the main page!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
 </a>

@@ -5,273 +5,286 @@ permalink: /cfw/bdsp/static/gift/
 ---
 
 <style>
-  .card-bg {
-    background-color: #d1d1d1;
-    border-bottom-right-radius: 0.20rem !important;
-    border-bottom-left-radius: 0.20rem !important;
-  }
+    .card-bg {
+        background-color: #d1d1d1;
+        border-bottom-right-radius: 0.20rem !important;
+        border-bottom-left-radius: 0.20rem !important;
+    }
 
-  table,
-  th,
-  td {
-    border: 1px solid black;
-  }
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
 
-  blockquote {
-  background: #c5c5c5;
-  border: 1px solid #9e9e9e;
-  border-left: 5px solid #96324c;
-  margin: 1.5em 2px;
-  padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
-  }
+    blockquote {
+        background: #c5c5c5;
+        border: 1px solid #9e9e9e;
+        border-left: 5px solid #96324c;
+        margin: 1.5em 2px;
+        padding: 0.5em 10px;
+        quotes: "\201C""\201D""\2018""\2019";
+    }
 </style>
-    
+
 <div class="title" style="background-color: #96324c;">
-  <h1 class="text-light text-center pt-3 pb-3">BDSP Gift RNG (CFW)</h1>
-</div><hr />
+    <h1 class="text-light text-center pt-3 pb-3">BDSP Gift RNG (CFW)</h1>
+</div>
+<hr />
 
 <p>This section of the guide covers how to RNG manipulate Pokemon in-game gift dedemptions & event Pokemon from Mystery Gifts. Gifts defined as Pokemon given to a player for after interacting with an NPC (or Mystery Gift).</p>
 
 <p>Ensure that the autosave feature is disabled, it is also recommended to have a full team of 6 Pokemon, and an empty slot in Box 1 for the target to go into, this is helpful for checking results.</p>
-  
+
 <p><span class="fw-bold" style="color: #b60606;">At this stage you should have already followed all of the setup and installation instructions found on the initial page of this guide.</span></p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp">
-  Missed some setup instructions? <span class="fw-bold">Click here to go back!</span>
-  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-  </svg>
+    Missed some setup instructions? <span class="fw-bold">Click here to go back!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
 </a>
 <br>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #96324c;" id="explaining-bdsp-rng">
-    <span class="fw-bold text-light">How Does This Work?</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>In BDSP, the game operates on a constantly advancing RNG seed, which determines all random events such as shininess, and stats of encounters. Moarencounterbots can track & monitor seeds in real-time and even automate seed progression to a specific point. This automation handles the tedious RNG work, allowing you to focus on finding and hitting targets instead.</p>
+    <div class="anchored card-header" style="background-color: #96324c;" id="explaining-bdsp-rng">
+        <span class="fw-bold text-light">How Does This Work?</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>In BDSP, the game operates on a constantly advancing RNG seed, which determines all random events such as shininess, and stats of encounters. Moarencounterbots can track & monitor seeds in real-time and even automate seed progression to a specific point. This automation handles the tedious RNG work, allowing you to focus on finding and hitting targets instead.</p>
 
-    <p>For some gifts, you may need to consider the "delay", which is the number of frames the game takes to generate a Pokémon after input. For example, if the target is on frame 100 with an 64-frame delay, initiate the encounter 64 frames beforehand (100-64=46). A recommended list of delays for each gift can be found inside the table below.</p>
+        <p>For some gifts, you may need to consider the "delay", which is the number of frames the game takes to generate a Pokémon after input. For example, if the target is on frame 100 with an 64-frame delay, initiate the encounter 64 frames beforehand (100-64=46). A recommended list of delays for each gift can be found inside the table below.</p>
 
-    <blockquote>A list of screens can be found by clicking the hyperlinks in the table, these are the screens of the final button input, which is where you should be when attempting to hit a target frame.</blockquote>
-  
-  </div>
-</div><br>
+        <blockquote>A list of screens can be found by clicking the hyperlinks in the table, these are the screens of the final button input, which is where you should be when attempting to hit a target frame.</blockquote>
+
+    </div>
+</div>
+<br>
 
 <table class="table table-striped" style="width:100%" id="delay-table">
-  <thead class="table text-white" style="background-color: #96324c;">
-      <th scope="col" style="width:25%" class="text-center">Type Of Encounter</th>
-      <th scope="col" style="width:25%" class="text-center">Recommended Delay</th>
-   </tr>
-       </thead>
-       <tbody>
-    <tr>
-      <td class="text-center"><span class="fw-bold"><a href="/cfw/bdsp/images/final-a-presses/starters.jpg">Starters</a></span></td>
-      <td class="text-center">64</td>
+    <thead class="table text-white" style="background-color: #96324c;">
+    <th scope="col" style="width:25%" class="text-center">Type Of Encounter</th>
+    <th scope="col" style="width:25%" class="text-center">Recommended Delay</th>
     </tr>
-    <tr>
-      <td class="text-center"><span class="fw-bold"><a href="/cfw/bdsp/images/final-a-presses/riolu.jpg">Riolu Egg (Riley NPC)</a></span></td>
-      <td class="text-center">0</td>
-    </tr>
-    <tr>
-      <td class="text-center"><span class="fw-bold"><a href="/cfw/bdsp/images/final-a-presses/happiny.jpg">Happiny Egg (Hiker NPC)</a></span></td>
-      <td class="text-center">0</td>
-    </tr>
-    <tr>
-      <td class="text-center"><span class="fw-bold"><a href="/cfw/bdsp/images/final-a-presses/eevee.jpg">Eevee (Bebe NPC)</a></span></td>
-      <td class="text-center">0</td>
-    </tr>
-    <tr>
-      <td class="text-center"><span class="fw-bold"><a href="/cfw/bdsp/images/final-a-presses/fossil.jpg">Fossils</a></span></td>
-      <td class="text-center">0</td>
-    </tr>
-    <tr>
-      <td class="text-center"><span class="fw-bold"><a href="/cfw/bdsp/images/final-a-presses/jirachi.jpg">Jirachi</a></span></td>
-      <td class="text-center">0</td>
-    </tr>
-    <tr>
-      <td class="text-center"><span class="fw-bold"><a href="/cfw/bdsp/images/final-a-presses/mew.jpg">Mew</a></span></td>
-      <td class="text-center">0</td>
-    </tr>
-    <tr>
-      <td class="text-center"><span class="fw-bold"><a href="/cfw/bdsp/images/final-a-presses/mystery-gift.jpg">Mystery Gift</a></span></td>
-      <td class="text-center">0-1</td>
-    </tr>
-     </tbody>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/starters.jpg">Starters</a></span></td>
+            <td class="text-center">64</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/riolu.jpg">Riolu</a></span></td>
+            <td class="text-center">0</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/happiny.jpg">Happiny</a></span></td>
+            <td class="text-center">0</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/eevee.jpg">Eevee</a></span></td>
+            <td class="text-center">0</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/fossil.jpg">Fossil</a></span></td>
+            <td class="text-center">0</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/jirachi.jpg">Jirachi</a></span></td>
+            <td class="text-center">0</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/mew.jpg">Mew</a></span></td>
+            <td class="text-center">0</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/mystery-gift.jpg">Mystery Gift</a></span></td>
+            <td class="text-center">0-1</td>
+        </tr>
+    </tbody>
 </table>
 
 <p><span class="fw-bold">With all the require reading out of the way, it's time to get to work!</span></p>
 
 <div class="title" style="background-color: #96324c;">
-  <h1 class="text-light text-center pt-3 pb-3">The Process</h1>
-</div><hr />
+    <h1 class="text-light text-center pt-3 pb-3">The Process</h1>
+</div>
+<hr />
 
 <p>First, you will need to configure PokeFinder to match the details of the Pokemon you are hunting, then set the desired search filters.</p>
 
 <span class="fw-bold">Figure 1 -</span> PokeFinder Setup<p></p>
-<a href="/cfw/bdsp/images/static/gift/figure-1-pokefinder-setup-static-gift.gif" target="_blank"><img src="/cfw/bdsp/images/static/gift/figure-1-pokefinder-setup-static-gift.gif" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/gift/figure-1-pokefinder-setup-static-gift.gif" alt="static-gift-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/gift/figure-1-pokefinder-setup-static-gift.gif"><p></p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #96324c;" id="pokefinder-setup-static-encounter">
-    <span class="fw-bold text-light">PokeFinder Setup</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>Click the <code span class="fw-bold">Gen 8 -> Static</code> button after launching PokeFinder to open the main window for static Pokemon. Here is where we will fill in all the details about the Pokemon being hunted.</p>
+    <div class="anchored card-header" style="background-color: #96324c;" id="pokefinder-setup-static-encounter">
+        <span class="fw-bold text-light">PokeFinder Setup</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Click the <code span class="fw-bold">Gen 8 -> Static</code> button after launching PokeFinder to open the main window for static Pokemon. Here is where we will fill in all the details about the Pokemon being hunted.</p>
 
-    <h6><span class="fw-bold">RNG Setup:</span></h6>
-    <ul>
-      <li>Select the correct profile from the dropdown menu at the top of the PokeFinder window.</li>
-      <li>Select the <code span class="fw-bold">Lead</code> if you are using a Pokemon with an influencing ability (like Synchronize to control nature).</li>
-      <li>In the <code span class="fw-bold">Max Advances</code> field, enter the amount of frames you are willing to search through.</li>
-      <li>Enter the delay (refer to table) inside the <code span class="fw-bold">Delay</code> field, pick the lowest possible number.</li>
-      <li>In the <code span class="fw-bold">Settings</code> section in the middle, specify Pokemon and encounter details (e.g Roamer, Mesprit).</li>
-      <li>Configure your search filters on the right, such as searching for a 6IV Pokemon. Filters can be also combined to look for specific results.</li>
-    </ul>
+        <h6><span class="fw-bold">RNG Setup:</span></h6>
+        <ul>
+            <li>Select the correct profile from the dropdown menu at the top of the PokeFinder window.</li>
+            <li>Select the <code span class="fw-bold">Lead</code> if you are using a Pokemon with an influencing ability (like Synchronize to control nature).</li>
+            <li>In the <code span class="fw-bold">Max Advances</code> field, enter the amount of frames you are willing to search through.</li>
+            <li>Enter the delay (refer to table) inside the <code span class="fw-bold">Delay</code> field, pick the lowest possible number.</li>
+            <li>In the <code span class="fw-bold">Settings</code> section in the middle, specify Pokemon and encounter details (e.g Roamer, Mesprit).</li>
+            <li>Configure your search filters on the right, such as searching for a 6IV Pokemon. Filters can be also combined to look for specific results.</li>
+        </ul>
 
-    <blockquote>Mew, Jirachi & Mystery Gifts are shiny locked, this means it is not possible for these gifts to be shiny at all. Do not filter for shiny on these Pokemon as you will never find results.</blockquote>
-  </div>
-</div><br>
+        <blockquote>Mew, Jirachi & Mystery Gifts are shiny locked, this means it is not possible for these gifts to be shiny at all. Do not filter for shiny on these Pokemon as you will never find results.</blockquote>
+    </div>
+</div>
+<br>
 
 <p>Next, you will need to find your current seed, this can be done using Moarencounterbots (SysBot.NET).</p>
 
 <span class="fw-bold">Figure 2 -</span> Finding Current Seed<p></p>
-<a href="/cfw/bdsp/images/static/gift/figure-2-finding-current-seed.gif" target="_blank"><img src="/cfw/bdsp/images/static/gift/figure-2-finding-current-seed.gif" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/gift/figure-2-finding-current-seed.gif" alt="static-gift-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/gift/figure-2-finding-current-seed.gif"><p></p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #96324c;" id="seed-searching-moarencounterbots">
-    <span class="fw-bold text-light">Finding Current Seed</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>To easily obtain your current seed at any given point you can use the <code span class="fw-bold">EncBotCopySeedBS</code> bot routine in Moarencounterbots. You will need to toggle a few settings in the <code span class="fw-bold">Hub</code> tab for use with PokeFinder.</p>
+    <div class="anchored card-header" style="background-color: #96324c;" id="seed-searching-moarencounterbots">
+        <span class="fw-bold text-light">Finding Current Seed</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>To easily obtain your current seed at any given point you can use the <code span class="fw-bold">EncBotCopySeedBS</code> bot routine in Moarencounterbots. You will need to toggle a few settings in the <code span class="fw-bold">Hub</code> tab for use with PokeFinder.</p>
 
-    <h6><span class="fw-bold">CopySeed Setup:</span></h6>
-    <ul>
-      <li>In the <code span class="fw-bold">Hub</code> tab, open the <code span class="fw-bold">EncounterRNGBS</code> dropdown menu.</li>
-      <li>Select <code span class="fw-bold">Bit64PokeFinder</code> in the <code span class="fw-bold">DisplaySeedMode</code> dropdown menu.</li>
-      <li>Set the <code span class="fw-bold">MonitorRefreshRate</code> to 0, this will be needed later.</li>
-      <li>In the <code span class="fw-bold">Bots</code> tab, type the local IP address of the console.</li>
-      <li>In the dropdown menu on the right, select <code span class="fw-bold">EncBotCopySeedBS</code> and add the bot.</li>
-    </ul>
+        <h6><span class="fw-bold">CopySeed Setup:</span></h6>
+        <ul>
+            <li>In the <code span class="fw-bold">Hub</code> tab, open the <code span class="fw-bold">EncounterRNGBS</code> dropdown menu.</li>
+            <li>Select <code span class="fw-bold">Bit64PokeFinder</code> in the <code span class="fw-bold">DisplaySeedMode</code> dropdown menu.</li>
+            <li>Set the <code span class="fw-bold">MonitorRefreshRate</code> to 0, this will be needed later.</li>
+            <li>In the <code span class="fw-bold">Bots</code> tab, type the local IP address of the console.</li>
+            <li>In the dropdown menu on the right, select <code span class="fw-bold">EncBotCopySeedBS</code> and add the bot.</li>
+        </ul>
 
-    <p>When starting the <code span class="fw-bold">EncBotCopySeedBS</code> bot at any point your seed will be produced inside the <code span class="fw-bold">Logs</code> tab. These seeds can be pasted into the <code span class="fw-bold">Seed 0</code> & <code span class="fw-bold">Seed 1 </code> fields of PokeFinder to search for targets that match your search parameters.</p>  
-  </div>
-</div><br>
+        <p>When starting the <code span class="fw-bold">EncBotCopySeedBS</code> bot at any point your seed will be produced inside the <code span class="fw-bold">Logs</code> tab. These seeds can be pasted into the <code span class="fw-bold">Seed 0</code> & <code span class="fw-bold">Seed 1 </code> fields of PokeFinder to search for targets that match your search parameters.</p>
+    </div>
+</div>
+<br>
 
 <p>Save the game, then run <code span class="fw-bold">EncBotCopySeedBS</code> and paste the seeds into PokeFinder and hit search, repeat this process until a result that matches your search parameters has been found.</p>
 
 <span class="fw-bold">Figure 3 -</span> Target Frame Found!<p></p>
-<a href="/cfw/bdsp/images/static/gift/figure-3-target-frame-found.png" target="_blank"><img src="/cfw/bdsp/images/static/gift/figure-3-target-frame-found.png" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/gift/figure-3-target-frame-found.png" alt="static-gift-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/gift/figure-3-target-frame-found.png"><p></p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #96324c;" id="target-frame-found-static">
-    <span class="fw-bold text-light">Target Frame Found!</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>In Figure 3, we can see that a 6IV Jirachi that matches the search filters has been produced in 39896-39900 advances, and the same spread is produced 5 advances in a row, this is known as a "frame cluster". This means we can aim to hit any of these frames to hit the desired result, the higher the cluster, the better the chance there is of hitting the correct frame.</p> 
+    <div class="anchored card-header" style="background-color: #96324c;" id="target-frame-found-static">
+        <span class="fw-bold text-light">Target Frame Found!</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>In Figure 3, we can see that a 6IV Jirachi that matches the search filters has been produced in 39896-39900 advances, and the same spread is produced 5 advances in a row, this is known as a "frame cluster". This means we can aim to hit any of these frames to hit the desired result, the higher the cluster, the better the chance there is of hitting the correct frame.</p>
 
-    <h6><span class="fw-bold">Undesirable Result?</span></h6>
-    <ul>
-      <li>Reset the game to refresh the seed, then enter the overworld.</li>
-      <li>Run <code span class="fw-bold">EncBotCopySeedBS</code> again to produce a new seed.</li>
-      <li>Paste the new seeds into PokeFinder and search again.</li>
-      <li>Repeat until a desirable result has been found.</li>
-    </ul>
+        <h6><span class="fw-bold">Undesirable Result?</span></h6>
+        <ul>
+            <li>Reset the game to refresh the seed, then enter the overworld.</li>
+            <li>Run <code span class="fw-bold">EncBotCopySeedBS</code> again to produce a new seed.</li>
+            <li>Paste the new seeds into PokeFinder and search again.</li>
+            <li>Repeat until a desirable result has been found.</li>
+        </ul>
 
-    <p>Consider increasing the search range if you are consistently finding "bad" seeds. Moarencounterbots is capable of advancing millions of frames with ease using the <code span class="fw-bold">EncBotDexFlipBS</code> routine. Alternatively you can opt to use less strict search filters.</p>
+        <p>Consider increasing the search range if you are consistently finding "bad" seeds. Moarencounterbots is capable of advancing millions of frames with ease using the <code span class="fw-bold">EncBotDexFlipBS</code> routine. Alternatively you can opt to use less strict search filters.</p>
 
-    <blockquote>Clusters only appear for non-shiny Pokemon, if the gift is not shiny locked (e.g Riolu, Happiny, Eevee), and you are searching for a shiny, you will not be able to find clusters.</blockquote>
+        <blockquote>Clusters only appear for non-shiny Pokemon, if the gift is not shiny locked (e.g Riolu, Happiny, Eevee), and you are searching for a shiny, you will not be able to find clusters.</blockquote>
 
-  </div>
-</div><br>
+    </div>
+</div>
+<br>
 
 <p>From here you will need to advance towards your target frame. The majority of the work can be done using Moarencounterbots, but again this will require changing settings inside the <code span class="fw-bold">Hub</code> tab.</p>
 
 <span class="fw-bold">Figure 4 -</span> Advancement Setup<p></p>
-<a href="/cfw/bdsp/images/static/gift/figure-4-advancement-setup.gif" target="_blank"><img src="/cfw/bdsp/images/static/gift/figure-4-advancement-setup.gif" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/gift/figure-4-advancement-setup.gif" alt="static-gift-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/gift/figure-4-advancement-setup.gif"><p></p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #96324c;" id="advancement-setup">
-    <span class="fw-bold text-light">Advancement Setup</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>To advance large distances as quickly as possible, use the <code span class="fw-bold">EncBotDexFlipBS</code> routine. A description of this routine can be found <a href="https://github.com/Lusamine/SysBot.NET/wiki/BDSP-EncounterBots#dex-flip-bot-encbotdexflipbs">here</a>. Having a decent chunk of your Pokedex completed is important for optimizing this method.</p>
+    <div class="anchored card-header" style="background-color: #96324c;" id="advancement-setup">
+        <span class="fw-bold text-light">Advancement Setup</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>To advance large distances as quickly as possible, use the <code span class="fw-bold">EncBotDexFlipBS</code> routine. A description of this routine can be found <a href="https://github.com/Lusamine/SysBot.NET/wiki/BDSP-EncounterBots#dex-flip-bot-encbotdexflipbs">here</a>. Having a decent chunk of your Pokedex completed is important for optimizing this method.</p>
 
-    <h6><span class="fw-bold">Settings Toggles:</span></h6>
-    <ul>
-      <li>In the <code span class="fw-bold">Hub</code> tab, open the <code span class="fw-bold">EncounterRNGBS</code> dropdown menu.</li>
-      <li>Set the <code span class="fw-bold">MaxTotalAdvances</code> value to ~10,000 frames before your target (e.g if Target is at 100,000, set to 90,000).</li>
-      <li>In the <code span class="fw-bold">Bots</code> tab, type the local IP address into the assigned field and remove any other active bots.</li>
-      <li>In the dropdown menu on the right, add both <code span class="fw-bold">EncBotDexFlipBS</code> and <code span class="fw-bold">EncBotRNGMonitorBS</code></li>
-    </ul>
+        <h6><span class="fw-bold">Settings Toggles:</span></h6>
+        <ul>
+            <li>In the <code span class="fw-bold">Hub</code> tab, open the <code span class="fw-bold">EncounterRNGBS</code> dropdown menu.</li>
+            <li>Set the <code span class="fw-bold">MaxTotalAdvances</code> value to ~10,000 frames before your target (e.g if Target is at 100,000, set to 90,000).</li>
+            <li>In the <code span class="fw-bold">Bots</code> tab, type the local IP address into the assigned field and remove any other active bots.</li>
+            <li>In the dropdown menu on the right, add both <code span class="fw-bold">EncBotDexFlipBS</code> and <code span class="fw-bold">EncBotRNGMonitorBS</code></li>
+        </ul>
 
-    <p>After the settings have been properly toggled, open the Pokedex in game, disconnect all controllers using the unsync button, then start the bot. The bot will automatically pause the game when the <code span class="fw-bold">MaxTotalAdvances</code> has been reached.</p>
+        <p>After the settings have been properly toggled, open the Pokedex in game, disconnect all controllers using the unsync button, then start the bot. The bot will automatically pause the game when the <code span class="fw-bold">MaxTotalAdvances</code> has been reached.</p>
 
-    <details>
-      <summary><span class="fw-bold">Controller Connectivity Troubleshooting</span></summary>
-      <ul>
-        <li><span class="fw-bold">JoyCons -</span> Slide the JoyCons onto the Joycon rail then press any button to sync them to the console.</li>
-        <li><span class="fw-bold">Pro Controller -</span> Reconnect the controller from the controller settings if you are having issues with automatically connecting, or the controller is synced as a second controller.</li>
-      </ul>
-    </details>
+        <details>
+            <summary><span class="fw-bold">Controller Connectivity Troubleshooting</span></summary>
+            <ul>
+                <li><span class="fw-bold">JoyCons -</span> Slide the JoyCons onto the Joycon rail then press any button to sync them to the console.</li>
+                <li><span class="fw-bold">Pro Controller -</span> Reconnect the controller from the controller settings if you are having issues with automatically connecting, or the controller is synced as a second controller.</li>
+            </ul>
+        </details>
 
-    <blockquote>You do not need to use the Dex Flip routine if your target is of a small distance away or if you are manipulating your starter Pokemon, standing in the overworld while monitoring your seed is effective enough in these cases.</blockquote>
-        
-  </div>
-</div><br>
+        <blockquote>You do not need to use the Dex Flip routine if your target is of a small distance away or if you are manipulating your starter Pokemon, standing in the overworld while monitoring your seed is effective enough in these cases.</blockquote>
+
+    </div>
+</div>
+<br>
 
 <span class="fw-bold">Figure 5 -</span> Dex Flip Complete<p></p>
-<a href="/cfw/bdsp/images/static/gift/figure-5-dex-flip-complete.png" target="_blank"><img src="/cfw/bdsp/images/static/gift/figure-5-dex-flip-complete.png" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/gift/figure-5-dex-flip-complete.png" alt="static-gift-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/gift/figure-5-dex-flip-complete.png"><p></p>
 
 <p>Reconnect your controller after the Dex Flip routine has ended. If you are using JoyCons simply slide them onto the rails as you would normally. If you are using a pro controller and it does not automatically sync (or registers as a second controller), you will need to reconnect your controller from the controller settings.</p>
 
 <div class="title" style="background-color: #96324c;">
-  <h1 class="text-light text-center pt-3 pb-3">Final Advancements</h1>
-</div><hr />
+    <h1 class="text-light text-center pt-3 pb-3">Final Advancements</h1>
+</div>
+<hr />
 
 <p>Once you are close to your target frame (within ~10,000 frames), you will need to advance the rest of the way and hit your target frame slowly using <code span class="fw-bold">EncBotRNGMonitorBS</code> to monitor your seed.</p>
 
 <p>The recommended method of hitting a target frame accurately (particularly in fast paced environments), is by pressing the home button twice to resume and pause the game, this technique is known as "home mashing". While you can hit targets without using this technique, it is considered less consistent.</p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #96324c;" id="final-advancements-static">
-    <span class="fw-bold text-light">Final Advancements</span>
-  </div>
-  <div class="card-body card-bg">
-    <ul>
-      <li>With the game in the Home Menu, remove all active bots and add <code span class="fw-bold">EncBotCopySeedBS</code> to the bot list, then click the <code span class="fw-bold">Start All</code> button and paste your new seeds into PokeFinder, this will provide your new starting frame.</li><p></p>
-      <li>Remove <code span class="fw-bold">EncBotCopySeedBS</code> and add <code span class="fw-bold">EncBotRNGMonitorBS</code> instead, then start the bot to begin monitoring your seed. If done correctly the logs should start from advance 0.</li><p></p>
-      <li>Unpause the game, stand within a single <code span class="fw-bold">A</code> button press of your target NPC, then let the RNG state advance until you are within a few hundred frames of the target.</li>
-    </ul>
+    <div class="anchored card-header" style="background-color: #96324c;" id="final-advancements-static">
+        <span class="fw-bold text-light">Final Advancements</span>
+    </div>
+    <div class="card-body card-bg">
+        <ul>
+            <li>With the game in the Home Menu, remove all active bots and add <code span class="fw-bold">EncBotCopySeedBS</code> to the bot list, then click the <code span class="fw-bold">Start All</code> button and paste your new seeds into PokeFinder, this will provide your new starting frame.</li>
+            <p></p>
+            <li>Remove <code span class="fw-bold">EncBotCopySeedBS</code> and add <code span class="fw-bold">EncBotRNGMonitorBS</code> instead, then start the bot to begin monitoring your seed. If done correctly the logs should start from advance 0.</li>
+            <p></p>
+            <li>Unpause the game, stand within a single <code span class="fw-bold">A</code> button press of your target NPC, then let the RNG state advance until you are within a few hundred frames of the target.</li>
+        </ul>
 
-    <blockquote>You may optionally choose to manually advance the RNG state by scrolling the Pokedex. Be careful not to overshoot your target!</blockquote>
+        <blockquote>You may optionally choose to manually advance the RNG state by scrolling the Pokedex. Be careful not to overshoot your target!</blockquote>
 
-    <ul>
-      <li>Interact with your chosen encounter, reach the screen of the final button press (see the <a href="#delay-table">delay table</a> if unsure), then pause the game using the Home Menu.</li><p></p>
-      <li>Use the home mashing technique mentioned above to inch towards your target frame slowly, once you hit the correct target frame keep the game paused on the Home Menu.</li><p></p>
-      <li>Quickly spam the <code span class="fw-bold">A</code> button to redeem the gift, if done correctly the encounter should match what is expected by PokeFinder.</li>
-    </ul>
+        <ul>
+            <li>Interact with your chosen encounter, reach the screen of the final button press (see the <a href="#delay-table">delay table</a> if unsure), then pause the game using the Home Menu.</li>
+            <p></p>
+            <li>Use the home mashing technique mentioned above to inch towards your target frame slowly, once you hit the correct target frame keep the game paused on the Home Menu.</li>
+            <p></p>
+            <li>Quickly spam the <code span class="fw-bold">A</code> button to redeem the gift, if done correctly the encounter should match what is expected by PokeFinder.</li>
+        </ul>
 
-    <blockquote>If you have a full party and an empty slot in Box 1, your Pokemon will be sent there. If not, deposit your Pokemon in Box 1 to use PokeViewer's <code span class="fw-bold">Box View</code> function.</blockquote>
-  </div>
-</div><br>
+        <blockquote>If you have a full party and an empty slot in Box 1, your Pokemon will be sent there. If not, deposit your Pokemon in Box 1 to use PokeViewer's <code span class="fw-bold">Box View</code> function.</blockquote>
+    </div>
+</div>
+<br>
 
 <span class="fw-bold">Figure 6 -</span> Target Frame Hit<p></p>
-<a href="/cfw/bdsp/images/static/gift/figure-6-target-frame-hit-static.png" target="_blank"><img src="/cfw/bdsp/images/static/gift/figure-6-target-frame-hit-static.png" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/gift/figure-6-target-frame-hit-static.png" alt="static-gift-6" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/gift/figure-6-target-frame-hit-static.png"><p></p>
 
 <p>In Figure 6, PokeFinder displays the target on advance 12087-12091, the delay for this encounter is 0, and SysBot logs indicate that 12087 advancements have occured, so we can now mash the <code span class="fw-bold">A</code> button to redeem the gift and see if we hit the correct target frame.</p>
 
 <span class="fw-bold">Figure 7 -</span> Result Found (PokeViewer.NET Confirmation)<p></p>
-<a href="/cfw/bdsp/images/static/gift/figure-7-result-found-static.png" target="_blank"><img src="/cfw/bdsp/images/static/gift/figure-7-result-found-static.png" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/gift/figure-7-result-found-static.png" alt="static-gift-7" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/gift/figure-7-result-found-static.png"><p></p>
 
 <p>After opening PokeViewer.NET and using the <code span class="fw-bold">Box View</code> function, we can see that Jirachi matches the PokeFinder search result. Mission accomplished!</p>
 
 <p><span class="fw-bold">Note -</span> You will need to double click the box slot that contains your Pokemon to view the full details.</p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/troubleshooting">
-  Missing target frames? <span class="fw-bold">Click here for an encounter troubleshooting guide!</span>
-  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-  </svg>
+    Missing target frames? <span class="fw-bold">Click here for an encounter troubleshooting guide!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
 </a>
 <br>

@@ -5,240 +5,255 @@ permalink: /cfw/bdsp/egg/
 ---
 
 <style>
-  .card-bg {
-    background-color: #d1d1d1;
-    border-bottom-right-radius: 0.20rem !important;
-    border-bottom-left-radius: 0.20rem !important;
-  }
+    .card-bg {
+        background-color: #d1d1d1;
+        border-bottom-right-radius: 0.20rem !important;
+        border-bottom-left-radius: 0.20rem !important;
+    }
 
-  table,
-  th,
-  td {
-    border: 1px solid black;
-  }
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
 
-  blockquote {
-  background: #c5c5c5;
-  border: 1px solid #9e9e9e;
-  border-left: 5px solid #96324c;
-  margin: 1.5em 2px;
-  padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
-  }
+    blockquote {
+        background: #c5c5c5;
+        border: 1px solid #9e9e9e;
+        border-left: 5px solid #96324c;
+        margin: 1.5em 2px;
+        padding: 0.5em 10px;
+        quotes: "\201C""\201D""\2018""\2019";
+    }
 </style>
-    
+
 <div class="title" style="background-color: #96324c;">
-  <h1 class="text-light text-center pt-3 pb-3">BDSP Egg RNG (CFW)</h1>
-</div><hr />
+    <h1 class="text-light text-center pt-3 pb-3">BDSP Egg RNG (CFW)</h1>
+</div>
+<hr />
 
 <p>This section of the guide covers how to RNG manipulate day-care eggs. In BDSP, the day-care can be found in Solaceon Town.</p>
 
 <p><span class="fw-bold" style="color: #b60606;">At this stage you should have already followed all of the setup and installation instructions found on the initial page of this guide.</span></p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp">
-  Missed some setup instructions? <span class="fw-bold">Click here to go back!</span>
-  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-  </svg>
+    Missed some setup instructions? <span class="fw-bold">Click here to go back!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
 </a>
 <br>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #96324c;" id="explaining-bdsp-rng">
-    <span class="fw-bold text-light">How Does This Work?</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>In BDSP, the game operates on a constantly advancing RNG seed, which determines all random events such as shininess, and stats of eggs. Moarencounterbots can track & monitor seeds in real-time and even automate seed progression to a specific point. This automation handles the tedious RNG work, allowing you to focus on finding and hitting targets instead.</p>
+    <div class="anchored card-header" style="background-color: #96324c;" id="explaining-bdsp-rng">
+        <span class="fw-bold text-light">How Does This Work?</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>In BDSP, the game operates on a constantly advancing RNG seed, which determines all random events such as shininess, and stats of eggs. Moarencounterbots can track & monitor seeds in real-time and even automate seed progression to a specific point. This automation handles the tedious RNG work, allowing you to focus on finding and hitting targets instead.</p>
 
-    <h6><span class="fw-bold">Egg Generation</span></h6>
-    <p>Eggs have a chance of being generated after 180 steps have passed since the Pokemon were deposited in the day-care, this is known as the "egg step counter". How the internal details of the egg is generated depends on if the player has access to the Oval Charm.</p>
+        <h6><span class="fw-bold">Egg Generation</span></h6>
+        <p>Eggs have a chance of being generated after 180 steps have passed since the Pokemon were deposited in the day-care, this is known as the "egg step counter". How the internal details of the egg is generated depends on if the player has access to the Oval Charm.</p>
 
-    <ul>
-      <li><span class="fw-bold">Without Oval Charm - </span> Egg details are generated on pickup in an unstable environment.</li>
-      <li><span class="fw-bold">With Oval Charm - </span> Egg details are generated when the egg is generated, can be done in a more stable environment.</li>
-    </ul>
+        <ul>
+            <li><span class="fw-bold">Without Oval Charm - </span> Egg details are generated on pickup in an unstable environment.</li>
+            <li><span class="fw-bold">With Oval Charm - </span> Egg details are generated when the egg is generated, can be done in a more stable environment.</li>
+        </ul>
 
-    <blockquote>For stability reasons, it is best to have the Oval Charm, then generate the egg in an area where the RNG advancements are more stable, it can then be picked up from the day-care man at any point. This guide only supports the Oval Charm method.</blockquote>
+        <blockquote>For stability reasons, it is best to have the Oval Charm, then generate the egg in an area where the RNG advancements are more stable, it can then be picked up from the day-care man at any point. This guide only supports the Oval Charm method.</blockquote>
 
-  </div>
-</div><br>
+    </div>
+</div>
+<br>
 
 <p>First, you will need to configure PokeFinder to match the details of the Pokemon you are hunting, then set the desired search filters.</p>
 
 <span class="fw-bold">Figure 1 -</span> PokeFinder Setup<p></p>
-<a href="/cfw/bdsp/images/egg/figure-1-pokefinder-setup-egg.gif" target="_blank"><img src="/cfw/bdsp/images/egg/figure-1-pokefinder-setup-egg.gif" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/egg/figure-1-pokefinder-setup-egg.gif" alt="egg-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/egg/figure-1-pokefinder-setup-egg.gif"><p></p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #96324c;" id="pokefinder-setup-egg">
-    <span class="fw-bold text-light">PokeFinder Setup</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>Click the <code span class="fw-bold">Gen 8 -> Egg</code> button after launching PokeFinder to open the main window for breeding eggs. Here is where we will fill in all the details about the Pokemon being hunted.</p>
+    <div class="anchored card-header" style="background-color: #96324c;" id="pokefinder-setup-egg">
+        <span class="fw-bold text-light">PokeFinder Setup</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Click the <code span class="fw-bold">Gen 8 -> Egg</code> button after launching PokeFinder to open the main window for breeding eggs. Here is where we will fill in all the details about the Pokemon being hunted.</p>
 
-    <h6><span class="fw-bold">RNG Setup:</span></h6>
-    <ul>
-      <li>Select the correct profile from the dropdown menu at the top of the PokeFinder window.</li>
-      <li>Double check your profile and make sure your 5 digit IDs are entered correctly, and that you have selected Oval/Shiny charms.</li>
-      <li>On the left, select the egg compatibility phrase, this is displayed after talking to the day-care man in-game (example).</li>
-      <li>In the <code span class="fw-bold">Max Advances</code> field, enter the amount of frames you are willing to search through.</li>
-      <li>In the <code span class="fw-bold">Settings</code> section in the middle, specify the egg parent species details.</li>
-      <li>Select the <code span class="fw-bold">Masuda</code> checkbox if you are using parents with different language tags (Masuda Method).
-      <li>Configure your search filters on the right, such as searching for any Shiny, or a 6IV Pokemon. Filters can be also combined.</li>
-    </ul>
+        <h6><span class="fw-bold">RNG Setup:</span></h6>
+        <ul>
+            <li>Select the correct profile from the dropdown menu at the top of the PokeFinder window.</li>
+            <li>Double check your profile and make sure your 5 digit IDs are entered correctly, and that you have selected Oval/Shiny charms.</li>
+            <li>On the left, select the egg compatibility phrase, this is displayed after talking to the day-care man in-game (example).</li>
+            <li>In the <code span class="fw-bold">Max Advances</code> field, enter the amount of frames you are willing to search through.</li>
+            <li>In the <code span class="fw-bold">Settings</code> section in the middle, specify the egg parent species details.</li>
+            <li>Select the <code span class="fw-bold">Masuda</code> checkbox if you are using parents with different language tags (Masuda Method).
+            <li>Configure your search filters on the right, such as searching for any Shiny, or a 6IV Pokemon. Filters can be also combined.</li>
+        </ul>
 
-    <blockquote>Ditto takes the place of the second parent, if your non-ditto parent is male, Ditto is considered the mother and vice versa. If the Pokemon you are breeding does not have a gender, Ditto takes place of Parent B.</blockquote>
+        <blockquote>Ditto takes the place of the second parent, if your non-ditto parent is male, Ditto is considered the mother and vice versa. If the Pokemon you are breeding does not have a gender, Ditto takes place of Parent B.</blockquote>
 
-   </div>
-</div><br>
+    </div>
+</div>
+<br>
 
 <p>Next, you will need to find your current seed, this can be done using Moarencounterbots (SysBot.NET).</p>
 
 <span class="fw-bold">Figure 2 -</span> Finding Current Seed<p></p>
-<a href="/cfw/bdsp/images/egg/figure-2-finding-current-seed.gif" target="_blank"><img src="/cfw/bdsp/images/egg/figure-2-finding-current-seed.gif" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/egg/figure-2-finding-current-seed.gif" alt="egg-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/egg/figure-2-finding-current-seed.gif"><p></p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #96324c;" id="seed-searching-moarencounterbots">
-    <span class="fw-bold text-light">Finding Current Seed</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>To easily obtain your current seed at any given point you can use the <code span class="fw-bold">EncBotCopySeedBS</code> bot routine in Moarencounterbots. You will need to toggle a few settings in the <code span class="fw-bold">Hub</code> tab for use with PokeFinder.</p>
+    <div class="anchored card-header" style="background-color: #96324c;" id="seed-searching-moarencounterbots">
+        <span class="fw-bold text-light">Finding Current Seed</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>To easily obtain your current seed at any given point you can use the <code span class="fw-bold">EncBotCopySeedBS</code> bot routine in Moarencounterbots. You will need to toggle a few settings in the <code span class="fw-bold">Hub</code> tab for use with PokeFinder.</p>
 
-    <h6><span class="fw-bold">CopySeed Setup:</span></h6>
-    <ul>
-      <li>In the <code span class="fw-bold">Hub</code> tab, open the <code span class="fw-bold">EncounterRNGBS</code> dropdown menu.</li>
-      <li>Select <code span class="fw-bold">Bit64PokeFinder</code> in the <code span class="fw-bold">DisplaySeedMode</code> dropdown menu.</li>
-      <li>Set the <code span class="fw-bold">MonitorRefreshRate</code> to 0, this will be needed later.</li>
-      <li>In the <code span class="fw-bold">Bots</code> tab, type the local IP address of the console.</li>
-      <li>In the dropdown menu on the right, select <code span class="fw-bold">EncBotCopySeedBS</code> and add the bot.</li>
-    </ul>
+        <h6><span class="fw-bold">CopySeed Setup:</span></h6>
+        <ul>
+            <li>In the <code span class="fw-bold">Hub</code> tab, open the <code span class="fw-bold">EncounterRNGBS</code> dropdown menu.</li>
+            <li>Select <code span class="fw-bold">Bit64PokeFinder</code> in the <code span class="fw-bold">DisplaySeedMode</code> dropdown menu.</li>
+            <li>Set the <code span class="fw-bold">MonitorRefreshRate</code> to 0, this will be needed later.</li>
+            <li>In the <code span class="fw-bold">Bots</code> tab, type the local IP address of the console.</li>
+            <li>In the dropdown menu on the right, select <code span class="fw-bold">EncBotCopySeedBS</code> and add the bot.</li>
+        </ul>
 
-    <p>When starting the <code span class="fw-bold">EncBotCopySeedBS</code> bot at any point your seed will be produced inside the <code span class="fw-bold">Logs</code> tab. These seeds can be pasted into the <code span class="fw-bold">Seed 0</code> & <code span class="fw-bold">Seed 1 </code> fields of PokeFinder to search for targets that match your search parameters.</p>  
-  </div>
-</div><br>
+        <p>When starting the <code span class="fw-bold">EncBotCopySeedBS</code> bot at any point your seed will be produced inside the <code span class="fw-bold">Logs</code> tab. These seeds can be pasted into the <code span class="fw-bold">Seed 0</code> & <code span class="fw-bold">Seed 1 </code> fields of PokeFinder to search for targets that match your search parameters.</p>
+    </div>
+</div>
+<br>
 
 <p>Now that you understand how to obtain your current seed, you will need to position yourself poperly in game.</p>
 
 <span class="fw-bold">Figure 3 -</span> Game Setup<p></p>
-<a href="/cfw/bdsp/images/egg/figure-3-game-setup-egg.gif" target="_blank"><img src="/cfw/bdsp/images/egg/figure-3-game-setup-egg.gif" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/egg/figure-3-game-setup-egg.gif" alt="egg-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/egg/figure-3-game-setup-egg.gif"><p></p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #96324c;" id="game-setup-egg">
-    <span class="fw-bold text-light">Game Setup</span>
-  </div>
-  <div class="card-body card-bg">
-    <ul>
-      <li>Equip your Pokemon with the relevant breeding items (e.g Everstone, Destiny Knot).</li>
-      <li>Stand next to the day-care woman and save the game.</li>
-      <li>Deposit your breeding parents, then without taking any steps, open the Poketch.</li>
-      <li>Open the Step Counter application and clear the current steps, this will be used for generating the egg.</li>
-      <li>Pause the game using the Home button, then begin searching for seeds.</li>
-    </ul>
-    
-  </div>
-</div><br>
+    <div class="anchored card-header" style="background-color: #96324c;" id="game-setup-egg">
+        <span class="fw-bold text-light">Game Setup</span>
+    </div>
+    <div class="card-body card-bg">
+        <ul>
+            <li>Equip your Pokemon with the relevant breeding items (e.g Everstone, Destiny Knot).</li>
+            <li>Stand next to the day-care woman and save the game.</li>
+            <li>Deposit your breeding parents, then without taking any steps, open the Poketch.</li>
+            <li>Open the Step Counter application and clear the current steps, this will be used for generating the egg.</li>
+            <li>Pause the game using the Home button, then begin searching for seeds.</li>
+        </ul>
+
+    </div>
+</div>
+<br>
 
 <span class="fw-bold">Figure 4 -</span> Target Frame Found!<p></p>
-<a href="/cfw/bdsp/images/egg/figure-4-target-frame-found.png" target="_blank"><img src="/cfw/bdsp/images/egg/figure-4-target-frame-found.png" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/egg/figure-4-target-frame-found.png" alt="egg-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/egg/figure-4-target-frame-found.png"><p></p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #96324c;" id="target-frame-found-wild">
-    <span class="fw-bold text-light">Target Frame Found!</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>In Figure 4, we can see that a Shiny x that matches the search filters has been produced in y advances, this is the frame that we will aim to generate the egg.</p>
-    
-    <h6><span class="fw-bold">Undesirable Result?</span></h6>
-    <ul>
-      <li>Reset the game to refresh the seed, then enter the overworld.</li>
-      <li>Run <code span class="fw-bold">EncBotCopySeedBS</code> again to produce a new seed.</li>
-      <li>Paste the new seeds into PokeFinder and search again.</li>
-      <li>Repeat until a desirable result has been found.</li>
-    </ul>
+    <div class="anchored card-header" style="background-color: #96324c;" id="target-frame-found-wild">
+        <span class="fw-bold text-light">Target Frame Found!</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>In Figure 4, we can see that a Shiny x that matches the search filters has been produced in y advances, this is the frame that we will aim to generate the egg.</p>
 
-    <p>Consider increasing the search range if you are consistently finding "bad" seeds. Moarencounterbots is capable of advancing millions of frames with ease using the <code span class="fw-bold">EncBotDexFlipBS</code> routine. Alternatively you can opt to use less strict search filters.</p>
+        <h6><span class="fw-bold">Undesirable Result?</span></h6>
+        <ul>
+            <li>Reset the game to refresh the seed, then enter the overworld.</li>
+            <li>Run <code span class="fw-bold">EncBotCopySeedBS</code> again to produce a new seed.</li>
+            <li>Paste the new seeds into PokeFinder and search again.</li>
+            <li>Repeat until a desirable result has been found.</li>
+        </ul>
 
-  </div>
-</div><br>
+        <p>Consider increasing the search range if you are consistently finding "bad" seeds. Moarencounterbots is capable of advancing millions of frames with ease using the <code span class="fw-bold">EncBotDexFlipBS</code> routine. Alternatively you can opt to use less strict search filters.</p>
+
+    </div>
+</div>
+<br>
 
 <p>From here you will need to advance towards your target frame. The majority of the work can be done using Moarencounterbots, but again this will require changing settings inside the <code span class="fw-bold">Hub</code> tab.</p>
 
 <span class="fw-bold">Figure 5 -</span> Advancement Setup<p></p>
-<a href="/cfw/bdsp/images/egg/figure-5-advancement-setup.gif" target="_blank"><img src="/cfw/bdsp/images/egg/figure-5-advancement-setup.gif" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/egg/figure-5-advancement-setup.gif" alt="egg-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/egg/figure-5-advancement-setup.gif"><p></p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #96324c;" id="advancement-setup">
-    <span class="fw-bold text-light">Advancement Setup</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>To advance large distances as quickly as possible, use the <code span class="fw-bold">EncBotDexFlipBS</code> routine. A description of this routine can be found <a href="https://github.com/Lusamine/SysBot.NET/wiki/BDSP-EncounterBots#dex-flip-bot-encbotdexflipbs">here</a>. Having a decent chunk of your Pokedex completed is important for optimizing this method.</p>
+    <div class="anchored card-header" style="background-color: #96324c;" id="advancement-setup">
+        <span class="fw-bold text-light">Advancement Setup</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>To advance large distances as quickly as possible, use the <code span class="fw-bold">EncBotDexFlipBS</code> routine. A description of this routine can be found <a href="https://github.com/Lusamine/SysBot.NET/wiki/BDSP-EncounterBots#dex-flip-bot-encbotdexflipbs">here</a>. Having a decent chunk of your Pokedex completed is important for optimizing this method.</p>
 
-    <h6><span class="fw-bold">Settings Toggles:</span></h6>
-    <ul>
-      <li>In the <code span class="fw-bold">Hub</code> tab, open the <code span class="fw-bold">EncounterRNGBS</code> dropdown menu.</li>
-      <li>Set the <code span class="fw-bold">MaxTotalAdvances</code> value to ~10,000 frames before your target (e.g if Target is at 100,000, set to 90,000).</li>
-      <li>In the <code span class="fw-bold">Bots</code> tab, type the local IP address into the assigned field and remove any other active bots.</li>
-      <li>In the dropdown menu on the right, add both <code span class="fw-bold">EncBotDexFlipBS</code> and <code span class="fw-bold">EncBotRNGMonitorBS</code></li>
-    </ul>
+        <h6><span class="fw-bold">Settings Toggles:</span></h6>
+        <ul>
+            <li>In the <code span class="fw-bold">Hub</code> tab, open the <code span class="fw-bold">EncounterRNGBS</code> dropdown menu.</li>
+            <li>Set the <code span class="fw-bold">MaxTotalAdvances</code> value to ~10,000 frames before your target (e.g if Target is at 100,000, set to 90,000).</li>
+            <li>In the <code span class="fw-bold">Bots</code> tab, type the local IP address into the assigned field and remove any other active bots.</li>
+            <li>In the dropdown menu on the right, add both <code span class="fw-bold">EncBotDexFlipBS</code> and <code span class="fw-bold">EncBotRNGMonitorBS</code></li>
+        </ul>
 
-    <p>After the settings have been properly toggled, open the Pokedex in game, disconnect all controllers using the unsync button, then start the bot. The bot will automatically pause the game when the <code span class="fw-bold">MaxTotalAdvances</code> has been reached.</p>
+        <p>After the settings have been properly toggled, open the Pokedex in game, disconnect all controllers using the unsync button, then start the bot. The bot will automatically pause the game when the <code span class="fw-bold">MaxTotalAdvances</code> has been reached.</p>
 
-    <blockquote>You do not need to use the Dex Flip routine if your target is of a small distance away, scrolling the Pokedex manually while monitoring your seed is effective enough in these cases.</blockquote>
-      
-  </div>
-</div><br>
+        <blockquote>You do not need to use the Dex Flip routine if your target is of a small distance away, scrolling the Pokedex manually while monitoring your seed is effective enough in these cases.</blockquote>
+
+    </div>
+</div>
+<br>
 
 <span class="fw-bold">Figure 6 -</span> Dex Flip Complete<p></p>
-<a href="/cfw/bdsp/images/egg/figure-6-dex-flip-complete.png" target="_blank"><img src="/cfw/bdsp/images/egg/figure-6-dex-flip-complete.png" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/egg/figure-6-dex-flip-complete.png" alt="egg-6" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/egg/figure-6-dex-flip-complete.png"><p></p>
 
 <p>Reconnect your controller after the Dex Flip routine has ended. If you are using JoyCons simply slide them onto the rails as you would normally. If you are using a pro controller and it does not automatically sync (or registers as a second controller), you will need to reconnect your controller from the controller settings.</p>
 
 <div class="title" style="background-color: #96324c;">
-  <h1 class="text-light text-center pt-3 pb-3">Final Advancements</h1>
-</div><hr />
+    <h1 class="text-light text-center pt-3 pb-3">Final Advancements</h1>
+</div>
+<hr />
 
 <p>Once you are close to your target frame (within ~10,000 frames), you will need to advance the rest of the way and hit your target frame slowly using <code span class="fw-bold">EncBotRNGMonitorBS</code> to monitor your seed. It is assumed that you have correctly followed the Game Setup found in Figure 3.</p>
 
 <p>The recommended method of hitting a target frame accurately is by pressing the home button twice to resume and pause the game, this technique is known as "home mashing". While you can hit targets without using this technique, it is considered less consistent.</p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #96324c;" id="final-advancements-egg">
-    <span class="fw-bold text-light">Final Advancements</span>
-  </div>
-  <div class="card-body card-bg">
-    <ul>
-      <li>Leave the day-care building, then fly to the players house and head upstairs, this area provides naturally slow paced advancements.</li><p></p>
-      <li>Once you are upstairs, walk around until 179 steps have been taken, according to the Poketch step counter, then press the Home button to freeze the RNG state.</li><p></p>
-      <li>Remove all active bots from the SysBot list, then add <code span class="fw-bold">EncBotCopySeedBS</code> to the bot list and click <code span class="fw-bold">Start All</code>.</li><p></p>
-      <li>Paste the updated seeds into PokeFinder then search for your target again, this will provide your new target frame. Remove <code span class="fw-bold">EncBotCopySeedBS</code> after doing this.</li><p></p>
-      <li>Add <code span class="fw-bold">EncBotRNGMonitorBS</code> instead, click <code span class="fw-bold">Start All</code> to monitor your RNG state, then unpause the game, monitor until you are ~100 frames from your target.</li><p></p>
-      <li>Once you are within 100 frames of your target, press the Home button to freeze the RNG state once more.</li> 
-    </ul>
+    <div class="anchored card-header" style="background-color: #96324c;" id="final-advancements-egg">
+        <span class="fw-bold text-light">Final Advancements</span>
+    </div>
+    <div class="card-body card-bg">
+        <ul>
+            <li>Leave the day-care building, then fly to the players house and head upstairs, this area provides naturally slow paced advancements.</li>
+            <p></p>
+            <li>Once you are upstairs, walk around until 179 steps have been taken, according to the Poketch step counter, then press the Home button to freeze the RNG state.</li>
+            <p></p>
+            <li>Remove all active bots from the SysBot list, then add <code span class="fw-bold">EncBotCopySeedBS</code> to the bot list and click <code span class="fw-bold">Start All</code>.</li>
+            <p></p>
+            <li>Paste the updated seeds into PokeFinder then search for your target again, this will provide your new target frame. Remove <code span class="fw-bold">EncBotCopySeedBS</code> after doing this.</li>
+            <p></p>
+            <li>Add <code span class="fw-bold">EncBotRNGMonitorBS</code> instead, click <code span class="fw-bold">Start All</code> to monitor your RNG state, then unpause the game, monitor until you are ~100 frames from your target.</li>
+            <p></p>
+            <li>Once you are within 100 frames of your target, press the Home button to freeze the RNG state once more.</li>
+        </ul>
 
-    <blockquote>You may optionally choose to manually advance the RNG state by scrolling the Pokedex. Be careful not to overshoot your target!</blockquote>
+        <blockquote>You may optionally choose to manually advance the RNG state by scrolling the Pokedex. Be careful not to overshoot your target!</blockquote>
 
-    <ul>
-      <li>Use the home mashing technique mentioned above to inch towards your target frame slowly. Once you hit the correct target frame keep the game paused on the Home Menu.</li><p></p>
-      <li>Unpause the game and quickly take a step to generate the egg (on step 180), then go fly to Solaceon Town to redeem your egg from the day-care man. If done correctly the egg should match what is expected by PokeFinder.</li>
-    </ul>
+        <ul>
+            <li>Use the home mashing technique mentioned above to inch towards your target frame slowly. Once you hit the correct target frame keep the game paused on the Home Menu.</li>
+            <p></p>
+            <li>Unpause the game and quickly take a step to generate the egg (on step 180), then go fly to Solaceon Town to redeem your egg from the day-care man. If done correctly the egg should match what is expected by PokeFinder.</li>
+        </ul>
 
-    <blockquote>If the Egg has been sent to your party, deposit it into Box 1 to use PokeViewer.NET's <code span class="fw-bold">Box View</code> function to read the details and confirm the target frame has been properly hit.</blockquote>
-  </div>
-</div><br>
+        <blockquote>If the Egg has been sent to your party, deposit it into Box 1 to use PokeViewer.NET's <code span class="fw-bold">Box View</code> function to read the details and confirm the target frame has been properly hit.</blockquote>
+    </div>
+</div>
+<br>
 
 <span class="fw-bold">Figure 7 -</span> Target Frame Hit<p></p>
-<a href="/cfw/bdsp/images/egg/figure-7-target-frame-hit-egg.gif" target="_blank"><img src="/cfw/bdsp/images/egg/figure-7-target-frame-hit-egg.gif" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/egg/figure-7-target-frame-hit-egg.gif" alt="egg-7" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/egg/figure-7-target-frame-hit-egg.gif"><p></p>
 
 <p>In Figure 7, PokeFinder displays the target on advance 6670, and SysBot logs indicate that 6670 number of advancements have occured, so we can now take the final step (180) to generate the egg, then redeem the egg from the day-care man to confirm the target frame has been hit.</p>
-  
+
 <span class="fw-bold">Figure 8 -</span> Result Found (PokeViewer.NET Confirmation)<p></p>
-<a href="/cfw/bdsp/images/egg/figure-8-result-found-egg.png" target="_blank"><img src="/cfw/bdsp/images/egg/figure-8-result-found-egg.png" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/egg/figure-8-result-found-egg.png" alt="egg-8" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/egg/figure-8-result-found-egg.png"><p></p>
 
 <p>After claiming the egg from the day-care man, then opening PokeViewer.NET and using the <code span class="fw-bold">Box View</code> function, we can see that the Pokemon matches the PokeFinder search result. Mission accomplished!</p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/troubleshooting">
-  Missing target frames? <span class="fw-bold">Click here for an encounter troubleshooting guide!</span>
-  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-  </svg>
+    Missing target frames? <span class="fw-bold">Click here for an encounter troubleshooting guide!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
 </a>
 <br>

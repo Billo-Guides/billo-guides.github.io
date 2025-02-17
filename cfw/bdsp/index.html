@@ -38,7 +38,7 @@ permalink: /cfw/bdsp/
 <p>This guide offers a in-depth coverage of how to use RNG abuse to manipulate encounters, gifts, and eggs in Pokémon Brilliant Diamond & Shining Pearl, using tools and scripts developed by <a href="https://github.com/Lusamine">Lusamine</a> and <a href="https://github.com/Admiral-Fish">Admiral Fish</a>. You can utilize RNG abuse to obtain shiny Pokémon with high IVs and desirable natures, as well as determine other attributes like gender and size.</p>
 
 <div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
-    <span class="fw-bold">Important -</span> From here it is assumed that you are using a CFW Switch console running <a href="https://github.com/Atmosphere-NX/Atmosphere/releases" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">Atmosphere</a> this guide is also geared towards users running Windows OS. No support for alternative operating systems will be provided.
+    <span class="fw-bold">Important -</span> From here it is assumed that you are using a CFW Switch console running <a href="https://github.com/Atmosphere-NX/Atmosphere/releases" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">Atmosphere</a>, this guide is also geared towards users running Windows OS. No support for alternative operating systems will be provided. You will also need to install the relevant dependencies, <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">Microsoft C++ Redistributable</a> (PokeFinder) &amp; <a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.302-windows-x64-installer" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">.NET 8.0</a> (SysBot.NET).
 </div>
 <p></p>
 
@@ -57,11 +57,9 @@ permalink: /cfw/bdsp/
 
         <h6><span class="fw-bold">Installation Instructions:</span></h6>
         <ol>
-            <li>Download <code span class="fw-bold">PokeFinder.zip</code>, <code span class="fw-bold">SysBot.NET - Moarencounterbots.zip</code> & <code span class="fw-bold">PokeViewer.zip</code>, then extract the contents into a known location on your computer.</li>
-            <li>Download <code span class="fw-bold">sys-botbase.zip</code>, then extract the <code span class="fw-bold">atmosphere</code> folder to the root of your Switch SD card, then reboot the console (SysCFW). The home button on your controller should <a href="https://github.com/olliz0r/sys-botbase/blob/master/joycon-glow.gif">have a blue glow when booting</a> if done correctly.</li>
+            <li>Download <code span class="fw-bold">PokeFinder.zip</code>, <code span class="fw-bold">SysBot.NET - Moarencounterbots.zip</code> & <code span class="fw-bold">PokeViewer.zip</code>, then extract the contents of each individual folder into a known location on your computer.</li>
+            <li>Download <code span class="fw-bold">sys-botbase.zip</code>, then extract the <code span class="fw-bold">atmosphere</code> folder to the root of your Switch SD card, then reboot the console (SysCFW). The home button on your controller should <a class="clickable-image" data-image="https://raw.githubusercontent.com/olliz0r/sys-botbase/refs/heads/master/joycon-glow.gif">have a blue glow when booting</a> if done correctly.</li>
         </ol>
-
-        <blockquote>On Windows OS, PokeFinder requires <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Microsoft C++ Redistributable</a> to be installed on your computer. SysBot.NET requires <a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.302-windows-x64-installer">.NET 8.0 SDK</a>. Install these dependencies if you are running into issues opening the programs.</blockquote>
     </div>
 </div>
 <br>
@@ -84,7 +82,7 @@ permalink: /cfw/bdsp/
 <p>Firstly you will need a basic understanding of how to use each application. If you are not familiar with PokeFinder, Moarencounterbots, or PokeViewer, start by learning about these tools here.</p>
 
 <span class="fw-bold">Figure 1 -</span> PokeFinder Overview<p></p>
-<img src="billo-guides-images/cfw/bdsp/main-page/figure-1-pokefinder-overview.png" alt="main-page-1" class="img-fluid clickable-image" data-image="billo-guides-images/cfw/bdsp/main-page/figure-1-pokefinder-overview.png"><p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/main-page/figure-1-pokefinder-overview.png" alt="main-page-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/main-page/figure-1-pokefinder-overview.png"><p></p>
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #96324c;" id="pokefinder-overview">
@@ -121,9 +119,7 @@ permalink: /cfw/bdsp/
 <br>
 
 <span class="fw-bold">Figure 2 -</span> Moarencounterbots Overview<p></p>
-<a href="/cfw/bdsp/images/main-page/figure-2-moarencounterbots-overview.png" target="_blank"><img src="/cfw/bdsp/images/main-page/figure-2-moarencounterbots-overview.png" class="img-fluid"></a>
-<br />
-<br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/main-page/figure-2-moarencounterbots-overview.png" alt="main-page-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/main-page/figure-2-moarencounterbots-overview.png"><p></p>
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #96324c;" id="moarencounterbots-overview">
@@ -163,9 +159,7 @@ permalink: /cfw/bdsp/
 <br>
 
 <span class="fw-bold">Figure 3 -</span> PokeViewer.NET Overview<p></p>
-<a href="/cfw/bdsp/images/main-page/figure-3-pokeviewer-overview.png" target="_blank"><img src="/cfw/bdsp/images/main-page/figure-3-pokeviewer-overview.png" class="img-fluid"></a>
-<br />
-<br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/main-page/figure-3-pokeviewer-overview.png" alt="main-page-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/main-page/figure-3-pokeviewer-overview.png"><p></p>
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #96324c;" id="pokeviewer-overview">
