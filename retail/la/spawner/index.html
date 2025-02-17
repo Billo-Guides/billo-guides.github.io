@@ -6,20 +6,20 @@ permalink: /retail/la/legendary/spawner-rng/worked-example
 
 <style>
     mark {
-      background-color: #FFD700;
-      color: black;
+        background-color: #FFD700;
+        color: black;
     }
-  
+
     .card-bg {
-      background-color: #d1d1d1;
-      border-bottom-right-radius: 0.20rem !important;
-      border-bottom-left-radius: 0.20rem !important;
+        background-color: #d1d1d1;
+        border-bottom-right-radius: 0.20rem !important;
+        border-bottom-left-radius: 0.20rem !important;
     }
-  
+
     table,
     th,
     td {
-      border: 1px solid black;
+        border: 1px solid black;
     }
 
     blockquote {
@@ -31,111 +31,116 @@ permalink: /retail/la/legendary/spawner-rng/worked-example
         quotes: "\201C""\201D""\2018""\2019";
     }
 </style>
-  
+
 <div class="title" style="background-color: #6f3b97;">
-  <h1 class="text-light text-center pt-3 pb-3">Spawner Legendary RNG (Retail)</h1>
-</div><hr />
+    <h1 class="text-light text-center pt-3 pb-3">Spawner Legendary RNG (Retail)</h1>
+</div>
+<hr />
 
 <p>This page provides a worked example for RNG manipulating Legendary & Mythical Pokemon in Legends: Arceus that are generated using Spawner RNG method. The scripts used throughout this example are developed by <a href="https://github.com/lusamine">Lusamine</a>, as mentioned on the main page.</p>
 
 <p><span class="fw-bold" style="color: #b60606;">It is assumed that you have read and followed all of the information found on the introductory page of this guide.</span></p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/la/legendary">
-  Didn't read through the main page? <span class="fw-bold">Click here to go back</span>!
-<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
- </svg></a><br>
+    Didn't read through the main page? <span class="fw-bold">Click here to go back</span>!
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+<br>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #6f3b97;" id="in-game-requirements-spawner-retail">
-    <span class="fw-bold text-light">In-game Requirements:</span>
-  </div>
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="in-game-requirements-spawner-retail">
+        <span class="fw-bold text-light">In-game Requirements:</span>
+    </div>
     <div class="card-body card-bg">
-      <p>Ensure that you meet these in-game requirements before continuing:</p>
+        <p>Ensure that you meet these in-game requirements before continuing:</p>
 
-      <ul>
-        <li>Autosave disabled in the game settings.</li>
-        <li>Access to enough throwable items (e.g sticky glob), Pokeballs and healing items.</li>
-        <li>A Pokemon strong to defeat your target Pokemon within 1-2 attacks.</li>
-        <li>(Optional) A Pokemon used primarily for inflicting sleep or paralysis.</li>
-        <li>Access to a SysBot running Legends: Arceus in order to find your seed.</li>
-      </ul>
+        <ul>
+            <li>Autosave disabled in the game settings.</li>
+            <li>Access to enough throwable items (e.g sticky glob), Pokeballs and healing items.</li>
+            <li>A Pokemon strong to defeat your target Pokemon within 1-2 attacks.</li>
+            <li>(Optional) A Pokemon used primarily for inflicting sleep or paralysis.</li>
+            <li>Access to a SysBot running Legends: Arceus in order to find your seed.</li>
+        </ul>
 
-      <blockquote>Information about how to use SysBot to dump the <code class="fw-bold">.pa8</code> files used to find a spawner seed can be found on the introductory page. Go back and read this if you are unfamiliar.</blockquote>
-  </div>
+        <blockquote>Information about how to use SysBot to dump the <code class="fw-bold">.pa8</code> files used to find a spawner seed can be found on the introductory page. Go back and read this if you are unfamiliar.</blockquote>
+    </div>
 </div>
-   
+
 <hr /><div class="title" style="background-color: #6f3b97;">
-  <h1 class="text-light text-center pt-3 pb-3">Worked Example - Spawner RNG</h1>
-</div><hr />
+    <h1 class="text-light text-center pt-3 pb-3">Worked Example - Spawner RNG</h1>
+</div>
+<hr />
 
 <span class="fw-bold">Figure 1 -</span> How To Use - Seed Solver Script<p></p>
-<a href="/retail/la/spawner/images/how-to-use-seed-solver.gif" target="_blank"><img src="/retail/la/spawner/images/how-to-use-seed-solver.gif" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/images/how-to-use-seed-solver.gif" alt="spawner-retail-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/images/how-to-use-seed-solver.gif"><p></p>
 
 <p>First, use a SysBot to dump the files of two consecutive Pokemon from the spawner you wish to check, then place them inside the <code class="fw-bold">pa8s</code> folder that was created earlier and run the script. After a short wait, a group seed will be produced, this seed is needed for the calculator script to predict the details of upcoming advancements/frames.</p>
 
 <span class="fw-bold">Figure 2 -</span> How To Use - RNG Calculation Script<p></p>
-<a href="/retail/la/spawner/images/how-to-use-calculator.gif" target="_blank"><img src="/retail/la/spawner/images/how-to-use-calculator.gif" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/images/how-to-use-calculator.gif" alt="spawner-retail-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/images/how-to-use-calculator.gif"><p></p>
 
-<p>Copy the group seed that was produced by the Seed Solver Script, then paste it into the Spawner RNG Calculation Script on the line that starts with <code class="fw-bold">ulong group_seed = 0x</code> (located towards the top of the script).</p> 
-    
-<p>In this example the seed that was produced is <code class="fw-bold">264cc9c14e639858</code>, If you have pasted the seed into the script correctly it should look similar to the following:</p> 
+<p>Copy the group seed that was produced by the Seed Solver Script, then paste it into the Spawner RNG Calculation Script on the line that starts with <code class="fw-bold">ulong group_seed = 0x</code> (located towards the top of the script).</p>
 
-<div class="alert border-dark" style="background-color: #d1d1d1;">              
-<code class="fw-bold" style="color: #0a7a00;">// Initial State</code><br>
-<code class="fw-bold" style="color: #2e62bf;">ulong</code> <code class="fw-bold" style="color: #000000;">group_seed =</code> <code class="fw-bold" style="color: #af82de;">0x264cc9c14e639858;</code> <code class="fw-bold" style="color: #0a7a00;">// group seed</code><br>
-<code class="fw-bold" style="color: #2e62bf;">ulong</code> <code class="fw-bold" style="color: #000000;">init =</code> <code class="fw-bold" style="color: #2e62bf;">unchecked</code><code class="fw-bold" style="color: #000000;">(group_seed)</code><br>
-<code class="fw-bold" style="color: #000000;">Xoroshiro128Plus rng =</code> <code class="fw-bold" style="color: #2e62bf;">new</code><code class="fw-bold" style="color: #000000;">(init)</code> 
+<p>In this example the seed that was produced is <code class="fw-bold">264cc9c14e639858</code>, If you have pasted the seed into the script correctly it should look similar to the following:</p>
+
+<div class="alert border-dark" style="background-color: #d1d1d1;">
+    <code class="fw-bold" style="color: #0a7a00;">// Initial State</code><br>
+    <code class="fw-bold" style="color: #2e62bf;">ulong</code> <code class="fw-bold" style="color: #000000;">group_seed =</code> <code class="fw-bold" style="color: #af82de;">0x264cc9c14e639858;</code> <code class="fw-bold" style="color: #0a7a00;">// group seed</code><br>
+    <code class="fw-bold" style="color: #2e62bf;">ulong</code> <code class="fw-bold" style="color: #000000;">init =</code> <code class="fw-bold" style="color: #2e62bf;">unchecked</code><code class="fw-bold" style="color: #000000;">(group_seed)</code><br>
+    <code class="fw-bold" style="color: #000000;">Xoroshiro128Plus rng =</code> <code class="fw-bold" style="color: #2e62bf;">new</code><code class="fw-bold" style="color: #000000;">(init)</code>
 </div><p></p>
 
 <span class="fw-bold">Figure 3 -</span> Setting Filters - Calculation Script<p></p>
-<a href="/retail/la/spawner/images/setting-filters-calculator-script.gif" target="_blank"><img src="/retail/la/spawner/images/setting-filters-calculator-script.gif" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/images/setting-filters-calculator-script.gif" alt="spawner-retail-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/images/setting-filters-calculator-script.gif"><p></p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #6f3b97;" id="search-filters-spawner-script-retail">
-    <span class="fw-bold text-light">Search Filters:</span>
-  </div>
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="search-filters-spawner-script-retail">
+        <span class="fw-bold text-light">Search Filters:</span>
+    </div>
     <div class="card-body card-bg">
-      <p>To search for a specific IV spread you will need to activate the search filters. These can be found towards the bottom of the script. By default all search filters will be disabled.</p>
+        <p>To search for a specific IV spread you will need to activate the search filters. These can be found towards the bottom of the script. By default all search filters will be disabled.</p>
 
-      <p>To activate IV filters, you will need to remove the comment syntax surrounding them at the top and the bottom (<code class="fw-bold" style="color: #0a7a00;">*/</code>), this will ensure that the only output that is produced by the script matches those IV filters.</p>
+        <p>To activate IV filters, you will need to remove the comment syntax surrounding them at the top and the bottom (<code class="fw-bold" style="color: #0a7a00;">*/</code>), this will ensure that the only output that is produced by the script matches those IV filters.</p>
 
-      <p>You may choose to ignore search filters if you are not looking for a Pokemon with 6 perfect IVs (for example, 0 speed Enamorus), this will keep your options open. You can also adjust the amount of frames to search through at the top of the script. It is not recommended to change this value above 200.</p>
+        <p>You may choose to ignore search filters if you are not looking for a Pokemon with 6 perfect IVs (for example, 0 speed Enamorus), this will keep your options open. You can also adjust the amount of frames to search through at the top of the script. It is not recommended to change this value above 200.</p>
 
-      <p>For Heatran specifically, you will need to change the <code class="fw-bold">GenderCompare</code> value to 127, for anything else this should remain unchanged at -1, this is due to Heatran being the only legendary available with a variable gender.</p>
+        <p>For Heatran specifically, you will need to change the <code class="fw-bold">GenderCompare</code> value to 127, for anything else this should remain unchanged at -1, this is due to Heatran being the only legendary available with a variable gender.</p>
 
-      <details>
-          <summary><span class="fw-bold">Undesirable search result?</span></summary>
-          <p>If you do not find a desirable target frame after searching, repeat the following:</p>
-          <ol>
-            <li>Enter Jubilife, then go back into the area that contains your desired legendary.</li>
-            <li>Save the game to lock the seed in place.</li>
-            <li>Dump 2 consecutive Pokemon using a SysBot to get a new seed and try again.</li>
-          </ol>
-      </details>
-    
-  </div>
-</div><br>
+        <details>
+            <summary><span class="fw-bold">Undesirable search result?</span></summary>
+            <p>If you do not find a desirable target frame after searching, repeat the following:</p>
+            <ol>
+                <li>Enter Jubilife, then go back into the area that contains your desired legendary.</li>
+                <li>Save the game to lock the seed in place.</li>
+                <li>Dump 2 consecutive Pokemon using a SysBot to get a new seed and try again.</li>
+            </ol>
+        </details>
+
+    </div>
+</div>
+<br>
 
 <span class="fw-bold">Figure 4 -</span> Target Found!<p></p>
-<a href="/retail/la/spawner/images/target-found-spawner.png" target="_blank"><img src="/retail/la/spawner/images/target-found-spawner.png" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/images/target-found-spawner.png" alt="spawner-retail-6" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/images/target-found-spawner.png"><p></p>
 
 <p>We will be searching for any Enamorus with an speed IV value of 0, In the above image, we can see that there is an Enamorus that matches this description in 5 advances! This means we will need to knock out and respawn Enamorus 5 times to hit the correct target frame.</p>
 
 <p>Advance the RNG state using the method mentioned on the main page. Enamorus is one of the Pokemon that will despawn when defeated, so we will will need to follow the "despawns when defeated" steps in order to effectively respawn it.</p>
 
 <span class="fw-bold">Figure 5 -</span> Result Found!<p></p>
-<a href="/retail/la/spawner/images/result-found-spawner.jpg" target="_blank"><img src="/retail/la/spawner/images/result-found-spawner.jpg" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/images/result-found-spawner.jpg" alt="spawner-retail-7" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/images/result-found-spawner.jpg"><p></p>
 
 <p>After advancing 5 frames we have now reached our target frame and found the Enamorus that is believed to have an speed IV value of 0!</p>
-    
+
 <p>Legends: Arceus has no way to check the exact IV values in-game, this means you will need to confirm the IVs of the Pokemon by either dumping it using a SysBot or viewing it inside Pokemon HOME.</p>
 
 <blockquote><span class="fw-bold">Note -</span> It is heavily recommended to dump the Pokemon using a SysBot to check the stats, depositing the Pokemon into Pokemon HOME will force your game to save with whatever Pokemon you currently have. This may leave you stuck with an undesirable Pokemon.</blockquote>
 
 <span class="fw-bold">Figure 6 -</span> IV confirmation<p></p>
-<a href="/retail/la/spawner/images/how-to-use-seed-solver.gif" target="_blank"><img src="/retail/la/spawner/images/iv-confirmation-spawner.png" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/images/iv-confirmation-spawner.png" alt="spawner-retail-8" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/images/iv-confirmation-spawner.png"><p></p>
 
-<p>After dumping the Enamorus using Sysbot.NET and viewing the file in PKHeX, we have confirmed that the IVs & nature match what was produced by the script.</p>
+<p>After dumping the Enamorus using SysBot.NET and viewing the file in PKHeX, we have confirmed that the IVs & nature match what was produced by the script.</p>
 
 <p><span class="fw-bold">That's all there is to RNG Pokemon tied to spawners on retail hardware!</span></p>

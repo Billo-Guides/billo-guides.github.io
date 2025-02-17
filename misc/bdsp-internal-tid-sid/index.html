@@ -5,113 +5,117 @@ permalink: /misc/bdsp/internal-tid-sid
 ---
 
 <style>
-  .card-bg {
-    background-color: #d1d1d1;
-    border-bottom-right-radius: 0.20rem !important;
-    border-bottom-left-radius: 0.20rem !important;
-  }
+    .card-bg {
+        background-color: #d1d1d1;
+        border-bottom-right-radius: 0.20rem !important;
+        border-bottom-left-radius: 0.20rem !important;
+    }
 
-  blockquote {
-  background: #c5c5c5;
-  border: 1px solid #9e9e9e;
-  border-left: 5px solid #96324c;
-  margin: 1.5em 2px;
-  padding: 0.5em 10px;
-  }
+    blockquote {
+        background: #c5c5c5;
+        border: 1px solid #9e9e9e;
+        border-left: 5px solid #96324c;
+        margin: 1.5em 2px;
+        padding: 0.5em 10px;
+    }
 </style>
-    
+
 <div class="title" style="background-color: #96324c;">
-  <h1 class="text-light text-center pt-3 pb-3">Finding Internal TID/SID (BDSP)</h1>
-</div><hr />
+    <h1 class="text-light text-center pt-3 pb-3">Finding Internal TID/SID (BDSP)</h1>
+</div>
+<hr />
 
 <p>This page contains a quick and easy guide on how to find your internal TID/SID in Brilliant Diamond and Shining Pearl using PKHeX. These values are necessary to accurately display target frames and internal information when using PokeFinder to calculate target frames.</p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #96324c;" id="setup-internal-ids">
-    <span class="fw-bold text-light">Setup Instructions:</span>
-  </div>
-  <div class="card-body card-bg">
-    <h5><span class="fw-bold">You will need:</span></h5>
-    <ul>
-      <li><a href="https://github.com/Admiral-Fish/PokeFinder/releases">PokeFinder</a></li>
-      <li><a href="https://projectpokemon.org/home/files/file/1-pkhex/">PKHeX</a></li>
-      <li><a href="https://github.com/J-D-K/JKSV/releases">JKSV</a> or <a href="https://github.com/BernardoGiordano/Checkpoint/releases">CheckPoint</a> (CFW only)</li>
-      <li>Access to Switch CFW, either through your own console, a trade bot, or a friend.</li>
-    </ul>
+    <div class="anchored card-header" style="background-color: #96324c;" id="setup-internal-ids">
+        <span class="fw-bold text-light">Setup Instructions:</span>
+    </div>
+    <div class="card-body card-bg">
+        <h5><span class="fw-bold">You will need:</span></h5>
+        <ul>
+            <li><a href="https://github.com/Admiral-Fish/PokeFinder/releases">PokeFinder</a></li>
+            <li><a href="https://projectpokemon.org/home/files/file/1-pkhex/">PKHeX</a></li>
+            <li><a href="https://github.com/J-D-K/JKSV/releases">JKSV</a> or <a href="https://github.com/BernardoGiordano/Checkpoint/releases">CheckPoint</a> (CFW only)</li>
+            <li>Access to Switch CFW, either through your own console, a trade bot, or a friend.</li>
+        </ul>
 
-    <small>If you are running into issues when opening PokeFinder or PKHeX, you may not have <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Microsoft C++ Redistributable</a> & <a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.302-windows-x64-installer">.NET 8.0 SDK</a> installed to your machine. PKHeX is also only natively supported on Windows devices.</small>
+        <small>If you are running into issues when opening PokeFinder or PKHeX, you may not have <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Microsoft C++ Redistributable</a> & <a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.302-windows-x64-installer">.NET 8.0 SDK</a> installed to your machine. PKHeX is also only natively supported on Windows devices.</small>
 
-  </div>
-</div><br>
+    </div>
+</div>
+<br>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/trainer-id/">
-  <span class="fw-bold">Don't have a TID yet? Follow this guide!</span>
-  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-  </svg>
-</a><br>
+    <span class="fw-bold">Don't have a TID yet? Follow this guide!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+<br>
 
 <span class="fw-bold">Figure 1 -</span> PKHeX Settings<p></p>
-<a href="/misc/bdsp-internal-tid-sid/images/figure-1-pkhex-settings.gif" target="_blank"><img src="/misc/bdsp-internal-tid-sid/images/figure-1-pkhex-settings.gif" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/bdsp-tid/figure-1-pkhex-settings.gif" alt="bdsp-tid-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/bdsp-tid/figure-1-pkhex-settings.gif"><p></p>
 
 <p>First, launch PKHeX and change the blank save file to the game you are currently using in the settings. In this case we will be changing the game to either Brilliant Diamond or Shining Pearl.</p>
 
 <p>After the settings have been configured properly, you will now need a means to view a Pokemon within your save file, this can be done by dumping your save file using CFW applications, or using a hosted SysBot on a retail device.</p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #96324c;" id="file-dump-tidsid">
-    <span class="fw-bold text-light">Dumping Relevant Files:</span>
-  </div>
-  <div class="card-body card-bg">
-    <h6><span class="fw-bold">Dumping Save Files (CFW):</span></h6>
-    <p>Save files can be dumped and inspected using PKHeX through the use of save management homebrew. Typically you will use either JKSV or CheckPoint (linked above)</p>
+    <div class="anchored card-header" style="background-color: #96324c;" id="file-dump-tidsid">
+        <span class="fw-bold text-light">Dumping Relevant Files:</span>
+    </div>
+    <div class="card-body card-bg">
+        <h6><span class="fw-bold">Dumping Save Files (CFW):</span></h6>
+        <p>Save files can be dumped and inspected using PKHeX through the use of save management homebrew. Typically you will use either JKSV or CheckPoint (linked above)</p>
 
-    <ul>
-      <li>Press the <code span class="fw-bold">Album</code> button on your Switch to launch the Homebrew menu.</li>
-      <li>Select either <code span class="fw-bold">JKSV</code> or <code span class="fw-bold">CheckPoint</code> to launch the application.</li>
-      <li>Dump the save file of the game you wish to inspect the TID/SID of.</li>
-      <li>Exit the application and open the contents your Switch SD card on your computer.</li>
-      <li>Locate your save file and move it into a known location on your computer (e.g Desktop).</li>
-      <li>Drag the save file into the PKHeX window, this will have PKHeX properly load your save file.</li>
-    </ul>
+        <ul>
+            <li>Press the <code span class="fw-bold">Album</code> button on your Switch to launch the Homebrew menu.</li>
+            <li>Select either <code span class="fw-bold">JKSV</code> or <code span class="fw-bold">CheckPoint</code> to launch the application.</li>
+            <li>Dump the save file of the game you wish to inspect the TID/SID of.</li>
+            <li>Exit the application and open the contents your Switch SD card on your computer.</li>
+            <li>Locate your save file and move it into a known location on your computer (e.g Desktop).</li>
+            <li>Drag the save file into the PKHeX window, this will have PKHeX properly load your save file.</li>
+        </ul>
 
-    <p>Comprehensive guides for dumping save files using Homebrew can be found <a href="https://projectpokemon.org/home/tutorials/save-editing/managing-switch-saves/using-jksv-r88/">here (JKSV)</a> or <a href="https://projectpokemon.org/home/tutorials/save-editing/managing-switch-saves/using-checkpoint-r67/">here (CheckPoint)</a></p>
-    <hr />
+        <p>Comprehensive guides for dumping save files using Homebrew can be found <a href="https://projectpokemon.org/home/tutorials/save-editing/managing-switch-saves/using-jksv-r88/">here (JKSV)</a> or <a href="https://projectpokemon.org/home/tutorials/save-editing/managing-switch-saves/using-checkpoint-r67/">here (CheckPoint)</a></p>
+        <hr />
 
-    <h6><span class="fw-bold">Dumping Pokemon Files (RETAIL):</span></h6>
-    <p>If you are using retail hardware, Pokemon files can be dumped by communicating with a SysBot running the game you wish to use. SysBots are typically located inside Discord servers and can be found with a quick Google search.</p>
+        <h6><span class="fw-bold">Dumping Pokemon Files (RETAIL):</span></h6>
+        <p>If you are using retail hardware, Pokemon files can be dumped by communicating with a SysBot running the game you wish to use. SysBots are typically located inside Discord servers and can be found with a quick Google search.</p>
 
-    <ul>
-      <li>Find a SysBot that facilitates trading in the game you are using (in this case BDSP).</li>
-      <li>Initiate a <code span class="fw-bold">Dump Trade</code> with the bot, ask the bot owner for help if you are struggling with this step.</li>
-      <li>Show the bot your Pokemon, a file will then be provided in your private messages on Discord.</li>
-      <li>Download the file, and save it to a known location on your computer (e.g Desktop).</li>
-      <li>Drag the downloaded file into the PKHeX window, you should now see the details of your Pokemon on screen.</li>
-    </ul>
+        <ul>
+            <li>Find a SysBot that facilitates trading in the game you are using (in this case BDSP).</li>
+            <li>Initiate a <code span class="fw-bold">Dump Trade</code> with the bot, ask the bot owner for help if you are struggling with this step.</li>
+            <li>Show the bot your Pokemon, a file will then be provided in your private messages on Discord.</li>
+            <li>Download the file, and save it to a known location on your computer (e.g Desktop).</li>
+            <li>Drag the downloaded file into the PKHeX window, you should now see the details of your Pokemon on screen.</li>
+        </ul>
 
-    <p>If you cannot find a SysBot, you can ask a friend running CFW to help dump the Pokemon for you, they will be able to send you the file instead (you may need to physically trade the Pokemon in this case).</p>
+        <p>If you cannot find a SysBot, you can ask a friend running CFW to help dump the Pokemon for you, they will be able to send you the file instead (you may need to physically trade the Pokemon in this case).</p>
 
-  </div>
-</div><br>
+    </div>
+</div>
+<br>
 
 <p>After following the above steps, you should now have PKHeX correctly configured and you should have your save file loaded into the program, or a self obtained Pokemon in the <code span class="fw-bold">View Window</code>. Navigate to the <code span class="fw-bold">OT/Misc</code> tab to see the trainer information of your Pokemon.</p>
 
 <span class="fw-bold">Figure 2 -</span> PKHeX Navigation<p></p>
-<a href="/misc/bdsp-internal-tid-sid/images/figure-2-pkhex-ot-misc.gif" target="_blank"><img src="/misc/bdsp-internal-tid-sid/images/figure-2-pkhex-ot-misc.gif" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/bdsp-tid/figure-2-pkhex-ot-misc.gif" alt="bdsp-tid-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/bdsp-tid/figure-2-pkhex-ot-misc.gif"><p></p>
 
 <p>Hover over the <code span class="fw-bold">TID</code> or <code span class="fw-bold">SID</code> fields using your mouse, the tooltip box that appears will display your 5 digit internal TID/SID needed for your PokeFinder profile, in this case, my internal TID/SID is <code span class="fw-bold">44741/25924</code>. Take note of these values and enter them into your PokeFinder profile.</p>
 
 <span class="fw-bold">Figure 3 -</span> PokeFinder Profile<p></p>
-<a href="/misc/bdsp-internal-tid-sid/images/figure-3-pokefinder-profile.gif" target="_blank"><img src="/misc/bdsp-internal-tid-sid/images/figure-3-pokefinder-profile.gif" class="img-fluid"></a><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/bdsp-tid/figure-3-pokefinder-profile.gif" alt="bdsp-tid-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/bdsp-tid/figure-3-pokefinder-profile.gif"><p></p>
 
 <p>After entering your internal TID/SID, select the <code span class="fw-bold">Shiny Charm</code> & <code span class="fw-bold">Oval Charm</code> checkboxes if you have these items present on your save file, then save your profile. You can now select it in the profile dropdown menu of the main window whenever necessary.</p>
 
 <p><span class="fw-bold">Congratulations! You have done the boring part. You can now continue following the guide where you left off.</span></p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/">
-  <span class="fw-bold">Click here to go back (BDSP RNG)!</span>
-  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-  </svg>
+    <span class="fw-bold">Click here to go back (BDSP RNG)!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
 </a>
 
