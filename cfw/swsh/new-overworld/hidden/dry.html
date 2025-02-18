@@ -1,22 +1,25 @@
-<!--DRY SYMBOL CFW-->
+<!--DRY HIDDEN CFW-->
 
 <span class="fw-bold">Figure 3 -</span> Relevant Calibration<p></p>
 <img src="/cfw/swsh/new-overworld/images/hidden/settings-toggles-hidden.gif" alt="hidden-3" class="img-fluid clickable-image" data-image="/cfw/swsh/new-overworld/images/hidden/settings-toggles-hidden.gif"><p></p>
 
 <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="settings-toggles-hidden-dry">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="settings-toggles-symbol-dry">
         <span class="fw-bold text-light">Settings Toggles:</span>
     </div>
     <div class="card-body card-bg">
         <ol>
+            <li>Search for a target frame that can be hit within 1-2 steps (see the <code class="fw-bold">Step</code> column of the search table). If you do not find any results consider increasing your search range or applying less strict search filters.</li>
+            <p></p>
             <li>Calibrate your NPC count and close the <code span class="fw-bold">MenuCloseTimeline</code> sub-window. This will enter your current NPC count into the main window. Now check the <code span class="fw-bold">Consider Menu Close?</code> and <code class="fw-bold">Holding Direction?</code> checkboxes.</li>
             <p></p>
-            <li>Search for a target frame. You should aim to find a target that can be spawned within 1-2 steps, this will provide the most consistency. The steps needed to spawn a hidden encounter will be visible inside the results table (see the <code span class="fw-bold">Step</code> column).</li>
+            <li>If your search result has disappeared after calibration, your current NPC count prevents you from hitting the target using menu close prediction. Try adjusting your position to change the NPC count or restart the game and search for a new target.</li>
             <p></p>
-            <li>If you do not find any results at all, or do not find a result that spawns within a reasonable amount of steps, consider increasing your search range or applying less strict search filters.</li>
+            <li>Once you have found a target frame that is hittable using menu close prediction, take note of your current positioning to reposition yourself properly after advancing the RNG state. Alternatively, if your target is within close proximity, do not move at all.</li>
         </ol>
 
-        <p>The calibration checkboxes (<code class="fw-bold">Consider Menu Close?</code>/<code class="fw-bold">Holding Direction?</code>) will account for the frames consumed when closing the pause menu, depending on if you are holding a direction on your control stick when unpausing. The search result table will show the exact frame you are expected to close the pause menu in order to spawn your target Pokemon in the overworld.</p>
+        <p>The calibration checkboxes (<code class="fw-bold">Consider Menu Close?</code> / <code class="fw-bold">Holding Direction?</code>) account for advances consumed when closing the pause menu, based on if the player is holding a direction or not when unpausing. The search results table will display the exact frame to close the menu to spawn your target Pokemon.</p>
+
     </div>
 </div>
 <br>
@@ -36,19 +39,15 @@
         <span class="fw-bold text-light">Advancing to the Target</span>
     </div>
     <div class="card-body card-bg">
-        <p>In this example, a Shiny, x Mark Pokemon appears in a {% include tooltips/clusters.html %} from advances x-y. The calibrated NPC count is x, and a direction should be held on the control stick when attempting to hit your target Pokemon, this will make the process more consistent.</p>
-
-        <p class="fw-bold" style="color: #c00000;"><small>Re-calibrate your NPC count if you have relocated or reset the game after a date advance.</small></p>
+        <p>In this example, a Shiny, x Mark Pokemon appears in a {% include tooltips/clusters.html %} from advances x-y. The calibrated NPC count is x, and a direction on the control stick should be held while unpausing, this will provide the most consistency.</p>
 
         <h6 class="fw-bold">Step-by-Step:</h6>
         <ol>
-            <li>Ensure the <code class="fw-bold">Consider Menu Close?</code> checkbox is checked and your current NPC count is calibrated correctly, search for your target again if needed.</li>
-            <p></p>
             <li>Advance toward your target using any of the methods listed on <a href="/cfw/swsh/new-overworld/advancing-the-rng-state" target="_blank">this page</a>. Consider using <u>wet weather</u> or <u>date skipping</u> to cover large distances efficiently.</li>
             <p></p>
-            <li>Take note of the amount of frames that have been advanced periodically. Stop a few thousand frames early and position yourself correctly outside the spawn point.</li>
+            <li>Stop advancing once you are a few thousand advances before your target, then re-position yourself correctly inside of a grass patch if you have moved.</li>
             <p></p>
-            <li>Use <u>animations</u> or <u>closing the pause menu</u> to advance your seed until you're approximately 100 frames from your target, then pause the game.</li>
+            <li>Verify your current NPC count, then ensure that the <code class="fw-bold">Consider Menu Close?</code> / <code class="fw-bold">Holding Direction?</code> checkboxes are active.</li>
             <p></p>
             <li>Reconnect to owoow and search for your target once more. From here, use <u>animations</u> to reach the exact target frame, then back out to the main pause menu.</li>
             <p></p>
@@ -60,6 +59,10 @@
 </div>
 <br>
 
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Important -</span> Hidden encounter RNG manipulation may be inconsistent depending on your setup, so it may take multiple attempts to achieve a result. If you are still missing targets after 2-3 attempts, consider changing location or picking a different encounter type.
+</div>
+
 <span class="fw-bold">Figure 5 -</span> Result Found!<p></p>
 <img src="/cfw/swsh/new-overworld/images/hidden/result-found-hidden.gif" alt="hidden-5" class="img-fluid clickable-image" data-image="/cfw/swsh/new-overworld/images/hidden/result-found-hidden.gif"><p></p>
 
@@ -70,4 +73,4 @@
     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
     </svg>
-</a><p></p>
+</a>
