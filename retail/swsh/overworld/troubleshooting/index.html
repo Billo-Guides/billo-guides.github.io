@@ -5,109 +5,111 @@ permalink: /retail/swsh/overworld/troubleshooting
 ---
 
 <style>
-  mark {
-    background-color: #FFD700;
-    color: black;
-  }
+    mark {
+        background-color: #FFD700;
+        color: black;
+    }
 
-  .card-bg {
-    background-color: #d1d1d1;
-    border-bottom-right-radius: 0.20rem !important;
-    border-bottom-left-radius: 0.20rem !important;
-  }
+    .card-bg {
+        background-color: #d1d1d1;
+        border-bottom-right-radius: 0.20rem !important;
+        border-bottom-left-radius: 0.20rem !important;
+    }
 
-  table,
-  th,
-  td {
-    border: 1px solid black;
-  }
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
 
-  blockquote {
-  background: #c5c5c5;
-  border: 1px solid #9e9e9e;
-  border-left: 5px solid #0c0038;
-  margin: 1.5em 2px;
-  padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
-  }
+    blockquote {
+        background: #c5c5c5;
+        border: 1px solid #9e9e9e;
+        border-left: 5px solid #0c0038;
+        margin: 1.5em 2px;
+        padding: 0.5em 10px;
+        quotes: "\201C""\201D""\2018""\2019";
+    }
 </style>
 
 <div class="title" style="background-color: #0c0038;">
-  <h1 class="text-light text-center pt-3 pb-3">Encounter Troubleshooting (Retail)</h1>
-</div><hr />
+    <h1 class="text-light text-center pt-3 pb-3">Encounter Troubleshooting (Retail)</h1>
+</div>
+<hr />
 
 <p>This section covers how to troubleshoot encounters and delays. If you keep missing targets, spawning in the wrong Pokémon, or can't find your result on the RNG tool, this is the place to be.</p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="possible-causes-for-missed-targets">
-    <span class="fw-bold text-light">Probable Causes:</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>There are three main reasons that you are missing your target frame, these are:</p>
+    <div class="anchored card-header" style="background-color: #0c0038;" id="possible-causes-for-missed-targets">
+        <span class="fw-bold text-light">Probable Causes:</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>There are three main reasons that you are missing your target frame, these are:</p>
 
-    <ol>
-      <li>Encountered the Pokémon too early or too late due to mistiming, or incorrect information was entered on the GUI.</li>
-      <li>NPC count was incorrect, causing an unexpected Jump from menu close prediction.</li>
-      <li>Delay was not properly accounted for, causing the wrong Pokémon to be generated.</li>
-    </ol>
-    <hr />
+        <ol>
+            <li>Encountered the Pokémon too early or too late due to mistiming, or incorrect information was entered on the GUI.</li>
+            <li>NPC count was incorrect, causing an unexpected Jump from menu close prediction.</li>
+            <li>Delay was not properly accounted for, causing the wrong Pokémon to be generated.</li>
+        </ol>
+        <hr />
 
-    <h6><span class="fw-bold">Encounter Mistiming:</span></h6>
-    <p>If you are consistently mistiming your encounters, the only thing you can do is keep re-timing and working out the exact frame you hit.</p>
+        <h6><span class="fw-bold">Encounter Mistiming:</span></h6>
+        <p>If you are consistently mistiming your encounters, the only thing you can do is keep re-timing and working out the exact frame you hit.</p>
 
-    <p>Ensure you have good positioning in-game and that your encounter filters have been filled out properly using Encounter Lookup, and try again.</p>
+        <p>Ensure you have good positioning in-game and that your encounter filters have been filled out properly using Encounter Lookup, and try again.</p>
 
-    <details>
-      <summary><span class="fw-bold">For Symbol encounters specifically</span></summary>
-      
-      <p>Your KO Count must be correctly configured to march the Pokémon you are searching. For example:</p>
+        <details>
+            <summary><span class="fw-bold">For Symbol encounters specifically</span></summary>
 
-      <ul>
-        <li>We are hunting for Swablu, but instead find that a NidoranF was spawned.</li>
-        <li>For Swablu we have 500 KOs according to the Pokedex, but for NidoranF we only have 60.</li>
-        <li>When searching for NidoranF, we will need to change the KO Count value to 60 to find accurate results.</li>
-      </ul>
-    </details>
-    <hr />
+            <p>Your KO Count must be correctly configured to march the Pokémon you are searching. For example:</p>
 
-    <h6><span class="fw-bold">Incorrect NPC Count:</span></h6>
-    <p>NPC count must be correct when using menu close prediction or you will not hit the expected result. It is important to learn how to calibrate your NPC count.</p>
+            <ul>
+                <li>We are hunting for Swablu, but instead find that a NidoranF was spawned.</li>
+                <li>For Swablu we have 500 KOs according to the Pokedex, but for NidoranF we only have 60.</li>
+                <li>When searching for NidoranF, we will need to change the KO Count value to 60 to find accurate results.</li>
+            </ul>
+        </details>
+        <hr />
 
-    <p>Detailed instructions for calculating NPC count properly can be found on the main page of this guide.</p>
-    <hr />
+        <h6><span class="fw-bold">Incorrect NPC Count:</span></h6>
+        <p>NPC count must be correct when using menu close prediction or you will not hit the expected result. It is important to learn how to calibrate your NPC count.</p>
 
-    <h6><span class="fw-bold">Incorrect Delay:</span></h6>
-    <p>Having an incorrect delay will always spawn the incorrect Pokémon. In some cases, delay will be 0 and will not need to be calibrated.</p>
+        <p>Detailed instructions for calculating NPC count properly can be found on the main page of this guide.</p>
+        <hr />
 
-    <p>If you are hitting incorrect results after testing, this may mean your delay is not 0 and will require calibration.</p>
+        <h6><span class="fw-bold">Incorrect Delay:</span></h6>
+        <p>Having an incorrect delay will always spawn the incorrect Pokémon. In some cases, delay will be 0 and will not need to be calibrated.</p>
 
-    <p>For example - If our delay is consistently 2, we will then aim to spawn the Pokemon 2 frames before the expected target frame to hit our result.</p>
+        <p>If you are hitting incorrect results after testing, this may mean your delay is not 0 and will require calibration.</p>
 
-    <p>Information about troubleshooting delays can be found on the relevant page, (e.g troubleshooting static delays can be found on the Static Encounter RNG page).</p>
-  
-  </div>
-</div><br>
+        <p>For example - If our delay is consistently 2, we will then aim to spawn the Pokemon 2 frames before the expected target frame to hit our result.</p>
+
+        <p>Information about troubleshooting delays can be found on the relevant page, (e.g troubleshooting static delays can be found on the Static Encounter RNG page).</p>
+
+    </div>
+</div>
+<br>
 
 <span class="fw-bold">Figure 1 -</span> Delay Troubleshooting Example<p></p>
-<a href="./images/static/figure-8-troubleshooting-encounters.jpg" target="_blank"><img src="./images/static/figure-8-troubleshooting-encounters.jpg" class="img-fluid"></a></abbr><br /><br />
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/old/overworld/static/figure-8-troubleshooting-encounters.jpg" alt="old-overworld-troubleshooting-retail-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/old/overworld/static/figure-8-troubleshooting-encounters.jpg"><p></p>
 
 <p>We encountered an Aerodactyl, but it wasn't shiny! So what happened here? Well... We miscalculated. Let's try to find the frame we actually hit.</p>
 
 <span class="fw-bold">Figure 2 -</span> Calculating IVs<p></p>
-<a href="./images/static/figure-9-calculating-IVs.png" target="_blank"><img src="./images/static/figure-9-calculating-IVs.png" class="img-fluid"></a><p></p>
-  
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/old/overworld/static/figure-9-calculating-IVs.png" alt="old-overworld-troubleshooting-retail-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/old/overworld/static/figure-9-calculating-IVs.png"><p></p>
+
 <p>Using the IV calculator we can find the rough IVs of the Aerodactyl we hit and use this information to locate the exact frame we landed on according to the generator.</p>
-  
+
 <span class="fw-bold">Figure 3 -</span> Finding Frame Hit<p></p>
-<a href="./images/static/figure-10-locating-frame.gif" target="_blank"><img src="./images/static/figure-10-locating-frame.gif" class="img-fluid"></a><p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/old/overworld/static/figure-10-locating-frame.gif" alt="old-overworld-troubleshooting-retail-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/old/overworld/static/figure-10-locating-frame.gif"><p></p>
 
 <p>By doing a filterless search we can see the shiny cluster, and frame we hit was 1 frame behind where we wanted to be, oh well! We will adjust accordingly for next time by spawning it in the overworld 1 frame later.</p>
 
 <p><span class="fw-bold">That's all there is to it!</span></p>
 
-  <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/overworld">
-   <span class="fw-bold">Send me back to the main page!</span>
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/overworld">
+    <span class="fw-bold">Send me back to the main page!</span>
     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
     </svg>
-  </a>
+</a>
