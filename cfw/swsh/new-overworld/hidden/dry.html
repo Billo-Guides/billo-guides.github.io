@@ -9,16 +9,16 @@
     </div>
     <div class="card-body card-bg">
         <ol>
-            <li>Add the correct lead Pokemon into the first slot of your party, then save and reboot the game. Pause the game as quickly as possible after re-entering the overworld to ensure that the spawned Pokemon do not move.</li>
+            <li>After standing in the correct position, add the appropriate lead Pok&eacute;mon to the first slot of your party, then open the pause menu and connect to owoow. This will freeze the RNG state and prevent unwanted advances.</li>
             <p></p>
-            <li>Reconnect to owoow, then calibrate your NPC count and close the <code span class="fw-bold">MenuCloseTimeline</code> sub-window. Confirm that your NPC count has been entered into the main window, then check the <code span class="fw-bold">Consider Menu Close?</code> and <code class="fw-bold">Holding Direction?</code> checkboxes.</li>
+            <li>Calibrate your NPC count, then close the <code class="fw-bold">MenuCloseTimeline</code> sub-window. Verify that your NPC count has been entered into the main window and keep the <code class="fw-bold">Consider Menu Close?</code> &amp; <code class="fw-bold">Holding Direction?</code> checkboxes active.</li>
             <p></p>
             <li>Search for a target that can be triggered within 1-2 steps, (see the <code class="fw-bold">Step</code> column of the search table). If you do not find any results consider increasing your search range or applying less strict search filters.</li>
             <p></p>
-            <li>Once you have found a target frame that is hittable using menu close prediction, do not move at all as this may change your NPC count. You will need to advance the RNG state using methods that can be performed without moving the player.</li>
+            <li>Once you have found a target frame that can be reached using menu close prediction, take note of your positioning (alternatively, do not move), If you change location or move the character you will need to re-calibrate your NPC count again.</li>
         </ol>
 
-        <p>The calibration checkboxes (<code class="fw-bold">Consider Menu Close?</code> / <code class="fw-bold">Holding Direction?</code>) account for advances consumed when closing the pause menu, based on if the player is holding a direction or not when unpausing. The search results table will display the exact frame to close the menu to spawn your target Pokemon.</p>
+        <p>The calibration checkboxes (<code class="fw-bold">Consider Menu Close?</code> / <code class="fw-bold">Holding Direction?</code>) will account for the advances consumed when closing the pause menu, the number of advances will vary depending on whether you are holding a direction on your control stick when unpausing. The search result table will take these advances into account and will now indicate the exact frame on which to close the pause menu and spawn your target Pok&eacute;mon.</p>
 
     </div>
 </div>
@@ -39,26 +39,27 @@
         <span class="fw-bold text-light">Advancing to the Target</span>
     </div>
     <div class="card-body card-bg">
-        <p>In this example, a Shiny, Vigor Mark Mime Jr. appears in a {% include tooltips/clusters.html %} from advances 16,475-16,477 with a step count of 1. The calibrated NPC count is 8, and a direction on the control stick should be held while unpausing as this provides extra consistency between attempts.</p>
+        <p>In this example, a Shiny, Vigor Mark Mime Jr. appears in a {% include tooltips/clusters.html %} between advances 16,475 and 16,477 with a step count of 1. The calibrated NPC count is 8, and for this case, a direction should be held when closing the pause menu to maximize the chances of hitting the correct frame.</p>
 
         <h6 class="fw-bold">Step-by-Step:</h6>
         <ol>
-            <li>Advance toward your target using any method that does not cause the player to move. The method you should use to advance the RNG state will vary:</li>
+            <li>Advance toward your target using a method that does not cause the player to move. The best method for advancing the RNG state will vary depending on the size of your cluster:</li>
             <p></p>
             <ul>
-                <li>If your target is NOT in a cluster it is recommended to use <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/wet-weather-menuing.gif">wet weather menuing</a> as this will provide much more consistency for singular frame targets.</li>
+                <li>If your target is <span class="fw-bold">not in a cluster</span>, it is recommended to use <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/wet-weather-menuing.gif">wet weather menuing</a>. This method offers greater consistency for hitting single-frame targets.</li>
                 <p></p>
-                <li>If your target is in a cluster of 3 or more, it is safe to use overworld methods to advance the RNG state, such as <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/wet-weather.gif">wet weather</a> or <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/date-skipping.gif">date skipping</a>.</li>
+                <li>If your target <span class="fw-bold">is in a cluster</span> of three or more, you can safely use overworld advancement methods such as <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/wet-weather.gif">wet weather</a> or <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/date-skipping.gif">date skipping</a>.</li>
+                <p></p>
             </ul>
-            <li>Stop advancing once you are a few thousand advances before your target, then re-position yourself correctly inside of a grass patch if you have moved.</li>
+            <li>Stop advancing when you are a few thousand frames away from your target. If you've moved, reposition yourself optimally inside a grass patch (see above).</li>
             <p></p>
-            <li>Verify your current NPC count, then ensure that the <code class="fw-bold">Consider Menu Close?</code> / <code class="fw-bold">Holding Direction?</code> checkboxes are active in the main window.</li>
+            <li>Verify your current NPC count and ensure that the <code class="fw-bold">Consider Menu Close?</code> and <code class="fw-bold">Holding Direction?</code> checkboxes are enabled in the main window.</li>
             <p></p>
-            <li>Reconnect to owoow and search for your target once more. From here, use <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/animations.gif">animations</a> to reach the exact target frame, then back out to the main pause menu.</li>
+            <li>Reconnect to owoow and search for your target again. From this point, use <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/animations.gif">animations</a> to reach your exact target frame, then back out to the main pause menu.</li>
             <p></p>
-            <li>Unpause the game while holding a direction on your control stick, this will cause the player to take steps in the grass, which should trigger the Hidden encounter.</li>
+            <li>Unpause the game while holding a direction on your control stick. This will make the player take steps in the grass, triggering the Hidden encounter.</li>
             <p></p>
-            <li>Quickly initiate the encounter before it despawns (spawned Hidden encounters will despawn within a few seconds), then verify that the results match what is expected.</li>
+            <li>Quickly initiate the encounter before it despawns and verify the result matches expectations, spawned Hidden encounters disappear within a few seconds.</li>
         </ol>
     </div>
 </div>

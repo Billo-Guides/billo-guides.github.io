@@ -9,18 +9,18 @@
     </div>
     <div class="card-body card-bg">
         <ol>
-            <li>After standing in the correct position, add the correct lead Pokemon into the first slot of your party, then connect to owoow with the pause menu open. This will freeze the RNG state and avoid any unwanted advances.</li>
+            <li>After standing in the correct position, add the appropriate lead Pok&eacute;mon to the first slot of your party, then open the pause menu and connect to owoow. This will freeze the RNG state and prevent unwanted advances.</li>
             <p></p>
-            <li>Calibrate your NPC count and close the <code span class="fw-bold">MenuCloseTimeline</code> sub-window. Confirm that your NPC count has been entered into the main window, then check the <code span class="fw-bold">Consider Menu Close?</code> checkbox.</li>
+            <li>Calibrate your NPC count, then close the <code class="fw-bold">MenuCloseTimeline</code> sub-window. Verify that your NPC count has been entered into the main window and keep the <code class="fw-bold">Consider Menu Close?</code> checkbox active.</li>
             <p></p>
             <li>Search for a target frame, if you do not find a result consider checking the <code span class="fw-bold">Holding Direction?</code> checkbox, this may help with finding a target that is hittable using menu close prediction.</li>
             <p></p>
-            <li>If you still do not see any target frames in the search results, consider restarting the game to reset your seed, increasing your search range, or applying less strict search filters.</li>
+            <li>If you still do not see any target frames in the search results with both checkboxes active, consider restarting the game to reset your seed, increasing your search range, or applying less strict search filters.</li>
             <p></p>
-            <li>Once you have found a target frame that is hittable using menu close prediction, take note of your position or do not change location. You will need to re-calibrate your NPC count if your player has moved.</li>
+            <li>Once you have found a target frame that can be reached using menu close prediction, take note of your positioning (alternatively, do not move), If you change location or move the character you will need to re-calibrate your NPC count again.</li>
         </ol>
 
-        <p>The calibration checkboxes (<code class="fw-bold">Consider Menu Close?</code> / <code class="fw-bold">Holding Direction?</code>) account for advances consumed when closing the pause menu, based on if the player is holding a direction or not when unpausing. The search results table will display the exact frame to close the menu to spawn your target Pokemon.</p>
+        <p>The calibration checkboxes (<code class="fw-bold">Consider Menu Close?</code> / <code class="fw-bold">Holding Direction?</code>) will account for the advances consumed when closing the pause menu, the number of advances will vary depending on whether you are holding a direction on your control stick when unpausing. The search result table will take these advances into account and will now indicate the exact frame on which to close the pause menu and spawn your target Pok&eacute;mon.</p>
 
     </div>
 </div>
@@ -41,23 +41,25 @@
         <span class="fw-bold text-light">Advancing to the Target</span>
     </div>
     <div class="card-body card-bg">
-        <p>In this example, a Shiny, Angry Mark Gurdurr appears in a {% include tooltips/clusters.html %} from advances 40,538-40,541. The calibrated NPC count is 3, and no direction should be held when closing the pause menu as this provides more chances of being able to hit the correct target frame in this specific case.</p>
+        <p>In this example, a Shiny, Angry Mark Gurdurr appears in a {% include tooltips/clusters.html %} between advances 40,538 and 40,541. The calibrated NPC count is 3, and for this case, no direction should be held when closing the pause menu to maximize the chances of hitting the correct frame.</p>
+
+        <p>Your experience using menu close prediction may vary, sometimes holding a direction can improve the likelihood of landing on a specific frame after closing the pause menu.</p>
 
         <h6 class="fw-bold">Step-by-Step:</h6>
         <ol>
-            <li>Advance toward your target using any of the methods listed on <a href="/cfw/swsh/new-overworld/advancing-the-rng-state" target="_blank">this page</a>. Consider using <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/wet-weather.gif">wet weather</a> or <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/date-skipping.gif">date skipping</a> to cover large distances efficiently.</li>
+            <li>Advance toward your target using any of the methods listed on <a href="/cfw/swsh/new-overworld/advancing-the-rng-state" target="_blank">this page</a>. Consider using <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/wet-weather.gif">wet weather</a> or <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/date-skipping.gif">date skipping</a> to advance large distances.</li>
             <p></p>
-            <li>Stop advancing once you are a few thousand advances before your target, then re-position yourself outside the spawn point if you have moved.</li>
+            <li>Stop advancing once you are a few thousand advances before your target, then reposition yourself outside the spawn point if you have moved.</li>
             <p></p>
-            <li>In the main window, ensure that the <code class="fw-bold">Consider Menu Close?</code> checkbox is checked and your current NPC count is calibrated correctly, search for your target again if needed.</li>
+            <li>Ensure that the <code class="fw-bold">Consider Menu Close?</code> checkbox is checked in the main window, and confirm that your NPC count is calibrated correctly.</li>
             <p></p>
             <li>Use <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/animations.gif">animations</a> or <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/menu-close.gif">menu close</a> to advance the RNG state until you are approximately 100 advances away from your target, then pause the game.</li>
             <p></p>
-            <li>Reconnect to owoow and search for your target once more. From here, use animations to reach the exact target frame, then back out to the main pause menu.</li>
+            <li>Reconnect to owoow and search for your target again. From this point, use animations to reach the exact target frame, then return to the main pause menu.</li>
             <p></p>
-            <li>Unpause the game. If you are using the <code class="fw-bold">Holding Direction?</code> checkbox, hold a direction on the control stick when unpausing, otherwise, DO NOT hold a direction.</li>
+            <li>Unpause the game. If <code class="fw-bold">Holding Direction?</code> is checked, hold a direction on the control stick when unpausing; otherwise, do not touch the control stick when unpausing.</li>
             <p></p>
-            <li>Quickly run toward the target Pokemon to spawn it in the overworld. Encounter the Pokemon and verify the results match what is expected.</li>
+            <li>Quickly run toward the target Pok&eacute;mon to spawn it in the overworld. Encounter the Pok&eacute;mon and verify that your result matches what is expected.</li>
         </ol>
     </div>
 </div>
