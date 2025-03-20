@@ -70,7 +70,7 @@ permalink: /cfw/swsh/new-overworld/automation-methods
     <div class="card-body card-bg">
         <p>Owoow can automatically reset the game and check your current seed until a result matching your search filters is found. This removes the need for manual seed searches. The game will pause on the Home Menu once a desirable result appears.</p>
 
-        <h6 class="fw-bold">Step-by-Step:</h6>
+        <h6 class="fw-bold">Seed Reset Setup:</h6>
         <ul>
             <li>Configure your search filters in the main window, including the relevant details under <code class="fw-bold">Encounter Settings</code> (including NPC count/direction hold).</li>
             <li>Open the game to the overworld and connect to owoow. Disconnect all controllers (or attach Joy-Cons), then click <code class="fw-bold">Reset for Seed</code>.</li>
@@ -87,6 +87,30 @@ permalink: /cfw/swsh/new-overworld/automation-methods
         </ul>
 
         <p>If your console is slower than average and you are running into issues, gradually increase the relevant timing boxes by 1000ms (1 second) until the game opens and closes smoothly.</p>
+
+        <details>
+            <summary><span class="fw-bold">Discord Webhook Integration:</span></summary>
+        <p>You can also use Discord Webhooks to send seed reset results directly to a Discord channel of your choice. Confirm that you have <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/automation-methods/webhooks-permissions.png">Webhook permissions</a> in the channel you wish to use and follow these steps:</p>
+
+        <h6 class="fw-bold">Webhooks Setup (Discord):</h6>
+        <ul>
+            <li>Navigate to the server where you want to send the webhook messages.</li>
+            <li>Click on the server name at the top-left corner and select <code class="fw-bold">Server Settings</code>.</li>
+            <li>In the left menu, go to <code class="fw-bold">Integrations -> Webhooks</code>, then click <code class="fw-bold">New Webhook</code>.</li>
+            <li>Give your Webhook a name, this can be whatever you want it to be.</li>
+            <li>Select the channel where you want the Webhook to post messages.</li>
+            <li>Click Copy Webhook URL, this is the link you will use to send data.</li>
+        </ul>
+
+        <h6 class="fw-bold">Webhooks Setup (Owoow):</h6>
+        <ul>
+            <li>Open the Seed Reset Settings sub-window, then click <code class="fw-bold">Enable Discord Webhooks</code>. This will allow you to use the fields below the checkbox.</li>
+            <li>(Optional) Add a Webhook message, for example, you can ping your Discord ID or role by using <@your_user_id>/<@your_role_id>.</li>
+            <li>Enter your Webhook URL into the <code class="fw-bold">Result Message URLs</code> and <code class="fw-bold">Error Message URLs</code>, you may optionally pick which ones to use.</li>
+            <li>Close and re-open owoow entirely, this will apply your new Webhook changes. Open the Seed Reset Settings sub-window again.</li>
+            <li>Click the <code class="fw-bold">Test Webhook</code> button, if done correctly you should see a <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/automation-methods/webhooks-test.png">functional Webhook</a> in your chosen channel.</li>
+        </ul>
+        </details>
 
     </div>
 </div>
