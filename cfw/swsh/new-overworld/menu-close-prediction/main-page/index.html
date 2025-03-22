@@ -1,0 +1,254 @@
+---
+layout: default
+title: SwSh Overworld RNG (CFW)
+permalink: /cfw/swsh/new-overworld/main-page
+---
+
+<div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">Overworld RNG Guide (CFW)</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    A guide for manipulating overworld encounters in Sword/Shield, using <a class="text-decoration-none text-muted" href="https://github.com/LegoFigure11/owoow/">owoow</a> by <a class="text-decoration-none text-muted" href="https://github.com/LegoFigure11">LegoFigure11</a>.
+</small>
+<hr />
+
+<h5 span class="fw-bold">Introduction</h5>
+<p>Sword/Shield overworld RNG manipulation is used to predict the details of upcoming wild encounters. It is possible to predict values such as IVs, Nature, Marks, Shiny Status, Size (Jumbo/Teensy Mark), Gender and more. The table below contains information about the types of encounters, provides example images, and provides details of each encounter type.</p>
+
+<table class="table table-striped" style="width:100%" id="overworld-rng-table">
+    <thead class="table text-white" style="background-color: #0c0038;">
+        <tr>
+            <th scope="col" class="text-center" style="width:25%">Encounter</th>
+            <th scope="col" class="text-center">Description</th>
+            <th scope="col" class="text-center" style="width:25%">Difficulty</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/encounter-types/staticsymbol.gif">Static Symbol</a></span></td>
+            <td>
+                Encounters in grass/water/caves that are guaranteed to produce a specific species, provided weather conditions remain unchanged.
+            </td>
+            <td class="text-center"><span class="fw-bold" style="color: #008000;">Beginner</span></td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/encounter-types/randomsymbol.gif">Random Symbol</a></span></td>
+            <td>
+                Encounters in grass/water/caves where the species is determined at random by an encounter slot value (0-99) and current weather.
+            </td>
+            <td class="text-center"><span class="fw-bold" style="color: #008000;">Beginner</span></td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/encounter-types/randomhidden.gif">Hidden</a></span></td>
+            <td>
+                Random encounters in grass that do not have an overworld model, species is determined at random by an encounter slot value (0-99) and current weather.
+            </td>
+            <td class="text-center"><span class="fw-bold" style="color: #b60606;">Advanced</span></td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/encounter-types/randomfishing.gif">Fishing</a></span></td>
+            <td>
+                Encounters in fishing pools where the species is determined at random by an encounter slot value (0-99) and current weather.
+            </td>
+            <td class="text-center"><span class="fw-bold" style="color: #996B00;">Intermediate</span></td>
+        </tr>
+    </tbody>
+</table>
+
+<hr /><div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">Setup Requirements</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    This section provides the required setup &amp; installation instructions, read through this information carefully.
+</small>
+<hr />
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="setup-and-install-swsh-overworld-cfw">
+        <span class="fw-bold text-light">You Will Need:</span>
+    </div>
+    <div class="card-body card-bg">
+        <h6><span class="fw-bold">Tools &amp; Applications:</span></h6>
+        <ul>
+            <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-9.0.101-windows-x64-installer" target="_blank" rel="noopener noreferrer">.NET 9.0</a></li>
+            <li><a href="https://github.com/LegoFigure11/owoow/releases/" target="_blank" rel="noopener noreferrer">Sword/Shield Overworld RNG Tool (owoow)</a></li>
+            <li><a href="https://github.com/Lusamine/ldn_mitm/releases/latest" target="_blank" rel="noopener noreferrer">ldn-mitm</a></li>
+        </ul>
+
+        <h6><span class="fw-bold">Installation Instructions:</span></h6>
+        <ol>
+            <li>Download <code span class="fw-bold">.NET 9.0</code> and run the setup wizard until complete. This is a required program dependency.</li>
+            <li>Download and extract <code span class="fw-bold">owoow.zip</code> into an fresh, empty folder, then extract <code span class="fw-bold">ldn-mitm.zip</code> into the same folder.</li>
+            <li>Move the <code span class="fw-bold">atmosphere</code> and <code span class="fw-bold">switch</code> folders to the root of your SD card, agree to overwrite folders if prompted.</li>
+            <li>Reboot the console into your chosen CFW environment (it is recommended to use SysCFW).</li>
+        </ol>
+
+        <h6><span class="fw-bold">Program Connectivity Instructions:</span></h6>
+        <ol>
+            <li>Launch <code span class="fw-bold">owoow.exe</code>, ensure that the program launches properly with no issues.</li>
+            <li>Type the local IP address of the console into the <code span class="fw-bold">Switch IP:</code> field.</li>
+            <li>Enter the overworld in-game, then click <code span class="fw-bold">Connect</code> on owoow after doing so.</li>
+        </ol>
+
+        <p>The below image displays what the program should look like after connecting. If all of the above information was correctly followed, you should see that the program has begun to read the details of your save file, and the seed fields on the top-left of the window have been populated.</p>
+
+    </div>
+</div>
+<br>
+
+<span class="fw-bold">Figure 1 -</span> Program Connectivity<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/main-page/connection-successful.gif" alt="owrng-setup-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/main-page/connection-successful.gif"><p></p>
+
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Important -</span> If you are experiencing connectivity issues, please ensure that both sys-botbase (bundled with <a href="https://github.com/LegoFigure11/owoow/" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">owoow</a>) and ldn-mitm are correctly installed on your SD card. If the issue persists, consider removing any additional software that could be interfering with the game’s RAM, such as cheats or mods.
+</div>
+
+<hr /><div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">RNG Tool Overview</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    This section provides program information and usage tips, read the information here if you are new.
+</small>
+<hr />
+
+<span class="fw-bold">Figure 2 -</span> Owoow Overview<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/main-page/owoow-overview.png" alt="owrng-setup-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/main-page/owoow-overview.png"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="owoow-overview">
+        <span class="fw-bold text-light">RNG Tool Overview:</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Upon launching and connecting to owoow for the first time, you should see something similar to the above image. This tool calculates the details of upcoming Pok&eacute;mon, then outputs the results in the table at the bottom (based on user-defined search parameters).</p>
+
+        <h6><span class="fw-bold">Feature Overview:</span></h6>
+        <ul>
+            <li><span style="color: #E63946;" class="fw-bold">First Column -</span> Provides seed information, connectivity features, and save file details such as Trainer IDs and Game Version.</li>
+            <li><span style="color: #2A6F97;" class="fw-bold">Second Column -</span> Select any relevant encounter settings, enter encounter specific configurations, input search range, and calibrate NPC count.</li>
+            <li><span style="color: #7B2CBF;" class="fw-bold">Third Column -</span> Enter current Pokedex recommendations and input advanced settings for rain based and roaming encounters.</li>
+            <li><span style="color: #6B8E23;" class="fw-bold">Fourth Column -</span> Enter search filters, the more strict the search filters, the longer it will take to find a suitable target.</li>
+            <li><span style="color: #E87C3C;" class="fw-bold">Fifth Column -</span> Custom Firmware specific features, read encounter details, automate seed advances, reset for a desirable seed and more.</li>
+
+        </ul>
+
+        <h6><span class="fw-bold">Automated Seed Monitoring:</span></h6>
+        <p>After connecting to the program, the details of your save file will be automatically populated. Adjustments to these values are not required. Additionally, RNG seeds will be monitored in real-time, providing a seamless experience for tracking seed changes.</p>
+
+        <p>The <code class="fw-bold">Adv:</code> field displays the total number of advancements since the initial connection in the first box, and the number of advancements occurring within the last ~500ms in the second box. The second box is primarily used to determine how many advancements a specific action consumes.</p>
+    </div>
+</div>
+
+<hr /><div class="title" style="background-color: #0c0038;" id="the-basics">
+    <h1 class="text-light text-center pt-3 pb-3">The Basics</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    Learn about the common and advanced techniques used to advance the RNG state and hit target frames.
+</small>
+<hr />
+
+<h5 span class="fw-bold" id="advancing-the-rng-state">Advancing The RNG State:</h5>
+
+<p>Explore the various techniques used to advance the RNG state, some actions advance the RNG state slowly, some will advance in a predictable manner, and others will cause the state to advance in a rapid and unpredictable manner. Read the information provided on the page below to learn more.</p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/new-overworld/advancing-the-rng-state" target="_blank">
+    Continue to <span class="fw-bold">advancing the RNG state</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+<hr />
+
+<h5 span class="fw-bold" id="menu-close-prediction">NPC Calibration:</h5>
+
+<p>Using menu close prediction to advance the RNG state in a predictable manner. This helps to near guarantee success in hitting the correct target frame. Menu close prediction is used extensively throughout the guide, regardless of the type of encounter you choose to manipulate.</p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/new-overworld/menu-close-prediction" target="_blank">
+    Continue to <span class="fw-bold">NPC Calibration</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+<hr />
+
+<h5 span class="fw-bold" id="automation-methods">Automation Methods:</h5>
+
+<p>Owoow provides automation routines for advancing the RNG state (such as using date skipping &amp; animations), resetting for a desirable seed, and custom button press routines that can be used to automate the process of spawning your result into the overworld. These features cut out a significant portion of the manual effort.</p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/new-overworld/automation-methods" target="_blank">
+    Continue to <span class="fw-bold">automation methods</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+
+<hr /><div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">Picking An Encounter Type</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    Learn how to search for a desirable encounter type using owoow's Encounter Lookup feature.
+</small>
+<hr />
+
+<span class="fw-bold">Figure 3 -</span> Encounter Lookup<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/main-page/encounter-lookup.png" alt="owrng-setup-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/main-page/encounter-lookup.png"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="encounter-lookup-overview">
+        <span class="fw-bold text-light">Encounter Lookup:</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Clicking the <code span class="fw-bold">Encounter Lookup</code> button on the top-left of the main window will open a sub-window. Here, you can search for every possible encounter in the game for a specific species and select an encounter type based on your desired target.</p>
+
+        <h6><span class="fw-bold">Encounter Tips:</span></h6>
+        <ul>
+            <li>Use the encounter type table at the top of this page to understand the difficulty and benefits of each encounter type.</li>
+            <li>For high IV targets, it is recommended to pick a Brilliant Aura encounter ("Symbol" or "Fishing"), these encounters have guaranteed IVs.</li>
+            <li>Check the EncounterRate percentage, in most cases you will want to pick an encounter with the highest percentage for optimal searches.</li>
+            <li>Beginner players should avoid picking Hidden encounters where possible, this is the most inconsistent type of encounter.</li>
+            <li>Avoid Rain/Thunderstorm encounters where possible, unless you have no other option or are specifically targeting rain-based weather marks.</li>
+        </ul>
+
+        <p>After selecting an encounter type, click the button below that applies to you for detailed step-by-step instructions. For newer players still learning key concepts/techniques, it is recommended to start by picking a "Static" or "Symbol" encounter.</p>
+
+    </div>
+</div>
+<br />
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/new-overworld/static">
+    <span class="fw-bold">STATIC ENCOUNTER!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+<br>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/new-overworld/symbol">
+    <span class="fw-bold">SYMBOL ENCOUNTER!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+<br>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/new-overworld/hidden">
+    <span class="fw-bold">HIDDEN ENCOUNTER!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+<br>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/new-overworld/fishing">
+    <span class="fw-bold">FISHING ENCOUNTER!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+<br>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/new-overworld/roaming">
+    <span class="fw-bold">GALARIAN ARTICUNO, ZAPDOS &amp; MOLTRES</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
