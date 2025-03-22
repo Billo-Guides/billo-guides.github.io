@@ -12,10 +12,12 @@ permalink: /retail/swsh/new-overworld/roaming/
 </small>
 <hr />
 
-<p>Filler.</p>
+<p>The roaming Galarian bird trio, Articuno, Zapdos, &amp; Moltres can be found in their respective Wild Areas after completing the <a href="https://www.ign.com/wikis/pokemon-sword-shield/How_to_Catch_Roaming_Legendary_Birds_-_Articuno,_Zapdos,_Moltres" target="_blank">Crown Tundra DLC - Legendary Quest 3</a>. These Pok&eacute;mon are generated upon entering a loading zone, and their stat details (IVs/Nature/Mark) remain locked in place until the area is reloaded.</p>
+
+<p>By using a technique known as "fly manip", we can precisely respawn the bird on a specific frame to generate it with the desired IVs, Nature, and Marks. Once the bird respawns, we can chase it down and initiate the encounter.</p>
 
 <div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
-    <span class="fw-bold">Important -</span> From here it is assumed that you are familiar with key concepts described on the main page. If you are unsure about topics like <a href="/retail/swsh/new-overworld/main-page" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">seed monitoring</a>, <a href="/retail/swsh/new-overworld/advancing-the-rng-state" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">advancement methods</a>, or <a href="/retail/swsh/new-overworld/menu-close-prediction" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">NPC calibration</a>, please review the relevant sections before continuing.
+    <span class="fw-bold">Important -</span> This guide assumes you are already familiar with the basic concepts outlined on the main page. If you're unsure about topics such as <a href="/retail/swsh/new-overworld/seed-finding-and-monitoring" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">seed finding</a>, <a href="/retail/swsh/new-overworld/advancing-the-rng-state" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">advancement methods</a>, or <a href="/retail/swsh/new-overworld/menu-close-prediction" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">NPC calibration</a>, please revisit those pages before continuing.
 </div>
 
 <p><span class="fw-bold">Figure 1 -</span> RNG Tool Setup</p>
@@ -27,19 +29,65 @@ permalink: /retail/swsh/new-overworld/roaming/
     </div>
     <div class="card-body card-bg">
         <ol>
-            <li>Enter the IP address of your console in the main window and click <code class="fw-bold">Connect</code>. This will automatically read your current seed and save file details.</li>
+            <li>In the main window, enter your TID/SID, select your game version, and check the Shiny/Mark Charm checkboxes if these items are present in your save file.</li>
             <p></p>
+            <li>Select <code class="fw-bold">Static</code> in the <code class="fw-bold">Encounter Settings</code> column and select the following <code class="fw-bold">Area:</code> based on your desired bird:</li>
+            <ul>
+                <li>For Articuno-Galar, select <span class="fw-bold">Giant's Bed</span>.</li>
+                <li>For Zapdos-Galar, select <span class="fw-bold">East Lake Axewell</span>.</li>
+                <li>For Moltres-Galar, select <span class="fw-bold">Challenge Road</span>.</li>
+                <li>After you have selected a location, set your target Pok&eacute;mon accordingly.</li>
+            </ul>
+            <p></p>
+            <li>Select your current or desired weather condition, Keep in mind that weather is subject to change if the system time reaches midnight (00:00).</li>
+            <p></p>
+            <li>Under <code class="fw-bold">Advanced Settings</code>, click the <code class="fw-bold">Fly?</code> checkbox. This is where we will consider the necessary values for fly manip. Leave the <code class="fw-bold">Area Load</code> &amp; <code class="fw-bold">Fly NPCs</code> at 0 for now.</li>
+            <p></p>
+            <li>Adjust your search range using the <code class="fw-bold">+</code> field in <code class="fw-bold">Encounter Settings</code>, then configure additional search filters such as Marks, IVs, or Height.</li>
         </ol>
+
+        <p class="fw-bold" style="color: #c00000;"><small>DO NOT APPLY SHINY SEARCH FILTERS! THESE ENCOUNTERS ARE SHINY LOCKED, FILTERING FOR SHINY VARIANTS WILL NEVER PRODUCE A VALID SEARCH RESULT.</small></p>
+
     </div>
 </div>
 <br />
 
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/new-overworld/lead-ability-dex-rec" target="_blank" rel="noopener noreferrer">
-    Unsure about lead abilities? <span class="fw-bold">click here to learn more</span>
-    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-    </svg>
-</a>
+<p><span class="fw-bold">Figure 2 -</span> Game Setup</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/roaming/game-setup-roaming.gif" alt="owrng-static-retail-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/roaming/game-setup-roaming.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header text-light" style="background-color: #0c0038;" id="game-setup-roaming-retail">
+        <span class="fw-bold">Game Setup:</span>
+    </div>
+    <div class="card-body card-bg">
+        <ol>
+            <li>You will need to unlock the fly points shown in Figure 2 if you have not already done so, the fly points for Articuno and Moltres will require DLC story progression.</li>
+            <ul>
+                <li>For <span class="fw-bold">Articuno-Galar</span>, unlock the fly point to the east of <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/roaming/giants-bed-fly-point.png">Giant's Bed</a> by interacting with the Regi cave close by.</li>
+                <li>For <span class="fw-bold">Zapdos-Galar</span>, unlock the fly point below <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/roaming/motostoke-fly-point.png">Motostoke</a>, this fly point should be active already through main story progression.</li>
+                <li>For <span class="fw-bold">Moltres-Galar</span>, unlock the fly point at the <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/roaming/tower-of-darkness-fly-point.png">Tower of Darkness</a>, DLC progress will vary depending on which tower was initially picked.</li>
+            </ul>
+            <p></p>
+            <li>Remove all the Pok&eacute;mon in your party until you have only one left. This is a crucial step as the RNG tool assumes you have a single Pok&eacute;mon in your party.</li>
+            <ul>
+                <li>It is recommended to use a Pok&eacute;mon with the Ability "Synchronize" that has the Nature you are aiming for on your desired bird.</li>
+            </ul>
+            <p></p>
+            <li>Visit the <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/roaming/memory-check-npc.png">Memory Check NPC</a> found in any Pok&eacute;Center and repeatedly rename your remaining Pok&eacute;mon until it has a memory intensity of "fondly remembers".</li>
+            <ul>
+                <li>The simplest way to achieve a "fondly" intensity memory is by renaming your Pok&eacute;mon multiple times. Confirm the memory intensity by speaking to the NPC.</li>
+            </ul>
+        </ol>
+
+        <p>Box memories are common types of memory that have an intensity of "definitely remembers", which is one step away from being "fondly remembers". For the most convenient and quickest solution, rename a Pok&eacute;mon that already has a memory intensity of "definitely remembers".</p>
+
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 3 -</span> Fondly Memory Demonstration</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/roaming/fondly-memory-demo.gif" alt="owrng-static-retail-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/roaming/fondly-memory-demo.gif">
+
 
 <hr /><div class="title" style="background-color: #0c0038;" id="the-basics">
     <h1 class="text-light text-center pt-3 pb-3">Advancing Towards A Target</h1>
