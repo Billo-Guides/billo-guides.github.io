@@ -130,7 +130,98 @@ permalink: /cfw/swsh/new-overworld/roaming/
 </small>
 <hr />
 
-<p><span class="fw-bold">That's all there is to RNG manipulating Roaming encounters in wet weather (CFW)!</span></p>
+<p><span class="fw-bold">Figure 4 -</span> Relevant Calibration</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/roaming/fondly-memory.png" alt="owrng-static-cfw-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/roaming/fondly-memory.png">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="settings-toggles-roaming">
+        <span class="fw-bold text-light">Settings Toggles:</span>
+    </div>
+    <div class="card-body card-bg">
+        <ol>
+            <li>Perform a date advance - This refreshes the overworld state when reloading the area, giving us a "clean slate" and ensuring that the setup is as stable as possible.</li>
+            <p></p>
+            <li>Fly to the required location for your target bird: East Giant's Bed (Articuno), East Lake Axewell (Zapdos), or Challenge Road (Moltres).</li>
+            <p></p>
+            <li>Confirm that you have a single Pok&eacute;mon in your party, this should be the same Pok&eacute;mon that was given a "fondly" intensity memory earlier.</li>
+            <p></p>
+            <li>Set the current weather condition to anything that is NOT Rain/Thunderstorm both in-game and on owoow. Save the game after doing so.</li>
+            <p></p>
+            <li>Calibrate your current menu close NPC count, then close the <code class="fw-bold">MenuCloseTimeline</code> sub-window. Note down your current NPC count in Notepad or similar.</li>
+            <p></p>
+            <li>Set your current <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/roaming/menu-close-npc-0.png">menu close NPC count</a> to 0 for now, but ensure that the <code class="fw-bold">Consider Menu Close?</code> checkbox remains activated.</li>
+            <p></p>
+            <li>Refer to the tables above, ensure that you are looking at the correct table based on your chosen weather, target bird, or game version/progression (Moltres).</li>
+            <p></p>
+            <ul>
+                <li>Set your <code class="fw-bold">Area Load</code> value in the <code class="fw-bold">Advanced Settings</code> on owoow, this will be the same regardless of weather condition.</li>
+                <li>If you are NOT in Rain/Thunderstorm, enter the <code class="fw-bold">Total Fly NPC</code> value into the Fly NPC field in <code class="fw-bold">Advanced Settings</code>.</li>
+                <li>If you are in Rain/Thunderstorm, enter the <code class="fw-bold">NPC 0</code> value into the menu close NPC field, then enter the <code class="fw-bold">NPC 1</code> value into the Fly NPC field in <code class="fw-bold">Advanced Settings</code>.</li>
+                <li>Enter the <code class="fw-bold">Rain Tick</code> value depending on if you are in Rain or Thunderstorm, if this is your first time, pick the lowest possible value (7 for Rain, 14 for Thunder).</li>
+            </ul>    
+        </ol>
+
+        <p>The calibration values (<code class="fw-bold">Consider Menu Close?</code> / <code class="fw-bold">Menu Close NPCs</code> <code class="fw-bold">Area Load</code> / <code class="fw-bold">Fly NPCs</code> / <code class="fw-bold">Rain Ticks</code>) will account for the advances consumed when exiting from the party list -> main pause menu -> opening map -> flying into the area that contains your bird.</p>
+
+        <p><span class="fw-bold">After correctly setting your calibration values you can begin searching for targets.</span></p>
+
+    </div>
+</div>
+<br>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/new-overworld/menu-close-prediction" target="_blank" rel="noopener noreferrer">
+    Forgot how to calibrate NPC count? <span class="fw-bold">click here for a refresher</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a><p></p>
+
+<p><span class="fw-bold">Figure 5 -</span> Target Bird Found</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/roaming/fondly-memory.png" alt="owrng-static-cfw-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/roaming/fondly-memory.png">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="advancing-to-target-roaming">
+        <span class="fw-bold text-light">Advancing to the Target</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>In this example, 6IV Zapdos with the Rare Mark appears in a {% include tooltips/clusters.html %} between advances x-y. The the relevant values we need were calibrated earlier, and for this case, no direction should be held when closing the pause menu to maximize the chances of hitting the correct frame.</p>
+
+        <h6 class="fw-bold">Step-by-Step:</h6>
+        <ol>
+            <li>Advance toward your target using either <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/wet-weather.gif">wet weather</a>, <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/npc-activation.gif">npc activation</a> or <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/date-skipping.gif">date skipping</a>. Consider using wet weather instead if you wish to maintain calibration.</li>
+            <p></p>
+            <li>Stop advancing once you are a few thousand advances before your target, then fly back into the area that contains your desired bird if you have moved.</li>
+            <p></p>
+            <li>If date skipping was used to advance the RNG state, you will need to re-calibrate your current menu close NPC count and update the calibration checkboxes accordingly.</li>
+            <p></p>
+            <li>Ensure that the <code class="fw-bold">Consider Menu Close?</code> checkbox is checked in the main window, and confirm that your calibration checkboxes are filled in correctly.</li>
+            <p></p>
+            <li>Pause the game, then use <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/animations.gif">animations</a> to advance the RNG state until you are approximately 100 advances away from your target.</li>
+            <p></p>
+            <li>Keep the game open on the Pok&eacute;mon party list from this point. Reconnect to owoow and search for your target again, then use animations to reach your target frame.</li>
+            <p></p>
+            <li>Back out to the main pause menu and open the map, then fly into the required location for your desired bird.</li>
+            <p></p>
+            <li>Chase down the bird and encounter it to verify that your result matches what is expected. If your bird does NOT match, refer to the troubleshooting section below.</li>
+        </ol>
+
+        <details>
+            <summary><span class="fw-bold">Troubleshooting</span></summary>
+            <p>Enter the IVs of the bird you hit into the search filters of owoow, and remove any Mark/Height filters that are currently in place. The goal is to find the bird you hit by changing the calibration values.</p>
+
+            <ul>
+                <li>If your target is in Rain or Thunderstorm, change the Rain Tick value to whichever value you did not use (e.g, if you used 14 in Thunderstorm, try 16).</li>
+                <li>If your target is Moltres, confirm that Wailord is active/inactive, and that the <code class="fw-bold">Area Load</code> calibration is properly configured (11 for inactive, 12 for active).</li>
+                <li>If your target is Moltres, confirm that you are using the correct table to calibrate your values. Game progression and game version is important.</li>
+                <li>If you still cannot find the bird you hit, consider tweaking the values inside the Menu Close/Fly NPCs fields until you find a match.</li>
+                <li>After finding your bird, retry and confirm that your new calibration values are correct. Report any new NPC values to me (Billo) on Discord (linked below).</li>
+            </ul>
+        </details>
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">That's all there is to RNG manipulating Roaming Legendary Bird encounters (CFW)!</span></p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/new-overworld/main-page">
     Head back to the <span class="fw-bold">main page</span>
