@@ -7,9 +7,19 @@ $("#moisture-select").change(() => {
 
     let url = window.location.href.split("?")[0]; 
     if (!url.includes("#")) url += "#";
-    url += "?weather=" + optionValue;
+    url += url.includes("?") ? "&" : "?";
+    url += "weather=" + optionValue;
     window.location.href = encodeURI(url);
 });
+
+$("#bird-select").change(() => {
+    let optionValue = $("#bird-select").val();
+
+    $(".bird").addClass("d-none");
+    $(".bird-" + optionValue).removeClass("d-none");
+});
+
+// QUERYSTRING
 
 $("document").ready(() => {
     const qs = window.location.href.split("?");
@@ -24,6 +34,9 @@ $("document").ready(() => {
                     } else if (v === "wet") {
                         $("#moisture-select").val("wet").change();
                     }
+                    break;
+                case "bird":
+                    $("#bird-select").val(v).change();
                     break;
             }
         }
