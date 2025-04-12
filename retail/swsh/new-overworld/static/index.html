@@ -12,10 +12,10 @@ permalink: /retail/swsh/new-overworld/static/
 </small>
 <hr />
 
-<p>Static spawners consistently generate the same species of Pok&eacute;mon until the weather changes, which can occur at midnight (00:00). Be mindful of your system time to prevent unexpected Pok&eacute;mon spawns due to incorrect weather conditions.</p>
+<p>Static spawners always generate the same species of Pok&eacute;mon for a given weather, which is based on the console date. Since the weather can change if the console date rolls past midnight (00:00), consider setting your system time before starting to avoid unexpected RNG advancements and Pok&eacute;mon spawns.</p>
 
 <div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
-    <span class="fw-bold">Important -</span> From here, we assume that you are familiar with key concepts described on the main page. If you're unsure about topics such as <a href="/retail/swsh/new-overworld/seed-finding-and-monitoring" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">seed finding</a>, <a href="/retail/swsh/new-overworld/advancing-the-rng-state" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">advancement methods</a>, or <a href="/retail/swsh/new-overworld/menu-close-prediction" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">NPC calibration</a>, please revisit those pages before continuing.
+    <span class="fw-bold">Important -</span> From here, we assume that you are familiar with key concepts described on the main page. If you are unsure about <a href="/retail/swsh/new-overworld/seed-finding-and-monitoring" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">seed finding</a>, <a href="/retail/swsh/new-overworld/advancing-the-rng-state" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">advancement methods</a>, or <a href="/retail/swsh/new-overworld/menu-close-prediction" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">NPC calibration</a>, please review the relevant sections before continuing.
 </div>
 
 <span class="fw-bold">Figure 1 -</span> RNG Tool Setup<p></p>
@@ -48,16 +48,26 @@ permalink: /retail/swsh/new-overworld/static/
     </div>
     <div class="card-body card-bg">
         <ol>
-            <li>Remove any Pok&eacute;mon currently stored in the {% include tooltips/daycare.html %} then fly to the required location and run around until you have found the spawner that contains your desired Pok&eacute;mon.</li>
+            <li>Remove any Pok&eacute;mon currently stored in either {% include tooltips/daycare.html %}.</li>
             <p></p>
-            <li>Move far enough away to completely despawn your target Pok&eacute;mon, set the required weather condition, then save the game. Position yourself as close to the Pok&eacute;mon's spawn border as possible without actually spawning it in the overworld.</li>
+            <li>Prepare your party so you have the correct lead Pok&eacute;mon and any catchers you plan to use.</li>
             <p></p>
-            <li>If you cannot find an optimal position, you can knock out any additional static spawners blocking your path. These will remain despawned as long as you do not move too far away or reload the area.</li>
+            <li>Make sure your current console date has the correct weather condition to spawn your Pok&eacute;mon.</li>
             <p></p>
-            <li>Once positioned correctly, add your desired lead Pok&eacute;mon to your party and save the game again. For detailed information on lead abilities and their effects, click the button below.</li>
+            <li>Go to the static spawner for your target Pok&eacute;mon.</li>
+            <p></p>
+            <li>Move far enough away to completely despawn your target Pok&eacute;mon. Position yourself as close to the Pok&eacute;mon's spawn border as possible without actually spawning it in the overworld.</li>
+            <p></p>
+            <ul>
+                <li>To confirm ideal positioning, look for a <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/static/dust-cloud.png">dust cloud</a> or <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/static/water-splash.png">puddle</a> beneath the Pok&eacute;mon when it spawns. If these effects are not visible, you are standing too close to the spawner. (Note: This may be difficult to see if your target Pok&eacute;mon is in tall grass or flying.)</li>
+                <p></p>
+                <li>If you cannot find an optimal position, you can despawn any static spawners nearby or in your way. These will remain despawned as long as you do not let the date advance.</li>
+            </ul>
+            <p></p>
+            <li>Save the game.</li>
+            <p></p>
         </ol>
-
-        <p>To confirm ideal positioning, look for a <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/static/dust-cloud.png">dust cloud</a> or <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/static/water-splash.png">puddle</a> beneath the Pok&eacute;mon when it spawns. If these effects are not visible, you are standing too close to the spawner. (Note: This may be difficult to see if your target Pok&eacute;mon is in tall grass or flying.)</p>
+        <p></p>
     </div>
 </div>
 <br>
@@ -77,7 +87,7 @@ permalink: /retail/swsh/new-overworld/static/
 </small>
 <hr />
 
-<p>The instructions for hitting a target frame depend on the selected weather condition. Rain and Thunderstorm are considered "advanced" and may be challenging for beginners. If this is your first time attempting this type of RNG manipulation it is recommended to start with a different weather condition to familiarize yourself with the general process.</p>
+<p>The instructions for hitting a target frame depend on the selected weather condition. Rain/Thunderstorm are considered "advanced" and may be challenging for beginners. If this is your first time attempting this type of RNG manipulation, we recommended you start with a different weather condition to familiarize yourself with the general process.</p>
 
 <div class="mb-3 w-100">
     <div class="row row-cols-1">
