@@ -1,276 +1,124 @@
 ---
 layout: default
-title: Symbol RNG (CFW)
-permalink: /cfw/swsh/overworld/symbol
+title: Symbol Encounter RNG (CFW)
+permalink: /cfw/swsh/overworld/symbol/
 ---
 
-<style>
-    mark {
-        background-color: #FFD700;
-        color: black;
-    }
-
-    .card-bg {
-        background-color: #d1d1d1;
-        border-bottom-right-radius: 0.20rem !important;
-        border-bottom-left-radius: 0.20rem !important;
-    }
-
-    table,
-    th,
-    td {
-        border: 1px solid black;
-    }
-
-    blockquote {
-        background: #c5c5c5;
-        border: 1px solid #9e9e9e;
-        border-left: 5px solid #0c0038;
-        margin: 1.5em 2px;
-        padding: 0.5em 10px;
-        quotes: "\201C""\201D""\2018""\2019";
-    }
-</style>
-
 <div class="title" style="background-color: #0c0038;">
-    <h1 class="text-light text-center pt-3 pb-3">Sword/Shield Symbol RNG</h1>
+    <h1 class="text-light text-center pt-3 pb-3">Overworld Symbol Encounters</h1>
 </div>
+<small class="text-muted mb-3 mt-0">
+    Worked examples for manipulating Symbol encounters in any weather condition.
+</small>
 <hr />
 
-<p>This guide explains how to RNG abuse Pokémon from Symbol encounters. It covers the entire process, from choosing a location to obtaining the desired Pokémon.</p>
+<p>Random Symbol spawners generate different species of Pok&eacute;mon from an encounter table. A random number from 0 to 99 determines the encounter slot. The encounter tables are weather-dependent and remain the same until the weather in the area changes. Since the weather can change if the console date rolls past midnight (00:00), consider setting your system time before starting to avoid unexpected RNG advancements and Pok&eacute;mon spawns.</p>
 
-<p>Symbol encounters aren't guaranteed to be the same species each time. The species is determined by an encounter slot value of 0-99, which changes with the weather. The weather can change every day at midnight (00:00). Be mindful of the Switch system time to avoid spawning unexpected Pokémon due to incorrect weather conditions.</p>
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Important -</span> From here, we assume that you are familiar with key concepts described on the main page. If you are unsure about <a href="/cfw/swsh/new-overworld/main-page" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">seed monitoring</a>, <a href="/cfw/swsh/new-overworld/advancing-the-rng-state" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">advancement methods</a>, or <a href="/cfw/swsh/new-overworld/menu-close-prediction" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">NPC calibration</a>, please review the relevant sections before continuing.
+</div>
 
-<p><span class="fw-bold" style="color: #b60606;">From here it is assumed that you have read the initial page of this guide and have a general idea of how to use SWSH OWRNG Generator GUI.</span></p>
+<span class="fw-bold">Figure 1 -</span> RNG Tool Setup<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/symbol/getting-started-symbol.gif" alt="owrng-symbol-cfw-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/symbol/getting-started-symbol.gif"><p></p>
 
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/overworld">
-    Picked the wrong type of encounter? <span class="fw-bold">Click here to go back!</span>
+<div class="card border-dark">
+    <div class="anchored card-header text-light" style="background-color: #0c0038;" id="getting-started-symbol-cfw">
+        <span class="fw-bold">Getting Started (Tool Setup)</span>
+    </div>
+    <div class="card-body card-bg">
+        <h6 span class="fw-bold">Required Setup</h6>
+        <ol>
+            <li>Enter the IP address of your console in the main window and click <code class="fw-bold">Connect</code>. This will automatically read your current seed and save file details.</li>
+            <p></p>
+            <li>Click <code class="fw-bold">Encounter Lookup</code> in the top toolbar to open a sub-window. Enter the desired species name in the search field and select a SYMBOL encounter.</li>
+            <p></p>
+            <li>Close the <code class="fw-bold">Encounter Lookup</code> window, then input the relevant <code class="fw-bold">Location</code>, <code class="fw-bold">Weather</code>, and <code class="fw-bold">Species</code> information into the <code class="fw-bold">Encounter Settings</code> section.</li>
+            <p></p>
+            <li>Enter the KO count for the Pok&eacute;mon you are hunting into the <code class="fw-bold">KOs</code> field. This ensures accurate prediction of extra shiny rolls from Brilliant Aura boosts.</li>
+            <p></p>
+            <li>Adjust your search range using the <code class="fw-bold">+</code> field in <code class="fw-bold">Encounter Settings</code>, then configure additional search filters such as Shiny, Marks, IVs, Brilliant Aura, or Height.</li>
+        </ol>
+
+        <h6 class="fw-bold">KO Mechanic &amp; Brilliant Pok&eacute;mon</h6>
+        <p>Brilliant Pok&eacute;mon appear with a golden aura in the overworld. They have a higher shiny rate and 2-3 guaranteed perfect IVs, making them ideal for high IV shiny hunting. These boosts depend on how many of that species that you have knocked out, which can be checked by <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/symbol/ko-count.png">viewing the Pok&eacute;dex entry</a>.</p>
+
+        <p>At least 500 KOs on the target species are required to maximize Brilliant Aura bonuses. A more practical alternative is 100 KOs with Shiny Charm boosts, improving shiny rates from 1/1024 to 1/683.08. This provides a significant advantage with much less effort. For more details on Brilliant Aura and Shiny rates, refer to <a href="https://bulbapedia.bulbagarden.net/wiki/Brilliant_Pok%C3%A9mon#Appearance_rate" target="_blank">Bulbapedia</a>.</p>
+
+        <p class="fw-bold" style="color: #c00000;"><small>KO COUNT MUST BE CONFIGURED PROPERLY IN OWOOW TO AVOID POTENTIAL ISSUES.</small></p>
+
+    </div>
+</div>
+<br />
+
+<span class="fw-bold">Figure 2 -</span> Game Setup<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/symbol/game-setup-symbol.gif" alt="owrng-symbol-cfw-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/symbol/game-setup-symbol.gif"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header text-light" style="background-color: #0c0038;" id="game-setup-symbol-cfw">
+        <span class="fw-bold">Game Setup</span>
+    </div>
+    <div class="card-body card-bg">
+        <ol>
+            <li>Remove any Pok&eacute;mon currently stored in either {% include tooltips/nursery.html %}.</li>
+            <p></p>
+            <li>Prepare your party so you have the correct lead Pok&eacute;mon and any catchers you plan to use.</li>
+            <p></p>
+            <li>If you opened the Pok&eacute;dex at any point, such as when checking your KO count, this will generate Pok&eacute;dex Recommendations which alter the RNG. You should perform a date skip, reset the game to before you opened the Pok&eacute;dex, or account for it in the program.</li>
+            <p></p>
+            <li>Make sure your current console date has the correct weather condition to spawn your Pok&eacute;mon.</li>
+            <p></p>
+            <li>Go to the the area with the random spawner for your target Pok&eacute;mon.</li>
+            <p></p>
+            <li>Move far enough away to completely despawn all Pok&eacute;mon. Position yourself as close to the nearest spawner as possible without actually spawning anything in the overworld.</li>
+            <p></p>
+            <ul>
+                <li>To confirm ideal positioning, look for a <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/static/dust-cloud.png">dust cloud</a> or <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/static/water-splash.png">puddle</a> beneath the Pok&eacute;mon when it spawns. If these effects are not visible, you are standing too close to the spawner. (Note: This may be difficult to see if your target Pok&eacute;mon is in tall grass or flying.)</li>
+                <p></p>
+                <li>If you cannot find an optimal position, you can despawn any static spawners nearby or in your way. These will remain despawned as long as you do not let the date advance.</li>
+            </ul>
+            <p></p>
+            <li>Save the game.</li>
+            <p></p>
+        </ol>
+    </div>
+</div>
+<br>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/new-overworld/lead-ability-dex-rec" target="_blank" rel="noopener noreferrer">
+    Unsure about lead abilities &amp; spawn boosting? <span class="fw-bold">click here to learn more</span>
     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
     </svg>
 </a>
-<br>
 
-<div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="getting-started-cfw">
-        <span class="fw-bold text-light">Getting Started:</span>
-    </div>
-    <div class="card-body card-bg">
-        <ol>
-            <li>Open SWSH_OWRNG_Generator_GUI, then click on the <code span class="fw-bold">Encounter Lookup</code> button at the top of the window to open the Encounter Lookup tab.</li>
-            <p></p>
-            <li>Type the species name into the empty search field to bring up a list of encounters for that specific Pokémon. Select a row that appeals to you by left clicking it.</li>
-            <p></p>
-            <li>Confirm that the filters have been set properly inside the Main Window, encounter filters can be found on the left-hand side.</li>
-            <p></p>
-            <li>Set the <code span class="fw-bold">KO Count:</code> value to match the Pokémon you are hunting, this is found by viewing the PokeDex entry of the Pokémon</li>
-            <p></p>
-            <li>Set your search filters inside the middle portion of the Main Window. You can filter for specific Marks, IVs, Shininess, Brilliant Aura, etc.</li>
-            <p></p>
-            <li>Fly to the correct location in-game, then set the correct weather condition using Luxray's <code span class="fw-bold">Set</code> function if the current weather in-game is incorrect.</li>
-            <p></p>
-            <li>Save the game once you are stood in place, then click the <code span class="fw-bold">Connect</code> button inside the main window, once connected you can begin searching for target frames.</li>
-        </ol>
-
-        <blockquote>Avoid rain or thunderstorm when picking an encounter where possible, rain causes advancements to occur at an extreme rate, making it difficult to hit target frames.</blockquote>
-    </div>
+<hr /><div class="title" style="background-color: #0c0038;" id="the-basics">
+    <h1 class="text-light text-center pt-3 pb-3">Advancing Towards a Target</h1>
 </div>
-<br>
-
-<span class="fw-bold">Figure 1 -</span> Tool setup<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/old/overworld/symbol/figure-1-encounter-lookup-symbol-swablu.gif" alt="old-overworld-symbol-cfw-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/old/overworld/symbol/figure-1-encounter-lookup-symbol-swablu.gif"><p></p>
-
-<h6><span class="fw-bold">Using Swablu as the example:</span></h6>
-<p>The Encounter Lookup specifies Giant's Bed with Overcast weather for this encounter. Clicking the row of the table automatically fills in all of the relevant encounter information on the left-hand side of the main window.</p>
-
-<p>KO Count has been manually configured to match the amount displayed in Swablus PokeDex entry for my save file (500 KOs applies maximum Brilliant Aura bonus).</p>
-
-<p>The search filters, in the middle of the main window, were manually configured to search for any shiny with any mark, you can be more specific with the filters if you wish, such as filtering for IVs/Nature.</p>
-
-<details>
-    <summary><span class="fw-bold">Important Information:</span></summary><p></p>
-    <div class="card border-dark">
-        <div class="anchored card-header" style="background-color: #0c0038;" id="important-info-symbol-cfw">
-            <span class="fw-bold text-light">Important Information:</span>
-        </div>
-        <div class="card-body card-bg">
-            <h6><span class="fw-bold">The KO mechanic & Brilliant Aura</span></h6>
-            <p>The KO Mechanic provides a boost to the rates of Shiny & Brilliant Aura Pokémon, you can find the correct value by opening the Pokedéx screen of the Pokémon you are hunting. You can find more details about the odds boosts on <a href="https://bulbapedia.bulbagarden.net/wiki/Brilliant_Pok%C3%A9mon#Appearance_rate">Bulbapedia</a>.</p>
-
-            <p>Brilliant Aura boosts the amount of guaranteed 31 IVs a Pokémon has, only Pokémon from symbol encounters can have this trait. This makes symbol encounters ideal for those who are hunting for high IV wild Pokémon.</p><hr />
-
-            <h6><span class="fw-bold">Pokémon Behaviours</span></h6>
-            <p>Pokémon have different behaviour classes, some will be aggressive and target the player, others will be relaxed, and in some cases the Pokemon will be timid and flee when they notice the player. Pokémon with flee behaviour need to be encountered quickly before they escape.</p>
-
-            <u>Pokemon with flee behaviour:</u><br>
-            <p>Butterfree, Vulpix, Chansey, Horsea, Dunsparce, Blissey, Ralts, Whismur, Drilbur, Audino, Trubbish, Zorua, Ferroseed, Inkay, Phantump, Noibat, Wimpod, Skwovet & Silicobra.</p><hr />
-
-            <h6><span class="fw-bold">Dex Recommendations & Ability Boosts</span></h6>
-
-            <p>Dex recommendations can be found by opening the Pokedex, when a Pokemon is recommended the encounterslot value for that specific Pokemon is boosted.</p>
-
-            <p>Abilities like Lightning Rod, Harvest & Storm Drain boost the encounterslot value for Pokemon of specific types.</p>
-
-            <p>Both of these boosting methods are NOT accounted for inside SWSH_OWRNG_Generator_GUI. Avoid using Dexrec or ability boosts in case of inaccuracies.</p>
-        </div>
-    </div>
-</details>
-
-<hr /><div class="title" style="background-color: #0c0038;">
-    <h1 class="text-light text-center pt-3 pb-3">The Process</h1>
-</div>
+<small class="text-muted mb-3 mt-0">
+    Step-by-step instructions for hitting a target frame can be found here.
+</small>
 <hr />
 
-<p>The end goal is to spawn the Pokémon on the calculated target frame provided by the generator search results. Once a Pokémon spawns in the overworld, its stats and details are fixed.</p>
+<p>The instructions for hitting a target frame depend on the selected weather condition. Rain/Thunderstorm are considered "advanced" and may be challenging for beginners. If this is your first time attempting this type of RNG manipulation, we recommended you start with a different weather condition to familiarize yourself with the general process.</p>
 
-<p>Ensure your encounter and search filters are properly configured before continuing (see Figure 1). The advancement methods used to achieve the result are listed in the table found on the main page.</p>
-
-<span class="fw-bold">Figure 2 -</span> Game setup<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/old/overworld/symbol/figure-2-in-game-setup.gif" alt="old-overworld-symbol-cfw-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/old/overworld/symbol/figure-2-in-game-setup.gif"><p></p>
-
-
-<div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="game-setup-static-cfw">
-        <span class="fw-bold text-light">Game Setup:</span>
-    </div>
-    <div class="card-body card-bg">
-        <p>For Symbol encounters, stand where there is a clear, straight line between you and the target Pokémon. Avoid areas that trigger other Wild/Static spawns. Once you have good positioning, calculate the amount of NPCs using the method described on the main page of the guide.</p>
-
-        <p>The location in the above image is ideal: Minimal NPCs, no extra spawned Pokémon, and a clear line to the target patch of grass.</p>
-
-        <p>Giant's Bed, in the Crown Tundra Wild Area, is notably "quiet" in calm weather. Remember, advancement speed (aka noise) depends on location, NPC count, and weather. The more quiet the area, the better.</p>
-
-        <blockquote>If you can't find a good spot, knock out any static spawns blocking your path. They will remain despawned until you return after a date change.</blockquote>
+<div class="mb-3 w-100">
+    <div class="row row-cols-1">
+        <div class="col">
+            <label for="moisture-select"><span class="fw-bold">Select a weather condition:</span></label>
+            <select id="moisture-select" class="form-select">
+                <option value="">No weather condition selected...</option>
+                <option value="dry">I am NOT in Rain/Thunderstorm!</option>
+                <option value="wet">I am in Rain/Thunderstorm!</option>
+            </select>
+        </div>
     </div>
 </div>
-<br>
 
-<span class="fw-bold">Figure 3 -</span> Target found!<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/old/overworld/symbol/figure-3-target-found-symbol.png" alt="old-overworld-symbol-cfw-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/old/overworld/symbol/figure-3-target-found-symbol.png"><p></p>
-
-<p>After searching a desired result, we've found a shiny, Modest natured Swablu in a cluster on advances 2007-2009. Target frames often appear in clusters, which are multiple frames in a row yield the same result. A larger cluster increases your chances of hitting the target frame.</p>
-
-<details>
-    <summary><span class="fw-bold">Undesirable result?</span></summary>
-    <ol>
-        <li>Disconnect from the program, and restart the game to refresh the seed.</li>
-        <li>Enter the overworld, pause the game, then reconnect to the program.</li>
-        <li>Search for a new target frame, repeat this process until a desirable result shows in the generator search results.</li>
-    </ol>
-</details><p></p>
-
-<p>Once you have found a good position, have calibrated the NPC count, and found a desirable result, you can continue following the guide.</p>
-
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/overworld#menu-close-overview-cfw">
-    Trouble calibrating NPC count? <span class="fw-bold">Click here for the tutorial!</span>
-    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-    </svg>
-</a>
-<br>
-
-<hr /><div class="title" style="background-color: #0c0038;">
-    <h1 class="text-light text-center pt-3 pb-3">Advancing Towards the Target!</h1>
-</div>
-<hr />
-
-<p>First, you will need to calculate the rough delay for the encounter. Doing this step will provide the best possible chances of hitting your target frame. Delay is the difference in advancements between spawning the Pokémon in the overworld and the actual frame the Pokémon was generated on.</p>
-
-<div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="delay-calculation-cfw">
-        <span class="fw-bold text-light">Delay Calculation</span>
+<div>
+    <div class="info info-dry d-none">
+        {% include_relative dry.html %}
     </div>
-    <div class="card-body card-bg">
-        <h6 span class="fw-bold">Delay Calculation</h6>
-        <ol>
-            <li>Pause the game, then disconnect and reconnect to the main window. The number inside the <code class="fw-bold">Curr. Adv.</code> field should now be 0.</li>
-            <p></p>
-            <li>Unpause the game and run towards the spawner of your desired Pokémon to make it spawn in the overworld, take note of the frame it was spawned on.</li>
-            <p></p>
-            <li>Initiate the encounter, the press the <code class="fw-bold">Read Encounter</code> button to see the details of the Pokémon you are in battle with.</li>
-            <p></p>
-            <li>Search with no filters to find the frame you actually hit. This should be relatively close to the frame the Pokémon was spawned on.</li>
-            <p></p>
-            <li>Subtract the frame the Pokémon was spawned on from the frame you actually hit, this will be your rough delay for this encounter.</li>
-        </ol>
-
-        <blockquote><span class="fw-bold">Example:</span> If we spawned the encounter on frame 150, but the Pokémon we are in battle with was generated on frame 152, the calculated delay is 2.</blockquote>
-
+    <div class="info info-wet d-none">
+        {% include_relative wet.html %}
     </div>
 </div>
-<br>
-
-<p>At this stage you should now know have calibrated both the NPC count and the delay for the encounter, take note of both of these values as they are significantly important for hitting target frames consistently.</p>
-
-<p>Take note of your position after calibrating delay and NPC count as these values are subjective to change based on the positioning of the player.</p>
-
-<p>After setting up your search filters and standing in the correct position in-game, you will need to calculate the amount of NPCs in the area and the base delay of the encounter. Doing both of these things will provide the best possible chances of hitting the correct target frame.</p>
-
-<div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="hitting-target-frame-symbol-cfw">
-        <span class="fw-bold text-light">Hitting Your Target Frame:</span>
-    </div>
-    <div class="card-body card-bg">
-        <h6 class="fw-bold">Step-by-step tutorial:</h6>
-
-        <ul>
-            <li>Advance towards your target frame using any method listed in the table on the main page (consider date-skipping for long distance-advancements).</li>
-            <p></p>
-            <li>Return to the correct position in-game when you are a few thousand frames away from the desired target. Ensure the target is despawned.</li>
-            <p></p>
-            <li>Pause the game, then disconnect and reconnect to the Main Window, and press the search button again to set a new target frame.</li>
-            <p></p>
-        </ul>
-
-        <blockquote>At this stage, we recommend using menu close prediction & animation advancements for accurate, small, and manageable advancement increments.</blockquote>
-
-        <ul>
-            <li>Open the Menu Close Advances Viewer tab, and enter the number of NPCs calculated earlier in the <code span class="fw-bold">NPCs</code> field.</li>
-            <p></p>
-            <li>Enter your target frame into the empty <code span class="fw-bold">+</code> field, factor in your calibrated delay (e.g <code span class="fw-bold">1000 (target) - 3 (delay) = 997 (new target)</code>).</li>
-            <p></p>
-            <li>Hit search, you should now see a list of frames in the table, see if your exact target frame, great! This means menu close prediction can be used to hit it.</li>
-            <p></p>
-            <li>If you do not see your target frame in the search results, use animation advancements to increment the RNG state by 1, then repeat the above steps until visible.</li>
-            <p></p>
-        </ul>
-
-        <blockquote>
-            <p>In rare cases, you may not be able to hit the desired frame using menu close prediction alone. Use it to get as close as possible, then use movement advances to reach your target instead.</p>
-
-            Test how many advancements occur per movement to determine the number needed. Typically, this method advances the RNG state by 1-2 frames each time.
-        </blockquote>
-
-        <ul>
-            <li>Open and close the pause menu until a single menu close lands you onto (or as close as possible) the target frame.</li>
-            <p></p>
-            <li>Unpause the game, then move towards the spawn point of your desired Pokémon to spawn it in the overworld as quickly as possible.</li>
-            <p></p>
-            <li>The Pokémon that spawned first will be your target Pokémon, try to take note of whichever Pokémon spawned in the grass first.</li>
-            <p></p>
-        </ul>
-
-        <blockquote>If you do not land directly onto your target frame, this is the point where you should use movement advancements, do so before spawning your desired Pokémon in the overworld.</blockquote>
-
-        <ul>
-            <li>Initiate the encounter with the Pokémon that spawned first to check if you've hit the correct target frame. If the result is unexpected, recalibrate your NPC count and delay, then retry. Be quick to spawn your Pokémon in the overworld to avoid overshooting.</li>
-        </ul>
-
-    </div>
-</div>
-<br>
-
-
-<span class="fw-bold">Figure 4 -</span> Target frame hit!<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/old/overworld/symbol/figure-4-hitting-target-symbol.png" alt="old-overworld-symbol-cfw-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/old/overworld/symbol/figure-4-hitting-target-symbol.png"><p></p>
-
-<p>By using menu close prediction and animations to keep track of inputs/advancements, we were able to hit out target frame.</p>
-
-<span class="fw-bold">Figure 5/6/7 -</span> Result found!<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/old/overworld/symbol/figure-5-in-battle-encounter-read-symbol.png" alt="old-overworld-symbol-cfw-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/old/overworld/symbol/figure-5-in-battle-encounter-read-symbol.png"><p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/old/overworld/symbol/figure-6-in-battle-encounter-switch-symbol.jpg" alt="old-overworld-symbol-cfw-6" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/old/overworld/symbol/figure-6-in-battle-encounter-switch-symbol.jpg"><p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/old/overworld/symbol/figure-7-summary-screen-switch-symbol.jpg" alt="old-overworld-symbol-cfw-7" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/old/overworld/symbol/figure-7-summary-screen-switch-symbol.jpg"><p></p>
-
-<p><span class="fw-bold">The Swablu matches what is expected by the tool, you should now understand how to RNG abuse Pokémon from Symbol encounters.</span></p>
-
-Head back to the main page if you wish to learn how to RNG abuse different types of encounters.

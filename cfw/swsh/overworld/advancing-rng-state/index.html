@@ -1,0 +1,346 @@
+---
+layout: default
+title: Overworld RNG - Advancing The RNG State
+permalink: /cfw/swsh/overworld/advancing-the-rng-state
+---
+
+<div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">Advancing The RNG State</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    Understanding the common methods used to advance the RNG state.
+</small>
+<hr />
+
+<p>Owoow tracks the amount of advances that have occured since the initial connection to the program. RNG advancements can occur naturally based on the overworld environment, or they can be forced by performing specific actions. The most useful actions are listed in the table below.</p>
+
+<table class="table table-striped" style="width:100%" id="overworld-rng-table">
+    <thead class="table text-white" style="background-color: #0c0038;">
+        <tr>
+            <th scope="col" class="text-center" style="width:24%">Action</th>
+            <th scope="col" class="text-center">Description</th>
+            <th scope="col" class="text-center" style="width:24%">Advances #</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="text-center"><span class="fw-bold">Attack Animations</span></td>
+            <td>
+                Having your Pok&eacute;mon animate on the party menu or summary screen by pressing down on the <code span class="fw-bold">Left Stick</code>/<code span class="fw-bold">Right Stick</code>, or by using owoow's <code class="fw-bold">Skip</code> feature.
+            </td>
+            <td class="text-center">+1 advance per button input</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold">Player Movement</span></td>
+            <td>
+                Moving the player using the control stick, then letting the control stick fall back into its resting state. Stopping triggers some RNG advancements.
+            </td>
+            <td class="text-center">+1-2 advances per stick input, +30-50 per encounter if spawning encounters</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold">Bike Bell/Whistling</span></td>
+            <td>
+                Pressing the <code span class="fw-bold">Left Stick</code> to ring the bike bell or whistle. This is more effective if the player is in front of NPCs.
+            </td>
+            <td class="text-center">+1-2 advances per button input</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold">Menu Close</span></td>
+            <td>
+                Opening and closing the pause menu using the <code class="fw-bold">X</code> button, the amount of advances consumed from doing this action is predictable (explained later).
+            </td>
+            <td class="text-center">~5-30, variable advances based on NPC count</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold">Bike Hopping</span></td>
+            <td>
+                Mounting/dismounting the bike by pressing the code <code class="fw-bold">+</code> button causes the RNG state to advance quicker than player movement, useful for covering short distances quickly. Increases with more Pok&eacute;mon in the party.
+            </td>
+            <td class="text-center">~500 advances per minute, variable</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold">NPC Activation</span></td>
+            <td>
+                Standing near an NPC to make them notice the player. Moving away from an NPC will cause them to "deactivate". Useful for covering short distances quickly.
+            </td>
+            <td class="text-center">~2500 advances per minute, per active NPC</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold">Rain</span></td>
+            <td>
+                Standing in the overworld in Rain weather. This can be stacked with NPC activation for fast paced RNG state advances.
+            </td>
+            <td class="text-center">~6000 advances per minute, variable</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold">Thunderstorm</span></td>
+            <td>
+                Standing in the overworld in Thunderstorm weather. This can be stacked with NPC activation for fast paced RNG state advances.
+            </td>
+            <td class="text-center">~12000 advances per minute, variable</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold">Wet Weather Menuing</span></td>
+            <td>
+                Opening and closing different pages of the pause menu while in Rain or Thunderstorm weather. This method is mainly used for Hidden encounters.
+            </td>
+            <td class="text-center">~900 advances (Thunder), ~450 advances (Rain) per minute</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold">Date Skipping</span></td>
+            <td>
+                Using owoow's <code span class="fw-bold">Skip</code> feature to artificially advance the system date or the PvP date skipping exploit. This is the quickest way to advance, but is often not needed unless you are seeking a very rare target. Increases with number of Pok&eacute;mon in the boxes.
+            </td>
+            <td class="text-center">Upwards of 16,000 advances per day skipped when optimized</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="alert alert-danger" style="border: 1px solid #a80404; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Important -</span> To use the built-in date skipping features, you must install the custom sys-botbase version bundled with owoow. This version includes exclusive features not found in standard releases. Additionally, ensure that the system date and time are synced via the internet for this feature to function properly.
+</div>
+
+<hr /><div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">Examples &amp; Demonstration</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    Examples are provided using CFW to give an idea of the expected # of advances per action.
+</small>
+<hr />
+
+<span class="fw-bold">Figure 1 -</span> Animations Example<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/animations.gif" alt="advancing-the-rng-state-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/animations.gif"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="advancements-method-animations">
+        <span class="fw-bold text-light">Advancement Method - Attack Animations</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>With the Pok&eacute;mon party list open, pressing down on the <code span class="fw-bold">Left Stick</code>/<code span class="fw-bold">Right Stick</code> causes the RNG state to advance by +1 with each press. This works similarly in the Pok&eacute;mon, but you must wait for each animation to play completely. As a ersult, using the party list is recommended since it is possible to press the sticks rapidly without having to wait for animations.</p>
+
+        <h6 span class="fw-bold">Use Cases</h6>
+        <ul>
+            <li>Advancing in a predictable manner to reach a specific RNG state/advance (~1-300 advancements away).</li>
+            <p></p>
+            <li>Used in tandem with menu close prediction to hit your target frame.</li>
+        </ul>
+    </div>
+</div>
+<hr />
+
+<span class="fw-bold">Figure 2 -</span> Player Movement, Bike Bell, and Whistling Example<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/movement.gif" alt="advancing-the-rng-state-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/movement.gif"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="advancements-method-movement">
+        <span class="fw-bold text-light">Advancement Method - Player Movement</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Player movement involves moving the control stick and stopping (which triggers the advancements). This can also be performed while riding the bike and spawning overworld encounters, which each add about 30-50 advancements.</p>
+
+        <h6 span class="fw-bold">Use Cases</h6>
+        <ul>
+            <li>Simple movement can be used to get closer to a particular RNG state at a slow-medium rate (~100-500 advancements away).</li>
+            <p></p>
+            <li>Spawning encounters can be used to get closer to a particular RNG state at a medium rate (~1000-5000 advancements away).</li>
+            <p></p>
+            <li>Can be used to trigger a few advancements and then run towards the target when menu close prediction is insufficient for hitting a specific seed (not recommended).</li>
+        </ul>
+    </div>
+</div>
+<br />
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="advancements-method-movement">
+        <span class="fw-bold text-light">Advancement Method - Bike Bell/Whistling</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Bike Bell/Whistling involves pressing down on the <code class="fw-bold">Left Stick</code>. Increases with number of NPCs within range.</p>
+
+        <h6 span class="fw-bold">Use Cases</h6>
+        <ul>
+            <li>Used to get closer to a particular RNG state at a slow-medium rate without moving (~100-500 advancements away).</li>
+            <p></p>
+            <li>Can be combined with standing in front of NPCs and Thunderstorm weather for even faster advancements.</li>
+        </ul>
+    </div>
+</div>
+<hr />
+
+<span class="fw-bold">Figure 3 -</span> Menu Close Example<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/menu-close.gif" alt="advancing-the-rng-state-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/menu-close.gif"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="advancements-method-menu">
+        <span class="fw-bold text-light">Advancement Method - Menu Close</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Closing the pause menu advances the RNG state in a predictable manner based on the current number of NPCs in the area and the current weather. In most cases, closing the pause menu freezes advances for a short period of time, making this method ideal for hitting a target frame.</p>
+        <p>Due to the effectiveness of this method, menu close prediction will be referenced often throughout this guide. How to calibrate NPC counts will be explained later.</p>
+
+        <h6 span class="fw-bold">Use Cases</h6>
+        <ul>
+            <li>Used to advance the RNG state in a predictable manner to avoid overshooting (~100-500 advancements away).</li>
+            <p></p>
+            <li>Will often be the final action used to reach a target since it is entirely predictable.</li>
+        </ul>
+    </div>
+</div>
+<hr />
+
+<span class="fw-bold">Figure 4 -</span> Bike Mount Example<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/bike-mount.gif" alt="advancing-the-rng-state-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/bike-mount.gif"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="advancements-method-bike">
+        <span class="fw-bold text-light">Advancement Method - Bike Mount</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Mounting and dismounting the bike advances the RNG state by a small amount. The exact number of advances consumed from this action is variable depending on the number of NPCs currently in the area and Pok&eacute;mon in your party.</p>
+
+        <p>Keep in mind that using this method in front of activated NPCs will paradoxically cause advancements to be slower since the NPC advancements do not resume until the bike animation is done.</p>
+
+        <h6 span class="fw-bold">Use Cases</h6>
+        <ul>
+            <li>Used to advance short distances quickly to avoid overshooting (~100-500 advancements away).</li>
+            <p></p>
+            <li>Should not be used right before biking towards the target as it is very variable and unpredictable.</li>
+        </ul>
+    </div>
+</div>
+<hr />
+
+<span class="fw-bold">Figure 5 -</span> NPC Activation Example<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/npc-activation.gif" alt="advancing-the-rng-state-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/npc-activation.gif"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="advancements-method-npc">
+        <span class="fw-bold text-light">Advancement Method - NPC Activation</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Standing next to an NPC causes them to become "active" and face the player (as shown in the image above). When this occurs, the RNG state advances rapidly until the player moves far enough away to deactivate the NPC.</p>
+
+        <h6 span class="fw-bold">Use Cases</h6>
+        <ul>
+            <li>Used to advance medium-large distances quickly (at least 1000 advancements away).</li>
+            <p></p>
+            <li>Can be increased by involving multiple NPCs or Rain/Thunderstorm to increase the advances per minute.</li>
+            <p></p>
+            <li>Completely idle method to advance the RNG state; no effort required.</li>
+        </ul>
+    </div>
+</div>
+<hr />
+
+<span class="fw-bold">Figure 6 -</span> Rain/Thunderstorm Weather Example<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/wet-weather.gif" alt="advancing-the-rng-state-6" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/wet-weather.gif"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="advancements-method-weather">
+        <span class="fw-bold text-light">Advancement Method - Rain/Thunderstorm</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Changing the weather to, or moving into an area with rain/thunderstorm causes the RNG state to advance rapidly. These rapid advances will continue until the weather in the area changes or the player moves to a different area where it is no longer raining.</p>
+
+        <h6 span class="fw-bold">Use Cases</h6>
+        <ul>
+            <li>Used to advance large distances, the fastest natural advancement method (at least 1000-2000 advancements away).</li>
+            <p></p>
+            <li>Can be stacked with active NPCs to increase the number of advances per minute.</li>
+            <p></p>
+            <li>Completely idle method to advance the RNG state; no effort required.</li>
+        </ul>
+    </div>
+</div>
+<hr />
+
+<span class="fw-bold">Figure 7 -</span> Wet Weather Menuing Example<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/wet-weather-menuing.gif" alt="advancing-the-rng-state-7" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/wet-weather-menuing.gif"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="advancements-method-weather-menuing">
+        <span class="fw-bold text-light">Advancement Method - Menuing (Rain/Thunderstorm)</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Clicking around and opening any of the different pause menu options will advance the RNG state. The number of advances depends on if you are doing this action in Rain or Thunderstorm. Thunderstorm produces twice the number of advances that would occur in Rain.</p>
+
+        <h6 span class="fw-bold">Use Cases</h6>
+        <ul>
+            <li>The main advancement method used for manipulating Hidden encounters when the player cannot move.</li>
+            <p></p>
+            <li>Is turbo controller viable if using the Options menu by simply mashing the A button.</li>
+            <p></p>
+            <li>Low effort method to advance the RNG state in small doses without allowing the overworld to move.</li>
+        </ul>
+    </div>
+</div>
+<hr />
+
+<span class="fw-bold">Figure 8 -</span> Date Skipping Example<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/date-skipping.gif" alt="advancing-the-rng-state-8" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/date-skipping.gif"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="advancements-method-date-skipping">
+        <span class="fw-bold text-light">Advancement Method - Date Skipping</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>The <code span class="fw-bold">Skip</code> feature of the RNG tool artificially adjusts the Switch system clock, which advances the RNG state rapidly. This can also be done manually with the PvP date skipping exploit (<a href="https://billo-guides.github.io/retail/swsh/overworld/advancing-the-rng-state#advancements-method-date-skipping">retail guide link</a>). The number of advances consumed per day skipped varies based on the number of Pok&eacute;mon currently stored in boxes (excluding eggs). With optimal box management, it is possible to consume upwards of 16,000 advancements per day skipped.</p>
+
+        <p><code span class="fw-bold">target frame / number of advances per day skipped = number of days to skip</code></p>
+
+        <h6 span class="fw-bold">Use Cases</h6>
+        <ul>
+            <li>Used to advance large distances, best suited when advancing towards very rare targets (~30,000-advancements away).</li>
+            <p></p>
+            <li>You can calculate the required number of skips needed to reach a target frame.</li>
+        </ul>
+    </div>
+</div>
+<hr />
+
+<span class="fw-bold">Figure 9 -</span> Combined Advancements Example<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/combined-advancements.gif" alt="advancing-the-rng-state-9" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/combined-advancements.gif"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="advancements-method-combined">
+        <span class="fw-bold text-light">Advancement Method - Combined</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Figure 9 illustrates the combination of three advancement techniques: wet weather, NPC activation, and bike bell usage. These methods collectively advance the RNG state rapidly without relying on date skipping.</p>
+
+        <ul>
+            <li><span class="fw-bold">Wet Weather -</span> Causes the RNG state to advance rapidly on its own. Simply change the date to one where the weather is Rain/Thunderstorm and stand in the overworld.</li>
+            <p></p>
+            <li><span class="fw-bold">NPC Activation -</span> Standing close enough to an NPC to "activate" them further increases the RNG advancement rate.</li>
+            <p></p>
+            <li><span class="fw-bold">Bike Bell/Whistling -</span> Ringing the bike bell (or player whistling) introduces additional advancements. While effective, this requires some manual input.</li>
+        </ul>
+
+        <p>If done correctly, you should see that the NPC is facing the player, meaning they are now "active", and each time the player rings the bike bell or whistles, the NPC will blink (see the above image for a demonstration of this).</p>
+
+        <h6 span class="fw-bold">Examples</h6>
+        <ul>
+            <li>Standing next to <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/ioa-diglett-npc.png">this NPC and his Diglett</a> in the IOA, while standing in Thunderstorm weather and ringing the bike bell, advances roughly 17,000 frames per minute.</li>
+        </ul>
+
+    </div>
+</div>
+<br>
+
+<div class="alert alert-success" style="border: 1px solid #28a745; border-radius: 5px; padding: 15px;">
+    <span class="fw-bold">Great!</span> You should now have a basic understanding of everything you need to know about advancing the RNG state, return back to where you left off and continue following the guide (you can leave this page open for future reference).
+</div><p></p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/overworld/main-page#the-basics" target="_blank">
+    Head back to the main page <span class="fw-bold">(OVERWORLD RNG)</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a><p></p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/item/" target="_blank">
+    Head back to the main page <span class="fw-bold">(ITEM RNG)</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a><p></p>
