@@ -5,20 +5,24 @@
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c0038;" id="settings-toggles-hidden-dry">
-        <span class="fw-bold text-light">Settings Toggles:</span>
+        <span class="fw-bold text-light">Settings Toggles</span>
     </div>
     <div class="card-body card-bg">
         <ol>
-            <li>After standing in the correct position, add the appropriate lead Pok&eacute;mon to the first slot of your party, then open the pause menu and connect to owoow. This will freeze the RNG state and prevent unwanted advances.</li>
+            <li>Now that you are standing in the correct position, open the pause menu and identify your seed. Keep the pause menu open after doing so to avoid unwanted advances.</li>
             <p></p>
-            <li>Calibrate your NPC count, then close the <code class="fw-bold">MenuCloseTimeline</code> sub-window. Verify that your NPC count has been entered into the main window and keep the <code class="fw-bold">Consider Menu Close?</code> &amp; <code class="fw-bold">Holding Direction?</code> checkboxes active.</li>
+            <li>Calibrate your NPC count, then close the <code class="fw-bold">MenuCloseTimeline</code> sub-window. Verify that your NPC count has been entered into the main window and both <code class="fw-bold">Consider Menu Close?</code> and <code class="fw-bold">Holding Direction?</code> are checked.</li>
             <p></p>
-            <li>Search for a target that can be triggered within 1-2 steps, (see the <code class="fw-bold">Step</code> column of the search table). If you do not find any results consider increasing your search range or applying less strict search filters.</li>
+            <ul>
+                <li>While <code class="fw-bold">Holding Direction?</code> is not mandatory for hidden RNG in calm weather, this is highly recommended since extra time spent on the overworld easily disrupts the RNG process.</li>
+            </ul>
             <p></p>
-            <li>Once you have found a target frame that can be reached using menu close prediction, take note of your positioning (alternatively, do not move), If you change location or move the character you will need to re-calibrate your NPC count again.</li>
+            <li>Search for a target that can be triggered within 1-2 steps (see the <code class="fw-bold">Step</code> column of the search table). If you do not find any results, consider restarting the game to reset your seed, increasing your search range, or applying less strict search filters.</li>
+            <p></p>
+            <li>Once you have found a target frame that can be reached using menu close prediction, take note of your positioning if you plan to leave the area for advancements. If you change location or move the character, you will need to re-populate the field and re-calibrate your NPC count again.</li>
         </ol>
 
-        <p>The calibration checkboxes (<code class="fw-bold">Consider Menu Close?</code> / <code class="fw-bold">Holding Direction?</code>) will account for the advances consumed when closing the pause menu, the number of advances will vary depending on whether you are holding a direction on your control stick when unpausing. The search result table will take these advances into account and will now indicate the exact frame on which to close the pause menu and spawn your target Pok&eacute;mon.</p>
+        <p>The calibration checkboxes (<code class="fw-bold">Consider Menu Close?</code> / <code class="fw-bold">Holding Direction?</code>) account for the advances consumed when closing the pause menu. The number of advances varies depending on whether you are holding a direction on your control stick when unpausing. Make sure you have the correct boxes checked; the search result table uses these checkboxes to calculate the exact frame on which to close the pause menu and spawn your target Pok&eacute;mon.</p>
 
     </div>
 </div>
@@ -39,34 +43,46 @@
         <span class="fw-bold text-light">Advancing to the Target</span>
     </div>
     <div class="card-body card-bg">
-        <p>In this example, a Shiny, Vigor Mark Mime Jr. appears in a {% include tooltips/clusters.html %} between advances 16,475 and 16,477 with a step count of 1. The calibrated NPC count is 8, and for this case, a direction should be held when closing the pause menu to maximize the chances of hitting the correct frame.</p>
+        <p>In this example, a Shiny, Vigor Mark Mime Jr. appears in a {% include tooltips/clusters.html %} from advances 16,475 and 16,477 with a step count of 1. The calibrated NPC count is 8 and a direction should be held when closing the pause menu.</p>
 
-        <h6 class="fw-bold">Step-by-Step:</h6>
+        <h6 class="fw-bold">Step-by-Step</h6>
         <ol>
-            <li>Advance toward your target using a method that does not cause the player to move. The best method for advancing the RNG state will vary depending on the size of your cluster:</li>
+            <li>Advance toward your target using a method that does not cause the player to move. There are some important considerations for the best way to advance:</li>
             <p></p>
             <ul>
-                <li>If your target is <span class="fw-bold">not in a cluster</span>, it is recommended to use <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/wet-weather-menuing.gif">wet weather menuing</a>. This method offers greater consistency for hitting single-frame targets.</li>
+                <li>The more time you spend on the overworld, the more inaccurate your previous calibration will be. This is because the spawned Pok&eacute;mon wander, which means they can despawn, run into you, or walk into a position that causes extra advances when you finally attempt the RNG manipulation.</li>
                 <p></p>
-                <li>If your target <span class="fw-bold">is in a cluster</span> of three or more, you can safely use overworld advancement methods such as <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/wet-weather.gif">wet weather</a> or <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/date-skipping.gif">date skipping</a>.</li>
+                <li>If you freshly boot into the game while positioned in the grass and immediately open the in-game pause menu, the spawned overworld Pok&eacute;mon will not start moving for a while. This can be a way to calibrate more consistently.</li>
+                <p></p>
+                <li>Unfortunately, options for advancing with the menu open are limited and slow. It may be worth investing in a controller with turbo capabilities, or you can use automation methods to click through menus or trigger attack animations.</li>
+                <p></p>
+                <li>If your target is <span class="fw-bold">not in a cluster</span>, it is recommended to use <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/wet-weather-menuing.gif">wet weather menuing</a> for a larger number of advances as this limits overworld exposure and provides more consistency for single-frame targets.</li>
+                <p></p>
+                <li>If your target <span class="fw-bold">is in a cluster</span> of three or more, you can consider using overworld advancement methods such as <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/wet-weather.gif">wet weather</a> or <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/date-skipping.gif">date skipping</a>. However, more time spent on the overworld still carries the same risk of making your previous calibration inaccurate.</li>
+                <p></p>
+                <li>If you prefer to stay off of the overworld entirely and are willing to spend a long time advancing, it is even plausible to use <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/animations.gif">attack animations</a> only.</li>
                 <p></p>
             </ul>
-            <li>Stop advancing when you are a few thousand frames away from your target. If you've moved, reposition yourself optimally inside a grass patch (see above).</li>
+            <li>Stop advancing once you are roughly 500-1000 advances before your target. A larger buffer may be needed if you used wet-weather menuing and need to change the weather back. If you have moved, reposition yourself the best you can, given the shifting overworld.</li>
             <p></p>
-            <li>Verify your current NPC count and ensure that the <code class="fw-bold">Consider Menu Close?</code> and <code class="fw-bold">Holding Direction?</code> checkboxes are enabled in the main window.</li>
+            <li>Ensure the <code class="fw-bold">Consider Menu Close?</code> and <code class="fw-bold">Holding Direction?</code> checkboxes are checked, and verify that your NPC count is calibrated correctly.</li>
             <p></p>
-            <li>Reconnect to owoow and search for your target again. From this point, use <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/animations.gif">animations</a> to reach your exact target frame, then back out to the main pause menu.</li>
+            <li>Click <code class="fw-bold">Update Seeds</code> and search for your target again. From this point, use <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/animations.gif">attack animations</a> to reach your exact target frame.</li>
             <p></p>
-            <li>Unpause the game while holding a direction on your control stick. This will make the player take steps in the grass, triggering the Hidden encounter.</li>
+            <li>You are now ready to perform the hidden RNG manipulation. Back out to the main pause menu and hold a direction on the joystick toward your clear path in the grass.</li>
             <p></p>
-            <li>Quickly initiate the encounter before it despawns and verify the result matches expectations, spawned Hidden encounters disappear within a few seconds.</li>
+            <li>Unpause the game by closing the menu. This will cause the player to take steps in the grass, triggering the hidden encounter.</li>
+            <p></p>
+            <li>If you planned to swap out your lead Pok&eacute;mon for a Synchronize lead, you can do so now if you open the pause menu right away.</li>
+            <p></p>
+            <li>Quickly initiate the encounter before it despawns and verify the result matches expectations. Spawned hidden encounters disappear within a few seconds.</li>
         </ol>
     </div>
 </div>
 <br>
 
 <div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
-    <span class="fw-bold">Important -</span> Hidden encounter RNG manipulation may be inconsistent depending on your setup, so it may take multiple attempts to achieve a result. If you are still missing targets after 2-3 attempts, consider changing location or picking a different encounter type.
+    <span class="fw-bold">Important -</span> Hidden encounter RNG manipulation depend heavily on your setup, so it may take multiple attempts to achieve a result. If you are still missing targets after 2-3 attempts, consider changing location or picking a different encounter type.
 </div>
 
 <span class="fw-bold">Figure 5 -</span> Result Found!<p></p>
