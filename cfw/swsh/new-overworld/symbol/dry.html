@@ -9,19 +9,20 @@
     </div>
     <div class="card-body card-bg">
         <ol>
-            <li>After standing in the correct position, add the appropriate lead Pok&eacute;mon to the first slot of your party, then open the pause menu and connect to owoow. This will freeze the RNG state and prevent unwanted advances.</li>
+            <li>Now that you are standing in the correct position, open the pause menu and identify your seed. Keep the pause menu open after doing so to avoid unwanted advances.</li>
             <p></p>
-            <li>Calibrate your NPC count, then close the <code class="fw-bold">MenuCloseTimeline</code> sub-window. Verify that your NPC count has been entered into the main window and keep the <code class="fw-bold">Consider Menu Close?</code> checkbox active.</li>
+            <li>Calibrate your NPC count, then close the <code class="fw-bold">MenuCloseTimeline</code> sub-window. Verify that your NPC count has been entered into the main window and <code class="fw-bold">Consider Menu Close?</code> is checked.</li>
             <p></p>
-            <li>Search for a target frame, if you do not find a result consider checking the <code span class="fw-bold">Holding Direction?</code> checkbox, this may help with finding a target that is hittable using menu close prediction.</li>
+            <li>Search for a target frame. If you do not find a result, try with <code span class="fw-bold">Holding Direction?</code> checked. This will slightly alter the results and may help with finding a target that is hittable using menu close prediction.</li>
             <p></p>
-            <li>If you still do not see any target frames in the search results with both checkboxes active, consider restarting the game to reset your seed, increasing your search range, or applying less strict search filters.</li>
+            <ul>
+                <li>If you still do not see any target frames in the search results with both checkboxes active, your options are restarting the game to reset your seed, increasing your search range, or applying less strict search filters.</li>
+            </ul>
             <p></p>
-            <li>Once you have found a target frame that can be reached using menu close prediction, take note of your positioning (alternatively, do not move), If you change location or move the character you will need to re-calibrate your NPC count again.</li>
+            <li>Once you have found a target frame that can be reached using menu close prediction, take note of your positioning if you plan to leave the area for advancements. If you change location or move the character, you will need to re-calibrate your NPC count again.</li>
         </ol>
 
-        <p>The calibration checkboxes (<code class="fw-bold">Consider Menu Close?</code> / <code class="fw-bold">Holding Direction?</code>) will account for the advances consumed when closing the pause menu, the number of advances will vary depending on whether you are holding a direction on your control stick when unpausing. The search result table will take these advances into account and will now indicate the exact frame on which to close the pause menu and spawn your target Pok&eacute;mon.</p>
-
+        <p>The calibration checkboxes (<code class="fw-bold">Consider Menu Close?</code> / <code class="fw-bold">Holding Direction?</code>) account for the advances consumed when closing the pause menu. The number of advances varies depending on whether you are holding a direction on your control stick when unpausing. Make sure you have the correct boxes checked; the search result table uses these checkboxes to calculate the exact frame on which to close the pause menu and spawn your target Pok&eacute;mon.</p>
     </div>
 </div>
 <br>
@@ -41,25 +42,29 @@
         <span class="fw-bold text-light">Advancing to the Target</span>
     </div>
     <div class="card-body card-bg">
-        <p>In this example, a Shiny, Angry Mark Gurdurr appears in a {% include tooltips/clusters.html %} between advances 40,538 and 40,541. The calibrated NPC count is 3, and for this case, no direction should be held when closing the pause menu to maximize the chances of hitting the correct frame.</p>
+        <p>In this example, a shiny, Angry Mark Gurdurr appears in a {% include tooltips/clusters.html %} between advances 40,538 and 40,541. The calibrated NPC count is 3 and no direction should be held when closing the pause menu.</p>
 
-        <p>Your experience using menu close prediction may vary, sometimes holding a direction can improve the likelihood of landing on a specific frame after closing the pause menu.</p>
+        <p>We find that holding a direction reduces the chance of random RNG noise after closing the pause menu, which can disrupt your attempt depending on your configuration. Your experience using menu close prediction may vary.</p>
 
         <h6 class="fw-bold">Step-by-Step</h6>
         <ol>
-            <li>Advance toward your target using any of the methods listed on <a href="/cfw/swsh/new-overworld/advancing-the-rng-state" target="_blank">this page</a>. Consider using <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/wet-weather.gif">wet weather</a> or <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/date-skipping.gif">date skipping</a> to advance large distances.</li>
+            <li>Advance toward your target using any of the methods listed on <a href="/cfw/swsh/new-overworld/advancing-the-rng-state" target="_blank">this page</a>. Consider using <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/wet-weather.gif">wet weather</a> or <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/date-skipping.gif">date skipping</a> to speed through a large number of advances efficiently.</li>
             <p></p>
-            <li>Stop advancing once you are a few thousand advances before your target, then reposition yourself outside the spawn point if you have moved.</li>
+            <li>Stop advancing once you are roughly 1000-3000 advances before your target.</li>
             <p></p>
-            <li>Ensure that the <code class="fw-bold">Consider Menu Close?</code> checkbox is checked in the main window, and confirm that your NPC count is calibrated correctly.</li>
+            <li>Go back to your original position by the spawn point if you have moved. Ensure that the weather condition is correct both in-game and on owoow.</li>
             <p></p>
-            <li>Use <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/animations.gif">animations</a> or <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/menu-close.gif">menu close</a> to advance the RNG state until you are approximately 100 advances away from your target, then pause the game.</li>
+            <li>Ensure the <code class="fw-bold">Consider Menu Close?</code> checkbox is checked, and verify that your NPC count is calibrated correctly. Search for your target again after calibration if needed.</li>
             <p></p>
-            <li>Reconnect to owoow and search for your target again. From this point, use animations to reach the exact target frame, then return to the main pause menu.</li>
+            <li>Use <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/animations.gif">attack animations</a> or <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/menu-close.gif">menu close</a> to advance the RNG state until 100-300 advances remain, then pause the game by opening the in-game menu.</li>
             <p></p>
-            <li>Unpause the game. If <code class="fw-bold">Holding Direction?</code> is checked, hold a direction on the control stick when unpausing; otherwise, do not touch the control stick when unpausing.</li>
+            <li>Click <code class="fw-bold">Update Seeds</code> in owoow to reset your advances to 0. From this point, use attack animations to reach the exact target frame.</li>
             <p></p>
-            <li>Quickly run toward the target Pok&eacute;mon to spawn it in the overworld. Encounter the Pok&eacute;mon and verify that your result matches what is expected.</li>
+            <li>You are now ready to perform the random symbol RNG manipulation. Back out to the main pause menu.</li>
+            <p></p>
+            <li>Unpause the game by closing the menu. If you checked the <code class="fw-bold">Holding Direction?</code> checkbox, hold a direction on the joystick toward the spawner when unpausing; otherwise, do NOT touch the joystick when unpausing.</li>
+            <p></p>
+            <li>Quickly head toward the target Pok&eacute;mon to spawn it in the overworld. Encounter the Pok&eacute;mon and verify that your result matches what is expected.</li>
         </ol>
     </div>
 </div>
