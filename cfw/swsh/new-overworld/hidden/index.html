@@ -25,7 +25,7 @@ permalink: /cfw/swsh/new-overworld/hidden/
 
 <div class="card border-dark">
     <div class="anchored card-header text-light" style="background-color: #0c0038;" id="getting-started-hidden-cfw">
-        <span class="fw-bold">Getting Started (Tool Setup):</span>
+        <span class="fw-bold">Getting Started (Tool Setup)</span>
     </div>
     <div class="card-body card-bg">
         <ol>
@@ -35,7 +35,13 @@ permalink: /cfw/swsh/new-overworld/hidden/
             <p></p>
             <li>Close the <code class="fw-bold">Encounter Lookup</code> window, then input the relevant <code class="fw-bold">Location</code>, <code class="fw-bold">Weather</code>, and <code class="fw-bold">Species</code> information into the <code class="fw-bold">Encounter Settings</code> section.</li>
             <p></p>
-            <li>Select your <code class="fw-bold">Lead Ability</code> &amp; <code class="fw-bold">Max Step</code>, it is recommended to use an ability that boosts the rate of triggering a hidden encounter and a Max Step count of 1.</li>
+            <li>Select your <code class="fw-bold">Lead Ability</code> and <code class="fw-bold">Max Step</code>. We recommend that you use an ability that boosts the rate of triggering a hidden encounter and a Max Step count of 1.</li>
+            <p></p>
+            <ul>
+                <li>The abilities Arena Trap, Illuminate, and No Guard increase the chance of hidden encounters appearing.</li>
+                <p></p>
+                <li>If you still wish to benefit from Synchronize and feel brave, it is possible to quickly switch the lead Pok&eacute;mon after the hidden encounter is spawned and before the battle has been triggered.</li>
+            </ul>
             <p></p>
             <li>Adjust your search range using the <code class="fw-bold">+</code> field in <code class="fw-bold">Encounter Settings</code>, then configure additional search filters such as Shiny, Marks, IVs, or Height.</li>
         </ol>
@@ -49,7 +55,7 @@ permalink: /cfw/swsh/new-overworld/hidden/
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c0038;" id="game-setup-hidden-cfw">
-        <span class="fw-bold text-light">Game Setup:</span>
+        <span class="fw-bold text-light">Game Setup</span>
     </div>
     <div class="card-body card-bg">
         <ol>
@@ -57,16 +63,37 @@ permalink: /cfw/swsh/new-overworld/hidden/
             <p></p>
             <li>Find the largest patch of grass in the area, and position yourself in a corner where possible. Make sure you are facing the grass and not a wall.</li>
             <p></p>
-            <li>If wild Pok&eacute;mon are attacking you, consider changing the weather and repositioning yourself until you find areas with fewer aggressive spawns.</li>
+            <li>If you opened the Pok&eacute;dex at any point, such as when checking your KO count, this will generate Pok&eacute;dex Recommendations which alter the RNG. You should perform a date skip, reset the game to before you opened the Pok&eacute;dex, or account for it in the program.</li>
             <p></p>
-            <li>Set the required weather condition by changing the in-game date. The spawned Pok&eacute;mon will remain the same until the weather changes or they despawn.</li>
+            <li>Make sure your current console date has the correct weather condition to spawn your Pok&eacute;mon.</li>
             <p></p>
-            <li>If you are riding your bike, dismount it. Hidden encounters are less likely to trigger while riding a bike, even with an optimal lead ability.</li>
+            <li>Go to the the area where your target Pok&eacute;mon can be found.</li>
             <p></p>
-            <li>Add your desired lead Pok&eacute;mon to your party and save the game. For more information about lead abilities and their use cases, see below.</li>
+            <li>Find the largest patch of grass in the area and position yourself where you have a clear path to run.</li>
+            <ul>
+                <li>If wild Pok&eacute;mon nearby are aggressive, try one of the following:</li>
+                <p></p>
+                <ul>
+                    <li>If there are not many aggressive Pok&eacute;mon, you can despawn them until they are replaced with less aggressive Pok&eacute;mon.</li>
+                    <p></p>
+                    <li>Change the weather to one with fewer aggressive Pok&eacute;mon and run around to populate the field with them. The spawned Pok&eacute;mon will remain even if the weather is changed.</li>
+                    <p></p>
+                    <li>If you know that a Pok&eacute;mon of a certain type is not aggressive and it can be type-pulled, you can use a type-pull lead to populate the field.</li>
+                    <p></p>
+                    <li>Reposition until the Pok&eacute;mon that spawn in are not aggressive.</li>
+                    <p></p>
+                </ul>
+                <li>Note that if you leave the area for advancements, you will have to redo this step upon returning. Make sure you have plenty of time to reposition if you choose to advance elsewhere.</li>
+                <p></p>
+            </ul>
+            <p></p>
+            <li>Dismount from your bike. Hidden encounters are less likely to appear while riding a bike, even with an optimal lead ability.</li>
+            <p></p>
+            <li>Save the game.</li>
+            <p></p>
         </ol>
 
-        <p>In most cases, you will encounter extra wild Pok&eacute;mon, which can cause unwanted advances when trying to hit a target frame. Managing this issue depends on the chosen weather condition, and the solution will be explained as you progress through this guide.</p>
+        <p>In most cases, you will encounter extra wild Pok&eacute;mon, which can cause unwanted advances when trying to hit a target frame. Managing this issue depends on the chosen weather condition, and the solution will be explained later in this guide.</p>
     </div>
 </div>
 <br>
@@ -79,14 +106,14 @@ permalink: /cfw/swsh/new-overworld/hidden/
 </a>
 
 <hr /><div class="title" style="background-color: #0c0038;" id="the-basics">
-    <h1 class="text-light text-center pt-3 pb-3">Advancing Towards A Target</h1>
+    <h1 class="text-light text-center pt-3 pb-3">Advancing Towards a Target</h1>
 </div>
 <small class="text-muted mb-3 mt-0">
     Step-by-step instructions for hitting a target frame can be found here.
 </small>
 <hr />
 
-<p>The instructions for hitting a target frame depend on the selected weather condition. Rain and Thunderstorm are considered "advanced" and may be challenging for beginners. If this is your first time attempting this type of RNG manipulation it is recommended to start with a different weather condition to familiarize yourself with the general process.</p>
+<p>The instructions for hitting a target frame depend on the selected weather condition. Rain/Thunderstorm are considered "advanced" and may be challenging for beginners. If this is your first time attempting this type of RNG manipulation, we recommended you start with a different weather condition to familiarize yourself with the general process.</p>
 
 <div class="mb-3 w-100">
     <div class="row row-cols-1">
