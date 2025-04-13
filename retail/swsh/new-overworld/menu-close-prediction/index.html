@@ -12,7 +12,11 @@ permalink: /retail/swsh/new-overworld/menu-close-prediction
 </small>
 <hr />
 
-<p>This page contains information about calibrating your NPC count, and using that knowledge to grant yourself the best possible chance of hitting a target frame/Pok&eacute;mon. Menu close prediction is used extensively throughout this guide, so it is very important to have an understanding of how to use the technique to your advantage.</p>
+<p>This page contains information about calibrating your NPC count and using that knowledge for the best possible chance of hitting a target frame/Pok&eacute;mon. Menu close prediction is used extensively throughout this guide, so it is very important to have an understanding of how to use the technique to your advantage.</p>
+
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Important -</span> NPC count does not always correspond to the number of NPCs you can see nearby. Do not try to visually count NPCs as a replacement for this part of the guide.
+</div>
 
 <div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
     <span class="fw-bold">Important -</span> By this stage you should also understand how to find and monitor your current seed. If you have not yet read the provided information on this topic, go back and review the material.
@@ -34,7 +38,7 @@ permalink: /retail/swsh/new-overworld/menu-close-prediction
         <span class="fw-bold text-light">Finding Your Current Seed:</span>
     </div>
     <div class="card-body card-bg">
-        <p>In the above image, we have identified our current seed using the Retail Seed Finder. The game is also paused on the party summary screen after doing so (if you have already identified your current seed, simply re-identify your seed instead).</p>
+        <p>In the above image, we have identified our current seed using the Retail Seed Finder. The game is paused on the party summary screen immediately after doing so.</p>
 
     </div>
 </div>
@@ -45,12 +49,12 @@ permalink: /retail/swsh/new-overworld/menu-close-prediction
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c0038;" id="menu-close-timeline-overview">
-        <span class="fw-bold text-light">Menu Close Timeline Overview:</span>
+        <span class="fw-bold text-light">Menu Close Timeline Overview</span>
     </div>
     <div class="card-body card-bg">
-        <p>Checking the <code class="fw-bold">Consider Menu Close?</code> box unlocks the <code class="fw-bold">Calibrate NPCs</code> button, clicking the button will open a sub-window. This is where you determine the number of active NPCs in your location.</p>
+        <p>Clicking the <code class="fw-bold">Consider Menu Close?</code> checkbox on the main window enables the <code class="fw-bold">Calibrate NPCs</code> button. Clicking this button opens a sub-window, which is where we will determine the number of NPCs currently active in our location.</p>
 
-        <p>When the window opens, the seed fields will be automatically populated with your current seed. If you have not yet configured the <code class="fw-bold">Encounter Settings</code> on the main window, you will need to manually set the weather to match your current area.</p>
+        <p>Upon opening the sub-window, we can see that the current seed and number of initial advancements have been entered automatically. If you have not filled in the Encounter Settings in the main window to match your desired target, you will need to manually set your weather condition.</p>
     </div>
 </div>
 <br>
@@ -60,12 +64,12 @@ permalink: /retail/swsh/new-overworld/menu-close-prediction
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c0038;" id="menu-close-demo">
-        <span class="fw-bold text-light">Menu Close Timeline Overview:</span>
+        <span class="fw-bold text-light">Menu Close Timeline Overview</span>
     </div>
     <div class="card-body card-bg">
-        <p>Closing and re-opening the pause menu as demonstrated in the above image will advance the RNG state, the amount of advances consumed from this action will vary depending on your current NPC count.</p>
+        <p>Closing and re-opening the pause menu as demonstrated in the above image advances the RNG state. The number of advances consumed each time depends on your current NPC count.</p>
 
-        <p>After doing this, re-identify your seed using the <code span class="fw-bold">Retail Tools</code> section of the main window. <span class="fw-bold">DO NOT CLICK THE UPDATE STATES BUTTON YET.</span></p>
+        <p>After doing closing and re-opening the menu once, re-identify your seed using the <code span class="fw-bold">Retail Tools</code> section of the main window. <span class="fw-bold">DO NOT CLICK THE UPDATE STATES BUTTON YET.</span></p>
     </div>
 </div>
 <br>
@@ -75,14 +79,14 @@ permalink: /retail/swsh/new-overworld/menu-close-prediction
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c0038;" id="seed-re-identification">
-        <span class="fw-bold text-light">Seed Re-identification:</span>
+        <span class="fw-bold text-light">Seed Re-identification</span>
     </div>
     <div class="card-body card-bg">
-        <p>After re-identifying your seed in the <code class="fw-bold">Retail Tools</code> section the <code span class="fw-bold">Adv.:</code> field displays two values. The first box contains the total number of advances, and the second box contains the number of animations used to re-identify your seed.</p>
+        <p>Re-identify your seed in the <code class="fw-bold">Retail Tools</code> section. The <code span class="fw-bold">Adv.:</code> field should display two values. The first box contains the total number of advances that were consumed, and the second box contains the number of animations used to re-identify your seed.</p>
 
-        <p>To find the number of advances consumed by closing the pause menu, simply subtract the number of advances used to re-identify your seed from the total number of advancements that have occured.</p>
+        <p>To find the number of advances consumed by closing the pause menu, simply subtract the number of advances used to re-identify your seed from the total number of advancements that have occurred.</p>
 
-        <p><span class="fw-bold">Example -</span> 6 animations were used to re-identify your seed, and 11 advances have been consumed in total, we can now confirm that 5 advances were consumed from closing the pause menu.</p>
+        <p><span class="fw-bold">Example -</span> 11 advances were consumed in total, and 6 advances were used to re-identify the seed. We can subtract 11 - 6 to find that 5 advances were consumed from closing the pause menu.</p>
     </div>
 </div>
 <br>
@@ -92,12 +96,12 @@ permalink: /retail/swsh/new-overworld/menu-close-prediction
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c0038;" id="finding-npc-count">
-        <span class="fw-bold text-light">Finding NPC Count:</span>
+        <span class="fw-bold text-light">Finding NPC Count</span>
     </div>
     <div class="card-body card-bg">
-        <p>Head back to the <code class="fw-bold">MenuCloseTimeline</code> window, if this is your first time opening this window, set the <code class="fw-bold">Initial Adv.</code> field to 0 and set your current weather condition. Now click the <code class="fw-bold">Search</code> button to produce a table.</p>
+        <p>Head back to the <code class="fw-bold">MenuCloseTimeline</code> window. If this is your first time opening this window, set the <code class="fw-bold">Initial Adv.</code> field to 0 and set your current weather condition. Now click the <code class="fw-bold">Search</code> button to produce a table.</p>
 
-        <p>The goal is to make the value in the <code span class="fw-bold">Jump</code> column match the amount of advances that were consumed from closing the pause menu by tweaking the NPC count. In this case, we will tweak the NPC count until the first result in the table displays a +5 Jump value, this will give us an idea of the current NPC count.</p>
+        <p>The goal is to make the value in the <code span class="fw-bold">Jump</code> column match the number of advances that were consumed from closing the pause menu by tweaking the NPC count. In this case, we will tweak the NPC count until the first result in the table displays a +5 <code span class="fw-bold">Jump</code> value. This should then give us the current NPC count.</p>
     </div>
 </div>
 <br>
@@ -105,10 +109,10 @@ permalink: /retail/swsh/new-overworld/menu-close-prediction
 <span class="fw-bold">Figure 6 -</span> NPC Count Found<p></p>
 <img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/menu-close-prediction/npc-count-found.png" alt="retail-menu-close-6" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/menu-close-prediction/npc-count-found.png"><p></p>
 
-<p>Click <code span class="fw-bold">Update States</code> at this point, and repeat this process 2-3 times to ensure that the NPC count matches correctly. In this case, our NPC count is 3. Keep in mind that NPC count is subject to change based on positioning and location, if you switch either of this two variables you will need to re-calibrate.</p>
+<p>Click <code span class="fw-bold">Update States</code> at this point, and repeat this process 2-3 times to ensure that the NPC count matches correctly. In this case, our NPC count is 3. Keep in mind that NPC count can vary day-by-day and if you change positions. If a day advances or you move to another position, you may need to re-calibrate the NPC count.</p>
 
 <div class="alert alert-success" style="border: 1px solid #28a745; border-radius: 5px; padding: 15px;">
-    <span class="fw-bold">Great!</span> You should now have a basic understanding of how to calibrate NPC counts, and how to apply that knowledge to accurately hit target frames (you can leave this page open for future reference).
+    <span class="fw-bold">Great!</span> You should now have a basic understanding of how to calibrate NPC counts, and how to apply that knowledge to accurately hit target frames.
 </div><p></p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/new-overworld/main-page#the-basics" target="_blank">
