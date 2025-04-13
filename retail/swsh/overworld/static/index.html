@@ -1,210 +1,111 @@
 ---
 layout: default
-title: Static RNG (Retail)
-permalink: /retail/swsh/overworld/static
+title: Static Encounter RNG (RETAIL)
+permalink: /retail/swsh/overworld/static/
 ---
 
-<style>
-    .card-bg {
-        background-color: #d1d1d1;
-        border-bottom-right-radius: 0.20rem !important;
-        border-bottom-left-radius: 0.20rem !important;
-    }
-
-    table,
-    th,
-    td {
-        border: 1px solid black;
-    }
-
-    blockquote {
-        background: #c5c5c5;
-        border: 1px solid #9e9e9e;
-        border-left: 5px solid #0c0038;
-        margin: 1.5em 10px;
-        padding: 0.5em 10px;
-        quotes: "\201C""\201D""\2018""\2019";
-    }
-</style>
-
 <div class="title" style="background-color: #0c0038;">
-    <h1 class="text-light text-center pt-3 pb-3">Sword/Shield Static RNG</h1>
+    <h1 class="text-light text-center pt-3 pb-3">Overworld Static Encounters</h1>
 </div>
+<small class="text-muted mb-3 mt-0">
+    Worked examples for manipulating Static encounters in any weather condition.
+</small>
 <hr />
 
-<p>This section explains how to RNG abuse Pokémon from Static encounters on retail hardware. It covers the entire process, from choosing a location to obtaining the desired Pokémon.</p>
+<p>Static spawners always generate the same species of Pok&eacute;mon for a given weather, which is based on the console date. Since the weather can change if the console date rolls past midnight (00:00), consider setting your system time before starting to avoid unexpected RNG advancements and Pok&eacute;mon spawns.</p>
 
-<p><span class="fw-bold" style="color: #b60606;">From here it is assumed that you have read the initial page of this guide and have a general idea of how to use SWSH OWRNG Generator GUI, as well as understanding how to find and monitor your seed.</span></p>
-
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/overworld">
-    Picked the wrong type of encounter? <span class="fw-bold">Click here to go back!</span>
-    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-    </svg>
-</a>
-<br>
-
-<div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="understanding-static-encounters-retail">
-        <span class="fw-bold text-light">About Static Encounters:</span>
-    </div>
-    <div class="card-body card-bg">
-        <p>Static spawners are guaranteed to produce the same species until the weather in the area changes, the weather can potentially change after a day has passed, when the clocks turn to midnight.</p>
-
-        <p>The end goal is to spawn your target on the correct frame, once a Pokémon is spawned in the overworld, the stats and other internal details are set in stone until the Pokémon has been despawned.</p>
-
-        <p>Ensure your system clock is not synced by the internet in the Switch system settings, and change the time backwards if you are close to midnight to avoid accidentally changing the species.</p>
-
-    </div>
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Important -</span> From here, we assume that you are familiar with key concepts described on the main page. If you are unsure about <a href="/retail/swsh/overworld/seed-finding-and-monitoring" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">seed finding</a>, <a href="/retail/swsh/overworld/advancing-the-rng-state" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">advancement methods</a>, or <a href="/retail/swsh/overworld/menu-close-prediction" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">NPC calibration</a>, please review the relevant sections before continuing.
 </div>
-<br>
 
-<span class="fw-bold">Figure 1 -</span> Tool Setup<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/old/overworld/static/figure-1-encounter-lookup-static-aerodactyl.gif" alt="old-overworld-static-retail-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/old/overworld/static/figure-1-encounter-lookup-static-aerodactyl.gif"><p></p>
+<span class="fw-bold">Figure 1 -</span> RNG Tool Setup<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/static/getting-started-static.gif" alt="owrng-static-retail-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/static/getting-started-static.gif"><p></p>
 
 <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="tool-setup-retail">
-        <span class="fw-bold text-light">Tool Setup:</span>
+    <div class="anchored card-header text-light" style="background-color: #0c0038;" id="getting-started-static-cfw">
+        <span class="fw-bold">Getting Started (Tool Setup):</span>
     </div>
     <div class="card-body card-bg">
         <ol>
-            <li>Open SWSH_OWRNG_Generator_GUI, then type your 5 digit TID/SID into the correct fields of the main window (for shiny Pokemon only).</li>
+            <li>In the main window, enter your TID/SID, select your game version, and check the <code class="fw-bold">Shiny Charm?</code>/<code class="fw-bold">Mark Charm?</code> checkboxes if these items are present in your save file.</li>
             <p></p>
-            <li>Open the <code span class="fw-bold">Encounter Lookup</code> sub window, then type the species name of the Pokémon you plan to RNG abuse, select an appealing encounter.</li>
+            <li>Click <code class="fw-bold">Encounter Lookup</code> in the top toolbar to open a sub-window. Enter the desired species name in the search field and select a STATIC encounter.</li>
             <p></p>
-            <li>Confirm that the filters have been set properly inside the Main Window, encounter filters can be found on the left-hand side.</li>
+            <li>Close the <code class="fw-bold">Encounter Lookup</code> window, then input the relevant <code class="fw-bold">Location</code>, <code class="fw-bold">Weather</code>, and <code class="fw-bold">Species</code> information into the <code class="fw-bold">Encounter Settings</code> section.</li>
             <p></p>
-            <li>Set your search filters inside the middle portion of the Main Window. You can filter for specific Marks, IVs, Shininess, etc.</li>
-            <p></p>
+            <li>Adjust your search range using the <code class="fw-bold">+</code> field in <code class="fw-bold">Encounter Settings</code>, then configure additional search filters such as Shiny, Marks, IVs, or Height.</li>
         </ol>
-
-        <blockquote><span class="fw-bold">Example -</span> Encounter Lookup specifies Giant's Bed in clear weather for Aerodactyl, the information has been automatically filled inside the main window. The search filters were also manually configured to search for a Shiny Aerodactyl with any mark.</blockquote>
-
     </div>
 </div>
-<br>
+<br />
 
 <span class="fw-bold">Figure 2 -</span> Game Setup<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/old/overworld/static/figure-2-in-game-setup.gif" alt="old-overworld-static-retail-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/old/overworld/static/figure-2-in-game-setup.gif"><p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/static/game-setup-static.gif" alt="owrng-static-retail-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/static/game-setup-static.gif"><p></p>
 
 <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="game-setup-static-retail">
-        <span class="fw-bold text-light">Game Setup:</span>
+    <div class="anchored card-header text-light" style="background-color: #0c0038;" id="game-setup-static-retail">
+        <span class="fw-bold">Game Setup:</span>
     </div>
     <div class="card-body card-bg">
-        <p>For Static encounters, stand where there is a clear, straight line between you and the target Pokémon. Avoid areas that trigger other Wild/Static spawns. The positioning in Figure 2 is ideal, minimal NPCs, no extra spawned Pokemon, and a clear line between the player and the target spawner.</p>
-
-        <p>Giant's Bed is notably "quiet" in calm weather. Advancement speed is based on location, NPC count, and weather. The more quiet the area, the slower the natural advancements are, and the easier it will be to hit your target frame. Avoid rain or thunderstorm weather as this will create instability due to erratic advancements.</p>
-
-        <blockquote>If you can't find a good spot, knock out any static spawns blocking your path. They will remain despawned until you return to the area after a date change.</blockquote>
-    </div>
-</div>
-<br>
-
-<span class="fw-bold">Figure 3 -</span> Seed Identification<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/old/overworld/static/figure-3-seed-identification-static.gif" alt="old-overworld-static-retail-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/old/overworld/static/figure-3-seed-identification-static.gif"><p></p>
-
-<p>You cannot search for targets without knowing your current seed. This is achieved by using the <code span class="fw-bold">Retail Seed Finder</code> window, usage of this window was covered on the main page.</p>
-
-<span class="fw-bold">Figure 4 -</span> Target Found!<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/old/overworld/static/figure-4-static-search-aerodactyl.png" alt="old-overworld-static-retail-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/old/overworld/static/figure-4-static-search-aerodactyl.png"><p></p>
-
-<div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="target-found-static-retail">
-        <span class="fw-bold text-light">Target Found!</span>
-    </div>
-    <div class="card-body card-bg">
-        <p>After identifying seeds using the <code span class="fw-bold">Retail Seed Finder</code>, a Shiny, gentle natured Aerodactyl can be found on advance 196-199. Target frames can often appear in clusters, which are multiple frames in a row (or close to each other) that produce the same end result.</p>
-
-        <p>Due to having multiple frames that can potentially produce your desired Pokemon, searching for clusters is ideal. You may wish to keep searching for target frames until a cluster appears.</p>
-
-        <h6><span class="fw-bold">Undesirable result?</span></h6>
         <ol>
-            <li>Save in the correct position, then close and re-open the game to refresh the seed.</li>
-            <li>Identify the seed again using the <code span class="fw-bold">Retail Seed Finder</code> feature.</li>
-            <li>Search for a new target frame, repeat this process until a desirable result has been found.</li>
+            <li>Remove any Pok&eacute;mon currently stored in either {% include tooltips/nursery.html %}.</li>
+            <p></p>
+            <li>Prepare your party so you have the correct lead Pok&eacute;mon and any catchers you plan to use.</li>
+            <p></p>
+            <li>Make sure your current console date has the correct weather condition to spawn your Pok&eacute;mon.</li>
+            <p></p>
+            <li>Go to the static spawner for your target Pok&eacute;mon.</li>
+            <p></p>
+            <li>Move far enough away to completely despawn your target Pok&eacute;mon. Position yourself as close to the Pok&eacute;mon's spawn border as possible without actually spawning it in the overworld.</li>
+            <p></p>
+            <ul>
+                <li>To confirm ideal positioning, look for a <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/static/dust-cloud.png">dust cloud</a> or <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/static/water-splash.png">puddle</a> beneath the Pok&eacute;mon when it spawns. If these effects are not visible, you are standing too close to the spawner. (Note: This may be difficult to see if your target Pok&eacute;mon is in tall grass or flying.)</li>
+                <p></p>
+                <li>If you cannot find an optimal position, you can despawn any static spawners nearby or in your way. These will remain despawned as long as you do not let the date advance.</li>
+            </ul>
+            <p></p>
+            <li>Save the game.</li>
+            <p></p>
         </ol>
-
-        <blockquote>Keep the game paused after finding a desirable target frame to avoid any unwanted advancements, as this may cause you to overshoot your target frame depending on location.</blockquote>
-
     </div>
 </div>
 <br>
 
-<p>After standing in a suitable position and finding a desirable seed, calibrate your NPC count using the method described on the main page, take note of the NPC count after doing so.</p>
-
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/overworld">
-    Trouble calibrating seed or NPC count? <span class="fw-bold">Go back to the main page!</span>
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/overworld/lead-ability-dex-rec" target="_blank" rel="noopener noreferrer">
+    Unsure about lead abilities? <span class="fw-bold">click here to learn more</span>
     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
     </svg>
 </a>
 
-<hr /><div class="title" style="background-color: #0c0038;">
-    <h1 class="text-light text-center pt-3 pb-3">Advancing Towards the Target!</h1>
+<hr /><div class="title" style="background-color: #0c0038;" id="the-basics">
+    <h1 class="text-light text-center pt-3 pb-3">Advancing Towards a Target</h1>
 </div>
+<small class="text-muted mb-3 mt-0">
+    Step-by-step instructions for hitting a target frame can be found here.
+</small>
 <hr />
 
-<p><span class="fw-bold" style="color: #b60606;">At this stage you should be standing in the correct position in-game, have a suitable target frame, and know the current NPC count.</span></p>
+<p>The instructions for hitting a target frame depend on the selected weather condition. Rain/Thunderstorm are considered "advanced" and may be challenging for beginners. If this is your first time attempting this type of RNG manipulation, we recommended you start with a different weather condition to familiarize yourself with the general process.</p>
 
-<div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="hitting-target-frame-static-retail">
-        <span class="fw-bold text-light">Hitting Your Target Frame:</span>
-    </div>
-    <div class="card-body card-bg">
-        <h6 class="fw-bold">Step-by-step tutorial:</h6>
-        <ul>
-            <li>Advance towards your target frame using any method listed inside the advancement table on the main page. Consider date-skipping for long distance-advancements.</li>
-            <p></p>
-            <li>Return to the correct position in-game once you are within a few thousand advances of the target frame. This will ensure that you do not overshoot when doing quick advancements.</li>
-        </ul>
-
-        <blockquote>If the weather condition does not match the conditions to spawn your Pokemon, change the date on your console BACKWARDS until the correct weather is displayed on the map. Changing the date backwards will avoid unwanted advancements.</blockquote>
-
-        <ul>
-            <li>Pause the game and re-identify your current seed, then click the <code span class="fw-bold">Update States</code> button to reflect the new RNG state inside the main window and search for your target again.<p></p>
-            <li>Open the <code span class="fw-bold">Menu Close Advances Viewer</code> tab, and enter the number of NPCs calculated earlier into the <code span class="fw-bold">NPCs</code> field, then click <code class="fw-bold">Search</code>.</li>
-            <p></p>
-        </ul>
-
-        <blockquote>If you can see your target frame(s) within the Menu Close Advances Viewer search results, great! This means menu close prediction can be used to hit your target frame with no extra issues and the next two steps can be skipped.</blockquote>
-
-        <ul>
-            <li>If you do not see your target frame in the search results, increment the number inside the <code span class="fw-bold">Init Adv.</code> field by 1, repeat until the target frame is visible.</li>
-            <p></p>
-            <li>Perform some animation advancements according to the number inside the <code span class="fw-bold">Init Adv.</code> field. For example, do 5 advancements if the number inside the field is 5.</li>
-        </ul>
-
-        <blockquote>In extreme cases you will not be able to reach your target frame using menu close prediction. To counter this, aim to get as close as possible to your target using menu close prediction, then use player movement advances to hit your target frame.</blockquote>
-
-        <ul>
-            <li>Open and close the pause menu until a single menu close lands you onto the target frame (do any required movement advancements here if you do not land directly onto the target frame).</li>
-            <p></p>
-            <li>Unpause the game, then move towards the spawn point of the Pokémon as quickly as possible, then initiate the encounter to confirm the result matches what is expected.</li>
-            <p></p>
-        </ul>
-
+<div class="mb-3 w-100">
+    <div class="row row-cols-1">
+        <div class="col">
+            <label for="moisture-select"><span class="fw-bold">Select a weather condition:</span></label>
+            <select id="moisture-select" class="form-select">
+                <option value="">No weather condition selected...</option>
+                <option value="dry">I am NOT in Rain/Thunderstorm!</option>
+                <option value="wet">I am in Rain/Thunderstorm!</option>
+            </select>
+        </div>
     </div>
 </div>
-<br>
 
-<span class="fw-bold">Figure 5 -</span> Target Frame Hit!<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/old/overworld/static/figure-5-static-hit-aerodactyl.png" alt="old-overworld-static-retail-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/old/overworld/static/figure-5-static-hit-aerodactyl.png"><p></p>
-
-<p>By using menu close prediction and animations to keep track of inputs/advancements, we were able to hit out target frame.</p>
-
-<span class="fw-bold">Figure 6/7 -</span> Result Found!<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/old/overworld/static/figure-6-static-in-battle.jpg" alt="old-overworld-static-retail-6" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/old/overworld/static/figure-6-static-in-battle.jpg"><p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/old/overworld/static/figure-7-static-summary-screen.jpg" alt="old-overworld-static-retail-7" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/old/overworld/static/figure-7-static-summary-screen.jpg"><p></p>
-
-<p><span class="fw-bold">The Aerodactyl matches what is expected by the tool, you should now understand how to RNG abuse Pokémon from Static encounters.</span></p>
-
-<p>Different areas & environments can have an influence on what is known as "delay". Delay is the amount of advancments that have been consumed between spawning the encounter in the overworld, and the actual frame it was generated on. Static encounters do not have a delay in most cases, but visit the troubleshooting encounters section if you are struggling to hit targets.</p>
-
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/overworld/troubleshooting">
-    Having trouble finding results? <span class="fw-bold">View the Troubleshooting Encounters guide!</span>
-    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-    </svg>
-</a>
-<br />
+<div>
+    <div class="info info-dry d-none">
+        {% include_relative dry.html %}
+    </div>
+    <div class="info info-wet d-none">
+        {% include_relative wet.html %}
+    </div>
+</div>

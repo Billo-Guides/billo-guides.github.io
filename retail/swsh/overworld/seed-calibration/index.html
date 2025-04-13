@@ -1,0 +1,152 @@
+---
+layout: default
+title: Overworld RNG - Seed Calibration (RETAIL)
+permalink: /retail/swsh/overworld/seed-finding-and-monitoring
+---
+
+<div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">Seed Calibration</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    Learn how to use the Retail Seed Finder to find and monitor seeds.
+</small>
+<hr />
+
+<p>This page contains information about finding and monitoring your current seed. Here you will learn the techniques used to find your initial seed and how to find your current RNG state at any given point.</p>
+
+<span class="fw-bold">Figure 1 -</span> Retail Seedfinder Overview<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/seed-calibration/seedfinder-overview-retail.gif" alt="retail-seed-calibration-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/seed-calibration/seedfinder-overview-retail.gif"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="seedfinder-overview">
+        <span class="fw-bold text-light">Retail SeedFinder Overview</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>On the far right of the main window, locate the button for the <code span class="fw-bold">Retail Seed Finder</code>, clicking it will open the sub-window displayed in Figure 1. This is where we will record a series of actions known as "motions" or "animations" to identify our current seed.</p>
+
+        <h6 span class="fw-bold">What are motions/animations?</h6>
+        <p>When on the summary screen of a Pok&eacute;mon, pressing down on the <code span class="fw-bold">Left/Right Stick</code> will cause the Pok&eacute;mon to perform an attack animation. Most Pok&eacute;mon have two separate attack animations, which can be referred to as "Physical" or "Special". <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/seed-calibration/animations.gif">this gif</a> provides a short demonstration on how to identify animation differences.</p>
+
+        <ul>
+            <li>When Espeon lunges at the screen, this is a physical animation.</li>
+            <li>When Espeon stands in place, this is a special animation.</li>
+        </ul>
+
+        <p>It is important to pick a Pok&eacute;mon that has a clear animation difference to make the process as simple as possible. Espeon, Gallade, and Drilbur are the most commonly used Pok&eacute;mon for this process.</p>
+
+    </div>
+</div>
+<br />
+
+<span class="fw-bold">Figure 2 -</span> Recording Animations<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/seed-calibration/recording-animations.gif" alt="retail-seed-calibration-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/seed-calibration/recording-animations.gif"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="recording-animations">
+        <span class="fw-bold text-light">Recording Animations</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>To determine your seed, you will need to accurately record 128 consecutive attack animations. You can do this on either the Pok&eacute;mon summary screen or the party list.</p>
+        <ol>
+            <li>If you are new to the process, we recommend that you use the Pok&eacute;mon summary screen! The party list allows you to press the stick before the previous animation has finished, which will cause an RNG advancement that you cannot see.</li>
+        </ol>
+
+        <h6 span class="fw-bold">Step-by-Step</h6>
+        <ol>
+            <li>Go to either the Pok&eacute;mon summary screen or the party list, depending on whether you are familiar with the process.</li>
+            <p></p>
+            <li>Make your Pok&eacute;mon animate by pressing down on the <code span class="fw-bold">Left Stick</code>/<code span class="fw-bold">Right Stick</code>. Record whether the animation was physical or special.</li>
+            <p></p>
+            <li>If the animation type was <u>physical</u>, type or click <code span class="fw-bold">0</code> into the <code span class="fw-bold">Animations</code> field of the SeedFinder.</li>
+            <p></p>
+            <li>If the animation type was <u>special</u>, type or click <code span class="fw-bold">1</code> into the <code span class="fw-bold">Animations</code> field of the SeedFinder.</li>
+            <p></p>
+            <li>Repeat this process 128 times to get your seed, then click <code span class="fw-bold">Update Main Form</code> to send your seed into the main window.</li>
+        </ol>
+
+        <p>If you do not want to use 0's and 1's for seed identification, owoow also accepts <code span class="fw-bold">,</code> or <code span class="fw-bold">s</code> for special inputs, and <code span class="fw-bold">.</code> or <code span class="fw-bold">p</code> for physical inputs, use whichever input is most comfortable for you.</p>
+
+    </div>
+</div>
+<br />
+
+<span class="fw-bold">Figure 3 -</span> Seed Found!<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/seed-calibration/seed-found.gif" alt="retail-seed-calibration-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/seed-calibration/seed-found.gif"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="confirming-seeds">
+        <span class="fw-bold text-light">Confirming Your Seed</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>After finding your seed and updating the main window, you will want to confirm that the seed is correct. A single erroneous input can result in the wrong seed. This can be done in several ways:</p>
+
+        <details open>
+            <summary span class="fw-bold">Re-Identification (recommended)</summary>
+            <ol>
+                <li>After identifying your seed, click <code class="fw-bold">Update Main Form</code> in the Seed Finder to transfer the seed to the main window.</li>
+                <p></p>
+                <li>Set the encounter type to <code class="fw-bold">Static</code> in the Encounter Settings, and adjust the search filters to look for shiny Pok&eacute;mon.</li>
+                <p></p>
+                <li>If no results appear, increase the search range by modifying the <code class="fw-bold">+</code> field in the <code class="fw-bold">Encounter Settings</code> column, then search again until a result is found.</li>
+                <p></p>
+                <li>Go to the <code class="fw-bold">Retail Tools</code> section on the far-right of the owoow main window, and enter a small value (~50) into the <code class="fw-bold">+</code> field.</li>
+                <p></p>
+                <li>Click the <code class="fw-bold">Generate</code> button and record attack animations in the <code class="fw-bold">Anim.:</code> field until a seed is generated. This usually requires at least 20 animations.</li>
+                <p></p>
+                <li>Once a seed is produced, click <code class="fw-bold">Update Seeds</code> to populate the appropriate fields in the main window, and search for your shiny target again.</li>
+                <p></p>
+                <li>If done correctly, the same shiny Pok&eacute;mon should appear in the results both before and after re-identifying your seed. If not, your initial seed identification was likely incorrect. Repeat the process and try again.</li>
+            </ol>
+        </details><p></p>
+
+        <details>
+            <summary span class="fw-bold">Using the Search Table</summary>
+            <ol>
+                <li>Click <code span class="fw-bold">Update Main Form</code> after identifying your seed using the Seed Finder to update the main window.</li>
+                <p></p>
+                <li>Select <code span class="fw-bold">Static</code> within the encounter settings, then change the search range (the <code span class="fw-bold">+</code> field) to a small number (~50 is fine).</li>
+                <p></p>
+                <li>You will see that the next 50 search results have been produced. Now, look at the <code span class="fw-bold">Animations</code> column of the table.</li>
+                <p></p>
+                <li>You should still be on the Pok&eacute;mon summary screen or the party list after identifying our seed. Perform some extra animations to confirm that the upcoming attack animations align with the next few results in the table.</li>
+            </ol>
+        </details>
+    </div>
+</div>
+<br />
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="confirming-seeds">
+        <span class="fw-bold text-light">Additional Resource</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>If you have a capture card that can stream your Switch video to a PC, you can try using <a href="https://drive.google.com/drive/folders/1x1mIboSZB1a0GNKbco9-F9Gm5I9Lwvyr">NX RNG Tool</a> by <a href="https://twitter.com/_3z8">_3z8</a>, which can automatically analyze attack animations to find your seed.</p>
+
+        </p>Resources for this tool are entirely in Japanese. <a href="https://nantoiu-com.translate.goog/game/pkmn/22728/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-USI ">Here is a translated guide.</a></p>
+
+        </p>The authors of this guide are not familiar with this tool and cannot provide support if you choose to try it.</a></p>
+    </div>
+</div>
+<br />
+
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Important -</span> When re-identifying your seed after advancing the RNG state, you will need to set the value inside the <code class="fw-bold">+</code> field of the Retail Tools section to a value greater than the number of advances you believe have occurred. For example, if you believe that roughly 50000 advances have occurred and you now wish to re-identify your seed, make sure the value inside the <code class="fw-bold">+</code> field is set to a number that is > 50000 to avoid matching with an incorrect animation pattern.
+</div><p></p>
+
+<div class="alert alert-success" style="border: 1px solid #28a745; border-radius: 5px; padding: 15px;">
+    <span class="fw-bold">Great!</span> You should now have a basic understanding of identifying and monitoring your current seed. Ensure that you have a solid understanding of how to apply these concepts before continuing.
+</div>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/overworld/main-page#the-basics" target="_blank">
+    Head back to the <span class="fw-bold">main page (OVERWORLD)</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a><p></p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/item/" target="_blank">
+    Head back to the <span class="fw-bold">main page (ITEM)</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
