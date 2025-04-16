@@ -12,7 +12,15 @@ permalink: /cfw/swsh/overworld/advancing-the-rng-state
 </small>
 <hr />
 
-<p>Owoow tracks the amount of advances that have occured since the initial connection to the program. RNG advancements can occur naturally based on the overworld environment, or they can be forced by performing specific actions. The most useful actions are listed in the table below.</p>
+<p>Owoow tracks the amount of advances that have occured since the initial connection to the program.
+
+<p>RNG advancements can occur naturally based on the overworld environment, or they can be forced by performing specific actions.</p>
+
+<p>Opening the in-game pause menu with the <code span class="fw-bold">X</code> button pauses RNG advances. This is especially convenient since we use the Pokemon menu to precisely go through the last few advances before the RNG manipulation attempt. You can always open the menu if you need a moment to verify where you are.</p>
+
+<p>Be aware that date skipping in the menu will cause a single day's advances to occur when the menu is closed, and changing the weather to or away from Rain/Thunderstorm weather can cause additional advances when clicking the buttons on this menu.</p>
+
+<p>The most useful actions to advance the RNG state are listed in the table below.</p>
 
 <table class="table table-striped" style="width:100%" id="overworld-rng-table">
     <thead class="table text-white" style="background-color: #0c0038;">
@@ -180,7 +188,7 @@ permalink: /cfw/swsh/overworld/advancing-the-rng-state
 
         <h6 span class="fw-bold">Use Cases</h6>
         <ul>
-            <li>Used to advance the RNG state in a predictable manner to avoid overshooting (~100-500 advancements away).</li>
+            <li>Opening and closing the in-game menu can be used to advance the RNG state without movement (~100-500 advancements away). Note that you should avoid doing this too quickly, e.g. with the <code class="fw-bold">X</code> button, because this will cause some of the flips to be ignored.</li>
             <p></p>
             <li>Will often be the final action used to reach a target since it is entirely predictable.</li>
         </ul>
@@ -268,7 +276,7 @@ permalink: /cfw/swsh/overworld/advancing-the-rng-state
         <ul>
             <li>The main advancement method used for manipulating Hidden encounters when the player cannot move.</li>
             <p></p>
-            <li>Is turbo controller viable if using the Options menu by simply mashing the A button.</li>
+            <li>Is turbo controller viable if using the <code class="fw-bold">Options</code> menu by simply mashing the A button.</li>
             <p></p>
             <li>Low effort method to advance the RNG state in small doses without allowing the overworld to move.</li>
         </ul>
@@ -287,6 +295,8 @@ permalink: /cfw/swsh/overworld/advancing-the-rng-state
         <p>The <code span class="fw-bold">Skip</code> feature of the RNG tool artificially adjusts the Switch system clock, which advances the RNG state rapidly. This can also be done manually with the PvP date skipping exploit (<a href="https://billo-guides.github.io/retail/swsh/overworld/advancing-the-rng-state#advancements-method-date-skipping">retail guide link</a>). The number of advances consumed per day skipped varies based on the number of Pok&eacute;mon currently stored in boxes (excluding eggs). With optimal box management, it is possible to consume upwards of 16,000 advancements per day skipped.</p>
 
         <p><code span class="fw-bold">target frame / number of advances per day skipped = number of days to skip</code></p>
+
+        <p>For the purposes of this guide, "date skipping" refers to using one of these RNG advancement methods, and "changing the date" means to change the system clock manually without triggering a midnight reset. If no exploits are active, it is fine to change the system date to anything you wish without triggering a date skip. If the PvP exploit is active, you can only change the date backwards without triggering a date skip.</p>
 
         <h6 span class="fw-bold">Use Cases</h6>
         <ul>

@@ -12,7 +12,13 @@ permalink: /retail/swsh/overworld/advancing-the-rng-state
 </small>
 <hr />
 
-<p>RNG advancements can occur naturally based on the overworld environment, or they can be forced by performing specific actions. The most useful actions are listed in the table below.</p>
+<p>RNG advancements can occur naturally based on the overworld environment, or they can be forced by performing specific actions.</p>
+
+<p>Opening the in-game pause menu with the <code span class="fw-bold">X</code> button pauses RNG advances. This is especially convenient since we use the Pokemon menu to re-identify the seed and precisely go through the last few advances before the RNG manipulation attempt. You can always open the menu if you need a moment to verify where you are.</p>
+
+<p>Be aware that date skipping in the menu will cause a single day's advances to occur when the menu is closed, and changing the weather to or away from Rain/Thunderstorm weather can cause additional advances when clicking the buttons on this menu.</p>
+
+<p>The most useful actions to advance the RNG state are listed in the table below.</p>
 
 <table class="table table-striped" style="width:100%" id="overworld-rng-table">
     <thead class="table text-white" style="background-color: #0c0038;">
@@ -176,7 +182,7 @@ permalink: /retail/swsh/overworld/advancing-the-rng-state
 
         <h6 span class="fw-bold">Use Cases</h6>
         <ul>
-            <li>Used to advance the RNG state in a predictable manner to avoid overshooting (~100-500 advancements away).</li>
+            <li>Opening and closing the in-game menu can be used to advance the RNG state without movement (~100-500 advancements away). Note that you should avoid doing this too quickly, e.g. with the <code class="fw-bold">X</code> button, because this will cause some of the flips to be ignored.</li>
             <p></p>
             <li>Will often be the final action used to reach a target since it is entirely predictable.</li>
         </ul>
@@ -286,21 +292,21 @@ permalink: /retail/swsh/overworld/advancing-the-rng-state
 
         <p>There are two versions of this exploit that can be used based on your setup. One requires partipating in a PvP battle, and the other requires interacting with a raid.</p>
 
-        <h6 span class="fw-bold">PvP Exploit (Recommended):</h6>
+        <h6 span class="fw-bold">PvP Exploit (Recommended)</h6>
         <ol>
-            <li>Open the game, enter any Wild Area and take note of where the raid beams are.</li>
+            <li>Open the game and enter any Wild Area. Position your camera so you can see some active raid beams or claim the Watts from a nearby raid den.</li>
             <p></p>
-            <li>Open the Y-Comm, connect to the internet, and select the Link Battle option.</li>
+            <li>Open the Y-Comm, connect to the internet, and select the <code span class="fw-bold">Link Battle</code> option.</li>
             <p></p>
             <li>Search for a battle with no code to find an online battle as quickly as possible.</li>
             <p></p>
-            <li>Once you have entered the battle, concede by clicking the Run button.</li>
+            <li>Once you have entered the battle, cancel the battle by turning on <code span class="fw-bold">Airplane Mode</code>.</li>
             <p></p>
-            <li>Close all in-game menus and go back to the overworld.</li>
+            <li>Close any in-game menus and go back to the overworld.</li>
             <p></p>
-            <li>Change the console date forward in the System Settings, then resume the game where you are looking at the overworld.</li>
+            <li>Change the console date forward in the <code span class="fw-bold">System Settings</code> > <code span class="fw-bold">System</code>, then resume the game where you are looking at the overworld.</li>
             <p></p>
-            <li>If you did this correctly, the screen will flash and the currently active raid beams will change location.</li>
+            <li>If you did this correctly, the screen will flash, the currently active raid beams will change location, and any Watts you claimed will become available again.</li>
             <p></p>
             <li>Navigate to an indoor location when skipping >1000 days to avoid crashing the game.</li>
             <p></p>
@@ -309,15 +315,26 @@ permalink: /retail/swsh/overworld/advancing-the-rng-state
 
         <p><small>Technically, you can activate the exploit without connecting online. This requires communicating in a local battle, which means you will need to have 2 Switches and 2 copies of Sword/Shield.</small></p>
 
-        <h6 span class="fw-bold">Raid Exploit (Slower):</h6>
+        <p>It is possible to disable the PvP exploit in-game if you no longer want it to be active and you do not want to lose track of your current RNG state by resetting.</p>
+
+        <h6 span class="fw-bold">Canceling PvP Exploit with Raid Invite</h6>
+        <ol>
+            <li>Enter any Wild Area and find any active raid den.</li>
+            <p></p>
+            <li>Start the raid and click <code span class="fw-bold">Invite Others</code>.</li>
+            <p></p>
+            <li><code span class="fw-bold">Quit</code> the raid.</li>
+        </ol>
+
+        <h6 span class="fw-bold">Raid Exploit (Slower)</h6>
         <ol>
             <li>Open the game, enter any Wild Area and find an inactive raid den.</li>
             <p></p>
             <li>Throw a Wishing Piece into the raid den, then interact with it.</li>
             <p></p>
-            <li>Click Invite Others, then minimize the game by pressing the Home button.</li>
+            <li>Click <code span class="fw-bold">Invite Others</code>, then minimize the game by pressing the Home button.</li>
             <p></p>
-            <li>Navigate to System Settings. Change the console date forward in the System Settings, then resume the game.</li>
+            <li>Navigate to <code span class="fw-bold">System Settings</code>. Change the console date forward under <code span class="fw-bold">System</code>, then resume the game.</li>
             <p></p>
             <li>Back out of the raid and re-enter the overworld.</li>
             <p></p>
@@ -327,6 +344,8 @@ permalink: /retail/swsh/overworld/advancing-the-rng-state
         </ol>
 
         <p><small>This exploit is much slower than the PvP exploit. Players should only use this method if they do not have NSO or access to a second console/game to communicate locally.</small></p>
+
+        <p>For the purposes of this guide, "date skipping" refers to using one of these RNG advancement methods, and "changing the date" means to change the system clock manually without triggering a midnight reset. If no exploits are active, it is fine to change the system date to anything you wish without triggering a date skip. If the PvP exploit is active, you can only change the date backwards without triggering a date skip.</p>
 
         <h6 span class="fw-bold">Use Cases</h6>
         <ul>
@@ -358,7 +377,7 @@ permalink: /retail/swsh/overworld/advancing-the-rng-state
 
         <p>If done correctly, you should see that the NPC is facing the player, meaning they are now "active", and each time the player rings the bike bell or whistles, the NPC will blink (see the above image for a demonstration of this).</p>
 
-        <h6 span class="fw-bold">Examples:</h6>
+        <h6 span class="fw-bold">Examples</h6>
         <ul>
             <li>Standing next to <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/ioa-diglett-npc.png">this NPC and his Diglett</a> in the IOA, while standing in Thunderstorm weather and ringing the bike bell, advances roughly 17,000 frames per minute.</li>
         </ul>
