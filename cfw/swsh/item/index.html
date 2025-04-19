@@ -91,30 +91,60 @@ permalink: /cfw/swsh/item/
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c0038;" id="setup-and-install-swsh-overworld-cfw">
-        <span class="fw-bold text-light">You will need:</span>
+        <span class="fw-bold text-light">Required Software</span>
     </div>
     <div class="card-body card-bg">
-        <h6><span class="fw-bold">Tools &amp; Applications</span></h6>
+        <h6><span class="fw-bold">Tools and Applications</span></h6>
         <ul>
-            <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-9.0.101-windows-x64-installer" target="_blank" rel="noopener noreferrer">.NET 9.0</a></li>
+            <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-9.0.4-windows-x64-installer" target="_blank" rel="noopener noreferrer">.NET 9.0 Runtime</a></li>
+            <p></p>
             <li><a href="https://github.com/LegoFigure11/owoow/releases/" target="_blank" rel="noopener noreferrer">Sword/Shield Overworld RNG Tool (owoow)</a></li>
+            <p></p>
             <li><a href="https://github.com/Lusamine/ldn_mitm/releases/latest" target="_blank" rel="noopener noreferrer">ldn_mitm</a></li>
         </ul>
 
         <h6><span class="fw-bold">Installation Instructions</span></h6>
         <ol>
             <li>Download <code span class="fw-bold">.NET 9.0</code> and run the setup wizard until complete. This is a required program dependency.</li>
-            <li>Download and extract <code span class="fw-bold">owoow.zip</code> into an fresh, empty folder, then extract <code span class="fw-bold">ldn_mitm.zip</code> into the same folder.</li>
-            <li>Move the <code span class="fw-bold">atmosphere</code> and <code span class="fw-bold">switch</code> folders to the root of your SD card, agree to overwrite folders if prompted.</li>
+            <p></p>
+            <li>Download and extract <code span class="fw-bold">owoow.zip</code> into an fresh, empty folder, then extract <code span class="fw-bold">ldn_mitm.zip</code> into the same folder (ldn_mitm is for Wi-Fi connectivity only).</li>
+            <p></p>
+            <li>Move the <code span class="fw-bold">atmosphere</code> and <code span class="fw-bold">switch</code> folders to the root of your SD card. Agree to overwrite folders if prompted.</li>
+            <p></p>
             <li>Reboot the console into your chosen CFW environment (it is recommended to use SysCFW).</li>
         </ol>
 
-        <h6><span class="fw-bold">Program Connectivity Instructions</span></h6>
+        <p>Ensure that sys-botbase (bundled with the owoow download) and ldn_mitm have been properly installed before continuing, you should see two seperate folders named <code class="fw-bold">430000000000B</code> and <code class="fw-bold">420000000010</code> inside the <code class="fw-bold">atmosphere/contents</code> directory of your SD card if done correctly.</p>
+
+        <h6><span class="fw-bold">Program Connectivity Instructions (WI-FI ONLY)</span></h6>
         <ol>
-            <li>Launch <code span class="fw-bold">owoow.exe</code>, ensure that the program launches properly with no issues.</li>
+            <li>Launch <code span class="fw-bold">owoow.exe</code>. Ensure that the program launches properly with no issues.</li>
+            <p></p>
             <li>Type the local IP address of the console into the <code span class="fw-bold">Switch IP:</code> field.</li>
-            <li>Enter the overworld in-game, then click <code span class="fw-bold">Connect</code> on owoow after doing so.</li>
+            <p></p>
+            <li>Start the game. You can click the <code class="fw-bold">Connect</code> button on owoow once you see the title screen.</li>
         </ol>
+
+        <p>If you experience connectivity issues using Wi-Fi, refer to the <a href="https://github.com/kwsch/SysBot.NET/wiki/Troubleshooting-Connection-Errors" target="_blank" rel="noopener noreferrer">SysBot.NET Wiki (Wi-Fi Troubleshooting)</a> page for tips and advice. Make sure to follow every step, this should resolve 99% of user issues.</p>
+
+        <h6><span class="fw-bold">Program Connectivity Instructions (USB ONLY)</span></h6>
+        <ol>
+            <li>Launch <code span class="fw-bold">owoow.exe</code>. Ensure that the program launches properly with no issues.</li>
+            <p></p>
+            <li>Close the program to produce a <code class="fw-bold">config.json</code> file, then open this in a text editor like Notepad.</li>
+            <p></p>
+            <li>Change the protocol to 1 for USB connectivity, save the changes, then close the file and launch owoow again.</li>
+            <p></p>
+            <li>Open the <code class="fw-bold">config.cfg</code> located in <code class="fw-bold">atmosphere/contents/43000000000B</code> in a text editor.</li>
+            <p></p>
+            <li>Change the text to <code class="fw-bold">usb</code> and save the changes. Reboot your Switch after doing so.</li>
+            <p></p>
+            <li>Follow the instructions found on the <a href="https://github.com/kwsch/SysBot.NET/wiki/Configuring-a-new-USB-Connection" target="_blank" rel="noopener noreferrer">SysBot.NET Wiki</a> to learn how to configure a new USB connection on your Switch.</li>
+            <p></p>
+            <li>Connect your Switch to your PC via a USB cable, launch owoow, and start the game. You can click the <code class="fw-bold">Connect</code> button on owoow once you see the title screen.</li>
+        </ol>
+
+        <p>If you experience connectivity issues using a USB connection, refer to the <a href="https://github.com/kwsch/SysBot.NET/wiki/Configuring-a-new-USB-Connection#troubleshooting" target="_blank" rel="noopener noreferrer">SysBot.NET Wiki (USB Troubleshooting)</a> page for tips and advice. Make sure to follow every step, this should resolve 99% of user issues.</p>
 
     </div>
 </div>
