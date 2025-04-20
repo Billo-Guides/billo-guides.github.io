@@ -58,9 +58,11 @@ permalink: /cfw/swsh/overworld/menu-close-prediction
         <span class="fw-bold text-light">Finding NPC Count</span>
     </div>
     <div class="card-body card-bg">
-        <p>After setting the appropriate weather condition and clicking <code class="fw-bold">Search</code>, a table will appear. Close and reopen the pause menu once, then note the number of advances consumed during this action (displayed in the main window). Now, look at the <code class="fw-bold">Jump</code> column in the table, highlighted in red in the above image.</p>
+        <p>After setting the appropriate weather condition and clicking <code class="fw-bold">Search</code>, a table will appear. Close and reopen the pause menu once by pressing <code class="fw-bold">B</code> and immediately <code class="fw-bold">X</code>, then note the number of advances consumed during this action (displayed in the main window). Now, look at the <code class="fw-bold">Jump</code> column in the table, highlighted in red in the above image.</p>
 
         <p>Change the value in the <code class="fw-bold">NPCs</code> field until you see the correct number of advances in the first row of the table. In this example, 10 advances were consumed from closing and re-opening the pause menu, so we will tweak the NPCs field and click <code class="fw-bold">Search</code> until we see +10 advances in the <code class="fw-bold">Jump</code> column of the table, which should then give us the current NPC count.</p>
+
+        <p>We strongly suggest that you use <code class="fw-bold">B</code> and <code class="fw-bold">X</code> to calibrate NPCs, not <code class="fw-bold">X</code> and <code class="fw-bold">X</code>. The reason for this is that pressing <code class="fw-bold">X</code> twice too quickly can cause 0 advances, which would mislead you into thinking that there are 0 NPCs.</p>
     </div>
 </div>
 <br>
