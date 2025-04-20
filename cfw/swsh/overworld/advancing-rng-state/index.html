@@ -204,13 +204,17 @@ permalink: /cfw/swsh/overworld/advancing-the-rng-state
         <span class="fw-bold text-light">Advancement Method - Bike Mount</span>
     </div>
     <div class="card-body card-bg">
-        <p>Mounting and dismounting the bike advances the RNG state by a small amount. The exact number of advances consumed from this action is variable depending on the number of NPCs currently in the area and Pok&eacute;mon in your party.</p>
+        <p>Mounting and dismounting the bike advances the RNG state by a small amount. The exact number of advances consumed from this action is variable, and depends on the number of NPCs currently in the area and number of Pok&eacute;mon in your party.</p>
+
+        <p>Why does having more Pok&eacute;mon cause more advancements? When you get on a bike, the game attempts to set the bike memory to Pok&eacute;mon in your party. If they already have a bike memory, then the check does not occur, and you will experience fewer advances. The bike memory should look like "Calyrex rode a bike with Billo on a seaside road." Memory intensity does not matter.</p>
 
         <p>Keep in mind that using this method in front of activated NPCs will paradoxically cause advancements to be slower since the NPC advancements do not resume until the bike animation is done.</p>
 
         <h6 span class="fw-bold">Use Cases</h6>
         <ul>
             <li>Used to advance short distances quickly to avoid overshooting (~100-500 advancements away).</li>
+            <p></p>
+            <li>Some example numbers: Bike hopping with 6 Pok&eacute;mon in party at the Max Lair is about 450 advances per minute, while doing the same at the Dojo with 24 menu NPCs gives about 3000 per minute.</li>
             <p></p>
             <li>Should not be used right before biking towards the target as it is very variable and unpredictable.</li>
         </ul>
