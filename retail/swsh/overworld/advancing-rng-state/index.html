@@ -198,13 +198,17 @@ permalink: /retail/swsh/overworld/advancing-the-rng-state
         <span class="fw-bold text-light">Advancement Method - Bike Mount</span>
     </div>
     <div class="card-body card-bg">
-        <p>Mounting and dismounting the bike advances the RNG state by a small amount. The exact number of advances consumed from this action is variable depending on the number of NPCs currently in the area and Pok&eacute;mon in your party.</p>
+        <p>Mounting and dismounting the bike advances the RNG state by a small amount. The exact number of advances consumed from this action is variable, and depends on the number of NPCs currently in the area and number of Pok&eacute;mon in your party.</p>
+
+        <p>Why does having more Pok&eacute;mon cause more advancements? When you get on a bike, the game attempts to set the bike memory to Pok&eacute;mon in your party. If they already have a bike memory, then the check does not occur, and you will experience fewer advances. The bike memory should look like "Calyrex rode a bike with Billo on a seaside road." Memory intensity does not matter.</p>
 
         <p>Keep in mind that using this method in front of activated NPCs will paradoxically cause advancements to be slower since the NPC advancements do not resume until the bike animation is done.</p>
 
         <h6 span class="fw-bold">Use Cases</h6>
         <ul>
             <li>Used to advance short distances quickly to avoid overshooting (~100-500 advancements away).</li>
+            <p></p>
+            <li>Some example numbers: Bike hopping with 6 Pok&eacute;mon in party at the Max Lair is about 450 advances per minute, while doing the same at the Dojo with 24 menu NPCs gives about 3000 per minute.</li>
             <p></p>
             <li>Should not be used right before biking towards the target as it is very variable and unpredictable.</li>
         </ul>
@@ -242,7 +246,13 @@ permalink: /retail/swsh/overworld/advancing-the-rng-state
         <span class="fw-bold text-light">Advancement Method - Rain/Thunderstorm</span>
     </div>
     <div class="card-body card-bg">
-        <p>Changing the weather to, or moving into an area with rain/thunderstorm causes the RNG state to advance rapidly. These rapid advances will continue until the weather in the area changes or the player moves to a different area where it is no longer raining.</p>
+        <p>Changing the weather to, or moving into an area with Rain/Thunderstorm causes the RNG state to advance rapidly. These rapid advances will continue until the weather in the area changes or the player moves to a different area where it is no longer raining.</p>
+
+        <p>If the weather is changed to Rain/Thunderstorm while the in-game pause menu is up, you will not start experiencing wet weather menu advancments until you have interacting with menus for a while.</p>
+
+        <p>If the weather is changed away from Rain/Thunderstorm while the in-game pause menu is up, you will continue to experience wet weather menu advancments the first few times you interact with menus. Make sure you are at least 500 advances away from your target so you can open and close menus about 5-10 times to clear these.</p>
+
+        <p>Another way to ensure that the weather has updated in the overworld is to stop earlier and briefly close the menu to the overworld so the weather changes over completely.</p>
 
         <h6 span class="fw-bold">Use Cases</h6>
         <ul>
@@ -265,6 +275,10 @@ permalink: /retail/swsh/overworld/advancing-the-rng-state
     </div>
     <div class="card-body card-bg">
         <p>Clicking around and opening any of the different pause menu options will advance the RNG state. The number of advances depends on if you are doing this action in Rain or Thunderstorm. Thunderstorm produces twice the number of advances that would occur in Rain.</p>
+
+        <p>As noted under the Rain/Thunderstorm section, if the weather is changed to Rain/Thunderstorm while the in-game pause menu is up, you may start experiencing wet weather menu advancments after interacting with menus for a while.</p>
+
+        <p>If the weather is changed away from Rain/Thunderstorm while the in-game pause menu is up, you will continue to experience wet weather menu advancments the first few times you interact with menus. Make sure you are at least 500 advances away from your target so you can press buttons on the pause menu about 5-10 times to clear these. Alternatively, you may stop earlier and briefly close the menu to the overworld so the weather changes over completely.</p>
 
         <h6 span class="fw-bold">Use Cases</h6>
         <ul>
@@ -305,6 +319,12 @@ permalink: /retail/swsh/overworld/advancing-the-rng-state
             <li>Close any in-game menus and go back to the overworld.</li>
             <p></p>
             <li>Change the console date forward in the <code span class="fw-bold">System Settings</code> > <code span class="fw-bold">System</code>, then resume the game where you are looking at the overworld.</li>
+            <p></p>
+            <ul>
+                <li>It is possible to skip multiple days at once without resuming the game. To do this, setting the date forward, hit <code span class="fw-bold">OK</code>, and repeat this process until you have done enough days. You can only skip once each time you hit <code span class="fw-bold">OK</code>, so changing the date forward by more than 1 will still be treated as 1.</li>
+                <p></p>
+                <li>If you are in the Wild Area, resuming the game after advancing multiple days has a chance to crash your game! If you are advancing more than 1 month at a time, we suggest you move indoors to a Pok&eacute;mon Center.</li>
+            </ul>
             <p></p>
             <li>If you did this correctly, the screen will flash, the currently active raid beams will change location, and any Watts you claimed will become available again.</li>
             <p></p>
