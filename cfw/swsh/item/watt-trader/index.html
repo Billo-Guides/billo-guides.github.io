@@ -1,0 +1,180 @@
+---
+layout: default
+title: Watt Trader RNG (CFW)
+permalink: /cfw/swsh/item/watt-trader/
+---
+
+<div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">Watt Trader RNG (CFW)</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    A guide for manipulating the daily highlight item from the Watt Trader NPC.
+</small>
+<hr />
+
+<p>The <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/main-page/watt-trader.jpg">Watt Trader</a> NPC is located at the bottom of Snowslide Slope in the Crown Tundra. Each day, this NPC has a different highlighted item, some of which are the rare Dream/Beast Balls. This guide will focus on manipulating his daily highlight item for a desirable result.</p>
+
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Important -</span> From here, we assume that you are familiar with key concepts described on the main page. If you are unsure about topics like <a href="/cfw/swsh/new-overworld/main-page" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">seed monitoring</a>, <a href="/cfw/swsh/new-overworld/advancing-the-rng-state" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">advancement methods</a>, or <a href="/cfw/swsh/new-overworld/menu-close-prediction" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">NPC calibration</a>, please review the relevant sections before continuing.
+</div>
+
+<h6 span class="fw-bold">In-game Requirements</h6>
+<ul>
+    <li>Access to the Crown Tundra DLC.</li>
+    <li>Plenty of Watts to spend on the highlight item (each rare Pokeball costs around 40,000 Watts).</li>
+    <li>Interacted with the NPC at least once to skip the introduction and unlock the correct fly point.</li>
+</ul>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/item/digging-pa">
+  Need an easy method to farm watts? Visit the <span class="fw-bold">Digging Pa guide!</span>
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+  </svg>
+</a><p></p>
+
+<p><span class="fw-bold">Figure 1 -</span> Game Setup</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/watt-trader/game-setup-watt-trader.gif" alt="watt-trader-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/watt-trader/game-setup-watt-trader.gif"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header text-light" style="background-color: #0c0038;" id="getting-started-watt-trader-game">
+        <span class="fw-bold">Getting Started (Game Setup)</span>
+    </div>
+    <div class="card-body card-bg">
+        <ol>
+            <li>Head to the above location in the Crown Tundra, and interact with the Watt Trader at least once to gain access to the fly point if you do not already have access to it.</li>
+            <p></p>
+            <li>Perform a date advance to refresh the daily highlight item. This can be done using any date skipping method.</li>
+            <p></p>
+            <li>Fly into the area, this will provide optimal positioning and refresh the highlight item if you have date skipped.</li>
+            <p></p>
+            <li>Knock out the spawned Static Pokemon that is behind you, this will cause unwanted advances if left standing.</li>
+            <p></p>
+            <li>Re-position yourself similarly to Figure 1, ensure that you have a clear, straight line between the player and the Watt Trader.</li>
+            <p></p>
+            <li>Check your current weather condition by opening the map, and calibrate your NPC count accordingly (do not use Rain/Thunderstorm for obvious reasons).</li>
+            <p></p>
+            <li>Save the game.</li>
+        </ol>
+
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 2 -</span> RNG Tool Setup</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/digging-pa/tool-setup-digging-pa.gif" alt="digging-pa-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/digging-pa/tool-setup-digging-pa.gif"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header text-light" style="background-color: #0c0038;" id="getting-started-digging-pa-rng-tool">
+        <span class="fw-bold">Getting Started (Tool Setup)</span>
+    </div>
+    <div class="card-body card-bg">
+        <ol>
+            <li>Enter the IP address of your console in the main window and click <code class="fw-bold">Connect</code>. This will automatically read your current seed and save file details.</li>
+            <p></p>
+            <li>At the top of the main owoow window, select <code class="fw-bold">Watt Trader</code> to open the Watt Trader generator in a sub-window.</li>
+            <p></p>
+            <li>Enter the amount of advances you are willing to search through into the <code class="fw-bold">+</code> field, usually you will find a result that produces a Dream/Beast Ball in less than x advances.</li>
+            <p></p>
+            <li>Set the correct weather condition, this is important for accurate search results then using menu close prediction as the Watt Trader is located outside.</li>
+            <p></p>
+            <li>Activate the <code class="fw-bold">Consider Menu Close?</code> checkbox, then enter the NPC count that was calibrated earlier. You can now begin searching for targets.</li>
+        </ol>
+
+        <p>If you do not find a desirable result you will need to increase your search range, reset the game and follow the above steps again, or apply less strict search filters.</p>
+    </div>
+</div>
+<br />
+
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Important -</span> It is important to understand how NPC activation works. When standing next to an NPC it takes them a moment to notice you and become "activated", which will cause the speed of advances to increase. If you interact with the NPC before they notice you, you can avoid "activating" them. The goal is to avoid activating NPCs when attempting to hit your target frame.
+</div>
+
+<p><span class="fw-bold">Figure 3 -</span> NPC Example (Unwanted Advances) &#10060;</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/digging-pa/fast-advances-digging-pa.gif" alt="digging-pa-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/digging-pa/fast-advances-digging-pa.gif"><p></p>
+
+<p>In Figure 3 we have activated the NPC, which means we interacted with them too slowly and this has caused unwanted advances to occur.</p>
+
+<p><span class="fw-bold">Figure 4 -</span> NPC Example (No Advances) &#9989;</p> 
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/digging-pa/slow-advances-digging-pa.gif" alt="digging-pa-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/digging-pa/slow-advances-digging-pa.gif"><p></p>
+
+<p>In Figure 4 we interacted with the NPC quick enough that they did not become active, this is what we are aiming for when attempting to hit target frames.</p>
+
+<hr /><div class="title" style="background-color: #0c0038;" id="the-basics">
+    <h1 class="text-light text-center pt-3 pb-3">Advancing Towards a Target</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    Step-by-step instructions for hitting a target frame can be found here.
+</small>
+<hr />
+
+<p><span class="fw-bold">Figure 5 -</span> Target Found!</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/digging-pa/target-found-digging-pa.png" alt="digging-pa-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/digging-pa/target-found-digging-pa.png"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header text-light" style="background-color: #0c0038;" id="advancing-towards-a-target-digging-pa">
+        <span class="fw-bold">Advancing to the Target</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>In this example, a frame that produces a Beast Ball can be seen in a {% include tooltips/clusters.html %} between advances x-y, these are the advances that we will aim to close the pause menu on, then quickly interact with the Watt Trader NPC using the method shown in Figure 4. It is only important to interact with the NPC on this frame to lock our daily highlight item in place.</p>
+
+        <h6 class="fw-bold">Step-by-Step</h6>
+        <ol>
+            <li>
+                Advance toward your target using any of the methods listed on <a href="/cfw/swsh/new-overworld/advancing-the-rng-state" target="_blank">this page</a>.
+                <p></p>
+                <ul>
+                    <li>Consider using <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/wet-weather.gif">wet weather</a> or <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/date-skipping.gif">date skipping</a> to advance large distances (for targets > 100,000 advances, it is unlikely you will need to use this).</li>
+                    <p></p>
+                    <li>Consider using <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/npc-activation.gif">NPC activation</a> or <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/menu-close.gif">menu close prediction</a> to advance shorter distances (for targets < 100,000 advances, most targets will be less than this).</li>
+                </ul>
+                <p></p>
+            <li>Stop advancing once you are ~1000 advances before your target, then reposition yourself optimally as shown in Figure 1 if you have moved.</li>
+            <p></p>
+            <li>Ensure that the <code class="fw-bold">Consider Menu Close?</code> checkbox is checked in the Watt Trader sub-window, and confirm that your NPC count is calibrated correctly.</li>
+            <p></p>
+            <li>Click <code class="fw-bold">Update Seeds</code> on the main window of owoow, then re-open the Watt Trader sub-window and search for your target again.</li>
+            <p></p>
+            <li>From this point, use <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/animations.gif">animations</a> to reach the exact target frame, then return to the main pause menu.</li>
+            <p></p>
+            <li>Unpause the game. If <code class="fw-bold">Holding Direction?</code> is checked, hold a direction on the control stick when unpausing; otherwise, do not touch the control stick when unpausing.</li>
+            <p></p>
+            <li>Move towards the Digging Pa NPC quickly using the method shown in Figure 4, interact with them to lock your Watt result in place, then click <code class="fw-bold">Today's Highlight</code> to lock in the expected result.</li>
+        </ol>
+
+      <p>The first two days of daily highlights will be locked in after speaking to the Watt Trader NPC, which means our target item will be available on the third day. To get to our desired highlight item we will need to perform 2 date skips and interact with the Watt Trader twice to have our daily highlight available.</p>
+
+      <h6 class="fw-bold">Accessing Our Daily Highlight</h6>
+      <ol>
+        <li>Perform a date skip using any method you like.</li>
+        <p></p>
+        <li>Interact with the Watt Trader NPC.</li>
+        <p></p>
+        <li>Perform another date skip.</li>
+        <p></p>
+        <li>Interact with the Watt Trader again.</li>
+        <p></p>
+        <li>Perform a final date skip.</li>
+        <p></p>
+        <li>Interact with the Watt Trader and check the daily highlight item, this should now be our desired item.</li>
+      </ol>
+
+    </div>
+</div>
+<br />
+
+<span class="fw-bold">Figure 6 -</span> Target Frame Hit!<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/digging-pa/target-hit-digging-pa.png" alt="digging-pa-6" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/digging-pa/target-hit-digging-pa.png"><p></p>
+
+<p>In Figure 6 we closed the pause menu on the desired target frame and quickly interacted with the Watt Trader before they became active, now we need to select <code class="fw-bold">Today's Highlight</code> to lock in our expected reward, then date skip using the above method to have him produce our desired item.</p>
+
+<span class="fw-bold">Figure 7 -</span> Result Found!<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/digging-pa/result-found.png" alt="digging-pa-7" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/digging-pa/result-found.png"><p></p>
+
+<p><span class="fw-bold">That's all there is to RNG manipulating the Watt Trader NPC (CFW)!</span></p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/item">
+    Head back to the <span class="fw-bold">main page</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a><p></p>
