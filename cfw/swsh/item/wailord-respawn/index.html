@@ -12,7 +12,7 @@ permalink: /cfw/swsh/item/wailord-respawn/
 </small>
 <hr />
 
-<p>The <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/main-page/wailord.png">Isle of Armor Wailord</a> is visible in the sea upon entering the Isle of Armor for the first time and will remain present until defeated or captured. Using RNG manipulation it is possible to respawn this Wailord if you have accidentally despawned it, or wish to bring it back for any reason.</p>
+<p>The enormous <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/main-page/wailord.png">Isle of Armor Wailord</a> is visible in the Workout Sea when you first arrive on the Isle of Armor. Once defeated or captured, it does not return normally with date skipping like normal "strong spawns." Instead, the chance of it respawning is 1/100 each fresh day that you first visit the IoA map. Using RNG manipulation, we can respawn the signature IoA Wailord much more easily.</p>
 
 <div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
     <span class="fw-bold">Important -</span> From here, we assume that you are familiar with key concepts described on the main page. If you are unsure about <a href="/cfw/swsh/overworld/main-page" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">seed monitoring</a>, <a href="/cfw/swsh/overworld/advancing-the-rng-state" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">advancement methods</a>, or <a href="/cfw/swsh/overworld/menu-close-prediction" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">NPC calibration</a>, please review the relevant sections before continuing.
@@ -29,14 +29,14 @@ permalink: /cfw/swsh/item/wailord-respawn/
         <ol>
             <li>Head to the Isle of Armor and enter the train station.</li>
             <p></p>
-            <li>Perform a date advance while standing in the train station.</li>
+            <li>Perform a date skip while standing in the train station.</li>
             <p></p>
-            <li>Calibrate your NPC count, a common NPC value for the train station is 6.</li>
+            <li>Calibrate your menu NPC count; a common NPC value for the train station is 6.</li>
             <p></p>
             <li>Save the game.</li>
         </ol>
-      
-      <p>Wailord has one chance to spawn per day upon entering the Isle of Armor overworld for the first time. For this reason we are required to perform a date advance while standing inside the train station if we have entered the Isle of Armor overworld. After performing a date advance we can then save in this state as the game will consider this a new day.</p>
+
+        <p>Wailord has one chance to respawn per day. The check occurs the first time the player enters the Isle of Armor overworld. For this reason, we are required to perform a date skip while standing inside the train station if we have already entered the Isle of Armor overworld for the day. After performing a date skip, we can then save to preserve the new day state.</p>
     </div>
 </div>
 <br />
@@ -52,14 +52,14 @@ permalink: /cfw/swsh/item/wailord-respawn/
         <ol>
             <li>Enter the IP address of your console in the main window and click <code class="fw-bold">Connect</code>. This will automatically read your current seed and save file details.</li>
             <p></p>
-            <li>At the top of the main owoow window, select <code class="fw-bold">Wailord Respawn</code> to open the Wailord Respawn generator in a sub-window.</li>
+            <li>At the top of the main owoow window, click <code class="fw-bold">Wailord Respawn</code> to open the Wailord Respawn generator in a subwindow.</li>
             <p></p>
-            <li>Enter the amount of advances you are willing to search through into the <code class="fw-bold">+</code> field, usually you will find any desired result in less than 5,000 advances.</li>
+            <li>Enter the number of advances you want to search in the <code class="fw-bold">+</code> field. You will usually find any desired result in 5,000 advances or fewer.</li>
             <p></p>
-            <li>Activate the <code class="fw-bold">Consider Menu Close?</code> checkbox, then enter the NPC count that was calibrated earlier (mostly likely 6). You can now begin searching for targets.</li>
+            <li>Tick the <code class="fw-bold">Consider Menu Close?</code> and <code class="fw-bold">Holding Direction?</code> checkboxes, then enter the NPC count that was calibrated earlier (mostly likely 6). You can now begin searching for targets.</li>
         </ol>
 
-        <p>If you do not find a desirable result you will need to increase your search range, reset the game and follow the above steps again, or apply less strict search filters.</p>
+        <p>If you do not find any results, you will need to increase your search range, change your search filters to be less restrictive, or reset the game for a better seed.</p>
     </div>
 </div>
 <br />
@@ -69,28 +69,33 @@ permalink: /cfw/swsh/item/wailord-respawn/
 
 <div class="card border-dark">
     <div class="anchored card-header text-light" style="background-color: #0c0038;" id="advancing-towards-a-target-wailord">
-        <span class="fw-bold">Advancing to the Target</span>
+        <span class="fw-bold">Advancing Towards a Target</span>
     </div>
     <div class="card-body card-bg">
-        <p>In this example, a frame that will respawn wailord can be seen in a {% include tooltips/clusters.html %} between advances x-y, these advances are highlighted yellow, which means that Wailord will respawn if we enter the Isle of Armor loading zone on any of them.</p>
-      
+        <p>In this example, a frame that will respawn Wailord can be seen in a {% include tooltips/clusters.html %} from advances 50-53. These advances are highlighted yellow, which means that Wailord will respawn if we enter the Isle of Armor main map on any of them for the first time that day.</p>
+
         <h6 class="fw-bold">Step-by-Step</h6>
         <ol>
-            <li>Advance toward your target using <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/npc-activation.gif">NPC activation</a> or <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/animations.gif">animations</a>.</li>
+            <li>Advance toward your target using <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/npc-activation.gif">NPC activation</a>,  <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/menu-close.gif">menu close</a>, or <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/animations.gif">attack animations</a> depending on how close it is.</li>
             <p></p>
-            <li>Once you are 100-200 advances before your target, stand next to the train station exit as such that holding down on your control stick will trigger the loading zone.</li>
+            <li>Once you are 100-200 advances before your target, stand close to the train station exit so that holding down on your joystick will cause your character to leave the station and trigger the loading screen.</li>
             <p></p>
-            <li>Ensure that the <code class="fw-bold">Consider Menu Close?</code> checkbox is checked in the Wailord Respawn sub-window, and confirm that your NPC count is calibrated correctly.</li>
+            <li>Open the <code class="fw-bold">X Menu</code> to pause the game.</li>
             <p></p>
-            <li>Click <code class="fw-bold">Update Seeds</code> on the main window of owoow, then re-open the Wailord Respawn sub-window and search for your target again.</li>
+            <li>Click <code class="fw-bold">Update Seeds</code> on the main window of owoow. Carefully copy them in from the main window. Ensure that the <code class="fw-bold">Consider Menu Close?</code> and <code class="fw-bold">Holding Direction?</code> checkboxes are checked in the Wailord Respawn subwindow, and confirm that your NPC count has been entered correctly. Search for your target again.</li>
             <p></p>
-            <li>From this point, use <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/animations.gif">animations</a> to reach the exact target frame, then return to the main pause menu.</li>
+            <ul>
+                <li>This step may be simplified in the future pending UI changes!</li>
+            </ul>
             <p></p>
-            <li>Unpause the game. If <code class="fw-bold">Holding Direction?</code> is checked, hold down on the control stick when unpausing; otherwise, let the game unpause without holding a direction, then hold down on the control stick after 1 second.</li>
+            <li>From this point, use <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/animations.gif">attack animations</a> to reach the exact target frame.</li>
             <p></p>
-            <li>If everything was done correctly you should have entered the Isle of Armor overworld and see that Wailord has been properly respawned.</li>
+            <li>Close the Pok&eacute;mon window so you are on the main <code class="fw-bold">X Menu</code>.</li>
+            <p></p>
+            <li>Hold the left joystick downwards and then unpause the game by pressing B. Release the joystick the moment you see the black loading screen.</li>
+            <p></p>
+            <li>If you did this correctly, the player character should immediately leave the train station and enter the Isle of Armor overworld. You will see that Wailord has been properly respawned.</li>
         </ol>
-
     </div>
 </div>
 <br />
@@ -98,7 +103,7 @@ permalink: /cfw/swsh/item/wailord-respawn/
 <span class="fw-bold">Figure 4 -</span> Target Frame Hit!<p></p>
 <img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/wailord/target-hit-wailord.gif" alt="wailord-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/wailord/target-hit-wailord.gif"><p></p>
 
-<p>In Figure 4 we closed the pause menu on the desired target frame and quickly entered the Isle of Armor to see that Wailord has been respawned.</p>
+<p>In Figure 4, we closed the <code class="fw-bold">X Menu</code> on the desired target frame and immediately walked out of the train station to see that Wailord is back in the Isle of Armor.</p>
 
 <p><span class="fw-bold">That's all there is to respawning Wailord using RNG manipulation (CFW)!</span></p>
 

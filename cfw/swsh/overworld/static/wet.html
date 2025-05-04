@@ -19,7 +19,7 @@
                 <li>One method to do this is to tap the joystick towards the Pok&eacute;mon and save the game each time it does not spawn. The target position is such that a single, gentle tap immediately spawns the Pok&eacute;mon.</li>
             </ul>
             <p></p>
-            <li>Calibrate your NPC count in any weather that is NOT Rain or Thunderstorm. After you close the <code class="fw-bold">MenuCloseTimeline</code> sub-window, verify that your NPC count has been entered into the main window and you have checked both the <code class="fw-bold">Consider Menu Close?</code> and <code span class="fw-bold">Holding Direction?</code> checkboxes.</li>
+            <li>Calibrate your NPC count in any weather that is NOT Rain or Thunderstorm. After you close the <code class="fw-bold">MenuCloseTimeline</code> subwindow, verify that your NPC count has been entered into the main window and you have checked both the <code class="fw-bold">Consider Menu Close?</code> and <code span class="fw-bold">Holding Direction?</code> checkboxes.</li>
             <p></p>
             <li>Ensure the <code class="fw-bold">Consider Menu Close?</code> and <code class="fw-bold">Holding Direction?</code> checkboxes are enabled in the main window, and enter your calibrated NPC count in the <code class="fw-bold">NPCs</code> field.</li>
             <p></p>
@@ -36,6 +36,10 @@
             <li>Start the encounter. While in battle, click the <code class="fw-bold">Read Encounter</code> button on owoow, then press <code class="fw-bold">Copy IVs to Filters</code>.</li>
             <p></p>
             <li>Under <code span class="fw-bold">Advanced Settings</code>, click the <code span class="fw-bold">Calculate Rain Ticks</code> button. If you did this correctly, you should see a result pop up. Enter the calibrated value into the <code span class="fw-bold">Rain Ticks</code> field.</li>
+            <p></p>
+            <ul>
+                <li>If your positioning was excellent, you should get a Rain Tick value of 30 or less. If your number is very high, consider repositioning so that you are closer.</li>
+            </ul>
             <p></p>
             <li>After calibrating both the NPC count and Rain Ticks, restart the game and reconnect to owoow. You can now begin searching for target frames.</li>
         </ol>
@@ -61,7 +65,7 @@
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c0038;" id="advancing-to-target-static-wet">
-        <span class="fw-bold text-light">Advancing to the Target</span>
+        <span class="fw-bold text-light">Advancing Towards a Target</span>
     </div>
     <div class="card-body card-bg">
         <p>In this example, a shiny, Weather Mark Duraludon appears in a {% include tooltips/clusters.html %} from advances 9,200-9,203. The calibrated NPC count is 2 and the current Rain Tick value is 42. Holding a direction when closing the pause menu is mandatory for Rain/Thunderstorm targets as this helps to keep the Rain Tick value as consistent as possible between attempts.</p>
