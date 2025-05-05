@@ -19,14 +19,38 @@
         </thead>
         <tbody>
             <tr>
-                <td class="text-center">46</td>
+                <td class="text-center">43-47 (see below)</td>
                 <td class="text-center">0</td>
                 <td class="text-center">0</td>
             </tr>
         </tbody>
     </table>
 
-    <p><span class="fw-bold">Note -</span> As mentioned above, you must Virizion caught or must not have progressed the footprint story quest enough to spawn Virizion in the otherworld. Having Virizion spawned will produce results not found inside the table.</p>
+    <div class="card border-dark">
+        <div class="anchored card-header text-light" style="background-color: #0c0038;" id="articuno-area-load-calibration">
+            <span class="fw-bold">Articuno Area Load Calibration</span>
+        </div>
+        <div class="card-body card-bg">
+            <p>An additional calibration for the <code class="fw-bold">Area Load</code> value is needed for Galarian Articuno. This value represents the total number of strong spawns that are loaded in the area and distantly (e.g. birds and IoA Wailord). Normally, this would be constant after a date skip, but the strong spawn Audino in the area only respawn at a 10% rate each new day when you first load the map. If any are missing when you are performing the RNG manipulation, this will cause your predictions to be inaccurate.</p>
+
+            <p>For this calibration, you will need to go to all 3 locations for the Audino and take note of which ones are spawning. Note that Audino has flee behavior, so if you scare one away, do not count it.</p>
+
+            <p><a href="https://www.youtube.com/watch?v=skRsVjEujEI">Video of Giant's Bed Audino Locations</a></p>
+
+            <p>The final <code class="fw-bold">Area Load</code> value should be calculated like so:
+            <ol>
+                <li>Start with 43.</li>
+                <p></p>
+                <li>Add the number of Audino that are loaded, which will be +1, +2, or +3.</li>
+                <p></p>
+                <li>Add 1 if Virizion is spawning.</li>
+            </ol></p>
+
+            <p>You should get a number from 43-47. Put the final value in the <code class="fw-bold">Area Load</code> box.</p>
+
+            <p>If you have any missing Audino and date skip, you will need to count them again before performing your RNG manipulation attempt.</p>
+        </div>
+    </div>
 </div>
 
 <div class="bird bird-zapdos d-none">
