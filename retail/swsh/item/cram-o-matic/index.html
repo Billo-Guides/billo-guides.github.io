@@ -1,0 +1,206 @@
+---
+layout: default
+title: Cram-o-matic RNG (RETAIL)
+permalink: /retail/swsh/item/cram-o-matic/
+---
+
+<div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">Cram-o-matic RNG (RETAIL)</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    A guide for manipulating the Cram-o-matic to obtain rare Pok&eacute; Balls and other goodies.
+</small>
+<hr />
+
+<p>The <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/main-page/cram-o-matic.jpg">Cram-o-matic</a> is located inside the Dojo on the Isle of Armor. Once you have progressed far enough in the story to unlock access to the machine, you can "feed" it items from your bag to generate items such as the rare Apricorn, Safari, and Sport Balls or Ribbon and Star sweets for Alcremie. Rare items will be the main focus of this guide as most other rewards are nonrandom. See <a href="https://www.serebii.net/swordshield/cram-o-matic.shtml">these recipes on Serebii</a> for everything else.</p>
+
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Important -</span> From here, we assume that you are familiar with key concepts described on the main page. If you are unsure about <a href="/retail/swsh/overworld/seed-finding-and-monitoring" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">seed monitoring</a>, <a href="/retail/swsh/overworld/advancing-the-rng-state" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">advancement methods</a>, or <a href="/retail/swsh/overworld/menu-close-prediction" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">NPC calibration</a>, please review the relevant sections before continuing.
+</div>
+
+<h6 span class="fw-bold">In-game Requirements</h6>
+<ul>
+    <li>Access to the Sword/Shield Isle of Armor DLC</li>
+    <li>Access to the Cram-o-matic</li>
+    <li>Plenty of items to feed to the Cram-o-matic (see table)</li>
+</ul>
+
+<h5 class="text-center fw-bold p-2 mb-2" display: block; margin: 0;">Cram-o-matic Recipes</h5>
+<p>The following recipes are the minimum required ingredients to be eligible for each reward. You may add the items in any order.</p>
+<table class="table table-striped" style="width:100%" id="overworld-rng-table">
+    <thead class="table text-white" style="background-color: #0c0038;">
+        <tr>
+            <th scope="col" class="text-center" style="width:25%">Item</th>
+            <th scope="col" class="text-center" style="width:70%">Required Recipe</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="fw-bold text-center">Heavy Ball</td>
+            <td>4 Apricorns, where at least 1 is a Black Apricorn. Adding more Black Apricorns increases the rate of Heavy Balls.</td>
+        </tr>
+        <tr>
+            <td class="fw-bold text-center">Lure Ball</td>
+            <td>4 Apricorns, where at least 1 is a Blue Apricorn. Adding more Blue Apricorns increases the rate of Lure Balls.</td>
+        </tr>
+        <tr>
+            <td class="fw-bold text-center">Friend Ball</td>
+            <td>4 Apricorns, where at least 1 is a Green Apricorn. Adding more Green Apricorns increases the rate of Friend Balls.</td>
+        </tr>
+        <tr>
+            <td class="fw-bold text-center">Love Ball</td>
+            <td>4 Apricorns, where at least 1 is a Pink Apricorn. Adding more Pink Apricorns increases the rate of Love Balls.</td>
+        </tr>
+        <tr>
+            <td class="fw-bold text-center">Level Ball</td>
+            <td>4 Apricorns, where at least 1 is a Red Apricorn. Adding more Red Apricorns increases the rate of Level Balls.</td>
+        </tr>
+        <tr>
+            <td class="fw-bold text-center">Fast Ball</td>
+            <td>4 Apricorns, where at least 1 is a White Apricorn. Adding more White Apricorns increases the rate of Fast Balls.</td>
+        </tr>
+        <tr>
+            <td class="fw-bold text-center">Moon Ball</td>
+            <td>4 Apricorns, where at least 1 is a Yellow Apricorn. Adding more Yellow Apricorns increases the rate of Moon Balls.</td>
+        </tr>
+        <tr>
+            <td class="fw-bold text-center">Safari Ball</td>
+            <td>4 of the same color of Apricorn. Any color works.</td>
+        </tr>
+        <tr>
+            <td class="fw-bold text-center">Sport Ball</td>
+            <td>4 Apricorns in at least 2 different colors.</td>
+        </tr>
+        <tr>
+            <td class="fw-bold text-center">Ribbon &amp; Star Sweet</td>
+            <td>
+                <p><span class="fw-bold">Recipe 1 -</span> 4 common Alcremie sweets (Strawberry, Love, Berry, Clover, Flower).</p>
+                <p><span class="fw-bold">Recipe 2 -</span> 3 common Alcremie sweets and 1 Whipped Dream.</p>
+                <p><span class="fw-bold">Recipe 3 -</span> 2 common Alcremie sweets and 2 Whipped Dream.</p>
+                <p><span class="fw-bold">Recipe 4 -</span> 1 Whipped Dream and 3 Weakness Policy (BP Items).</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="alert alert-primary" style="border: 1px solid #004085; border-radius: 8px; padding: 15px; background-color: #cce5ff; color: #004085;">
+    <p><span class="fw-bold">Information -</span> Apricorns can be found randomly in berry trees scattered around the Isle of Armor.</p>
+    <p>The sweet items can be obtained through the nonrandom Cram-o-matic recipes on Serebii.</p>
+    <p>Alternatively, common Alcremie sweets can be obtained from the Battle Caf&eacute;s as daily rewards, Whipped Dream can be purchased in the Hammerlocke Hills BP shop for 10 BP, and Weakness Policy can be purchased in the Battle Tower for 20 BP.</p>
+</div>
+
+<p><span class="fw-bold">Figure 1 -</span> Game Setup</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/cram-o-matic/game-setup-cram-o-matic.png" alt="cram-o-matic-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/game-setup-cram-o-matic.png"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header text-light" style="background-color: #0c0038;" id="getting-started-cram-game">
+        <span class="fw-bold">Getting Started (Game Setup)</span>
+    </div>
+    <div class="card-body card-bg">
+        <ol>
+            <li>Collect all the resources you need for this RNG manipulation. Refer to the above table for the correct recipes for rare Pok&eacute; Balls and Alcremie Sweets.</li>
+            <p></p>
+            <li>Enter the Dojo in the Isle of Armor, and stand in front of the Cram-o-matic. Save the game.</li>
+            <p></p>
+            <li>Identify your current seed and calibrate your menu NPC count. Take note of this value for later as menu close prediction will be used to confidently hit targets.</li>
+        </ol>
+
+        <p>When calibrating NPC count inside buildings, set the current weather condition to <code class="fw-bold">Normal Weather</code>. NPC count will remain the same between attempts unless you progress the IoA story quest. You should see 21-22 NPCs with completed story; this variation depends on if you have collected the Porygon gift.</p>
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 2 -</span> RNG Tool Setup</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/cram-o-matic/tool-setup-cram-o-matic.gif" alt="cram-o-matic-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/cram-o-matic/tool-setup-cram-o-matic.gif"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header text-light" style="background-color: #0c0038;" id="getting-started-cram-rng-tool">
+        <span class="fw-bold">Getting Started (Tool Setup)</span>
+    </div>
+    <div class="card-body card-bg">
+        <ol>
+            <li>At the top of the main owoow window, click <code class="fw-bold">Cram-o-matic</code> to open the Cram-o-matic generator in a subwindow.</li>
+            <p></p>
+            <li>Enter the number of advances you are willing to search through into the <code class="fw-bold">+</code> field. Usually, you will find any desired result in under 200,000 advances.</li>
+            <p></p>
+            <li>Select your <code class="fw-bold">Target</code> from the drop-down menu, and click the <code class="fw-bold">Bonus Only?</code> checkbox if you are aiming for results that produce multiple rare Pok&eacute; Balls.</li>
+            <p></p>
+            <li>Refer to the table above for recipes that produce rare items. Select the items you plan to add to the Cram-o-matic. You may add the items in any order, but the order in owoow must match the order in-game for accurate prediction.</li>
+            <p></p>
+            <li>Tick the <code class="fw-bold">Consider Menu Close?</code> checkbox, then enter the NPC count that you calibrated earlier. You can now begin searching for targets.</li>
+        </ol>
+
+        <p>If you are not seeing any results, you may not have the correct ingredients selected. For example, if you are looking for Heavy Balls but did not add any Black Apricorns, the Cram-o-matic will never produce a Heavy Ball.</p>
+        <p>If you have verified the ingredients and still do not find any results, you will need to increase your search range, change your search filters to be less restrictive, or reset the game for a better seed.</p>
+        <p>Note that you can change the order of items you add to alter the results. For example, if the first hit generates based on the 3rd item, you can make sure to add a specific Apricorn in the 3rd slot to take advantage of the result.</p>
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 3 -</span> Target Found!</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/cram-o-matic/target-found-cram.png" alt="cram-o-matic-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/cram-o-matic/target-found-cram.png"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header text-light" style="background-color: #0c0038;" id="advancing-towards-a-target-cram">
+        <span class="fw-bold">Advancing Towards a Target</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>In this example, a Safari Ball with the 5x bonus will be produced in a {% include tooltips/clusters.html %} from advances 40,329-40,331. We will aim to close the <code class="fw-bold">X Menu</code> on these advances, then quickly interact with the Cram-o-matic to lock in our desired result.</p>
+
+        <p>It is important to interact with the Cram-o-matic on the advance that produces the expected result. Once the dialogue box is open, the reward will be locked in unless the player backs out of the dialogue to the overworld.</p>
+
+        <h6 class="fw-bold">Step-by-Step</h6>
+        <ol>
+            <li>
+                Advance toward your target using any of the methods listed on <a href="/retail/swsh/overworld/advancing-the-rng-state" target="_blank">this page</a>.
+                <p></p>
+                <ul>
+                    <li>If your target is over 50,000 advances away, consider using <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/wet-weather.gif">wet weather</a> (will require exiting the Dojo) or <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/date-skipping.gif">date skipping</a>. It is unlikely you will need to use these methods.</li>
+                    <p></p>
+                    <li>For closer targets, consider using <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/npc-activation.gif">NPC activation</a> (use any of the NPCs in the Dojo) or <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/menu-close.gif">menu close</a> to advance shorter distances. Most targets will be within this range.</li>
+                </ul>
+                <p></p>
+            <li>Stop advancing once you are ~300-500 advances before your target. Give yourself more leeway if you have left your position or do not have a rough idea of how many advances have occured. If you have moved, reposition yourself in front of the Cram-o-matic so you can immediately interact with it.</li>
+            <p></p>
+            <li>
+                Open the <code class="fw-bold">X Menu</code> to pause the game then re-identify your current seed. Click <code class="fw-bold">Update Seeds</code> on the main window of owoow after re-identification to reflect your current seed into the active subwindow.
+                <p></p>
+                <ul>
+                    <li>If you are not yet within a few hundred advances of your target, use either of the "closer target" advancement methods listed in step 1 to advance the RNG state until you have reached the correct point. Be careful as you do not want to overshoot your target frame.</li>
+                </ul>
+                <p></p>
+            <li>
+                Ensure that the <code class="fw-bold">Consider Menu Close?</code> checkbox is checked in the Cram-o-matic subwindow, and confirm that your NPC count has been calibrated and entered correctly. Search for your target again.
+                <p></p>
+                <ul>
+                    <li>Do not use the <code class="fw-bold">Holding Direction?</code> checkbox on owoow. This increases the difficulty of hitting your target frame as we are already standing next to the Cram-o-matic.</li>
+                </ul>
+                <p></p>
+            <li>From this point, use <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/animations.gif">attack animations</a> to reach the exact target frame. You can re-identify your current seed at any point if you wish.</li>
+            <p></p>
+            <li>Close the Pok&eacute;mon window so you are on the main <code class="fw-bold">X Menu</code>.</li>
+            <p></p>
+            <li>Unpause the game by pressing B. Do not move the control stick when unpausing as we are already positioned next to the Cram-o-matic.</li>
+            <p></p>
+            <li>Quickly interact with the Cram-o-matic to lock your item result in place. Now you can take your time feeding the correct combination of items in the correct order to produce the expected reward.</li>
+        </ol>
+    </div>
+</div>
+<br />
+
+<span class="fw-bold">Figure 4 -</span> Target Frame Hit!<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/cram-o-matic/target-hit-cram.png" alt="cram-o-matic-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/cram-o-matic/target-hit-cram.png"><p></p>
+
+<p>In Figure 4, we closed the <code class="fw-bold">X Menu</code> on the desired target frame and quickly interacted with the Cram-o-matic. Now we need to feed it the correct combination of items, which should produce the expected reward.</p>
+
+<span class="fw-bold">Figure 5 -</span> Result Found!<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/cram-o-matic/result-found-cram.png" alt="cram-o-matic-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/cram-o-matic/result-found-cram.png"><p></p>
+
+<p><span class="fw-bold">That's all there is to RNG manipulating the Cram-o-matic (RETAIL)!</span></p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/item">
+    Head back to the <span class="fw-bold">main page</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a><p></p>

@@ -1,555 +1,228 @@
 ---
 layout: default
-title: Item RNG (Retail)
+title: Item RNG (RETAIL)
 permalink: /retail/swsh/item/
 ---
 
-<style>
-  mark {
-    background-color: #FFD700;
-    color: black;
-  }
-
-  .card-bg {
-    background-color: #d1d1d1;
-    border-bottom-right-radius: 0.20rem !important;
-    border-bottom-left-radius: 0.20rem !important;
-  }
-
-  table,
-  th,
-  td {
-    border: 1px solid black;
-  }
-
-  blockquote {
-  background: #c5c5c5;
-  border: 1px solid #9e9e9e;
-  border-left: 5px solid #0c0038;
-  margin: 1.5em 2px;
-  padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
-  }
-</style>
-
 <div class="title" style="background-color: #0c0038;">
-  <h1 class="text-light text-center pt-3 pb-3">SwSh Item RNG Guide (Retail)</h1>
-</div><hr />
-
-<p>This guide will cover the process of RNG abusing item machines (Cram-o-Matic, Rotom Lottery) and NPCs (Watt Trader) in Sword/Shield, using the SWSH Overworld RNG Generator by <a href="https://github.com/LegoFigure11">LegoFigure11</a>. Item RNG abuse is best utilized to help players obtain rare/valuable items such as rare Pokeballs.</p>
-
-<p><span class="fw-bold" style="color: #b60606;">From here this guide assumes you are using an unmodified Switch console.</span></p>
-
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/item">
-  Click here if you are using a Switch console running <span class="fw-bold">Atmosphere CFW</span>!
-  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-  </svg>
-</a>
-<br />
-
-<div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="requirements-swsh-item-retail">
-    <span class="fw-bold text-light">Requirements</span>
-  </div>
-  <div class="card-body card-bg">
-    <h5><span class="fw-bold">Download Links</span></h5>
-    <ul>
-      <li><a href="https://github.com/LegoFigure11/swsh-overworld-rng-gui/releases">SWSH Overworld RNG Generator</a></li>
-      <li>Any standard calculator (e.g Windows Calculator)</li>
-    </ul>
-
-    <small><span class="fw-bold">Note -</span> <a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-6.0.413-windows-x64-installer">.NET 6.0</a> is a requirement to use the SWSH OWRNG Generator GUI. Ensure that this has been properly installed before continuing.</small>
- </div>
+    <h1 class="text-light text-center pt-3 pb-3">SwSh Item RNG Guide (RETAIL)</h1>
 </div>
+<small class="text-muted mb-3 mt-0">
+    A guide for manipulating item and in-game currency NPCs using <a class="text-decoration-none text-muted" href="https://github.com/LegoFigure11/owoow/">owoow</a> by <a class="text-decoration-none text-muted" href="https://github.com/LegoFigure11">LegoFigure11</a>.
+</small>
+<hr />
 
-<hr /><div class="title" style="background-color: #0c0038;">
-  <h1 class="text-light text-center pt-3 pb-3">Important Information</h1>
-</div><hr />
+<p span class="fw-bold" style="color: #b60606;">THIS PAGE IS UNDER CONSTRUCTION. PLEASE COME BACK WHEN COMPLETE!</p>
 
-<p>SWSH_OWRNG_Generator_GUI tracks the current RNG state and the number of advancements since connecting to the program. The RNG state advances naturally based on your location, the weather, and the number of NPCs present or active.</p>
+<h5 span class="fw-bold">Introduction</h5>
+<p>Item RNG manipulation offers an efficient method for farming rare items and in-game currency. By accurately predicting potential outcomes, players can maximize the effectiveness of their farming efforts, ensuring optimal use of time when farming for rare in-game resources by removing the element of luck.</p>
 
-<p>Different in-game actions can also be used to advance the RNG state with varying influence, the most useful actions can be found in the table directly below.</p>
-
-<table class="table table-striped" style="width:100%" id="advancementtable">
-  <thead class="table text-white" style="background-color: #0c0038;">
-      <th scope="col">Type of action</th>
-      <th scope="col">Description of action</th>
-      <th scope="col">Adv. influence</th>
-   </tr>
-       </thead>
-       <tbody id="results">
-   <tr>
-      <td><span class="fw-bold">Player Movement</span></td>
-      <td>Moving the player using the control stick, then letting the control stick fall back into it's resting state. This Includes whistle and bike bell.<br /><br /></td>
-      <td>1-3 Advancements per input.</td>
-  </tr>
-  <tr>
-     <td><span class="fw-bold">Menu Close</span></td>
-     <td>Opening and closing the pause menu using the <code class="fw-bold">X</code> button.<br /><br /></td>
-     <td>Varying depending on location and environment, predictable (explained below).</td>     
- </tr>
-  <tr>
-     <td><span class="fw-bold">NPC Activation</span></td>
-     <td>Standing near an NPC to make them notice the player. Moving away from an NPC will cause them to "deactivate". Useful for covering short distances quickly.<br /><br /></td>
-     <td>~2500 advancements per minute.</td>     
-</tr>
- <tr>
-     <td><span class="fw-bold">Animations/Motions</span></td>
-     <td>Having your Pokémon animate on the summary screen or party menu by clicking in the <code class="fw-bold">L3</code> button, or by using the <code class="fw-bold">Skip</code> feature.<br /><br /></td>
-     <td>+1 advancement <u>per animation</u> on the individual Pokémon summary screen.<br /><br />
-     +1 advancement <u>per button input</u> on the party summary screen.</td>     
-</tr>
-<tr>
-     <td><span class="fw-bold">Date Skipping</span></td>
-     <td>Using the date-skipping exploit to advance towards targets and reset time based events, this is the quickest way to advance frames.<p></p></td> 
-     <td>Variable influence based on the amount of Pokémon stored inside boxes, up to 15,000~ per day skipped.</td>     
-</tr>
-</tbody>
+<table class="table table-striped" style="width:100%" id="overworld-rng-table">
+    <thead class="table text-white" style="background-color: #0c0038;">
+        <tr>
+            <th scope="col" class="text-center" style="width:22%">RNG Type</th>
+            <th scope="col" class="text-center" style="width:37%">Description</th>
+            <th scope="col" class="text-center">Requirements</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/main-page/cram-o-matic.jpg">Cram-o-matic</a></span></td>
+            <td>
+                Farm rare PokeBalls (Apricorn, Safari, Sport) in the Isle of Armor Dojo.
+            </td>
+            <td>
+                <ul>
+                    <li>Access to the Isle of Armor DLC</li>
+                    <li>Access to the Cram-o-matic machine</li>
+                    <li>Plenty of Apricorns/Items to use</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/main-page/lottery.jpg">Loto-ID</a></span></td>
+            <td>
+                Farm Master Balls, PP Max, and Rare Candies at any PokeCenter using Trainer Information.
+            </td>
+            <td>
+                <ul>
+                    <li>Access to Wedgehurst PokeCenter</li>
+                    <li>(Recommended) Pokemon from various trainers</li>
+                    <li>One attempt per day without date skipping</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/main-page/watt-trader.jpg">Watt Trader</a></span></td>
+            <td>
+                Farm rare PokeBalls (Dream, Beast) at Snowslide Slope in Crown Tundra.
+            </td>
+            <td>
+                <ul>
+                    <li>Access to the Crown Tundra DLC</li>
+                    <li>Have plenty of Watts (200,000+)</li>
+                    <li>Have spoken to the Watt Trader NPC</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/main-page/digging-pa.jpg">Digging PA</a></span></td>
+            <td>
+                Farm unlimited Watts at the Isle of Armor desert biome to exchange for valuable items.
+            </td>
+            <td>
+                <ul>
+                    <li>Access to the Isle of Armor DLC</li>
+                    <li>Have plenty Armorite Ore to spend</li>
+                    <li>Have spoken to the Digging PA once</li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
 </table>
 
-<div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="date-skipping-options-retail">
-    <span class="fw-bold text-light">Date Skipping Information</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>The number of frames advanced by date-skipping varies depending on the number of Pokémon in your boxes. Fill your boxes with Pokémon (NOT EGGS) to maximize this feature. Track the rough amount of frame advancements per day skipped to avoid overshooting target frames.</p>
-
-    <h6><span class="fw-bold">How to Date Skip</span></h6>
-    <p>Date-skipping on retail hardware is a manual process that requires some initial setup, there are two methods you can use, the faster method requires a Nintendo Switch Online subscription or multiple consoles/games, while the slower method does not.</p>
-    
-    <h6><span class="fw-bold">Fast Method</span></h6>
-    <ol>
-      <li>Enter an online single or double battle, you can search without a code for quicker wait times.</li>
-      <li>Enter airplane mode once you enter the battle. Alternatively you can play out the whole battle if you wish.</li>
-      <li>From here navigate to the System Settings and change the date ahead by one day.</li>
-      <li>Exit back to the main menu of the home screen and reopen the game.</li>
-      <li>You should notice time-based events such as the Rotom Lottery function have reset and that the weather in the Wild Areas has changed.</li>
-      <li>From here you can date-skip easily by repeating step 3. This exploit needs to be re-activated every time the game is reset.</li>
-    </ol>
-
-    <details>
-      <summary><span class="fw-bold">Slow Method</span></summary>
-      <ol>
-        <li>Find an active Max Raid, interact with it, then click "Invite Others".</li>
-        <li>From here navigate to the System Settings and change the date ahead by one day.</li>
-        <li>Exit back to the main menu of the home screen and reopen the game.</li>
-        <li>You should notice time-based events such as the Rotom Lottery function have reset.</li>
-        <li>To repeat this process you will need to start again from step 1.</li>
-      </ol>
-    </details>
-  
-  </div>
-</div><br>
-
-<span class="fw-bold">Figure 1 -</span> Animation differences<p></p>
-<a href="./images/cram-o-matic/figure-0-animations-retail.gif" target="_blank"><img src="./images/cram-o-matic/figure-0-animations-retail.gif" class="img-fluid"></a><br /><br />
+<hr /><div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">Setup Requirements &amp; Overview</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    This section provides the required setup &amp; installation instructions, read through this information carefully.
+</small>
+<hr />
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="animation-differences-retail">
-    <span class="fw-bold text-light">Animation Differences</span>
-  </div>
-  <div class="card-body card-bg">
-    <h6><span class="fw-bold">What are motions/animations?</span></h6>
-        
-    <p>This refers to an in-game feature on the Pokémon summary screen or party menu. Pressing <code span class="fw-bold">L3 (pressing the left stick)</code> will cause your Pokémon to perform one of 2 animations, these will be referred to as "physical" and "special" animations.</p>
-    
-    <p>In the above image, we can see Espeon performing 2 different types of animation.</p>
+    <div class="anchored card-header" style="background-color: #0c0038;" id="setup-and-install-swsh-overworld-retail">
+        <span class="fw-bold text-light">Required Software</span>
+    </div>
+    <div class="card-body card-bg">
+        <h6><span class="fw-bold">Tools &amp; Applications</span></h6>
+        <ul>
+            <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-9.0.4-windows-x64-installer" target="_blank">.NET 9.0 Runtime</a></li>
+            <p></p>
+            <li><a href="https://github.com/LegoFigure11/owoow/releases/" target="_blank">Sword/Shield Overworld RNG Tool (owoow)</a></li>
+        </ul>
 
-    <ol>
-      <li>In the first animation we can see Espeon lunging towards the screen, this is clearly Espeons physical animation.</li>
-      <li>In the second animation we can see Espeon standing in place using telekinesis, this is clearly Espeons special animation.</li>
-    </ol>
+        <h6><span class="fw-bold">Installation Instructions</span></h6>
+        <ol>
+            <li>Download <code span class="fw-bold">.NET 9.0</code> and run the setup wizard until complete. This is a required program dependency.</li>
+            <p></p>
+            <li>Download and extract <code span class="fw-bold">owoow.zip</code> into an fresh, empty folder.</li>
+            <p></p>
+            <li>Run <code span class="fw-bold">owoow.exe</code> to ensure the program opens and works as intended.</li>
+        </ol>
 
-    <blockquote>It is important to pick a Pokémon with a clear physical/special example. This can be anything you want, just make sure the animation difference is obvious to you.</blockquote>
-    
-  </div>
-</div><br>
+    </div>
+</div>
+<br />
 
-<span class="fw-bold">Figure 2 -</span> Retail Seed Finder Overview<p></p>
-<a href="./images/cram-o-matic/figure-2-seedfinder-window-overview-retail.gif" target="_blank"><img src="./images/cram-o-matic/figure-2-seedfinder-window-overview-retail.gif" class="img-fluid"></a><br /><br />
-
-<div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="seed-finder-overview">
-    <span class="fw-bold text-light">Retail Seed Finder Overview</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>The Retail Seed Finder subwindow is where players can calculate their current seed, this is done by recording a sequence of 128 motions/animations in a row.</p>
-          
-    <h6><span class="fw-bold">Initial Seed Finding Instructions</span></h6>
-      <ol>
-        <li>Open the pause menu in-game, then open the <code span class="fw-bold">Retail Seed Finder</code> subwindow on SwSh OWRNG Generator GUI.</li>
-        <li>Open the party menu, select the Pokémon you will use to record animations, then click <code span class="fw-bold">Summary</code>.</li>
-        <li>Use the <code span class="fw-bold">L3</code> button to cause an animation, take note of if the animation was physical or special.</li>
-        <li>If the animation was physical, press the <code span class="fw-bold">(0) Physical</code> button. If the animation was special, press the <code span class="fw-bold">(1) Special</code> button.</li>
-        <li>Repeat this process 128 times in a row and a seed will be produced. Click the <code span class="fw-bold">Update Main Form</code> button to paste it into the main window.</li>
-        <li>If a seed was not produced this indicates that the animations were not recorded properly, try again.</li>
-      </ol>
-
-    <h6><span class="fw-bold">Seed Re-identification</span></h6>
-    <p>Re-identifying your current seed is done using the Retail Advances Tracker feature of the Main Window, and is essentially a simplified version of finding your seed using animations.</p>
-    
-      <ol>
-        <li>Click the <code span class="fw-bold">Generate Pattern</code> button after initially identifying your seed.</li>
-        <li>Record a sequence of 8-20 animations using the above mentioned method, the amount can vary but should be relatively quick.</li>
-        <li>Once a seed has been produced, click the <code span class="fw-bold">Update States</code> button to paste your current seed into the top-left of the main window.</li>
-      </ol>
-
-    <blockquote>Recording animations through the Pokémon summary screen is recommended, this is due to the party menu advancing +1 per button clicked, the summary screen advances +1 per animation, making it easier to keep track of.</blockquote>
-    
-  </div>
-</div><br>
-
-<p><span class="fw-bold">If your results are not desirable, you will need to reset the game and identify your current seeds again.</span></p>
-
-<span class="fw-bold">Figure 3 -</span> Menu Close Advances Viewer window overview<p></p>
-<a href=./images/cram-o-matic/figure-3-menu-close-advances-viewer-overview-retail.gif" target="_blank"><img src="./images/cram-o-matic/figure-3-menu-close-advances-viewer-overview-retail.gif" class="img-fluid"></a><br /><br />
+<span class="fw-bold">Figure 1 -</span> Owoow Overview<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/main-page/owoow-overview-item.png" alt="owrng-item-setup-cfw-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/main-page/owoow-overview-item.png"><p></p>
 
 <div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="menu-close-overview-item-retail">
-    <span class="fw-bold text-light">Menu Close Advances Viewer Overview</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>The Menu Close Advances Viewer sub window (pictured above), predicts the number of advancements from closing the pause menu. This advancement method is recommended as closing the pause menu freezes the RNG state for a few seconds, making it an extremely consistent method of hitting an exact target frame.</p>
-      
-    <p>After entering your seeds and hitting search, a table will appear. The <code class="fw-bold">Jump</code> column of the table displays the amount of advancements that will occur from closing the pause menu, this number varies based on the amount of NPCs in your area, so it is important to calibrate your NPC count when attempting to use menu close prediction.</p>
+    <div class="anchored card-header" style="background-color: #0c0038;" id="item-owoow-overview-retail">
+        <span class="fw-bold text-light">RNG Tool Overview</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Upon launching owoow for the first time, you will see a navigation bar at the top of the page with multiple button options. Each button is assigned to a tool, and the function of the tool is clearly labeled, making it easy to understand.</p>
 
-    <details>
-      <summary><span class="fw-bold">Likely NPC Counts</span></summary>
-      <ul>
-      <li>Wedgehurst Pokemon Center (Loto) = 5 NPCs</li>
-      <li>Isle of Armor Dojo (Cram-o-Matic)= 21 NPCs with completed story</li>
-      <li>Snowslide Slope (Watt Trader)= 1-2 NPCs, requires calibration</li>
-    </ul>
-    </details><hr />
+        <h6><span class="fw-bold">Button Overview</span></h6>
+        <ul>
+            <li><span class="fw-bold">Loto-ID -</span> Used for manipulating the Rotom Lottery.</li>
+            <li><span class="fw-bold">Cram-o-matic -</span> Used for manipulating the Cram-o-matic.</li>
+            <li><span class="fw-bold">Watt Trader -</span> Used for manipulating the Watt Trader.</li>
+            <li><span class="fw-bold">Digging PA -</span> Used for manipulating the Digging PA.</li>
+            <li><span class="fw-bold">Wailord Respawn -</span> Used for respawning the Isle of Armor Wailord.</li>
+        </ul>
 
-    <h6 span class="fw-bold">How to Calibrate NPC Count</h6>
-      <ul>
-        <li>Use <code span class="fw-bold">Retail Seed Finder</code> to identify your current seed, make sure to click <code span class="fw-bold">Update Main Form</code> button after doing so.</li><p></p>
-        <li>Close the pause menu once and quickly re-open it, this will advance the RNG state. From here you will need to re-identify your current seed using the above method.</li><p></p>
-        <li>Take note of the amount of the total amount of advancements that have occured from re-identifying your seed, then subtract the amount of animations were consumed from re-identification.</li>
-      </ul>
+        <p><small>Although Wailord Respawn is not directly related to item RNG manipulation it will be included in this guide as the underlying concepts are the exact same.</small></p>
+    </div>
+</div>
 
-    <blockquote><span class="fw-bold">Example -</span> If a total of 15 advancements occured from seed re-identification, and only 8 advancements were consumed from animations, a total of 7 advancements occured from closing the pause menu.</blockquote>
-    
-      <ul>
-        <li>Without clicking the <code span class="fw-bold">Update States</code> button, open the <code span class="fw-bold">Menu Close Advances Viewer</code> sub window, make sure the seeds inside the window match the top left of the main window.</li><p></p>
-        <li>Search using the suggested NPCs listed above, If the number inside the <code class="fw-bold">Jump</code> column does not match, increase or decrease the number of NPCs by 1 until everything aligns properly with what is expected.</li><p></p>
-        <li>In this example, we expect to see +7 in the <code class="fw-bold">Jump</code> column, so we would gradually alter the NPC value until +7 appears to get the correct NPC count.</li>
-      </ul>
+<hr /><div class="title" style="background-color: #0c0038;" id="the-basics">
+    <h1 class="text-light text-center pt-3 pb-3">The Basics</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    Learn about the common and advanced techniques used to advance the RNG state and hit target frames.
+</small>
+<hr />
 
-    <blockquote>We highly recommend becoming familiar with NPC count calibration before continuing with the guide. This method is used in almost all cases as it provides the most consistency.</blockquote>
+<h5 span class="fw-bold" id="seed-finding-and-monitoring">Seed Finding and Seed Monitoring:</h5>
 
-  </div>
-</div><br>
+<p>Learn how to find your current seed on retail hardware, and understand how to identify your current RNG state at any given point. Understanding these concepts is crucial players on retail hardware.</p>
 
-<p><span class="fw-bold">With all the required reading out of the way, let's get into it!</span> Click one of the below links to jump to the section that applies to you.</p>
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/overworld/seed-finding-and-monitoring" target="_blank">
+    Continue to <span class="fw-bold">finding your seed</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+<hr />
 
-<ul>
-  <li><a href="#cram-o-matic-rng-abuse-retail">Cram-o-Matic</a></li>
-  <li><a href="#loto-rng-abuse-retail">Rotom PC Lottery</a></li>
-  <li><a href="#watt-trader-rng-abuse-retail">Watt Trader</a></li>
-</ul>
+<h5 span class="fw-bold" id="advancing-the-rng-state">Advancing the RNG State</h5>
+
+<p>Explore the various techniques used to advance the RNG state. Some actions advance the RNG state slowly, some will advance in a predictable manner, and others will cause the state to advance in a rapid and unpredictable manner.</p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/overworld/advancing-the-rng-state" target="_blank">
+    Continue to <span class="fw-bold">advancing the RNG state</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+<hr />
+
+<h5 span class="fw-bold" id="menu-close-prediction">NPC Calibration</h5>
+
+<p>Using menu close prediction to advance the RNG state in a predictable manner. This essentially guarantees success in hitting the correct target frame. Menu close prediction is used extensively throughout the guide, regardless of the type of encounter you choose to manipulate.</p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/overworld/menu-close-prediction" target="_blank">
+    Continue to <span class="fw-bold">NPC calibration</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
 
 <hr /><div class="title" style="background-color: #0c0038;">
-  <h1 class="text-light text-center pt-3 pb-3" id="cram-o-matic-rng-abuse-retail">Cram-o-matic RNG abuse</h1>
-</div><hr />
-
-<p>The goal is to interact with the Cram-o-Matic machine on the calculated target frame given to us by the <code class="fw-bold">Cram-o-Matic</code> window of the generator, we will be using the advancement methods listed in the table above to hit the target frame, most notably, menu close, animations & date skipping.</p>
-
-<p>In this example we will be aiming for a 5 Level Balls. You can be more specific with the filters if you wish, such as filtering for specific rare items.</p>
-
-<span class="fw-bold">Figure 1 -</span> Tool setup:<p></p>
-<a href="./images/cram-o-matic/figure-1-cram-retail-seedfinder.gif" target="_blank"><img src="./images/cram-o-matic/figure-1-cram-retail-seedfinder.gif" class="img-fluid"></a><br /><br />
-
-<p>In Figure 1, we can see that the current seed has been identified using the <a href="#seed-finder-overview">above mentioned method</a>, and the search filters have been set inside the <code class="fw-bold">Cram-o-Matic</code> sub window.</p>
-
-<span class="fw-bold">Figure 2 -</span> Game setup<p></p>
-<a href="./images/cram-o-matic/figure-2-game-setup-cram-retail.jpg" target="_blank"><img src="./images/cram-o-matic/figure-2-game-setup-cram-retail.jpg" sclass="img-fluid"></a><br /><br />
-
-<p>In Figure 2, the player is standing directly facing the Cram-o-Matic machine in game, close enough to interact with it within a single <code class="fw-bold">A</code> button press.</p>
-
-<div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="setup-cram-o-matic-retail">
-    <span class="fw-bold text-light">Cram-o-Matic Setup</span>
-  </div>
-  <div class="card-body card-bg">
-    <ol>
-      <li>Progress the Isle of Armor story to the point of having access to the Cram-o-Matic.</li>
-      <li>Have at least 4 apricorns in your inventory to throw into the machine.</li>
-      <li>Stand facing to the Cram-o-Matic, then press the <code class="fw-bold">X</code> button to pause the game.</li>
-      <li>Identify your current seed using the <a href="#seed-finder-overview">retail seed finder method</a> described above.</li>
-      <li>Set your search filters, then click the <code class="fw-bold">Search</code> button to check for desirable target frames.</li>
-    </ol>
-
-    <blockquote>If you do not find a suitable target frame, save and restart the game, then repeat the above process until a target has been found.</blockquote>
- </div>
-</div><br />
-
-<span class="fw-bold">Figure 3 -</span> Target found!<p></p>
-<a href="./images/cram-o-matic/figure-3-target-found-cram-retail.png" target="_blank"><img src="./images/cram-o-matic/figure-3-target-found-cram-retail.png" class="img-fluid"></a><br /><br />
-
-<p><span class="fw-bold">We found a target frame!</span> 5 Rare balls on advance 41. This will be the frame we close the pause menu and interact with the Cram-o-Matic machine, as we are using the <code class="fw-bold">Consider menu close</code> feature.</p>
-
-<p><code class="fw-bold">Consider menu close</code> provides the frame to close the pause menu on to land directly onto your desired target frame, this feature is recommended as it does the menu close calculations for you.</p>
-
-<hr /><div class="title" style="background-color: #0c0038;">
-  <h1 class="text-light text-center pt-3 pb-3">Advancing Towards a Target</h1>
-</div><hr />
-
-<p>First you will need to calibrate the amount of NPCs in the area. Using the <a href="#menu-close-overview-item-retail">above mentioned method</a> we calculated that there are 21 NPCs inside the Dojo. This number is consistent even when resetting the game, but subject to change based on story progression.</p>
-
-<div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="advancing-to-target-cram-retail">
-    <span class="fw-bold text-light">Hitting Your Target Frame</span>
-  </div>
-  <div class="card-body card-bg">
-
-    <ul>
-      <li>Advance towards your target frame using <code class="fw-bold">date skipping</code> (large distances) or <code class="fw-bold">menu close</code> + <code class="fw-bold">animations</code> (small distances)</a></li><p></p>
-      <li>Re-identify your current seed periodically to avoid overshooting your target frame, click the <code class="fw-bold">Update States</code> button and re-open the <code class="fw-bold">Cram-o-Matic</code> sub window after doing so.</li><p></p>
-      <li>Once you are within a few hundred advancements away from your target, stand facing the Cram-o-Matic machine, near enough to interact with it in a single <code class="fw-bold">A</code> button press, then pause the game.</li><p></p>
-      <li>Re-identify your current seed once more and click the <code class="fw-bold">Update States</code> button on the main window again to reflect your new current seed, then close and re-open the <code class="fw-bold">Cram-o-Matic</code> sub window.</li>
-    </ul>
-
-    <blockquote>From this point it's recommended to only use <code class="fw-bold">menu close</code> & <code class="fw-bold">amimation</code> advancements as they advance in small increments, making them easy to keep track of.</blockquote>
-
-    <ul>
-      <li>Enter the amount of NPCs (calibrated earlier) into the <code class="fw-bold">NPCs</code> field and click the <code class="fw-bold">Consider menu close</code> checkbox, then click the <code class="fw-bold">Search</code> button. If you can see your target frame, great! Ignore the next 2 steps.</li><p></p>
-      <li>If you cannot see your target frame, increment the number in the <code class="fw-bold">Init Adv.</code> field by 1 until your target frame becomes visible. You will now need to advance a number of frames using animations based on the number inside the <code class="fw-bold">Init Adv.</code> field.</li><p></p>
-      <li>Open the Pokemon summary screen and perform the correct amount of advancements, for example if you have 3 inside the <code class="fw-bold">Init Adv.</code> field, do 3 animation advancements to line yourself up properly. You will now have a new target frame.</li>
-    </ul>
-
-    <blockquote>In rare cases, your target frame will not be visible at all, this means you cannot hit your target using menu close prediction by itself. Instead, aim to get as close as you can using menu close prediction, then use player movement advancements to hit your target seed instead.</blockquote>
-
-    <ul>
-       <li>Open and close the pause menu until closing the menu a single time lands onto (or close to) your target frame. Pay attention to the amount of animation advancements consumed to avoid overshooting.</li><p></p>
-       <li>Close the pause menu, if you believe you have landed directly onto your target frame, quickly interact with the machine and feed it the appropriate apricorns to grab your reward.</li><p></p>
-       <li>If you can only land near your target, do movement advancements here instead (these consume 1-2 advancements, commonly 1), then quickly interact with the machine.</li>
-    </ul>
-
-    <blockquote>Remember, the goal is to interact with the machine on the correct frame, as long as you hit your target seed and stayed within the dialogue without backing out, you will achieve your desired result.</blockquote>
-
-   </div>
-</div><br />
-
-<span class="fw-bold">Figure 4/5 -</span> Result Found!<p></p>
-<a href="./images/cram-o-matic/figure-4-result-found-gui-cram-retail.png" target="_blank"><img src="./images/cram-o-matic/figure-4-result-found-gui-cram-retail.png" class="img-fluid"></a><br /><br />
-<a href="./images/cram-o-matic/figure-5-result-found-cram-retail.jpg" target="_blank"><img src="./images/cram-o-matic/figure-5-result-found-cram-retail.jpg" class="img-fluid"></a><br /><br />
-
-<p>The result matches the output given by the <code class="fw-bold">Cram-o-Matic</code> sub window, mission accomplished! We got 5 Level Balls from the Cram-o-Matic machine on the first attempt!</p>
-
-<p><span class="fw-bold">That's all there is to RNG abusing the Cram-o-Matic on retail hardware!</span></p>
-
-<hr /><div class="title" style="background-color: #0c0038;">
-  <h1 class="text-light text-center pt-3 pb-3" id="loto-rng-abuse-retail">Rotom Lottery RNG abuse</h1>
-</div><hr />
-
-<p>The goal is to interact with the Rotom PC in the PokeCenter on the calculated target frame given to us by the <code class="fw-bold">Loto-ID</code> window of the generator to obtain a Master Ball. We will be using the advancement methods listed in the table above to hit the target frame, most notably, menu close, animations & date skipping.</p>
-
-<p><code class="fw-bold">Loto-ID.txt</code> is a text file that comes with the program, which can be used to output results based on a list of TIDs. The Rotom lottery game reads the TIDs of all the Pokemon inside your boxes, so if you have Pokemon stored in your boxes from multiple save files, you may find it helpful to create a list of TIDs to increase your odds of finding a result.</p>
-  
-<span class="fw-bold">Figure 1 -</span> Tool setup:<p></p>
-<a href="./images/roto-id/figure-1-loto-retail-seedfinder.gif" target="_blank"><img src="./images/roto-id/figure-1-loto-retail-seedfinder.gif" class="img-fluid"></a><br /><br />
-
-<p>In Figure 1, we can see that the current seed has been identified using the <a href="#seed-finder-overview">above mentioned method</a>, and the search filters have been set inside the <code class="fw-bold">Loto-ID</code> sub window.</p>
-
-<span class="fw-bold">Figure 2 -</span> Game setup<p></p>
-<a href="./images/roto-id/figure-2-game-setup-loto-retail.jpg" target="_blank"><img src="./images/roto-id/figure-2-game-setup-loto-retail.jpg" class="img-fluid"></a><br /><br />
-
-<p>In Figure 2, the player is standing directly facing the PC in Wedgehurst PokeCenter, close enough to interact with it within a single <code class="fw-bold">A</code> button press.</p>
-
-<div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="setup-lottery-retail">
-    <span class="fw-bold text-light">Rotom Lottery Setup</span>
-  </div>
-  <div class="card-body card-bg">
-    <ol>
-      <li>Stand facing to the PC in Wedgehurst PokeCenter, then press the <code class="fw-bold">X</code> button to pause the game.</li>
-      <li>Identify your current seed using the <a href="#seed-finder-overview">retail seed finder method</a> described above.</li>
-      <li>Set your search filters, then click the <code class="fw-bold">Search</code> button to check for desirable target frames.</li>
-    </ol>
-
-    <blockquote>If you do not find a suitable target frame, save and restart the game, then repeat the above process until a target has been found.</blockquote>
- </div>
-</div><br />
-
-<span class="fw-bold">Figure 3 -</span> Target found!<p></p>
-<a href="./images/roto-id/figure-2-game-setup-loto-retail.jpg" target="_blank"><img src="./images/roto-id/figure-3-target-found-loto.png" class="img-fluid"></a><br /><br />
-
-<p><span class="fw-bold">We found a target frame!</span> a Master Ball on advance 52. This will be the frame we close the pause menu and interact with the PC, as we are using the <code class="fw-bold">Consider menu close</code> feature.</p>
-
-<p><code class="fw-bold">Consider menu close</code> provides the frame to close the pause menu on to land directly onto your desired target frame, this feature is recommended as it does the menu close calculations for you.</p>
-
-<hr /><div class="title" style="background-color: #0c0038;">
-<h1 class="text-light text-center pt-3 pb-3">Advancing Towards a Target</h1>
-</div><hr />
-
-<p>First you will need to calibrate the amount of NPCs in the area. Using the <a href="#menu-close-overview-item-retail">above mentioned method</a> we calculated that there are 7 NPCs inside the PokeCenter. This number is consistent even when resetting the game, but subject to change based on the PokeCenter you are in.</p>
-
-<div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="advancing-to-target-lotto-retail">
-    <span class="fw-bold text-light">Hitting Your Target Frame</span>
-  </div>
-  <div class="card-body card-bg">
-
-    <ul>
-      <li>Advance towards your target frame using <code class="fw-bold">date skipping</code> (large distances) or <code class="fw-bold">menu close</code> + <code class="fw-bold">animations</code> (small distances)</a></li><p></p>
-      <li>Re-identify your current seed periodically to avoid overshooting your target frame, click the <code class="fw-bold">Update States</code> button and re-open the <code class="fw-bold">Loto-ID</code> sub window after doing so.</li><p></p>
-      <li>Once you are within a few hundred advancements away from your target, stand facing the Rotom PC, near enough to interact with it in a single <code class="fw-bold">A</code> button press, then pause the game.</li><p></p>
-      <li>Re-identify your current seed once more and click the <code class="fw-bold">Update States</code> button on the main window again to reflect your new current seed, then close and re-open the <code class="fw-bold">Loto-ID</code> sub window.</li>
-    </ul>
-
-    <blockquote>From this point it's recommended to only use <code class="fw-bold">menu close</code> & <code class="fw-bold">amimation</code> advancements as they advance in small increments, making them easy to keep track of.</blockquote>
-
-    <ul>
-      <li>Enter the amount of NPCs (calibrated earlier) into the <code class="fw-bold">NPCs</code> field and click the <code class="fw-bold">Consider menu close</code> checkbox, then click the <code class="fw-bold">Search</code> button. If you can see your target frame, great! Ignore the next 2 steps.</li><p></p>
-      <li>If you cannot see your target frame, increment the number in the <code class="fw-bold">Init Adv.</code> field by 1 until your target frame becomes visible. You will now need to advance a number of frames using animations based on the number inside the <code class="fw-bold">Init Adv.</code> field.</li><p></p>
-      <li>Open the Pokemon summary screen and perform the correct amount of advancements, for example if you have 3 inside the <code class="fw-bold">Init Adv.</code> field, do 3 animation advancements to line yourself up properly. You will now have a new target frame.</li>
-    </ul>
-
-    <blockquote>In rare cases, your target frame will not be visible at all, this means you cannot hit your target using menu close prediction by itself. Instead, aim to get as close as you can using menu close prediction, then use player movement advancements to hit your target seed instead.</blockquote>
-
-    <ul>
-       <li>Open and close the pause menu until closing the menu a single time lands onto (or close to) your target frame. Pay attention to the amount of animation advancements consumed to avoid overshooting.</li><p></p>
-       <li>Close the pause menu, if you believe you have landed directly onto your target frame, quickly interact with the Rotom PC and go through the lottery dialogue to grab your reward.</li><p></p>
-       <li>If you can only land near your target, do movement advancements here instead (these consume 1-2 advancements, commonly 1), then quickly interact with the Rotom PC.</li>
-    </ul>
-
-    <blockquote>Remember, the goal is to interact with the machine on the correct frame, as long as you hit your target seed and stayed within the dialogue without backing out, you will achieve your desired result.</blockquote>
-
-   </div>
-</div><br />
-
-<span class="fw-bold">Figure 4/5 -</span> Result Found!<p></p>
-<a href="./images/roto-id/figure-4-result-found-loto-retail.png" target="_blank"><img src="./images/roto-id/figure-4-result-found-loto-retail.png" class="img-fluid"></a><br /><br />
-<a href="./images/roto-id/figure-5-result-found-switch-loto-retail.jpg" target="_blank"><img src="./images/roto-id/figure-5-result-found-switch-loto-retail.jpg" class="img-fluid"></a><br /><br />
-
-<p>The result matches the output given by the <code class="fw-bold">Loto-ID</code> sub window, mission accomplished! We got a Master Ball from the lottery machine on the first attempt!</p>
-
-<p><span class="fw-bold">That's all there is to RNG abusing the lottery minigame on retail hardware!</span></p>
-
-<hr /><div class="title" style="background-color: #0c0038;">
-  <h1 class="text-light text-center pt-3 pb-3" id="watt-trader-rng-abuse">Watt Trader RNG abuse</h1>
-</div><hr />
-
-<p>The goal is to interact with the Watt Trader in Snowslide Slope on the calculated target frame given to us by the <code class="fw-bold">Watt Trader</code> window of the generator, we will be using the advancement methods listed in the table above to hit the target frame, most notably, menu close, animations & date skipping.</p>
-
-<p>In this example we will be aiming for a Dream Ball or Beast Ball, as these are the most valuable items that this trader has to offer.</p>
-
-<div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="required-setup-watt-trader-retail">
-    <span class="fw-bold text-light">Required Setup</span>
-  </div>
-  <div class="card-body card-bg">
-    <p>Before starting, stock up on enough PokeWatts to buy the rare balls from the trader, you will need 40,000 Watts per ball. Also unlock the Snowslide Slope fly point if you have not already done so by talking to the Watt Trader.</p>
-
-    <p>Now you will need to put your game in a specific state by following these instructions:</p>
-
-    <ul>
-      <li>Fly into Snowslide Slope, or move far enough away from the NPC so that he is no longer looking at the player.</li><p></p>
-      <li>Activate the fast date skipping method (NSO subscribers), or use the slow method by visiting a raid (no NSO) - <a href="#date-skipping-options-retail">Tutorial</a>.</li><p></p>
-      <li>Perform a date skip to reset time based events, you can confirm a skip has been performed based on the area weather.</li><p></p>
-      <li>It may take 2-3 skips to confirm a weather change, if the weather does not change then you are doing something incorrectly.</li><p></p>
-      <li>Once you have confirmed that your date skipping method works you can pause the game and save.</li>
-    </ul>
-
-    <blockquote><p>The Watt Trader NPCs items are locked in upon speaking to him for the first time during any day, this is why resetting time based events is important for hitting the correct target frame.</p>
-      You can save the game upon resetting time based events to preserve the correct NPC state, but this means you will need to reset the game after a failed attempt, and re-activate the fast date skipping exploit if used.</blockquote>
-
-   </div>
-</div><br />
-
-<span class="fw-bold">Figure 1 -</span> Slow Advancement Example<p></p>
-<a href="./images/watt-trader/slow-advancement-example.gif" target="_blank"><img src="./images/watt-trader/slow-advancement-example.gif" class="img-fluid"></a><br /><br />
-
-<p>Observing the above image, we can see that interacting with the Watt Trader using the above method does not cause the RNG state to rapidly advance (see the <code class="fw-bold">Curr Adv.</code> field on the bottom-left), but if we do not interact with the NPC quick enough...</p>
-
-<span class="fw-bold">Figure 2 -</span> Fast Advancement Example<p></p>
-<a href="./images/watt-trader/fast-advancement-example.gif" target="_blank"><img src="./images/watt-trader/fast-advancement-example.gif" class="img-fluid"></a><br /><br />
-
-<p>We can now see advancements are occuring at an almost uncontrollable rate. So you will need to interact with the Watt Trader quickly (as demonstrated in Figure 1) as the rapid advancements will cause you to miss your target frame.</p>
-
-<p><span class="fw-bold" style="color: #b60606;">Disclaimer -</span> The advancement rate was observed using Custom Firmware for the sake of demonstration, the rest of this guide is focused on using pure retail hardware.</p>
-
-<p>Once you are certain your in-game setup is correct, you can begin searching setting up SWSH_OWRNG_Generator_GUI.</p>
-
-<span class="fw-bold">Figure 3 -</span> Tool Setup<p></p>
-<a href="./images/watt-trader/figure-3-tool-setup-watt-trader.gif" target="_blank"><img src="./images/watt-trader/figure-3-tool-setup-watt-trader.gif" class="img-fluid"></a><br /><br />
-
-<p><span class="fw-bold">Awesome, everything looks good!</span> We can see our current seeds on the <code class="fw-bold">Watt Trader</code> tab and have our filters set properly to look for Dream Ball/Beast Ball. Time to stand begin searching for target frames!</p>
-
-<div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="setup-watt-trader-retail">
-    <span class="fw-bold text-light">Rotom Lottery Setup</span>
-  </div>
-  <div class="card-body card-bg">
-    <ol>
-      <li>Ensure that the in-game setup described above has been followed properly.</li>
-      <li>Identify your current seed using the <a href="#seed-finder-overview">retail seed finder method</a> described above.</li>
-      <li>Set your search filters, then click the <code class="fw-bold">Search</code> button to check for desirable target frames.</li>
-    </ol>
-
-    <blockquote>If you do not find a suitable target frame, save and restart the game, then repeat the above process until a target has been found.</blockquote>
- </div>
-</div><br />
-
-<span class="fw-bold">Figure 4 -</span> Target found!<p></p>
-<a href="./images/watt-trader/figure-4-target-found-watt-trader.png.png" target="_blank"><img src="./images/watt-trader/figure-4-target-found-watt-trader.png.png" class="img-fluid"></a><br /><br />
-
-<p><span class="fw-bold">We found a target frame!</span> a Dream Ball on advance 30. This will be the frame we close the pause menu and quickly dash over to interact with the Watt Trader NPC, as we are using the <code class="fw-bold">Consider menu close</code> feature.</p>
-
-<p><code class="fw-bold">Consider menu close</code> provides the frame to close the pause menu on to land directly onto your desired target frame, this feature is recommended as it does the menu close calculations for you.</p>
-
-<hr /><div class="title" style="background-color: #0c0038;">
-  <h1 class="text-light text-center pt-3 pb-3">Advancing Towards a Target</h1>
-</div><hr />
-
-<p>First you will need to calibrate the amount of NPCs in the area. Using the <a href="#menu-close-overview-item-retail">above mentioned method</a> we calculated that there are x NPCs currently in Snowslide Slope. There are typically 0-2 NPCs in this area, but this number is subject to change when resetting the game, so calibration is important.</p>
-
-<div class="card border-dark">
-  <div class="anchored card-header" style="background-color: #0c0038;" id="advancing-to-target-watt-trader-retail">
-    <span class="fw-bold text-light">Hitting Your Target Frame</span>
-  </div>
-  <div class="card-body card-bg">
-
-    <ul>
-      <li>Advance towards your target frame using <code class="fw-bold">date skipping</code> (large distances) or <code class="fw-bold">menu close</code> + <code class="fw-bold">animations</code> (small distances)</a></li><p></p>
-      <li>Re-identify your current seed periodically to avoid overshooting your target frame, click the <code class="fw-bold">Update States</code> button and re-open the <code class="fw-bold">Watt Trader</code> sub window after doing so.</li><p></p>
-      <li>Once you are within a few hundred advancements away from your target, stand close to the Watt Trader NPC (around 5-6 steps away is enough to deactivate him), then pause the game.</li><p></p>
-      <li>Re-identify your current seed once more and click the <code class="fw-bold">Update States</code> button on the main window again to reflect your new current seed, then close and re-open the <code class="fw-bold">Watt Trader</code> sub window.</li>
-    </ul>
-
-    <blockquote>From this point it's recommended to only use <code class="fw-bold">menu close</code> & <code class="fw-bold">amimation</code> advancements as they advance in small increments, making them easy to keep track of.</blockquote>
-
-    <ul>
-      <li>Enter the amount of NPCs (calibrated earlier) into the <code class="fw-bold">NPCs</code> field and click the <code class="fw-bold">Consider menu close</code> checkbox, then click the <code class="fw-bold">Search</code> button. If you can see your target frame, great! Ignore the next 2 steps.</li><p></p>
-      <li>If you cannot see your target frame, increment the number in the <code class="fw-bold">Init Adv.</code> field by 1 until your target frame becomes visible. You will now need to advance a number of frames using animations based on the number inside the <code class="fw-bold">Init Adv.</code> field.</li><p></p>
-      <li>Open the Pokemon summary screen and perform the correct amount of advancements, for example if you have 3 inside the <code class="fw-bold">Init Adv.</code> field, do 3 animation advancements to line yourself up properly. You will now have a new target frame.</li>
-    </ul>
-
-    <blockquote>In rare cases, your target frame will not be visible at all, this means you cannot hit your target using menu close prediction by itself. Instead, aim to get as close as you can using menu close prediction, then use player movement advancements to hit your target seed instead.</blockquote>
-
-    <ul>
-       <li>Open and close the pause menu until closing the menu a single time lands onto (or close to) your target frame. Pay attention to the amount of animation advancements consumed to avoid overshooting.</li><p></p>
-       <li>Close the pause menu, if you believe you have landed directly onto your target frame, run towards the Watt Trader NPC and quickly interact with him (as seen in Figure 1).</li><p></p>
-       <li>If you can only land near your target, do movement advancements here instead (these consume 1-2 advancements, commonly 1), then quickly run towards and interact with him.</li>
-    </ul>
-
-    <blockquote>Remember, the goal is to interact with the NPC on the correct frame, as long as you hit your target seed and stayed within the dialogue without backing out, you will achieve your desired result.</blockquote>
-
-   </div>
-</div><br />
-
-<span class="fw-bold">Figure 5/6 -</span> Result Found!<p></p>
-<a href="./images/watt-trader/figure-5-result-found-watt-trader.png" target="_blank"><img src="./images/watt-trader/figure-5-result-found-watt-trader.png" class="img-fluid"></a><br /><br />
-
-<p>In the above image we can see that the game was unpaused on frame 30, and menu close prediction brought the current advancement to frame 33, which is the target frame when not factoring in menu close prediction. Then we quickly interacted with the Watt Trader to lock in our desired item.</p>
-
-<a href="./images/watt-trader/figure-6-result-found-switch-watt-trader.png" target="_blank"><img src="./images/watt-trader/figure-6-result-found-switch-watt-trader.png" class="img-fluid"></a><br /><br />
-
-<p>You will need to perform 2 date skips and 2 NPC interactions to claim your prize, as your prize will be available on the third consecutive day. After interacting with the NPC to hit your target frame, do the following:</p>
-
-<p>Exit out of dialogue -> date skip a single day -> interact with the watt trader -> Exit out of dialogue -> date skip a single day -> interact with the watt trader, you should now see your item available for purchase by checking Today's Highlight.</p>
-
-<p><span class="fw-bold">That's all there is to RNG abusing the Watt Trader on Snowslide Slope on retail hardware!</span> It may take you a few attempts to get a strong grasp of the process, but once you do it becomes easy to manipulate your desired item.</p>
+    <h1 class="text-light text-center pt-3 pb-3">Picking An RNG Type</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    Pick the type of RNG you wish to perform. Use the table above to understand the benefits of each RNG type.
+</small>
+<hr />
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/item/cram-o-matic">
+    <span class="fw-bold">CRAM-O-MATIC!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+<br>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/item/loto-id">
+    <span class="fw-bold">LOTO-ID!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+<br>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/item/watt-trader">
+    <span class="fw-bold">WATT TRADER!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+<br>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/item/digging-pa">
+    <span class="fw-bold">DIGGING PA!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+<br>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/item/wailord-respawn">
+    <span class="fw-bold">WAILORD RESPAWN!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>

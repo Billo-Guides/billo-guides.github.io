@@ -1,0 +1,201 @@
+---
+layout: default
+title: Watt Trader RNG (RETAIL)
+permalink: /retail/swsh/item/watt-trader/
+---
+
+<div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">Watt Trader RNG (RETAIL)</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    A guide for manipulating the daily highlight item from the Snowslide Slope Watt Trader NPC.
+</small>
+<hr />
+
+<p>The <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/main-page/watt-trader.jpg">Watt Trader</a> NPC is located at the bottom of Snowslide Slope in the Crown Tundra. Each day, this NPC has a different highlighted item, such as the rare Dream/Beast Balls. This guide will focus on manipulating his daily highlight item for a desirable result.</p>
+
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Important -</span> From here, we assume that you are familiar with key concepts described on the main page. If you are unsure about <a href="/retail/swsh/overworld/seed-finding-and-monitoring" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">seed monitoring</a>, <a href="/retail/swsh/overworld/advancing-the-rng-state" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">advancement methods</a>, or <a href="/retail/swsh/overworld/menu-close-prediction" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">NPC calibration</a>, please review the relevant sections before continuing.
+</div>
+
+<h6 span class="fw-bold">In-game Requirements</h6>
+<ul>
+    <li>Access to the Crown Tundra DLC</li>
+    <li>Plenty of Watts to spend on the highlight item (each rare Pok&eacute; Ball costs around 40,000 Watts)</li>
+    <li>Interacted with the NPC at least once to skip the introduction</li>
+</ul>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/item/digging-pa">
+    Need an easy method to farm Watts? Visit the <span class="fw-bold">Digging Pa RNG manipulation guide!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a><p></p>
+
+<p><span class="fw-bold">Figure 1 -</span> RNG Tool Setup</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/watt-trader/tool-setup-watt-trader.gif" alt="watt-trader-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/watt-trader/tool-setup-watt-trader.gif"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header text-light" style="background-color: #0c0038;" id="getting-started-watt-trader-rng-tool">
+        <span class="fw-bold">Getting Started (Tool Setup)</span>
+    </div>
+    <div class="card-body card-bg">
+        <ol>
+            <li>Set the weather in the <code class="fw-bold">Encounter Settings</code> section of the main owoow window to the current weather condition in Snowslide Slope.</li>
+            <p></p>
+            <ul>
+                <li>Avoid using Rain/Thunderstorm. These weather conditions are not supported as they are unnecessarily more difficult for no advantage.</li>
+            </ul>
+            <p></p>
+            <li>At the top of the main owoow window, click <code class="fw-bold">Watt Trader</code> to open the Watt Trader generator in a subwindow.</li>
+            <p></p>
+            <li>Enter your search filters, then enter the number of advances you want to search in the <code class="fw-bold">+</code> field. Usually you will find a result that produces a Dream/Beast Ball in 10,000 advances or fewer.</li>
+            <p></p>
+            <ul>
+                <li>Dream/Beast Balls are the rarest highlight items offered. If you are targeting a different item, you should expect to see them even more frequently.</li>
+            </ul>
+            <p></p>
+            <li>Set the correct weather condition if you have not already done so. This should have imported into the Watt Trader subwindow automatically if you followed step 2.</li>
+            <p></p>
+            <li>Tick the <code class="fw-bold">Consider Menu Close?</code> checkbox, but do not calibrate your NPC count yet as we require a specific in-game setup, which will be explained below.</li>
+        </ol>
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 2 -</span> Game Setup</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/watt-trader/game-setup-watt-trader.gif" alt="watt-trader-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/watt-trader/game-setup-watt-trader.gif"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header text-light" style="background-color: #0c0038;" id="getting-started-watt-trader-game">
+        <span class="fw-bold">Getting Started (Game Setup)</span>
+    </div>
+    <div class="card-body card-bg">
+        <ol>
+            <li>Head to the location in Snowslide Slope pictured above. If this is your first time, interact with the Watt Trader NPC at least once to unlock the fly point and complete his introduction.</li>
+            <p></p>
+            <li>Verify the weather condition by opening the map. If the current weather is Rain/Thunderstorm, change the date so the weather is anything calm.</li>
+            <p></p>
+            <li>Move far enough away so that the NPC deactivates, you can tell if you are positioned correctly because they will turn and go back into their idle animation.</li>
+            <p></p>
+            <li>Identify your current seed at this stage. Now you will need to position yourself optimally. This is done with a movement technique that disrupts the NPCs "activation":</li>
+            <p></p>
+            <ul>
+                <li>Run towards the NPC and immediately interact with him in one quick, smooth motion. Then, back out of the NPC dialogue.</li>
+                <p></p>
+                <li>If you did this <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/watt-trader/correct-setup.gif">correctly</a>, you should see the RNG advances occurring at a slow, steady rate after backing out of the dialogue.</li>
+                <p></p>
+                <li>If you did this <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/watt-trader/incorrect-setup.gif">incorrectly</a>, the NPC will activate after backing out of the dialogue, causing the usual, extremely fast NPC activation advances we normally use for advancing the RNG state.</li>
+                <p></p>
+                <li>If you are unsure of your NPC state you can wait about 10 seconds and re-identify your seed. If you are noticing that ~1000 advances have occurred then you are NOT positioned correctly. Move away from the NPC and try again.</li>
+                <p></p>
+                <li>It may take a few attempts to get the NPC into the correct state, but this provides the most stable experience possible for this type of RNG manipulation.</li>
+            </ul>
+            <p></p>
+            <li>Once the NPC is in the correct state, calibrate your menu NPC count as usual. The expected NPC count when standing next to the Snowslide Slope Watt trader is 4. Enter your calibrated NPC count in the Watt Trader subwindow on owoow.</li>
+            <p></p>
+            <li>Perform a date skip to refresh the daily highlight item. This can be done using the Raid exploit or PvP date skipping exploit.</li>
+            <p></p>
+            <li>Save the game. This will preserve the current NPC state upon resetting as long as you reopen the game on the same date or an earlier date. Do not speak to the NPC again until you reach your target frame.</li>
+        </ol>
+    </div>
+</div>
+<br />
+
+<hr /><div class="title" style="background-color: #0c0038;" id="the-basics">
+    <h1 class="text-light text-center pt-3 pb-3">Advancing Towards a Target</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    Step-by-step instructions for hitting a target frame can be found here.
+</small>
+<hr />
+
+<p><span class="fw-bold">Figure 3 -</span> Target Found!</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/watt-trader/target-found-watt-trader.png" alt="watt-trader-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/watt-trader/target-found-watt-trader.png"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header text-light" style="background-color: #0c0038;" id="advancing-towards-a-target-watt-trader">
+        <span class="fw-bold">Advancing Towards a Target</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>In this example, a frame that produces a Beast Ball can be seen on advance 100. We will aim to close the <code class="fw-bold">X Menu</code> on this exact advance, then quickly interact with the NPC to lock in our desired result.</p>
+
+        <p>Note that the first two days of daily highlights are predetermined, which means our target item will be available on the third day. After we explain how to RNG manipulate the item, we will explain how to get to it.</p>
+
+        <h6 class="fw-bold">Step-by-Step</h6>
+        <ol>
+            <li>
+                As we need to maintain our current positioning, advance towards the target using any method that does not cause the player to move.
+                <p></p>
+                <ul>
+                    <li>If your target is over 10,000 advances away, consider using <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/wet-weather.gif">wet weather</a> or <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/date-skipping.gif">date skipping</a>.</li>
+                    <p></p>
+                    <li>For closer targets, consider using <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/bike-mount.gif">bike hopping</a> or <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/menu-close.gif">menu close</a>.</li>
+                </ul>
+                <p></p>
+            <li>Stop advancing once you are ~300-500 advances before your target. Give yourself if you do not have a rough idea of how many advances have occured.</li>
+            <p></p>
+            <li>
+                Open the <code class="fw-bold">X Menu</code> to pause the game then re-identify your current seed. Click <code class="fw-bold">Update Seeds</code> on the main window of owoow after re-identification to reflect your current seed into the active subwindow.
+                <p></p>
+                <ul>
+                    <li>If you are not yet within a few hundred advances of your target, use the advancement methods listed in step 1 to advance the RNG state until you have reached the correct point. Be careful as you do not want to overshoot your target frame.</li>
+                </ul>
+                <p></p>
+            <li>
+                Ensure that the <code class="fw-bold">Consider Menu Close?</code> checkbox is checked in the Watt Trader subwindow, and confirm that your NPC count has been calibrated and entered correctly. Search for your target again.
+                <p></p>
+                <ul>
+                    <li>Do not use the <code class="fw-bold">Holding Direction?</code> checkbox on owoow. Attempting to use direction hold will cause the NPC to activate and you will miss your target frame.</li>
+                </ul>
+                <p></p>
+            <li>From this point, use <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/animations.gif">attack animations</a> to reach the exact target frame. You can re-identify your current seed at any point if you wish.</li>
+            <p></p>
+            <li>Close the Pok&eacute;mon window so you are on the main <code class="fw-bold">X Menu</code>.</li>
+            <p></p>
+            <li>Unpause the game by pressing B. Do not move the control stick when unpausing as we are trying to preserve an optimal NPC state.</li>
+            <p></p>
+            <li>Quickly interact with the Watt Trader to lock in your desired item. To access your desired highlight item follow the steps directly below.</li>
+        </ol>
+
+        <h6 class="fw-bold">Accessing Our Daily Highlight</h6>
+        <p>To get to our RNG manipulated highlight item, we will need to first clear the two stored highlight items before it.</p>
+        <ol>
+            <li>Exit out of the Watt Trader dialogue.</li>
+            <p></p>
+            <li>Perform a date skip.</li>
+            <p></p>
+            <li>Interact with the Watt Trader, which will put us on "day 2". It is not necessary to view the highlight item.</li>
+            <p></p>
+            <li>Exit out of the Watt Trader dialogue.</li>
+            <p></p>
+            <li>Perform another date skip.</li>
+            <p></p>
+            <li>Interact with the Watt Trader again, putting us on "day 3".</li>
+            <p></p>
+            <li>Check Today's Highlight. This should be your desired item.</li>
+        </ol>
+
+        <p>Since the game stores up to two highlight items, it is possible to continuously RNG manipulate highlight items and pick up an earlier item at the same time when interacting with the NPC.</p>
+    </div>
+</div>
+<br />
+
+<span class="fw-bold">Figure 4 -</span> Target Frame Hit!<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/watt-trader/target-hit-watt-trader.png" alt="watt-trader-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/watt-trader/target-hit-watt-trader.png"><p></p>
+
+<p>In Figure 4, we closed the <code class="fw-bold">X Menu</code> on the desired target frame and quickly interacted with the Watt Trader. Simply interacting with him locked in our desired reward. Now we need to date skip using the previously-described method to have him show us the item in <code class="fw-bold">Today's Highlight</code>.</p>
+
+<span class="fw-bold">Figure 5 -</span> Result Found!<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/watt-trader/result-found-watt-trader.png" alt="watt-trader-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/watt-trader/result-found-watt-trader.png"><p></p>
+
+<p>After date skipping and interacting with the Watt Trader enough times, we can see that Today's Highlight features our desired item!</p>
+
+<p><span class="fw-bold">That's all there is to RNG manipulating the Snowslide Slope Watt Trader (RETAIL)!</span></p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/item">
+    Head back to the <span class="fw-bold">main page</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a><p></p>
