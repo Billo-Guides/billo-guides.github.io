@@ -4,8 +4,24 @@
     border-bottom-right-radius: 0.20rem !important;
     border-bottom-left-radius: 0.20rem !important;
 }
+
+/* Applies a margin to all lists not inside the navbar */
+ul li,
+ol li {
+    margin-bottom: 10px;
+}
+
+.navbar li {
+    margin-bottom: 0;
+}
+
 .clickable-image {
     cursor: pointer !important;
+}
+
+/* Applies a margin to displayed clickable images; not hyperlinked images */
+img.clickable-image {
+    margin-bottom: 15px;
 }
 
 table,

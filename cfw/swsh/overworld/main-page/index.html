@@ -78,20 +78,15 @@ permalink: /cfw/swsh/overworld/main-page
         <h6><span class="fw-bold">Tools and Applications</span></h6>
         <ul>
             <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-9.0.4-windows-x64-installer" target="_blank" rel="noopener noreferrer">.NET 9.0 Runtime</a></li>
-            <p></p>
             <li><a href="https://github.com/LegoFigure11/owoow/releases/" target="_blank" rel="noopener noreferrer">Sword/Shield Overworld RNG Tool (owoow)</a></li>
-            <p></p>
             <li><a href="https://github.com/Lusamine/ldn_mitm/releases/latest" target="_blank" rel="noopener noreferrer">ldn_mitm</a></li>
         </ul>
 
         <h6><span class="fw-bold">Installation Instructions</span></h6>
         <ol>
             <li>Download <code span class="fw-bold">.NET 9.0</code> and run the setup wizard until complete. This is a required program dependency.</li>
-            <p></p>
             <li>Download and extract <code span class="fw-bold">owoow.zip</code> into an fresh, empty folder, then extract <code span class="fw-bold">ldn_mitm.zip</code> into the same folder (ldn_mitm is for Wi-Fi connectivity only).</li>
-            <p></p>
             <li>Move the <code span class="fw-bold">atmosphere</code> and <code span class="fw-bold">switch</code> folders to the root of your SD card. Agree to overwrite folders if prompted.</li>
-            <p></p>
             <li>Reboot the console into your chosen CFW environment (it is recommended to use SysCFW).</li>
         </ol>
 
@@ -100,9 +95,7 @@ permalink: /cfw/swsh/overworld/main-page
         <h6><span class="fw-bold">Program Connectivity Instructions (WI-FI ONLY)</span></h6>
         <ol>
             <li>Launch <code span class="fw-bold">owoow.exe</code>. Ensure that the program launches properly with no issues.</li>
-            <p></p>
             <li>Type the local IP address of the console into the <code span class="fw-bold">Switch IP:</code> field.</li>
-            <p></p>
             <li>Start the game. You can click the <code class="fw-bold">Connect</code> button on owoow once you see the title screen.</li>
         </ol>
 
@@ -111,17 +104,11 @@ permalink: /cfw/swsh/overworld/main-page
         <h6><span class="fw-bold">Program Connectivity Instructions (USB ONLY)</span></h6>
         <ol>
             <li>Launch <code span class="fw-bold">owoow.exe</code>. Ensure that the program launches properly with no issues.</li>
-            <p></p>
             <li>Close the program to produce a <code class="fw-bold">config.json</code> file, then open this in a text editor like Notepad.</li>
-            <p></p>
             <li>Change the protocol to 1 for USB connectivity, save the changes, then close the file and launch owoow again.</li>
-            <p></p>
             <li>Open the <code class="fw-bold">config.cfg</code> located in <code class="fw-bold">atmosphere/contents/43000000000B</code> in a text editor.</li>
-            <p></p>
             <li>Change the text to <code class="fw-bold">usb</code> and save the changes. Reboot your Switch after doing so.</li>
-            <p></p>
             <li>Follow the instructions found on the <a href="https://github.com/kwsch/SysBot.NET/wiki/Configuring-a-new-USB-Connection" target="_blank" rel="noopener noreferrer">SysBot.NET Wiki</a> to learn how to configure a new USB connection on your Switch.</li>
-            <p></p>
             <li>Connect your Switch to your PC via a USB cable, launch owoow, and start the game. You can click the <code class="fw-bold">Connect</code> button on owoow once you see the title screen.</li>
         </ol>
 
@@ -132,7 +119,7 @@ permalink: /cfw/swsh/overworld/main-page
 <br>
 
 <span class="fw-bold">Figure 1 -</span> Program Connectivity<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/main-page/connection-successful.gif" alt="owrng-setup-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/main-page/connection-successful.gif"><p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/main-page/connection-successful.gif" alt="owrng-setup-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/main-page/connection-successful.gif">
 
 <hr /><div class="title" style="background-color: #0c0038;">
     <h1 class="text-light text-center pt-3 pb-3">RNG Tool Overview</h1>
@@ -143,7 +130,7 @@ permalink: /cfw/swsh/overworld/main-page
 <hr />
 
 <span class="fw-bold">Figure 2 -</span> Owoow Overview<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/main-page/owoow-overview.png" alt="owrng-setup-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/main-page/owoow-overview.png"><p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/main-page/owoow-overview.png" alt="owrng-setup-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/main-page/owoow-overview.png">
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c0038;" id="owoow-overview">
@@ -155,18 +142,13 @@ permalink: /cfw/swsh/overworld/main-page
         <h6><span class="fw-bold">Feature Overview</span></h6>
         <ul>
             <li><span style="color: #E63946;" class="fw-bold">First Column -</span> Shows seed information, connectivity features, and save details such as Trainer ID, Secret ID, and Game Version.</li>
-            <p></p>
             <li><span style="color: #2A6F97;" class="fw-bold">Second Column -</span> Select any relevant encounter settings, enter encounter specific configurations, input search range, and calibrate NPC count.</li>
-            <p></p>
             <li><span style="color: #7B2CBF;" class="fw-bold">Third Column -</span> Enter current Pok&eacute;dex Recommendations and input advanced settings for rain and roaming encounters.</li>
-            <p></p>
             <li><span style="color: #6B8E23;" class="fw-bold">Fourth Column -</span> Enter search filters. The stricter the search filters, the more advances you will have to search to find a suitable target.</li>
-            <p></p>
             <li><span style="color: #E87C3C;" class="fw-bold">Fifth Column -</span> Custom Firmware specific features, <span class="fw-bold">Read Encounter</span> details, automate seed advances, reset for a desirable seed and more.</li>
             <ul>
                 <li>After saving in-game, <span class="fw-bold">Shift + Read Encounter</span> can be used to scan overworld encounters. This is useful for checking the data of any Pok&eacute;mon are currently spawned.</li>
             </ul>
-            <p></p>
             <li><span style="color: #D63C8A;" class="fw-bold">Bottom-Right Box -</span> Retail specific features, can be ignored by CFW users.</li>
         </ul>
 
@@ -241,15 +223,10 @@ permalink: /cfw/swsh/overworld/main-page
         <h6><span class="fw-bold">Encounter Tips</span></h6>
         <ul>
             <li>Use the encounter type table at the top of this page to understand the difficulty and benefits of each encounter type.</li>
-            <p></p>
             <li>If you are completely new to the process, we suggest you first try an overworld static encounter in the Crown Tundra by the Max Lair. This area has very few NPCs so you can practice the basics.</li>
-            <p></p>
             <li>Beginner players should avoid picking encounters in the Isle of Armor as this area is very cramped and can be difficult due to NPC noise. They should avoid Hidden encounters as well since this is the most difficult and inconsistent type of encounter.</li>
-            <p></p>
             <li>For high IV targets, it is recommended to pick a Brilliant Aura encounter ("Symbol" or "Fishing"). These encounters have guaranteed IVs.</li>
-            <p></p>
             <li>Check the EncounterRate percentage. In most cases you will want to pick an encounter with the highest percentage for easier searches.</li>
-            <p></p>
             <li>Avoid Rain/Thunderstorm encounters where possible unless you have no other option or are specifically targeting rain-based weather marks.</li>
         </ul>
 
