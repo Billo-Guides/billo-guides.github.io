@@ -18,8 +18,8 @@ permalink: /retail/swsh/overworld/fishing/
     <span class="fw-bold">Important -</span> From here, we assume that you are familiar with key concepts described on the main page. If you are unsure about <a href="/retail/swsh/overworld/seed-finding-and-monitoring" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">seed finding</a>, <a href="/retail/swsh/overworld/advancing-the-rng-state" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">advancement methods</a>, or <a href="/retail/swsh/overworld/menu-close-prediction" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">NPC calibration</a>, please review the relevant sections before continuing.
 </div>
 
-<span class="fw-bold">Figure 1 -</span> RNG Tool Setup<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/fishing/getting-started-fishing.gif" alt="owrng-fishing-retail-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/fishing/getting-started-fishing.gif"><p></p>
+<p><span class="fw-bold">Figure 1 -</span> RNG Tool Setup</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/fishing/getting-started-fishing.gif" alt="owrng-fishing-retail-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/fishing/getting-started-fishing.gif">
 
 <div class="card border-dark">
     <div class="anchored card-header text-light" style="background-color: #0c0038;" id="getting-started-fishing-retail">
@@ -29,13 +29,9 @@ permalink: /retail/swsh/overworld/fishing/
         <h6 span class="fw-bold">Required Setup</h6>
         <ol>
             <li>In the main window, enter your TID/SID, select your game version, and check the Shiny/Mark Charm checkboxes if these items are present in your save file.</li>
-            <p></p>
             <li>Click <code class="fw-bold">Encounter Lookup</code> in the top toolbar to open a subwindow. Enter the desired species name in the search field and select a FISHING encounter.</li>
-            <p></p>
             <li>Close the <code class="fw-bold">Encounter Lookup</code> window, then input the relevant <code class="fw-bold">Location</code>, <code class="fw-bold">Weather</code>, and <code class="fw-bold">Species</code> information into the <code class="fw-bold">Encounter Settings</code> section.</li>
-            <p></p>
             <li>Enter the KO count for the Pok&eacute;mon you are hunting into the <code class="fw-bold">KOs</code> field. This ensures accurate prediction of extra shiny rolls from Brilliant Aura boosts.</li>
-            <p></p>
             <li>Adjust your search range using the <code class="fw-bold">+</code> field in <code class="fw-bold">Encounter Settings</code>, then configure additional search filters such as Shiny, Marks, IVs, Brilliant Aura, or Height.</li>
         </ol>
 
@@ -49,8 +45,8 @@ permalink: /retail/swsh/overworld/fishing/
 </div>
 <br />
 
-<span class="fw-bold">Figure 2 -</span> Game Setup<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/fishing/game-setup-fishing.gif" alt="owrng-fishing-retail-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/fishing/game-setup-fishing.gif"><p></p>
+<p><span class="fw-bold">Figure 2 -</span> Game Setup</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/fishing/game-setup-fishing.gif" alt="owrng-fishing-retail-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/fishing/game-setup-fishing.gif">
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c0038;" id="game-setup-fishing-retail">
@@ -59,32 +55,22 @@ permalink: /retail/swsh/overworld/fishing/
     <div class="card-body card-bg">
         <ol>
             <li>Remove any Pok&eacute;mon currently stored in either {% include tooltips/nursery.html %}.</li>
-            <p></p>
             <li>Prepare your party so you have the correct lead Pok&eacute;mon and any catchers you plan to use.</li>
-            <p></p>
             <li>If you opened the Pok&eacute;dex at any point, such as when checking your KO count, this will generate Pok&eacute;dex Recommendations which alter the RNG. You should perform a date skip, reset the game to before you opened the Pok&eacute;dex, or account for it in the program.</li>
-            <p></p>
             <li>Make sure your current console date has a suitable weather condition for your Pok&eacute;mon if you are targeting a specific Weather Mark.</li>
-            <p></p>
             <li>Go to the the area with the fishing pool for your target Pok&eacute;mon. Most fishing pools in an area have use the same Pok&eacute;mon table, but there are a few exceptions such as:</li>
-            <p></p>
             <ul>
                 <li>20% Magikarp in the high-level part of Slumber Weald can only spawn from the fishing spot north of a log bridge. (<a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/fishing/fishing-magikarp.png">screenshot</a>)</li>
                 <li>10% Barboach in Motostoke can only spawn in the fishing pool accessible through the spinning wheel on the top level, next to the Steel Beam tutor.  (<a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/fishing/fishing-barboach.png">screenshot</a>)</li>
                 <li>5% Wishiwashi in Hulbury can only spawn in the westernmost fishing pool. (<a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/fishing/fishing-wishiwashi.png">screenshot</a>)</li>
-                <li style="margin-bottom: 8px;">1% Lapras in Route 9 (Circhester Bay) can only spawn in the fishing pool by Swimmer Logan. (<a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/fishing/fishing-lapras.png">screenshot</a>)</li>
+                <li>1% Lapras in Route 9 (Circhester Bay) can only spawn in the fishing pool by Swimmer Logan. (<a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/fishing/fishing-lapras.png">screenshot</a>)</li>
             </ul>
-            <p></p>
             <li>Move far enough away to completely despawn the fishing pool. Position yourself as close to the fishing pool as possible without respawning it.</li>
-            <p></p>
             <ul>
                 <li>Fishing pools will not spawn while the player is riding a bike. All positioning should be done on foot. Do not mount your bike again after confirming that your positioning is correct.</li>
-                <p></p>
                 <li>Try to find a position where few or no overworld Pok&eacute;mon are spawned. This is to reduce the chance of extra advances when you are performing the RNG manipulation attempt. You can despawn any static spawners nearby or in your way. These will remain despawned as long as you do not let the date advance.</li>
             </ul>
-            <p></p>
             <li>Save the game.</li>
-            <p></p>
         </ol>
     </div>
 </div>

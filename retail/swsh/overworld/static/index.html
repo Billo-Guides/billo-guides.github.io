@@ -18,8 +18,8 @@ permalink: /retail/swsh/overworld/static/
     <span class="fw-bold">Important -</span> From here, we assume that you are familiar with key concepts described on the main page. If you are unsure about <a href="/retail/swsh/overworld/seed-finding-and-monitoring" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">seed finding</a>, <a href="/retail/swsh/overworld/advancing-the-rng-state" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">advancement methods</a>, or <a href="/retail/swsh/overworld/menu-close-prediction" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">NPC calibration</a>, please review the relevant sections before continuing.
 </div>
 
-<span class="fw-bold">Figure 1 -</span> RNG Tool Setup<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/static/getting-started-static.gif" alt="owrng-static-retail-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/static/getting-started-static.gif"><p></p>
+<p><span class="fw-bold">Figure 1 -</span> RNG Tool Setup</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/static/getting-started-static.gif" alt="owrng-static-retail-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/static/getting-started-static.gif">
 
 <div class="card border-dark">
     <div class="anchored card-header text-light" style="background-color: #0c0038;" id="getting-started-static-cfw">
@@ -28,19 +28,16 @@ permalink: /retail/swsh/overworld/static/
     <div class="card-body card-bg">
         <ol>
             <li>In the main window, enter your TID/SID, select your game version, and check the <code class="fw-bold">Shiny Charm?</code>/<code class="fw-bold">Mark Charm?</code> checkboxes if these items are present in your save file.</li>
-            <p></p>
             <li>Click <code class="fw-bold">Encounter Lookup</code> in the top toolbar to open a subwindow. Enter the desired species name in the search field and select a STATIC encounter.</li>
-            <p></p>
             <li>Close the <code class="fw-bold">Encounter Lookup</code> window, then input the relevant <code class="fw-bold">Location</code>, <code class="fw-bold">Weather</code>, and <code class="fw-bold">Species</code> information into the <code class="fw-bold">Encounter Settings</code> section.</li>
-            <p></p>
             <li>Adjust your search range using the <code class="fw-bold">+</code> field in <code class="fw-bold">Encounter Settings</code>, then configure additional search filters such as Shiny, Marks, IVs, or Height.</li>
         </ol>
     </div>
 </div>
 <br />
 
-<span class="fw-bold">Figure 2 -</span> Game Setup<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/static/game-setup-static.gif" alt="owrng-static-retail-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/static/game-setup-static.gif"><p></p>
+<p><span class="fw-bold">Figure 2 -</span> Game Setup</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/static/game-setup-static.gif" alt="owrng-static-retail-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/static/game-setup-static.gif">
 
 <div class="card border-dark">
     <div class="anchored card-header text-light" style="background-color: #0c0038;" id="game-setup-static-retail">
@@ -49,25 +46,16 @@ permalink: /retail/swsh/overworld/static/
     <div class="card-body card-bg">
         <ol>
             <li>Remove any Pok&eacute;mon currently stored in either {% include tooltips/nursery.html %}.</li>
-            <p></p>
             <li>Prepare your party so you have the correct lead Pok&eacute;mon and any catchers you plan to use.</li>
-            <p></p>
             <li>Make sure your current console date has the correct weather condition to spawn your Pok&eacute;mon.</li>
-            <p></p>
             <li>Go to the static spawner for your target Pok&eacute;mon.</li>
-            <p></p>
             <li>Move far enough away to completely despawn your target Pok&eacute;mon. Position yourself as close to the Pok&eacute;mon's spawn border as possible without actually spawning it in the overworld.</li>
-            <p></p>
             <ul>
-                <li><b>IMPORTANT</b>: To confirm that the Pok&eacute;mon has been fully despawned, look for a <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/static/dust-cloud.png">dust cloud</a> or <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/static/water-splash.png">puddle</a> beneath the Pok&eacute;mon when it spawns. This may not be possible to see if the Pok&eacute;mon is flying or in tall grass. It is not enough for the Pok&eacute;mon's model to disappear! Make sure you are past the range where its model shrinks down and disappears from view. If you stand too close to the spawner and the Pok&eacute;mon is still spawned into the game, your RNG manipulation attempt will fail since a new Pok&eacute;mon cannot spawn in its place</li>
-                <p></p>
+                <li><span class="fw-bold">IMPORTANT</span>: To confirm that the Pok&eacute;mon has been fully despawned, look for a <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/static/dust-cloud.png">dust cloud</a> or <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/static/water-splash.png">puddle</a> beneath the Pok&eacute;mon when it spawns. This may not be possible to see if the Pok&eacute;mon is flying or in tall grass. It is not enough for the Pok&eacute;mon's model to disappear! Make sure you are past the range where its model shrinks down and disappears from view. If you stand too close to the spawner and the Pok&eacute;mon is still spawned into the game, your RNG manipulation attempt will fail since a new Pok&eacute;mon cannot spawn in its place</li>
                 <li>Consider performing a test run to confirm your positioning. Move to a spot where you think the Pok&eacute;mon is fully despawned. Take note of this position. Run towards the spawner and make sure the Pok&eacute;mon appears correctly. You can then run far back to make sure it fully despawns and then go back to the original position you started from.</li>
-                <p></p>
                 <li>Try to find a position where few or no overworld Pok&eacute;mon are spawned. This is to reduce the chance of extra advances when you are performing the RNG manipulation attempt. You can despawn any static spawners nearby or in your way. These will remain despawned as long as you do not let the date advance.</li>
             </ul>
-            <p></p>
             <li>Save the game.</li>
-            <p></p>
         </ol>
     </div>
 </div>

@@ -5,7 +5,9 @@
     border-bottom-left-radius: 0.20rem !important;
 }
 
-/* Applies a margin to all lists not inside the navbar */
+/* Margin styling */
+
+/* Applies to all lists, ignores navbar */
 ul li,
 ol li {
     margin-bottom: 10px;
@@ -15,6 +17,17 @@ ol li {
     margin-bottom: 0;
 }
 
+/* Applies to all alert boxes */
+.alert {
+    margin-bottom: 20px;
+}
+
+/* Applies to all page buttons */
+a.list-group-item {
+    margin-bottom: 20px;
+}
+
+/* Clickable image styling and margin */
 .clickable-image {
     cursor: pointer !important;
 }
@@ -23,6 +36,8 @@ ol li {
 img.clickable-image {
     margin-bottom: 15px;
 }
+
+/* Misc table styling */
 
 table,
 th,
