@@ -7,13 +7,17 @@ permalink: /cfw/sv/raidcrawler/
 <div class="title" style="background-color: #0c0038;">
     <h1 class="text-light text-center pt-3 pb-3">RaidCrawler Guide</h1>
 </div>
+<small class="text-muted mb-3 mt-0">
+    A guide for using <a class="text-decoration-none text-muted" href="https://github.com/LegoFigure11/RaidCrawler/">RaidCrawler</a> by <a class="text-decoration-none text-muted" href="https://github.com/LegoFigure11/">LegoFigure11</a> to find desirable Tera Raid Pok&eacute;mon in Scarlet/Violet.
+</small>
 <hr />
 
-<p>This guide provides in-depth coverage of how to use <a href="https://github.com/LegoFigure11/RaidCrawler/">RaidCrawler</a>, a program created by <a href="https://github.com/LegoFigure11">LegoFigure11</a> that can be used to read the contents of Tera Raid dens in Pokemon Scarlet & Violet.</p>
+<h5 span class="fw-bold">Introduction</h5>
+<p>RaidCrawler is a program designed to scan and display all active Tera Raid dens in Pok&eacute;mon Scarlet and Violet. It provides a real-time overview of all currently active Tera Raids on the map and supports automated searching based on user-defined filters to identify raids that meet specific criteria. This significantly reduces the need for manual checking and streamlines the process of searching for a desirable Tera Raid.</p>
 
-<p>RaidCrawler is capable of scanning and displaying all active Tera Raid dens on the map. It automatically searches for raids that meet user-defined filter criteria, eliminating the need to manually check each den. This feature grants a significant timesave.</p>
-
-<p><span class="fw-bold" style="color: #b60606;">From here this guide assumes you are using a CFW Switch console running Atmosphere. You must have also progressed far enough in-game to have gained access to Tera Raids.</span></p>
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Important -</span> From here it is assumed that you are using a Custom Firmware (CFW) Switch console running Atmosphere. This program is not intended to be used on emulator and cannot be used on retail hardware. You must also progress the game story enough to have access to Tera Raids.
+</div>
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c0038;" id="download-and-installation-raidcrawler">
@@ -23,49 +27,44 @@ permalink: /cfw/sv/raidcrawler/
         <h6><span class="fw-bold">Required Downloads</span></h6>
         <ul>
             <li><a href="https://github.com/LegoFigure11/RaidCrawler/releases/" target="_blank">RaidCrawler</a></li>
-            <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0" target="_blank">.NET 8.0</a></li>
+            <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-8.0.15-windows-x64-installer" target="_blank" rel="noopener noreferrer">.NET 8.0 Runtime</a></li>
         </ul>
 
         <h6><span class="fw-bold">Installation Instructions</span></h6>
         <ol>
             <li>Download and extract the contents from the <code class="fw-bold">RaidCrawler.zip</code> into an empty folder.</li>
-            <li>Move the <code class="fw-bold">atmosphere</code> folder (sys-botbase) to the root of your Switch SD card then reboot the console.</li>
-            <li>Download and run <code class="fw-bold">dotnet-sdk-8.0.x-win-x64.exe</code>, then go through the setup instructions.</li>
+            <li>Move the <code class="fw-bold">atmosphere</code> folder (sys-botbase) to the root of your Switch SD card then reboot the console into your chosen CFW environment (SysCFW recommended).</li>
+            <li>Download <code span class="fw-bold">.NET 8.0</code> and run the setup wizard until complete. This is a required program dependency.</li>
+            <li>Open the folder that contains your RaidCrawler download and run <code class="fw-bold">RaidCrawler.exe</code> to confirm that the program opens correctly with no issues.</li>
         </ol>
 
         <h6><span class="fw-bold">Connectivity Instructions</span></h6>
         <ol>
-            <li>Follow all the installation instructions listed above.</li>
             <li>Launch SysCFW on your console, then enter the Homebrew menu.</li>
             <li>Press the <code class="fw-bold">Y</code> button to display the local IP address.</li>
             <li>Type the IP address into the <code class="fw-bold">Switch IP:</code> field of RaidCrawler.</li>
-            <li>Click the <code class="fw-bold">Connect</code> button, you should now see that RaidCrawler has began to scan story progression values.</li>
+            <li>Click the <code class="fw-bold">Connect</code> button, you should now see <code class="fw-bold">Status:</code> at the bottom of the main window has updated.</li>
         </ol>
-
-        <details>
-            <summary><span class="fw-bold">Troubleshooting</span></summary><p></p>
-            <ul>
-                <li>If RaidCrawler does not open, ensure .NET has been properly installed.</li>
-                <li>If your console does not connect to RaidCrawler, ensure Sys-botbase has been properly installed.</li>
-                <li>If RaidCrawler is struggling to communicate with the console, remove any interfering cheats or applications.</li>
-            </ul>
-
-            <small><span class="fw-bold">Common causes of interference -</span> Tesla Menu, Edizon, CaptureSight, Mods & Cheat Codes.</small>
-        </details>
 
     </div>
 </div>
 <br />
 
-<hr /><div class="title" style="background-color: #0c0038;">
-    <h1 class="text-light text-center pt-3 pb-3">Program Setup</h1>
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Troubleshooting -</span> Ensure that you have followed all the instructions listed above before continuing, also confirm that your console and computer are connected to the same Wi-Fi network on the same band. If you are still experiencing connectivity issues this could be related to cheats or interference from other applications such as Tesla, Edizon, or CaptureSight. Remove any interfering cheats, mods, or applications and try again.
 </div>
+
+<hr />
+<div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">Program Overview</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    Program information and usage instructions can be found here.
+</small>
 <hr />
 
-<p><span class="fw-bold" style="color: #b60606;">Ensure that the setup & installation instructions have been properly followed, and that RaidCrawler is able to communicate with your console before continuing.</span></p>
-
 <p><span class="fw-bold">Figure 1 -</span> RaidCrawler Setup</p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/sv/raidcrawler/Figure1.gif" alt="raidcrawler-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/sv/raidcrawler/Figure1.gif">
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/sv/raidcrawler/raidcrawler-connectivity.gif" alt="raidcrawler-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/sv/raidcrawler/raidcrawler-connectivity.gif">
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c0038;" id="feature-overview-raidcrawler">
@@ -92,7 +91,7 @@ permalink: /cfw/sv/raidcrawler/
 <p>After taking some time to understand the various features of the main window, you will then need to apply the relevant search filters & configure the program settings.</p>
 
 <p><span class="fw-bold">Figure 2 -</span> Filter Overview</p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/sv/raidcrawler/Figure2.gif" alt="raidcrawler-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/sv/raidcrawler/Figure2.gif">
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/sv/raidcrawler/raidcrawler-filter-overview.gif" alt="raidcrawler-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/sv/raidcrawler/raidcrawler-filter-overview.gif">
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c0038;" id="filter-conditions-raidcrawler">
@@ -120,7 +119,7 @@ permalink: /cfw/sv/raidcrawler/
 </div>
 
 <p><span class="fw-bold">Figure 3 -</span> Settings Overview</p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/sv/raidcrawler/Figure3.gif" alt="raidcrawler-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/sv/raidcrawler/Figure3.gif">
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/sv/raidcrawler/raidcrawler-settings-overview.gif" alt="raidcrawler-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/sv/raidcrawler/raidcrawler-settings-overview.gif">
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c0038;" id="raidcrawler-settings-overview">
@@ -134,10 +133,35 @@ permalink: /cfw/sv/raidcrawler/
             <li><code class="fw-bold">General</code> - Shows game information such as story progress.</li>
             <li><code class="fw-bold">Match</code> - Decide how you want to be notified when a result has been found.</li>
             <li><code class="fw-bold">Advance Date</code> - For making changes to parts of the date skipping routine.</li>
-            <li><code class="fw-bold">Webhooks</code> - Hook RaidCrawler up to your discord server using <a href="https://docs.google.com/document/d/1XDw_sPBv7AfYDiAzZdYie11ZXpw2inG0zOuMp9gRY5o/edit?usp=sharing">Discord Webhooks</a>.</li>
+            <li><code class="fw-bold">Webhooks</code> - Hook RaidCrawler up to your Discord server using webhooks.</li>
             <li><code class="fw-bold">Experimental</code> - Unfinished experimental features of the program.</li>
             <li><code class="fw-bold">About</code> - Shows current program build and developer information.</li>
         </ul>
+
+        <details>
+            <summary><span class="fw-bold">Discord Webhook Integration</span></summary>
+            <p>To use Discord Webhooks, confirm that you have <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/automation-methods/webhooks-permissions.png">Webhook permissions</a> in the channel you wish to use and follow these steps:</p>
+
+            <h6 class="fw-bold">Webhooks Setup (Discord)</h6>
+            <ul>
+                <li>Navigate to the server where you want to send the webhook messages.</li>
+                <li>Click on the server name at the top-left corner and select <code class="fw-bold">Server Settings</code>.</li>
+                <li>In the left menu, go to <code class="fw-bold">Integrations -> Webhooks</code>, then click <code class="fw-bold">New Webhook</code>.</li>
+                <li>Give your Webhook any name you like.</li>
+                <li>Select the channel where you want the Webhook to post messages.</li>
+                <li>Click <code class="fw-bold">Copy Webhook URL</code>. This is the link you will use to send data.</li>
+            </ul>
+
+            <h6 class="fw-bold">Webhooks Setup (RaidCrawler)</h6>
+            <ul>
+                <li>Open the <code class="fw-bold">Settings</code> subwindow, then click on the <code class="fw-bold">Match</code> tab. Activate the checkbox that mentions Discord Webhooks.</li>
+                <li>Enter your Webhook URL into the field directly below the Discord Webhook checkbox, then navigate to the <code class="fw-bold">Webhooks</code> tab.</li>
+                <li>(Optional) Add Webhook message content. For example, you can ping your Discord ID or role by using <@your_user_id>/<@your_role_id>.</li>
+                <li>(Optional) configure any additional settings such as Verbose IVs or Emoji Config.</li>
+                <li>Close and re-open RaidCrawler entirely to apply your new Webhook changes. Open the Seed Reset <code class="fw-bold">Settings</code> subwindow and navigate to the <code class="fw-bold">Webhooks</code> tab again.</li>
+                <li>Click the <code class="fw-bold">Test Webhook</code> button. If done correctly you should see a <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/sv/raidcrawler/webhooks-test.png">functional Webhook</a> in your chosen channel.</li>
+            </ul>
+        </details>
 
     </div>
 </div>
@@ -158,7 +182,7 @@ permalink: /cfw/sv/raidcrawler/
             <li><span class="fw-bold">DDown inputs -</span> This method is the slower but more consistent System Settings method, use this if you are having trouble with option 2.</li>
         </ol>
 
-        <blockquote>For Zyro's method, ensure that Date & Time is synced via the internet in the Switch system settings, otherwise this setting should be disabled.</blockquote>
+        <p>If you are using Zyro's method for date skipping, ensure that Date &amp; Time is synced via the internet in the Switch system settings. If you are using either of the other methods this setting should be disabled.</p>
 
         <details>
             <summary><span class="fw-bold">System Settings Advancements Setup</span></summary><p></p>
@@ -198,40 +222,41 @@ permalink: /cfw/sv/raidcrawler/
 
 <p><span class="fw-bold">It's now time to begin searching for a target raid!</span></p>
 
-<hr /><div class="title" style="background-color: #0c0038;">
-    <h1 class="anchored   text-light text-center pt-3 pb-3">The Process</h1>
+<hr />
+<div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">The Process</h1>
 </div>
+<small class="text-muted mb-3 mt-0">
+    Learn how to start the program and locate your desired Tera Raid den.
+</small>
 <hr />
 
-<p><span class="fw-bold" style="color: #b60606;">From this point the guide assumes you have a stable connection to the program and both the settings & filters have been configured properly.</span></p>
-
-<p>In this example we will be searching for any shiny Pokemon, you can be more specific with the filters if you wish, such as filtering for a specific species or IV values.</p>
+<p>In this example we will be searching for any shiny Pokemon using Zyro's date skipping method. You can be more specific with the filters or use a different date skipping configuration if you wish, such as filtering for a specific species or IV values and/or using the DDown inputs for date skipping.</p>
 
 <p><span class="fw-bold">Figure 4 -</span> Filter Configuration</p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/sv/raidcrawler/Figure4.png" alt="raidcrawler-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/sv/raidcrawler/Figure4.png">
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/sv/raidcrawler/filter-and-settings-config-confirmation.gif" alt="raidcrawler-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/sv/raidcrawler/filter-and-settings-config-confirmation.gif">
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c0038;" id="filter-config-example">
         <span class="fw-bold text-light">Filter Configuration</span>
     </div>
     <div class="card-body card-bg">
-        <p>In Figure 4, the filters have been set to search for any shiny Pokemon, we can now close this subwindow and begin scanning for a desired raid.</p>
+        <p>In Figure 4 we can see that the filters have been set to search for any shiny Pokemon, after making sure that the search filters are configured correctly, we then opened the settings subwindow and confirmed that we are using our desired date skipping method.</p>
 
-        <p>Enter the overworld in-game and pause to open the map, then click <code class="fw-bold">Connect</code> on the main window of RaidCrawler. After you have connected and have the map open, desync any controllers that are currently connected.</p>
+        <p>If you have not already done so, enter the overworld in-game and pause to open the map, then click <code class="fw-bold">Connect</code> on the main window of RaidCrawler. Disconnect any controllers that are currently connected to the console once you have reached this stage. Controllers must be disconnected for RaidCrawler to take proper control of the console.</p>
 
-        <p>Click the <code class="fw-bold">Advance Date</code> button to initiate the date skipping routine, RaidCrawler should now begin advancing the date and scanning for new raid dens automatically until a result that matches the filter criteria has been found.</p>
+        <p>Click the <code class="fw-bold">Advance Date</code> button to initiate the date skipping routine. RaidCrawler should now begin advancing the date and scanning for new Tera Raid dens, it will continue to do this automatically until a result that matches your search criteria has been found.</p>
 
-        <blockquote>If you are running into issues when attempting to use the date skipping routines, ensure that all controllers have been disconnected and that you have a stable connection to Wi-Fi.</blockquote>
     </div>
 </div>
 <br />
 
-<p><span class="fw-bold">Figure 5 -</span> Target Found!</p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/sv/raidcrawler/Figure5.gif" alt="raidcrawler-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/sv/raidcrawler/Figure5.gif">
+<p><span class="fw-bold">Figure 5 -</span> Result Found</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/sv/raidcrawler/raidcrawler-result-found.gif" alt="raidcrawler-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/sv/raidcrawler/raidcrawler-result-found.gif">
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c0038;" id="target-found-raidcrawler">
-        <span class="fw-bold text-light">Target Found!</span>
+        <span class="fw-bold text-light">Result Found!</span>
     </div>
     <div class="card-body card-bg">
         <p>After scanning the raid dens and advancing the system date using Date Skipping, we were able to quickly find our desired Tera Raid and we have been provided with the following information:</p>
@@ -249,13 +274,9 @@ permalink: /cfw/sv/raidcrawler/
 </div>
 <br />
 
+<p><span class="fw-bold">Figure 6 -</span> Initiating Tera Raid</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/sv/raidcrawler/raidcrawler-raid-confirmation.gif" alt="raidcrawler-6" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/sv/raidcrawler/raidcrawler-raid-confirmation.gif">
 
-
-<p><span class="fw-bold">Figure 6 -</span> Result Found!</p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/sv/raidcrawler/Figure6.jpg" alt="raidcrawler-6" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/sv/raidcrawler/Figure6.jpg">
-
-<p>The raid matches the output displayed by RaidCrawler, once you have confirmed a match you can either capture the raid for yourself, or reset the game and host the raid for members of the community.</p>
-
-<p>Autosave should be disabled, and the game should be manually saved before entering the raid if you intend to share with other players.
+<p>The raid matches the output displayed by RaidCrawler, once you have confirmed a match you can either capture the raid for yourself, or reset the game and host the raid for members of the community. Autosave should be disabled, and the game should be manually saved before entering the raid if you intend to share with other players.
 
 <p><span class="fw-bold">That's all there is to it!</span> You can now repeat everything you have learned from this guide to effectively hunt for any Tera Raids that you desire.</p>
