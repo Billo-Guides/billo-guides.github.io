@@ -23,7 +23,7 @@
             <li>In the <code span class="fw-bold">Advanced Settings</code> section, check the <code span class="fw-bold">Raining/Thunderstorming?</code> checkboxes. For the calibration, set the <code span class="fw-bold">Rain Ticks</code> value to 0.</li>
             <li>Open the Pok&eacute;mon party list, then click <code class="fw-bold">Update Seeds</code> in owoow to reset your advances to 0. This step is important for accurate calibration.</li>
             <li>Back out from the party list to the main menu, then hold a direction on your joystick toward the fishing pool.</li>
-            <li>Unpause the game while holding the correct direction on your joystick. If your positioning earlier was perfect, the fishing pool should immediately spawn.</li>
+            <li>Unpause the game by pressing <code class="fw-bold">B</code> while holding the correct direction on your joystick. If your positioning earlier was perfect, the fishing pool should immediately spawn.</li>
             <li>Start the encounter. While in battle, click the <code class="fw-bold">Read Encounter</code> button on owoow, then press <code class="fw-bold">Copy IVs to Filters</code>.</li>
             <li>Under <code span class="fw-bold">Advanced Settings</code>, click the <code span class="fw-bold">Calculate Rain Ticks</code> button. If you did this correctly, you should see a result pop up. Enter the calibrated value into the <code span class="fw-bold">Rain Ticks</code> field.</li>
             <ul>
@@ -32,7 +32,7 @@
             <li>After calibrating both the NPC count and Rain Ticks, restart the game and reconnect to owoow. You can now begin searching for target frames.</li>
         </ol>
 
-        <p>The calibration fields (<code class="fw-bold">Consider Menu Close?</code> / <code class="fw-bold">Holding Direction?</code> / <code class="fw-bold">Rain Ticks</code>) account for the advances consumed when leaving the party list and closing the pause menu. Make sure you have the correct boxes checked; the search result table uses these checkboxes to calculate the exact frame on which to close the party list and spawn your target Pok&eacute;mon.</p>
+        <p>The calibration fields (<code class="fw-bold">Consider Menu Close?</code> / <code class="fw-bold">Holding Direction?</code> / <code class="fw-bold">Rain Ticks</code>) account for the advances consumed when leaving the party list and closing the <code class="fw-bold">X Menu</code>. Make sure you have the correct boxes checked; the search result table uses these checkboxes to calculate the exact frame on which to close the party list and spawn your target Pok&eacute;mon.</p>
     </div>
 </div>
 <br>
@@ -56,7 +56,7 @@
         <span class="fw-bold text-light">Advancing Towards a Target</span>
     </div>
     <div class="card-body card-bg">
-        <p>In this example, a shiny, Weather Mark Feebas appears in a {% include tooltips/clusters.html %} from advances 33,050-33,054. The calibrated NPC count is 3 and the current Rain Tick value is 8. Holding a direction when closing the pause menu is mandatory for Rain/Thunderstorm targets as this helps to keep the Rain Tick value as consistent as possible between attempts.</p>
+        <p>In this example, a shiny, Weather Mark Feebas appears in a {% include tooltips/clusters.html %} from advances 33,050-33,054. The calibrated NPC count is 3 and the current Rain Tick value is 8. Holding a direction when closing the <code class="fw-bold">X Menu</code> is mandatory for Rain/Thunderstorm targets as this helps to keep the Rain Tick value as consistent as possible between attempts.</p>
 
         <p class="fw-bold" style="color: #c00000;"><small>Recalibrate your NPC count if you have reset the game after a date skip. Rain Ticks should remain consistent if you have not changed position.</small></p>
 
@@ -64,13 +64,13 @@
         <ol>
             <li>Confirm that the <code class="fw-bold">Consider Menu Close?</code> &amp; <code class="fw-bold">Holding Direction?</code> boxes have been checked, and that your NPC count and Rain Ticks have been entered properly.</li>
             <li>Advance toward your target using <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/wet-weather.gif">wet weather</a> or <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/date-skipping.gif">date skipping</a> to maintain your position and Rain Tick calibration. Do NOT move the player.</li>
-            <li>Monitor your progress while advancing to avoid overshooting. Stop advancing once you are about 1000 frames before your target. Open the in-game menu to pause the game.</li>
+            <li>Monitor your progress while advancing to avoid overshooting. Stop advancing once you are about 1000 frames before your target. Open the <code class="fw-bold">X Menu</code> to pause the game.</li>
             <li>Use <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/wet-weather-menuing.gif">wet weather menuing</a> until you are about 100-300 away from your target. Open the Pok&eacute;mon party list.</li>
             <li>Click <code class="fw-bold">Update Seeds</code> in owoow to reset your advances to 0.</li>
             <li><span class="fw-bold">You should be on the Pok&eacute;mon party list, not a Pok&eacute;mon summary page!</span> Use <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/animations.gif">attack animations</a> to reach the exact target frame. Stay on the Pok&eacute;mon party list menu when done.</li>
             <li>You are now ready to perform the fishing RNG manipulation in wet weather.</li>
-            <li>Exit the party list back to the main pause menu, then hold a direction on your joystick toward the fishing pool.</li>
-            <li>Unpause the game by closing the menu. Since you are holding a direction, you should immediately spawn the fishing pool in the overworld.</li>
+            <li>Exit the party list back to the main <code class="fw-bold">X Menu</code>, then hold a direction on your joystick toward the fishing pool.</li>
+            <li>Unpause the game by pressing <code class="fw-bold">B</code>. Since you are holding a direction, you should immediately spawn the fishing pool in the overworld.</li>
             <li>Once you see the fishing pool spawn, the Pok&eacute;mon has already been fully generated. As long as you do not let the fishing pool despawn, you can take this time to:</li>
             <ul>
                 <li>Save the game for multiple attempts to catch it.</li>
