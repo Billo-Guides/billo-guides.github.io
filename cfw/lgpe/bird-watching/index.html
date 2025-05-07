@@ -4,15 +4,20 @@ title: Bird Watching (CFW)
 permalink: /cfw/lgpe/bird-watching
 ---
 
-
 <div class="title" style="background-color: #0c5b74;">
-    <h1 class="text-light text-center pt-3 pb-3">Legendary Bird Hunting (LGPE)</h1>
+    <h1 class="text-light text-center pt-3 pb-3">Legendary Bird Hunting (CFW)</h1>
 </div>
+<small class="text-muted mb-3 mt-0">
+    A guide for using <a class="text-decoration-none text-muted" href="https://github.com/Lusamine/SysBot.NET/tree/moarencounterbots">SysBot.NET - Moarencounterbots</a> by <a class="text-decoration-none text-muted" href="https://github.com/Lusamine">Lusamine</a> to hunt overworld legendary birds in LGPE.
+</small>
 <hr />
 
-<p>This guide provides coverage on how to <a href="https://github.com/Lusamine/SysBot.NET/tree/moarencounterbots">Moarencounterbots</a>, a branch of a SysBot.NET fork by <a href="https://github.com/Lusamine">Lusamine</a>. This program is used to automate the process of hunting overworld legendary birds (Articuno, Zapdos & Moltres) in Let's Go! Pikachu & Eevee.</p>
+<h5 span class="fw-bold">Introduction</h5>
+<p>Moarencounterbots is a branch of SysBot.NET that provides extra bot functionality in Switch Pok&eacute;mon games. In Let's Go Pikachu/Eevee, we can use this program to automate the process of hunting overworld legendary birds (Articuno, Zapdos &amp; Moltres) as we can predict when a bird will spawn by reading the RNG seed after leaving the Mt. Moon Pok&eacute;mon Center.</p>
 
-<p><span class="fw-bold" style="color: #b60606;">From here it is assumed you are using a CFW Switch console running <a href="https://github.com/Atmosphere-NX/Atmosphere/releases">Atmosphere</a>. There is no alternative for this type of RNG abuse at this point in time.</span></p>
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Important -</span> From here it is assumed that you are using a Custom Firmware (CFW) Switch console running Atmosphere. This program is not intended to be used on emulator and cannot be used on retail hardware. You must also progress the game story enough to have access to overworld legendary birds.
+</div>
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c5b74;" id="requirements-birdwatch">
@@ -23,21 +28,22 @@ permalink: /cfw/lgpe/bird-watching
         <ul>
             <li><a href="/misc/downloads/moarencounterbots.zip" download>SysBot.NET - Moarencounterbots</a></li>
             <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-9.0.203-windows-x64-installer" target="_blank" rel="noopener noreferrer">.NET 9.0 SDK</a></li>
-            <li><a href="https://github.com/olliz0r/sys-botbase/releases/">sys-botbase</a></li>
+            <li><a href="https://github.com/olliz0r/sys-botbase/releases/" target="_blank">sys-botbase</a></li>
         </ul>
 
         <h6><span class="fw-bold">Installation Instructions</span></h6>
         <ul>
             <li>Download <code span class="fw-bold">.NET 9.0 SDK</code> and run the setup wizard until complete. This is a required program dependency.</li>
+            <li>Download <code span class="fw-bold">SysBot.NET - Moarencounterbots</code> and extract the contents of the download to a clean, empty folder inside a known location on your computer.</li>
             <li>Download the latest sys-botbase release and extract the <code span class="fw-bold">atmosphere</code> folder to the root of your Switch SD card.</li>
-            <li>Put the SD card back into the console, then reboot the console into SysCFW.</li>
+            <li>Put the SD card back into the console, then reboot the console into your chosen CFW environment (SysCFW recommended).</li>
         </ul>
 
     </div>
 </div>
 <br>
 
-<p>A pre-compiled version of Moarencounterbots is provided in the download links above, and is considered fine for 99% of people. To use the latest commits of the program you will need to compile and configure it yourself using this guide.</p>
+<p>A pre-compiled version of Moarencounterbots is provided in the download links above, and is considered fine for 99% of people. To use the latest commits of the program you will need to compile and configure it yourself using the guide directly below. Do not proceed until you have a functional build of Moarencounterbots, either through using the download link or compiling the application yourself.</p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/misc/moarencounterbots/">
     <span class="fw-bold">Moarencounterbots build guide!</span>
@@ -45,16 +51,17 @@ permalink: /cfw/lgpe/bird-watching
         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
     </svg>
 </a>
-<br>
 
-<hr /><div class="title" style="background-color: #0c5b74;">
-    <h1 class="text-light text-center pt-3 pb-3">SysBot Overview</h1>
+<hr />
+<div class="title" style="background-color: #0c5b74;">
+    <h1 class="text-light text-center pt-3 pb-3">Legendary Bird Hunting (CFW)</h1>
 </div>
+<small class="text-muted mb-3 mt-0">
+    Setup instructions for Moarencounterbots can be found here.
+</small>
 <hr />
 
 <p>In this guide will be using a bot routine called <code class="fw-bold">EncBotBirdWatchLGPE</code>. This section will cover the information you will need to know to run this bot.</p>
-
-<p><span class="fw-bold" style="color: #b60606;">At this stage you should now have Moarencounterbots compiled and stored in a known location on your computer. Click the above guide if you have not yet done so.</span></p>
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c5b74;" id="initial-setup-birdwatch">
@@ -63,9 +70,9 @@ permalink: /cfw/lgpe/bird-watching
     <div class="card-body card-bg">
         <h6><span class="fw-bold">What is EncBotBirdWatchLGPE?</span></h6>
 
-        <p>This is a routine that leaves and re-enters the PokeCenter outside Mt.Moon, while constantly monitoring the RNG state to determine if and when a legendary bird will spawn. We can use this method to effectively hunt for shiny and/or low level legendary birds.</p>
+        <p>This is a routine that leaves and re-enters the Pok&eacute;mon Center outside Mt. Moon, while constantly monitoring the RNG state to determine if and when a legendary bird will spawn. We can use this method to effectively hunt for shiny and/or low level legendary birds.</p>
 
-        <p>We can not do anything more than determine exactly when a bird will spawn. This means we can not set search filters for specific IVs, Shininess or Level. These values are not generated in a way that can be controlled with RNG manipulation.</p>
+        <p>We can only determine when a bird will spawn, nothing else can is predictable. This means we can not set search filters for specific IVs, Shininess or Level. These values are not generated in a way that can be controlled with RNG manipulation.</p>
         <hr />
 
         <h6><span class="fw-bold">Initial Bot Setup</span></h6>
@@ -78,27 +85,19 @@ permalink: /cfw/lgpe/bird-watching
             <li>Type the local IP address of your Switch console into the empty field. You are now ready to configure <code class="fw-bold">EncBotBirdWatchLGPE</code>.</li>
         </ol>
 
-        <blockquote>Read through the Moarencounterbots Wiki for general usage & setup instructions. If you are already familiar with using SysBot.NET this should be enough to get started, otherwise continue reading.</blockquote>
+        <p>Read through the <a href="https://github.com/Lusamine/SysBot.NET/wiki/LGPE-EncounterBots" target="_blank">sys-botbase</a> for general usage & setup instructions. If you are already familiar with using SysBot.NET this should be enough to get started, otherwise continue reading.</p>
 
     </div>
 </div>
 <br>
 
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="https://github.com/Lusamine/SysBot.NET/wiki/LGPE-EncounterBots">
-    <span class="fw-bold">Moarencounterbots Wiki</span>!
-    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-    </svg>
-</a>
-<br>
-
-<span class="fw-bold">Figure 1 -</span> SysBot.NET overview<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/sysbotmain.gif" alt="bird-watching-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/sysbotmain.gif"><p></p>
+<p><span class="fw-bold">Figure 1 -</span> SysBot.NET overview</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/sysbotmain.gif" alt="bird-watching-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/sysbotmain.gif">
 
 <p>SysBot.NET has 3 tabs labeled <code span class="fw-bold">Bots</code>, <code span class="fw-bold">Hub</code> & <code span class="fw-bold">Logs</code>, and they all come with their respective uses, described below with images.</p>
 
-<span class="fw-bold">Figure 2 -</span> Hub tab overview<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/hub.gif" alt="bird-watching-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/hub.gif"><p></p>
+<p><span class="fw-bold">Figure 2 -</span> Hub tab overview</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/hub.gif" alt="bird-watching-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/hub.gif">
 
 <p>The <code span class="fw-bold">Hub</code> tab is where you will conigure the settings of the bot and set your desired bot routine, for <code class="fw-bold">EncBotBirdWatchLGPE</code>, do the following:</p>
 
@@ -108,13 +107,13 @@ permalink: /cfw/lgpe/bird-watching
     <li>If you only wish to filter for shiny birds, set <code class="fw-bold">StopOnAllBirdsLGPE</code> to FALSE. You can also filter for specific IVs and/or species, but this may take a long time to find a result.</li>
 </ol>
 
-<span class="fw-bold">Figure 3 -</span> Logs tab overview<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/logs.gif" alt="bird-watching-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/logs.gif"><p></p>
+<p><span class="fw-bold">Figure 3 -</span> Logs tab overview</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/logs.gif" alt="bird-watching-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/logs.gif">
 
 <p>The <code span class="fw-bold">Logs</code> tab is where we monitor what is going on in-game, it shows us what the bot is doing in real-time and will contain all the information you need to know, such as when a legendary bird has spawned in the overworld, or if it's a shiny variant.</p>
 
-<span class="fw-bold">Figure 4 -</span> Bots tab overview<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/bots.gif" alt="bird-watching-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/bots.gif"><p></p>
+<p><span class="fw-bold">Figure 4 -</span> Bots tab overview</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/bots.gif" alt="bird-watching-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/bots.gif">
 
 <p>The <code span class="fw-bold">Bots</code> tab is where we add bots, select the <code class="fw-bold">EncBotBirdWatch</code> option in the dropdown menu, type your switch IP into the field and click <code class="fw-bold">Add</code> to add a new instance of EncBotBirdWatch.</p>
 
@@ -141,29 +140,29 @@ permalink: /cfw/lgpe/bird-watching
 </div>
 <hr />
 
-<span class="fw-bold">Figure 5 -</span> Game Setup<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/gamesetup.jpg" alt="bird-watching-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/gamesetup.jpg"><p></p>
+<p><span class="fw-bold">Figure 5 -</span> Game Setup</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/gamesetup.jpg" alt="bird-watching-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/gamesetup.jpg">
 
 <p>Once you are stood outside Mt. Moon and have your bot configured properly, click <code class="fw-bold">Start All</code> and head over to the Logs tab.</p>
 
-<span class="fw-bold">Figure 6 -</span> Bot Started<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/botstarted.gif" alt="bird-watching-6" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/botstarted.gif"><p></p>
+<p><span class="fw-bold">Figure 6 -</span> Bot Started</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/botstarted.gif" alt="bird-watching-6" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/botstarted.gif">
 
 <p>The bot should now begin hunting for birds by exiting the PokeCenter then checking your RNG states. If you are having trouble exiting/entering the PokeCenter consider adjusting your timing settings.</p>
 
-<span class="fw-bold">Figure 7 -</span> Target Found!<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/targetfound.png" alt="bird-watching-7" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/targetfound.png"><p></p>
+<p><span class="fw-bold">Figure 7 -</span> Target Found!</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/targetfound.png" alt="bird-watching-7" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/targetfound.png">
 
 <p>The bot will now begin waiting for your bird to spawn in the overworld. Once it detects the encounter, it will pause the game if it meets your stop conditions. Otherwise it will continue looking for results.</p>
 
-<span class="fw-bold">Figure 8/9 -</span> Result Found!<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/resultfoundbot.png" alt="bird-watching-8" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/resultfoundbot.png"><p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/resultfoundgame.jpg" alt="bird-watching-9" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/resultfoundgame.jpg"><p></p>
+<p><span class="fw-bold">Figure 8/9 -</span> Result Found!</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/resultfoundbot.png" alt="bird-watching-8" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/resultfoundbot.png">
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/resultfoundgame.jpg" alt="bird-watching-9" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/resultfoundgame.jpg">
 
 <p>We found a Zapdos in the overworld! Time to catch it to boost the shiny odds of the next Zapdos we find.</p>
 
-<span class="fw-bold">Figure 10 -</span> Result captured!<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/resultcaptured.jpg" alt="bird-watching-10" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/resultcaptured.jpg"><p></p>
+<p><span class="fw-bold">Figure 10 -</span> Result captured!</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/resultcaptured.jpg" alt="bird-watching-10" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/lgpe/bird-watching/resultcaptured.jpg">
 
 <p>You can now repeat this process and farm as many birds as you desire!</p>
 
