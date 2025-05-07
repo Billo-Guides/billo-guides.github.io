@@ -9,7 +9,7 @@
     </div>
     <div class="card-body card-bg">
         <ol>
-            <li>Now that you are standing in the correct position, open the pause menu and identify your seed. Keep the pause menu open after doing so to avoid unwanted advances.</li>
+            <li>Now that you are standing in the correct position, open the <code class="fw-bold">X Menu</code> and identify your seed. Keep the <code class="fw-bold">X Menu</code> open after doing so to avoid unwanted advances.</li>
             <li>Calibrate your NPC count, then close the <code class="fw-bold">MenuCloseTimeline</code> subwindow. Verify that your NPC count has been entered into the main window and <code class="fw-bold">Consider Menu Close?</code> is checked.</li>
             <li>Search for a target frame. If you do not find a result, try with <code span class="fw-bold">Holding Direction?</code> checked. This will slightly alter the results and may help with finding a target that is hittable using menu close prediction.</li>
             <ul>
@@ -18,7 +18,7 @@
             <li>Once you have found a target frame that can be reached using menu close prediction, take note of your positioning if you plan to leave the area for advancements. If you change location or move the character, you will need to recalibrate your NPC count again.</li>
         </ol>
 
-        <p>The calibration checkboxes (<code class="fw-bold">Consider Menu Close?</code> / <code class="fw-bold">Holding Direction?</code>) account for the advances consumed when closing the pause menu. The number of advances varies depending on whether you are holding a direction on your control stick when unpausing. Make sure you have the correct boxes checked; the search result table uses these checkboxes to calculate the exact frame on which to close the pause menu and spawn your target Pok&eacute;mon.</p>
+        <p>The calibration checkboxes (<code class="fw-bold">Consider Menu Close?</code> / <code class="fw-bold">Holding Direction?</code>) account for the advances consumed when closing the <code class="fw-bold">X Menu</code>. The number of advances varies depending on whether you are holding a direction on your control stick when unpausing. Make sure you have the correct boxes checked; the search result table uses these checkboxes to calculate the exact frame on which to close the <code class="fw-bold">X Menu</code> and spawn your target Pok&eacute;mon.</p>
     </div>
 </div>
 <br>
@@ -38,9 +38,9 @@
         <span class="fw-bold text-light">Advancing Towards a Target</span>
     </div>
     <div class="card-body card-bg">
-        <p>In this example, a shiny, Angry Mark Gurdurr appears in a {% include tooltips/clusters.html %} from advances 40,538 and 40,541. The calibrated NPC count is 3 and no direction should be held when closing the pause menu.</p>
+        <p>In this example, a shiny, Angry Mark Gurdurr appears in a {% include tooltips/clusters.html %} from advances 40,538 and 40,541. The calibrated NPC count is 3 and no direction should be held when closing the <code class="fw-bold">X Menu</code>.</p>
 
-        <p>We find that holding a direction reduces the chance of random RNG noise after closing the pause menu, which can disrupt your attempt depending on your configuration. Your experience using menu close prediction may vary.</p>
+        <p>We find that holding a direction reduces the chance of random RNG noise after closing the <code class="fw-bold">X Menu</code>, which can disrupt your attempt depending on your configuration. Your experience using menu close prediction may vary.</p>
 
         <h6 class="fw-bold">Step-by-Step</h6>
         <ol>
@@ -48,10 +48,10 @@
             <li>Stop advancing once you are roughly 1000-3000 advances before your target.</li>
             <li>Go back to your original position by the spawn point if you have moved. Ensure that the weather condition is correct both in-game and on owoow.</li>
             <li>Ensure the <code class="fw-bold">Consider Menu Close?</code> checkbox is checked, and verify that your NPC count is calibrated correctly. Search for your target again after calibration if needed.</li>
-            <li>Use <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/animations.gif">attack animations</a> or <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/menu-close.gif">menu close</a> to advance the RNG state until 100-300 advances remain, then pause the game by opening the in-game menu and navigate to the Pok&eacute;mon party list.</li>
+            <li>Use <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/animations.gif">attack animations</a> or <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/menu-close.gif">menu close</a> to advance the RNG state until 100-300 advances remain, then pause the game by opening the <code class="fw-bold">X Menu</code> and navigate to the Pok&eacute;mon party list.</li>
             <li>Click <code class="fw-bold">Update Seeds</code> in owoow to reset your advances to 0. From this point, use attack animations to reach the exact target frame.</li>
-            <li>You are now ready to perform the random symbol RNG manipulation. Back out to the main pause menu.</li>
-            <li>Unpause the game by closing the menu. If you checked the <code class="fw-bold">Holding Direction?</code> checkbox, hold a direction on the joystick toward the spawner when unpausing; otherwise, do NOT touch the joystick when unpausing.</li>
+            <li>You are now ready to perform the random symbol RNG manipulation. Back out to the main <code class="fw-bold">X Menu</code>.</li>
+            <li>Unpause the game by pressing <code class="fw-bold">B</code>. If you checked the <code class="fw-bold">Holding Direction?</code> checkbox, hold a direction on the joystick toward the spawner when unpausing; otherwise, do NOT touch the joystick when unpausing.</li>
             <li>Quickly head toward the target Pok&eacute;mon to spawn it in the overworld.</li>
             <li>Once you see the Pok&eacute;mon spawn, it has already been fully generated. As long as you do not let the Pok&eacute;mon despawn, you can take this time to:</li>
             <ul>
