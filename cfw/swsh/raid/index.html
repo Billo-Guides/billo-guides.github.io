@@ -4,44 +4,22 @@ title: SwSh Raid RNG (CFW)
 permalink: /cfw/swsh/raid
 ---
 
-<style>
-    mark {
-        background-color: #FFD700;
-        color: black;
-    }
-
-    .card-bg {
-        background-color: #d1d1d1;
-        border-bottom-right-radius: 0.20rem !important;
-        border-bottom-left-radius: 0.20rem !important;
-    }
-
-    table,
-    th,
-    td {
-        border: 1px solid black;
-    }
-
-    blockquote {
-        background: #c5c5c5;
-        border: 1px solid #9e9e9e;
-        border-left: 5px solid #0c0038;
-        margin: 1.5em 2px;
-        padding: 0.5em 10px;
-        quotes: "\201C""\201D""\2018""\2019";
-    }
-</style>
-
 <div class="title" style="background-color: #0c0038;">
-    <h1 class="text-light text-center pt-3 pb-3">Max Raid RNG Guide (CFW)</h1>
+    <h1 class="text-light text-center pt-3 pb-3">Wishing Piece Raid RNG (CFW)</h1>
 </div>
+<small class="text-muted mb-3 mt-0">
+    A guide for manipulating Max Raid battles in Sword/Shield, using <a class="text-decoration-none text-muted" href="https://github.com/Admiral-Fish/PokeFinder/">PokeFinder</a> by <a class="text-decoration-none text-muted" href="https://github.com/Admiral-Fish">Admiral-Fish</a>.
+</small>
 <hr />
 
-<p>This guide provides in-depth coverage of how to use PokeFinder by AdmiralFish to RNG abuse Max Raid Battles in Sword/Shield. Using raid RNG abuse you can predict the internal values of upcoming raids (IVs, Nature, Shiny Status etc.) and filter for desirable results.</p>
+<h5 span class="fw-bold">Introduction</h5>
+<p>Sword/Shield Max Raid RNG manipulation is used to control the internal details of Pok&eacute;mon found in raid battles. It is possible to predict values such as IVs, Nature, Shiny Status, Size (Jumbo/Teensy Mark in SV), Gender and more. Note that it is only possible to manipulate encounters found inside Max Raid dens, it is NOT POSSIBLE to manipulate the details of Pok&eacute;mon found in Dynamax Adventures.</p>
 
-<p>Each raid is given a randomly assigned "den seed", this seed is used to determine which Pokemon will be inside a den. Every day that passes will increment the den seed by 1 in a predictable manner, making Raid RNG abuse entirely possible using a process known as "date skipping". Simply skip the required amount to reach your desired seed.</p>
+<p>Each raid is given a randomly assigned "den seed", this seed is used to determine which Pok&eacute;mon will be inside a den. Every day that passes will increment the den seed by 1 in a predictable manner, making Raid RNG abuse entirely possible using a process known as "date skipping". Simply skip the required amount to reach your desired seed.</p>
 
-<p><span class="fw-bold" style="color: #b60606;">From here it is assumed you are using a CFW Switch console running <a href="https://github.com/Atmosphere-NX/Atmosphere/releases">Atmosphere</a>.</span></p>
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Important -</span> From here it is assumed that you are using a Custom Firmware (CFW) Switch console running Atmosph&egrave;re. You must also have progressed the game story far enough to have access to Max Raid battles.
+</div>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/raid">
     Don't have CFW installed? <span class="fw-bold">Click here for the retail focused guide!</span>
@@ -49,131 +27,208 @@ permalink: /cfw/swsh/raid
         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
     </svg>
 </a>
-<br>
 
 <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="setup-and-install-swsh-raid-cfw">
-        <span class="fw-bold text-light">Setup Instructions</span>
+    <div class="anchored card-header" style="background-color: #0c0038;" id="setup-and-install-swsh-max-raid-cfw">
+        <span class="fw-bold text-light">Required Software</span>
     </div>
     <div class="card-body card-bg">
-        <h5><span class="fw-bold">You will need:</span></h5>
 
+        <h6><span class="fw-bold">Switch Software:</span></h6>
+        <ol>
+            <li><a href="https://github.com/3096/luxray/releases/download/0.1.0/luxray-r0.1.0-0.zip" target="_blank" rel="noopener noreferrer">Luxray by 3096</a></li>
+            <li><a href="https://github.com/olliz0r/sys-botbase/releases" target="_blank">sys-botbase by olliz0r</a></li>
+            <li><a href="https://github.com/Lusamine/ldn_mitm/releases/" target="_blank">ldn_mitm fork by Lusamine</a></li>
+        </ol>
+
+        <h6><span class="fw-bold">Installation Instructions (Switch Software)</span></h6>
+        <ol>
+            <li>Download <code class="fw-bold">Luxray</code> and extract the contents of the download to the root of your Switch SD card.</li>
+            <li>Download <code class="fw-bold">sys-botbase</code> and extract the contents of the download to the root of your Switch SD card.</li>
+            <li>Download <code class="fw-bold">ldn_mitm</code> and extract the contents of the download to the root of your Switch SD card.</li>
+            <li>Reboot the console into your chosen CFW environment (SysCFW recommended).</li>
+        </ol>
+
+        <h6><span class="fw-bold">PC Software:</span></h6>
         <ul>
-            <li><a href="https://github.com/Admiral-Fish/PokeFinder/releases" target="_blank" rel="noopener noreferrer">PokeFinder</a></li>
-            <li><a href="https://github.com/WerWolv/Tesla-Menu" target="_blank" rel="noopener noreferrer">Tesla Menu</a></li>
-            <li><a href="https://github.com/WerWolv/nx-ovlloader" target="_blank" rel="noopener noreferrer">NXOvloader</a></li>
-            <li><a href="https://github.com/zaksabeast/CaptureSight/releases/download/v0.12.8/capturesight.ovl" target="_blank" rel="noopener noreferrer">Capturesight Overlay</a></li>
-            <li><a href="https://github.com/3096/luxray/releases/download/0.1.0/luxray-r0.1.0-1-ovlloader.zip" target="_blank" rel="noopener noreferrer">Luxray Overlay</a></li>
+            <li><a href="https://github.com/Admiral-Fish/PokeFinder/releases" target="_blank" rel="noopener noreferrer">PokeFinder by Admiral-Fish</a></li>
+            <li><a href="https://projectpokemon.org/home/files/file/1-pkhex/" target="_blank">PKHeX by Kaphotics</a></li>
+            <li><a href="https://github.com/santacrab2/PKHeX-Plugins/releases" target="_blank">PKHeX Plugins fork by SantaCrab2</a></li>
         </ul>
 
-        <h6><span class="fw-bold">Instructions</span></h6>
-
+        <h6><span class="fw-bold">Installation Instructions (PC Software)</span></h6>
         <ol>
-            <li>Download the latest version of <code span class="fw-bold">PokeFinder</code> for your operating system, then extract all the contents into a clean, empty folder.</li>
-            <li>Download & extract the latest versions of <code span class="fw-bold">Tesla Menu</code> & <code span class="fw-bold">NXOvloader</code> into a known location on your computer.</li>
-            <li>You should now two folders named <code span class="fw-bold">atmosphere</code> and <code span class="fw-bold">switch</code>, move these folders to the root of your Switch SD card.</li>
-            <li>Download & extract the latest versions of <code span class="fw-bold">CaptureSight</code> & <code span class="fw-bold">Luxray</code> into a known location on your computer.</li>
-            <li>Open the <code span class="fw-bold">/switch/.overlays/</code> directory on your SD card, then drag <code span class="fw-bold">capturesight.ovl</code> & <code span class="fw-bold">luxray.ovl</code> into this folder.</li>
-            <li>Plug the SD card back into your console, then launch SysCFW and confirm that everything has been installed properly.</li>
+            <li>Download and extract <code class="fw-bold">PokeFinder-win</code> into a fresh, empty folder inside a known location on your computer.</li>
+            <li>Refer to the <a href="https://github.com/santacrab2/PKHeX-Plugins/wiki/Installing-PKHeX-Plugins" target="_blank" rel="noopener noreferrer">PKHeX Plugins Wiki</a> for installing PKHeX with the required plugins. Do not leave the setup page until you have LiveHeX working properly.</li>
+            <li>When launching PKHeX/PokeFinder you may get asked to install the relevant dependencies if you do not already have them installed. Download the installer when prompted and go through the setup instructions until complete.</li>
         </ol>
-
-        <h6><span class="fw-bold">Checklist</span></h6>
-        <ol>
-            <li>PokeFinder launches properly with no issues or pop ups (install <a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads" target="_blank" rel="noopener noreferrer">Visual C++ Redistributable</a>) ✅</li>
-            <li>Tesla Menu opens properly when pressing the button combination ✅</li>
-            <li>Luxray & Capturesight overlays are present in the list Tesla overlays ✅</li>
-        </ol>
-
-        <blockquote>
-            Tesla Menu requires a button combination to launch the program, this is done by pressing and holding the <code span class="fw-bold">L</code> button, <code span class="fw-bold">DPAD Down</code>, and pressing in the <code span class="fw-bold">Right Stick</code> at the same time (<a href="https://gbatemp.net/threads/tesla-the-nintendo-switch-overlay-menu.557362/" target="_blank" rel="noopener noreferrer">how to launch Tesla Menu</a>).
-        </blockquote>
 
     </div>
 </div>
 <br>
 
-<p><span class="fw-bold" style="color: #b60606;">Ensure that all of the programs have been set up correctly before continuing, as from here onwards it will be assumed that everything has been set up properly and is working as intended.</span></p>
-
-<hr /><div class="title" style="background-color: #0c0038;">
-    <h1 class="text-light text-center pt-3 pb-3">Tool Overviews</h1>
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Important -</span> If ldn_mitm is not available or there is no working release, you will have to connect to Y-Comm or enable LAN mode for Wi-Fi connectivity in LiveHeX. You can enable LAN mode by going to the settings in SWSH and pressing <code class="fw-bold">L</code> + <code class="fw-bold">R</code> + <code class="fw-bold">L-Stick</code> (<a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/main-page/booting-lan-mode.jpg">Booting LAN</a>, <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/main-page/lan-mode.jpg">LAN enabled</a>). You will not have a <code class="fw-bold">420000000010</code> folder in the <code class="fw-bold">atmosphere/contents</code> directory since the outdated sys-module will crash Atmosph&egrave;re.
 </div>
+
+<hr />
+<div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">Software Overview</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    Understand how to use the required software used for the RNG manipulation process.
+</small>
 <hr />
 
-<p>This section will cover the essential details you need to know in order to use each of the required tools. If you do not yet have a complete understanding of how each of the tools, follow along with this section.</p>
-
-<span class="fw-bold">Figure 1 -</span> PokeFinder Overview<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/main-page/figure-1-pokefinder-overview-cfw.gif" alt="raid-setup-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/main-page/figure-1-pokefinder-overview-cfw.gif"><p></p>
+<p><span class="fw-bold">Figure 1 -</span> PokeFinder Overview</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/pokefinder-main-window.png" alt="raid-setup-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/pokefinder-main-window.png">
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c0038;" id="pokefinder-overview-cfw">
         <span class="fw-bold text-light">PokeFinder Overview</span>
     </div>
     <div class="card-body card-bg">
-        <p>Pictured above is the window you will be presented with after opening the Gen 8 Raid section of PokeFinder for the first time. For the purposes of this guide, this window will be referred to as the "main" window. Here is where we can calculate upcoming advances and search for targets based on the search parameters.</p>
+        <p>Upon luanching PokeFinder for the first time you will be presented with a small window with various different buttons. Navigate to the <code class="fw-bold">Gen 8</code> tab and select the <code class="fw-bold">Raid</code> button to open a larger window dedicated to RNG manipulating Max Raid Pok&eacute;mon. For the purposes of this guide this larger window will be referred to as the "main window", and here we can configure the program to search raids and calculate upcoming advances based on user-defined search criteria.</p>
 
-        <h6><span class="fw-bold">Feature Overview</span></h6>
+        <h6><span class="fw-bold">Main Window Feature Overview</span></h6>
         <ul>
             <li><span class="fw-bold">Left Side -</span> Enter search conditions, select a specific raid, and input seed and # of advances.</li>
-            <li><span class="fw-bold">Center -</span> Specify raid details, such as species, raid type (common/rare), and difficulty (star level).</li>
-            <li><span class="fw-bold">Right Side -</span> Search filter details, filter for high IV, specific nature, and/or shiny targets.</li>
-            <li><span class="fw-bold">Top -</span> Profile management, enter your 5 digit IDs & trainer information from your save file here.</li>
+            <li><span class="fw-bold">Center -</span> Specify raid details, such as species, raid type (Normal/Rare), and difficulty (Star Count).</li>
+            <li><span class="fw-bold">Right Side -</span> Search filter details, filter for IVs, Nature, Shiny Status, Gender, and ability, filters can be combined.</li>
+            <li><span class="fw-bold">Top -</span> Profile management, enter your 5 digit IDs, game &amp; trainer information from your save file here.</li>
             <li><span class="fw-bold">Bottom -</span> Search result output, any result that matches your filters will be displayed here.</li>
         </ul>
 
-        <p>By clicking <code span class="fw-bold">Gen 8 Tools</code> at the top of the main window, you can select the <code span class="fw-bold">Den Map</code> button to open a sub window which contains a map of the Wild Area. Here you can look at the exact location of raid you currently have selected, this is indicated by the red circle on the map display.</p>
-
-        <p>You can use the Den Map to quickly navigate to your desired den in-game, as using other sources to locate raid locations can often be confusing.</p>
+        <h6><span class="fw-bold">Profiles</span></h6>
+        <p>It is important to a setup a basic PokeFinder profile. This means you need to at least select the game version you are playing so that PokeFinder can display the correct species details of Raid Dens. It is only important to select your game version, everything else is optional. Select your profile in the dropdown menu at the top of the main window after creation.</p>
 
         <details>
-            <summary><span class="fw-bold">Finding your 5 digit TID/SID</span></summary>
-            <p>Due to the nature of how raid shininess works, it is not required to set a profile in PokeFinder. But for the purposes of "proof" in trading communities, you may want to add a profile for the game you are currently using, this will have the tool output the correct PID for your Pokemon based on your 5 digit TID/SID combination.</p>
+            <summary><span class="fw-bold">Technical Details:</span></summary>
+            <p>Pok&eacute;mon found in Max Raid battles will be shiny for all participants. For the game to do this it compares the PID to a set of "fake trainer" IDs, then rerolls the PID based on your TID/SID combination after capture so that the Pok&eacute;mon maintains its shiny status after the battle. This means that entering the correct IDs into your PokeFinder profile is NOT required.</p>
 
+            <p>However, if you do correct IDs into your profile, the PID will be calculated based on your TID/SID combination. This is useful for trading communities that require proof that the Pok&eacute;mon was obtained through legitimate means as the PID will be correct inside the search table.</p>
+
+            <h6><span class="fw-bold">Finding your 5 digit TID/SID</span></h6>
             <ol>
-                <li>Load your save file into PKHeX, then right click and view a self obtained Pokemon.</li>
+                <li>Load your save file into PKHeX, then right click and view a self obtained Pok&eacute;mon.</li>
                 <li>Open the OT/Misc tab and hover over the TID field with your mouse.</li>
                 <li>Your 5 digit TID/SID will be displayed, these are the values PokeFinder expects.</li>
             </ol>
+
         </details>
     </div>
 </div>
 <br>
 
-<span class="fw-bold">Figure 2 -</span> Capturesight Overview<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/main-page/figure-3-capturesight-overview-cfw.gif" alt="raid-setup-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/main-page/figure-3-capturesight-overview-cfw.gif"><p></p>
+<p><span class="fw-bold">Figure 2 -</span> PokeFinder Den Map</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/pokefinder-den-map.gif" alt="raid-setup-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/pokefinder-den-map.gif">
 
 <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="capturesight-overview-cfw">
-        <span class="fw-bold text-light">Capturesight Overview</span>
+    <div class="anchored card-header" style="background-color: #0c0038;" id="pokefinder-den-map">
+        <span class="fw-bold text-light">PokeFinder Den Map</span>
     </div>
     <div class="card-body card-bg">
-        <p>Upon launching Tesla Menu on your switch, you will be presented with something similar to the above image. Here is where you will launch the Capturesight (and Luxray) overlays. CaptureSight is used to find your current Raid Den seed.</p>
+        <p>In the smaller window that appears when launching PokeFinder there is a navigation bar at the top that displays various tools used in different games. Under <code class="fw-bold">Gen 8 Tools</code> there is an option for <code class="fw-bold">Den Map</code>, clicking this will open a subwindow that can be used to find the Den ID of your chosen raid den more easily.</p>
 
-        <h6><span class="fw-bold">Using Capturesight</span></h6>
-        <ul>
-            <li>Open the Tesla Menu, then launch capturesight by pressing the <code span class="fw-bold">A</code> button.</li>
-            <li>Scroll down to the <code span class="fw-bold">Dens</code> sub heading, this is where you can view a list of dens relevant to the map you are in.</li>
-            <li><code span class="fw-bold">Active Dens</code> is used for wishing piece RNG, and <code span class="fw-bold">All Dens</code> is used for "natural" spawned raid RNG.</li>
-            <li>You can now click around and view the den seed of any active or inactive Max Raid, become familiar with using CaptureSight before continuing.</li>
-        </ul>
+        <p>Use resources like <a href="https://www.serebii.net/swordshield/maxraidbattledens.shtml" target="_blank" rel="noopener noreferrer">Serebii</a> to find the rough in-game location of a Raid Den that contains your desired Pok&eacute;mon, then use the Den Map feature of PokeFinder to find the Den ID that corrisponds with your chosen Raid Den.</p>
 
-        <p>In capturesight all of the seeds for raid dens are visible. The Den IDs displayed on Capturesight should line up with the Den IDs displayed by PokeFinder, making it quick and easy to find a seed for any specific Raid Den.</p>
+        <h6><span class="fw-bold">Finding Den ID</span></h6>
+        <ol>
+            <li>Use Serebii to find a Raid Den that contains your desired Pok&eacute;mon. Take note of the Wild Area location and the map ID (e.g Dusty Bowl).</li>
+            <li>Open the <code class="fw-bold">Den Map</code> subwindow on PokeFinder, select the corrisponding Wild Area, then scroll to the correct map ID.</li>
+            <li>Click each individual option in the dropdown menu until the map on the right has a red dot in the rough location of your chosen Raid Den.</li>
+            <li>Take note of the Den ID, Location, and Map ID. Then head over to the main PokeFinder window to enter the relevant information.</li>
+            <ul>
+                <li>Confirm that the correct profile has been selected at the top.</li>
+                <li>Enter the correct Wild Area inside the <code class="fw-bold">Location</code> dropdown.</li>
+                <li>Enter the correct Den ID inside the <code class="fw-bold">Den</code> dropdown.</li>
+                <li>Enter the correct Den rarity (Normal/Rare) inside the <code class="fw-bold">Rarity</code> dropdown.</li>
+            </ul>
+            <li>Confirm that the species selection in PokeFinder matches Serebii. If everything was done correctly this will be your Den ID. We will need this information later.</li>
+            <li>Throw a Wishing Piece into the den and confirm the species align with the dropdown menu in PokeFinder. If the species does not match you are not standing by the correct den in-game.</li>
+        </ol>
+
+        <h6><span class="fw-bold">Event Distribution Dens</span></h6>
+        <p>Event distributions from Wild Area News contained unique tables of available Pok&eacute;mon for a limited time. An event den can appear anywhere on the map, so you do not need to use the <code class="fw-bold">Den Map</code> feature. Simply select <code class="fw-bold">Event</code> in the <code class="fw-bold">Location</code> section of the main window instead, then select your distribution.</p>
+
+        <p>In most cases you should have the final event distribution active. If you have injected event data using a tool like PKHeX you will need to manually select the correct event distribution from the dropdown menu. Information about injecting Wild Area News can be found in <a href="https://projectpokemon.org/tutorials/save-editing/gen-8_157/block-editing-r106/" target="_blank" rel="noopener noreferrer">this ProjectPokemon tutorial</a>. No further support for Wild Area News injection will be provided in this guide.</p>
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 3 -</span> PKHeX/LiveHeX Overview</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/pkhex-livehex-overview.gif" alt="raid-setup-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/pkhex-livehex-overview.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="pkhex-livehex-overview">
+        <span class="fw-bold text-light">PKHeX/LiveHeX Overview</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>LiveHeX is a feature of the Auto Legality Mod plugin that is used to read the details of Max Raid dens while we are playing the game, we can connect to LiveHeX using sys-botbase, a Switch program that was installed earlier.</p>
+
+        <h6><span class="fw-bold">LiveHeX Connectivity</span></h6>
+        <ol>
+            <li>Open PKHeX, then navigate <code class="fw-bold">Options</code> -> <code class="fw-bold">Settings</code> and set your <code class="fw-bold">Blank Save Version</code> to the game you are playing (Sword or Shield).</li>
+            <li>Open the Homebrew Menu on your console, then press the <code class="fw-bold">Y</code> button to display the local IP address of your console.</li>
+            <li>Close the subwindow, then navigate to <code class="fw-bold">Tools</code> -> <code class="fw-bold">Auto Legality Mod</code> -> <code class="fw-bold">Open LiveHeX</code> to open the LiveHeX subwindow.</li>
+            <li>If you do not have ldn_mitm installed, connect to the Y-Comm in game or enter LAN mode. This step can be skipped if you already have ldn_mitm installed.</li>
+            <li>Enter the local IP of your console into the <code class="fw-bold">IP:</code> field and click the <code class="fw-bold">Connect</code> button. If done correctly, your console should now be connected to LiveHeX.</li>
+            <li>At the bottom of the LiveHeX window open the dropdown menu and select the Raid button that corrisponds to the location of your desired Raid Den.</li>
+            <ul>
+                <li>Select <code class="fw-bold">Raid</code> if your raid is located in the Wild Area.</li>
+                <li>Select <code class="fw-bold">RaidArmor</code> if your raid is located in the Isle of Armor.</li>
+                <li>Select <code class="fw-bold">RaidCrown</code> if your raid is located in the Crown Tundra.</li>
+            </ul>
+            <li>After you have selected the correct Raid location, select your Den ID. This should match the the ID found earlier using Serebii/PokeFinder Den Map.</li>
+            <li>To confirm that you are looking at the correct den you will need to throw a Wishing Piece inside if you have not already done so. Close and re-open the LiveHeX raid subwindow if you did not already throw in a Wishing Piece.</li>
+        </ol>
 
     </div>
 </div>
 <br>
 
-<span class="fw-bold">Figure 3 -</span> Luxray Overview<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/main-page/figure-4-luxray-overview-cfw.png" alt="raid-setup-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/main-page/figure-4-luxray-overview-cfw.png"><p></p>
+<p><span class="fw-bold">Figure 4 -</span> LiveHeX Den ID Confirmation</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/livehex-den-confirmation.png" alt="raid-setup-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/livehex-den-confirmation.png">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="pkhex-livehex-overview">
+        <span class="fw-bold text-light">LiveHeX Den ID Confirmation</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>To confirm the Den ID is correct within LiveHeX you will need to throw a Wishing Piece into the den if you have not already done so. Do this now then close and reopen the Raid subwindow on LiveHeX to refresh the changes.</p>
+
+        <h6><span class="fw-bold">Step-by-step</span></h6>
+        <ol>
+            <li>Throw a Wishing Piece into the den that you believe contains your desired species.</li>
+            <li>Connect to LiveHeX and open the Raid subwindow as explained above.</li>
+            <li>Select your Den ID, if everything matches you should see the following output:</li>
+            <ul>
+                <li><code class="fw-bold">isActive</code> is <code class="fw-bold">True</code>.</li>
+                <li><code class="fw-bold">isRare</code> is <code class="fw-bold">True</code> (purple beam) or <code class="fw-bold">False</code> (red beam).</li>
+                <li><code class="fw-bold">isWishingPiece</code> is <code class="fw-bold">True</code>.</li>
+                <li>If everything is correct then you have found the correct Den ID.</li>
+            </ul>
+            <li>Close the Raid Parameter Subwindow by either clicking the X in the top corner or clicking the <code class="fw-bold">Cancel</code> button. DO NOT CLICK SAVE.</li>
+        </ol>
+
+        <p>Pressing the <code class="fw-bold">Save</code> button will inject the current seed back into the Raid Den (very bad). <span class="fw-bold">NEVER USE THIS BUTTON TO CLOSE THE RAID PARAMETER SUBWINDOW</span> if you care about the legitimacy of your Pok&eacute;mon.</p>
+
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 5 -</span> Luxray Overview</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/luxray-overview.png" alt="raid-setup-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/luxray-overview.png">
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c0038;" id="luxray-overview-cfw">
         <span class="fw-bold text-light">Luxray Overview</span>
     </div>
     <div class="card-body card-bg">
-        <p>Luxray is a tool used for automating the (otherwise tedious) date skipping process. As mentioned above, the den seed increments by one after each day that passes. Luxray can be used to alter the system clock and make the game believe that a day has passed, thus incrementing any den seeds.</p>
+        <p>Luxray is a tool used for automating the (otherwise tedious) date skipping process and can be launched from the Switch Homebrew Menu. As mentioned above, the den seed increments by one after each day that passes. Luxray can be used to alter the system clock and make the game believe that a day has passed which will increment any den seeds.</p>
 
         <h6><span class="fw-bold">Using Luxray</span></h6>
-        <p>Upon launching, you will be presented with a calculator-style application with three main features, these are:</p>
+        <p>Upon launching you will be presented with a calculator-style application with three main features, these are:</p>
 
         <ol>
             <li><span class="fw-bold">Set -</span> Sets the network time to a desired date, based on the figure typed into the calculator. Useful for changing the weather.</li>
@@ -181,20 +236,17 @@ permalink: /cfw/swsh/raid
             <li><span class="fw-bold">NTP -</span> Sets the date and time back to network time, this should be done after every date-skipping session.</li>
         </ol>
 
-        <blockquote>Date & Time must be synced via the internet in order to use Luxray, as it takes advantage of System time manipulation.</blockquote>
+        <p>Date &amp; Time must be synced via the internet in order to use Luxray as it takes advantage of System time manipulation.</p>
 
     </div>
 </div>
 <br>
 
-<p>You should have gained a good understanding of how to use each of the tools. <span class="fw-bold">Click on the button below to get started!</span></p>
+<p>You should now have an entry level understanding of how to use each of the tools and how to find your Max Raid seed. Click the button below to see a worked example of the entire process from start to finish.</p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/raid/wishing-piece">
-    <span class="fw-bold">Wishing Piece RNG!</span>
+    Continue to the <span class="fw-bold">RNG process!</span>
     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
     </svg>
 </a>
-<br>
-
-
