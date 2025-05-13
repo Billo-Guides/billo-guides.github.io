@@ -32,6 +32,10 @@ a.list-group-item {
     cursor: pointer !important;
 }
 
+.clickable-link {
+    cursor: pointer !important;
+}
+
 /* Applies a margin to displayed clickable images; not hyperlinked images */
 img.clickable-image {
     margin-bottom: 15px;
