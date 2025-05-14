@@ -56,7 +56,7 @@ permalink: /cfw/bdsp/
         <tr>
             <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/jirachi.jpg">Gift</a></span></td>
             <td>
-                Pokemon or eggs recieved from NPCs or through Mystery Gift distribution feature.
+                Pok&eacute;mon or eggs recieved from NPCs or through Mystery Gift distribution feature.
             </td>
         </tr>
         <tr>
@@ -149,7 +149,7 @@ permalink: /cfw/bdsp/
 
         <ul>
             <li><span class="fw-bold" style="color: #b60606;">Left Side -</span> Search conditions, type of encounter, seed input &amp; # of advances.</li>
-            <li><span class="fw-bold" style="color: #2606b6;">Center -</span> Pokemon details, such as species to hunt or parents for egg encounters.</li>
+            <li><span class="fw-bold" style="color: #2606b6;">Center -</span> Pok&eacute;mon details, such as species to hunt or parents for egg encounters.</li>
             <li><span class="fw-bold" style="color: #23b606;">Right Side -</span> Set search filters for desired results (e.g. shiny or high IV targets).</li>
             <li><span class="fw-bold" style="color: #b606ad;">Top -</span> Manage profiles, input save file information.</li>
             <li><span class="fw-bold" style="color: #9c9e07;">Bottom -</span> Display all results that match the given search perameters.</li>
@@ -166,14 +166,14 @@ permalink: /cfw/bdsp/
         <span class="fw-bold text-light">PokeFinder Overview</span>
     </div>
     <div class="card-body card-bg">
-        <p>PokeFinder profiles should be configured properly before attempting to RNG abuse Pokemon. This will ensure that the search results given by PokeFinder are displayed correctly. Setting up your profile is particularly important for shiny egg RNG.</p>
+        <p>PokeFinder profiles should be configured properly before attempting to RNG abuse Pok&eacute;mon. This will ensure that the search results given by PokeFinder are displayed correctly. Setting up your profile is particularly important for shiny egg RNG.</p>
 
         <p>PokeFinder requires the internal (5 digit) Trainer ID/Secret ID of your save file to produce the correct PID. These IDs should not be confused with your 6 digit in-game Trainer ID. If you do not yet know your internal ID values you can easily find using <a href="https://projectpokemon.org/home/files/file/1-pkhex/" target="_blank">PKHeX</a>:</p>
 
         <h6 span class="fw-bold">Profile Configuration</h6>
         <ol>
             <li>Open an existing BDSP save file in PKHeX (<a href="https://projectpokemon.org/home/tutorials/save-editing/managing-switch-saves/" target="_blank">save management tutorial</a>).</li>
-            <li>Right-click any Pokemon with the TID/SID you wish to check and click <code class="fw-bold">View</code>.</li>
+            <li>Right-click any Pok&eacute;mon with the TID/SID you wish to check and click <code class="fw-bold">View</code>.</li>
             <li>Navigate to the <code class="fw-bold">OT/Misc</code> tab, then hover over the TID field with your mouse.</li>
             <li>Your 5 digit TID/SID will be displayed here, enter these values into Notepad or similar.</li>
             <li>Open PokeFinder and select an encounter type (Egg/Gift/Wild/Static/Underground).</li>
@@ -252,38 +252,40 @@ permalink: /cfw/bdsp/
             <li><code class="fw-bold">EncBotDexFlipBS</code> - Automatically advance the RNG state until a given point by flipping Pok&eacute;Dex pages.</li>
         </ol>
 
-        <p>See the official <a href="https://github.com/Lusamine/SysBot.NET/wiki" target="_blank">Moarencounterbots Wiki</a> for more detailed information about program features.</p>
+        <p>Visit the official <a href="https://github.com/Lusamine/SysBot.NET/wiki" target="_blank">Moarencounterbots Wiki</a> for more detailed information about program features.</p>
 
 
     </div>
 </div>
 <hr />
 
-<span class="fw-bold">Figure 3 -</span> PokeViewer.NET Overview<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/main-page/figure-3-pokeviewer-overview.png" alt="main-page-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/main-page/figure-3-pokeviewer-overview.png"><p></p>
+<span class="fw-bold">Figure 5 -</span> PokeViewer.NET Overview<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/main-page/pokeviewer-overview.gif" alt="main-page-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/main-page/pokeviewer-overview.gif"><p></p>
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #96324c;" id="pokeviewer-overview">
         <span class="fw-bold text-light">PokeViewer Overview</span>
     </div>
     <div class="card-body card-bg">
-        <p>Pictured above is the window you are presented with upon launching <code span class="fw-bold">PokeViewer.exe</code>. PokeViewer is used to read the details of a Pokemon during a battle or found inside boxes, which is important for troubleshooting after missing a target.</p>
+        <p>When launching <code span class="fw-bold">PokeViewer.exe</code> we can see the connectivity functionality is similar to Moarencounterbots. PokeViewer is used to read the details of a Pok&eacute;mon during a battle or found inside boxes which is important for troubleshooting in the event that a target frame is missed and some calibration is required.</p>
 
-        <p>To connect your console to PokeViewer, find your console's local IP address by opening the Homebrew Menu and pressing the <code span class="fw-bold">Y Button</code>. Enter this IP address into the designated field. Then click <code span class="fw-bold">Connect</code> once you have launched the game.</p>
+        <p>To connect your console to PokeViewer, find your console's local IP address by opening the Homebrew Menu and pressing the <code span class="fw-bold">Y</code> button. Enter this IP address into the designated field. Then click <code span class="fw-bold">Connect</code> once you are standing in the overworld in-game.</p>
 
         <h6><span class="fw-bold">Main Features</span></h6>
         <ol>
-            <li><code span class="fw-bold">EncounterView</code> - Used to view the details of an opposing Pokemon during a battle.</li>
-            <li><code span class="fw-bold">BoxView</code> - Used to view the details of a Pokemon located inside boxes.</li>
+            <li><code span class="fw-bold">EncounterView</code> - Used to view the details of an opposing Pok&eacute;mon during a battle.</li>
+            <li><code span class="fw-bold">BoxView</code> - Used to view the details of a Pok&eacute;mon located inside boxes.</li>
         </ol>
 
-        <p>See the official <a href="https://github.com/zyro670/PokeViewer.NET/wiki" target="_blank">PokeViewer Wiki</a> for more detailed information about program features.</p>
+        <p>Visit the official <a href="https://github.com/zyro670/PokeViewer.NET/wiki" target="_blank">PokeViewer Wiki</a> for more detailed information about program features.</p>
 
     </div>
 </div>
-<br>
+<p></p>
 
-<p>Each program should now be installed and functioning as intended. At this stage the programs should be configured properly configured and have a basic understanding of how to use them. Setting up LINQPad scripts for Pok&eacute;Radar RNG manipulation will be covered later, do not worry if you do not have the LINQPad scripts set up yet.</p>
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Important -</span> At this stage the three main programs (PokeFinder, SysBot.NET &amp; PokeViewer.NET) should be configured properly configured and you should have a basic understanding of how to use them. Setting up LINQPad scripts for Pok&eacute;Radar RNG manipulation will be covered on the Pok&eacute;Radar page.
+</div>
 
 <hr />
 <div class="title" style="background-color: #96324c;">
@@ -302,7 +304,14 @@ permalink: /cfw/bdsp/
 </a>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/static/encounter">
-    <span class="fw-bold">STATIC ENCOUNTER!</span>
+    <span class="fw-bold">STATIC ENCOUNTERS!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/static/gift">
+    <span class="fw-bold">STATIC GIFTS!</span>
     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
     </svg>
@@ -322,14 +331,6 @@ permalink: /cfw/bdsp/
     </svg>
 </a>
 
-
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/static/gift">
-    <span class="fw-bold">GIFT REDEMPTION!</span>
-    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-    </svg>
-</a>
-
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/egg">
     <span class="fw-bold">EGG REDEMPTION!</span>
     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -338,7 +339,7 @@ permalink: /cfw/bdsp/
 </a>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/underground">
-    <span class="fw-bold">GRAND UNDERGROUND ENCOUNTER!</span>
+    <span class="fw-bold">GRAND UNDERGROUND!</span>
     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
     </svg>

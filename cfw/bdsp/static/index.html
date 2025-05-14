@@ -1,0 +1,155 @@
+---
+layout: default
+title: BDSP Static RNG (CFW)
+permalink: /cfw/bdsp/static/
+---
+
+<div class="title" style="background-color: #96324c;">
+    <h1 class="text-light text-center pt-3 pb-3">BDSP Static RNG</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    Worked examples for manipulating Pokemon from static encounters and gifts.
+</small>
+<hr />
+
+<p>The term "Static" is used to describe encounters or gifts that are generated upon clicking the <code class="fw-bold">A</code> button. These Pokemon are located in specific (fixed) locations. An example of a static encounter would be Dialga/Palkia, and an example of a static gift would be Jirachi/Mew.</p>
+
+<p>Before starting, confirm that the autosave feature is disabled. If you are targeting a static encounter, confirm that you have enough resouces (Pokeballs, healing items, capture Pokemon etc.) to successfully capture the Pokemon you plan to manipulate.</p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #96324c;" id="explaining-bdsp-rng">
+        <span class="fw-bold text-light">How Does This Work?</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>In Brilliant Diamond/Shining Pearl the game determines the outcome of "random" events using a constantly advancing RNG seed. Using tools like PokeFinder and SysBot.NET we are able to predict the outcome of these random events and understand exactly when a desirable result will be produced and take advantage of this.</p>
+
+        <p>Moarencounterbots is able to track and monitor RNG seeds in real time as well as advance the RNG state until a given point, removing the vast majority of work that would otherwise be tedious. This allows the player to put their efforts into more important factors like hitting their target frame instead.</p>
+
+        <p>For most statics you will need to consider the "delay". Delay is the number of frames the game takes to generate a Pokemon after the final button input. For example:</p>
+
+        <ul>
+            <li>Our target is on advance 100 and our delay is 85.</li>
+            <li>We subtract 85 from 100, which leaves us with 15.</li>
+            <li>We should now aim to press the <code class="fw-bold">A</code> button to remove the final text box on advance 15.</li>
+            <li>85 advances will now be consumed by the game, then the Pokemon will be generated.</li>
+            <li>This means our Pokemon was generated on the correct target advance (85+15=100).</li>
+        </ul>
+
+        <p>Recommended starting delays and the screen of the final button input are listed inside the table below. Some delays may have some variation, it is recommended to start with the lower value first and recalibrate if you end up missing your target.</p>
+    </div>
+</div>
+<br>
+
+<table class="table table-striped" style="width:100%" id="overworld-rng-table">
+    <thead class="table text-white" style="background-color: #96324c;">
+        <tr>
+            <th scope="col" class="text-center" style="width:50%">Encounter/Gift</th>
+            <th scope="col" class="text-center">Recommended Delay</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/starters.jpg">Starters</a></span></td>
+            <td class="text-center">64</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/honey-tree.jpg">Honey Tree</a></span></td>
+            <td class="text-center">0-2</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/dialga-palkia.jpg">Dialga/Palkia</a></span></td>
+            <td class="text-center">84</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/uxie.jpg">Uxie</a>/<a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/mesprit.jpg">Mesprit</a>/<a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/azelf.jpg">Azelf</a></span></td>
+            <td class="text-center">85</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/giratina.jpg">Giratina</a></span></td>
+            <td class="text-center">84-85</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/heatran.jpg">Heatran</a></span></td>
+            <td class="text-center">84-85</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/regigigas.jpg">Regigigas</a></span></td>
+            <td class="text-center">85-86</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/cresselia.jpg">Cresselia</a></span></td>
+            <td class="text-center">102-104</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/rotom.jpg">Rotom</a></span></td>
+            <td class="text-center">89-90</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/ramanas.jpg">Ramanas Park Legends</a></span></td>
+            <td class="text-center">84</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/shaymin.jpg">Shaymin (Underground Method)</a></span></td>
+            <td class="text-center">1350-1385 (Variable)</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/darkrai.jpg">Darkrai</a></span></td>
+            <td class="text-center">84-85</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/arceus.jpg">Arceus</a></span></td>
+            <td class="text-center">84-85</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/mew.jpg">Mew</a>/<a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/jirachi.jpg">Jirachi</a></span></td>
+            <td class="text-center">0</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/eevee.jpg">Eevee (Bebe)</a></span></td>
+            <td class="text-center">0</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/happiny.jpg">Happiny (Hiker)</a></span></td>
+            <td class="text-center">0</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/riley.jpg">Riolu (Riley)</a></span></td>
+            <td class="text-center">0</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/fossil.jpg">Fossils</a></span></td>
+            <td class="text-center">0</td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/mystery-gift.jpg">Mystery Gift</a></span></td>
+            <td class="text-center">0-1</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="alert alert-primary" style="border: 1px solid #004085; border-radius: 8px; padding: 15px; background-color: #cce5ff; color: #004085;">
+    <span class="fw-bold">Information -</span> Dialga/Palkia should be defeated during the initial story sequence. They will respawn after defeating the Elite 4 in more stable conditions. If you choose to manipulate Dialga/Palkia before becoming Champion you may experience different delays or RNG instability. The delays calibrated above are for the post Elite 4 encounter.
+</div>
+
+
+<div class="mb-3 w-100">
+    <div class="row row-cols-1">
+        <div class="col">
+            <label for="static-select"><span class="fw-bold">Select your RNG type:</span></label>
+            <select id="static-select" class="form-select">
+                <option value="">Nothing selected...</option>
+                <option value="dry">I am manipulating an ENCOUNTER!</option>
+                <option value="wet">I aam manipulating a GIFT!</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="info info-encounter d-none">
+        {% include_relative encounter.html %}
+    </div>
+    <div class="info info-gift d-none">
+        {% include_relative gift.html %}
+    </div>
+</div>
