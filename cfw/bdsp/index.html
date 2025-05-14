@@ -86,6 +86,14 @@ permalink: /cfw/bdsp/
     </tbody>
 </table>
 
+<hr /><div class="title" style="background-color: #96324c;">
+    <h1 class="text-light text-center pt-3 pb-3">Software Installation</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    This section provides setup and installation instructions and an overview of the tools used for RNG.
+</small>
+<hr />
+
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #96324c;" id="setup-and-install-bdsp-cfw">
         <span class="fw-bold text-light">Required Software</span>
@@ -114,14 +122,9 @@ permalink: /cfw/bdsp/
 </div>
 <br>
 
-<p>A pre-compiled version of Moarencounterbots is provided in the download links above, and is considered fine for 99% of people. To use the latest commits of the program you will need to compile and configure it yourself using this guide.</p>
-
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/misc/moarencounterbots/">
-    <span class="fw-bold">Moarencounterbots build guide!</span>
-    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-    </svg>
-</a>
+<div class="alert alert-primary" style="border: 1px solid #004085; border-radius: 8px; padding: 15px; background-color: #cce5ff; color: #004085;">
+    <span class="fw-bold">Information -</span> A pre-compiled (direct download) version of the SysBot.NET fork used in this guide has been provided in the download links above. This build is considered fine for 99% of people and will be updated periodically when major changes are added. To use the absolute latest of the program you will need to compile and configure it yourself using the <a href="/misc/moarencounterbots/" target="_blank">Moarencounterbots build guide</a>.
+</div>
 
 <hr />
 <div class="title" style="background-color: #96324c;">
@@ -182,47 +185,79 @@ permalink: /cfw/bdsp/
         <p>If you plan to manipulate your IDs for cosmetic purposes you can skip this section of the guide for now and revisit after your desired IDs have been obtained.</p>
     </div>
 </div>
+<hr />
+
+<p><span class="fw-bold">Figure 3 -</span> Moarencounterbots Configuration</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/main-page/moarencounterbots-initial-setup.gif" alt="main-page-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/main-page/moarencounterbots-initial-setup.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #96324c;" id="moarencounterbots-config">
+        <span class="fw-bold text-light">Moarencounterbots Initial Configuration</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Moarencounterbots is used for monitoring RNG seeds and automating the main bulk of the RNG advancement process. By default the program is configured to work with the latest games (not BDSP). To fix this issue you will need to the <code class="fw-bold">Mode</code> by do the following:</p>
+
+        <h6><span class="fw-bold">Initial Bot Configuration</span></h6>
+        <ol>
+            <li>Open <code class="fw-bold">SysBot.exe</code> once then close it again to generate a file named <code class="fw-bold">config.json</code>.</li>
+            <li>Open <code class="fw-bold">config.json</code> in a text editor like Notepad.</li>
+            <li>Change the <code class="fw-bold">Mode</code> to 2 (this represents BDSP) and save the changes.</li>
+            <li>Reboot the program, you should now see BDSP in the program header.</li>
+            <li>Navigate to the <code class="fw-bold">Hub</code> tab and open the <code class="fw-bold">EncounterRNGBS</code> dropdown menu.</li>
+            <li>Change <code class="fw-bold">DisplaySeedMode</code> from the default <code class="fw-bold">Bit32</code> option.</li>
+            <ul>
+                <li>If you are using PokeFinder, set this option to <code class="fw-bold">Bit64PokeFinder</code>.</li>
+                <li>If you are using LINQPad scripts, set this option to <code class="fw-bold">Bit128</code>.</li>
+            </ul>
+            <li>In any case, set the <code class="fw-bold">MonitorRefreshRate</code> to <code class="fw-bold">0</code>.</li>
+            <li>Close the program to lock in your settings configuration and relaunch <code class="fw-bold">SysBot.exe</code>.</li>
+        </ol>
+
+        <h6><span class="fw-bold">Connectivity Confirmation</span></h6>
+        <ol>
+            <li>Open the Homebrew Menu on your console, then press the <code class="fw-bold">Y</code> button.</li>
+            <li>Type the IP address displayed here into the assigned field on the SysBot window.</li>
+            <li>Open BDSP and enter the overworld in-game.</li>
+            <li>Select <code class="fw-bold">EncBotRNGMonitorBS</code> from the dropdown menu on the right.</li>
+            <li>Add the bot and click <code class="fw-bold">Start All</code> to confirm that it is functioning properly.</li>
+        </ol>
+
+        <p>If the active bot does not respond with a 🟩 (or there is an error in the <code class="fw-bold">Logs</code> tab) this means that something went wrong. Visit the official <a href="https://github.com/kwsch/SysBot.NET/wiki/Troubleshooting-Connection-Errors" target="_blank">SysBot.NET Wiki</a> and follow the troubleshooting instructions. Do not continue following this guide until the bot is functioning properly.</p>
+    </div>
+</div>
 <br>
 
-<span class="fw-bold">Figure 2 -</span> Moarencounterbots Overview<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/main-page/figure-2-moarencounterbots-overview.png" alt="main-page-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/main-page/figure-2-moarencounterbots-overview.png"><p></p>
+<p><span class="fw-bold">Figure 4 -</span> Moarencounterbots Overview</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/main-page/moarencounterbots-overview.gif" alt="main-page-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/main-page/moarencounterbots-overview.gif">
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #96324c;" id="moarencounterbots-overview">
         <span class="fw-bold text-light">Moarencounterbots Overview</span>
     </div>
     <div class="card-body card-bg">
-        <p>Pictured above is the window you are presented with upon launching <code span class="fw-bold">Moarencounterbots - SysBot.exe</code>. Moarencounterbots is used for monitoring RNG seeds and automating the main bulk of the RNG advancement process. By default the program is configured to work with the latest games (not BDSP), to change the mode, do the following:</p>
+        <p>When launching SysBot.NET we can see 3 different tabs at the top of the window labelled <code class="fw-bold">Bots</code>, <code class="fw-bold">Hub</code> &amp; <code class="fw-bold">Logs</code>. Each of these tabs have their own uses.</p>
 
-        <h6><span class="fw-bold">Initial Bot Configuration</span></h6>
+        <h6><span class="fw-bold">Bot Tabs</span></h6>
         <ol>
-            <li>Open SysBot.exe at least once, then close it again to generate a file named <code span class="fw-bold">config.json</code>.</li>
-            <li>Open <code span class="fw-bold">config.json</code> in a text editor like Notepad.</li>
-            <li>Change the <code span class="fw-bold">mode</code> to 2 (this represents BDSP).</li>
-            <li>Save the changes then reboot the program, you should now see BDSP in the program header.</li>
-        </ol>
-
-        <h6><span class="fw-bold">Connectivity</span></h6>
-        <ol>
-            <li>Open the homebrew menu on your console, then press the Y button.</li>
-            <li>Type the IP address written here into the assigned field on SysBot.NET.</li>
-            <li>Select any of the bots from the dropdown menu on the right of the SysBot window.</li>
-            <li>Add and start the bot to confirm that it functions properly (active and started bots should display a 🟩).</li>
+            <li><code class="fw-bold">Bots</code> - Add, remove or restart any of the bots in the dropdown menu on the right.</li>
+            <li><code class="fw-bold">Hub</code> - The central hub for determining how your bot operates.</li>
+            <li><code class="fw-bold">Logs</code> - Monitor any currently active bots to ensure a smooth operation.</li>
         </ol>
 
         <h6><span class="fw-bold">Bot Types</span></h6>
         <ol>
-            <li><code span class="fw-bold">EncBotRNGMonitorBS</code> - Used to monitor your RNG seed in real time.</li>
-            <li><code span class="fw-bold">EncBotCopySeedBS</code> - Used to copy your RNG seed to clipboard at any point.</li>
-            <li><code span class="fw-bold">EncBotTIDBS</code> - Used to automate the process of TID RNG abuse.</li>
-            <li><code span class="fw-bold">EncBotDexFlipBS</code> - Used to automatically advance the RNG state until a given point.</li>
+            <li><code class="fw-bold">EncBotRNGMonitorBS</code> - Monitor your RNG seed in real time.</li>
+            <li><code class="fw-bold">EncBotCopySeedBS</code> - Copy your RNG seed to clipboard at any point.</li>
+            <li><code class="fw-bold">EncBotTIDBS</code> - Automate the process of TID RNG abuse.</li>
+            <li><code class="fw-bold">EncBotDexFlipBS</code> - Automatically advance the RNG state until a given point by flipping Pok&eacute;Dex pages.</li>
         </ol>
 
         <p>See the official <a href="https://github.com/Lusamine/SysBot.NET/wiki" target="_blank">Moarencounterbots Wiki</a> for more detailed information about program features.</p>
 
+
     </div>
 </div>
-<br>
+<hr />
 
 <span class="fw-bold">Figure 3 -</span> PokeViewer.NET Overview<p></p>
 <img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/main-page/figure-3-pokeviewer-overview.png" alt="main-page-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/main-page/figure-3-pokeviewer-overview.png"><p></p>
@@ -248,7 +283,7 @@ permalink: /cfw/bdsp/
 </div>
 <br>
 
-<p>You should have all of the necessary tools installed, set up correctly, and have a general understanding of how to use them.</p>
+<p>Each program should now be installed and functioning as intended. At this stage the programs should be configured properly configured and have a basic understanding of how to use them. Setting up LINQPad scripts for Pok&eacute;Radar RNG manipulation will be covered later, do not worry if you do not have the LINQPad scripts set up yet.</p>
 
 <hr />
 <div class="title" style="background-color: #96324c;">
