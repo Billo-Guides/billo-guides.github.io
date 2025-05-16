@@ -1,0 +1,101 @@
+<!-- Worked example for static gifts -->
+
+<p><span class="fw-bold">Figure 3 -</span> Target Found</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/gift/target-found-static-gift.png" alt="static-gift-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/gift/target-found-static-gift.png">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #96324c;" id="target-found-static-gift">
+        <span class="fw-bold text-light">Target Found</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>In Figure 3 we can see a result has been between advances 741,041-741,046. Since the delay for this encounter is 0 we will aim to press the <code class="fw-bold">A</code> button to generate the Pok&eacute;mon on any of advance between 741,041-741,046. If you are seeking a non shiny target you may notice multiple frames in a row that produce the same end result, this is known as a "frame cluster". It is recommended to target clusters for non-shiny targets as this grants more opportunities to hit the correct frame.</p>
+
+        <p>To advance the RNG state we will be using the Moarencounterbots <code class="fw-bold">EncBotDexFlipBS</code> routine to automate this process. <code class="fw-bold">EncBotDexFlipBS</code> flips back and fourth between Pok&eacute;dex entries to advance the current seed until a given point. This quickest known method to advance the RNG state in this game.</p>
+
+        <h6><span class="fw-bold">EncBotDexFlipBS Setup</span></h6>
+        <ol>
+            <li>Navigate to the <code class="fw-bold">Hub</code> tab and open the <code class="fw-bold">EncounterRNGBS</code> dropdown menu.</li>
+            <li>Set your <code class="fw-bold">MaxTotalAdvances</code> relative to the amount needed to reach your target frame.</li>
+            <ul>
+                <li>It is recommended to subtract 10,000 from the total number of required advances to give yourself time to position your character properly after the seed advancing has been completed.</li>
+            </ul>
+            <li>Head back to the <code class="fw-bold">Bots</code> tab and remove any currently active bots.</li>
+            <li>Add the <code class="fw-bold">EncBotRNGMonitorBS</code> and <code class="fw-bold">EncBotDexFlipBS</code> bots instead.</li>
+            <li>Open the PokeDex in-game in either Sinnoh or National mode.</li>
+            <ul>
+                <li>Enter a section of the Pok&eacute;dex that has at least 10 registered Pok&eacute;mon in a row to increase effectiveness of the DexFlip routine. It is recommended to place cursor somewhere in the middle of the Pok&eacute;dex if you can.</li>
+            </ul>
+            <li>Disconnect any controllers, then click the <code class="fw-bold">Start All</code> button on Moarencounterbots.</li>
+            <ul>
+                <li>If everything was <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/moarencounterbots-dexflip-demo.gif">done correctly</a> you should now see that the bot has started to flip between Pok&eacute;dex entries very quickly.</li>
+            </ul>
+            <li>Navigate to the <code class="fw-bold">Logs</code> tab and wait for the DexFlip routine to complete.</li>
+            <li>Click <code class="fw-bold">Stop All</code> once DexFlip has finished to completely stop any active bots.</li>
+        </ol>
+
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 4 -</span> DexFlip Complete</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/gift/dexflip-complete-static-gift.png" alt="static-gift-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/gift/dexflip-complete-static-gift.png">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #96324c;" id="hitting-your-target-gift">
+        <span class="fw-bold text-light">Hitting Your Target</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>At this point you should be around 10,000 advances away from your target. To confirm exactly how far away you are from your target you will need to remove all currently active bots, then add and start <code class="fw-bold">EncBotCopySeedBS</code>.</p>
+
+        <h6><span class="fw-bold">Step-by-step</span></h6>
+        <ol>
+            <li>Head to the location of your gift NPC in-game if you have not already done so. Stand close enough so that you can interact with the NPC.</li>
+            <li>Press the <code class="fw-bold">Home</code> button, then run <code class="fw-bold">EncBotCopySeedBS</code> and enter your new seed into PokeFinder. Search for your target again to get your new target frame.</li>
+            <li>Remove <code class="fw-bold">EncBotCopySeedBS</code> and add and start <code class="fw-bold">EncBotRNGMonitorBS</code> instead to begin monitoring your RNG state.</li>
+            <ul>
+                <li>Confirm that you have started a fresh instance of <code class="fw-bold">EncBotRNGMonitorBS</code>. Seed monitoring should begin from advance 0, NOT wherever you left off!</li>
+            </ul>
+            <li>Resume the game and observe how quickly the RNG state is advancing. Your next action will depend on the speed of the natural RNG advances.</li>
+            <ul>
+                <li>If the RNG state is advancing slowly, manually scroll your Pok&eacute;dex slowly until you 1000 advances (or less) away from your target, then interact with the NPC and reach the screen of the final button input.</li>
+                <li>If the RNG state is advancing quickly, interact with the NPC and reach the screen of the final button input.</li>
+                <li>See the above table if you are unsure which screen you should be on, final button input screen images can be found by clicking the hyperlinks.</li>
+            </ul>
+            <li>Monitor the RNG state until you reach your target frame, this frame should match the PokeFinder search result.</li>
+            <ul>
+                <li>A technique called "Home button mashing" is used to help ensure that we land directly onto our target frame. Quickly pressing the Home button twice will resume, then pause the game. We can use this technique to inch closer to our target frame and land directly onto it in most cases.</li>
+                <li>In the unlikely event that we cannot land directly onto our target frame this will need to be treated as a failure and you will need to restart the process again by finding a new seed and target frame.</li>
+                <li>Mew, Jirachi and Happiny are the most notable examples of when it may be difficult to hit a target frame due to the RNG state advancing too quickly. These gifts may take multiple attempts before seeing success.</li>
+            </ul>
+            <li>You should now be on the Home menu and the SysBot <code class="fw-bold">Logs</code> tab should indicate that you have reached your target frame. Unpause the game while mashing the <code class="fw-bold">A</code> button to redeem the gift.</li>
+            <ul>
+                <li>In BDSP, <code class="fw-bold">ZL</code> and <code class="fw-bold">ZR</code> also register as <code class="fw-bold">A</code> button inputs. You can mash all three of these buttons when attempting to redeem your Pokemon for the best chances of hitting your target frame.</li>
+            </ul>
+        </ol>
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 5 -</span> Target Frame Hit</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/gift/target-frame-hit-static-gift.gif" alt="static-gift-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/gift/target-frame-hit-static-gift.gif">
+
+<p>We have resumed the game on our target frame pressed the <code class="fw-bold">A</code> button quickly to redeem the gift. Now it is time to confirm that we have hit the correct target frame by connecting to PokeViewer.NET and using the <code class="fw-bold">BoxView</code> button to view the details of the redeemed Pok&eacute;mon.</p>
+
+<p><span class="fw-bold">Figure 6 -</span> Result Found</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/gift/result-found-static-gift.png" alt="static-gift-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/gift/result-found-static-gift.png">
+
+<p>We can see that the internal details of the Pok&eacute;mon match the PokeFinder search results, mission accomplished!</p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/static/troubleshooting/">
+    Missed your target frame? Go to <span class="fw-bold">gift troubleshooting!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/">
+    Send me back to the <span class="fw-bold">main page!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a> 

@@ -8,13 +8,22 @@ permalink: /cfw/bdsp/static/
     <h1 class="text-light text-center pt-3 pb-3">BDSP Static RNG</h1>
 </div>
 <small class="text-muted mb-3 mt-0">
-    Worked examples for manipulating Pokemon from static encounters and gifts.
+    Learn the entire process of manipulating Pok&eacute;mon from static encounters and gifts.
 </small>
 <hr />
 
-<p>The term "Static" is used to describe encounters or gifts that are generated upon clicking the <code class="fw-bold">A</code> button. These Pokemon are located in specific (fixed) locations. An example of a static encounter would be Dialga/Palkia, and an example of a static gift would be Jirachi/Mew.</p>
+<p>The term "Static" is used to describe encounters or gifts that are generated upon clicking the <code class="fw-bold">A</code> button. These Pok&eacute;mon are located in specific (fixed) locations. An example of a static encounter would be Dialga/Palkia at Spear Pillar, and an example of a static gift would be Jirachi/Mew in Floroma Town.</p>
 
-<p>Before starting, confirm that the autosave feature is disabled. If you are targeting a static encounter, confirm that you have enough resouces (Pokeballs, healing items, capture Pokemon etc.) to successfully capture the Pokemon you plan to manipulate.</p>
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Before starting -</span> Confirm that the autosave feature is disabled in the in-game options. If you are targeting a static encounter, confirm that you have enough resources to make the capture process as smooth as possible (Pok&eacute; Balls, healing items, lead Pok&eacute;mon etc).
+</div>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/">
+    Missed the initial setup instructions? Go back to the <span class="fw-bold">main page!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #96324c;" id="explaining-bdsp-rng">
@@ -31,8 +40,8 @@ permalink: /cfw/bdsp/static/
             <li>Our target is on advance 100 and our delay is 85.</li>
             <li>We subtract 85 from 100, which leaves us with 15.</li>
             <li>We should now aim to press the <code class="fw-bold">A</code> button to remove the final text box on advance 15.</li>
-            <li>85 advances will now be consumed by the game, then the Pokemon will be generated.</li>
-            <li>This means our Pokemon was generated on the correct target advance (85+15=100).</li>
+            <li>85 advances will now be consumed by the game, then the Pok&eacute;mon will be generated.</li>
+            <li>This means our Pok&eacute;mon was generated on the correct target advance (85+15=100).</li>
         </ul>
 
         <p>Recommended starting delays and the screen of the final button input are listed inside the table below. Some delays may have some variation, it is recommended to start with the lower value first and recalibrate if you end up missing your target.</p>
@@ -43,86 +52,116 @@ permalink: /cfw/bdsp/static/
 <table class="table table-striped" style="width:100%" id="overworld-rng-table">
     <thead class="table text-white" style="background-color: #96324c;">
         <tr>
-            <th scope="col" class="text-center" style="width:50%">Encounter/Gift</th>
-            <th scope="col" class="text-center">Recommended Delay</th>
+            <th scope="col" class="text-center">Pok&eacute;mon</th>
+            <th scope="col" class="text-center">Delay</th>
+            <th scope="col" class="text-center">Noise</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/starters.jpg">Starters</a></span></td>
             <td class="text-center">64</td>
+            <td class="text-center"><span class="fw-bold" style="color: #008000;">Quiet</span></td>
         </tr>
         <tr>
             <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/honey-tree.jpg">Honey Tree</a></span></td>
             <td class="text-center">0-2</td>
+            <td class="text-center"><span class="fw-bold" style="color: #996B00;">Location Specific</span></td>
         </tr>
         <tr>
             <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/dialga-palkia.jpg">Dialga/Palkia</a></span></td>
             <td class="text-center">84</td>
+            <td class="text-center"><span class="fw-bold" style="color: #008000;">Quiet</span></td>
         </tr>
         <tr>
             <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/uxie.jpg">Uxie</a>/<a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/mesprit.jpg">Mesprit</a>/<a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/azelf.jpg">Azelf</a></span></td>
             <td class="text-center">85</td>
+            <td class="text-center"><span class="fw-bold" style="color: #008000;">Quiet</span></td>
         </tr>
         <tr>
             <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/giratina.jpg">Giratina</a></span></td>
             <td class="text-center">84-85</td>
+            <td class="text-center"><span class="fw-bold" style="color: #008000;">Quiet</span></td>
         </tr>
         <tr>
             <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/heatran.jpg">Heatran</a></span></td>
             <td class="text-center">84-85</td>
+            <td class="text-center"><span class="fw-bold" style="color: #008000;">Quiet</span></td>
         </tr>
         <tr>
             <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/regigigas.jpg">Regigigas</a></span></td>
             <td class="text-center">85-86</td>
+            <td class="text-center"><span class="fw-bold" style="color: #008000;">Quiet</span></td>
         </tr>
         <tr>
             <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/cresselia.jpg">Cresselia</a></span></td>
             <td class="text-center">102-104</td>
+            <td class="text-center"><span class="fw-bold" style="color: #008000;">Quiet</span></td>
         </tr>
         <tr>
             <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/rotom.jpg">Rotom</a></span></td>
             <td class="text-center">89-90</td>
+            <td class="text-center"><span class="fw-bold" style="color: #008000;">Quiet</span></td>
         </tr>
         <tr>
             <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/ramanas.jpg">Ramanas Park Legends</a></span></td>
             <td class="text-center">84</td>
+            <td class="text-center"><span class="fw-bold" style="color: #008000;">Quiet</span></td>
         </tr>
         <tr>
-            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/shaymin.jpg">Shaymin (Underground Method)</a></span></td>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/shaymin.jpg">Shaymin</a></span></td>
             <td class="text-center">1350-1385 (Variable)</td>
+            <td class="text-center"><span class="fw-bold" style="color: #b60606;">Noisy</span></td>
         </tr>
         <tr>
             <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/darkrai.jpg">Darkrai</a></span></td>
             <td class="text-center">84-85</td>
+            <td class="text-center"><span class="fw-bold" style="color: #008000;">Quiet</span></td>
         </tr>
         <tr>
             <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/arceus.jpg">Arceus</a></span></td>
             <td class="text-center">84-85</td>
+            <td class="text-center"><span class="fw-bold" style="color: #008000;">Quiet</span></td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/drifloon.jpg">Drifloon</a></span></td>
+            <td class="text-center">84</td>
+            <td class="text-center"><span class="fw-bold" style="color: #b60606;">Noisy</span></td>
+        </tr>
+        <tr>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/spiritomb.jpg">Spiritomb</a></span></td>
+            <td class="text-center">84</td>
+            <td class="text-center"><span class="fw-bold" style="color: #b60606;">Noisy</span></td>
         </tr>
         <tr>
             <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/mew.jpg">Mew</a>/<a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/jirachi.jpg">Jirachi</a></span></td>
             <td class="text-center">0</td>
+            <td class="text-center"><span class="fw-bold" style="color: #b60606;">Noisy</span></td>
         </tr>
         <tr>
             <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/eevee.jpg">Eevee (Bebe)</a></span></td>
             <td class="text-center">0</td>
+            <td class="text-center"><span class="fw-bold" style="color: #b60606;">Noisy</span></td>
         </tr>
         <tr>
             <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/happiny.jpg">Happiny (Hiker)</a></span></td>
             <td class="text-center">0</td>
+            <td class="text-center"><span class="fw-bold" style="color: #b60606;">Noisy</span></td>
         </tr>
         <tr>
             <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/riley.jpg">Riolu (Riley)</a></span></td>
             <td class="text-center">0</td>
+            <td class="text-center"><span class="fw-bold" style="color: #b60606;">Noisy</span></td>
         </tr>
         <tr>
             <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/fossil.jpg">Fossils</a></span></td>
             <td class="text-center">0</td>
+            <td class="text-center"><span class="fw-bold" style="color: #b60606;">Noisy</span></td>
         </tr>
         <tr>
             <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/mystery-gift.jpg">Mystery Gift</a></span></td>
-            <td class="text-center">0-1</td>
+            <td class="text-center">1</td>
+            <td class="text-center"><span class="fw-bold" style="color: #008000;">Quiet</span></td>
         </tr>
     </tbody>
 </table>
@@ -131,25 +170,119 @@ permalink: /cfw/bdsp/static/
     <span class="fw-bold">Information -</span> Dialga/Palkia should be defeated during the initial story sequence. They will respawn after defeating the Elite 4 in more stable conditions. If you choose to manipulate Dialga/Palkia before becoming Champion you may experience different delays or RNG instability. The delays calibrated above are for the post Elite 4 encounter.
 </div>
 
+<p><span class="fw-bold">Figure 1 -</span> PokeFinder Setup</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/pokefinder-setup-static.gif" alt="static-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/pokefinder-setup-static.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #96324c;" id="pokefinder-setup-static">
+        <span class="fw-bold text-light">PokeFinder Setup</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Click the <code class="fw-bold">Gen 8 -> Static</code> button after launching PokeFinder to open the main window for static Pok&eacute;mon. Here is where we will fill in all the details about the Pok&eacute;mon being hunted.</p>
+
+        <h6><span class="fw-bold">RNG Setup</span></h6>
+        <ul>
+            <li>Select the correct <code class="fw-bold">Profile</code> in the dropdown menu at the top.</li>
+            <li>Select <code class="fw-bold">Lead</code> if you are using a Pok&eacute;mon with an influencing ability (e.g. Synchronize).</li>
+            <li>Enter the amount of advances you wish to search through into the <code class="fw-bold">Max Advances</code> field.</li>
+            <li>Enter the delay inside the <code class="fw-bold">Delay</code> field, pick the lowest number in the above table.</li>
+            <li>In the <code class="fw-bold">Settings</code> section in the middle, specify the Pok&eacute;mon and encounter details.</li>
+            <li>Configure your search filters, such as filtering for a shiny Pok&eacute;mon with 0 IVs in attack.</li>
+        </ul>
+
+        <p>Having a Pokemon with the ability Syncronize ensures that all encountered/redeemed Pok&eacute;mon have the same nature as your synchronizer. Ensure that your synchronizer is the first team member in your party or it will not work.</p>
+
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 2 -</span> Finding Your Seed</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/moarencounterbots-seed-finding.gif" alt="static-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/moarencounterbots-seed-finding.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #96324c;" id="moarencounterbots-seed-finding">
+        <span class="fw-bold text-light">Finding Current Seed</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>To easily obtain your current seed at any given point you can use the <code span class="fw-bold">EncBotCopySeedBS</code> routine in Moarencounterbots. If you have already followed the setup instructions found on the main page the bot should be configured to output the seed in the way PokeFinder expects. If you did not do this yet or your settings have changed for whatever reason, follow these instructions:</p>
+
+        <h6><span class="fw-bold">Settings Toggles</span></h6>
+        <ol>
+            <li>Open SysBot.exe and navigate to the <code class="fw-bold">Hub</code> tab.</li>
+            <li>Open the <code class="fw-bold">EncounterRNGBS</code> dropdown menu to display the relevant settings.</li>
+            <li>Under <code class="fw-bold">DisplaySeedMode</code>, select <code class="fw-bold">Bit64PokeFinder</code>.</li>
+            <li>Set the value in <code class="fw-bold">MonitorRefreshRate</code> to <code class="fw-bold">0</code>.</li>
+        </ol>
+
+        <h6><span class="fw-bold">Grabbing Seed Information</span></h6>
+        <ol>
+            <li>Navigate back to the <code class="fw-bold">Bots</code> tab and add <code class="fw-bold">EncBotCopySeedBS</code>.</li>
+            <li>Stand in the overworld in-game, press the <code class="fw-bold">Home</code> button, then click <code class="fw-bold">Start All</code>.</li>
+            <li>Navigate to the <code class="fw-bold">Logs</code> tab. Your seed should be visible here (split into 2 sections referred to as "Seed 0" and "Seed 1").</li>
+            <li>By default your seed will be copied to clipboard, but pasting directly into PokeFinder will not work.</li>
+            <ul>
+                <li>Copy the top half of the seed into the <code class="fw-bold">Seed 0</code> field of PokeFinder.</li>
+                <li>Copy the bottom half of the seed into the <code class="fw-bold">Seed 1</code> field of PokeFinder.</li>
+            </ul>
+            <li>Click the <code class="fw-bold">Search</code> button to search for targets that match your parameters.</li>
+        </ol>
+
+        <p>If you do not find any results consider increasing your search range, applying less strict search filters, or restarting the game to generate a new seed. Repeat this process until a desirable seed has been found.</p>
+
+    </div>
+</div>
+
+<hr />
+<div class="title" style="background-color: #96324c;">
+    <h1 class="text-light text-center pt-3 pb-3">The Process</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    Step-by-step instructions for hitting a target frame can be found here.
+</small>
+<hr />
+
+<p>The instructions for hitting a target frame depend on your target Pok&eacute;mon. Pok&eacute;mon located in "noisy" areas are considered advanced and likely unsuitable for beginners. If this is your first time attempting this type of RNG manipulation, we recommended you start with anything in the "quiet" category of the above table to familiarize yourself with the general process.</p>
 
 <div class="mb-3 w-100">
     <div class="row row-cols-1">
         <div class="col">
             <label for="static-select"><span class="fw-bold">Select your RNG type:</span></label>
             <select id="static-select" class="form-select">
-                <option value="">Nothing selected...</option>
-                <option value="dry">I am manipulating an ENCOUNTER!</option>
-                <option value="wet">I aam manipulating a GIFT!</option>
+                <option value="" selected>No RNG type selected...</option>
+                <option value="static-encounter">I am manipulating a static ENCOUNTER!</option>
+                <option value="static-gift">I am manipulating a static GIFT!</option>
+                <option value="static-shaymin">I am manipulating SHAYMIN!</option>
+                <option value="static-starter">I am manipulating my STARTER!</option>
             </select>
         </div>
     </div>
 </div>
 
 <div>
-    <div class="info info-encounter d-none">
-        {% include_relative encounter.html %}
+    <div class="info info-static-encounter d-none">
+        {% include_relative static-encounter.html %}
     </div>
-    <div class="info info-gift d-none">
-        {% include_relative gift.html %}
+    <div class="info info-static-gift d-none">
+        {% include_relative static-gift.html %}
+    </div>
+    <div class="info info-static-shaymin d-none">
+        {% include_relative static-shaymin.html %}
+    </div>
+    <div class="info info-static-starter d-none">
+        {% include_relative static-starter.html %}
     </div>
 </div>
+
+<script>
+    $("#static-select").change(() => { // $ tells the script to use jQuerey, # tells jQuery that this element is an ID, .change(() => {...}) registers a function to the change event. An alternative to this in plain javascript would be document.getElementByID("content-select").addEventListener("change", () => {...});
+        let optionValue = $("#static-select").val(); // .val() asks jQuery to get the value of the selected option. This step looks up an element by its id, then gets the selected option, and stores it in the variable optionValue
+
+        $(".info").addClass("d-none"); // . is a class identifier, so this step tells jQuery to get every element with the info class and add the class d-none to all of them. Vanilla js equivalent is to call document.getElementsByClassName("info") and then edit the classList.
+        $(".info-" + optionValue).removeClass("d-none"); // combine "info-" with the optionValue from above and use it as a class identifier to get the element that we want to un-hide, then remove the d-none class from it. vanilla js should probably use document.querySelector() for this.
+    });
+</script>
+
+<!-- Syntax highlighting -->
+<script>
+    hljs.highlightAll();
+</script>

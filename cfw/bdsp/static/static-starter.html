@@ -1,0 +1,47 @@
+<!-- Worked example for starters -->
+
+<p><span class="fw-bold">Figure 3 -</span> Target Found</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/starter/target-found-starter.png" alt="static-starter-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/starter/target-found-starter.png">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #96324c;" id="target-found-starter">
+        <span class="fw-bold text-light">Target Found / Hitting Your Target</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>In Figure 3 we can see a result has been produced in 6,314 advances. Since delay (64) has already been considered by PokeFinder, we will aim to press the <code class="fw-bold">A</code> button to generate the Pok&eacute;mon on advance 6,314. If you are seeking a non shiny target you may notice multiple frames in a row that produce the same end result, this is known as a "frame cluster". It is recommended to target clusters for non-shiny targets as this grants more opportunities to hit the correct frame.</p>
+
+        <p>Typically, the main method to advance the RNG state is scrolling the Pok&eacute;dex, however, since we do not have access to the Pok&eacute;dex due to low game progress we will need to advance the RNG state by standing in the overworld before entering Verity Lakefront as this area has a lot of noise and will advance the RNG state at a quick pace.</p>
+
+        <h6><span class="fw-bold">Step-by-step</span></h6>
+        <ol>
+            <li>Once you have found a target frame stand next to the enterance of Lake Verity and freeze the RNG state by pressing the <code class="fw-bold">Home</code> button.</li>
+            <li>Add <code class="fw-bold">EncBotCopySeedBS</code> and start the bot. Paste your seeds into PokeFinder and search for your target again.</li>
+            <li>Remove <code class="fw-bold">EncBotCopySeedBS</code> and add <code class="fw-bold">EncBotRNGMonitorBS</code> instead, then resume the game.</li>
+            <li>Monitor the RNG state until you are around 500-1000 advances away from your target then enter Lake Verity.</li>
+            <li>Mash through the cutscene until you reach the screen where you select your starter, press the <code class="fw-bold">A</code> button on the Poke Ball that contains your desired starter.</li>
+            <ul>
+                <li>The RNG state will advance very slowly once the briefcase has been opened.</li>
+            </ul>
+            <li>Wait on this screen until you reach your target frame, then press the <code class="fw-bold">A</code> button. Your starter will be generated at this point.</li>
+        </ol>
+
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 4 -</span> Target Frame Hit</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/starter/target-frame-hit-starter.gif" alt="static-starter-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/starter/target-frame-hit-starter.gif">
+
+<p>We have resumed the game on our target frame pressed the <code class="fw-bold">A</code> button quickly to redeem our starter. Now it is time to confirm that we have hit the correct target frame by checking if our starter is shiny (if you did not target a shiny you will need to view the summary of your starter after the battle to confirm a match).</p>
+
+<p><span class="fw-bold">Figure 5 -</span> Result Found</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/starter/result-found-starter.png" alt="static-starter-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/starter/result-found-starter.png">
+
+<p>We can see our starter is shiny and that it match the PokeFinder search results, mission accomplished!</p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/">
+    Send me back to the <span class="fw-bold">main page!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a> 
