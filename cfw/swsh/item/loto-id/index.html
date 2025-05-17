@@ -12,7 +12,7 @@ permalink: /cfw/swsh/item/loto-id/
 </small>
 <hr />
 
-<p>The <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/main-page/lottery.jpg">Rotom PC</a> is located inside any Pok&eacute;mon Center. Once a day, you can try the Loto-ID, a daily lottery event for prizes such as a Master Ball. The Rotom PC will generate a random number, and your prize is determined by how many digits match any Trainer ID of any Pok&eacute;mon stored in the PC boxes.</p>
+<p>The <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/item/main-page/lottery.jpg">Rotom PC</a> is located inside any Pok&eacute;mon Center. Once a day, you can try the Loto-ID, a daily lottery event for prizes such as a Master Ball. The Rotom PC will generate a random number, and your prize is determined by how many digits match any Trainer ID of any Pok&eacute;mon stored in the PC boxes or in your party.</p>
 
 <div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
     <span class="fw-bold">Important -</span> From here, we assume that you are familiar with key concepts described on the main page. If you are unsure about <a href="/cfw/swsh/overworld/main-page" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">seed monitoring</a>, <a href="/cfw/swsh/overworld/advancing-the-rng-state" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">advancement methods</a>, or <a href="/cfw/swsh/overworld/menu-close-prediction" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">NPC calibration</a>, please review the relevant sections before continuing.
@@ -35,7 +35,7 @@ permalink: /cfw/swsh/item/loto-id/
     <div class="card-body card-bg">
         <ol>
             <li>Head to Turffield Pok&eacute;mon Center. You can use other Pok&eacute;mon Centers if you wish, but some may have NPCs close by and you will need to manually calibrate your NPC count later.</li>
-            <li>If you plan to use multiple Pok&eacute;mon with unique ID numbers, collect these now and deposit them in the PC boxes.</li>
+            <li>If you plan to use multiple Pok&eacute;mon with unique ID numbers, collect these now. They need to be in the PC boxes or in your party.</li>
             <li>If you have already attempted Loto-ID today, reset the daily events by either waiting until midnight or performing a date skip.</li>
             <li>Save the game. Calibrate your NPC count if you are not using Turffield Pok&eacute;mon Center.</li>
         </ol>
@@ -58,7 +58,10 @@ permalink: /cfw/swsh/item/loto-id/
             <li>At the top of the main owoow window, click <code class="fw-bold">Loto-ID</code> to open the Loto-ID generator in a subwindow.</li>
             <li>Enter the number of advances you want to search in the <code class="fw-bold">+</code> field. You will usually find any desired result in under 100,000 advances.</li>
             <li>Select your <code class="fw-bold">Target</code> reward from the drop-down menu. You can target Master Ball, Rare Candy, PP Max, PP Up, or Moomoo Milk.</li>
-            <li>Click the <code class="fw-bold">ID List</code> button to open the ID List. Add all the unique Trainer ID numbers of your deposited Pok&eacute;mon by entering each number in the <code class="fw-bold">ID:</code> field, then clicking <code class="fw-bold">Add</code>. The more IDs in this list, the greater the chance of finding an early result.</li>
+            <li>Click the <code class="fw-bold">ID List</code> button to open the ID List. Add all the unique Trainer ID numbers of eligible Pok&eacute;mon by entering each number in the <code class="fw-bold">ID:</code> field, then clicking <code class="fw-bold">Add</code>. The more IDs in this list, the greater the chance of finding an early result.</li>
+            <ul>
+                <li>The ID you need to enter should be the one displayed on the Pok&eacute;mon's summary screen. Past-generation Pok&eacute;mon can be used as well even though they have 5-digit IDs.</li>
+            </ul>
             <li>Tick the <code class="fw-bold">Consider Menu Close?</code> checkbox, then enter the NPC count. If you are in Turffield, enter 7. If you are elsewhere, use the menu NPCs you calculated previously. You can now begin searching for targets.</li>
         </ol>
 
