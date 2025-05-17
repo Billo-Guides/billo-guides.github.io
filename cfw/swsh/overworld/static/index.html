@@ -14,6 +14,8 @@ permalink: /cfw/swsh/overworld/static/
 
 <p>Static spawners always generate the same species of Pok&eacute;mon for a given weather, which is based on the console date. Since the weather can change if the console date rolls past midnight (00:00), consider setting your system time before starting to avoid unexpected RNG advancements and Pok&eacute;mon spawns.</p>
 
+<p>The static spawners that can be manipulated include the "strong spawns" that populate the Wild Areas, the Wailord in the Isle of Armor, and the Swords of Justice in the Crown Tundra. Scripted static encounters such as Zacian/Zamazenta and the Regis are generated through cryptographically secure methods and cannot be RNG manipulated.</p>
+
 <div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
     <span class="fw-bold">Important -</span> From here, we assume that you are familiar with key concepts described on the main page. If you are unsure about <a href="/cfw/swsh/overworld/main-page" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">seed monitoring</a>, <a href="/cfw/swsh/overworld/advancing-the-rng-state" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">advancement methods</a>, or <a href="/cfw/swsh/overworld/menu-close-prediction" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">NPC calibration</a>, please review the relevant sections before continuing.
 </div>
@@ -59,14 +61,13 @@ permalink: /cfw/swsh/overworld/static/
         </ol>
 
         <details>
-            <summary span class="fw-bold">IoA Wailord Specifics:</summary>
-            <p>The <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/static/wailord.jpg">Isle of Armor Wailord</a> has a very large spawn radius, so you will need to relocate far away from it to make it despawn. The recommended location to stand is in the Soothing Wetlands (see below image). This area has the most available weather conditions and the least problematic Pok&eacute;mon spawns.</p>
+            <summary span class="fw-bold">IoA Wailord Specifics</summary>
+            <p>The <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/static/wailord.jpg">Isle of Armor Wailord</a> can be treated like a strong spawn with a very large spawn radius. You will need to move far away from it to make it despawn. The recommended location to stand is in the Soothing Wetlands (see below image). This area has the most available weather conditions and the fewest problematic Pok&eacute;mon spawns.</p>
 
-            <p>The exact spawn point is somewhere on the edge of the flower bed in front of the player, but you will need to take 3-5 steps back to ensure that Wailord has been completely despawned. You can use this time to KO any static spawns that are next to the player if you wish (such as the Rockruff behind the player or the Drednaw on the right).</p>
+            <p>The exact spawn point is somewhere on the edge of the flower bed in front of the player, but you will need to take 3-5 steps back away from the Wailord to ensure that it has been completely despawned. You can KO any nearby static spawns if you wish (such as the Rockruff behind the player or the Drednaw on the right).</p>
 
             <p><span class="fw-bold">Figure 2a -</span> Game Setup (Wailord)</p>
             <img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/static/wailord-positioning.jpg" alt="owrng-static-cfw-2a" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/static/wailord-positioning.jpg">
-
         </details>
     </div>
 </div>
