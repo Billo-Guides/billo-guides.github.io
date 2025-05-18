@@ -1,3 +1,214 @@
 <div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
-    <span class="fw-bold">READ -</span> THIS SECTION (SHAYMIN) IS A WORK IN PROGRESS. CHECK BACK IN LATER!
+    <span class="fw-bold">IMPORTANT -</span> Shaymin is considered to be the most difficult static RNG in the game due to the amount of noise coming from rippling water and NPC blinks. We suggest gaining experience with other static RNGs before attempting this one. It is assumed that you are already familiar with basic concepts of how to hit targets before attempting this RNG.
 </div>
+
+<p><span class="fw-bold">Figure 3 -</span> Extra Game Setup (Shaymin)</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/shaymin/game-setup-shaymin.gif" alt="static-shaymin-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/shaymin/game-setup-shaymin.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #96324c;" id="game-setup-shaymin">
+        <span class="fw-bold text-light">Extra Game Setup (Shaymin)</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Shaymin has highly inconsistent RNG due to overworld noise, making it difficult to reliably hit the desired frame. To improve consistency, we use an alternative method: instead of standing outside the encounter zone and mashing the A button on the target frame, we resurface from the Grand Underground and immediately interact with Shaymin. This approach provides more consistency between attempts.</p>
+
+        <h6><span class="fw-bold">Game Setup</span></h6>
+        <ol>
+            <li>Obtain the Explorer Kit from Eterna City if you do not have it yet, go through the initial tutorial.</li>
+            <li>Add the Explorer Kit to your registered items list, remove anything else that is currently registered.</li>
+            <li>Head to Flower Paradise and stand directly next to Shaymin.</li>
+            <li>Use the Explorer Kit, then click <code class="fw-bold">Play Alone</code> and enter the Grand Underground.</li>
+            <li>Save the game while underground and reboot (by closing the game software and re-opening).</li>
+            <ul>
+                <li>This step is important as it will stop unwanted advances that occur while in the Home Menu.</li>
+            </ul>
+            <li>You should now be positioned correctly for the RNG manipulation, we now need to calibrate our delay.</li>
+        </ol>
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 4 -</span> Delay Calibration</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/shaymin/delay-calibration-shaymin.gif" alt="static-shaymin-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/shaymin/delay-calibration-shaymin.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #96324c;" id="delay-calibration-shaymin">
+        <span class="fw-bold text-light">Delay Calibration</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>As delay is variable due to the random noise we will now need to perform a few calibration attempts. This is done by repeating the same sequence of actions multiple times:</p>
+
+        <h6><span class="fw-bold">Step-by-step</span></h6>
+        <ol>
+            <li>Open the game and stand in the Grand Underground overworld, then press the <code class="fw-bold">Y</code> button and select <code class="fw-bold">Go up</code>.</li>
+            <li>You should now be on the "Would you like to return to the surface where you entered? Yes/No" screen. hover over the <code class="fw-bold">Yes</code> option and press the <code class="fw-bold">Home</code> button.</li>
+            <li>Open <code class="fw-bold">SysBot.exe</code> and add <code class="fw-bold">EncBotCopySeedBS</code> to the list of active bots, then click the <code class="fw-bold">Start All</code> button.</li>
+            <li>Navigate to the <code class="fw-bold">Logs</code> tab and paste your seeds into PokeFinder, set your <code class="fw-bold">Max Advances</code> to around 2000 and <code class="fw-bold">Delay</code> to 0.</li>
+            <li>Resume the game and press the <code class="fw-bold">A</code> button to resurface from the Grand Underground, then hold up on your control stick while resurfacing to face Shaymin.</li>
+            <li>Mash the <code class="fw-bold">A</code>, <code class="fw-bold">ZL</code> and <code class="fw-bold">ZR</code> buttons to interact with Shaymin and initiate the encounter as quickly as possible.</li>
+            <li>Once you are in battle, open PokeViewer.NET and connect to it as normal, then click the <code class="fw-bold">View</code> button to inspect the Shaymin you are in battle with.</li>
+            <li>Enter the IVs into the PokeFinder search filters to find the Shaymin you are in battle with. The number inside the <code class="fw-bold">Advances</code> column will be your delay for this attempt.</li>
+            <ul>
+                <li>If you see multiple potential results you will need to match the PID/EC shown on PokeViewer to the search result table to find the exact frame you hit.</li>
+            </ul>
+            <li>Note down your delay into a Notepad document, Google Sheet or similar. Repeat this process multiple times to get an rough idea of the delays you are hitting.</li>
+            <ul>
+                <li>You may need to record upwards of 10 attempts before seeing any level of consistency.</li>
+            </ul>
+        </ol>
+
+        <details>
+            <summary span class="fw-bold">My Delays</summary>
+
+            <table class="table table-striped" style="width:100%" id="overworld-rng-table">
+                <thead class="table text-white" style="background-color: #96324c;">
+                    <tr>
+                        <th scope="col" class="text-center">Attempt #</th>
+                        <th scope="col" class="text-center">Delay</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center"><span class="fw-bold">Attempt 1</span></td>
+                        <td class="text-center">1375</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><span class="fw-bold">Attempt 2</span></td>
+                        <td class="text-center">1351</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><span class="fw-bold">Attempt 3</span></td>
+                        <td class="text-center">1343</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><span class="fw-bold">Attempt 4</span></td>
+                        <td class="text-center">1361</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><span class="fw-bold">Attempt 5</span></td>
+                        <td class="text-center">1371</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><span class="fw-bold">Attempt 6</span></td>
+                        <td class="text-center">1379</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><span class="fw-bold">Attempt 7</span></td>
+                        <td class="text-center">1344</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><span class="fw-bold">Attempt 8</span></td>
+                        <td class="text-center">1366</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><span class="fw-bold">Attempt 9</span></td>
+                        <td class="text-center">1359</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><span class="fw-bold">Attempt 10</span></td>
+                        <td class="text-center">1361</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><span class="fw-bold">Attempt 11</span></td>
+                        <td class="text-center">1377</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><span class="fw-bold">Attempt 12</span></td>
+                        <td class="text-center">1367</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </details>
+
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 5 -</span> Target Found</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/shaymin/target-found-shaymin.png" alt="static-shaymin-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/shaymin/target-found-shaymin.png">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #96324c;" id="target-found-shaymin">
+        <span class="fw-bold text-light">Target Found</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>In Figure 5 we can see a result has been produced in x advances. Since we had a common delay of y, this value has been entered into PokeFinder, we will aim to press the <code class="fw-bold">A</code> button to resurface from the Grand Underground on this frame, then mash the A button to generate Shaymin as quickly as possible.</p>
+
+        <p>To advance the RNG state we will be using the Moarencounterbots <code class="fw-bold">EncBotDexFlipBS</code> routine to automate this process. <code class="fw-bold">EncBotDexFlipBS</code> flips back and fourth between Pok&eacute;dex entries to advance the current seed until a given point. This quickest known method to advance the RNG state in this game.</p>
+
+        <h6><span class="fw-bold">EncBotDexFlipBS Setup</span></h6>
+        <ol>
+            <li>Navigate to the <code class="fw-bold">Hub</code> tab and open the <code class="fw-bold">EncounterRNGBS</code> dropdown menu.</li>
+            <li>Set your <code class="fw-bold">MaxTotalAdvances</code> relative to the amount needed to reach your target frame.</li>
+            <ul>
+                <li>It is recommended to subtract 5,000 from the total number of required advances to give yourself time to set up properly after the seed advancing has been completed.</li>
+            </ul>
+            <li>Head back to the <code class="fw-bold">Bots</code> tab and remove any currently active bots.</li>
+            <li>Add the <code class="fw-bold">EncBotRNGMonitorBS</code> and <code class="fw-bold">EncBotDexFlipBS</code> bots instead.</li>
+            <li>Open the Pokedex in-game in either Sinnoh or National mode.</li>
+            <ul>
+                <li>Enter a section of the Pok&eacute;dex that has at least 10 registered Pok&eacute;mon in a row to increase effectiveness of the DexFlip routine. It is recommended to place cursor somewhere in the middle of the Pok&eacute;dex if you can.</li>
+            </ul>
+            <li>Disconnect any controllers, then click the <code class="fw-bold">Start All</code> button on Moarencounterbots.</li>
+            <ul>
+                <li>If everything was <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/moarencounterbots-dexflip-demo.gif">done correctly</a> you should now see that the bot has started to flip between Pok&eacute;dex entries very quickly.</li>
+            </ul>
+            <li>Navigate to the <code class="fw-bold">Logs</code> tab and wait for the DexFlip routine to complete.</li>
+            <li>Click <code class="fw-bold">Stop All</code> once DexFlip has finished to completely stop any active bots.</li>
+        </ol>
+
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 6 -</span> DexFlip Complete</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/shaymin/dexflip-complete-shaymin.png" alt="static-shaymin-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/shaymin/dexflip-complete-shaymin.png">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #96324c;" id="hitting-your-target-shaymin">
+        <span class="fw-bold text-light">Hitting Your Target</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>At this point you should be around 5,000 advances away from your target. To confirm exactly how far away you are from your target you will need to remove all currently active bots, then add and start <code class="fw-bold">EncBotCopySeedBS</code>.</p>
+
+        <h6><span class="fw-bold">Step-by-step</span></h6>
+        <ol>
+            <li>At this point you should already be stood in the correct position, ready to surface from the Grand Underground and interact with Shaymin.</li>
+            <li>Press the <code class="fw-bold">Home</code> button, then run <code class="fw-bold">EncBotCopySeedBS</code> and enter your new seed into PokeFinder. Search for your target again to get your new target frame.</li>
+            <li>Remove <code class="fw-bold">EncBotCopySeedBS</code> and add and start <code class="fw-bold">EncBotRNGMonitorBS</code> instead to begin monitoring your RNG state.</li>
+            <ul>
+                <li>Confirm that you have started a fresh instance of <code class="fw-bold">EncBotRNGMonitorBS</code>. Seed monitoring should begin from advance 0, NOT wherever you left off!</li>
+            </ul>
+            <li>Resume the game and advance the RNG state by manually scrolling the Pok&eacute;dex slowly until you 1000 advances (or less) away from your target.</li>
+            <li>Back out into the Grand Underground overworld, then press the <code class="fw-bold">Y</code> button and select <code class="fw-bold">Go up</code>.</li>
+            <ul>
+                <li>You should now be on the "Would you like to return to the surface where you entered? Yes/No" screen. hover over the <code class="fw-bold">Yes</code> option and press the <code class="fw-bold">Home</code> button.</li>
+            </ul>
+            <li>Monitor the RNG state until you reach your target frame, this frame should match the PokeFinder search result.</li>
+            <ul>
+                <li>A technique called "Home button mashing" is used to help ensure that we land directly onto our target frame. Quickly pressing the Home button twice will resume, then pause the game. We can use this technique to inch closer to our target frame and land directly onto it in most cases.</li>
+            </ul>
+            <li>You should now be on the Home menu and the SysBot <code class="fw-bold">Logs</code> tab should indicate that you have reached your target frame. Unpause the game while mashing the <code class="fw-bold">A</code> button to resurface from the Grand Underground.</li>
+            <li>Hold up on your control stick while resurfacing from the Grand Underground while mashing the <code class="fw-bold">A</code> button to initiate the encounter with Shaymin as quickly as possible</li>
+            <ul>
+                <li>In BDSP, <code class="fw-bold">ZL</code> and <code class="fw-bold">ZR</code> also register as <code class="fw-bold">A</code> button inputs. You can mash all three of these buttons when attempting to initiate the encounter for the best chances of hitting your target frame.</li>
+            </ul>
+        </ol>
+    </div>
+</div>
+<br>
+
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">IMPORTANT -</span> If you miss your target frame due to delay variation you will need to restart the game and try again to get a new seed. Due to the erratic noise that comes from Flower Paradise it may take a large number of attempts before seeing any success from this RNG.
+</div>
+
+<p><span class="fw-bold">Figure 6 -</span> Target Frame Hit</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/shaymin/target-frame-hit-shaymin.gif" alt="static-shaymin-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/shaymin/target-frame-hit-shaymin.gif">
+
+<p>We have resumed the game on our target frame pressed the <code class="fw-bold">A</code> button resurface from the Grand Underground and quickly to initiate the encounter. Now it is time to confirm that we have hit the correct target frame by connecting to PokeViewer.NET and clicking the <code class="fw-bold">View</code> button.</p>
+
+<p><span class="fw-bold">Figure 7 -</span> Result Found</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/shaymin/result-found-shaymin.png" alt="static-shaymin-6" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/shaymin/result-found-shaymin.png">
+
+<p>We can see that the internal details of the Pok&eacute;mon match the PokeFinder search results, mission accomplished!</p>
