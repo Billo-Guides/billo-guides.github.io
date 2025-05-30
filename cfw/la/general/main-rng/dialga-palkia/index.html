@@ -9,7 +9,7 @@ permalink: /cfw/la/general/main-rng/dialga-palkia
 </div>
 <hr />
 
-<p>This section of the guide aims to provide a worked example for how to RNG abuse Dialga/Palkia (Origin Form and Base Form). Ensure that the <u>Autosave is disabled</u> and that you have a <u>full team of 6 Pokemon</u> before beginning this portion of the guide. This provides a safety net for failed targets and makes it easier to check results using PokeViewer.</p>
+<p>This section of the guide aims to provide a worked example for how to RNG abuse Dialga/Palkia (Origin Form and Base Form). Ensure that the <u>Autosave is disabled</u> and that you have a <u>full team of 6 Pok&eacute;mon</u> before beginning this portion of the guide. This provides a safety net for failed targets and makes it easier to check results using PokeViewer.</p>
 
 <div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
     <span class="fw-bold">Important -</span> If you've reached this point, you should have already completed the initial setup and acquired a basic understanding of how to utilize Moarencounterbots, the Main RNG calculation script &amp; PokeViewer.NET. If you do not yet have an understanding of how to use all of the relevant tools, <a href="/cfw/la/general/main-rng/setup" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">click here to go back</a>.
@@ -24,14 +24,14 @@ permalink: /cfw/la/general/main-rng/dialga-palkia
 
         <h6><a href="#cutscene-method">Cutscene Method</a></h6>
         <h6><small>Can be used for base form and origin form Dialga/Palkia, suitable for more experienced players.</small></h6>
-        <p>Cutscene method requires skipping a cutscene at a precise moment in order to initiate a battle with Dialga/Palkia. The internal details of the Pokemon will be generated after skipping the cutscene and entering the battle.</p>
+        <p>Cutscene method requires skipping a cutscene at a precise moment in order to initiate a battle with Dialga/Palkia. The internal details of the Pok&eacute;mon will be generated after skipping the cutscene and entering the battle.</p>
 
-        <p>If you choose this method for origin form Dialga/Palkia, it's crucial to be capable of consistently defeating the boss battle without losing. Losing to the boss will cause the Pokemon to regenerate, causing you to miss your target frame.</p>
+        <p>If you choose this method for origin form Dialga/Palkia, it's crucial to be capable of consistently defeating the boss battle without losing. Losing to the boss will cause the Pok&eacute;mon to regenerate, causing you to miss your target frame.</p>
         <hr />
 
         <h6><a href="#death-method">Death Method</a></h6>
         <h6><small>Only useable for origin form Dialga/Palkia. This method is beginner friendly.</small></h6>
-        <p>The Death Method involves intentionally losing towards the end of the battle with Dialga or Palkia. The internal details of the Pokemon will regenerate after re-entering the battle from the continue screen. This allows you to retain your boss battle progress and defeat the boss more easily.</p>
+        <p>The Death Method involves intentionally losing towards the end of the battle with Dialga or Palkia. The internal details of the Pok&eacute;mon will regenerate after re-entering the battle from the continue screen. This allows you to retain your boss battle progress and defeat the boss more easily.</p>
 
         <p>This method is more forgiving because you're allowed to lose to the boss battle without missing your target. However, it will involve waiting for a longer time period before reaching your target frame.</p>
     </div>
@@ -57,7 +57,7 @@ permalink: /cfw/la/general/main-rng/dialga-palkia
         <span class="fw-bold text-light">Getting Started (Delay Calculation)</span>
     </div>
     <div class="card-body card-bg">
-        <p>You will need to calculate the rough delay for this encounter. The term 'delay' refers to how long it takes for the Pokemon to generate after the final A Press. Defeating the boss may be difficult at first, so the delay calculation process can also be used to become familiar with how to win the boss battle.</p>
+        <p>You will need to calculate the rough delay for this encounter. The term 'delay' refers to how long it takes for the Pok&eacute;mon to generate after the final A Press. Defeating the boss may be difficult at first, so the delay calculation process can also be used to become familiar with how to win the boss battle.</p>
 
         <p>Reach the screen of the <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/final-a-press-cutscene-method.jpg">the screen of the final A press</a>, from here, pick the method you want to use.</p><hr />
 
@@ -102,7 +102,7 @@ permalink: /cfw/la/general/main-rng/dialga-palkia
 </div>
 <br>
 
-<p>After following the delay calculation steps and searching for the PID of the encountered Pokemon, we find that it was generated on frame 58. Therefore, our delay for this attempt is 58. After 5 attempts, we have the following delay values:</p>
+<p>After following the delay calculation steps and searching for the PID of the encountered Pok&eacute;mon, we find that it was generated on frame 58. Therefore, our delay for this attempt is 58. After 5 attempts, we have the following delay values:</p>
 
 <table class="table table-striped" style="width:100%">
     <thead class="table text-white" style="background-color: #6f3b97;">
@@ -155,7 +155,7 @@ permalink: /cfw/la/general/main-rng/dialga-palkia
 <span class="fw-bold">Figure 4 -</span> Monitoring RNG State<p></p>
 <img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/rng-state-monitoring.gif" alt="main-rng-dialga-palkia-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/rng-state-monitoring.gif"><p></p>
 
-<p>The RNG state at the Spear Pillar advances at a slow rate. Moving to a more populated area allows you to advance the RNG state much more quickly. In the example image above, the player is standing next to a large body of water in an area densely populated with Pokemon.</p>
+<p>The RNG state at the Spear Pillar advances at a slow rate. Moving to a more populated area allows you to advance the RNG state much more quickly. In the example image above, the player is standing next to a large body of water in an area densely populated with Pok&eacute;mon.</p>
 
 <p>Consider leaving Spear Pillar and heading to a location where the RNG state advances more rapidly if you need to cover a large amount of frame advancements. If you have moved locations, make sure to leave enough time to reposition yourself to avoid overshooting your target frame.</p>
 
@@ -184,7 +184,7 @@ permalink: /cfw/la/general/main-rng/dialga-palkia
 <p><span class="fw-bold">We hit our target frame and have secured a Palkia with 6 perfect IVs! That's all there is to it!</span></p>
 
 <div class="alert alert-success" style="border: 1px solid #28a745; border-radius: 5px; padding: 15px;">
-    <span class="fw-bold">Final Notes -</span> Keen eyed readers may notice that the example uses PKHeX to view the box slot that contains our Pokemon, PokeViewer is considered to be more user friendly and does the same job.
+    <span class="fw-bold">Final Notes -</span> Keen eyed readers may notice that the example uses PKHeX to view the box slot that contains our Pok&eacute;mon, PokeViewer is considered to be more user friendly and does the same job.
 </div>
 
 <hr /><div class="title" style="background-color: #6f3b97;" id="death-method">
@@ -199,7 +199,7 @@ permalink: /cfw/la/general/main-rng/dialga-palkia
         <span class="fw-bold text-light">Getting Started (Delay Calculation)</span>
     </div>
     <div class="card-body card-bg">
-        <p>You will need to calculate the rough delay for this encounter. The term 'delay' refers to how long it takes for the Pokemon to generate after the final A Press. Defeating the boss may be difficult at first, so the delay calculation process can also be used to become familiar with how to win the boss battle.</p>
+        <p>You will need to calculate the rough delay for this encounter. The term 'delay' refers to how long it takes for the Pok&eacute;mon to generate after the final A Press. Defeating the boss may be difficult at first, so the delay calculation process can also be used to become familiar with how to win the boss battle.</p>
 
         <h6><span class="fw-bold">Delay Calculation Method</span></h6>
         <ul>
@@ -273,7 +273,7 @@ permalink: /cfw/la/general/main-rng/dialga-palkia
 <span class="fw-bold">Figure 4 -</span> Monitoring RNG State<p></p>
 <img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/rng-state-monitoring.gif" alt="main-rng-dialga-palkia-11" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/rng-state-monitoring.gif"><p></p>
 
-<p>The RNG state at the Spear Pillar advances at a slow rate. Moving to a more populated area allows you to advance the RNG state much more quickly. In the example image above, the player is standing next to a large body of water in an area densely populated with Pokemon.</p>
+<p>The RNG state at the Spear Pillar advances at a slow rate. Moving to a more populated area allows you to advance the RNG state much more quickly. In the example image above, the player is standing next to a large body of water in an area densely populated with Pok&eacute;mon.</p>
 
 <p>Consider leaving Spear Pillar and heading to a location where the RNG state advances more rapidly if you need to cover a large amount of frame advancements. If you have moved locations, make sure to leave enough time to reposition yourself to avoid overshooting your target frame.</p>
 
@@ -311,5 +311,5 @@ permalink: /cfw/la/general/main-rng/dialga-palkia
 <p><span class="fw-bold">We hit our target frame and have secured a Palkia with 6 perfect IVs! That's all there is to it!</span></p>
 
 <div class="alert alert-success" style="border: 1px solid #28a745; border-radius: 5px; padding: 15px;">
-    <span class="fw-bold">Final Notes -</span> Keen eyed readers may notice that the example uses PKHeX to view the box slot that contains our Pokemon, PokeViewer is considered to be more user friendly and does the same job.
+    <span class="fw-bold">Final Notes -</span> Keen eyed readers may notice that the example uses PKHeX to view the box slot that contains our Pok&eacute;mon, PokeViewer is considered to be more user friendly and does the same job.
 </div>
