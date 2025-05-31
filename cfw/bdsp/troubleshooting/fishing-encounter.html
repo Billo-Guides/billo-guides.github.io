@@ -1,0 +1,87 @@
+<hr />
+<div class="title" style="background-color: #96324c;">
+    <h1 class="text-light text-center pt-3 pb-3">Fishing Encounter Troubleshooting</h1>
+</div>
+<hr />
+
+<p><span class="fw-bold">Figure 1 -</span> Target Missed</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/troubleshooting/troubleshooting-fishing-1.gif" alt="troubleshooting-fishing-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/troubleshooting/troubleshooting-fishing-1.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #96324c;" id="target-missed-fishing-encounter">
+        <span class="fw-bold text-light">Target Missed</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>We initiated the encounter by pressing the <code class="fw-bold">A</code> button to use the Honey item on frame x, which was expected to produce a shiny species based on the PokeFinder search results. However, the Pok&eacute;mon we are in battle with is not shiny and is also not the expected species. This indicates that we did not hit our intended target frame. Common causes for missing a target frame include the following:</p>
+
+        <ol>
+            <li span class="fw-bold">Delay configured incorrectly in PokeFinder.</li>
+            <ul>
+                <li>Confirm that your delay has been entered correctly by referring to the delay table found on the Wild encounters page.</li>
+            </ul>
+            <li span class="fw-bold">Delay is variable due to overworld environment.</li>
+            <ul>
+                <li>Sometimes the overworld environment can cause the RNG state to advance rapidly which causes instability.</li>
+            </ul>
+            <li span class="fw-bold">Encounter was initiated too late or early.</li>
+            <ul>
+                <li>Pressing the <code class="fw-bold">A</code> button too late or too early will result in missing your target frame, the goal is to initiate the encounter on the exact frame(s) given by the PokeFinder search results table.</li>
+            </ul>
+        </ol>
+
+        <p>We will now need to open PokeViewer.NET and read the encounter to inspect the internal details of the Pok&eacute;mon we are in battle with. This information will help us to confirm the exact frame we hit.</p>
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 2 -</span> PokeViewer.NET Inspection</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/troubleshooting/troubleshooting-wild-2.gif" alt="troubleshooting-wild-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/troubleshooting/troubleshooting-wild-2.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #96324c;" id="pokeviewer-wild-encounter">
+        <span class="fw-bold text-light">PokeViewer.NET Inspection</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>After connecting to PokeViewer.NET and heading over to the <code class="fw-bold">View</code> tab we can inspect the Pok&eacute;mon we are in battle with by clicking the <code class="fw-bold">View</code> button. We will use this information to find the Pok&eacute;mon we actually hit using PokeFinder, then compare the difference in advances between the Pok&eacute;mon we actually hit and our target frame.</p>
+
+        <p>Enter the IVs of the Pok&eacute;mon into the PokeFinder search filters and remove any other search filters such as setting the shiny filter to <code class="fw-bold">Any</code>, <span class="fw-bold">DO NOT CHANGE THE SEEDS OR CONFIGURED DELAY</span>.</p>
+
+        <p>Once you have reconfigured the search filters properly click the <code class="fw-bold">Generate</code> button again. You should now see the Pok&eacute;mon you are in battle with inside the search result table. If you see multiple results, compare the EC value on PokeFinder and PokeViewer to find the exact frame.</p>
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 3 -</span> PokeFinder Search</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/troubleshooting/troubleshooting-wild-3.png" alt="troubleshooting-wild-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/troubleshooting/troubleshooting-wild-3.png">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #96324c;" id="pokefinder-wild-encounter">
+        <span class="fw-bold text-light">PokeFinder Search</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Our expected shiny was on advance x but the Pok&eacute;mon we are in battle with was generated on advance y. This means that we have overshot our target frame by z advance. To account for this we will need to adjust our delay in PokeFinder by +z and attempt the RNG again, in this example we will need to change the delay from x to y.</p>
+
+        <ul>
+            <li><span class="fw-bold">Overshooting target =</span> Increase delay in PokeFinder.</li>
+            <li><span class="fw-bold">Undershooting target =</span> Decrease delay in PokeFinder.</li>
+        </ul>
+
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 4 -</span> Adjusted Delay</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/troubleshooting/troubleshooting-wild-4.gif" alt="troubleshooting-wild-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/troubleshooting/troubleshooting-wild-4.gif">
+
+<p>After adjusting the delay in PokeFinder we were able to hit our target frame and encounter a shiny species!</p>
+
+<div class="alert alert-primary" style="border: 1px solid #004085; border-radius: 8px; padding: 15px; background-color: #cce5ff; color: #004085;">
+    <span class="fw-bold">Information -</span> Depending on the speed of the natural RNG advances in the area you may need to calibrate your delay multiple times before seeing any level of consistency. Shaymin, Drifloon and Spiritomb are the most notable instances of fluctuating delay, as the natural RNG in the areas that contain those Pok&eacute;mon is very noisy.
+</div>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/wild/">
+    Send me back to <span class="fw-bold">WILD ENCOUNTERS!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>

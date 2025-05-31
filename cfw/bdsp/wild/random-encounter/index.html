@@ -1,263 +1,376 @@
 ---
 layout: default
 title: BDSP Wild Encounter RNG (CFW)
-permalink: /cfw/bdsp/wild/random-encounter/
+permalink: /cfw/bdsp/wild/
 ---
 
-<style>
-    .card-bg {
-        background-color: #d1d1d1;
-        border-bottom-right-radius: 0.20rem !important;
-        border-bottom-left-radius: 0.20rem !important;
-    }
-
-    table,
-    th,
-    td {
-        border: 1px solid black;
-    }
-
-    blockquote {
-        background: #c5c5c5;
-        border: 1px solid #9e9e9e;
-        border-left: 5px solid #96324c;
-        margin: 1.5em 2px;
-        padding: 0.5em 10px;
-        quotes: "\201C""\201D""\2018""\2019";
-    }
-</style>
-
 <div class="title" style="background-color: #96324c;">
-    <h1 class="text-light text-center pt-3 pb-3">BDSP Wild Encounter RNG (CFW)</h1>
+    <h1 class="text-light text-center pt-3 pb-3">BDSP Wild RNG</h1>
 </div>
+<small class="text-muted mb-3 mt-0">
+    Learn the entire process of manipulating Pok&eacute;mon from random wild encounters.
+</small>
 <hr />
 
-<p>This section of the guide covers how to RNG manipulate Pokemon from Wild encounters. Wild encounters are defined as encounters that are generated randomly while running through tall grass, in caves, and in the water.</p>
+<p>Wild encounters refer to Pok&eacute;mon that appear randomly as the player moves through tall grass, caves, or water. These encounters can also be deliberately triggered by using the move Sweet Scent or the Honey item. This guide focuses on manipulating wild encounters through using Honey as this offers the most consistency and control compared to initiating encounters through random movement or using Sweet Scent.</p>
 
-<p>Ensure that the autosave feature is disabled, and that you have enough resouces (Pokeballs, healing items, etc.) to successfully capture the Pokemon you plan to RNG manipulate.</p>
+<p>Most Pok&eacute;mon found in the wild can also be hatched from eggs, with the exception of Unown. <a href="/cfw/bdsp/egg" target="_blank">Egg RNG manipulation</a> is much more stable so we recommend using it instead of wild RNG manipulation where possible. If you're aware of the added instability that comes with wild RNG manipulation and still wish to proceed, continue following the content on this page.</p>
 
-<p><span class="fw-bold" style="color: #b60606;">At this stage you should have already followed all of the setup and installation instructions found on the initial page of this guide.</span></p>
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Before starting -</span> Confirm that the autosave feature is disabled in the in-game options and confirm that you have enough resources to make the capture process as smooth as possible (Pok&eacute; Balls, healing items, lead Pok&eacute;mon etc). Also ensure that you have the Defog ability on your Pok&eacute;tch if your target is found in a foggy area.
+</div>
 
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp">
-    Missed some setup instructions? <span class="fw-bold">Click here to go back!</span>
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/">
+    Missed the initial setup instructions? Go back to the <span class="fw-bold">main page!</span>
     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
     </svg>
 </a>
-<br>
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #96324c;" id="explaining-bdsp-rng">
-        <span class="fw-bold text-light">How Does This Work?</span>
+        <span class="fw-bold text-light">Understanding BDSP RNG</span>
     </div>
     <div class="card-body card-bg">
+        <h6 class="fw-bold">How Does This Work?</h6>
+        <p>In Brilliant Diamond/Shining Pearl the game determines the outcome of "random" events using a constantly advancing RNG seed. Using tools like PokeFinder and SysBot.NET we are able to predict the outcome of these random events and understand exactly when a desirable result will be produced and take advantage of this.</p>
+
         <p>In BDSP, the game operates on a constantly advancing RNG seed, which determines all random events such as shininess, and stats of encounters. Moarencounterbots can track &amp; monitor seeds in real-time and even automate seed progression to a specific point. This automation handles the tedious RNG work, allowing you to focus on finding and hitting targets instead.</p>
 
-        <p>For some wild encounters, you will need to consider the "delay", which is the number of frames the game takes to generate a Pokémon after input. For example, if the target is on frame 100 with an 1-frame delay, initiate the encounter 1 frames beforehand (100-1=99). A recommended list of delays for specific encounter can be found inside the table below.</p>
+        <p>Moarencounterbots is able to track and monitor RNG seeds in real time as well as advance the RNG state until a given point, removing the vast majority of work that would otherwise be tedious. This allows the player to put their efforts into more important factors like hitting their target frame instead.</p>
 
-        <blockquote>In any case, the screen of the final button input should be on the <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/honey-sweet-scent.gif">Honey selection screen</a></blockquote>
+        <h6 class="fw-bold">Additional Information</h6>
+        <p>Honey and Sweet Scent cannot be used in areas with overworld weather like Blizzard or Sandstorm. Fog is the exception, as it can be cleared using Defog via the Pok&eacute;tch application. If Honey isn't usable consider changing locations, as triggering random encounters by moving the player is undesirable.</p>
+
+        <details>
+            <summary class="fw-bold">Problematic Areas</summary>
+            <p>These locations have overworld weather conditions that prevent the player from using Honey/Sweet Scent to attract wild Pok&eacute;mon:</p>
+
+            <h6 class="fw-bold">Fog (can be cleared using Defog)</h6>
+            <ul>
+                <li style="margin: 0;">Route 210 (North)</li>
+                <li style="margin: 0;">Mount Coronet (Basement)</li>
+                <li style="margin: 0;">Lost Tower (Upper floor)</li>
+                <li style="margin: 0;">Victory Road (Postgame section)</li>
+                <li style="margin: 0;">Turnback Cave</li>
+            </ul>
+
+            <h6 class="fw-bold">Snow/Blizzard/Sandstorm (cannot be cleared)</h6>
+            <ul>
+                <li style="margin: 0;">Route 216</li>
+                <li style="margin: 0;">Route 217</li>
+                <li style="margin: 0;">Acuity Lakefront</li>
+                <li style="margin: 0;">Route 228</li>
+            </ul>
+
+        </details>
 
     </div>
 </div>
 <br>
 
-<table class="table table-striped" style="width:100%" id="delay-table">
-    <thead class="table text-white" style="background-color: #96324c;">
-    <th scope="col" style="width:25%" class="text-center">Location / Pokemon</th>
-    <th scope="col" style="width:25%" class="text-center">Recommended Delay</th>
-    </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td class="text-center"><span class="fw-bold">Most cases</span></span></td>
-            <td class="text-center">0</td>
-        </tr>
-        <tr>
-            <td class="text-center"><span class="fw-bold">Unown</span></span></td>
-            <td class="text-center">1-2</td>
-        </tr>
-    </tbody>
-</table>
-
-<p>More specific cases like Unown can be added to the list on request. Contact me if you are interested in contributing (contact details can be found at the bottom of any page).</p>
-
-<p><span class="fw-bold">With all the required reading out of the way, it's time to get to work!</span></p>
-
-<div class="title" style="background-color: #96324c;">
-    <h1 class="text-light text-center pt-3 pb-3">The Process</h1>
-</div>
-<hr />
-
-<p>First, you will need to configure PokeFinder to match the details of the Pokemon you are hunting, then set the desired search filters.</p>
-
-<span class="fw-bold">Figure 1 -</span> PokeFinder Setup<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/wild/random-encounter/figure-1-pokefinder-setup-wild-encounter.gif" alt="wild-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/wild/random-encounter/figure-1-pokefinder-setup-wild-encounter.gif"><p></p>
+<p><span class="fw-bold">Figure 1 -</span> PokeFinder Setup</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/wild/pokefinder-setup-wild.gif" alt="wild-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/wild/pokefinder-setup-wild.gif">
 
 <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #96324c;" id="pokefinder-setup-wild-encounter">
+    <div class="anchored card-header" style="background-color: #96324c;" id="pokefinder-setup-wild">
         <span class="fw-bold text-light">PokeFinder Setup</span>
     </div>
     <div class="card-body card-bg">
-        <p>Click the <code span class="fw-bold">Gen 8 -> Wild</code> button after launching PokeFinder to open the main window for wild encounters. Here is where we will fill in all the details about the Pokemon being hunted.</p>
+        <p>Click the <code class="fw-bold">Gen 8 -> wild</code> button after launching PokeFinder to open the main window for wild Pok&eacute;mon. Here is where we will fill in all the details about the Pok&eacute;mon being hunted.</p>
 
-        <h6><span class="fw-bold">RNG Setup</span></h6>
+        <h6 class="fw-bold">RNG Setup</h6>
         <ul>
-            <li>Select the correct profile from the dropdown menu at the top of the PokeFinder window.</li>
-            <li>Select the <code span class="fw-bold">Lead</code> if you are using a Pokemon with an influencing ability (like Synchronize).</li>
-            <li>In the <code span class="fw-bold">Max Advances</code> field, enter the amount of frames you are willing to search through.</li>
-            <li>Enter the delay (refer to table) inside the <code span class="fw-bold">Delay</code> field, pick the lowest possible number.</li>
-            <li>In the <code span class="fw-bold">Settings</code> section in the middle, specify Pokemon and encounter details (e.g Solaceon Ruins, Unown).</li>
-            <li>Configure your search filters on the right, such as searching for any Shiny, or a 6IV Pokemon. Filters can be also combined.</li>
+            <li>Select the correct <code class="fw-bold">Profile</code> in the dropdown menu at the top.</li>
+            <li>Select <code class="fw-bold">Lead</code> if you are using a Pok&eacute;mon with an influencing ability (e.g. Synchronize).</li>
+            <li>Enter the amount of advances you wish to search through into the <code class="fw-bold">Max Advances</code> field.</li>
+            <li>In the <code class="fw-bold">Settings</code> section in the middle, specify the location, time of day, target species and any other encounter details.</li>
+            <li>Configure your search filters, such as filtering for a shiny Pok&eacute;mon with 0 IVs in attack.</li>
         </ul>
 
-        <blockquote>Having a Pokemon with the ability Syncronize ensures that all encountered Pokemon have the same nature as your Pokemon. Your synchronizer needs to be first in your party in order to work.</blockquote>
+        <p>Having a Pokemon with the ability Syncronize ensures that all encountered Pok&eacute;mon have the same nature as your synchronizer. Ensure that your synchronizer is the first team member in your party or it will not work.</p>
+
+        <details>
+            <summary class="fw-bold">Unown Specifics</summary>
+            <p>Each area in the Solaceon Ruins contains different forms of Unown, so you will need to make sure that you have selected the correct location depending on the form you are hunting. Use this table to identify your current location then match the location in the <code class="fw-bold">Location</code> dropdown menu in PokeFinder.</p>
+
+            <table class="table table-striped" style="width:100%" id="overworld-rng-table">
+                <thead class="table-dark text-white">
+                    <tr>
+                        <th scope="col" class="text-center" style="width: 33%;">Unown Chamber</th>
+                        <th scope="col" class="text-center" style="width: 33%;">Featured Forms</th>
+                        <th scope="col" class="text-center" style="width: 33%;">PokeFinder Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center">
+                            <span class="fw-bold">
+                                <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/misc/small-chamber.jpg">
+                                    Small Chamber (has small rock)
+                                </a>
+                            </span>
+                        </td>
+                        <td class="text-center">ANY</td>
+                        <td class="text-center">Solaceon Ruins</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <span class="fw-bold">
+                                <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/misc/f-chamber.jpg">
+                                    F Chamber
+                                </a>
+                            </span>
+                        </td>
+                        <td class="text-center">F ONLY</td>
+                        <td class="text-center">Solaceon Ruins B1F (4 Stairs)</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <span class="fw-bold">
+                                <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/misc/r-chamber.jpg">
+                                    R Chamber
+                                </a>
+                            </span>
+                        </td>
+                        <td class="text-center">R ONLY</td>
+                        <td class="text-center">Solaceon Ruins B2F (4 Stairs)</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <span class="fw-bold">
+                                <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/misc/i-chamber.jpg">
+                                    I Chamber
+                                </a>
+                            </span>
+                        </td>
+                        <td class="text-center">I ONLY</td>
+                        <td class="text-center">Solaceon Ruins B3F (3 Stairs)</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <span class="fw-bold">
+                                <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/misc/e-chamber.jpg">
+                                    E Chamber
+                                </a>
+                            </span>
+                        </td>
+                        <td class="text-center">E ONLY</td>
+                        <td class="text-center">Solaceon Ruins B4F (4 Stairs)</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <span class="fw-bold">
+                                <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/misc/n-chamber.jpg">
+                                    N Chamber
+                                </a>
+                            </span>
+                        </td>
+                        <td class="text-center">N ONLY</td>
+                        <td class="text-center">Solaceon Ruins B3F (4 Stairs)</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <span class="fw-bold">
+                                <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/misc/d-chamber.jpg">
+                                    D Chamber
+                                </a>
+                            </span>
+                        </td>
+                        <td class="text-center">D ONLY</td>
+                        <td class="text-center">Solaceon Ruins B4F (Chamber)</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <span class="fw-bold">
+                                <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/misc/ruin-extention-chamber.jpg">
+                                    Ruin Extention Chamber
+                                </a>
+                            </span>
+                        </td>
+                        <td class="text-center">? AND !</td>
+                        <td class="text-center">Solaceon Ruins 2F</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </details>
+
 
     </div>
 </div>
 <br>
 
-<p>Next, you will need to find your current seed, this can be done using Moarencounterbots (SysBot.NET).</p>
-
-<span class="fw-bold">Figure 2 -</span> Finding Current Seed<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/wild/random-encounter/figure-2-finding-current-seed.gif" alt="wild-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/wild/random-encounter/figure-2-finding-current-seed.gif"><p></p>
+<p><span class="fw-bold">Figure 2 -</span> Finding Your Seed</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/wild/moarencounterbots-seed-finding.gif" alt="wild-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/wild/moarencounterbots-seed-finding.gif">
 
 <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #96324c;" id="seed-searching-moarencounterbots">
+    <div class="anchored card-header" style="background-color: #96324c;" id="moarencounterbots-seed-finding">
         <span class="fw-bold text-light">Finding Current Seed</span>
     </div>
     <div class="card-body card-bg">
-        <p>To easily obtain your current seed at any given point you can use the <code span class="fw-bold">EncBotCopySeedBS</code> bot routine in Moarencounterbots. You will need to toggle a few settings in the <code span class="fw-bold">Hub</code> tab for use with PokeFinder.</p>
-
-        <h6><span class="fw-bold">CopySeed Setup</span></h6>
-        <ul>
-            <li>In the <code span class="fw-bold">Hub</code> tab, open the <code span class="fw-bold">EncounterRNGBS</code> dropdown menu.</li>
-            <li>Select <code span class="fw-bold">Bit64PokeFinder</code> in the <code span class="fw-bold">DisplaySeedMode</code> dropdown menu.</li>
-            <li>Set the <code span class="fw-bold">MonitorRefreshRate</code> to 0, this will be needed later.</li>
-            <li>In the <code span class="fw-bold">Bots</code> tab, type the local IP address of the console.</li>
-            <li>In the dropdown menu on the right, select <code span class="fw-bold">EncBotCopySeedBS</code> and add the bot.</li>
-        </ul>
-
-        <p>When starting the <code span class="fw-bold">EncBotCopySeedBS</code> bot at any point your seed will be produced inside the <code span class="fw-bold">Logs</code> tab. These seeds can be pasted into the <code span class="fw-bold">Seed 0</code> &amp; <code span class="fw-bold">Seed 1 </code> fields of PokeFinder to search for targets that match your search parameters.</p>
-    </div>
-</div>
-<br>
-
-<p>Save the game, then run <code span class="fw-bold">EncBotCopySeedBS</code> and paste the seeds into PokeFinder and hit search, repeat this process until a result that matches your search parameters has been found.</p>
-
-<span class="fw-bold">Figure 3 -</span> Target Frame Found!<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/wild/random-encounter/figure-3-target-frame-found.png" alt="wild-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/wild/random-encounter/figure-3-target-frame-found.png"><p></p>
-
-<div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #96324c;" id="target-frame-found-wild">
-        <span class="fw-bold text-light">Target Frame Found!</span>
-    </div>
-    <div class="card-body card-bg">
-        <p>In Figure 3, we can see that a Shiny Unown that matches the search filters has been produced in 187500 advances, this is the frame that we will aim to press the A button to use Honey and initiate the encounter.</p>
-
-        <h6><span class="fw-bold">Undesirable Result?</span></h6>
-        <ul>
-            <li>Reset the game to refresh the seed, then enter the overworld.</li>
-            <li>Run <code span class="fw-bold">EncBotCopySeedBS</code> again to produce a new seed.</li>
-            <li>Paste the new seeds into PokeFinder and search again.</li>
-            <li>Repeat until a desirable result has been found.</li>
-        </ul>
-
-        <p>Consider increasing the search range if you are consistently finding "bad" seeds. Moarencounterbots is capable of advancing millions of frames with ease using the <code span class="fw-bold">EncBotDexFlipBS</code> routine. Alternatively you can opt to use less strict search filters.</p>
-
-    </div>
-</div>
-<br>
-
-<p>From here you will need to advance towards your target frame. The majority of the work can be done using Moarencounterbots, but again this will require changing settings inside the <code span class="fw-bold">Hub</code> tab.</p>
-
-<span class="fw-bold">Figure 4 -</span> Advancement Setup<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/wild/random-encounter/figure-4-advancement-setup.gif" alt="wild-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/wild/random-encounter/figure-4-advancement-setup.gif"><p></p>
-
-<div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #96324c;" id="advancement-setup">
-        <span class="fw-bold text-light">Advancement Setup</span>
-    </div>
-    <div class="card-body card-bg">
-        <p>To advance large distances as quickly as possible, use the <code span class="fw-bold">EncBotDexFlipBS</code> routine. A description of this routine can be found <a href="https://github.com/Lusamine/SysBot.NET/wiki/BDSP-EncounterBots#dex-flip-bot-encbotdexflipbs">here</a>. Having a decent chunk of your Pokedex completed is important for optimizing this method.</p>
+        <p>To easily obtain your current seed at any given point you can use the <code span class="fw-bold">EncBotCopySeedBS</code> routine in Moarencounterbots. If you have already followed the setup instructions found on the main page the bot should be configured to output the seed in the way PokeFinder expects. If you did not do this yet or your settings have changed for whatever reason, follow these instructions:</p>
 
         <h6><span class="fw-bold">Settings Toggles</span></h6>
-        <ul>
-            <li>In the <code span class="fw-bold">Hub</code> tab, open the <code span class="fw-bold">EncounterRNGBS</code> dropdown menu.</li>
-            <li>Set the <code span class="fw-bold">MaxTotalAdvances</code> value to ~10,000 frames before your target (e.g if Target is at 100,000, set to 90,000).</li>
-            <li>In the <code span class="fw-bold">Bots</code> tab, type the local IP address into the assigned field and remove any other active bots.</li>
-            <li>In the dropdown menu on the right, add both <code span class="fw-bold">EncBotDexFlipBS</code> and <code span class="fw-bold">EncBotRNGMonitorBS</code></li>
-        </ul>
+        <ol>
+            <li>Open SysBot.exe and navigate to the <code class="fw-bold">Hub</code> tab.</li>
+            <li>Open the <code class="fw-bold">EncounterRNGBS</code> dropdown menu to display the relevant settings.</li>
+            <li>Under <code class="fw-bold">DisplaySeedMode</code>, select <code class="fw-bold">Bit64PokeFinder</code>.</li>
+            <li>Set the value in <code class="fw-bold">MonitorRefreshRate</code> to <code class="fw-bold">0</code>.</li>
+        </ol>
 
-        <p>After the settings have been properly toggled, open the Pokedex in game, disconnect all controllers using the unsync button, then start the bot. The bot will automatically pause the game when the <code span class="fw-bold">MaxTotalAdvances</code> has been reached.</p>
-
-        <details>
-            <summary><span class="fw-bold">Controller Connectivity Troubleshooting</span></summary>
+        <h6><span class="fw-bold">Grabbing Seed Information</span></h6>
+        <ol>
+            <li>Navigate back to the <code class="fw-bold">Bots</code> tab and add <code class="fw-bold">EncBotCopySeedBS</code>.</li>
+            <li>Stand in the overworld in-game, press the <code class="fw-bold">Home</code> button, then click <code class="fw-bold">Start All</code>.</li>
+            <li>Navigate to the <code class="fw-bold">Logs</code> tab. Your seed should be visible here (split into 2 sections referred to as "Seed 0" and "Seed 1").</li>
+            <li>By default your seed will be copied to clipboard, but pasting directly into PokeFinder will not work.</li>
             <ul>
-                <li><span class="fw-bold">JoyCons -</span> Slide the JoyCons onto the Joycon rail then press any button to sync them to the console.</li>
-                <li><span class="fw-bold">Pro Controller -</span> Reconnect the controller from the controller settings if you are having issues with automatically connecting, or the controller is synced as a second controller.</li>
+                <li>Copy the top half of the seed into the <code class="fw-bold">Seed 0</code> field of PokeFinder.</li>
+                <li>Copy the bottom half of the seed into the <code class="fw-bold">Seed 1</code> field of PokeFinder.</li>
             </ul>
-        </details>
-
-        <blockquote>You do not need to use the Dex Flip routine if your target is of a small distance away, scrolling the Pokedex manually while monitoring your seed is effective enough in these cases.</blockquote>
-
+            <li>Click the <code class="fw-bold">Search</code> button to search for targets that match your parameters.</li>
+        </ol>
     </div>
+
 </div>
-<br>
+<br />
 
-<span class="fw-bold">Figure 5 -</span> Dex Flip Complete<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/wild/random-encounter/figure-5-dex-flip-complete.png" alt="wild-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/wild/random-encounter/figure-5-dex-flip-complete.png"><p></p>
-
-<div class="title" style="background-color: #96324c;">
-    <h1 class="text-light text-center pt-3 pb-3">Final Advancements</h1>
-</div>
-<hr />
-
-<p>Once you are close to your target frame (within ~10,000 frames), you will need to advance the rest of the way and hit your target frame slowly using <code span class="fw-bold">EncBotRNGMonitorBS</code> to monitor your seed.</p>
-
-<p>The recommended method of hitting a target frame accurately (particularly in fast paced environments), is by pressing the home button twice to resume and pause the game, this technique is known as "home mashing". While you can hit targets without using this technique, it is considered less consistent.</p>
+<p><span class="fw-bold">Figure 3 -</span> Delay Calibration</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/wild/delay-calibration.gif" alt="wild-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/wild/delay-calibration.gif">
 
 <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #96324c;" id="final-advancements-wild">
-        <span class="fw-bold text-light">Final Advancements</span>
+    <div class="anchored card-header" style="background-color: #96324c;" id="wild-delay-calibration">
+        <span class="fw-bold text-light">Delay Calibration</span>
     </div>
     <div class="card-body card-bg">
-        <ul>
-            <li>With the game in the Home Menu, remove all active bots and add <code span class="fw-bold">EncBotCopySeedBS</code> to the bot list, then click the <code span class="fw-bold">Start All</code> button and paste your new seeds into PokeFinder, this will provide your new starting frame.</li>
-            <p></p>
-            <li>Remove <code span class="fw-bold">EncBotCopySeedBS</code> and add <code span class="fw-bold">EncBotRNGMonitorBS</code> instead, then start the bot to begin monitoring your seed. If done correctly the logs should start from advance 0.</li>
-            <p></p>
-            <li>Unpause the game, and enter your bag when you are within a few hundred frames of your target encounter, find where the Honey item is located, then select it to be positioned on the <code span class="fw-bold">Yes/No</code> selection for Honey.</li>
-        </ul>
+        <p>In most cases you will need to manually calibrate the delay in the area you are hunting in. For areas where the natural RNG advances slowly you should expect to see delays of 0-2. You may experience added variation in areas where the natural RNG advances are erratic.</p>
 
-        <blockquote>You may optionally choose to manually advance the RNG state by scrolling the Pokedex. Be careful not to overshoot your target!</blockquote>
+        <h6 class="fw-bold">Step-by-step</h6>
+        <ol>
+            <li>Launch the game, open your bag and navigate to the Honey item and select it. You should now be on the <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/item-select.jpg">item selection screen</a> if done correctly.</li>
+            <li>Pause the game by pressing the <code class="fw-bold">Home</code> button on your controller. You should now be on the <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/misc/home-menu.jpg">home menu</a> with your cursor hovered over the game you are playing.</li>
+            <li>Add <code class="fw-bold">EncBotCopySeedBS</code> to the list of active bots and click <code class="fw-bold">Start All</code>, then head over to the logs tab to grab your seeds and paste them into PokeFinder.</li>
+            <li>On the right of the PokeFinder window, click <code class="fw-bold">Disable Filters</code>, then set your <code class="fw-bold">Max Advances</code> down to a reasonable number (~1000), then click <code class="fw-bold">Generate</code>.</li>
+            <li>Quickly mash the <code class="fw-bold">A</code> button to re-open the game and use Honey, this will trigger an encounter. View the details of the encounter using PokeViewer.NET.</li>
+            <li>Find the Pok&eacute;mon you hit in the PokeFinder search results table. This will be your delay for this attempt. It is recommended to repeat this process a few times to get an idea of the common delays you are hitting.</li>
+        </ol>
 
-        <ul>
-            <li>Use the home mashing technique mentioned above to inch towards your target frame slowly, once you hit the correct target frame keep the game paused on the Home Menu.</li>
-            <p></p>
-            <li>Quickly spam the <code span class="fw-bold">A</code> button to use Honey, this will initiate the encounter, if done correctly the encounter should match what is expected by PokeFinder.</li>
-        </ul>
+        <p>After finding your rough average delay, head back to PokeFinder and uncheck the <code class="fw-bold">Disable Filters</code> checkbox, add your delay into the <code class="fw-bold">Delay</code> field on the left, then set your <code class="fw-bold">Max Advances</code> back to normal. You can now begin searching for target frames.</p>
 
-        <blockquote>Expect this RNG to take multiple attempts depending on how quickly the RNG advances naturally in the area, areas where the RNG advances quickly are more unstable, making it harder to hit the target frame.</blockquote>
+        <p>If you do not find any results consider increasing your search range, applying less strict search filters, or restarting the game to generate a new seed. Repeat this process until a desirable seed has been found.</p>
+
+    </div>
+</div>
+
+<hr />
+<div class="title" style="background-color: #96324c;">
+    <h1 class="text-light text-center pt-3 pb-3">The Process</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    Step-by-step instructions for hitting a target frame can be found here.
+</small>
+<hr />
+
+<p><span class="fw-bold">Figure 4 -</span> Target Found</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/wild/target-found-wild-encounter.png" alt="wild-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/wild/target-found-wild-encounter.png">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #96324c;" id="target-found-wild-encounter">
+        <span class="fw-bold text-light">Target Found</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>In Figure 3 we can see a shiny Unown-? will be produced in x advances and our calibrated delay (1) is being considered by PokeFinder. Now the goal is to press the <code class="fw-bold">A</code> button to generate the Pok&eacute;mon on advance x. If you are seeking a non shiny target you may notice multiple frames in a row that produce the same end result, this is known as a "frame cluster". It is recommended to target clusters for non-shiny targets as this grants more opportunities to hit the correct frame.</p>
+
+        <p>To advance the RNG state we will be using the Moarencounterbots <code class="fw-bold">EncBotDexFlipBS</code> routine to automate this process. <code class="fw-bold">EncBotDexFlipBS</code> flips back and fourth between Pok&eacute;dex entries to advance the current seed until a given point. This quickest known method to advance the RNG state in this game.</p>
+
+        <h6><span class="fw-bold">EncBotDexFlipBS Setup</span></h6>
+        <ol>
+            <li>Navigate to the <code class="fw-bold">Hub</code> tab and open the <code class="fw-bold">EncounterRNGBS</code> dropdown menu.</li>
+            <li>Set your <code class="fw-bold">MaxTotalAdvances</code> relative to the amount needed to reach your target frame.</li>
+            <ul>
+                <li>It is recommended to subtract 10,000 from the total number of required advances to give yourself time to position your character properly after the seed advancing has been completed.</li>
+            </ul>
+            <li>Head back to the <code class="fw-bold">Bots</code> tab and remove any currently active bots.</li>
+            <li>Add the <code class="fw-bold">EncBotRNGMonitorBS</code> and <code class="fw-bold">EncBotDexFlipBS</code> bots instead.</li>
+            <li>Open the Pokedex in-game in either Sinnoh or National mode.</li>
+            <ul>
+                <li>Enter a section of the Pok&eacute;dex that has at least 10 registered Pok&eacute;mon in a row to increase effectiveness of the DexFlip routine. It is recommended to place cursor somewhere in the middle of the Pok&eacute;dex if you can.</li>
+            </ul>
+            <li>Disconnect any controllers, then click the <code class="fw-bold">Start All</code> button on Moarencounterbots.</li>
+            <ul>
+                <li>If everything was <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/moarencounterbots-dexflip-demo.gif">done correctly</a> you should now see that the bot has started to flip between Pok&eacute;dex entries very quickly.</li>
+            </ul>
+            <li>Navigate to the <code class="fw-bold">Logs</code> tab and wait for the DexFlip routine to complete.</li>
+            <li>Click <code class="fw-bold">Stop All</code> once DexFlip has finished to completely stop any active bots.</li>
+        </ol>
+
+        <p>If the bot does not begin flicking through Pokedex entries after clicking <code class="fw-bold">Start All</code> to initiate the DexFlip routine, stop the bot and confirm that all controllers have been fully disconnected and click <code class="fw-bold">Start All</code> again. This routine relies on taking control of button inputs and will not work if any other controllers are connected to the device. Controllers can be resynced after the routine has completed.</p>
 
     </div>
 </div>
 <br>
 
-<span class="fw-bold">Figure 6 -</span> Target Frame Hit<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/wild/random-encounter/figure-6-target-frame-hit-wild.gif" alt="wild-6" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/wild/random-encounter/figure-6-target-frame-hit-wild.gif"><p></p>
+<p><span class="fw-bold">Figure 5 -</span> DexFlip Complete</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/wild/dexflip-complete-wild-encounter.png" alt="wild-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/wild/dexflip-complete-wild-encounter.png">
 
-<p>In Figure 6, PokeFinder displays the target on advance 6847, delay has already been entered into the <code span class="fw-bold">Delay</code> field (1), and SysBot logs indicate that 6847 advancements have occured, so we can now mash the <code span class="fw-bold">A</code> button to initiate the encounter and see if we hit the correct target frame.</p>
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #96324c;" id="hitting-your-target-wild">
+        <span class="fw-bold text-light">Hitting Your Target</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>At this point you should be around 10,000 advances away from your target. To confirm exactly how far away you are from your target you will need to remove all currently active bots, then add and start <code class="fw-bold">EncBotCopySeedBS</code>.</p>
 
-<span class="fw-bold">Figure 7 -</span> Result Found (PokeViewer.NET Confirmation)<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/wild/random-encounter/figure-7-result-found-wild.png" alt="wild-7" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/wild/random-encounter/figure-7-result-found-wild.png"><p></p>
+        <h6><span class="fw-bold">Step-by-step</span></h6>
+        <ol>
+            <li>Head to the location of your desired Pok&eacute;mon in-game if you have not already done so. Stand anywhere that you can use Honey to trigger an encounter.</li>
+            <ul>
+                <li>If you are in an area where using Honey is not possible you will need to stand in a location where taking a step will trigger an encounter.</li>
+            </ul>
+            <li>Press the <code class="fw-bold">Home</code> button, then run <code class="fw-bold">EncBotCopySeedBS</code> and enter your new seed into PokeFinder. Search for your target again to get your new target frame.</li>
+            <li>Remove <code class="fw-bold">EncBotCopySeedBS</code> and add and start <code class="fw-bold">EncBotRNGMonitorBS</code> instead to begin monitoring your RNG state.</li>
+            <ul>
+                <li>Confirm that you have started a fresh instance of <code class="fw-bold">EncBotRNGMonitorBS</code>. Seed monitoring should begin from advance 0, NOT wherever you left off!</li>
+            </ul>
+            <li>Resume the game and observe how quickly the RNG state is advancing. Your next action will depend on the speed of the natural RNG advances.</li>
+            <ul>
+                <li>If the RNG state is advancing slowly, manually scroll your Pok&eacute;dex slowly until you 1000 advances (or less) away from your target, then interact with your desired Pok&eacute;mon and reach the screen of the final button input.</li>
+                <li>If the RNG state is advancing quickly, interact with your desired Pok&eacute;mon and reach the screen of the final button input (<a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/item-select.jpg">item selection screen</a>).</li>
+            </ul>
+            <li>Monitor the RNG state until you reach your target frame, this should match the exact frame shown on PokeFinder's search result table.</li>
+            <ul>
+                <li>A technique called "Home button mashing" is used to help ensure that we land directly onto our target frame. Quickly pressing the Home button twice will resume, then pause the game. We can use this technique to inch closer to our target frame and land directly onto it in most cases.</li>
+                <li>In the unlikely event that we cannot land directly onto our target frame this will need to be treated as a failure and you will need to restart the process again by finding a new seed and target frame.</li>
+            </ul>
+            <li>You should now be on the Home menu and the SysBot <code class="fw-bold">Logs</code> tab should indicate that you have reached your target frame. Unpause the game while mashing the <code class="fw-bold">A</code> button (Honey) or moving the player (walking) to trigger the wild encounter.</li>
+            <ul>
+                <li>In BDSP, <code class="fw-bold">ZL</code> and <code class="fw-bold">ZR</code> also register as <code class="fw-bold">A</code> button inputs. You can mash all three of these buttons when attempting to initiate the encounter using Honey for the best chances of hitting your target frame.</li>
+            </ul>
+        </ol>
+    </div>
+</div>
+<br>
 
-<p>After opening PokeViewer.NET and using the <code span class="fw-bold">Battle View</code> function, we can see that the Pokemon matches the PokeFinder search result. Mission accomplished!</p>
+<p><span class="fw-bold">Figure 6 -</span> Target Frame Hit</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/wild/target-frame-hit-wild-encounter.gif" alt="wild-6" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/wild/target-frame-hit-wild-encounter.gif">
 
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/troubleshooting">
-    Missing target frames? <span class="fw-bold">Click here for an encounter troubleshooting guide!</span>
+<p>We have resumed the game on our target frame pressed the <code class="fw-bold">A</code> button quickly to use Honey and initiate the encounter. Now it is time to confirm that we have hit the correct target frame by connecting to PokeViewer.NET and clicking the <code class="fw-bold">View</code> button.</p>
+
+<p><span class="fw-bold">Figure 7 -</span> Result Found</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/wild/result-found-wild-encounter.png" alt="wild-7" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/wild/result-found-wild-encounter.png">
+
+<p>We can see that the internal details of the Unown-? match the PokeFinder search results, mission accomplished!</p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/troubleshooting/" target="_blank" rel="noopener noreferrer">
+    Missed your target frame? Visit <span class="fw-bold">encounter troubleshooting!</span>
     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
     </svg>
 </a>
-<br>
 
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/">
+    Send me back to the <span class="fw-bold">main page!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>

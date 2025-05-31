@@ -1,84 +1,73 @@
 ---
 layout: default
-title: BDSP RNG (CFW)
+title: BDSP RNG Troubleshooting
 permalink: /cfw/bdsp/troubleshooting
 ---
 
-<style>
-    .card-bg {
-        background-color: #d1d1d1;
-        border-bottom-right-radius: 0.20rem !important;
-        border-bottom-left-radius: 0.20rem !important;
-    }
-
-    table,
-    th,
-    td {
-        border: 1px solid black;
-    }
-
-    blockquote {
-        background: #c5c5c5;
-        border: 1px solid #9e9e9e;
-        border-left: 5px solid #96324c;
-        margin: 1.5em 2px;
-        padding: 0.5em 10px;
-        quotes: "\201C""\201D""\2018""\2019";
-    }
-</style>
-
 <div class="title" style="background-color: #96324c;">
-    <h1 class="text-light text-center pt-3 pb-3">BDSP RNG - Encounter Troubleshooting</h1>
+    <h1 class="text-light text-center pt-3 pb-3">BDSP Troubleshooting</h1>
 </div>
+<small class="text-muted mb-3 mt-0">
+    Information about troubleshooting encounters or redemptions.
+</small>
 <hr />
 
-<p>This section of the guide covers everything you need to know about troubleshooting encounters. If you are missing targets and wondering how to fix the problem, this is the place to be.</p>
+<p>Missing your target and not sure how to fix the problem? This section covers everything you need to know about troubleshooting any type of encounter or redemption. We will be using a combination of PokeFinder and PokeViewer.NET, if you have made it this far both of these applications should already be installed on your computer.</p>
 
-<div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #96324c;" id="setup-troubleshooting-bdsp">
-        <span class="fw-bold text-light">Setup Instructions</span>
-    </div>
-    <div class="card-body card-bg">
-        <h5><span class="fw-bold">You will need:</span></h5>
-        <ul>
-            <li><a href="https://github.com/zyro670/PokeViewer.NET">PokeViewer.NET</a></li>
-            <li>To be in battle with a missed target OR have a missed target gift in Box 1.</li>
-        </ul>
+<p>Depending on which encounter or redemption type you are troubleshooting the process may differ slightly, for this reason the information for each encounter/redemption type has been branched off into it's own section. Select the appropriate encounter/redemption type in the dropdown menu below to get started.</p>
+
+<div class="mb-3 w-100">
+    <div class="row row-cols-1">
+        <div class="col">
+            <label for="troubleshooting-select"><span class="fw-bold">Select your encounter or redemption type:</span></label>
+            <select id="troubleshooting-select" class="form-select">
+                <option value="" selected>Nothing selected...</option>
+                <option value="static-encounter">Static Encounter Troubleshooting!</option>
+                <option value="static-gift">Static Gift Troubleshooting!</option>
+                <option value="wild-encounter">Wild Encounter Troubleshooting!</option>
+                <option value="fishing-encounter">Fishing Encounter Troubleshooting!</option>
+                <option value="egg-redemption">Egg Redemption Troubleshooting!</option>
+                <option value="grand-underground">Grand Underground Troubleshooting!</option>
+                <option value="pokeradar-encounter">PokeRadar Encounter Troubleshooting!</option>
+            </select>
+        </div>
     </div>
 </div>
-<br>
 
-<span class="fw-bold">Figure 1 -</span> Target Missed<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/troubleshooting/figure-1-target-missed.jpg" alt="troubleshooting-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/troubleshooting/figure-1-target-missed.jpg"><p></p>
+<div>
+    <div class="info info-static-encounter d-none">
+        {% include_relative static-encounter.html %}
+    </div>
+    <div class="info info-static-gift d-none">
+        {% include_relative static-gift.html %}
+    </div>
+    <div class="info info-wild-encounter d-none">
+        {% include_relative wild-encounter.html %}
+    </div>
+    <div class="info info-fishing-encounter d-none">
+        {% include_relative fishing-encounter.html %}
+    </div>
+    <div class="info info-egg-redemption d-none">
+        {% include_relative egg-redemption.html %}
+    </div>
+    <div class="info info-grand-underground d-none">
+        {% include_relative grand-underground.html %}
+    </div>
+    <div class="info info-pokeradar-encounter d-none">
+        {% include_relative pokeradar-encounter.html %}
+    </div>
+</div>
 
-<p>According to PokeFinder, we were expecting a shiny Pokemon, but the Regigigas we are in battle with is not shiny. You will now need to use PokeViewer to inspect the details of the Pokemon you are in battle with.</p>
+<script>
+    $("#troubleshooting-select").change(() => { // $ tells the script to use jQuerey, # tells jQuery that this element is an ID, .change(() => {...}) registers a function to the change event. An alternative to this in plain javascript would be document.getElementByID("content-select").addEventListener("change", () => {...});
+        let optionValue = $("#troubleshooting-select").val(); // .val() asks jQuery to get the value of the selected option. This step looks up an element by its id, then gets the selected option, and stores it in the variable optionValue
 
-<p>If your target is from an encounter, you will need to use the <code span class="fw-bold">EncounterView</code> feature, if your target is a gift you will instead need to use the <code span class="fw-bold">BoxView</code> feature.</p>
+        $(".info").addClass("d-none"); // . is a class identifier, so this step tells jQuery to get every element with the info class and add the class d-none to all of them. Vanilla js equivalent is to call document.getElementsByClassName("info") and then edit the classList.
+        $(".info-" + optionValue).removeClass("d-none"); // combine "info-" with the optionValue from above and use it as a class identifier to get the element that we want to un-hide, then remove the d-none class from it. vanilla js should probably use document.querySelector() for this.
+    });
+</script>
 
-<span class="fw-bold">Figure 2 -</span> PokeViewer Details<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/troubleshooting/figure-2-pokeviewer-details.png" alt="troubleshooting-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/troubleshooting/figure-2-pokeviewer-details.png"><p></p>
-
-<p>We can now see the details of the Pokemon on-screen. We will use this information to find the Pokemon we actually hit using PokeFinder, then compare the difference in advances between the Pokemon we actually hit, and our target frame.</p>
-
-
-<span class="fw-bold">Figure 3 -</span> PokeFinder Search<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/troubleshooting/figure-3-pokefinder-search.gif" alt="troubleshooting-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/troubleshooting/figure-3-pokefinder-search.gif"><p></p>
-
-<p>Enter the exact IVs of the missed target into PokeFinder, set the shiny filter to non-shiny if you are searching for a shiny and found a non-shiny, then search again without changing the seed.</p>
-
-<span class="fw-bold">Figure 4 -</span> Actual Frame Hit<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/troubleshooting/figure-4-actual-frame-hit.png" alt="troubleshooting-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/troubleshooting/figure-4-actual-frame-hit.png"><p></p>
-
-<p>We can see that we hit the frame 152, when our target frame was frame 150, which means we missed the target by overshooting by 2 frames. This means that we should adjust the delay by +2 to account for the overshoot.</p>
-
-<ul>
-    <li><span class="fw-bold">Overshooting target -</span> Increase delay</li>
-    <li><span class="fw-bold">Undershooting target -</span> Decrease delay</li>
-</ul>
-
-<span class="fw-bold">Figure 5 -</span> Adjusted Delay<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/troubleshooting/figure-5-adjusted-delay.png" alt="troubleshooting-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/troubleshooting/figure-5-adjusted-delay.png"><p></p>
-
-<p>After adjusting the delay value accordingly, we were able to hit the correct frame and achieve a shiny Regigigas.</p>
-
-<span class="fw-bold">Note -</span> Depending on how quick the natural RNG advancments are in the area you are in, you may need to do multiple delay calibrations to find a delay value suitable for your target.
+<!-- Syntax highlighting -->
+<script>
+    hljs.highlightAll();
+</script>

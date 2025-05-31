@@ -33,6 +33,8 @@
             <li>Click <code class="fw-bold">Stop All</code> once DexFlip has finished to completely stop any active bots.</li>
         </ol>
 
+        <p>If the bot does not begin flicking through Pokedex entries after clicking <code class="fw-bold">Start All</code> to initiate the DexFlip routine, stop the bot and confirm that all controllers have been fully disconnected and click <code class="fw-bold">Start All</code> again. This routine relies on taking control of button inputs and will not work if any other controllers are connected to the device. Controllers can be resynced after the routine has completed.</p>
+
     </div>
 </div>
 <br>
@@ -61,7 +63,7 @@
                 <li>If the RNG state is advancing quickly, interact with the NPC and reach the screen of the final button input.</li>
                 <li>See the above table if you are unsure which screen you should be on, final button input screen images can be found by clicking the hyperlinks.</li>
             </ul>
-            <li>Monitor the RNG state until you reach your target frame, this frame should match the PokeFinder search result.</li>
+            <li>Monitor the RNG state until you reach your target frame, this should match the exact frame shown on PokeFinder's search result table.</li>
             <ul>
                 <li>A technique called "Home button mashing" is used to help ensure that we land directly onto our target frame. Quickly pressing the Home button twice will resume, then pause the game. We can use this technique to inch closer to our target frame and land directly onto it in most cases.</li>
                 <li>In the unlikely event that we cannot land directly onto our target frame this will need to be treated as a failure and you will need to restart the process again by finding a new seed and target frame.</li>
@@ -86,8 +88,8 @@
 
 <p>We can see that the internal details of the Pok&eacute;mon match the PokeFinder search results, mission accomplished!</p>
 
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/static/troubleshooting/">
-    Missed your target frame? Go to <span class="fw-bold">gift troubleshooting!</span>
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/troubleshooting/" target="_blank" rel="noopener noreferrer">
+    Missed your target frame? Visit <span class="fw-bold">gift troubleshooting!</span>
     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
     </svg>

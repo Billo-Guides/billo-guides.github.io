@@ -1,0 +1,86 @@
+<hr />
+<div class="title" style="background-color: #96324c;">
+    <h1 class="text-light text-center pt-3 pb-3">Static Gift Troubleshooting</h1>
+</div>
+<hr />
+
+<p><span class="fw-bold">Figure 1 -</span> Target Missed</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/troubleshooting/troubleshooting-static-gift-1.gif" alt="troubleshooting-static-gift-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/troubleshooting/troubleshooting-static-gift-1.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #96324c;" id="target-missed-static-gift">
+        <span class="fw-bold text-light">Target Missed</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>According to the PokeFinder search results we were expecting to produce a 6IV Mew. However, the Mew in our boxes is not shiny. This indicates that we did not hit our intended target frame. Common causes for missing a target frame include the following:</p>
+
+        <ol>
+            <li span class="fw-bold">Delay configured incorrectly in PokeFinder.</li>
+            <ul>
+                <li>Confirm that your delay has been entered correctly by referring to the delay table found on the Static page. Expected delay will be 0 in most cases, with the exception of Starter (64) and Mystery Gift (1).</li>
+            </ul>
+            <li span class="fw-bold">Delay is variable due to Player/Pok&eacute;mon blinks or overworld environment.</li>
+            <ul>
+                <li>Players/Pok&eacute;mon blink at random which causes the RNG state to advance. This is beyond our control and is simply a result of being unlucky.</li>
+            </ul>
+            <li span class="fw-bold">Gift was redeemed too late or early.</li>
+            <ul>
+                <li>Pressing the <code class="fw-bold">A</code> button too late or too early will result in missing your target frame, the goal is to redeem the gift on the exact frame(s) given by the PokeFinder search results table.</li>
+            </ul>
+        </ol>
+
+        <p>We will now need to open PokeViewer.NET and read the encounter to inspect the internal details of the Pok&eacute;mon we are in battle with. This information will help us to confirm the exact frame we hit.</p>
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 2 -</span> PokeViewer.NET Inspection</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/troubleshooting/troubleshooting-static-gift-2.gif" alt="troubleshooting-static-gift-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/troubleshooting/troubleshooting-static-gift-2.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #96324c;" id="pokeviewer-static-gift">
+        <span class="fw-bold text-light">PokeViewer.NET Inspection</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>After connecting to PokeViewer.NET and heading over to the <code class="fw-bold">Box</code> tab we can inspect the redeemed Pok&eacute;mon by placing it into a box slot and hovering over it with our mouse. We will use this information to find the Pok&eacute;mon we actually hit using PokeFinder, then compare the difference in advances between the Pok&eacute;mon we actually hit and our target frame.</p>
+
+        <p>Enter the IVs of the Pok&eacute;mon into the PokeFinder search filters and remove any other search filters such as setting the shiny filter to <code class="fw-bold">Any</code>, <span class="fw-bold">DO NOT CHANGE THE SEEDS OR CONFIGURED DELAY</span>.</p>
+
+        <p>Once you have reconfigured the search filters properly click the <code class="fw-bold">Generate</code> button again. You should now see the redeemed Pok&eacute;mon inside the search result table. If you see multiple results, compare the EC value on PokeFinder and PokeViewer to find the exact frame.</p>
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 3 -</span> PokeFinder Search</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/troubleshooting/troubleshooting-static-gift-3.png" alt="troubleshooting-static-gift-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/troubleshooting/troubleshooting-static-gift-3.png">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #96324c;" id="pokefinder-static-gift">
+        <span class="fw-bold text-light">PokeFinder Search</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Our expected shiny Mew was on advance 5,101 but the Mew in our boxes generated on advance 5,100. This means that we have undershot our target by 1 advance. Since the delay for this gift is 0 this implies that we pressed the <code class="fw-bold">A</code> button too early which generated the Mew on the wrong frame.</p>
+
+        <p>To account for this we need to pay closer attention to the exact moment that we are generating our desired gift. We can see in Figure 1 that we generated the gift on advance 5,100, which is after our expected target frame of 5,101. This caused us to generate the wrong Pok&eacute;mon.</p>
+
+        <p>In the event that your gift does require you to consider a delay and you miss your target frame, consider adjusting the delay in PokeFinder and trying again.</p>
+        <ul>
+            <li><span class="fw-bold">Overshooting target =</span> Increase delay in PokeFinder.</li>
+            <li><span class="fw-bold">Undershooting target =</span> Decrease delay in PokeFinder.</li>
+        </ul>
+
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 4 -</span> Second Attempt</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/gift/target-frame-hit-static-gift.gif" alt="troubleshooting-static-gift-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/gift/target-frame-hit-static-gift.gif">
+
+<p>After retrying we were able to generate our target Mew on the correct frame!</p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/static/">
+    Send me back to <span class="fw-bold">STATIC ENCOUNTERS / GIFTS!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
