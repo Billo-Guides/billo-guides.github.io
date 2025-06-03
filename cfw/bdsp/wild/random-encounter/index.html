@@ -77,7 +77,7 @@ permalink: /cfw/bdsp/wild/
         <span class="fw-bold text-light">PokeFinder Setup</span>
     </div>
     <div class="card-body card-bg">
-        <p>Click the <code class="fw-bold">Gen 8 -> wild</code> button after launching PokeFinder to open the main window for wild Pok&eacute;mon. Here is where we will fill in all the details about the Pok&eacute;mon being hunted.</p>
+        <p>Click the <code class="fw-bold">Gen 8 -> wild</code> button after launching PokeFinder to open the main window for wild manipulation. Here is where we will fill in all the details about the Pok&eacute;mon being hunted.</p>
 
         <h6 class="fw-bold">RNG Setup</h6>
         <ul>
@@ -229,7 +229,7 @@ permalink: /cfw/bdsp/wild/
                 <li>Copy the top half of the seed into the <code class="fw-bold">Seed 0</code> field of PokeFinder.</li>
                 <li>Copy the bottom half of the seed into the <code class="fw-bold">Seed 1</code> field of PokeFinder.</li>
             </ul>
-            <li>Click the <code class="fw-bold">Search</code> button to search for targets that match your parameters.</li>
+            <li>Click the <code class="fw-bold">Generate</code> button to search for targets that match your parameters.</li>
         </ol>
     </div>
 
@@ -280,7 +280,7 @@ permalink: /cfw/bdsp/wild/
         <span class="fw-bold text-light">Target Found</span>
     </div>
     <div class="card-body card-bg">
-        <p>In Figure 3 we can see a shiny Unown-? will be produced in x advances and our calibrated delay (1) is being considered by PokeFinder. Now the goal is to press the <code class="fw-bold">A</code> button to generate the Pok&eacute;mon on advance x. If you are seeking a non shiny target you may notice multiple frames in a row that produce the same end result, this is known as a "frame cluster". It is recommended to target clusters for non-shiny targets as this grants more opportunities to hit the correct frame.</p>
+        <p>In Figure 3 we can see a shiny Unown-? will be produced in 21,359 advances and our calibrated delay (1) is being considered by PokeFinder. Now the goal is to press the <code class="fw-bold">A</code> button to generate the Pok&eacute;mon on advance 21,359. If you are seeking a non shiny target you may notice multiple frames in a row that produce the same end result, this is known as a "frame cluster". It is recommended to target clusters for non-shiny targets as this grants more opportunities to hit the correct frame.</p>
 
         <p>To advance the RNG state we will be using the Moarencounterbots <code class="fw-bold">EncBotDexFlipBS</code> routine to automate this process. <code class="fw-bold">EncBotDexFlipBS</code> flips back and fourth between Pok&eacute;dex entries to advance the current seed until a given point. This quickest known method to advance the RNG state in this game.</p>
 
@@ -319,7 +319,7 @@ permalink: /cfw/bdsp/wild/
         <span class="fw-bold text-light">Hitting Your Target</span>
     </div>
     <div class="card-body card-bg">
-        <p>At this point you should be around 10,000 advances away from your target. To confirm exactly how far away you are from your target you will need to remove all currently active bots, then add and start <code class="fw-bold">EncBotCopySeedBS</code>.</p>
+        <p>At this point you should be around 10,000 advances or less away from your target. To confirm exactly how far away you are from your target you will need to remove all currently active bots, then add and start <code class="fw-bold">EncBotCopySeedBS</code>.</p>
 
         <h6><span class="fw-bold">Step-by-step</span></h6>
         <ol>
@@ -334,8 +334,9 @@ permalink: /cfw/bdsp/wild/
             </ul>
             <li>Resume the game and observe how quickly the RNG state is advancing. Your next action will depend on the speed of the natural RNG advances.</li>
             <ul>
-                <li>If the RNG state is advancing slowly, manually scroll your Pok&eacute;dex slowly until you 1000 advances (or less) away from your target, then interact with your desired Pok&eacute;mon and reach the screen of the final button input.</li>
-                <li>If the RNG state is advancing quickly, interact with your desired Pok&eacute;mon and reach the screen of the final button input (<a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/item-select.jpg">item selection screen</a>).</li>
+                <li>If the RNG state is advancing slowly, manually scroll your Pok&eacute;dex slowly until you 1000 advances (or less) away from your target, then open your bag.</li>
+                <li>If the RNG state is advancing quickly, manually scroll your Pok&eacute;dex slowly until you 2000-3000 advances away from your target, then open your bag.</li>
+                <li>In any case, at this point you should have your bag open on the <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/item-select.jpg">item selection screen</a>.</li>
             </ul>
             <li>Monitor the RNG state until you reach your target frame, this should match the exact frame shown on PokeFinder's search result table.</li>
             <ul>
