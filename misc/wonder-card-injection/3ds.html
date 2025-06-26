@@ -1,0 +1,74 @@
+<hr />
+<div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">3DS Setup Instructions</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    Required tools &amp; setup instructions for 3DS games (XY/ORAS/SM/USUM).
+</small>
+<hr />
+
+<div class="card border-dark mb-3">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="tool-requirements-3ds">
+        <span class="fw-bold text-light">Tool Requirements &amp; Installation</span>
+    </div>
+    <div class="card-body card-bg">
+        <h6 span class="fw-bold">Necessary Tools</h6>
+        <ul>
+            <li><a href="https://projectpokemon.org/home/files/file/1-pkhex/" target="_blank" rel="noopener">PKHeX</a></li>
+            <li><a href="https://www.nirsoft.net/utils/runasdate-x64.zip" target="_blank" rel="noopener">RunAsDate</a></li>
+            <li><a href="https://github.com/projectpokemon/EventsGallery/tree/master/Released" target="_blank" rel="noopener">ProjectPokemon Event Gallary Wonder Cards</a></li>
+            <li><a href="https://projectpokemon.org/home/tutorials/save-editing/managing-3ds-saves/" target="_blank" rel="noopener">A method of extracting your save file</a> (make multiple backups!)</li>
+        </ul>
+
+        <h6 span class="fw-bold">Setup &amp; Installation</h6>
+        <ol>
+            <li>Download <code class="fw-bold">PKHeX</code> and extract it to a known location on your computer, launch <code class="fw-bold">PKHeX.exe</code> and confirm that it opens properly with no issues.</li>
+            <li>Download <code class="fw-bold">RunAsDate</code> and extract it to a known location on your computer, launch <code class="fw-bold">RunAsDate.exe</code> and confirm that it opens properly with no issues.</li>
+            <li>Close PKHeX, you will now need to launch RunAsDate and select PKHeX as your program to launch.</li>
+            <ul>
+                <li>Enter a time and date that matches your desired event distribution, this is an important step for legality purposes.</li>
+                <li>You can find information about the distribution period of an event on the <a href="https://projectpokemon.org/" target="_blank" rel="noopener">ProjectPokemon Website</a> (use the search bar).</li>
+            </ul>
+            <li>Extract your 3DS save file and place it inside a known location on your computer, then open the save file using PKHeX (<code class="fw-bold">File -> Open -> Select the .sav file</code>).</li>
+            <li>Open the Event Gallary repository and open the folder that corrisponds to your game generation.</li>
+            <ul>
+                <li>If you are injecting Wonder Cards into a Generation 6 game (XY/ORAS), open the <code class="fw-bold">Released/Gen 6/Wondercards</code> directory.</li>
+                <li>If you are injecting Wonder Cards into a Generation 7 game (SM/USUM), open the <code class="fw-bold">Released/Gen 7/3DS/Wondercards</code> directory.</li>
+            </ul>
+            <li>Select and download your desired Wonder Card. Check if your Wonder Card is Local Wireless/Infrared or serial Code/Nintendo Zone by researching the event on the <a href="https://projectpokemon.org/" target="_blank" rel="noopener">ProjectPokemon Website</a>.</li>
+            <ul>
+                <li>If your Wonder Card was distributed locally or via infared, this generally means it can be injected into any save file regardless of region.</li>
+                <li>If your Wonder Card was distributed via serial code or Nintendo Zone, this generally means that the event was region locked.</li>
+                <li>For region locked events, make sure that you are injecting the Wonder Card into a save file with a matching region, for legality purposes.</li>
+            </ul>
+        </ol>
+
+    </div>
+</div>
+
+<p><span class="fw-bold">Figure 1 -</span> Wonder Card Injection</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/wonder-card-injection/3ds/wonder-card-injection.gif" alt="3ds-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/wonder-card-injection/3ds/wonder-card-injection.gif">
+
+<div class="card border-dark mb-3">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="injecting-a-wondercard-3ds">
+        <span class="fw-bold text-light">Wonder Card Injection</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>At this stage it is assumed that you have launched PKHeX using RunAsDate on a date that matches the official distribution period and that your save file is opened and ready to be edited. It is also assumed that you have done your due diligence to ensure that the Wonder Card you plan to inject will be legal on the save file you are injecting into.</p>
+
+        <h6 class="fw-bold">Step-by-step instructions</h6>
+        <ol>
+            <li>Open the save file in PKHeX if you have not already done so, then navigate to the <code class="fw-bold">SAV</code> tab above the box viewer.</li>
+            <li>Click on an unused Wonder Card slot then import the Wonder Card you wish to inject by selecting it in the file explorer.</li>
+            <li>Right-click an empty WonderCard slot in the PGT row then click <code class="fw-bold">SAV</code> to apply the Wonder Card to your save file, you can now close the subwindow.</li>
+            <li>Export your save file (<code class="fw-bold">File -> Export Sav</code>) and overwrite your existing save file, then load it back onto your cartridge/emulator.</li>
+            <li>Visit the delivery man in-game, he can be found standing next to the desk/PC inside any Pok&eacute;Center.</li>
+        </ol>
+
+    </div>
+</div>
+
+<p><span class="fw-bold">Figure 2 -</span> In-game Redemption</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/wonder-card-injection/3ds/in-game-gift-redemption.gif" alt="3ds-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/wonder-card-injection/3ds/in-game-gift-redemption.gif">
+
+<p>You can optionally save before collecting your gift if you wish to soft reset or RNG manipulate it for desirable values (IVs, Nature, etc).</p>

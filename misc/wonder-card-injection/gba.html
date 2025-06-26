@@ -1,0 +1,126 @@
+<hr />
+<div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">GBA Setup Instructions</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    Required tools &amp; setup instructions for GBA games (RSE/FRLG).
+</small>
+<hr />
+
+<div class="card border-dark mb-3">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="tool-requirements-gba">
+        <span class="fw-bold text-light">Tool Requirements &amp; Installation</span>
+    </div>
+    <div class="card-body card-bg">
+        <h6 span class="fw-bold">Necessary Tools</h6>
+        <ul>
+            <li><a href="https://projectpokemon.org/home/files/file/1-pkhex/" target="_blank" rel="noopener">PKHeX</a> &amp; <a href="https://projectpokemon.org/home/files/file/4161-pkhex-plugin-wc3-plugin/" target="_blank" rel="noopener">WC3 Plugin</a></li>
+            <li><a href="https://github.com/projectpokemon/Gen3-WCTool/releases" target="_blank" rel="noopener">Gen 3 WCTool</a></li>
+            <li><a href="https://projectpokemon.org/home/forums/topic/41730-managing-gba-saves-using-gba-backup-tool/" target="_blank" rel="noopener">A method of extracting your save file</a> (make multiple backups!)</li>
+        </ul>
+
+        <p><span class="fw-bold">Note -</span> You will need to download the Gen 3 WCTool regardless of the method you plan to use to inject the distribution as this contains all of the necessary Wonder Cards.</p>
+
+        <details>
+            <summary class="fw-bold mb-2">PKHeX &amp; WC3 Plugin Installation</summary>
+            <ol>
+                <li>Download <code class="fw-bold">PKHeX</code> and extract it to a known location on your computer, then create a folder named <code class="fw-bold">plugins</code> in the same folder as <code class="fw-bold">PKHeX.exe</code>.</li>
+                <li>Download the <code class="fw-bold">WC3 Plugin</code> and extract it into the <code class="fw-bold">plugins</code> folder.</li>
+                <ul>
+                    <li>On Windows 10/11 you may need to unblock the WC3 plugin, you can do this by right-clicking it and clicking <code class="fw-bold">Properties</code>.</li>
+                    <li>After opening the properties sub-window, look for an <code class="fw-bold">Unblock</code> checkbox at the bottom and select it, then click <code class="fw-bold">Apply</code>.</li>
+                </ul>
+                <li>Launch <code class="fw-bold">PKHeX.exe</code> and confirm that it opens with no issues, if you are prompted to install a .NET Runtime version do this first.</li>
+                <li>Extract your GBA save file and place it inside a known location on your computer, then open the save file using PKHeX (<code class="fw-bold">File -> Open -> Select the .sav file</code>).</li>
+                <li>If everything was done correctly you should see the WC3 Plugin inside the <code class="fw-bold">Tools</code> section of PKHeX (<a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/wonder-card-injection/save-file-loaded-pkhex.gif">visual demonstration</a>).</li>
+            </ol>
+        </details>
+
+        <details>
+            <summary class="fw-bold mb-2">Gen 3 WCTool Installation</summary>
+            <ol>
+                <li>Download the <code class="fw-bold">Gen 3 WCTool</code> and extract it to a known location on your computer, launch the program and make sure it opens properly with no issues.</li>
+                <li>Extract your GBA save file and place it inside a known location on your computer, then open the save file in the WC3 Tool (<code class="fw-bold">Load Save File -> Select the .sav file</code>).</li>
+                <li>If the program displays an error about the save file language, select the <code class="fw-bold">Override Region</code> button and manually select a language.</li>
+                <li>Click the <code class="fw-bold">Official Event Distributor</code> button on the main window to open a subwindow, open your save file inside the subwindow and override the region again.</li>
+                <li>You should now see the event distributions that corrispond to your save file language are now properly selectable in the subwindow (<a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/wonder-card-injection/save-file-loaded-wc3tool.gif">visual demonstration</a>).</li>
+            </ol>
+        </details>
+
+    </div>
+</div>
+
+<p><span class="fw-bold">Figure 1 -</span> Enabling Mystery Gift</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/wonder-card-injection/gba/enabling-mystery-gift.gif" alt="gba-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/wonder-card-injection/gba/enabling-mystery-gift.gif">
+
+<div class="card border-dark mb-3">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="mystery-gift-enable-gba">
+        <span class="fw-bold text-light">Enabling Mystery Gift</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>In this example we will be injecting the Old Sea Map (Mew) using PKHeX, this event was only distributed on Japanese copies of Pok&eacute;mon Emerald, so we will be using a Japanese Emerald save file to keep things legal. It is advisable to do your own research to ensure that you are injecting your desired event into a save file of the correct language.</p>
+
+        <p>Since we are using a completely fresh save file with low story progress we will need to grant access to the Mystery Gift feature before doing anything else. You do not need to follow this section if you have already gained access to Mystery Gifts on your save file using the <a href="https://projectpokemon.org/home/forums/topic/35903-gen-3-mystery-eventgift-research/" target="_blank" rel="noopener">Pok&eacute;Mart questionnaire</a>.</p>
+        <hr />
+
+        <h6 class="fw-bold">Mystery Gift Unlock (Using PKHeX)</h6>
+        <ol>
+            <li>Open the save file in PKHeX if you have not already done so.</li>
+            <li>Click the <code class="fw-bold">SAV</code> tab, then select <code class="fw-bold">Event Flags</code>.</li>
+            <li>Scroll down the list until you find the <code class="fw-bold">Mystery Gift Enabled</code> checkbox and select it.</li>
+            <li>Click the <code class="fw-bold">Save</code> button to apply the changes.</li>
+        </ol>
+
+        <h6 class="fw-bold">Mystery Gift Unlock (Using Gen 3 WCTool)</h6>
+        <ol>
+            <li>Open the save file in Gen 3 WCTool if you have not already done so.</li>
+            <li>Click the <code class="fw-bold">Extra</code> button, then select <code class="fw-bold">Enable Mystery Gift/Event</code>.</li>
+            <li>Export the save file and overwrite your current existing save file.</li>
+        </ol>
+
+    </div>
+</div>
+
+<p><span class="fw-bold">Figure 2 -</span> Wonder Card Injection</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/wonder-card-injection/gba/wonder-card-injection.gif" alt="gba-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/wonder-card-injection/gba/wonder-card-injection.gif">
+
+<div class="card border-dark mb-3">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="injecting-a-wondercard-gba">
+        <span class="fw-bold text-light">Wonder Card Injection</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>The Gen 3 WCTool provides all the Wonder Cards you will need for this process, they can be found inside the <code class="fw-bold">\Events\Event Collection (OFFICIAL)</code> directory. This guide will only focus on injecting the boat ticket events, feel free to experiment with anything else in your own time.</p>
+
+        <p>Each <code class="fw-bold">.wc3</code> file is appropriately named so that you can understand which game and save language they belong to, for example, if we open the <code class="fw-bold">Old Sea Map</code> directory we can see a file named <code class="fw-bold">OLD SEA MAP - E - JAP</code>. The <code class="fw-bold">E</code> represents Emerald, and <code class="fw-bold">JAP</code> represents Japanese. This means that this Wonder Card is intended for Japanese copies of Emerald.</p>
+        <hr />
+
+        <h6 class="fw-bold">Wonder Card Injection (Using PKHeX)</h6>
+        <ol>
+            <li>Open the save file in PKHeX if you have not already done so, then click the <code class="fw-bold">Tools</code> tab, then select <code class="fw-bold">WC3 Plugin -> Mystery Gift (WC3)</code>.</li>
+            <li>Find the Wonder Card you wish to inject from the <code class="fw-bold">\Events\Event Collection (OFFICIAL)</code> directory of your Gen 3 WCTool download.</li>
+            <li>You should see a <code class="fw-bold">Success</code> pop-up. Click the <code class="fw-bold">OK</code> button to apply the changes and close the subwindow.</li>
+            <li>Export your save file (<code class="fw-bold">File -> Export Sav</code>) and overwrite your existing save file, then load it back onto your cartridge/emulator.</li>
+        </ol>
+
+        <h6 class="fw-bold">Wonder Card Injection (Using Gen 3 WCTool)</h6>
+        <ol>
+            <li>Open the Gen 3 WCTool if you have not already done so, then click the <code class="fw-bold">Official Event Distributor</code> button on the bottom right of the main window.</li>
+            <li>Load your save file into the subwindow, then select the Mystery Gift you wish to inject, in this example we will be injecting the Old Sea Map.</li>
+            <li>Export the save file and overwrite your current existing save, then load it back onto your cartridge/emulator.</li>
+        </ol>
+    </div>
+</div>
+
+<p><span class="fw-bold">Figure 3 -</span> In-game Redemption</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/wonder-card-injection/gba/in-game-gift-redemption.gif" alt="gba-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/wonder-card-injection/gba/in-game-gift-redemption.gif">
+
+<div class="card border-dark mb-3">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="in-game-gift-redemption-gba">
+        <span class="fw-bold text-light">In-game Redemption</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>After injecting your gift, load your save file back onto your cartridge/emulator and head upstairs in any Pok&eacute;Center to redeem your gift. If you were already saved on the upper floor you may need to exit and re-enter for the delivery man to be visible. If done correctly the delivery man should be standing next to the usual NPC on the top left.</p>
+
+        <p>Once you have recieved the gift you can head over to the docks in Slateport or Lilycove and the sailor will grant access to the map that corrisponds to your event ticket.</p>
+    </div>
+</div>
