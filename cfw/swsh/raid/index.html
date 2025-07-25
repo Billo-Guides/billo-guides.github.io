@@ -13,9 +13,11 @@ permalink: /cfw/swsh/raid
 <hr />
 
 <h5 span class="fw-bold">Introduction</h5>
-<p>Sword/Shield Max Raid RNG manipulation is used to control the internal details of Pok&eacute;mon found in raid battles. It is possible to predict values such as IVs, Nature, Shiny Status, Size (Jumbo/Teensy Mark in SV), Gender and more. Note that it is only possible to manipulate encounters found inside Max Raid dens, it is NOT POSSIBLE to manipulate the details of Pok&eacute;mon found in Dynamax Adventures.</p>
+<p>Sword/Shield Max Raid RNG manipulation is used to select for specific characteristics of Pok&eacute;mon found in raid battles. It is possible to predict values such as IVs, Nature, Shiny status, Size (Jumbo/Teensy Mark in SV), and Gender. The Pok&eacute;mon species and raid star count cannot be manipulated, but we can randomly reroll them until the desired target is achieved.</p>
 
-<p>Each raid is given a randomly assigned "den seed", this seed is used to determine which Pok&eacute;mon will be inside a den. Every day that passes will increment the den seed by 1 in a predictable manner, making Raid RNG abuse entirely possible using a process known as "date skipping". Simply skip the required amount to reach your desired seed.</p>
+<p>Note that it is only possible to manipulate encounters found inside Max Raid dens; it is NOT POSSIBLE to manipulate the details of Pok&eacute;mon found in Dynamax Adventures.</p>
+
+<p>Each raid has a randomly-assigned "raid seed" that determines the traits of the Pok&eacute;mon inside a den. Every day that passes advances the den seed by 1 in a predictable manner, making RNG abuse entirely possible via "date skipping". We can simply skip the required number of days to reach a desired seed.</p>
 
 <div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
     <span class="fw-bold">Important -</span> From here it is assumed that you are using a Custom Firmware (CFW) Switch console running Atmosph&egrave;re. You must also have progressed the game story far enough to have access to Max Raid battles.
@@ -34,7 +36,7 @@ permalink: /cfw/swsh/raid
     </div>
     <div class="card-body card-bg">
 
-        <h6><span class="fw-bold">Switch Software:</span></h6>
+        <h6><span class="fw-bold">Switch Software</span></h6>
         <ol>
             <li><a href="https://github.com/3096/luxray/releases/download/0.1.0/luxray-r0.1.0-0.zip" target="_blank" rel="noopener noreferrer">Luxray by 3096</a></li>
             <li><a href="https://github.com/olliz0r/sys-botbase/releases" target="_blank">sys-botbase by olliz0r</a></li>
@@ -49,20 +51,19 @@ permalink: /cfw/swsh/raid
             <li>Reboot the console into your chosen CFW environment (SysCFW recommended).</li>
         </ol>
 
-        <h6><span class="fw-bold">PC Software:</span></h6>
+        <h6><span class="fw-bold">PC Software</span></h6>
         <ul>
             <li><a href="https://github.com/Admiral-Fish/PokeFinder/releases" target="_blank" rel="noopener noreferrer">PokeFinder by Admiral-Fish</a></li>
             <li><a href="https://projectpokemon.org/home/files/file/1-pkhex/" target="_blank">PKHeX by Kaphotics</a></li>
-            <li><a href="https://github.com/santacrab2/PKHeX-Plugins/releases" target="_blank">PKHeX Plugins fork by SantaCrab2</a></li>
+            <li><a href="https://github.com/santacrab2/PKHeX-Plugins/releases" target="_blank">PKHeX-Plugins fork by santacrab2</a></li>
         </ul>
 
         <h6><span class="fw-bold">Installation Instructions (PC Software)</span></h6>
         <ol>
-            <li>Download and extract <code class="fw-bold">PokeFinder-win</code> into a fresh, empty folder inside a known location on your computer.</li>
+            <li>Download and extract <code class="fw-bold">PokeFinder</code> for your operating system into a fresh, empty folder on your computer. You should download the zip file ending in <code class="fw-bold">-win</code> for Windows, <code class="fw-bold">-macOS</code> for Mac, and <code class="fw-bold">-linux</code> for Linux.</li>
             <li>Refer to the <a href="https://github.com/santacrab2/PKHeX-Plugins/wiki/Installing-PKHeX-Plugins" target="_blank" rel="noopener noreferrer">PKHeX Plugins Wiki</a> for installing PKHeX with the required plugins. Do not leave the setup page until you have LiveHeX working properly.</li>
-            <li>When launching PKHeX/PokeFinder you may get asked to install the relevant dependencies if you do not already have them installed. Download the installer when prompted and go through the setup instructions until complete.</li>
+            <li>When launching PKHeX/PokeFinder you may be asked to install the relevant dependencies if you do not already have them installed. Download the installer when prompted and go through the setup instructions until complete. These programs should be functional before you move on to the next step.</li>
         </ol>
-
     </div>
 </div>
 <br>
@@ -88,34 +89,49 @@ permalink: /cfw/swsh/raid
         <span class="fw-bold text-light">PokeFinder Overview</span>
     </div>
     <div class="card-body card-bg">
-        <p>Upon luanching PokeFinder for the first time you will be presented with a small window with various different buttons. Navigate to the <code class="fw-bold">Gen 8</code> tab and select the <code class="fw-bold">Raid</code> button to open a larger window dedicated to RNG manipulating Max Raid Pok&eacute;mon. For the purposes of this guide this larger window will be referred to as the "main window", and here we can configure the program to search raids and calculate upcoming advances based on user-defined search criteria.</p>
+        <p>PokeFinder launches as a small window with a separate tab for each generation and multiple buttons on each tab. Select the <code class="fw-bold">Gen 8</code> tab and click the <code class="fw-bold">Raid</code> button to open a larger window titled <code class="fw-bold">Gen 8 Raids</code>. For the purposes of this guide, the <code class="fw-bold">Gen 8 Raids</code> window will be referred to as the "main window." Here, we can configure the program to search raids and calculate upcoming advances based on user-defined search criteria.</p>
 
         <h6><span class="fw-bold">Main Window Feature Overview</span></h6>
         <ul>
-            <li><span class="fw-bold">Left Side -</span> Enter search conditions, select a specific raid, and input seed and # of advances.</li>
-            <li><span class="fw-bold">Center -</span> Specify raid details, such as species, raid type (Normal/Rare), and difficulty (Star Count).</li>
-            <li><span class="fw-bold">Right Side -</span> Search filter details, filter for IVs, Nature, Shiny Status, Gender, and ability, filters can be combined.</li>
-            <li><span class="fw-bold">Top -</span> Profile management, enter your 5 digit IDs, game &amp; trainer information from your save file here.</li>
-            <li><span class="fw-bold">Bottom -</span> Search result output, any result that matches your filters will be displayed here.</li>
+            <li><span class="fw-bold">Left Side -</span> Specify search conditions to target specific raid dens, and input seed and # of advances to search.</li>
+            <li><span class="fw-bold">Center -</span> Specify raid details, such as species, raid type (Normal/Rare), and difficulty (star count).</li>
+            <li><span class="fw-bold">Right Side -</span> Add search filters for IVs, Nature, Shiny Status, Gender, and Ability; filters are combined.</li>
+            <li><span class="fw-bold">Top -</span> Manage your profiles; this lets you store each game's version, 5 digit TID/SID, and presence of charms.</li>
+            <li><span class="fw-bold">Bottom -</span> View all search results that match your filters.</li>
         </ul>
 
         <h6><span class="fw-bold">Profiles</span></h6>
-        <p>It is important to a setup a basic PokeFinder profile. This means you need to at least select the game version you are playing so that PokeFinder can display the correct species details of Raid Dens. It is only important to select your game version, everything else is optional. Select your profile in the dropdown menu at the top of the main window after creation.</p>
+        <p>It is important to a set up a basic PokeFinder profile. For Max Raids, only the game version is necessary. This allows PokeFinder to display the correct version-exclusive species details for your game's raid dens. Everything else is optional and will NOT affect raid predictions. Select your profile in the dropdown menu at the top of the main window after creation.</p>
 
         <details>
-            <summary><span class="fw-bold">Technical Details:</span></summary>
-            <p>Pok&eacute;mon found in Max Raid battles will be shiny for all participants. For the game to do this it compares the PID to a set of "fake trainer" IDs, then rerolls the PID based on your TID/SID combination after capture so that the Pok&eacute;mon maintains its shiny status after the battle. This means that entering the correct IDs into your PokeFinder profile is NOT required.</p>
+            <summary><span class="fw-bold">Technical Details</span></summary>
+            <p>Pok&eacute;mon found in Max Raid battles always have the same shiny status for all participants. For the game to do this, the raid seed generates a PID and a fake trainer's TID/SID. If the PID is shiny for the fake trainer, it will be shiny for everyone, and if it is nonshiny for the fake trainer, it will be nonshiny for everyone. After each participant captures the Pok&eacute;mon, its PID is modified for the player's TID/SID to ensure that the original shiny status is maintained. This is why entering your correct TID/SID into your PokeFinder profile is NOT required.</p>
 
-            <p>However, if you do correct IDs into your profile, the PID will be calculated based on your TID/SID combination. This is useful for trading communities that require proof that the Pok&eacute;mon was obtained through legitimate means as the PID will be correct inside the search table.</p>
+            <p>However, if you enter correct IDs into your profile, the PID will be calculated based on your TID/SID. This is useful for trading communities that require proof that the Pok&eacute;mon was obtained through legitimate means since the PID will be correct in the search table.</p>
 
             <h6><span class="fw-bold">Finding your 5 digit TID/SID</span></h6>
             <ol>
-                <li>Load your save file into PKHeX, then right click and view a self obtained Pok&eacute;mon.</li>
-                <li>Open the OT/Misc tab and hover over the TID field with your mouse.</li>
-                <li>Your 5 digit TID/SID will be displayed, these are the values PokeFinder expects.</li>
+                <li>Load your save file into PKHeX, then right-click and <code class="fw-bold">View</code> a self-obtained Pok&eacute;mon.</li>
+                <li>Select the OT/Misc tab and hover over the TID field with your mouse.</li>
+                <li>Your 5 digit TID/SID will be displayed in a tooltip. These are the values PokeFinder expects.</li>
             </ol>
-
         </details>
+    </div>
+</div>
+<br>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="pokefinder-den-map">
+        <span class="fw-bold text-light">Stock Dens vs. Event Dens</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Before you continue, you should understand the difference between stock raid dens and event dens.</p>
+
+        <p>Stock raid dens are location-specific, and their beams can either be red (Common/Normal) or purple (Rare). These raid dens are always available, even if you have not connected online. You can see what appears in each location using <a href="https://www.serebii.net/swordshield/maxraidbattledens.shtml" target="_blank" rel="noopener noreferrer">Serebii's Max Raid Battle Dens</a> page.</p>
+
+        <p>Event dens are obtained by connecting online to receive the Wild Area News. These dens appear anywhere on the map and contain unique tables of available Pok&eacute;mon for a limited time. These raid beams are always red. You can see what appeared in each event distribution using <a href="https://www.serebii.net/swordshield/maxraidbattles/eventden-finale.shtml" target="_blank" rel="noopener noreferrer">Serebii's Max Raid Event Dens</a> page.</p>
+
+        <p>In most cases, you should have the final event distribution active in-game. Information about injecting older Wild Area News can be found in <a href="https://projectpokemon.org/tutorials/save-editing/gen-8_157/block-editing-r106/" target="_blank" rel="noopener noreferrer">this ProjectPok&eacute;mon tutorial</a>. No further support for Wild Area News injection will be provided in this guide.</p>
     </div>
 </div>
 <br>
@@ -128,30 +144,34 @@ permalink: /cfw/swsh/raid
         <span class="fw-bold text-light">PokeFinder Den Map</span>
     </div>
     <div class="card-body card-bg">
-        <p>In the smaller window that appears when launching PokeFinder there is a navigation bar at the top that displays various tools used in different games. Under <code class="fw-bold">Gen 8 Tools</code> there is an option for <code class="fw-bold">Den Map</code>, clicking this will open a subwindow that can be used to find the Den ID of your chosen raid den more easily.</p>
-
-        <p>Use resources like <a href="https://www.serebii.net/swordshield/maxraidbattledens.shtml" target="_blank" rel="noopener noreferrer">Serebii</a> to find the rough in-game location of a Raid Den that contains your desired Pok&eacute;mon, then use the Den Map feature of PokeFinder to find the Den ID that corrisponds with your chosen Raid Den.</p>
+        <p>In this section, you will learn how to find the Den ID for your chosen raid den. The Den ID is used to identify which Pok&eacute;mon are available in a stock raid. Later on, we will use it to find the correct raid seed for your den, whether it is a stock den or event den.</p>
 
         <h6><span class="fw-bold">Finding Den ID</span></h6>
+        <p>On the initial, smaller window that first appears when launching PokeFinder, the navigation menu at the top lists tools used for different games. Under <code class="fw-bold">Gen 8 Tools</code>, there is an option for <code class="fw-bold">Den Map</code>. This tool opens in a subwindow and can be used to find your chosen raid den's ID more easily.</p>
+
+        <p>We can match the in-game location of a raid den to its location on PokeFinder's Den Map to find the corresponding Den ID.</p>
+
         <ol>
-            <li>Use Serebii to find a Raid Den that contains your desired Pok&eacute;mon. Take note of the Wild Area location and the map ID (e.g Dusty Bowl).</li>
-            <li>Open the <code class="fw-bold">Den Map</code> subwindow on PokeFinder, select the corrisponding Wild Area, then scroll to the correct map ID.</li>
-            <li>Click each individual option in the dropdown menu until the map on the right has a red dot in the rough location of your chosen Raid Den.</li>
-            <li>Take note of the Den ID, Location, and Map ID. Then head over to the main PokeFinder window to enter the relevant information.</li>
+            <li>If you are planning to RNG manipulate a stock den, use Serebii to find a raid den that contains your desired Pok&eacute;mon. Otherwise, find an event den, which can be confirmed by checking the Pok&eacute;mon inside versus what normally appears in that raid den.</li>
+            <li>Throw a Wishing Piece into the den and confirm the species matches the tables on Serebii. If the species does not match, you are not standing by the correct den in-game.</li>
+            <li>Take note of the map (Wild Area, IoA, or CT) and the area (e.g. Dusty Bowl) for your selected den.</li>
+            <li>Open the <code class="fw-bold">Den Map</code> subwindow on PokeFinder.</li>
+            <li>Select the correct map from the first dropdown menu (Wild Area, IoA, or CT).</li>
+            <li>Under the second dropdown menu, check each option that matches the area until the red dot appears in the same place as your chosen raid den.</li>
+            <li>The number that appears in front of the location in the second dropdown menu is the Den ID. Take note of this value.</li>
+            <ul>
+                <li>If you found your raid den at <code class="fw-bold">76: Dusty Bowl</code>, then the Den ID is <code class="fw-bold">76</code>, the area is <code class="fw-bold">Dusty Bowl</code>, and the map is <code class="fw-bold">Wild Area</code>.</li>
+            </ul>
+            <li>Go back to the main PokeFinder window to enter this information.</li>
             <ul>
                 <li>Confirm that the correct profile has been selected at the top.</li>
-                <li>Enter the correct Wild Area inside the <code class="fw-bold">Location</code> dropdown.</li>
-                <li>Enter the correct Den ID inside the <code class="fw-bold">Den</code> dropdown.</li>
-                <li>Enter the correct Den rarity (Normal/Rare) inside the <code class="fw-bold">Rarity</code> dropdown.</li>
+                <li>From the <code class="fw-bold">Location</code> dropdown, select the correct map if you are manipulating a stock den, or <code class="fw-bold">Event</code> if you are manipulating an event den.</li>
+                <li>From the <code class="fw-bold">Den</code> dropdown, select the Den ID you found earlier if you are manipulating a stock den, or the correct Wild Area News Event if you are manipulating an event den.</li>
+                <li>If this is a stock den, select the correct Den rarity (Normal/Rare) from the <code class="fw-bold">Rarity</code> dropdown. This does not matter for event dens.</li>
             </ul>
-            <li>Confirm that the species selection in PokeFinder matches Serebii. If everything was done correctly this will be your Den ID. We will need this information later.</li>
-            <li>Throw a Wishing Piece into the den and confirm the species align with the dropdown menu in PokeFinder. If the species does not match you are not standing by the correct den in-game.</li>
+            <li>Confirm that the species selection in PokeFinder matches Serebii.</li>
+            <li>Remember the Den ID you found for the next step.</li>
         </ol>
-
-        <h6><span class="fw-bold">Event Distribution Dens</span></h6>
-        <p>Event distributions from Wild Area News contained unique tables of available Pok&eacute;mon for a limited time. An event den can appear anywhere on the map, so you do not need to use the <code class="fw-bold">Den Map</code> feature. Simply select <code class="fw-bold">Event</code> in the <code class="fw-bold">Location</code> section of the main window instead, then select your distribution.</p>
-
-        <p>In most cases you should have the final event distribution active. If you have injected event data using a tool like PKHeX you will need to manually select the correct event distribution from the dropdown menu. Information about injecting Wild Area News can be found in <a href="https://projectpokemon.org/tutorials/save-editing/gen-8_157/block-editing-r106/" target="_blank" rel="noopener noreferrer">this ProjectPok&eacute;mon tutorial</a>. No further support for Wild Area News injection will be provided in this guide.</p>
     </div>
 </div>
 <br>
@@ -164,7 +184,7 @@ permalink: /cfw/swsh/raid
         <span class="fw-bold text-light">PKHeX/LiveHeX Overview</span>
     </div>
     <div class="card-body card-bg">
-        <p>LiveHeX is a feature of the Auto Legality Mod plugin that is used to read the details of Max Raid dens while we are playing the game, we can connect to LiveHeX using sys-botbase, a Switch program that was installed earlier.</p>
+        <p>LiveHeX is a feature of the Auto-Legality Mod plugin that is used to read the details of Max Raid dens while we are playing the game. We connect to LiveHeX using sys-botbase, a Switch program that was installed earlier.</p>
 
         <h6><span class="fw-bold">LiveHeX Connectivity</span></h6>
         <ol>
@@ -173,16 +193,14 @@ permalink: /cfw/swsh/raid
             <li>Close the subwindow, then navigate to <code class="fw-bold">Tools</code> -> <code class="fw-bold">Auto Legality Mod</code> -> <code class="fw-bold">Open LiveHeX</code> to open the LiveHeX subwindow.</li>
             <li>If you do not have ldn_mitm installed, connect to the Y-Comm in game or enter LAN mode. This step can be skipped if you already have ldn_mitm installed.</li>
             <li>Enter the local IP of your console into the <code class="fw-bold">IP:</code> field and click the <code class="fw-bold">Connect</code> button. If done correctly, your console should now be connected to LiveHeX.</li>
-            <li>At the bottom of the LiveHeX window open the dropdown menu and select the Raid button that corrisponds to the location of your desired Raid Den.</li>
+            <li>At the bottom of the LiveHeX window, open the dropdown menu and select the Raid block that corresponds to the location of your desired raid den.</li>
             <ul>
                 <li>Select <code class="fw-bold">Raid</code> if your raid is located in the Wild Area.</li>
                 <li>Select <code class="fw-bold">RaidArmor</code> if your raid is located in the Isle of Armor.</li>
                 <li>Select <code class="fw-bold">RaidCrown</code> if your raid is located in the Crown Tundra.</li>
             </ul>
-            <li>After you have selected the correct Raid location, select your Den ID. This should match the the ID found earlier using Serebii/PokeFinder Den Map.</li>
-            <li>To confirm that you are looking at the correct den you will need to throw a Wishing Piece inside if you have not already done so. Close and re-open the LiveHeX raid subwindow if you did not already throw in a Wishing Piece.</li>
+            <li>Click <code class="fw-bold">Edit Block</code>, which will then show details of all the raid dens on the map.</li>
         </ol>
-
     </div>
 </div>
 <br>
@@ -195,24 +213,20 @@ permalink: /cfw/swsh/raid
         <span class="fw-bold text-light">LiveHeX Den ID Confirmation</span>
     </div>
     <div class="card-body card-bg">
-        <p>To confirm the Den ID is correct within LiveHeX you will need to throw a Wishing Piece into the den if you have not already done so. Do this now then close and reopen the Raid subwindow on LiveHeX to refresh the changes.</p>
-
-        <h6><span class="fw-bold">Step-by-step</span></h6>
+        <h6><span class="fw-bold">Step-by-Step</span></h6>
         <ol>
-            <li>Throw a Wishing Piece into the den that you believe contains your desired species.</li>
-            <li>Connect to LiveHeX and open the Raid subwindow as explained above.</li>
-            <li>Select your Den ID, if everything matches you should see the following output:</li>
+            <li>If you have not already thrown a Wishing Piece into the den, close any raid block windows open on LiveHeX and use a Wishing Piece.</li>
+            <li>Connect to LiveHeX and open the Raid block subwindow for the correct map.</li>
+            <li>Select your Den ID you found earlier. If this is the correct Den ID, you should see the following:</li>
             <ul>
                 <li><code class="fw-bold">isActive</code> is <code class="fw-bold">True</code>.</li>
                 <li><code class="fw-bold">isRare</code> is <code class="fw-bold">True</code> (purple beam) or <code class="fw-bold">False</code> (red beam).</li>
                 <li><code class="fw-bold">isWishingPiece</code> is <code class="fw-bold">True</code>.</li>
-                <li>If everything is correct then you have found the correct Den ID.</li>
             </ul>
             <li>Close the Raid Parameter Subwindow by either clicking the X in the top corner or clicking the <code class="fw-bold">Cancel</code> button. DO NOT CLICK SAVE.</li>
         </ol>
 
-        <p>Pressing the <code class="fw-bold">Save</code> button will inject the current seed back into the Raid Den (very bad). <span class="fw-bold">NEVER USE THIS BUTTON TO CLOSE THE RAID PARAMETER SUBWINDOW</span> if you care about the legitimacy of your Pok&eacute;mon.</p>
-
+        <p>Pressing the <code class="fw-bold">Save</code> button will inject the current seed and any other details back into the Raid Den (very bad). <span class="fw-bold">NEVER USE THIS BUTTON TO CLOSE THE RAID PARAMETER SUBWINDOW</span> if you care about the legitimacy of your Pok&eacute;mon.</p>
     </div>
 </div>
 <br>
@@ -225,22 +239,26 @@ permalink: /cfw/swsh/raid
         <span class="fw-bold text-light">Luxray Overview</span>
     </div>
     <div class="card-body card-bg">
-        <p>Luxray is a tool used for automating the (otherwise tedious) date skipping process and can be launched from the Switch Homebrew Menu. As mentioned above, the den seed increments by one after each day that passes. Luxray can be used to alter the system clock and make the game believe that a day has passed which will increment any den seeds.</p>
+        <p>Luxray is a Switch tool used for automating the (otherwise tedious) date skipping process. It can be launched from the Switch Homebrew Menu. As mentioned above, the den seed advances by one for each day that passes. Luxray can be used to alter the system clock and make the game believe that a day has passed to advance den seeds.</p>
 
         <h6><span class="fw-bold">Using Luxray</span></h6>
-        <p>Upon launching you will be presented with a calculator-style application with three main features, these are:</p>
+        <p>Upon launching you will be presented with a calculator-style application with three main features:</p>
 
         <ol>
-            <li><span class="fw-bold">Set -</span> Sets the network time to a desired date based on the figure typed into the calculator. Useful for changing the weather.</li>
-            <li><span class="fw-bold">Step -</span> Initiates date skipping, based on the number typed into the calculator. Used to automate date-skipping.</li>
-            <li><span class="fw-bold">NTP -</span> Sets the date and time back to network time, this should be done after every date-skipping session.</li>
+            <li><span class="fw-bold">Set -</span> Adjust the network time by the number of days entered. Useful for changing the weather.</li>
+            <li><span class="fw-bold">Step -</span> Date skips based on the number of days entered. Used to automate date-skipping.</li>
+            <li><span class="fw-bold">NTP -</span> Synchronizes the date and time back to network time. This should be done after every date-skipping session.</li>
         </ol>
 
-        <p>Date &amp; Time must be synced via the internet in order to use Luxray as it takes advantage of System time manipulation.</p>
+        <p>Date &amp; Time must be synced via the internet in the <code class="fw-bold">System Settings</code> in order to use Luxray.</p>
 
     </div>
 </div>
 <br>
+
+<div class="alert alert-danger" style="border: 1px solid #900505; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Date Skipping Safety -</span> It is highly advised that you stay within reasonable Switch times when date skipping with Luxray. The lowest settable date is January 1, 2000, and the highest settable date is December 31, 2060. Use <code class="fw-bold">NTP</code> or <code class="fw-bold">Set</code> to adjust the clock if you are going out of bounds.
+</div>
 
 <div class="alert alert-success" style="border: 1px solid #28a745; border-radius: 5px; padding: 15px;">
     <span class="fw-bold">Great!</span> You should now have basic understanding of how to use each of the tools and how to find your Max Raid seed. Click the button below to see a worked example of the entire process from start to finish.

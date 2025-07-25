@@ -12,10 +12,10 @@ permalink: /cfw/swsh/raid/wishing-piece
 </small>
 <hr />
 
-<p>This section provides a worked example of how to do Wishing Piece RNG manipulation for Max Raid battles. Wishing Piece RNG involves throwing a Wishing Piece into your chosen Raid Den, searching for a desirable result using PokeFinder, then advancing seed by date skipping until the result has been acquired.</p>
+<p>This section provides a worked example of how to do Wishing Piece RNG manipulation for Max Raid battles. Wishing Piece RNG involves throwing a Wishing Piece into your chosen raid den, searching for a desirable result using PokeFinder, then advancing the seed by date skipping until the result has been acquired.</p>
 
 <div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
-    <span class="fw-bold">Important -</span> From here it is assumed that you have followed all of the setup instruction found on the main page. We also assume that you have a general understanding finding your Den ID/seed, and of how to use each of the necessary tools.
+    <span class="fw-bold">Important -</span> From here, we assume that you have followed all of the setup instructions on the main page. We also assume that you understand how to find your Den ID/seed and how to use each of the necessary tools.
 </div>
 
 <p><span class="fw-bold">Figure 1 -</span> Game Setup</p>
@@ -26,15 +26,15 @@ permalink: /cfw/swsh/raid/wishing-piece
         <span class="fw-bold text-light">Game Setup</span>
     </div>
     <div class="card-body card-bg">
-        <p>Before doing anything else you will need to pick a the Raid Den or Pok&eacute;mon that you wish to RNG abuse. Instructions on how to find your Den ID can be found on the main page. If you do not know how to find this information you must go back and review the material starting from <a href="http://billo-guides.github.io/cfw/swsh/raid#pokefinder-den-map" target="_blank" rel="noopener noreferrer">this point</a>. Return to this page once you have picked a desirable Raid Den and found the Den ID.</p>
+        <p>First, you will need to pick the raid den or Pok&eacute;mon that you wish to RNG abuse. Instructions on how to find your Den ID can be found on the main page. If you do not know how to find this information, go back and review the material starting from <a href="http://billo-guides.github.io/cfw/swsh/raid#pokefinder-den-map" target="_blank" rel="noopener noreferrer">this point</a>. Return to this page once you have picked a raid den and found the Den ID.</p>
 
-        <p>Next, you will need to aquire a den of the correct rarity. This is done by saving outside of an inactive den then using either of the following methods:</p>
+        <p>Next, you will need to activate a beam of the correct rarity. This is done by saving next to an inactive den, then using either of the following methods:</p>
         <ol>
-            <li>Throw a Wishing Piece into the Raid Den and press the <code class="fw-bold">Home</code> button on your controller once you see the beam colour. If the colour does not match your desired rarity, reset the game before saving and retry.</li>
-            <li>Throw a Wishing Piece into the Raid Den and let the game save, if the colour does not match your desired rarity, clear the den or throw a Wishing Piece into a different den and retry. This method consumes more Wishing Pieces.</li>
+            <li>Throw a Wishing Piece into the raid den and press the <code class="fw-bold">Home</code> button on your controller as soon as you see the beam colour. If the colour does not match your desired rarity, reset the game before it automatically saves and try again.</li>
+            <li>Throw a Wishing Piece into the raid den and let the game save. If the colour does not match your desired rarity, clear the den or throw a Wishing Piece into a different den. Since only one den may be activated by Wishing Piece at any time, this will deactivate your original raid den. This method consumes more Wishing Pieces.</li>
         </ol>
 
-        <p><span class="fw-bold">Note - </span>Event Distribution dens will always be of common rarity (red beam) which means you will need to use the second method and check the species inside the den to confirm that you have spawned an Event Distribution den.</p>
+        <p><span class="fw-bold">Note - </span>Event dens will always be of common rarity (red beam), which means you will need to use the second method and check the species inside the den to confirm that you have spawned an event den.</p>
     </div>
 </div>
 <br>
@@ -54,21 +54,20 @@ permalink: /cfw/swsh/raid/wishing-piece
         <span class="fw-bold text-light">Tool Setup</span>
     </div>
     <div class="card-body card-bg">
-        <p>After aquiring the correct Raid Den rarity you will need to configure PokeFinder accordingly. In this example our search filters are configured to search for any shiny Runerigus within 10,000 advances. It takes roughly 1 hour to advance 7,000 days using the quickest method (Luxray date advancing). Keep this in mind when considering your search range.</p>
+        <p>After acquiring the correct raid den rarity, you will need to configure PokeFinder accordingly. In this example, our search filters are configured to search for any shiny Runerigus within 10,000 advances. It takes roughly 1 hour to advance 7,000 days using the quickest method (Luxray date advancing). Keep this in mind when considering your search range.</p>
 
-        <p>Once you have configured your search filters, connect to LiveHeX and open the Raid subwindow at the bottom, then navigate through the dropdown list until you find your Den ID. In this example my Den ID is 72.</p>
+        <p>Once you have configured your search filters in PokeFinder, connect to LiveHeX, open the correct Raid subwindow at the bottom, and select your Den ID in the dropdown. In this example, my Den ID is 72.</p>
 
-        <p>Copy the seed and paste it into the <code class="fw-bold">Seed</code> field of PokeFinder and hit the <code class="fw-bold">Search</code> button. If your seed produces any Pok&eacute;mon that matches your search conditions the search result table will be populated.</p>
+        <p>Copy the seed and paste it into the <code class="fw-bold">Seed</code> field of PokeFinder. Hit the <code class="fw-bold">Search</code> button. If your seed produces any Pok&eacute;mon that matches your search conditions, they will appear in the search result table.</p>
 
-        <p>If you did not find any desirable result, consider setting less strict search filters, increasing your search range, or finding a different seed by clearing out the den and throwing in a new Wishing Piece.</p>
-
+        <p>If you did not find any desirable results, consider setting less strict search filters, increasing your search range, or finding a different seed by clearing out the den and throwing in a new Wishing Piece.</p>
     </div>
 </div>
 <br>
 
 <hr />
 <div class="title" style="background-color: #0c0038;">
-    <h1 class="text-light text-center pt-3 pb-3">Advancing The RNG State</h1>
+    <h1 class="text-light text-center pt-3 pb-3">Advancing the RNG State</h1>
 </div>
 <small class="text-muted mb-3 mt-0">
     Learn about the methods used to advance the RNG state to achieve a desired result.
@@ -83,23 +82,24 @@ permalink: /cfw/swsh/raid/wishing-piece
         <span class="fw-bold text-light">Advancing Towards a Target</span>
     </div>
     <div class="card-body card-bg">
-        <p>In Figure 4 we can see that a Shiny, Gentle natured Runerigus has been found in 1896 advances (rare beam). It is now time to begin advancing the seed using date skipping until we are close to the target.</p>
+        <p>In Figure 4 we can see that a shiny, Gentle-natured Runerigus appears in 1,896 advances (rare beam). It is now time to advance the seed by date skipping until we are close to the target.</p>
 
-        <p>The seed is advanced 1-by-1 per day that has passed, which means we will need to advance 1896 days to hit our target seed. We can trick the game into thinking a day has passed using the Luxray date advancement tool (recommended for speed), or using the date skipping exploit (recommended if you dislike the idea of using Luxray to artificially modify the system date).</p>
+        <p>The seed is advanced one time for each day that passes, which means we will need to advance 1896 days to hit our target seed. We can trick the game into thinking a day has passed using the Luxray date advancement tool (recommended for speed), or using the date skipping exploit (recommended if you dislike the idea of using Luxray to artificially modify the system date).</p>
 
-        <p><span class="fw-bold">Note -</span> Most players will want to manipulate the species, this is done by 3 advances before your target seed. Ensure that you subtract 3 from the total amount of advances required if you plan to manipulate species. So in my case, I would advance 1893 days as I wish for my shiny raid to be a Runerigus.</p>
+        <p><span class="fw-bold">Note -</span> Most players will want to target a specific species in the raid den. Unfortunately, the species cannot be RNG manipulated, so we can only roll it randomly. This is done by stopping exactly 3 advances before the target RNG state, saving the game, and repeatedly advancing 3 times to see if the species has randomly rolled to the correct one. Ensure that you subtract 3 from the total number of advances required if you plan to reroll species. In my case, I would advance 1,893 days as I wish for my shiny raid to be a Runerigus.</p>
 
         <h6><span class="fw-bold">Date Skipping Methods</span></h6>
         <p>These are all of the possible methods used to advance the RNG state, from quickest to slowest:</p>
 
-        <h6><span class="fw-bold">Using Luxray (Quickest, automated method)</span></h6>
+        <h6><span class="fw-bold">Using Luxray (Quickest Automated Method)</span></h6>
         <ol>
             <li>Launch Luxray through the Homebrew Menu.</li>
-            <li>Type the amount of days you wish to advance into the calculator.</li>
+            <li>Type the number of days you wish to advance into the calculator. For safety, you may wish to stop a few days earlier in case the system time rolls over automatically.</li>
+            <li>For targets >1,000 advances away, move to an indoor location like a Pok&eacute;mon Center before date skipping. Skipping rapidly for a long time while standing in the Wild Areas can cause the game to crash.</li>
             <li>Click the <code class="fw-bold">Step</code> button and wait for the calculator to count to 0.</li>
         </ol>
 
-        <h6><span class="fw-bold">PvP Date Skipping Exploit (Quickest, manual method)</span></h6>
+        <h6><span class="fw-bold">PvP Date Skipping Exploit (Quickest Manual Method)</span></h6>
         <ol>
             <li>Open the game and enter any Wild Area. Position your camera so you can see some active raid beams or claim the Watts from a nearby raid den.</li>
             <li>Open the Y-Comm, connect to the internet, and select the <code span class="fw-bold">Link Battle</code> option.</li>
@@ -112,13 +112,12 @@ permalink: /cfw/swsh/raid/wishing-piece
                 <li>If you are in the Wild Area, resuming the game after advancing multiple days has a chance to crash your game! If you are advancing more than 1 month at a time, we suggest you move indoors to a Pok&eacute;mon Center.</li>
             </ul>
             <li>If you did this correctly, the screen will flash, the currently active raid beams will change location, and any Watts you claimed will become available again.</li>
-            <li>Navigate to an indoor location when skipping >1000 days to avoid crashing the game.</li>
             <li>Repeat this process from step 4. The exploit remains active until the game is restarted.</li>
         </ol>
 
-        <h6><span class="fw-bold">"Invite Others" Date Skipping Exploit (Slow, manual method)</span></h6>
+        <h6><span class="fw-bold">"Invite Others" Date Skipping Exploit (Slow Manual Method)</span></h6>
         <ol>
-            <li>Open the game, enter any Wild Area and find an inactive raid den.</li>
+            <li>Open the game, enter any Wild Area and find an inactive raid den. You can use your chosen raid den if you wish.</li>
             <li>Throw a Wishing Piece into the raid den, then interact with it.</li>
             <li>Click <code span class="fw-bold">Invite Others</code>, then minimize the game by pressing the Home button.</li>
             <li>Navigate to <code span class="fw-bold">System Settings</code>. Change the console date forward under <code span class="fw-bold">System</code>, then resume the game.</li>
@@ -126,12 +125,13 @@ permalink: /cfw/swsh/raid/wishing-piece
             <li>If you did this correctly, you should see that you are able to claim Watts from the raid den again.</li>
             <li>Repeat this process from Step 3 onwards as much as needed.</li>
         </ol>
-
-        <p>For targets >1000 advances away, navigate to an in-door locaion, like a PokeCenter before date skipping. Skipping long distances inside the Wild Areas can cause the game to crash due to the constantly changing Max Raids.</p>
-
     </div>
 </div>
 <br>
+
+<div class="alert alert-danger" style="border: 1px solid #900505; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Date Skipping Safety -</span> It is highly advised that you stay within reasonable Switch times when date skipping with Luxray. The lowest settable date is January 1, 2000, and the highest settable date is December 31, 2060. Use <code class="fw-bold">NTP</code> or <code class="fw-bold">Set</code> to adjust the clock if you are going out of bounds.
+</div>
 
 <p><span class="fw-bold">Figure 4 -</span> Species Manipulation</p>
 <img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/species-manip.gif" alt="raid-wish-piece-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/species-manip.gif">
@@ -141,22 +141,22 @@ permalink: /cfw/swsh/raid/wishing-piece
         <span class="fw-bold text-light">Species Manipulation (The "3 Day" Method)</span>
     </div>
     <div class="card-body card-bg">
-        <p>Due to the behaviour of raid dens a technique known as the "3 day method" is used to control the species. The first 2 advances will have the species locked in place, while the third advance (or third day) will be able to be manipulated using the method below.</p>
+        <p>As stated previously, we cannot RNG manipulate species for Max Raid dens; we must randomly roll them. Raid dens lock the species for the first 2 days from the current day, but the 3rd day is random. Therefore, we must repeatedly advance 3 days until the species we want appears in the raid den. This is why it is important to stop 3 advances/days before the target if you want a specific species.</p>
 
-        <p>At this stage you should be exactly 3 advances/days away from your target (today(0), second day(1), third day(2), target day(3)). From here you can manipulate the species on the "target day".</p>
+        <p>At this stage, you should be exactly 3 advances/days away from your target (today(0), second day(1), third day(2), target day(3)). From here, you can reroll the species on the "target day".</p>
 
-        <p>In the above image, the game has been saved and we are 3 advances away from the target. After advancing the seed 3 times we entered the raid to confirm that the Pok&eacute;mon is shiny, but the species is wrong. This problem can be resolved by doing the following:</p>
+        <p>In the above image, the game has been saved and we are 3 advances away from the target. After advancing the seed 3 times, we started the raid to confirm that the Pok&eacute;mon is shiny, but the species was wrong. This problem can be resolved by doing the following:</p>
 
-        <h6><span class="fw-bold">Species Manipulation Tutorial</span></h6>
+        <h6><span class="fw-bold">Rerolling the Raid Species</span></h6>
         <ol>
             <li>Check your seed and confirm that you are exactly 3 advances away from the target.</li>
             <li>Save the game once you are confident that you are in the correct state.</li>
-            <li>Advance the seed 3 times using date skipping and interact with the den. If the species is not what you wanted reset the game.</li>
-            <li>You should now be stood outside your den 3 advances away, repeat step 3 until your desired species appears.</li>
+            <li>Advance the seed 3 times by date skipping. Open the raid den lobby and check the species. If the species is not what you wanted, reset the game.</li>
+            <li>You should now be standing besides your den, and the raid seed should be 3 advances away again. Repeat step 3 until your desired species appears.</li>
             <li>(Optional) Save the game after acquiring your desired species if you intend to share it with friends.</li>
         </ol>
 
-        <p>Take note of the date the game was saved on. When a new day passes (according to System Time) the seed will advance which will cause you to lose your current den.</p>
+        <p>Be careful that the date does not automatically advance while you are doing the "3 day" method. You can change the system time to earlier in the day. If system time naturally advances past midnight, the seed will advance as well, which can cause you to go past your target.</p>
     </div>
 </div>
 <br>
@@ -164,6 +164,6 @@ permalink: /cfw/swsh/raid/wishing-piece
 <p><span class="fw-bold">Figure 5 -</span> Result Found</p>
 <img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/result-found.gif" alt="raid-wish-piece-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/result-found.gif">
 
-<p>The Max Raid den now contains the desired species. In this case, a 5 star Shiny Runerigus! We can now capture the Pok&eacute;mon or share the raid with friends.</p>
+<p>The Max Raid den now contains the desired species. In this case, a 5 star shiny Runerigus! We can now capture the Pok&eacute;mon or share the raid with friends.</p>
 
 <p><span class="fw-bold">That's all there is to manipulating Max Raid Battles using Custom Firmware!</span>
