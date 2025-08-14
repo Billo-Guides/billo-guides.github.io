@@ -11,11 +11,11 @@ permalink: /cfw/la/general/spawner-rng/worked-example
 
 <p>This page provides a worked example of how to effectively RNG manipulate Pok&eacute;mon that are tied to spawner RNG, if you have made it this far, you should already know which Pok&eacute;mon you wish to hunt, and have all of the relevant tools set up and ready to use.</p>
 
-<span class="fw-bold">Figure 1 -</span> Spawner RNG Script Setup<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/ingame-setup-cave-spawner.jpg" alt="spawner-example-cfw-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/ingame-setup-cave-spawner.jpg"><p></p>
+<p><span class="fw-bold">Figure 1 -</span> Spawner RNG Script Setup</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/ingame-setup-cave-spawner.jpg" alt="spawner-example-cfw-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/ingame-setup-cave-spawner.jpg">
 
-<span class="fw-bold">Figure 2 -</span> In-Game Setup (Overworld)<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/ingame-setup-overworld-spawner.jpg" alt="spawner-example-cfw-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/ingame-setup-overworld-spawner.jpg"><p></p>
+<p><span class="fw-bold">Figure 2 -</span> In-Game Setup (Overworld)</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/ingame-setup-overworld-spawner.jpg" alt="spawner-example-cfw-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/ingame-setup-overworld-spawner.jpg">
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #6f3b97;" id="ingame-setup-spawner-la">
@@ -36,8 +36,8 @@ permalink: /cfw/la/general/spawner-rng/worked-example
 </div>
 <br />
 
-<span class="fw-bold">Figure 3 -</span> SysBot Setup<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/sysbot-setup-spawner.gif" alt="spawner-example-cfw-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/sysbot-setup-spawner.gif"><p></p>
+<p><span class="fw-bold">Figure 3 -</span> SysBot Setup</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/sysbot-setup-spawner.gif" alt="spawner-example-cfw-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/sysbot-setup-spawner.gif">
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #6f3b97;" id="sysbot-setup-spawner-la">
@@ -83,27 +83,32 @@ permalink: /cfw/la/general/spawner-rng/worked-example
 </div>
 <hr />
 
-<p>Ensure that the SysBot settings have been configured properly, stopconditions have been set, and you are standing in the correct position in-game before continuing. All of this information can be found above.</p>
+<p>Ensure you have configured your SysBot settings and stopconditions properly before continuing, and confirm that you are standing in the correct position in-game depending on the Pok&eacute;mon you are hunting for (see above). You can now disconnect all controllers and click the <code class="fw-bold">Start All</code> button to begin looking for targets that match your search conditions.</p>
 
-<p>After doing this, disconnect all controllers (or attach your joycons) then start the bot, you should now see that the bot has now began to automate the process of searching for a spawner seed.</p>
+<p><span class="fw-bold">Figure 4 -</span> Bot Started</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/spawner-bot-started.gif" alt="spawner-example-cfw-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/spawner-bot-started.gif">
 
-<span class="fw-bold">Figure 4 -</span> Bot Started<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/spawner-bot-started.gif" alt="spawner-example-cfw-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/spawner-bot-started.gif"><p></p>
+<p>You should now see that the bot has begun scanning the spawner seed and searching for a target. It may take a while to find a desirable target frame depending on how rare your stopconditions are. In this example we will be searching for an Enamorus within 10 advances with an attack IV of 0, and the bot will continually cycle through Jubilife and Crimson Mirelands until a result that meets these conditions has been found.</p>
 
-<p>Based on the settings inside the SysBot <code class="fw-bold">Hub</code> tab, the bot has begun searching for an Enamorus within 10 advances that has an attack IV value of 0. The bot will now cycle through Jubilife until a result that meets these conditions has been found.</p>
+<p><span class="fw-bold">Figure 5 -</span> Target Found</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/spawner-result-found.png" alt="spawner-example-cfw-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/spawner-result-found.png">
 
-<span class="fw-bold">Figure 5 -</span> Target Found<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/spawner-result-found.png" alt="spawner-example-cfw-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/spawner-result-found.png"><p></p>
+<p>The spawner seed and internal details of the Enamorus can be seen inside the <code class="fw-bold">Logs</code> tab. This seed can optionally be entered into the Spawner RNG Script to help with tracking your advances.</p> <p>If you do not want to use the spawner RNG script you can restart SysBot.NET at any point to check the number of advances remaining before you reach your target, but the information provided is less detailed than if you were to set up the Spawner RNG script.</p>
 
-<p>The spawner seed and internal details of the Enamorus can be seen inside the <code class="fw-bold">Logs</code> tab. This seed can be entered into the Spawner RNG Script to help track your current RNG state if you wish, although this is technically optional as the bot can be restarted at any point to see how many advances remain until you reach your target.</p>
+<p><span class="fw-bold">Figure 6 -</span> Spawner RNG Script Configuration</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/spawner-script-usage.gif" alt="spawner-example-cfw-6" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/spawner-script-usage.gif">
 
-<span class="fw-bold">Figure 6 -</span> Spawner RNG Script<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/spawner-script-usage.gif" alt="spawner-example-cfw-6" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/spawner-script-usage.gif"><p></p>
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="spawner-script-config">
+        <span class="fw-bold text-light">Spawner RNG Script Configuration</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Paste your group seed from the <code class="fw-bold">Logs</code> tab of SysBot.NET to the group seed field at the top of the Spawner RNG script, then set your search range and desired species. In this case we will be setting the search range to 10 and species to <code class="fw-bold">Species TargetSpecies = Species.Enamorus;</code> as we are targeting Enamorus.</p>
 
-<p>Paste the seed into the Group Seed field at the top of the script (see image), set the search range, and start the search. If configured correctly, the script's search results should match the output produced by the bot. PokeViewer can be used to inspect the details of the Pokémon you are battling and compare them with the script to track your current advance.</p>
+        <p>Setting the species is particularly important for Heatran and Phione, as these two Pok&eacute;mon are generated slightly differently to everything else. Heatran does not have a fixed gender, and Phione does not have fixed Height/Weight values.</p>
 
-<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
-    <span class="fw-bold">Important -</span> If you are searching for Heatran while using the script, you will also need to modify the gender output, located at the top. Change the GenderCompare value to 127 instead of -1. Any other case should have this value set to -1.
+        <p>After you have set the script up correctly, click the <code class="fw-bold" style="color: green;">▶</code> button, you should now see your upcoming advances in the script output found at the bottom of the LINQPad window.</p>
+    </div>
 </div>
 
 <hr /><div class="title" style="background-color: #6f3b97;">
@@ -163,8 +168,8 @@ permalink: /cfw/la/general/spawner-rng/worked-example
 </div>
 <br>
 
-<span class="fw-bold">Figure 7 -</span> Target Hit<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/target-hit.png" alt="spawner-example-cfw-7" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/target-hit.png"><p></p>
+<p><span class="fw-bold">Figure 7 -</span> Target Hit</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/target-hit.png" alt="spawner-example-cfw-7" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/target-hit.png">
 
 <p>After advancing the required amount, then engaging in battle with Enamorus, you can use PokeViewer.NET to confirm that the stats of the Pok&eacute;mon align with what is expected. You can also use the spawner RNG script to figure out exactly what advance you are on if the Pok&eacute;mon does not match what is expected.</p>
 
