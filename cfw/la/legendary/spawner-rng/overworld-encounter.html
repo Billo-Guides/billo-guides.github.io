@@ -1,0 +1,164 @@
+﻿<p><span class="fw-bold">Figure 1 -</span> In-game Setup (Overworld)</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/ingame-setup-overworld-spawner.jpg" alt="spawner-example-overworld-cfw-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/ingame-setup-overworld-spawner.jpg">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="in-game-setup-spawner-overworld">
+        <span class="fw-bold text-light">In-game Setup (Overworld)</span>
+    </div>
+    <div class="card-body card-bg">
+        <h6 span class="fw-bold">Resources</h6>
+        <p>It is recommended to stack plenty of resources before getting started, as you will be unable to leave the area back to Jubilife after you have found a desirable target seed. Examples of good resources to bring along include:</p>
+
+        <ul>
+            <li>Throwable items (e.g Ball of Mud, Sticky Glob) - Used to remove the protective barrier surrounding a Pok&eacute;mon.</li>
+            <li>Pok&eacute; Balls (e.g Ultra, Gigaton, Jet Balls) - You will need enough to be able to capture your target Pok&eacute;mon.</li>
+            <li>Healing items (e.g Max Potions, Elixirs) - We can revisit camp at any time, so carrying spare healing items is optional but recommended.</li>
+            <li>Stealth items (e.g Stealth Spray, Smoke Ball) - These items are incredibly useful for the weather genies and Darkrai in particular.</li>
+        </ul>
+
+        <h6 span class="fw-bold">Party Members:</h6>
+        <p>You should bring along party members that are capable of consistently knocking out your target Pok&eacute;mon within 1-2 turns to speed up the process of advancing your spawner seed. Alongside an attacking Pok&eacute;mon you may wish to bring along a party member that can weaken your target Pok&eacute;mon and make capture easier by inflicting status conditions.</p>
+
+        <h6 span class="fw-bold">Character Positioning:</h6>
+        <ol>
+            <li>Gather the required resources and party members, then navigate to the Guard Ress on the outskirts of Jubilife.</li>
+            <li>Stand directly facing Guard Ress, close enough so that the <code class="fw-bold">A Ress</code> text box appears (see above image).</li>
+            <li>Save the game in this state, then disconnect any extra controllers or attach your JoyCons to the console (required to use SysBot routines).</li>
+        </ol>
+
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 2 -</span> Bot Setup (Overworld)</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/bot-toggles-spawner-overworld.gif" alt="spawner-example-overworld-cfw-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/bot-toggles-spawner-overworld.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="bot-toggles-spawner-overworld">
+        <span class="fw-bold text-light">Bot Setup</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>At this stage your bot should already be configured to search for your desired target, refer to the <a href="#spawner-sysbot-setup-la">SysBot Setup</a> instructions above if you have not already done so. In this instance, our bot is configured to search for Enamorus with a <code class="fw-bold">SearchDepth</code> value of 10.</p>
+
+        <h6 span class="fw-bold">Stop Conditions</h6>
+        <p>After completing all of the initial bot configurations you will need to set your <code class="fw-bold">StopConditions</code>. This essentially decides when the bot will stop searching for a target (result has been found). To set your Stop Conditions do the following:</p>
+
+        <ol>
+            <li>In the <code class="fw-bold">Hub</code> tab of SysBot, navigate to the <code class="fw-bold">StopConditions</code> dropdown menu. Here we can see various different fields.</li>
+            <li>If you wish to filter for a specific nature, set the <code class="fw-bold">TargetNature</code>.</li>
+            <ul>
+                <li>You can only target one specific nature! Set this to <code class="fw-bold">Random</code> if you do not care or wish to target more than 1 nature.</li>
+            </ul>
+            <li>If you wish to filter for IVs, set the <code class="fw-bold">TargetMinIVs</code> &amp; <code class="fw-bold">TargetMaxIVs</code>.</li>
+            <ul>
+                <li>IVs are listed in this order: HP/ATK/DEF/SPATK/SPDEF/SPE. IVs you do not wish to check can be set to an <code class="fw-bold">x</code>.</li>
+            </ul>
+            <li>Keep <code class="fw-bold">ShinyTarget</code> &amp; <code class="fw-bold">HeightTarget</code> disabled in all cases.</li>
+            <ul>
+                <li>All of the encounters are shiny locked with fixed height, activating these filters will cause you to never find a result.</li>
+            </ul>
+            <li>After you have set your desired conditions you will need to restart the program by closing and re-opening <code class="fw-bold">SysBot.exe</code>.</li>
+            <ul>
+                <li>Restarting the program will save any changes you have made to your <code class="fw-bold">StopConditions</code>. This is a required step that should not be skipped.</li>
+            </ul>
+        </ol>
+
+        <h6 span class="fw-bold">Adding &amp; Starting Your Bot</h6>
+        <p>After confirming your <code class="fw-bold">EncounterLA</code> settings and <code class="fw-bold">StopConditions</code> have been set properly you will need to add the <code class="fw-bold">EncBotOWLCheckRNGLA</code> bot by doing the following:</p>
+
+        <ol>
+            <li>Head back to the <code span class="fw-bold">Bots</code> tab and select <code span class="fw-bold">EncBotOWLCheckRNG</code> in the dropdown menu on the right.</li>
+            <li>Type the IP address of your console into the IP field and add the bot, you are now ready to hunt for your target Pok&eacute;mon.</li>
+            <li>Ensure that your in-game position is correct by orienting yourself with Figure 1, then click the <code class="fw-bold">Start All</code> button.</li>
+            <li>If everything is done correctly you should now see that your bot has started cycling through Jubilife and whichever map contains your target. Wait until a result has been found.</li>
+        </ol>
+
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 3 -</span> Target Found (Overworld)</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/target-found-overworld.png" alt="spawner-example-overworld-cfw-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/target-found-overworld.png">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="target-found-spawner-overworld">
+        <span class="fw-bold text-light">Target Found</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>An Enamorus that matches our <code class="fw-bold">StopConditions</code> will appear after 4 advances. You will need to advance the spawner seed at least once to be able to track your current seed using the Spawner RNG Script. The spawner seed can be advanced by doing the following:</p>
+
+        <ol>
+            <li>Engage in battle and knock out your target Pok&eacute;mon. Use a super effective move to quickly knock the Pok&eacute;mon out.</li>
+            <li>Teleport to a campsite and set the time of day to evening. Evening -> Night has the shortest cycle (3 minutes), making it optimal for advancing the spawner seed.</li>
+            <ul>
+                <li>If your target is <u>Tornadus</u> you must sleep repeatedly until the weather is a <u>blizzard</u> or Tornadus will never spawn.</li>
+                <li>If your target is <u>Thundurus</u> you must sleep repeatedly until the weather is a <u>thunderstorm</u> or Thundurus will never spawn.</li>
+                <li>If your target is <u>Cresselia</u> it will respawn immediately after knocking it out, you do not need to teleport to a campsite. Go to step 6.</li>
+            </ul>
+            <li>Enter the closest subzone (cave) on the map before the time of day turns to night, then wait inside until night time.</li>
+            <ul>
+                <li>For <span class="fw-bold">Obsidian Fields</span> (Shaymin/Landorus), head to the cave at Lake Verity.</li>
+                <li>For <span class="fw-bold">Crimson Mirelands</span> (Enamorus), head to the cave at Lake Valor.</li>
+                <li>For <span class="fw-bold">Cobalt Coastlands</span> (Thundurus), head to the cave at Firespit Island.</li>
+                <li>For <span class="fw-bold">Alabaster Icelands</span> (Tornadus), head to the cave at Lake Acuity.</li>
+                <li>For <span class="fw-bold">Coronet Highlands</span> (Darkrai), head to either side of Wayward Cave.</li>
+            </ul>
+            <li>Set a map marker in the area that contains your target Pok&eacute;mon to make it easier to relocate after leaving the cave (optional).</li>
+            <li>Once the time of day turns to night, leave the cave and teleport to the closest campsite to your target, then use Braviary to make your way back.</li>
+            <li>Your Pok&eacute;mon should have respawned, causing the spawner seed to advance by +1. Repeat this process until you reach your target frame.</li>
+        </ol>
+
+    </div>
+</div>
+<br />
+
+
+<p><span class="fw-bold">Figure 4 -</span> Tracking Spawner Seed (Overworld)</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/tracking-seed-overworld.gif" alt="spawner-example-overworld-cfw-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/tracking-seed-overworld.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="tracking-and-advancing-seeds-spawner-overworld">
+        <span class="fw-bold text-light">Target Found (Overworld)</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>An Enamorus that matches our <code class="fw-bold">StopConditions</code> will appear after 4 advances. To track your spawner seed you will first need to paste your spawner seed from the SysBot logs into the Spawner RNG script. The script should have been properly setup earlier, if you need to set the script up again for whatever reason do this now (<a href="#spawner-rng-script-setup-la">see here</a>), then revisit this section after you have done so.</p>
+
+        <h6 span class="fw-bold">Tracking Spawner Seeds</h6>
+        <ol>
+            <li>Open the <code class="fw-bold">Logs</code> tab of SysBot and copy the seed from your spawner.</li>
+            <li>Open the LINQPad script and paste the group seed into the following section:</li>
+
+            <div class="alert border-dark">
+                <code class="fw-bold" style="color: #0a7a00;">
+                    // Set your group seed here.<br />
+                </code>
+                <code class="fw-bold" style="color: #1f53ae;">ulong</code> <code class="fw-bold" style="color: #000f;">group_seed =</code> <code class="fw-bold" style="color: #c882ff;">seedhere</code><code class="fw-bold" style="color: #000f;">;</code>
+            </div>
+
+            <li>Now set your search range into the following section:</li>
+
+            <div class="alert border-dark">
+                <code class="fw-bold" style="color: #0a7a00;">
+                    // Set this for how far you want to search.<br />
+                </code>
+                <code class="fw-bold" style="color: #1f53ae;">int</code> <code class="fw-bold" style="color: #000f;">maxAdvance =</code> <code class="fw-bold" style="color: #c882ff;">searchrangehere</code><code class="fw-bold" style="color: #c882ff;">seedhere</code><code class="fw-bold" style="color: #000f;">;</code>
+            </div>
+
+            <li>Now press the <code class="fw-bold" style="color: green;">▶</code> at the top of the LINQPad to see a list of upcoming advances. You should see your target Pok&eacute;mon in the search results.</li>
+            <li>Engage in battle with your target Pok&eacute;mon and open PokeViewer.NET, then connect to the program and navigate to the <code class="fw-bold">View</code> tab.</li>
+            <li>Inspect the Pok&eacute;mon you are in battle with and confirm that the PID/IVs/Nature match the first result of the LINQPad script output.</li>
+            <ul>
+                <li>As stated above, you must have advanced the spawner seed at least once and re-engage in battle with your target Pok&eacute;mon to track your spawner seed.</li>
+            </ul>
+        </ol>
+
+        <p>Once you have confirmed and are tracking your spawner seed you can now advance the spawner seed by knocking the Pok&eacute;mon out and respawning it the required number of times (see above).</p>
+
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 5 -</span> Result Found (Overworld)</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/target-seed-hit-overworld.png" alt="spawner-example-overworld-cfw-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/target-seed-hit-overworld.png">
+
+<p>After advancing the spawner seed 4 times and engaging Enamorus in battle we can see that the details match what is expected by the spawner script. <span class="fw-bold">That's all there is to it!</span></p>

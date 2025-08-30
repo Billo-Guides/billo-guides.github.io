@@ -1,0 +1,144 @@
+---
+layout: default
+title: Legends Arceus RNG Guide (Arceus)
+permalink: /cfw/la/legendary/main-rng/arceus
+---
+
+<div class="title" style="background-color: #6f3b97;">
+    <h1 class="text-light text-center pt-3 pb-3">Arceus RNG Abuse</h1>
+</div>
+<hr />
+
+<p>This section of the guide aims to provide a worked example for how to RNG abuse Arceus. Ensure that the <u>Autosave is disabled</u> and that you have a <u>full team of 6 Pok&eacute;mon</u> before beginning this portion of the guide. This provides a safety net for failed targets and makes it easier to check results using PokeViewer.</p>
+
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Important -</span> If you've reached this point, you should have already completed the initial setup and acquired a basic understanding of how to utilize Moarencounterbots, the Main RNG calculation script &amp; PokeViewer.NET. If you do not yet have an understanding of how to use all of the relevant tools, <a href="/cfw/la/general/main-rng/setup" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">click here to go back</a>.
+</div>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="delay-calc-arceus">
+        <span class="fw-bold text-light">Getting Started (Delay Calculation)</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>You will need to calculate the rough delay for this encounter. The term 'delay' refers to how long it takes for the Pok&eacute;mon to generate after the final A Press. Defeating Arceus may be difficult at first, so the delay calculation process can also be used to become familiar with how to win the boss battle.</p>
+
+        <h6><span class="fw-bold">Calculating Delay (Step-By-Step)</span></h6>
+        <ul>
+            <li>Initiate the Arceus boss battle and defeat it, then proceed to the screen of the <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/arceus-final-a-press.png">the screen of the final A press</a> and press the <code span class="fw-bold">Home button (⌂)</code>.</li>
+            <p></p>
+            <li>Open Moarencounterbots (if already open, navigate to the <code span class="fw-bold">Bots</code> tab) and select <code span class="fw-bold">EncBotRNGMonitorLA</code> from the dropdown menu on the right.</li>
+            <p></p>
+            <li>Type the local IP address of your Switch console into the designated field, then click <code span class="fw-bold">Add</code> to add the bot to the list of active bots. Press the <code span class="fw-bold">Start All</code> button.</li>
+            <p></p>
+            <li>If the above steps were followed correctly you should see that your seed has been produced inside the <code span class="fw-bold">Logs</code> tab, this will be automatically copied to clipboard.</li>
+            <p></p>
+            <li>Paste the seed into the Main RNG script and search without filters to get your starting frame, then quickly mash the A button to generate Arceus as fast as possible. The frame it was produced on will be your delay for this attempt.</li>
+            <p></p>
+            <li>Using PokeViewer.NET <code span class="fw-bold">Box View</code> function, find the Arceus inside your boxes and take note of the PID. This is necessary to find the exact frame that generated the Pok&eacute;mon.</li>
+            <p></p>
+            <li>Find the PID of the Arceus inside the Main RNG script search results, you can use the find function if needed (<code span class="fw-bold">CTRL+F</code>).</li>
+        </ul>
+
+        <p>The "delay" for this boss battle is variable, for this reason it is recommended to repeat this process a few times to see which delay you are most commonly experiencing.</p>
+
+    </div>
+</div>
+<br>
+
+<span class="fw-bold">Figure 1 -</span> Calculating Delay<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/delay-calc-arceus.gif" alt="main-rng-arceus-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/delay-calc-arceus.gif"><p></p>
+
+<p>After following the delay calculation steps and searching for the PID of the encountered Arceus, we find that it was generated on frame 34. Therefore, our delay for this attempt is 34. After 5 attempts, we have the following delay values:</p>
+
+<table class="table table-striped" style="width:100%">
+    <thead class="table text-white" style="background-color: #6f3b97;">
+    <th scope="col">Attempt</th>
+    <th scope="col">Delay Value</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><span class="fw-bold">Attempt 1</span></td>
+            <td>34</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">Attempt 2</span></td>
+            <td>36</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">Attempt 3</span></td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">Attempt 4</span></td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">Attempt 5</span></td>
+            <td>37</td>
+        </tr>
+
+    </tbody>
+</table>
+
+<p>This means a safe delay value to target in future attempts is 34-40. The delay values shown here are based on how quickly I was mash through the final screen before Arceus was generated; your values may vary depending on how quickly you are able to mash the A button to generate Arceus.</p>
+
+<p>After finding your delay range, take note of the most common value for future attempts. You will now need to set your search filters to match your desired target.</p>
+
+<span class="fw-bold">Figure 2 -</span> Setting Search Filters<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/filters-arceus.gif" alt="main-rng-arceus-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/filters-arceus.gif"><p></p>
+
+<p>In this example, the filters are configured to search for any Arceus with 6 perfect IVs (31/31/31/31/31/31). You can further customize the filters if desired, such as specifying a particular nature or optimizing for 0 IV values, such as 0 Attack.</p>
+
+<p>After setting your search filters, add <code span class="fw-bold">EncBotCopySeedLA</code> to the list of active bots, then start. Paste your seed into the script to begin searching for targets. If you do not find a suitable target, reset the game to refresh your seed and try again.</p>
+
+<span class="fw-bold">Figure 3 -</span> Target Found<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/target-frame-found-arceus.gif" alt="main-rng-arceus-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/target-frame-found-arceus.gif"><p></p>
+
+<p>Great! We discovered a 6IV Hardy Arceus after 18,241 advances within a cluster of 4. A cluster refers to a group of frames that produce the same end result; the larger the cluster, the greater the chances of hitting the correct target frame.</p>
+
+<p>Now, we need to advance close to our target frame. Monitor your RNG state by running <code span class="fw-bold">EncBotRNGMonitorLA</code> in Moarencounterbots; this will track the number of advancements that occur in real time.</p>
+
+<span class="fw-bold">Figure 4 -</span> Monitoring RNG State<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/rng-state-monitoring.gif" alt="main-rng-arceus-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/rng-state-monitoring.gif"><p></p>
+
+<p>The RNG state at the Spear Pillar advances at a slow rate. Moving to a more populated area allows you to advance the RNG state much more quickly. In the example image above, the player is standing next to a large body of water in an area densely populated with Pok&eacute;mon.</p>
+
+<p>Consider leaving Spear Pillar and heading to a location where the RNG state advances more rapidly if you need to cover a large amount of frame advancements. If you have moved locations, make sure to leave enough time to reposition yourself to avoid overshooting your target frame.</p>
+
+<details>
+    <summary><span class="fw-bold">Example</span></summary>
+    <p>If it takes you roughly 3,000 frames to get back to Spear Pillar from your position, and roughly 7,000 frames to defeat Arceus, start to head back to Spear Pillar at roughly 10,000 frames away from your target, leave enough time to reposition yourself to avoid overshooting!</p>
+</details><p></p>
+
+<span class="fw-bold">Figure 5 -</span> Advancing To The Target<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/advancing-to-target-arceus.png" alt="main-rng-arceus-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/advancing-to-target-arceus.png"><p></p>
+
+<p>We are now back at Spear Pillar and 6,255 frames away from the target, it can take up to 10,000 advances to defeat the Arceus boss on average, it is recommended to check how long it takes you to win, as any time during or after the Arceus battle will advance the RNG state slowly.</p>
+
+<p>On average it takes me 5,000-7,000 frames to defeat the boss, so there is enough time to defeat it and position myself on the screen of the final A press and ultimately to avoid overshooting the target frame.</p>
+
+<span class="fw-bold">Figure 6 -</span> Screen Of Final Button Press<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/arceus-final-a-press.png" alt="main-rng-arceus-6" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/arceus-final-a-press.png"><p></p>
+
+<p>Get to the screen of the final A press (pictured above), and let <code span class="fw-bold">EncBotRNGMonitorLA</code> run until the logs show that you are close to the target frame. After doing so, press the <code span class="fw-bold">Home button (⌂)</code> to freeze the RNG state, you will now need to remove and re-add the bot, then start it again to begin monitoring the seed from advance 0.</p>
+
+<p>Paste the new seed into the script and take note of the new target frame, keep the game on the Home menu after doing so, you will now need to prepare to hit your target.</p>
+
+<span class="fw-bold">Figure 7 -</span> Hitting The Target Frame<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/hitting-target-frame-arceus.png" alt="main-rng-arceus-7" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/hitting-target-frame-arceus.png"><p></p>
+
+<p>After searching for our target using the script once more, we can now see that the target is on advance 217. Earlier, the calculated delay is roughly ~36, this means that once we have reached frame ~182, we have advanced the seed to the correct point and can begin mashing the <code span class="fw-bold">A button</code> as quickly as possible.</p>
+
+<p><code span class="fw-bold">x (earliest target frame) - y (delay) = z (frame to press A)</code></p>
+
+<p>You can inspect the Arceus using <a href="https://github.com/zyro670/PokeViewer.NET/wiki/2.-Box-View">PokeViewer.NET Box Viewer</a> to confirm that the correct target has been hit.</p>
+
+<span class="fw-bold">Figure 8 -</span> Result Found<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/result-found-arceus.png" alt="main-rng-arceus-8" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/result-found-arceus.png"><p></p>
+
+<p><span class="fw-bold">We hit our target frame and have secured a Arceus with 6 perfect IVs! That's all there is to it!</span></p>
+
+<div class="alert alert-success" style="border: 1px solid #28a745; border-radius: 5px; padding: 15px;">
+    <span class="fw-bold">Final Notes -</span> Keen eyed readers may notice that the example uses PKHeX to view the box slot that contains our Pok&eacute;mon, PokeViewer is considered to be more user friendly and does the same job.
+</div>

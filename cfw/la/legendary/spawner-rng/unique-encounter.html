@@ -1,0 +1,184 @@
+﻿<p><span class="fw-bold">Figure 1 -</span> In-game Setup (Manaphy/Phione)</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/ingame-setup-manaphy-phione.jpg" alt="spawner-example-unique-cfw-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/ingame-setup-manaphy-phione.jpg">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="in-game-setup-manaphy-phione">
+        <span class="fw-bold text-light">In-game Setup (Manaphy/Phione)</span>
+    </div>
+    <div class="card-body card-bg">
+        <h6 span class="fw-bold">Resources</h6>
+        <p>It is recommended to stack plenty of resources before getting started, as you will be unable to leave the area back to Jubilife after you have found a desirable target seed. Examples of good resources to bring along include:</p>
+
+        <ul>
+            <li>Throwable items (e.g Ball of Mud, Sticky Glob) - Used to remove the protective barrier surrounding a Pok&eacute;mon.</li>
+            <li>Pok&eacute; Balls (e.g Ultra, Gigaton, Jet Balls) - You will need enough to be able to capture your target Pok&eacute;mon.</li>
+            <li>Healing items (e.g Max Potions, Elixirs) - We can revisit camp at any time, so carrying spare healing items is optional but recommended.</li>
+        </ul>
+
+        <h6 span class="fw-bold">Party Members:</h6>
+        <p>You should bring along party members that are capable of consistently knocking out your target Pok&eacute;mon within 1-2 turns to speed up the process of advancing your spawner seed. Alongside an attacking Pok&eacute;mon you may wish to bring along a party member that can weaken your target Pok&eacute;mon and make capture easier by inflicting status conditions.</p>
+
+        <h6 span class="fw-bold">Character Positioning:</h6>
+        <ol>
+            <li>Gather the required resources and party members, then navigate to the cave that contains your target.</li>
+            <li>Stand outside the cave facing the entrance, close enough so that the <code class="fw-bold">A Enter</code> text box appears (see above image).</li>
+            <li>Save the game in this state, then disconnect any extra controllers or attach your JoyCons to the console (required to use SysBot routines).</li>
+        </ol>
+
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 2 -</span> Bot Setup (Manaphy/Phione)</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/bot-toggles-manaphy-phione.gif" alt="spawner-example-unique-cfw-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/bot-toggles-manaphy-phione.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="bot-toggles-spawner-manaphy-phione">
+        <span class="fw-bold text-light">Bot Setup</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>At this stage your bot should already be configured to search for your desired target, refer to the <a href="#spawner-sysbot-setup-la">SysBot Setup</a> instructions above if you have not already done so. In this instance, our bot is configured to search for Phione with a <code class="fw-bold">SearchDepth</code> value of 10. We have also set <code class="fw-bold">CheckAllPhioneLayers</code> to <code class="fw-bold">True</code> as no Phione have been caught on this save file.</p>
+
+        <h6 span class="fw-bold">Stop Conditions</h6>
+        <p>After completing all of the initial bot configurations you will need to set your <code class="fw-bold">StopConditions</code>. This essentially decides when the bot will stop searching for a target (result has been found). To set your Stop Conditions do the following:</p>
+
+        <ol>
+            <li>In the <code class="fw-bold">Hub</code> tab of SysBot, navigate to the <code class="fw-bold">StopConditions</code> dropdown menu. Here we can see various different fields.</li>
+            <li>If you wish to filter for a specific nature, set the <code class="fw-bold">TargetNature</code>.</li>
+            <ul>
+                <li>You can only target one specific nature! Set this to <code class="fw-bold">Random</code> if you do not care or wish to target more than 1 nature.</li>
+            </ul>
+            <li>If you wish to filter for IVs, set the <code class="fw-bold">TargetMinIVs</code> &amp; <code class="fw-bold">TargetMaxIVs</code>.</li>
+            <ul>
+                <li>IVs are listed in this order: HP/ATK/DEF/SPATK/SPDEF/SPE. IVs you do not wish to check can be set to an <code class="fw-bold">x</code>.</li>
+            </ul>
+            <li>Keep <code class="fw-bold">ShinyTarget</code> &amp; <code class="fw-bold">HeightTarget</code> disabled if you are hunting Manaphy.</li>
+            <ul>
+                <li>For Phione you can set a <code class="fw-bold">HeightTarget</code> if you wish to search for a Phione that qualifies for the Jumbo or Mini mark when transferred to Scarlet/Violet.</li>
+                <li>Both Manaphy and Phione are shiny locked, so keep <code class="fw-bold">ShinyTarget</code> disabled for both cases or you will never find a result.</li>
+            </ul>
+            <li>After you have set your desired conditions you will need to restart the program by closing and re-opening <code class="fw-bold">SysBot.exe</code>.</li>
+            <ul>
+                <li>Restarting the program will save any changes you have made to your <code class="fw-bold">StopConditions</code>. This is a required step that should not be skipped.</li>
+            </ul>
+        </ol>
+
+        <h6 span class="fw-bold">Adding &amp; Starting Your Bot</h6>
+        <p>After confirming your <code class="fw-bold">EncounterLA</code> settings and <code class="fw-bold">StopConditions</code> have been set properly you will need to add the <code class="fw-bold">EncBotOWLCheckRNGLA</code> bot by doing the following:</p>
+
+        <ol>
+            <li>Head back to the <code span class="fw-bold">Bots</code> tab and select <code span class="fw-bold">EncBotOWLCheckRNG</code> in the dropdown menu on the right.</li>
+            <li>Type the IP address of your console into the IP field and add the bot, you are now ready to hunt for your target Pok&eacute;mon.</li>
+            <li>Ensure that your in-game position is correct by orienting yourself with Figure 1, then click the <code class="fw-bold">Start All</code> button.</li>
+            <li>If everything is done correctly you should now see that your bot has begun searching for a target. Wait until a result has been found.</li>
+        </ol>
+
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 3 -</span> Target Found (Manaphy/Phione)</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/result-found-manaphy-phione.png" alt="spawner-example-unique-cfw-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/result-found-manaphy-phione.png">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="target-found-spawner-manaphy-phione">
+        <span class="fw-bold text-light">Target Found</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>A Phione that matches our <code class="fw-bold">StopConditions</code> will appear after 2 advances. If your desired target is Phione you should read the information in the "Phione Specifics" section below as it contains important information specific to Phione. If your target is Manaphy you can move straight onto "Advancing The Spawner Seed".</p>
+
+        <details open style="margin-bottom: 12px;">
+            <summary id="phione-specifics"><span class="fw-bold">Phione Specifics</span></summary>
+            <p>If the bot logs indicate that a certain number of Phione must be captured before accessing the correct spawner, you <u>must</u> do this first. The game tracks a total of six Phione spawners and unlocks specific ones depending on how many Phione have been caught.</p>
+
+            <ul>
+                <li>Capturing 1 Phione leaves 2 in the cave, unlocking two different spawners.</li>
+                <li>Capturing 2 Phione leaves 1 in the cave, unlocking one different spawner.</li>
+                <li>Capturing none keeps the original 3 spawners active.</li>
+            </ul>
+
+            <p>In our example, we must capture 1 Phione before proceeding. Once the required number of Phione have been caught we then need to <u>leave the cave and re-enter</u> to unlock the correct Phione spawners (this is not required if you do not need to capture any Phione).</p>
+        </details>
+
+        <details open style="margin-bottom: 12px;">
+            <summary id="advancing-spawner-seed-unique"><span class="fw-bold">Advancing The Spawner Seed</span></summary>
+            <p>You will need to advance the spawner seed at least once to be able to track your current seed using the Spawner RNG Script. For both Manaphy &amp; Phione the spawner seed can be advanced by doing the following in-game actions:</p>
+
+            <ol>
+                <li>Engage in battle and knock out your target Pok&eacute;mon.</li>
+                <ul>
+                    <li>If your target is Phione knock out all of them. If your target is Manaphy you can knock out only Manaphy if you wish.</li>
+                </ul>
+                <li>Leave the cave, then Teleport to a campsite and set the time of day to evening.</li>
+                <ul>
+                    <li>Overworld legends respawn after the day cycle changes, Evening -> Night has the shortest cycle (3 minutes), making it optimal for advancing the spawner seed.</li>
+                </ul>
+                <li>Open the map and place a map pin on Seaside Hallow, then Teleport to Firespit Island.</li>
+                <ul>
+                    <li>This is the quickest route back to the cave at Seaside Hallow, ensuring we have enough time to make it into the cave before evening turns to night.</li>
+                </ul>
+                <li>Use Braviary to fly back to Seaside Hallow and enter the cave before night time.</li>
+                <ul>
+                    <li>Keep in mind that any existing Manaphy/Phione in the cave will be aggressive and try to attack you.</li>
+                </ul>
+                <li>Wait until night time for Manaphy/Phione to respawn.</li>
+                <ul>
+                    <li>This process will advance the spawner seed by +1, and can be repeated until you reach your target frame.</li>
+                </ul>
+            </ol>
+        </details>
+
+        <small>Credit to Anubis (Sibuna_Switch on Twitter) and Unknown Warrior (unownwarrior on Discord) for helping to understand Phione respawn mechanics and researching how the spawners behave.</small>
+
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 4 -</span> Tracking Spawner Seed (Manaphy/Phione)</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/tracking-seed-manaphy-phione.gif" alt="spawner-example-unique-cfw-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/tracking-seed-manaphy-phione.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="tracking-seeds-spawner-manaphy-phione">
+        <span class="fw-bold text-light">Tracking Spawner Seed</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>To track your spawner seed you will first need to paste your spawner seed from the SysBot logs into the Spawner RNG script. The script should have been properly setup earlier, if you need to set the script up again for whatever reason do this now (<a href="#spawner-rng-script-setup-la">see here</a>), then revisit this section after you have done so.</p>
+
+        <ol>
+            <li>Ensure that you have advanced the spawner seed at least once. This is required as the initially spawned Pok&eacute;mon is not tracked by the script.</li>
+            <li>Open the <code class="fw-bold">Logs</code> tab of SysBot and copy the seed from your spawner. If your target is Phione then you will need to copy the seed from the final spawner.</li>
+            <li>Open the LINQPad script and paste the group seed into the following section:</li>
+
+            <div class="alert border-dark">
+                <code class="fw-bold" style="color: #0a7a00;">
+                    // Set your group seed here.<br />
+                </code>
+                <code class="fw-bold" style="color: #1f53ae;">ulong</code> <code class="fw-bold" style="color: #000f;">group_seed =</code> <code class="fw-bold" style="color: #c882ff;">seedhere</code><code class="fw-bold" style="color: #000f;">;</code>
+            </div>
+
+            <li>Now set your search range into the following section:</li>
+
+            <div class="alert border-dark">
+                <code class="fw-bold" style="color: #0a7a00;">
+                    // Set this for how far you want to search.<br />
+                </code>
+                <code class="fw-bold" style="color: #1f53ae;">int</code> <code class="fw-bold" style="color: #000f;">maxAdvance =</code> <code class="fw-bold" style="color: #c882ff;">searchrangehere</code><code class="fw-bold" style="color: #c882ff;">seedhere</code><code class="fw-bold" style="color: #000f;">;</code>
+            </div>
+
+            <li>Now press the <code class="fw-bold" style="color: green;">▶</code> at the top of the LINQPad to see a list of upcoming advances. You should see your target Pok&eacute;mon in the search results.</li>
+            <li>Engage in battle with your target Pok&eacute;mon and open PokeViewer.NET, then connect to the program and navigate to the <code class="fw-bold">View</code> tab.</li>
+            <li>Inspect the Pok&eacute;mon you are in battle with and confirm that the PID/IVs/Nature match the first result of the LINQPad script output.</li>
+            <ul>
+                <li>If there are multiple Phione on the field you will need to find the one that matches the script output. Each Phione has an independent spawner seed.</li>
+            </ul>
+        </ol>
+
+        <p>Once you have confirmed and are tracking your spawner seed you can continue <a href="#result-found-spawner-manaphy-phione">advancing the seed</a> until you reach your target frame. For Phione it is recommended to only knock out the required Phione as this will make it easier to track as it will be the only Phione that actually respawns.</p>
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 5 -</span> Result Found (Manaphy/Phione)</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/target-seed-hit-manaphy-phione.png" alt="spawner-example-unique-cfw-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/target-seed-hit-manaphy-phione.png">
+
+<p>After advancing the spawner seed 2 times and engaging Phione in battle we can see that the details match what is expected by the spawner script. <span class="fw-bold">That's all there is to it!</span></p>

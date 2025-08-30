@@ -1,0 +1,315 @@
+---
+layout: default
+title: Legends Arceus RNG Guide (Dialga / Palkia)
+permalink: /cfw/la/legendary/main-rng/dialga-palkia
+---
+
+<div class="title" style="background-color: #6f3b97;">
+    <h1 class="text-light text-center pt-3 pb-3">Dialga/Palkia RNG Abuse</h1>
+</div>
+<hr />
+
+<p>This section of the guide aims to provide a worked example for how to RNG abuse Dialga/Palkia (Origin Form and Base Form). Ensure that the <u>Autosave is disabled</u> and that you have a <u>full team of 6 Pok&eacute;mon</u> before beginning this portion of the guide. This provides a safety net for failed targets and makes it easier to check results using PokeViewer.</p>
+
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Important -</span> If you've reached this point, you should have already completed the initial setup and acquired a basic understanding of how to utilize Moarencounterbots, the Main RNG calculation script &amp; PokeViewer.NET. If you do not yet have an understanding of how to use all of the relevant tools, <a href="/cfw/la/general/main-rng/setup" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">click here to go back</a>.
+</div>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="cutscene-and-death-method">
+        <span class="fw-bold text-light">Picking Your Method</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Choose the method you prefer for this encounter; Dialga/Palkia are generated at different times depending on the method used. The two available methods will be named the <u>Cutscene Method</u> and the <u>Death Method</u>. After reviewing the descriptions of each method, choose the one that best suits your preferences and click the hyperlink to jump to the relevant section.</p><hr />
+
+        <h6><a href="#cutscene-method">Cutscene Method</a></h6>
+        <h6><small>Can be used for base form and origin form Dialga/Palkia, suitable for more experienced players.</small></h6>
+        <p>Cutscene method requires skipping a cutscene at a precise moment in order to initiate a battle with Dialga/Palkia. The internal details of the Pok&eacute;mon will be generated after skipping the cutscene and entering the battle.</p>
+
+        <p>If you choose this method for origin form Dialga/Palkia, it's crucial to be capable of consistently defeating the boss battle without losing. Losing to the boss will cause the Pok&eacute;mon to regenerate, causing you to miss your target frame.</p>
+        <hr />
+
+        <h6><a href="#death-method">Death Method</a></h6>
+        <h6><small>Only useable for origin form Dialga/Palkia. This method is beginner friendly.</small></h6>
+        <p>The Death Method involves intentionally losing towards the end of the battle with Dialga or Palkia. The internal details of the Pok&eacute;mon will regenerate after re-entering the battle from the continue screen. This allows you to retain your boss battle progress and defeat the boss more easily.</p>
+
+        <p>This method is more forgiving because you're allowed to lose to the boss battle without missing your target. However, it will involve waiting for a longer time period before reaching your target frame.</p>
+    </div>
+</div>
+<br>
+
+<hr /><div class="title" style="background-color: #6f3b97;" id="cutscene-method">
+    <h1 class="text-light text-center pt-3 pb-3">Cutscene Method</h1>
+</div>
+<hr />
+
+<p>If you are reading this text you have decided to use the Cutscene Method, here you can find a worked example of how to RNG abuse Dialga/Palkia using this method.</p>
+
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Reminder -</span> Losing to the origin boss battle will cause it to regenerate, which will make your results inaccurate. Ensure you can defeat the boss in one attempt or use the <a href="#death-method">Death Method</a> instead.
+</div>
+
+<span class="fw-bold">Figure 1 -</span> Calculating Delay (Immediate Cutscene Skip)<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/delay-calc-origin-cutscene-method.png" alt="main-rng-dialga-palkia-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/delay-calc-origin-cutscene-method.png"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="cutscene-method-delay-calculation">
+        <span class="fw-bold text-light">Getting Started (Delay Calculation)</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>You will need to calculate the rough delay for this encounter. The term 'delay' refers to how long it takes for the Pok&eacute;mon to generate after the final A Press. Defeating the boss may be difficult at first, so the delay calculation process can also be used to become familiar with how to win the boss battle.</p>
+
+        <p>Reach the screen of the <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/final-a-press-cutscene-method.jpg">the screen of the final A press</a>, from here, pick the method you want to use.</p><hr />
+
+        <h6><span class="fw-bold">Method 1 (Immediate Cutscene Skip)</span></h6>
+        <p>This method is simpler since you only target one delay, but will require you to be consistent at skipping the cutscene.</p>
+
+        <ul>
+            <li>Press the <code span class="fw-bold">Home button (⌂)</code> to freeze the RNG state, then check your current seed by running <code span class="fw-bold">EncBotCopySeedLA</code> in Moarencounterbots.</li>
+            <p></p>
+            <li>Paste your current seed into the Main RNG script, then search without filters. This will provide the starting frame.</li>
+            <p></p>
+            <li>Press the <code span class="fw-bold">Home button (⌂)</code> to unpause the game and quickly press the <code span class="fw-bold">A button</code>. The cutscene will begin and then fade out to a black screen.</li>
+            <p></p>
+            <li>Once the next part of the cutscene loads, attempt to skip it as fast as possible by pressing the <code span class="fw-bold">+ button</code> followed by the <code span class="fw-bold">X button</code>.</li>
+            <p></p>
+            <li>Defeat the boss (origin form) or enter the battle (base form) and inspect the result using PokeViewer to find the frame it was generated on. That will be your delay for this attempt.</li>
+        </ul>
+        <hr />
+
+        <h6><span class="fw-bold">Method 2 (Targeted Cutscene Skip)</span></h6>
+        <p>This method is more consistent, but requires approximating the first delay in order to more precisely hit a second delay. The suggestion is to press A on the final screen when you are roughly 130 advancements away from your target frame.</p>
+
+        <ul>
+            <li>Press the <code span class="fw-bold">Home button (⌂)</code> to freeze the RNG state, then check your current seed by running <code span class="fw-bold">EncBotCopySeedLA</code> in Moarencounterbots.</li>
+            <p></p>
+            <li>Unpause the game, then advance the RNG state until you are ~130 advances away from the target, then press the <code span class="fw-bold">A button</code> to start the cutscene.</li>
+            <p></p>
+            <li>Press the <code span class="fw-bold">+ button</code> to open the option to skip the cutscene, observe the <code span class="fw-bold">Logs</code> of Moarencounterbots until 110-120 frames have passed.</li>
+            <p></p>
+            <li>Press the <code span class="fw-bold">Home button (⌂)</code> to freeze the RNG state, then check your current seed by running <code span class="fw-bold">EncBotCopySeedLA</code> in Moarencounterbots.</li>
+            <p></p>
+            <li>Unpause the game while quickly press the <code span class="fw-bold">X button</code> to skip the cutscene when you are around 0-5 frames away from your target.</li>
+            <p></p>
+            <li>Defeat the boss (origin form) or enter the battle (base form) and inspect the result using PokeViewer to find the frame it was generated on. That will be your delay for this attempt.</li>
+        </ul>
+
+        <p>The "delay" for either form is variable, for this reason it is recommended to repeat this process a few times to see which delay you are most commonly experiencing.</p>
+
+        <p>The example will continue with the Immediate Cutscene Skip method, but you can use the Targeted Cutscene Skip in a similar fashion, and both methods can be used for Origin and non Origin form Dialga/Palkia respectively.</p>
+
+    </div>
+</div>
+<br>
+
+<p>After following the delay calculation steps and searching for the PID of the encountered Pok&eacute;mon, we find that it was generated on frame 58. Therefore, our delay for this attempt is 58. After 5 attempts, we have the following delay values:</p>
+
+<table class="table table-striped" style="width:100%">
+    <thead class="table text-white" style="background-color: #6f3b97;">
+    <th scope="col">Attempt</th>
+    <th scope="col">Delay Value</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><span class="fw-bold">Attempt 1</span></td>
+            <td>58</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">Attempt 2</span></td>
+            <td>57</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">Attempt 3</span></td>
+            <td>65</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">Attempt 4</span></td>
+            <td>62</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">Attempt 5</span></td>
+            <td>58</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>This means a safe delay value to target in future attempts is 58-65. The delay values shown here are based on how quickly I was able to skip the cutscene and enter the battle with Palkia; your values may vary depending on the speed at which you skip the cutscene or if you choose not to skip it at all.</p>
+
+<p>After finding your delay range, take note of the most common value for future attempts. You will now need to set your search filters to match your desired target.</p>
+
+<span class="fw-bold">Figure 2 -</span> Setting Search Filters<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/filters-origin-cutscene-method.gif" alt="main-rng-dialga-palkia-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/filters-origin-cutscene-method.gif"><p></p>
+
+<p>In this example, the filters are configured to search for any Palkia with 6 perfect IVs (31/31/31/31/31/31). You can further customize the filters if desired, such as specifying a particular nature or optimizing for 0 IV values, such as 0 Attack.</p>
+
+<p>After setting your search filters, add <code span class="fw-bold">EncBotCopySeedLA</code> to the list of active bots, then start. Paste your seed into the script to begin searching for targets. If you do not find a suitable target, reset the game to refresh your seed and try again.</p>
+
+<span class="fw-bold">Figure 3 -</span> Target Found<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/target-frame-found-origin-cutscene-method.gif" alt="main-rng-dialga-palkia-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/target-frame-found-origin-cutscene-method.gif"><p></p>
+
+<p>Great! We discovered a 6IV Docile Palkia after 24,864 advances within a cluster of 4. A cluster refers to a group of frames that produce the same end result; the larger the cluster, the greater the chances of hitting the correct target frame.</p>
+
+<p>Now, we need to advance close to our target frame. Monitor your RNG state by running <code span class="fw-bold">EncBotRNGMonitorLA</code> in Moarencounterbots; this will track the number of advancements that occur in real time.</p>
+
+<span class="fw-bold">Figure 4 -</span> Monitoring RNG State<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/rng-state-monitoring.gif" alt="main-rng-dialga-palkia-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/rng-state-monitoring.gif"><p></p>
+
+<p>The RNG state at the Spear Pillar advances at a slow rate. Moving to a more populated area allows you to advance the RNG state much more quickly. In the example image above, the player is standing next to a large body of water in an area densely populated with Pok&eacute;mon.</p>
+
+<p>Consider leaving Spear Pillar and heading to a location where the RNG state advances more rapidly if you need to cover a large amount of frame advancements. If you have moved locations, make sure to leave enough time to reposition yourself to avoid overshooting your target frame.</p>
+
+<details>
+    <summary><span class="fw-bold">Example</span></summary>
+    <p>If it takes you roughly 3,000 frames to get back to Spear Pillar from your position, and roughly 7,000 frames to defeat Palkia, start to head back to Spear Pillar at roughly 10,000 frames away from your target, leave enough time to reposition yourself to avoid overshooting!</p>
+</details><p></p>
+
+<span class="fw-bold">Figure 5 -</span> Advancing To The Target<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/advancing-to-target-cutscene-method.gif" alt="main-rng-dialga-palkia-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/advancing-to-target-cutscene-method.gif"><p></p>
+
+<p>We are now back at Spear Pillar and approximately 2253 frames away from the target. Earlier, we calculated a rough delay of 58-65, which means the goal now is to press the A button on frame approximately 2188-2195, then skip the cutscene as quickly as possible.</p>
+
+<p><code span class="fw-bold">2253 (target) - 58 (delay) = 2195 (new target)</code></p>
+
+<span class="fw-bold">Figure 6 -</span> Target Frame Hit<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/hitting-target-frame-cutscene-method.png" alt="main-rng-dialga-palkia-6" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/hitting-target-frame-cutscene-method.png"><p></p>
+
+<p>Get to <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/final-a-press-cutscene-method.jpg">the screen of the final A press</a>, and let <code span class="fw-bold">EncBotRNGMonitorLA</code> run until the Logs tab displays the correct target frame, then press the <code span class="fw-bold">A button</code>, then skip the cutscene as fast as possible for the best chances of hitting the correct target frame.</p>
+
+<p>It is now time to defeat the boss, then inspect the Palkia using <a href="https://github.com/zyro670/PokeViewer.NET/wiki/2.-Box-View">PokeViewer.NET Box Viewer</a> to see if we hit the correct target. If you are targeting the base form Dialga/Palkia you can use the basic Battle View function instead.</p>
+
+<span class="fw-bold">Figure 7 -</span> Result Found!<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/result-found-origin-cutscene-method.png" alt="main-rng-dialga-palkia-7" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/result-found-origin-cutscene-method.png"><p></p>
+
+<p><span class="fw-bold">We hit our target frame and have secured a Palkia with 6 perfect IVs! That's all there is to it!</span></p>
+
+<div class="alert alert-success" style="border: 1px solid #28a745; border-radius: 5px; padding: 15px;">
+    <span class="fw-bold">Final Notes -</span> Keen eyed readers may notice that the example uses PKHeX to view the box slot that contains our Pok&eacute;mon, PokeViewer is considered to be more user friendly and does the same job.
+</div>
+
+<hr /><div class="title" style="background-color: #6f3b97;" id="death-method">
+    <h1 class="text-light text-center pt-3 pb-3">Death Method</h1>
+</div>
+<hr />
+
+<p>If you are reading this text you have decided to use the Death Method, here you can find a worked example of how to RNG abuse Origin Dialga/Palkia using this method.</p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="death-method-delay-calculation">
+        <span class="fw-bold text-light">Getting Started (Delay Calculation)</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>You will need to calculate the rough delay for this encounter. The term 'delay' refers to how long it takes for the Pok&eacute;mon to generate after the final A Press. Defeating the boss may be difficult at first, so the delay calculation process can also be used to become familiar with how to win the boss battle.</p>
+
+        <h6><span class="fw-bold">Delay Calculation Method</span></h6>
+        <ul>
+            <li>Enter the boss battle, then whittle the HP of the boss down to a single bar, then intentionally take damage and lose the fight. Now skip through the dialog until you reach <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/final-a-press-death-method.jpg">the screen of the final A press</a>.</li>
+            <p></p>
+            <li>Enter the Switch home menu to freeze the RNG state, then check your current seed by running <code span class="fw-bold">EncBotCopySeedLA</code> in Moarencounterbots.</li>
+            <p></p>
+            <li>Paste in your current seed into the RNG script, then search without filters. This will provide the starting frame.</li>
+            <p></p>
+            <li>Press the <code span class="fw-bold">Home button (⌂)</code> again to unpause the game and quickly press the <code span class="fw-bold">A button</code>. This will put you back into battle with a freshly generated boss.</li>
+            <p></p>
+            <li>Defeat the boss and inspect the result using PokeViewer to find the frame it was generated on. That will be your delay for this attempt.</li>
+        </ul>
+    </div>
+</div>
+<br>
+
+<span class="fw-bold">Figure 1 -</span> Calculating Delay (Death Method)<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/delay-calc-origin-death-method.png" alt="main-rng-dialga-palkia-8" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/delay-calc-origin-death-method.png"><p></p>
+
+<p>After following the delay calculation steps and searching for the PID of the encountered Arceus, we find that it was generated on frame 34. Therefore, our delay for this attempt is 34. After 5 attempts, we have the following delay values:</p>
+
+<table class="table table-striped" style="width:100%">
+    <thead class="table text-white" style="background-color: #6f3b97;">
+    <th scope="col">Attempt</th>
+    <th scope="col">Delay Value</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><span class="fw-bold">Attempt 1</span></td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">Attempt 2</span></td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">Attempt 3</span></td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">Attempt 4</span></td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">Attempt 5</span></td>
+            <td>3</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>This means a safe delay value to target in future attempts is 34-40. The delay values shown here are based on how quickly I was mash through the final screen before Arceus was generated; your values may vary depending on how quickly you are able to mash the A button to generate Arceus.</p>
+
+<p>After finding your delay range, take note of the most common value for future attempts. You will now need to set your search filters to match your desired target.</p>
+
+<span class="fw-bold">Figure 2 -</span> Setting Search Filters<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/filters-origin-cutscene-method.gif" alt="main-rng-dialga-palkia-9" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/filters-origin-cutscene-method.gif"><p></p>
+
+<p>In this example, the filters are configured to search for any Palkia with 6 perfect IVs (31/31/31/31/31/31). You can further customize the filters if desired, such as specifying a particular nature or optimizing for 0 IV values, such as 0 Attack.</p>
+
+<p>After setting your search filters, add <code span class="fw-bold">EncBotCopySeedLA</code> to the list of active bots, then start. Paste your seed into the script to begin searching for targets. If you do not find a suitable target, reset the game to refresh your seed and try again.</p>
+
+<span class="fw-bold">Figure 3 -</span> Target Found<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/target-frame-found-origin-death-method.gif" alt="main-rng-dialga-palkia-10" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/target-frame-found-origin-death-method.gif"><p></p>
+
+<p>Great! We discovered a 6IV Hardy Arceus after 49,350 advances within a cluster of 9. A cluster refers to a group of frames that produce the same end result; the larger the cluster, the greater the chances of hitting the correct target frame.</p>
+
+<p>Now, we need to advance close to our target frame. Monitor your RNG state by running <code span class="fw-bold">EncBotRNGMonitorLA</code> in Moarencounterbots; this will track the number of advancements that occur in real time.</p>
+
+<span class="fw-bold">Figure 4 -</span> Monitoring RNG State<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/rng-state-monitoring.gif" alt="main-rng-dialga-palkia-11" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/rng-state-monitoring.gif"><p></p>
+
+<p>The RNG state at the Spear Pillar advances at a slow rate. Moving to a more populated area allows you to advance the RNG state much more quickly. In the example image above, the player is standing next to a large body of water in an area densely populated with Pok&eacute;mon.</p>
+
+<p>Consider leaving Spear Pillar and heading to a location where the RNG state advances more rapidly if you need to cover a large amount of frame advancements. If you have moved locations, make sure to leave enough time to reposition yourself to avoid overshooting your target frame.</p>
+
+<details>
+    <summary><span class="fw-bold">Example</span></summary>
+    <p>If it takes you roughly 3,000 frames to get back to Spear Pillar from your position, and roughly 7,000 frames to defeat the boss, start to head back to Spear Pillar at roughly 10,000 frames away from your target, leave enough time to reposition yourself to avoid overshooting!</p>
+</details><p></p>
+
+<span class="fw-bold">Figure 5 -</span> Advancing To The Target<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/advancing-to-target-death-method.gif" alt="main-rng-dialga-palkia-12" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/advancing-to-target-death-method.gif"><p></p>
+
+<p>We are now back at Spear Pillar and ~10000 frames away from the target, it can take up to 10,000 advances to defeat the boss on average. It is recommended to check how long it takes you to win, as any time during or after the battle will advance the RNG state slowly.</p>
+
+<p>On average it takes me 5,000-7,000 frames to defeat the boss, so there is enough time to defeat it and position myself on the screen of the final A press and ultimately to avoid overshooting the target frame.</p>
+
+<span class="fw-bold">Figure 6 -</span> Getting Into Position<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/getting-into-position-death-method.jpg" alt="main-rng-dialga-palkia-13" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/getting-into-position-death-method.jpg"><p></p>
+
+<p>Intentionally lose to the boss at this point, then get to the screen of the <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/final-a-press-death-method.jpg">the screen of the final A press</a>. Let <code span class="fw-bold">EncBotRNGMonitorLA</code> run until the logs show that you are close to the target frame. After doing so, press the <code span class="fw-bold">Home button (⌂)</code> to freeze the RNG state, you will now need to remove and re-add the bot, then start it again to begin monitoring the seed from advance 0.</p>
+
+<p>Paste the new seed into the script and take note of the new target frame, keep the game on the Home menu after doing so, you will now need to prepare to hit your target.</p>
+
+<span class="fw-bold">Figure 7 -</span> Hitting The Target Frame<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/hitting-target-frame-death-method.png" alt="main-rng-dialga-palkia-14" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/hitting-target-frame-death-method.png"><p></p>
+
+<p>After searching for our target using the script once more, we can now see that the target is on advance 779. Earlier, the calculated delay is roughly ~3, this means that once we have reached frame ~776. We have advanced the seed to the correct point and can begin mashing the <code span class="fw-bold">A button</code> as quickly as possible.</p>
+
+<p><code span class="fw-bold">x (earliest target frame) - y (delay) = z (frame to press A)</code></p>
+
+<p>Defeat the boss, then use <a href="https://github.com/zyro670/PokeViewer.NET/wiki/2.-Box-View">PokeViewer.NET Box Viewer</a> to confirm that the correct target has been hit.</p>
+
+<span class="fw-bold">Figure 8 -</span> Result Found!<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/result-found-origin-death-method.png" alt="main-rng-dialga-palkia-15" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/dialga-palkia/result-found-origin-death-method.png"><p></p>
+
+<p><span class="fw-bold">We hit our target frame and have secured a Palkia with 6 perfect IVs! That's all there is to it!</span></p>
+
+<div class="alert alert-success" style="border: 1px solid #28a745; border-radius: 5px; padding: 15px;">
+    <span class="fw-bold">Final Notes -</span> Keen eyed readers may notice that the example uses PKHeX to view the box slot that contains our Pok&eacute;mon, PokeViewer is considered to be more user friendly and does the same job.
+</div>

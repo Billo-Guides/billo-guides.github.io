@@ -1,0 +1,131 @@
+---
+layout: default
+title: Legends Arceus RNG Guide (Regigigas)
+permalink: /cfw/la/legendary/main-rng/regigigas
+---
+
+<div class="title" style="background-color: #6f3b97;">
+    <h1 class="text-light text-center pt-3 pb-3">Regigigas RNG Abuse</h1>
+</div>
+<hr />
+
+<p>This section of the guide aims to provide a worked example for how to RNG abuse Regigigas. Ensure that the <u>Autosave is disabled</u> before attempting to follow this guide.</p>
+
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Important -</span> If you've reached this point, you should have already completed the initial setup and acquired a basic understanding of how to utilize Moarencounterbots, the Main RNG calculation script &amp; PokeViewer.NET. If you do not yet have an understanding of how to use all of the relevant tools, <a href="/cfw/la/general/main-rng/setup" target="_blank" rel="noopener noreferrer" style="color: #721c24; text-decoration: underline;">click here to go back</a>.
+</div>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="delay-calc-regigigas">
+        <span class="fw-bold text-light">Getting Started (Delay Calculation)</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>You will need to calculate the rough delay for this encounter. The term 'delay' refers to how long it takes for the Pok&eacute;mon to generate after the final A Press. Since the number of frames that advance during the cutscene is variable, it's important to take a few practice attempts to determine a delay that is consistent for you.</p>
+
+        <h6><span class="fw-bold">Calculating Delay (Step-By-Step)</span></h6>
+        <ul>
+            <li>Save outside Regigigas then walk towards it to begin the cutscene, a text box will appear, this is <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/regigigas/regigigas-final-a-press.jpg">the screen of the final A press</a>.</li>
+            <p></p>
+            <li>Press the <code span class="fw-bold">Home button (⌂)</code> to freeze the RNG state, then check your current seed by running <code span class="fw-bold">EncBotCopySeedLA</code> in Moarencounterbots.</li>
+            <p></p>
+            <li>Paste your seed produced in the <code span class="fw-bold">Logs</code> tab into the Main RNG script, then search without filters. This will provide the starting frame.</li>
+            <p></p>
+            <li>Quickly unpause the game, then mash the <code span class="fw-bold">A Button</code> as quickly as possible to initiate the cutscene and enter the battle.</li>
+            <p></p>
+            <li>Use PokeViewer.NET <code span class="fw-bold">View</code> function to read the details of the encounter, take note of the PID of the Regigigas.</li>
+            <p></p>
+            <li>Search for the PID in the search results of the Main RNG script, you can manually search through results or use <code span class="fw-bold">CTRL+F</code>).</li>
+            <p></p>
+            <li>Take note of advancement that generated Regigigas, this will be your delay for this attempt. Repeat this process a few more times to get a rough average delay.</li>
+        </ul>
+    </div>
+</div>
+<br>
+
+<span class="fw-bold">Figure 1 -</span> Calculating Delay<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/regigigas/delay-calc-regigigas.gif" alt="main-rng-regigigas-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/regigigas/delay-calc-regigigas.gif"><p></p>
+
+<p>After following the delay calculation steps and searching for the PID of the encountered Regigigas, we find that it was generated on frame 13. Therefore, our delay for this attempt is 13. After 5 attempts, we have the following delay values:</p>
+
+<table class="table table-striped" style="width:100%">
+    <thead class="table text-white" style="background-color: #6f3b97;">
+    <th scope="col">Attempt</th>
+    <th scope="col">Delay Value</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><span class="fw-bold">Attempt 1</span></td>
+            <td>13</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">Attempt 2</span></td>
+            <td>13</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">Attempt 3</span></td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">Attempt 4</span></td>
+            <td>11</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">Attempt 5</span></td>
+            <td>16</td>
+        </tr>
+
+    </tbody>
+</table>
+
+<p>This means a safe delay value to target in future attempts is 10-16. The delay values shown here are based on how quickly I was able to mash the A button to get into the battle, your results may vary.</p>
+
+<p><span class="fw-bold">Now that we have a rough delay range, it's time to focus on finding a suitable seed and target frame.</span></p>
+
+<span class="fw-bold">Figure 2 -</span> Setting Search Filters<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/regigigas/filters-regigigas.gif" alt="main-rng-regigigas-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/regigigas/filters-regigigas.gif"><p></p>
+
+<p>In this example, the filters are configured to search for any Regigigas with 6 perfect IVs (31/31/31/31/31/31). You can further customize the filters if desired, such as specifying a particular nature or optimizing for 0 IV values, such as 0 Attack.</p>
+
+<span class="fw-bold">Figure 3 -</span> Target Found<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/regigigas/target-frame-found-regigigas.png" alt="main-rng-regigigas-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/regigigas/target-frame-found-regigigas.png"><p></p>
+
+<p>Great! We discovered a Serious natured Regigigas in 1888 advances within a cluster of 8. A cluster refers to a group of frames that produce the same end result; the larger the cluster, the greater the chances of hitting the correct target frame.</p>
+
+<p>Now, we need to advance close to our target frame. Monitor your RNG state by running <code span class="fw-bold">EncBotRNGMonitorLA</code> in Moarencounterbots; this will track the number of advancements that occur in real time.</p>
+
+<span class="fw-bold">Figure 4 -</span> Monitoring RNG State<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/regigigas/rng-state-monitoring.gif" alt="main-rng-regigigas-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/regigigas/rng-state-monitoring.gif"><p></p>
+
+<p>The RNG state at in Snowpoint Temple advances at a slow rate. Moving to a more populated area allows you to advance the RNG state much more quickly. In the example image above, the player is standing next to a large body of water in an area densely populated with Pok&eacute;mon.</p>
+
+<p>Consider leaving Snowpoint Temple and heading to a location where the RNG state advances more rapidly if you need to cover a large amount of frame advancements. If you have moved locations, make sure to leave enough time to reposition yourself to avoid overshooting your target frame.</p>
+
+<details>
+    <summary><span class="fw-bold">Example</span></summary>
+    <p>If it takes you roughly 3,000 frames to get back to Regigigas from your position, start to head back to it at roughly ~3500 frames away from your target, leave enough time to reposition yourself to avoid overshooting!</p>
+</details><p></p>
+
+<span class="fw-bold">Figure 5 -</span> Advancing To The Target<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/regigigas/advancing-to-target-regigigas.png" alt="main-rng-regigigas-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/regigigas/advancing-to-target-regigigas.png"><p></p>
+
+<p>We are now back next to Regigigas and 194 frames away from the target, now it is time to get to the screen of the final A press and wait for the optimal time to initiate the battle.</p>
+
+<span class="fw-bold">Figure 6 -</span> Final A Press<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/regigigas/regigigas-final-a-press.jpg" alt="main-rng-regigigas-6" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/regigigas/regigigas-final-a-press.jpg"><p></p>
+
+<p>Stay on the final A press screen (pictured above), and let <code span class="fw-bold">EncBotRNGMonitorLA</code> run until the Logs tab displays the correct target frame. You can use the <code span class="fw-bold">Home button (⌂)</code> to close in on your target frame at your own pace.</p>
+
+<p><code span class="fw-bold">x (earliest target frame) - y (delay) = z (frame to press A)</code></p>
+
+<span class="fw-bold">Figure 7 -</span> Hitting The Target<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/regigigas/hitting-target-frame-regigigas.png" alt="main-rng-regigigas-7" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/regigigas/hitting-target-frame-regigigas.png"><p></p>
+
+<p>Here we can see the target is now on frame 92 after re-entering the seed into the script. The calculated delay from earlier is roughly 10-16. This means that once the SysBot log output displays that we are on frame ~82 we have reached the desired target frame.</p>
+
+<p>Once you reach the expected target frame, begin spamming the <code span class="fw-bold">A button</code> as quickly as possible, then inspect the Regigigas using <a href="https://github.com/zyro670/PokeViewer.NET/wiki/">PokeViewer.NET View function</a> to see if we hit the correct target.</p>
+
+<span class="fw-bold">Figure 8 -</span> Result Found!<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/regigigas/result-found-regigigas.jpg" alt="main-rng-regigigas-8" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/regigigas/result-found-regigigas.jpg"><p></p>
+
+<p><span class="fw-bold">We hit our target frame and have secured a Regigigas with 6 perfect IVs! That's all there is to it!</span></p>

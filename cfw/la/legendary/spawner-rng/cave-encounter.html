@@ -1,0 +1,148 @@
+﻿<p><span class="fw-bold">Figure 1 -</span> In-game Setup (Cave)</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/ingame-setup-cave-spawner.jpg" alt="spawner-example-cave-cfw-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/ingame-setup-cave-spawner.jpg">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="in-game-setup-spawner-cave">
+        <span class="fw-bold text-light">In-game Setup (Cave)</span>
+    </div>
+    <div class="card-body card-bg">
+        <h6 span class="fw-bold">Resources</h6>
+        <p>It is recommended to stack plenty of resources before getting started, as you will be unable to leave the area back to Jubilife after you have found a desirable target seed. Examples of good resources to bring along include:</p>
+
+        <ul>
+            <li>Throwable items (e.g Ball of Mud, Sticky Glob) - Used to remove the protective barrier surrounding a Pok&eacute;mon.</li>
+            <li>Pok&eacute; Balls (e.g Ultra, Gigaton, Jet Balls) - You will need enough to be able to capture your target Pok&eacute;mon.</li>
+            <li>Healing items (e.g Max Potions, Elixirs) - We can revisit camp at any time, so carrying spare healing items is optional but recommended.</li>
+        </ul>
+
+        <h6 span class="fw-bold">Party Members:</h6>
+        <p>You should bring along party members that are capable of consistently knocking out your target Pok&eacute;mon within 1-2 turns to speed up the process of advancing your spawner seed. Alongside an attacking Pok&eacute;mon you may wish to bring along a party member that can weaken your target Pok&eacute;mon and make capture easier by inflicting status conditions.</p>
+
+        <h6 span class="fw-bold">Character Positioning:</h6>
+        <ol>
+            <li>Gather the required resources and party members, then navigate to the cave that contains your target.</li>
+            <li>Stand outside the cave facing the entrance, close enough so that the <code class="fw-bold">A Enter</code> text box appears (see above image).</li>
+            <li>Save the game in this state, then disconnect any extra controllers or attach your JoyCons to the console (required to use SysBot routines).</li>
+        </ol>
+
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 2 -</span> Bot Setup (Cave)</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/bot-toggles-spawner-cave.gif" alt="spawner-example-cave-cfw-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/bot-toggles-spawner-cave.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="bot-toggles-spawner-cave">
+        <span class="fw-bold text-light">Bot Setup</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>At this stage your bot should already be configured to search for your desired target, refer to the <a href="#spawner-sysbot-setup-la">SysBot Setup</a> instructions above if you have not already done so. In this instance, our bot is configured to search for Heatran with a <code class="fw-bold">SearchDepth</code> value of 10.</p>
+
+        <h6 span class="fw-bold">Stop Conditions</h6>
+        <p>After completing all of the initial bot configurations you will need to set your <code class="fw-bold">StopConditions</code>. This essentially decides when the bot will stop searching for a target (result has been found). To set your Stop Conditions do the following:</p>
+
+        <ol>
+            <li>In the <code class="fw-bold">Hub</code> tab of SysBot, navigate to the <code class="fw-bold">StopConditions</code> dropdown menu. Here we can see various different fields.</li>
+            <li>If you wish to filter for a specific nature, set the <code class="fw-bold">TargetNature</code>.</li>
+            <ul>
+                <li>You can only target one specific nature! Set this to <code class="fw-bold">Random</code> if you do not care or wish to target more than 1 nature.</li>
+            </ul>
+            <li>If you wish to filter for IVs, set the <code class="fw-bold">TargetMinIVs</code> &amp; <code class="fw-bold">TargetMaxIVs</code>.</li>
+            <ul>
+                <li>IVs are listed in this order: HP/ATK/DEF/SPATK/SPDEF/SPE. IVs you do not wish to check can be set to an <code class="fw-bold">x</code>.</li>
+            </ul>
+            <li>Keep <code class="fw-bold">ShinyTarget</code> &amp; <code class="fw-bold">HeightTarget</code> disabled in all cases.</li>
+            <ul>
+                <li>All of the encounters are shiny locked with fixed height, activating these filters will cause you to never find a result.</li>
+            </ul>
+            <li>After you have set your desired conditions you will need to restart the program by closing and re-opening <code class="fw-bold">SysBot.exe</code>.</li>
+            <ul>
+                <li>Restarting the program will save any changes you have made to your <code class="fw-bold">StopConditions</code>. This is a required step that should not be skipped.</li>
+            </ul>
+        </ol>
+
+        <h6 span class="fw-bold">Adding &amp; Starting Your Bot</h6>
+        <p>After confirming your <code class="fw-bold">EncounterLA</code> settings and <code class="fw-bold">StopConditions</code> have been set properly you will need to add the <code class="fw-bold">EncBotOWLCheckRNGLA</code> bot by doing the following:</p>
+
+        <ol>
+            <li>Head back to the <code span class="fw-bold">Bots</code> tab and select <code span class="fw-bold">EncBotOWLCheckRNG</code> in the dropdown menu on the right.</li>
+            <li>Type the IP address of your console into the IP field and add the bot, you are now ready to hunt for your target Pok&eacute;mon.</li>
+            <li>Ensure that your in-game position is correct by orienting yourself with Figure 1, then click the <code class="fw-bold">Start All</code> button.</li>
+            <li>If everything is done correctly you should now see that your bot has begun searching for a target. Wait until a result has been found.</li>
+        </ol>
+
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 3 -</span> Target Found (Cave)</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/target-found-cave.png" alt="spawner-example-cave-cfw-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/target-found-cave.png">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="target-found-spawner-cave">
+        <span class="fw-bold text-light">Target Found</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>A Heatran that matches our <code class="fw-bold">StopConditions</code> will appear after 9 advances. You will need to advance the spawner seed at least once to be able to track your current seed using the Spawner RNG Script. For Uxie, Mesprit, Azelf &amp; Heatran you can advance the spawner seed by doing the following:</p>
+
+        <h6 span class="fw-bold">Advancing The Spawner Seed</h6>
+        <ol>
+            <li>Engage your target Pok&eacute;mon in battle.</li>
+            <li>Knock it out.</li>
+            <li>You should now see that the Pok&eacute;mon has immediately respawned.</li>
+        </ol>
+
+        <p>Each time the Pok&eacute;mon is knocked out and respawned the spawner seed will advance by +1. This can be repeated until you hit your target frame.</p>
+
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 4 -</span> Tracking Spawner Seed (Cave)</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/tracking-seed-cave.gif" alt="spawner-example-cave-cfw-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/tracking-seed-cave.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="tracking-seeds-spawner-cave">
+        <span class="fw-bold text-light">Tracking Spawner Seed</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>To track your spawner seed you will first need to paste your spawner seed from the SysBot logs into the Spawner RNG script. The script should have been properly setup earlier, if you need to set the script up again for whatever reason do this now (<a href="#spawner-rng-script-setup-la">see here</a>), then revisit this section after you have done so.</p>
+
+        <ol>
+            <li>Open the <code class="fw-bold">Logs</code> tab of SysBot and copy the seed from your spawner.</li>
+            <li>Open the LINQPad script and paste the group seed into the following section:</li>
+
+            <div class="alert border-dark">
+                <code class="fw-bold" style="color: #0a7a00;">
+                    // Set your group seed here.<br />
+                </code>
+                <code class="fw-bold" style="color: #1f53ae;">ulong</code> <code class="fw-bold" style="color: #000f;">group_seed =</code> <code class="fw-bold" style="color: #c882ff;">seedhere</code><code class="fw-bold" style="color: #000f;">;</code>
+            </div>
+
+            <li>Now set your search range into the following section:</li>
+
+            <div class="alert border-dark">
+                <code class="fw-bold" style="color: #0a7a00;">
+                    // Set this for how far you want to search.<br />
+                </code>
+                <code class="fw-bold" style="color: #1f53ae;">int</code> <code class="fw-bold" style="color: #000f;">maxAdvance =</code> <code class="fw-bold" style="color: #c882ff;">searchrangehere</code><code class="fw-bold" style="color: #c882ff;">seedhere</code><code class="fw-bold" style="color: #000f;">;</code>
+            </div>
+
+            <li>Now press the <code class="fw-bold" style="color: green;">▶</code> at the top of the LINQPad to see a list of upcoming advances. You should see your target Pok&eacute;mon in the search results.</li>
+            <li>Engage in battle with your target Pok&eacute;mon and open PokeViewer.NET, then connect to the program and navigate to the <code class="fw-bold">View</code> tab.</li>
+            <li>Inspect the Pok&eacute;mon you are in battle with and confirm that the PID/IVs/Nature match the first result of the LINQPad script output.</li>
+            <ul>
+                <li>As stated above, you must have advanced the spawner seed at least once and re-engage in battle with your target Pok&eacute;mon to track your spawner seed.</li>
+            </ul>
+        </ol>
+
+        <p>Once you have confirmed and are tracking your spawner seed you can continue advancing the seed until you reach your target frame by knocking the Pok&eacute;mon out the required number of times.</p>
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 5 -</span> Result Found (Cave)</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/target-seed-hit-cave.png" alt="spawner-example-cave-cfw-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/worked-example/target-seed-hit-cave.png">
+
+<p>After advancing the spawner seed 9 times and engaging Heatran in battle we can see that the details match what is expected by the spawner script. <span class="fw-bold">That's all there is to it!</span></p>
