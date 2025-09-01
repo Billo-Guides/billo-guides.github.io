@@ -1,0 +1,174 @@
+﻿<p><span class="fw-bold">Figure 1 -</span> In-game Setup (Overworld)</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/ingame-setup-overworld-spawner.jpg" alt="spawner-example-overworld-cfw-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/ingame-setup-overworld-spawner.jpg">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="in-game-setup-overworld">
+        <span class="fw-bold text-light">In-game Setup (Overworld)</span>
+    </div>
+    <div class="card-body card-bg">
+        <h6 span class="fw-bold">Resources</h6>
+        <p>It is recommended to stack plenty of resources before getting started, as you will be unable to leave the area back to Jubilife after you have found a desirable target seed. Examples of good resources to bring along include:</p>
+
+        <ul>
+            <li>Throwable items (e.g Ball of Mud, Sticky Glob) - Used to remove the protective barrier surrounding a Pok&eacute;mon.</li>
+            <li>Pok&eacute; Balls (e.g Ultra, Gigaton, Jet Balls) - You will need enough to be able to capture your target Pok&eacute;mon.</li>
+            <li>Healing items (e.g Max Potions, Elixirs) - We can revisit camp at any time, so carrying spare healing items is optional but recommended.</li>
+            <li>Stealth items (e.g Stealth Spray, Smoke Ball) - These items are incredibly useful for the weather genies and Darkrai in particular.</li>
+        </ul>
+
+        <h6 span class="fw-bold">Party Members:</h6>
+        <p>You should bring along party members that are capable of consistently knocking out your target Pok&eacute;mon within 1-2 turns to speed up the process of advancing your spawner seed. Alongside an attacking Pok&eacute;mon you may wish to bring along a party member that can weaken your target Pok&eacute;mon and make capture easier by inflicting status conditions.</p>
+
+        <h6 span class="fw-bold">Character Positioning:</h6>
+        <ol>
+            <li><span class="fw-bold">DISABLE AUTOSAVE</span> in the options menu.</li>
+            <li>Gather the required resources and party members.</li>
+            <li>Stand next to Guard Ress on the outskirts of Jubilife.</li>
+            <li>Save the game in this position.</li>
+        </ol>
+
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 2 -</span> Finding Spawner Seed (Overworld)</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/finding-spawner-seed-overworld.gif" alt="spawner-example-overworld-cfw-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/finding-spawner-seed-overworld.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="finding-and-advancing-spawner-seed-overworld">
+        <span class="fw-bold text-light">Finding &amp; Advancing Spawner Seed (Overworld)</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>To find the seed of a spawner you will need access to a method of dumping <code class="fw-bold">.pa8</code> and to have the Overworld Legendary Seed Solver script functioning properly. If you have not yet found a method of dumping <code class="fw-bold">.pa8</code> files (e.g, a SysBot running Legends: Arceus) or did not configure the Seed Solver script yet, go back and do this now before continuing. For the purposes of the guide it will be assumed that you are using a Legends: Arceus SysBot to dump the required files.</p>
+
+        <p>For the script to generate a valid spawner seed at least two Pok&eacute;mon dumps from the same spawner are required. To dump the required files you will need to follow these steps:</p>
+
+        <h6 span class="fw-bold">Dumping Files</h6>
+        <ol>
+            <li>Enter the cave and save the game, then capture your target Pok&eacute;mon. DO NOT SAVE THE GAME AFTER CAPTURING!</li>
+            <li>Head back to Jubilife and navigate to the trading post, now initiate a dump trade with a Legends: Arceus SysBot.</li>
+            <li>Show the bot the Pok&eacute;mon you caught earlier and it will produce a file. Reset the game once you have the <code class="fw-bold">.pa8</code> file.</li>
+            <li>As we need to show the bot multiple Pok&eacute;mon from the same spawner, you will now need to advance the spawner seed (see instructrions below).</li>
+            <li>Repeat the process from step 1-3, you should now have two different <code class="fw-bold">.pa8</code> files. Place these inside the <code class="fw-bold">pa8</code> folder created earlier.</li>
+            <li>Run the Seed Solver script and pay attention to the output at the bottom. You should now see that a matching group seed has been found.</li>
+            <li>Reset the game again, you should now be back inside the cave with your target Pok&eacute;mon and know your current spawner seed.</li>
+        </ol>
+
+        <h6 span class="fw-bold">Advancing Spawner Seed</h6>
+        <ol>
+            <li>Engage in battle and knock out your target Pok&eacute;mon. Use a super effective move to quickly knock the Pok&eacute;mon out.</li>
+            <li>Teleport to a campsite and set the time of day to evening. Evening -> Night has the shortest cycle (3 minutes), making it optimal for advancing the spawner seed.</li>
+            <ul>
+                <li>If your target is <u>Tornadus</u> you must sleep repeatedly until the weather is a <u>blizzard</u> or Tornadus will never spawn.</li>
+                <li>If your target is <u>Thundurus</u> you must sleep repeatedly until the weather is a <u>thunderstorm</u> or Thundurus will never spawn.</li>
+                <li>If your target is <u>Cresselia</u> it will respawn immediately after knocking it out, you do not need to teleport to a campsite. Go to step 6.</li>
+            </ul>
+            <li>Enter the closest subzone (cave) on the map before the time of day turns to night, then wait inside until night time.</li>
+            <ul>
+                <li>For <span class="fw-bold">Obsidian Fields</span> (Shaymin/Landorus), head to the cave at Lake Verity.</li>
+                <li>For <span class="fw-bold">Crimson Mirelands</span> (Enamorus), head to the cave at Lake Valor.</li>
+                <li>For <span class="fw-bold">Cobalt Coastlands</span> (Thundurus), head to the cave at Firespit Island.</li>
+                <li>For <span class="fw-bold">Alabaster Icelands</span> (Tornadus), head to the cave at Lake Acuity.</li>
+                <li>For <span class="fw-bold">Coronet Highlands</span> (Darkrai), head to either side of Wayward Cave.</li>
+            </ul>
+            <li>Set a map marker in the area that contains your target Pok&eacute;mon to make it easier to relocate after leaving the cave (optional).</li>
+            <li>Once the time of day turns to night, leave the cave and teleport to the closest campsite to your target, then use Braviary to make your way back.</li>
+            <li>Your Pok&eacute;mon should have respawned, which causes the spawner seed to advance by +1.</li>
+        </ol>
+
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 3 -</span> Searching For Targets (Overworld)</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/searching-for-targets-overworld.gif" alt="spawner-example-overworld-cfw-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/searching-for-targets-overworld.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="searching-for-targets-overworld">
+        <span class="fw-bold text-light">Searching For Targets (Overworld)</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>After obtaining your spawner seed you can begin searching for target frames using the Overworld Legendary Calculator script. Again if you have not done the initial config for this script go back and review the relevant section above and revisit this section once you have done so.</p>
+
+        <h6 span class="fw-bold">Script Configuration</h6>
+        <ol>
+            <li>Confirm that your target species is set properly at the top of the script, then confirm that your desired search filters are set properly at the bottom.</li>
+            <li>Set your max advances at towards the of the script, this is the amount of advances you are willing to search through.</li>
+            <ul>
+                <li>Set this value accordingly depending on the rarity of your target, the recommended search range is between 5-100.</li>
+                <li>Advancing the spawner seed once can take up to 5 minutes, so keep this in mind when setting your search range.</li>
+            </ul>
+            <li>Paste the group seed into the correct section of the Overworld Legendary Calculator script, it should look something similar to this:</li>
+
+            <div class="alert border-dark">
+                <code class="fw-bold" style="color: #0a7a00;">
+                    // Set your group seed here.<br />
+                    <code class="fw-bold" style="color: #1f53ae;">ulong</code> <code class="fw-bold" style="color: #000f;">group_seed =</code> <code class="fw-bold" style="color: #c882ff;">0x61217de4801189d0</code><code class="fw-bold" style="color: #000f;">;</code>
+                </code>
+            </div>
+
+            <li>Press the <code class="fw-bold" style="color: green;">▶</code> button to run the script, any results that match your search conditions will be produced in the results section at the bottom of the window.</li>
+            <ul>
+                <li>If you do not find any results consider increasing your search range or applying less strict search filters.</li>
+                <li>If there are still no results, leave the area back to Jubilife and start again from the "Finding &amp; Advancing Spawner Seed" section (Figure 2).</li>
+            </ul>
+        </ol>
+
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 4 -</span> Advancing Spawner Seed (Overworld)</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/target-found-overworld.png" alt="spawner-example-overworld-cfw-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/target-found-overworld.png">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="advancing-spawner-seed-overworld">
+        <span class="fw-bold text-light">Advancing Spawner Seed (Overworld)</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>In Figure 4 we can see that a Enamorus that matches our search conditions can be found in 6 advances, we now need to advance the spawner seed exactly 6 times to spawn this Enamorus. If you need a refresher, overworld spawners can be advanced by performing the following in-game actions:</p>
+
+        <h6 span class="fw-bold">Advancing Spawner Seed</h6>
+        <ol>
+            <li>Engage in battle and knock out your target Pok&eacute;mon. Use a super effective move to quickly knock the Pok&eacute;mon out.</li>
+            <li>Teleport to a campsite and set the time of day to evening. Evening -> Night has the shortest cycle (3 minutes), making it optimal for advancing the spawner seed.</li>
+            <ul>
+                <li>If your target is <u>Tornadus</u> you must sleep repeatedly until the weather is a <u>blizzard</u> or Tornadus will never spawn.</li>
+                <li>If your target is <u>Thundurus</u> you must sleep repeatedly until the weather is a <u>thunderstorm</u> or Thundurus will never spawn.</li>
+                <li>If your target is <u>Cresselia</u> it will respawn immediately after knocking it out, you do not need to teleport to a campsite. Go to step 6.</li>
+            </ul>
+            <li>Enter the closest subzone (cave) on the map before the time of day turns to night, then wait inside until night time.</li>
+            <ul>
+                <li>For <span class="fw-bold">Obsidian Fields</span> (Shaymin/Landorus), head to the cave at Lake Verity.</li>
+                <li>For <span class="fw-bold">Crimson Mirelands</span> (Enamorus), head to the cave at Lake Valor.</li>
+                <li>For <span class="fw-bold">Cobalt Coastlands</span> (Thundurus), head to the cave at Firespit Island.</li>
+                <li>For <span class="fw-bold">Alabaster Icelands</span> (Tornadus), head to the cave at Lake Acuity.</li>
+                <li>For <span class="fw-bold">Coronet Highlands</span> (Darkrai), head to either side of Wayward Cave.</li>
+            </ul>
+            <li>Set a map marker in the area that contains your target Pok&eacute;mon to make it easier to relocate after leaving the cave (optional).</li>
+            <li>Once the time of day turns to night, leave the cave and teleport to the closest campsite to your target, then use Braviary to make your way back.</li>
+            <li>Your Pok&eacute;mon should have respawned, which causes the spawner seed to advance by +1.</li>
+        </ol>
+
+        <h6 span class="fw-bold">Tracking Spawner Seed</h6>
+        <ol>
+            <li>Remove any IV/Nature filters applied on the Overworld Legend Calculator script.</li>
+            <li>Perform a new search to produce a list of ordered/numbered advances.</li>
+            <li>Save the game, then capture your target Pok&eacute;mon.</li>
+            <li>Compare the Nature and initial <a href="https://bulbapedia.bulbagarden.net/wiki/Effort_level" target="_blank">Effort Levels</a> with the script output.</li>
+            <li>Reset the game without saving and continue advancing as normal.</li>
+        </ol>
+
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 5 -</span> Target Advance Hit (Overworld)</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/target-reached-overworld.jpg" alt="spawner-example-overworld-cfw-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/target-reached-overworld.jpg">
+
+<p>Once you believe you have reached your target frame capture the Pok&eacute;mon and confirm that the IVs and Effort Levels are a match once more. You can also save the game before capturing and show the Pok&eacute;mon to a SysBot again after capture for absolute confirmation if it is unclear, though this is usually not required.</p>
+
+<p><span class="fw-bold">Figure 6 -</span> Result Found (Overworld)</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/result-found-overworld.jpg" alt="spawner-example-overworld-cfw-6" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/result-found-overworld.jpg">
+
+<p>After advancing the spawner seed 6 times and capturing the Enamorus in battle we can see that the details match what is expected by the spawner script. <span class="fw-bold">That's all there is to it!</span></p>
