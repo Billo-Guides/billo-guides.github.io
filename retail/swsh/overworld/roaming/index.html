@@ -65,7 +65,7 @@ permalink: /retail/swsh/overworld/roaming/
                 <li>You can use any Pok&eacute;mon you want to fill this role as long as it has a "fondly" memory.</li>
                 <li>Remember that after the bird is generated, all of its details are fully decided, so you can freely change your party afterwards using the PC Box Link.</li>
             </ul>
-            <li>Visit the <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/roaming/memory-check-npc.png">Memory Check NPC</a> found in any Pok&eacute;Center and repeatedly rename your remaining Pok&eacute;mon until it has a memory intensity of "fondly remembers".</li>
+            <li>Visit the <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/roaming/memory-check-npc.png">Memory Check NPC</a> found in any Pok&eacute;mon Center and repeatedly rename your remaining Pok&eacute;mon until it has a memory intensity of "fondly remembers".</li>
             <ul>
                 <li>Do not use a Pok&eacute;mon with a map memory! This will cause your RNG manipulation attempt to fail. The map memory text looks similar to "Urshifu checked a destination with Billo using the Town Map in a town in the mountains."</li>
                 <li>The simplest way to achieve a "fondly" intensity memory is by renaming your Pok&eacute;mon multiple times. Confirm the memory intensity by speaking to the NPC.</li>
@@ -154,14 +154,21 @@ permalink: /retail/swsh/overworld/roaming/
             <li>Confirm that you have a single Pok&eacute;mon in your party. This should be the same Pok&eacute;mon that was given a "fondly" intensity memory earlier.</li>
             <li>Set the current weather condition to anything that is NOT Rain/Thunderstorm both in-game and on owoow. Save the game after doing so.</li>
             <li>Calibrate your current menu close NPC count, then close the <code class="fw-bold">MenuCloseTimeline</code> subwindow. Note down your current menu close NPC count.</li>
-            <li>Set your current menu close NPC count to 0 for now, but ensure that the <code class="fw-bold">Consider Menu Close?</code> checkbox remains checked.</li>
             <li>Refer to the correct table above based on your chosen weather, target bird, and game version/progression (Moltres).</li>
-            <ul>
+            <ol>
                 <li>Set your <code class="fw-bold">Area Load</code> value in the <code class="fw-bold">Advanced Settings</code> on owoow. This will be the same regardless of weather condition.</li>
-                <li>If you are NOT in Rain/Thunderstorm, enter the <code class="fw-bold">Total Fly NPC</code> value into the Fly NPC field in <code class="fw-bold">Advanced Settings</code>.</li>
-                <li>If you are in Rain/Thunderstorm, enter the <code class="fw-bold">NPC 0</code> value into the menu close NPC field, then enter the <code class="fw-bold">NPC 1</code> value into the Fly NPC field in <code class="fw-bold">Advanced Settings</code>.</li>
-                <li>Enter the <code class="fw-bold">Rain Tick</code> value depending on if you are in Rain or Thunderstorm. If this is your first time calibrating, pick the lowest possible value (7 for Rain, 14 for Thunderstorm).</li>
-            </ul>
+                <li>If you are NOT in Rain/Thunderstorm:</li>
+                <ol>
+                    <li>Ensure the menu close NPC count is set to 0.</li>
+                    <li>Enter the <code class="fw-bold">Total Fly NPC</code> value into the <code class="fw-bold">Fly NPCs</code> field under <code class="fw-bold">Advanced Settings</code>.</li>
+                </ol>
+                <li>If you are in Rain/Thunderstorm:</li>
+                <ol>
+                    <li>Enter the <code class="fw-bold">NPC 0</code> value into the menu close NPC field.</li>
+                    <li>Enter the <code class="fw-bold">NPC 1</code> value into the <code class="fw-bold">Fly NPCs</code> field under <code class="fw-bold">Advanced Settings</code>.</li>
+                    <li>Set the <code class="fw-bold">Rain Tick</code> value depending on if you are in Rain or Thunderstorm. If this is your first time calibrating, pick the lowest possible value (7 for Rain, 14 for Thunderstorm).</li>
+                </ol>
+            </ol>
         </ol>
 
         <p>The calibration values (<code class="fw-bold">Consider Menu Close?</code> / <code class="fw-bold">Menu Close NPCs</code> <code class="fw-bold">Area Load</code> / <code class="fw-bold">Fly NPCs</code> / <code class="fw-bold">Rain Ticks</code>) will account for the advances consumed when exiting from the party list -> main <code class="fw-bold">X Menu</code> -> opening map -> flying into the area that contains your bird.</p>
@@ -195,9 +202,10 @@ permalink: /retail/swsh/overworld/roaming/
                 <li>Consider using wet weather if you wish to maintain an accurate calibration without moving.</li>
             </ul>
             <li>Reidentify your current seed periodically to avoid overshooting the target. Stop advancing once you are a few thousand advances before your target.</li>
-            <li>Fly back to the designated fly point for your desired bird if you have moved.</li>
+            <li>Fly back to the designated fly point for your desired bird if you moved or date skipped.</li>
             <ul>
-                <li>If you used date skipping to advance earlier, you MUST recalibrate your menu close NPC count and update all of the calibration values accordingly before proceeding.</li>
+                <li>If you used date skipping to advance earlier, you MUST recheck your menu close NPC count and update all of the calibration values from the table accordingly before proceeding.</li>
+                <li>Date skipping or booting into the game on a later date than you saved on can cause the menu NPC count to change, which is why it is important to verify again before performing the RNG manipulation.</li>
             </ul>
             <li>Ensure that the <code class="fw-bold">Consider Menu Close?</code> checkbox is checked in the main window, and confirm that your calibration checkboxes are filled in correctly.</li>
             <li>Use any of the medium-speed advancement methods such as <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/bike-mount.gif">bike hopping</a> and <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/advancing-rng-state/menu-close.gif">menu close</a> to get to about 200-500 advances from your target.</li>
