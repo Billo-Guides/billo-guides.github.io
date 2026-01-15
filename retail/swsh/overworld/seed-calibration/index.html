@@ -95,23 +95,57 @@ permalink: /retail/swsh/overworld/seed-finding-and-monitoring
 </div>
 <br />
 
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Important -</span> When reidentifying your seed after advancing the RNG state, you will need to set the value inside the <code class="fw-bold">+</code> field of the Retail Tools section to a value greater than the number of advances you believe have occurred. For example, if you believe that roughly 50000 advances have occurred and you now wish to reidentify your seed, make sure the value inside the <code class="fw-bold">+</code> field is set to a number that is > 50000 to avoid matching with an incorrect animation pattern.
+</div>
+
+<hr />
+<div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">Advanced Seed Finding &amp; Extras</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    The information provided in this section is optional, and should only be used by advanced users who already have a solid understanding of seed finding and monitoring.
+</small>
+<hr />
+
+<p><span class="fw-bold">Figure 4 -</span> Advanced Seed Finding</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/seed-calibration/advanced-seed-finding.png" alt="retail-seed-calibration-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/seed-calibration/advanced-seed-finding.png">
+
 <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="confirming-seeds">
-        <span class="fw-bold text-light">Additional Resource</span>
+    <div class="anchored card-header" style="background-color: #0c0038;" id="advanced-seed-finding">
+        <span class="fw-bold text-light">Advanced Seed Finding</span>
     </div>
     <div class="card-body card-bg">
-        <p>If you have a capture card that can stream your Switch video to a PC, you can try using <a href="https://drive.google.com/drive/folders/1x1mIboSZB1a0GNKbco9-F9Gm5I9Lwvyr">NX RNG Tool</a> by <a href="https://twitter.com/_3z8">_3z8</a>, which can automatically analyze attack animations to find your seed.</p>
+        <p>The advanced seed finding is a feature used to identify your seed in less than 128 animations. This can only be used when the game has been freshly booted and you have a rough estimate of how many advances have been consumed between launching the game and entering the overworld.</p>
 
-        </p>Resources for this tool are entirely in Japanese. <a href="https://nantoiu-com.translate.goog/game/pkmn/22728/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-USI ">Here is a translated guide.</a></p>
+        <p>When opening the Retail Seed Finder sub window, <code class="fw-bold">Advanced Mode</code> can be toggled by selecting the checkbox found on the right hand side. The <code class="fw-bold">Min Adv.</code> &amp; <code class="fw-bold">Max Adv.</code> found here are preconfigured for quiet areas in calm (not rainy) weather conditions. It is not feasible for retail players to know how many advances are consumed when entering the overworld, so a range is required.</p>
 
-        </p>The authors of this guide are not familiar with this tool and cannot provide support if you choose to try it.</a></p>
+        <p>It is expected that you will be able to find your seed in 64-80 animations in a quiet area, the further you increase the <code class="fw-bold">Max Adv.</code>, the greater the number of animations required to find your current seed will be. For this reason, using this feature in noisy areas or areas where the current active weather is rain or thunderstorm is not recommended unless you know what you are doing.</p>
+
+        <h6 span class="fw-bold">Step-by-Step</h6>
+        <ol>
+            <li>Enter a quiet area in-game and save, the recommended area to do this would be in the Crown Tundra next to the enterance to the Max Lair, but realistically most quiet areas should be fine.</li>
+            <li>Open the <code class="fw-bold">Retail Seed Finder</code> tab and click the <code class="fw-bold">Advanced Mode</code> checkbox, avoid changing the ranges if you are in a quiet area.</li>
+            <li>Reboot the game, enter the overworld, then pause the game as quickly as you can and begin identifying your seed as normal.</li>
+            <li>The <code class="fw-bold">Status</code> indicator found under the advance range will tell you the rough number of advances required to find your seed as you get closer.</li>
+        </ol>
     </div>
 </div>
 <br />
 
-<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
-    <span class="fw-bold">Important -</span> When reidentifying your seed after advancing the RNG state, you will need to set the value inside the <code class="fw-bold">+</code> field of the Retail Tools section to a value greater than the number of advances you believe have occurred. For example, if you believe that roughly 50000 advances have occurred and you now wish to reidentify your seed, make sure the value inside the <code class="fw-bold">+</code> field is set to a number that is > 50000 to avoid matching with an incorrect animation pattern.
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="additional-resources">
+        <span class="fw-bold text-light">Additional Resources</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>If you have a capture card that can stream your Switch video to a PC, you can try using <a href="https://drive.google.com/drive/folders/1x1mIboSZB1a0GNKbco9-F9Gm5I9Lwvyr">NX RNG Tool</a> by <a href="https://twitter.com/_3z8">_3z8</a>, which can automatically analyze attack animations to find your seed.</p>
+
+        <p>Resources for this tool are entirely in Japanese. <a href="https://nantoiu-com.translate.goog/game/pkmn/22728/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-USI ">Here is a translated guide.</a></p>
+
+        <p>The authors of this guide are not familiar with this tool and cannot provide support if you choose to try it.</p>
+    </div>
 </div>
+<br />
 
 <div class="alert alert-success" style="border: 1px solid #28a745; border-radius: 5px; padding: 15px;">
     <span class="fw-bold">Great!</span> You should now have a basic understanding of identifying and monitoring your current seed. Ensure that you have a solid understanding of how to apply these concepts before continuing.
