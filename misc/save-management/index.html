@@ -1,0 +1,188 @@
+---
+layout: default
+title: Managing Switch Save Files Using JKSV
+permalink: /misc/save-management/
+---
+
+<div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">Save Management (Switch)</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    A short guide on extracting, editing and restoring save files using JKSV.
+</small>
+<hr />
+
+<p>This guide provides instructions for using JKSV, a save management homebrew for Nintendo Switch consoles running Custom Firmware (CFW). The goal is to provide the most up-to-date methods of extracting and restoring edited save files as other guides are slowly becoming outdated or are using sub-optimal methods of accessing the SD card.</p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="getting-started-jksv">
+        <span class="fw-bold text-light">Getting Started</span>
+    </div>
+    <div class="card-body card-bg">
+        <h6><span class="fw-bold">Tools and Applications</span></h6>
+        <ul>
+            <li><a href="https://switch.hacks.guide/" target="_blank" rel="noopener noreferrer">Switch CFW (Atmosphere)</a></li>
+            <li><a href="https://github.com/j-d-k/jksv/releases" target="_blank" rel="noopener noreferrer">JKSV</a></li>
+            <li>USB File Transfer Homebrew / Hekate USB Tools</li>
+            <li>A USB data transfer cable that connects to your Switch and your PC.</li>
+        </ul>
+
+    </div>
+</div>
+<br>
+
+<div class="alert alert-primary" style="border: 1px solid #004085; border-radius: 8px; padding: 15px; background-color: #cce5ff; color: #004085;">
+    If you installed Custom Firmware using the recommended guide you should already have the relevant homebrew installed and be familiar with using Hekate as a bootloader. USB File Transfer homebrew comes bundled with newer versions of Atmosph&egrave;re, and generally speaking Hekate is the recommended bootloader over using <code class="fw-bold">fusee.bin</code>.
+</div>
+
+<p><span class="fw-bold">Figure 1 -</span> Homebrew Check</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/save-management/homebrew-check.jpg" alt="save-management-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/save-management/homebrew-check.jpg"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="cloning-the-repo">
+        <span class="fw-bold text-light">Homebrew Check</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>After launching your desired CFW environment (SysNAND or EmuNAND) you can launch the Homebrew Menu in one of two ways:</p>
+
+        <ol>
+            <li>Launching a game while holding the <code class="fw-bold">R</code> button will open the Homebrew Menu using title override, which is recommended for this use case.</li>
+            <li>Pressing the <code class="fw-bold">Album</code> button on the Switch home screen launches the Homebrew Menu in applet mode, which is "fine" for this use case but not recommended.</li>
+        </ol>
+
+        <p>After launching the Homebrew Menu you should see a screen similar to the above image. The list of installed apps will vary depending on the specific homebrew you have installed. In any case, confirm that <code class="fw-bold">JKSV</code> and <code class="fw-bold">USB File Transfer</code> are present before continuing.</p>
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 2 -</span> JKSV Overview</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/save-management/jksv-overview.jpg" alt="save-management-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/save-management/jksv-overview.jpg"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="jksv-overview">
+        <span class="fw-bold text-light">JKSV Overview</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>This is the screen you'll see after launching JKSV. On the left, you will see the users associated with the console (indicated by the profile icons), while on the right, you can view a list of games and save files associated with each user.</p>
+
+        <p>Scrolling down the user icon list will bring you to the Settings page, here, it is recommended to do the following:</p>
+        <ol>
+            <li>Select Settings and scroll down to <code class="fw-bold">Export saves to ZIP</code>.</li>
+            <li>Turn this setting OFF - This will save a headache later (<a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/save-management/setting-toggle.jpg">image</a>).</li>
+            <li>Back out of the settings menu, you do not need to change anything else.</li>
+        </ol>
+
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 3 -</span> Backing Up Save File</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/save-management/save-backup-jksv.jpg" alt="save-management-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/save-management/save-backup-jksv.jpg"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="save-backup-jksv">
+        <span class="fw-bold text-light">Backing Up Save File</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>To back up a save file, do the following:</p>
+
+        <ol>
+            <li>Select the user icon which contains the save file you wish to back up.</li>
+            <li>Select the game you wish to back up the save file on.</li>
+            <li>Select <code class="fw-bold">New Backup</code>, then give the backup a name if you wish.</li>
+            <li>Press the <code class="fw-bold">+</code> button, your save file has now been backed up.</li>
+            <ul>
+                <li>Backed up save files can be found in the <code class="fw-bold">/JKSV/gamename/savename/</code> directory. In this case we backed up a Legends: ZA save file and named it jksv-guide, so our save file can be found in <code class="fw-bold">/JKSV/Pokemon Legends Z-A/jksv-guide/</code> directory.</li>
+                <li>The save file itself is the <code class="fw-bold">main.bin</code> file, any other files inside the folder can be ignored for the purposes of the guide.</li>
+            </ul>
+        </ol>
+
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 4 -</span> Moving Save File</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/save-management/moving-save-file-jksv.jpg" alt="save-management-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/save-management/moving-save-file-jksv.jpg"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="moving-save-file-jksv">
+        <span class="fw-bold text-light">Moving Save File</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>To move your save file to your PC you will need to either use the USB File Transfer homebrew software, or use Hekates USB tools. Either one of these options is perfectly fine for this use case, but for the purposes of this guide the images will show the USB File Transfer homebrew.</p>
+
+        <details open>
+            <summary><span class="fw-bold">Using USB File Transfer</span></summary>
+            <ol>
+                <li>Launch the Homebrew Menu using either title override or applet, then select the USB File Transfer homebrew application.</li>
+                <li>Connect your console to your computer via USB, you should now see <code class="fw-bold">Nintendo Switch</code> in your list of drives.</li>
+                <li>Navigate to the <code class="fw-bold">/JKSV/gamename/savename/</code> directory, then pull the folder that contains your save file to a known location on your computer (e.g Desktop)</li>
+            </ol>
+        </details>
+
+        <details>
+            <summary><span class="fw-bold">Using Hekate USB Tools</span></summary>
+            <ol>
+                <li>Reboot the console to payload, your console should now be on the Hekate home screen.</li>
+                <li>In the navigation bar at the top, select <code class="fw-bold">Tools</code> to bring you to the tools screen.</li>
+                <li>From here, select <code class="fw-bold">USB Tools</code>, then <code class="fw-bold">SD Card</code> and connect your console to your computer via USB</li>
+                <li>You should now see your console in the list of drives, the name of the console may vary.</li>
+                <ul>
+                    <li>If you get a pop-up about a corrupt drive but have an EmuNAND installation, this can be ignored by simply closing the pop-up.</li>
+                </ul>
+                <li>Navigate to the <code class="fw-bold">/JKSV/gamename/savename/</code> directory, then pull the folder that contains your save file to a known location on your computer (e.g Desktop)</li>
+            </ol>
+        </details>
+
+
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 5 -</span> Editing Save File</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/save-management/editing-save-file.gif" alt="save-management-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/save-management/editing-save-file.gif"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="editing-save-file-jksv">
+        <span class="fw-bold text-light">Editing Save File</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>After editing your save file using a save editor (e.g PKHeX) you will need to export it back to the folder you imported it from, in PKHeX this can be done by selecting <code class="fw-bold">File > Export SAV</code> and clicking <code class="fw-bold">Overwrite</code>.</p>
+
+        <p>After exporting the save file you will need to move the folder back onto the SD card, place the whole folder back into the directory you got it from. In this example we would be moving the folder that contains our edited save file back to <code class="fw-bold">/JKSV/Pokemon Legends Z-A/jksv-guide/</code>.</p>
+
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 6 -</span> Restoring Save File</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/save-management/restoring-save-file.jpg" alt="save-management-6" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/misc/save-management/restoring-save-file.jpg"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="restoring-save-file-jksv">
+        <span class="fw-bold text-light">Restoring Save File</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>After moving your save file back onto your SD card you will need to relaunch JKSV from the Homebrew Menu once more, then do the following:</p>
+
+        <ol>
+            <li>Select the user icon which contains the save file you wish to restore.</li>
+            <li>Select the game you wish to restore the save file onto.</li>
+            <li>Select the save file you want to restore, then press the <code class="fw-bold">Y</code>, now hold the <code class="fw-bold">A</code> button until the restoration is complete.</li>
+            <li>Press the <code class="fw-bold">Home</code> button to back out onto the Switch home screen, then launch the game and confirm that your save file edits reflect in-game.</li>
+        </ol>
+    </div>
+</div>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
