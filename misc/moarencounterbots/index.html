@@ -86,7 +86,10 @@ permalink: /misc/moarencounterbots/
     <div class="card-body card-bg">
         <h6><span class="fw-bold">Step-by-step</span></h6>
         <ol>
-            <li>In the top menu bar, select <code span class="fw-bold">Release</code>, Then select <code span class="fw-bold">AnyCPU</code>.</li>
+            <li>In the top menu bar, select <code span class="fw-bold">Release</code>, then select <code span class="fw-bold">AnyCPU</code>, then set <code span class="fw-bold">SysBot.Pokemon.WinForms</code> as the Startup project.</li>
+            <ul>
+                <li>We select <code span class="fw-bold">Release</code> because this is targeted towards production or distribution. <code span class="fw-bold">Debug</code> builds are more geared towards developers wishing to troubleshoot their code or project.</li>
+            </ul>
             <li>In the menu at the top of the Visual Studio window select <code span class="fw-bold">Build</code>, then click <code span class="fw-bold">Re-build Solution</code></li>
             <li>Wait for the program to finish building. You can find the compiled application inside of the <code span class="fw-bold">Sysbot.NET/SysBot.Pokemon.WinForms/bin/x64</code> directory.</li>
         </ol>
@@ -106,8 +109,10 @@ permalink: /misc/moarencounterbots/
     <div class="card-body card-bg">
         <h6><span class="fw-bold">Step-by-step</span></h6>
         <ol>
-            <li>In the top menu bar, select <code span class="fw-bold">AnyCPU</code>, Then select <code span class="fw-bold">SysBot.Pokemon.WinForms</code> as the Startup project.</li>
-            <li>Choose either <code span class="fw-bold">Debug</code> or <code span class="fw-bold">Release</code>, in this example we will be choosing <code span class="fw-bold">Release</code>.</li>
+            <li>In the top menu bar, select <code span class="fw-bold">Release</code>, then select <code span class="fw-bold">AnyCPU</code>, then set <code span class="fw-bold">SysBot.Pokemon.WinForms</code> as the Startup project.</li>
+            <ul>
+                <li>We select <code span class="fw-bold">Release</code> because this is targeted towards production or distribution. <code span class="fw-bold">Debug</code> builds are more geared towards developers wishing to troubleshoot their code or project.</li>
+            </ul>
             <li>Right click <code span class="fw-bold">SysBot.Pokemon.WinForms</code> in the solution manager, then click <code span class="fw-bold">Publish</code></li>
             <li>Click on <code span class="fw-bold">Show all settings</code> and ensure that your configuration uses an x64 profile under <code class="fw-bold">Target Runtime</code>.</li>
             <li>Select a target location, and check <code span class="fw-bold">Produce Single File</code>.</li>
