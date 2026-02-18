@@ -152,17 +152,16 @@ permalink: /cfw/bdsp/underground/
         <h6 class="fw-bold">Step-by-step</h6>
         <ol>
             <li>Launch the game then enter the Switch Home Menu by pressing the <code class="fw-bold">Home</code> button on your controller. You should now be on the <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/misc/home-menu.jpg">home menu</a> with your cursor hovered over the game you are playing.</li>
-            <li>Add <code class="fw-bold">EncBotCopySeedBS</code> to the list of active bots and click <code class="fw-bold">Start All</code>, then head over to the logs tab to grab your seeds and paste them into PokeFinder.</li>
             <li>Add <code class="fw-bold">EncBotRNGMonitorBS</code> to the list of active bots and click <code class="fw-bold">Start All</code>, then head over to the logs tab to observe your current RNG state.</li>
             <ul>
                 <li>The goal is to observe the number of advances consumed by entering the Pok&eacute;mon Hideaway, so you will need to keep a close eye on the logs tab going forward.</li>
             </ul>
             <li>Press the <code class="fw-bold">Home</code> button again while holding the direction on your control stick that moves you into the loading zone of the Pok&eacute;mon Hideaway.</li>
-            <li>As the screen transitions to black you will need to observe the logs tab. A large advance jump indicates that a Pok&eacute;mon was generated. This will be your Offset for this attempt.</li>
+            <li>As the screen transitions to black you will need to observe the amount of advances that are consumed by watching the logs tab.</li>
             <ul>
                 <li>Try to observe the number of advances that are consumed between you entering the Pok&eacute;mon Hideaway and the moment the Pok&eacute;mon was generated, this should be a low number (< 10) when positioned optimally.</li>
-                <li>In my case (see above image) we can see that after entering the Pok&eacute;mon Hideaway, two extra advances were consumed, then a large jump (100) was observed which indicates that a Pok&eacute;mon was generated.</li>
-                <li>This means that in the image above we can observe that my Offset/Delay for this attempt was 2.</li>
+                <li>In my case (see above image) we can see that after entering the Pok&eacute;mon Hideaway there were 2 extra advances, then a large jump of 150 advances was observed. This indicates that the Pok&eacute;mon inside the Hideaway were generated.</li>
+                <li>As two advances were consumed before the Pok&eacute;mon inside the Hideaway were generated, our Delay/Offset for this attempt is 2.</li>
             </ul>
             <li>Exit the cave and repeat this process a few times from step 1 to figure out the offset you are most commonly hitting, then enter that value into the <code class="fw-bold">Offset</code> of the PokeFinder window.</li>
         </ol>
@@ -186,7 +185,7 @@ permalink: /cfw/bdsp/underground/
         <span class="fw-bold text-light">Target Found</span>
     </div>
     <div class="card-body card-bg">
-        <p>In Figure 5 we can see that a Shiny Ditto will be produced in x advances. Earlier we calibrated a common offset of 2, and this value has been entered into PokeFinder. Now the goal is to generate the Pok&eacute;mon inside the Hideaway on the correct frame given by the PokeFinder search results.</p>
+        <p>In Figure 5 we can see that a Shiny Ditto will be produced in 278,402 advances. Earlier we calibrated a common offset of 2 and this value has been entered into PokeFinder. Now the goal is to generate the Pok&eacute;mon inside the Hideaway on the correct frame given by the PokeFinder search results.</p>
 
         <p>To automate the process of advancing the RNG state we will be using the Moarencounterbots <code class="fw-bold">EncBotDexFlipBS</code> routine. <code class="fw-bold">EncBotDexFlipBS</code> flips back and fourth between Pok&eacute;dex entries to advance the current seed until a given point. This quickest known method to advance the RNG state in this game.</p>
 
@@ -218,7 +217,7 @@ permalink: /cfw/bdsp/underground/
 <br>
 
 <p><span class="fw-bold">Figure 6 -</span> Dex Flip Complete</p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/underground/target-found-underground.png" alt="underground-6" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/underground/target-found-underground.png">
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/underground/dexflip-complete-underground.png" alt="underground-6" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/underground/dexflip-complete-underground.png">
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #96324c;" id="hitting-your-target-wild">
@@ -250,10 +249,10 @@ permalink: /cfw/bdsp/underground/
 <p><span class="fw-bold">Figure 7 -</span> Target Frame Hit</p>
 <img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/underground/target-frame-hit-underground.gif" alt="underground-7" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/underground/target-frame-hit-underground.gif">
 
-<p>We have resumed the game on our target frame pressed the <code class="fw-bold">DOWN</code> on the control stick to enter the Pok&eacute;mon Hideaway. Now it is time to confirm that we have hit the correct target frame by running through the cave and searching for the any Pok&eacute;mon that matches our target species and encountering it.</p>
+<p>We have resumed the game on our target frame (7270) and pressed the <code class="fw-bold">DOWN</code> on the control stick to enter the Pok&eacute;mon Hideaway. Now it is time to confirm that we have hit the correct target frame by running through the cave and searching for the any Pok&eacute;mon that matches our target species and encountering it.</p>
 
 <p><span class="fw-bold">Figure 8 -</span> Result Found</p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/underground/result-found-underground.gif" alt="underground-8" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/underground/result-found-underground.gif">
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/underground/result-found-underground.png" alt="underground-8" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/underground/result-found-underground.png">
 
 <p>After finding and encountering our target species we can use PokeViewer.NETs <code class="fw-bold">Battle Viewer</code> to confirm the internal details match the PokeFinder search results, mission accomplished!</p>
 
