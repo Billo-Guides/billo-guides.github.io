@@ -22,49 +22,49 @@
             <ul>
                 <li>This step is important as it will stop unwanted advances that occur while in the Home Menu.</li>
             </ul>
-            <li>You should now be positioned correctly for the RNG manipulation, we now need to calibrate our delay.</li>
+            <li>You should now be positioned correctly for the RNG manipulation, we now need to calibrate our Offset.</li>
         </ol>
     </div>
 </div>
 <br>
 
-<p><span class="fw-bold">Figure 4 -</span> Delay Calibration</p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/shaymin/delay-calibration-shaymin.gif" alt="static-shaymin-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/shaymin/delay-calibration-shaymin.gif">
+<p><span class="fw-bold">Figure 4 -</span> Offset Calibration</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/shaymin/Offset-calibration-shaymin.gif" alt="static-shaymin-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/static/shaymin/Offset-calibration-shaymin.gif">
 
 <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #96324c;" id="delay-calibration-shaymin">
-        <span class="fw-bold text-light">Delay Calibration</span>
+    <div class="anchored card-header" style="background-color: #96324c;" id="Offset-calibration-shaymin">
+        <span class="fw-bold text-light">Offset Calibration</span>
     </div>
     <div class="card-body card-bg">
-        <p>As delay is variable due to the random noise we will now need to perform a few calibration attempts. This is done by repeating the same sequence of actions multiple times:</p>
+        <p>As Offset is variable due to the random noise we will now need to perform a few calibration attempts. This is done by repeating the same sequence of actions multiple times:</p>
 
         <h6><span class="fw-bold">Step-by-step</span></h6>
         <ol>
             <li>Open the game and stand in the Grand Underground overworld, then press the <code class="fw-bold">Y</code> button and select <code class="fw-bold">Go up</code>.</li>
             <li>You should now be on the "Would you like to return to the surface where you entered? Yes/No" screen. hover over the <code class="fw-bold">Yes</code> option and press the <code class="fw-bold">Home</code> button.</li>
             <li>Open <code class="fw-bold">SysBot.exe</code> and add <code class="fw-bold">EncBotCopySeedBS</code> to the list of active bots, then click the <code class="fw-bold">Start All</code> button.</li>
-            <li>Navigate to the <code class="fw-bold">Logs</code> tab and paste your seeds into PokeFinder, set your <code class="fw-bold">Max Advances</code> to around 2000 and <code class="fw-bold">Delay</code> to 0.</li>
+            <li>Navigate to the <code class="fw-bold">Logs</code> tab and paste your seeds into PokeFinder, set your <code class="fw-bold">Max Advances</code> to around 2000 and <code class="fw-bold">Offset</code> to 0.</li>
             <li>Resume the game and press the <code class="fw-bold">A</code> button to resurface from the Grand Underground, then hold up on your control stick while resurfacing to face Shaymin.</li>
             <li>Mash the <code class="fw-bold">A</code>, <code class="fw-bold">ZL</code> and <code class="fw-bold">ZR</code> buttons to interact with Shaymin and initiate the encounter as quickly as possible.</li>
             <li>Once you are in battle, open PokeViewer.NET and connect to it as normal, then click the <code class="fw-bold">View</code> button to inspect the Shaymin you are in battle with.</li>
-            <li>Enter the IVs into the PokeFinder search filters to find the Shaymin you are in battle with. The number inside the <code class="fw-bold">Advances</code> column will be your delay for this attempt.</li>
+            <li>Enter the IVs into the PokeFinder search filters to find the Shaymin you are in battle with. The number inside the <code class="fw-bold">Advances</code> column will be your Offset for this attempt.</li>
             <ul>
                 <li>If you see multiple potential results you will need to match the PID/EC shown on PokeViewer to the search result table to find the exact frame you hit.</li>
             </ul>
-            <li>Note down your delay into a Notepad document, Google Sheet or similar. Repeat this process multiple times to get an rough idea of the delays you are hitting.</li>
+            <li>Note down your Offset into a Notepad document, Google Sheet or similar. Repeat this process multiple times to get an rough idea of the Offsets you are hitting.</li>
             <ul>
                 <li>You may need to record upwards of 10 attempts before seeing any level of consistency.</li>
             </ul>
         </ol>
 
         <details>
-            <summary span class="fw-bold">My Delays</summary>
+            <summary span class="fw-bold">My Offsets</summary>
 
             <table class="table table-striped" style="width:100%" id="overworld-rng-table">
                 <thead class="table text-white" style="background-color: #96324c;">
                     <tr>
                         <th scope="col" class="text-center">Attempt #</th>
-                        <th scope="col" class="text-center">Delay</th>
+                        <th scope="col" class="text-center">Offset</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -149,7 +149,7 @@
         <span class="fw-bold text-light">Target Found</span>
     </div>
     <div class="card-body card-bg">
-        <p>In Figure 5 we can see a result has been produced in x advances. Since we had a common delay of y, this value has been entered into PokeFinder, we will aim to press the <code class="fw-bold">A</code> button to resurface from the Grand Underground on this frame, then mash the A button to generate Shaymin as quickly as possible.</p>
+        <p>In Figure 5 we can see a result has been produced in x advances. Since we had a common Offset of y, this value has been entered into PokeFinder, we will aim to press the <code class="fw-bold">A</code> button to resurface from the Grand Underground on this frame, then mash the A button to generate Shaymin as quickly as possible.</p>
 
         <p>To advance the RNG state we will be using the Moarencounterbots <code class="fw-bold">EncBotDexFlipBS</code> routine to automate this process. <code class="fw-bold">EncBotDexFlipBS</code> flips back and fourth between Pok&eacute;dex entries to advance the current seed until a given point. This quickest known method to advance the RNG state in this game.</p>
 
@@ -216,7 +216,7 @@
 <br>
 
 <div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
-    <span class="fw-bold">IMPORTANT -</span> If you miss your target frame due to delay variation you will need to restart the game and try again to get a new seed. Due to the erratic noise that comes from Flower Paradise it may take a large number of attempts before seeing any success from this RNG.
+    <span class="fw-bold">IMPORTANT -</span> If you miss your target frame due to Offset variation you will need to restart the game and try again to get a new seed. Due to the erratic noise that comes from Flower Paradise it may take a large number of attempts before seeing any success from this RNG.
 </div>
 
 <p><span class="fw-bold">Figure 6 -</span> Target Frame Hit</p>

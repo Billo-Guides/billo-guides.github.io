@@ -34,17 +34,17 @@ permalink: /cfw/bdsp/static/
 
         <p>Moarencounterbots is able to track and monitor RNG seeds in real time as well as advance the RNG state until a given point, removing the vast majority of work that would otherwise be tedious. This allows the player to put their efforts into more important factors like hitting their target frame instead.</p>
 
-        <p>For most statics you will need to consider the "delay". Delay is the number of frames the game takes to generate a Pok&eacute;mon after the final button input. For example:</p>
+        <p>For most statics you will need to consider the "Offset". Offset is the number of frames the game takes to generate a Pok&eacute;mon after the final button input. For example:</p>
 
         <ul>
-            <li>Our target is on advance 100 and our delay is 85.</li>
+            <li>Our target is on advance 100 and our Offset is 85.</li>
             <li>We subtract 85 from 100, which leaves us with 15.</li>
             <li>We should now aim to press the <code class="fw-bold">A</code> button to remove the final text box on advance 15.</li>
             <li>85 advances will now be consumed by the game, then the Pok&eacute;mon will be generated.</li>
             <li>This means our Pok&eacute;mon was generated on the correct target advance (85+15=100).</li>
         </ul>
 
-        <p>Recommended starting delays and the screen of the final button input are listed inside the table below. Some delays may have some variation, it is recommended to start with the lower value first and recalibrate if you end up missing your target.</p>
+        <p>Recommended starting Offset and the screen of the final button input are listed inside the table below. sometimes the Offset may have some variation, it is recommended to start with the lower end first and increase your Offset if you end up missing your target.</p>
     </div>
 </div>
 <br>
@@ -53,7 +53,7 @@ permalink: /cfw/bdsp/static/
     <thead class="table text-white" style="background-color: #96324c;">
         <tr>
             <th scope="col" class="text-center">Pok&eacute;mon</th>
-            <th scope="col" class="text-center">Delay</th>
+            <th scope="col" class="text-center">Offset</th>
             <th scope="col" class="text-center">Noise</th>
         </tr>
     </thead>
@@ -167,7 +167,7 @@ permalink: /cfw/bdsp/static/
 </table>
 
 <div class="alert alert-primary" style="border: 1px solid #004085; border-radius: 8px; padding: 15px; background-color: #cce5ff; color: #004085;">
-    <span class="fw-bold">Information -</span> Dialga/Palkia should be defeated during the initial story sequence. They will respawn after defeating the Elite 4 in more stable conditions. If you choose to manipulate Dialga/Palkia before becoming Champion you may experience different delays or RNG instability. The delays calibrated above are for the post Elite 4 encounter.
+    <span class="fw-bold">Information -</span> Dialga/Palkia should be defeated during the initial story sequence. They will respawn after defeating the Elite 4 in more stable conditions. If you choose to manipulate Dialga/Palkia before becoming Champion you may experience instability. The Offset calibrated above is intended to be used for the post Elite 4 rematch.
 </div>
 
 <p><span class="fw-bold">Figure 1 -</span> PokeFinder Setup</p>
@@ -185,7 +185,10 @@ permalink: /cfw/bdsp/static/
             <li>Select the correct <code class="fw-bold">Profile</code> in the dropdown menu at the top.</li>
             <li>Select <code class="fw-bold">Lead</code> if you are using a Pok&eacute;mon with an influencing ability (e.g. Synchronize).</li>
             <li>Enter the amount of advances you wish to search through into the <code class="fw-bold">Max Advances</code> field.</li>
-            <li>Enter the delay inside the <code class="fw-bold">Delay</code> field, pick the lowest number in the above table.</li>
+            <li>Enter the Offset inside the <code class="fw-bold">Offset</code> field, pick the lowest number in the above table.</li>
+            <ul>
+                <li>In older versions of PokeFinder the <code class="fw-bold">Offset</code> is referred to as <code class="fw-bold">Delay</code>. Both terms have the same definition and can be used interchangably.</li>
+            </ul>
             <li>In the <code class="fw-bold">Settings</code> section in the middle, specify the Pok&eacute;mon and encounter details.</li>
             <li>Configure your search filters, such as filtering for a shiny Pok&eacute;mon with 0 IVs in attack.</li>
         </ul>
@@ -257,23 +260,23 @@ permalink: /cfw/bdsp/static/
                 <ul>
                     <li>This step is important as it will stop unwanted advances that occur while in the Home Menu.</li>
                 </ul>
-                <li>You should now be positioned correctly for the RNG manipulation, we now need to calibrate our delay.</li>
+                <li>You should now be positioned correctly for the RNG manipulation, we now need to calibrate our Offset.</li>
             </ol>
 
-            <h6><span class="fw-bold">Delay Calibration:</span></h6>
+            <h6><span class="fw-bold">Offset Calibration:</span></h6>
             <ol>
                 <li>Open the game and stand in the Grand Underground overworld, then press the <code class="fw-bold">Y</code> button and select <code class="fw-bold">Go up</code>.</li>
                 <li>You should now be on the "Would you like to return to the surface where you entered? Yes/No" screen. hover over the <code class="fw-bold">Yes</code> option and press the <code class="fw-bold">Home</code> button.</li>
                 <li>Open <code class="fw-bold">SysBot.exe</code> and add <code class="fw-bold">EncBotCopySeedBS</code> to the list of active bots, then click the <code class="fw-bold">Start All</code> button.</li>
-                <li>Navigate to the <code class="fw-bold">Logs</code> tab and paste your seeds into PokeFinder, set your <code class="fw-bold">Max Advances</code> to around 2000 and <code class="fw-bold">Delay</code> to 0.</li>
+                <li>Navigate to the <code class="fw-bold">Logs</code> tab and paste your seeds into PokeFinder, set your <code class="fw-bold">Max Advances</code> to around 2000 and <code class="fw-bold">Offset</code> to 0.</li>
                 <li>Resume the game and press the <code class="fw-bold">A</code> button to resurface from the Grand Underground, then hold up on your control stick while resurfacing to face Shaymin.</li>
                 <li>Mash the <code class="fw-bold">A</code>, <code class="fw-bold">ZL</code> and <code class="fw-bold">ZR</code> buttons to interact with Shaymin and initiate the encounter as quickly as possible.</li>
                 <li>Once you are in battle, open PokeViewer.NET and connect to it as normal, then click the <code class="fw-bold">View</code> button to inspect the Shaymin you are in battle with.</li>
-                <li>Enter the IVs into the PokeFinder search filters to find the Shaymin you are in battle with. The number inside the <code class="fw-bold">Advances</code> column will be your delay for this attempt.</li>
+                <li>Enter the IVs into the PokeFinder search filters to find the Shaymin you are in battle with. The number inside the <code class="fw-bold">Advances</code> column will be your Offset for this attempt.</li>
                 <ul>
                     <li>If you see multiple potential results you will need to match the PID/EC shown on PokeViewer to the search result table to find the exact frame you hit.</li>
                 </ul>
-                <li>Note down your delay into a Notepad document, Google Sheet or similar. Repeat this process multiple times to get an rough idea of the delays you are hitting.</li>
+                <li>Note down your Offset into a Notepad document, Google Sheet or similar. Repeat this process multiple times to get an rough idea of the Offset you are hitting.</li>
                 <ul>
                     <li>You may need to record upwards of 10 attempts before seeing any level of consistency.</li>
                 </ul>

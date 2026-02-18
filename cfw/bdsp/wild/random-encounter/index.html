@@ -38,7 +38,7 @@ permalink: /cfw/bdsp/wild/
         <p>Moarencounterbots is able to track and monitor RNG seeds in real time as well as advance the RNG state until a given point, removing the vast majority of work that would otherwise be tedious. This allows the player to put their efforts into more important factors like hitting their target frame instead.</p>
 
         <h6 class="fw-bold">Additional Information</h6>
-        <p>Honey and Sweet Scent cannot be used in areas with overworld weather like Blizzard or Sandstorm. Fog is the exception, as it can be cleared using Defog via the Pok&eacute;tch application. If Honey isn't usable consider changing locations, as triggering random encounters by moving the player is undesirable.</p>
+        <p>Honey and Sweet Scent cannot be used in areas with overworld weather like Blizzard or Sandstorm. Fog is the exception as it can be cleared using Defog on the Pok&eacute;tch application. If Honey isn't usable consider changing locations, as triggering random encounters by moving the player is undesirable.</p>
 
         <details>
             <summary class="fw-bold">Problematic Areas</summary>
@@ -227,22 +227,25 @@ permalink: /cfw/bdsp/wild/
                 <li>Copy the top half of the seed into the <code class="fw-bold">Seed 0</code> field of PokeFinder.</li>
                 <li>Copy the bottom half of the seed into the <code class="fw-bold">Seed 1</code> field of PokeFinder.</li>
             </ul>
-            <li>Click the <code class="fw-bold">Generate</code> button to search for targets that match your parameters.</li>
+            <li>You can now click the <code class="fw-bold">Generate</code> button to search for targets that match your parameters.</li>
+            <ul>
+                <li>You may wish to calibrate your Delay/Offset first before searching for target frames! See below for more information.</li>
+            </ul>
         </ol>
     </div>
 
 </div>
 <br />
 
-<p><span class="fw-bold">Figure 3 -</span> Delay Calibration</p>
+<p><span class="fw-bold">Figure 3 -</span> Delay/Offset Calibration</p>
 <img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/wild/delay-calibration.gif" alt="wild-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/wild/delay-calibration.gif">
 
 <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #96324c;" id="wild-delay-calibration">
-        <span class="fw-bold text-light">Delay Calibration</span>
+    <div class="anchored card-header" style="background-color: #96324c;" id="wild-offset-calibration">
+        <span class="fw-bold text-light">Delay/Offset Calibration</span>
     </div>
     <div class="card-body card-bg">
-        <p>In most cases you will need to manually calibrate the delay in the area you are hunting in. For areas where the natural RNG advances slowly you should expect to see delays of 0-2. You may experience added variation in areas where the natural RNG advances are erratic.</p>
+        <p>In most cases you will need to manually calibrate the Offset in the area you are hunting in. For areas where the natural RNG advances slowly you should expect to see Offsets of 0-2. You may experience added variation in areas where the natural RNG advances are erratic.</p>
 
         <h6 class="fw-bold">Step-by-step</h6>
         <ol>
@@ -251,10 +254,10 @@ permalink: /cfw/bdsp/wild/
             <li>Add <code class="fw-bold">EncBotCopySeedBS</code> to the list of active bots and click <code class="fw-bold">Start All</code>, then head over to the logs tab to grab your seeds and paste them into PokeFinder.</li>
             <li>On the right of the PokeFinder window, click <code class="fw-bold">Disable Filters</code>, then set your <code class="fw-bold">Max Advances</code> down to a reasonable number (~1000), then click <code class="fw-bold">Generate</code>.</li>
             <li>Quickly mash the <code class="fw-bold">A</code> button to re-open the game and use Honey, this will trigger an encounter. View the details of the encounter using PokeViewer.NET.</li>
-            <li>Find the Pok&eacute;mon you hit in the PokeFinder search results table. This will be your delay for this attempt. It is recommended to repeat this process a few times to get an idea of the common delays you are hitting.</li>
+            <li>Find the Pok&eacute;mon you hit in the PokeFinder search results table. This will be your Offset for this attempt. It is recommended to repeat this process a few times to get an idea of the common Offsets you are hitting.</li>
         </ol>
 
-        <p>After finding your rough average delay, head back to PokeFinder and uncheck the <code class="fw-bold">Disable Filters</code> checkbox, add your delay into the <code class="fw-bold">Delay</code> field on the left, then set your <code class="fw-bold">Max Advances</code> back to normal. You can now begin searching for target frames.</p>
+        <p>After finding your rough average Offset, head back to PokeFinder and uncheck the <code class="fw-bold">Disable Filters</code> checkbox, add your Offset into the <code class="fw-bold">Offset</code> field on the left (or <code class="fw-bold">Delay</code> if you are using an older version of PokeFinder), then set your <code class="fw-bold">Max Advances</code> back to normal. You can now begin searching for target frames.</p>
 
         <p>If you do not find any results consider increasing your search range, applying less strict search filters, or restarting the game to generate a new seed. Repeat this process until a desirable seed has been found.</p>
 
@@ -278,9 +281,9 @@ permalink: /cfw/bdsp/wild/
         <span class="fw-bold text-light">Target Found</span>
     </div>
     <div class="card-body card-bg">
-        <p>In Figure 3 we can see a shiny Unown-? will be produced in 21,359 advances and our calibrated delay (1) is being considered by PokeFinder. Now the goal is to press the <code class="fw-bold">A</code> button to generate the Pok&eacute;mon on advance 21,359. If you are seeking a non shiny target you may notice multiple frames in a row that produce the same end result, this is known as a "frame cluster". It is recommended to target clusters for non-shiny targets as this grants more opportunities to hit the correct frame.</p>
+        <p>In Figure 3 we can see a shiny Unown-? will be produced in 21,359 advances and our calibrated Offset (1) is being considered by PokeFinder. Now the goal is to press the <code class="fw-bold">A</code> button to generate the Pok&eacute;mon on advance 21,359. If you are seeking a non shiny target you may notice multiple frames in a row that produce the same end result, this is known as a "frame cluster". It is recommended to target clusters for non-shiny targets as this grants more opportunities to hit the correct frame.</p>
 
-        <p>To advance the RNG state we will be using the Moarencounterbots <code class="fw-bold">EncBotDexFlipBS</code> routine to automate this process. <code class="fw-bold">EncBotDexFlipBS</code> flips back and fourth between Pok&eacute;dex entries to advance the current seed until a given point. This quickest known method to advance the RNG state in this game.</p>
+        <p>To automate the process of advancing the RNG state we will be using the Moarencounterbots <code class="fw-bold">EncBotDexFlipBS</code> routine. <code class="fw-bold">EncBotDexFlipBS</code> flips back and fourth between Pok&eacute;dex entries to advance the current seed until a given point. This quickest known method to advance the RNG state in this game.</p>
 
         <h6><span class="fw-bold">EncBotDexFlipBS Setup</span></h6>
         <ol>
@@ -339,7 +342,7 @@ permalink: /cfw/bdsp/wild/
             <li>Monitor the RNG state until you reach your target frame, this should match the exact frame shown on PokeFinder's search result table.</li>
             <ul>
                 <li>A technique called "Home button mashing" is used to help ensure that we land directly onto our target frame. Quickly pressing the Home button twice will resume, then pause the game. We can use this technique to inch closer to our target frame and land directly onto it in most cases.</li>
-                <li>In the unlikely event that we cannot land directly onto our target frame this will need to be treated as a failure and you will need to restart the process again by finding a new seed and target frame.</li>
+                <li>In the event that we cannot land directly onto our target frame this will need to be treated as a failure and you will need to restart the process again by finding a new seed and target frame.</li>
             </ul>
             <li>You should now be on the Home menu and the SysBot <code class="fw-bold">Logs</code> tab should indicate that you have reached your target frame. Unpause the game while mashing the <code class="fw-bold">A</code> button (Honey) or moving the player (walking) to trigger the wild encounter.</li>
             <ul>
