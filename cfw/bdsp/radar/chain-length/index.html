@@ -1,19 +1,100 @@
 ---
 layout: default
-title: BDSP Pok&eacute;Radar Chain Length RNG (CFW)
+title: Pok&eacute;Radar Chain Length RNG (CFW)
 permalink: /cfw/bdsp/radar/chain-length/
 ---
 
 <div class="title" style="background-color: #96324c;">
-    <h1 class="text-light text-center pt-3 pb-3">BDSP Pok&eacute;Radar Chain Length RNG</h1>
+    <h1 class="text-light text-center pt-3 pb-3">Pok&eacute;Radar Chain Length RNG</h1>
 </div>
 <small class="text-muted mb-3 mt-0">
     Learn how to manipulate Pok&eacute;Radar chain length for the best possible shiny rates and IV bonuses.
 </small>
 <hr />
 
-<div class="alert alert-primary" style="border: 1px solid #004085; border-radius: 8px; padding: 15px; background-color: #cce5ff; color: #004085;">
-    <p><span class="fw-bold">Info -</span> This page is unfinished! Check back in later.</p>
+<p>As mentioned earlier in the guide, manipulating your chain length will grant better <a href="https://www.serebii.net/brilliantdiamondshiningpearl/pokeradar.shtml" target="_blank" rel="noopener noreferrer">shiny patch rates and IV bonuses</a>. This section of the guide will teach you how to build a high chain using the automation features found in ARSE.</p>
+
+<div class="alert alert-danger" style="border: 1px solid #a80404; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Important -</span> From here it will be assumed that you have read and understand all of the information found on the previous pages of the guide. You should have gathered all of the resources you need and have the correct party set up to follow along with the instructions on this page. Go back and do this now if you have not already done so.
+</div>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/radar/encounter" target="_blank" rel="noopener noreferrer">
+    Missed the setup instructions? <span class="fw-bold">Click here to go back!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+
+<p><span class="fw-bold">Figure 1 -</span> Chain Continuation Demo</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/radar/chain-continuation-demo.gif" alt="chain-continuation-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/radar/chain-continuation-demo.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #96324c;" id="getting-started-chain-length-radar">
+        <span class="fw-bold text-light">Getting Started</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>At the end of a battle, shortly after dismissing the EXP gain screen, the game rolls a random number from 0-99 to decide if the chain will break or continue, with perfect play we want the game to roll a number < 93 for the chain to continue. Remember, there is still a 7% chance that the chain will break even when playing perfectly by encountering a Pok&eacute;mon four tiles away from the player and capturing it.</p>
+
+        <p>Having a Pok&eacute;mon in our party that can gain EXP is crucial as this gives the player the most control over when the battle ends. The EXP gain screen is dismissed by pressing the <code class="fw-bold">A</code> button, which can be automated using ARSE. In practice, this means the tool will automatically press the <code class="fw-bold">A</code> button at a point where it is safe to exit the battle without risking the chain.</p>
+
+        <p>Because RNG frames advance very quickly during battle, it can be difficult to manually land on a single precise frame that will preserve the chain. For this reason, it is recommended to target ranges that contain 70-100 consecutive safe advances, this provides a buffer and significantly increasing the chance of continuing a chain when the battle ends.</p>
+
+        <p>Advances can be done outside of battle using methods such as Pok&eacute;dex scrolling, then you can enter the battle when you are roughly ~5000 frames away from the safe frame. It is recommended to use this method and target seeds which provide 100 safe frames.</p>
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 2 -</span> Automating Chain Continuation</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/radar/automating-chain-continuation.gif" alt="chain-continuation-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/radar/automating-chain-continuation.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #96324c;" id="automating-chain-continuation">
+        <span class="fw-bold text-light">Automating Chain Continuation</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>It is recommended to do follow these steps using handheld-mode with Joy-Cons properly attached to the console. This will circumvent the need to constantly disconnect and reconnect your controllers on every attempt.</p>
+
+        <h6 class="fw-bold">Step-by-step</h6>
+        <ol>
+            <li>Use the Pok&eacute;Radar and stand next to a grass patch that is 4 tiles away from the position the player is standing in and press the <code class="fw-bold">HOME</code> button on your controller.</li>
+            <ul>
+                <li>Zubat should be the first Pok&eacute;mon in your party at this point for consistency reasons that were explained earlier in the guide.</li>
+            </ul>
+            <li>Connect to ARSE if you have not already done so. If done correctly you should now see your seed information leftmost column on the main window.</li>
+            <ul>
+                <li>If you have already connected to ARSE prior to pressing the <code class="fw-bold">HOME</code> button, press the <code class="fw-bold">Update Seeds</code> button on ARSE instead.</li>
+            </ul>
+            <li>Set the <code class="fw-bold">Min. Safe Advances</code> value to <code class="fw-bold">100</code> (you can use a lower value if you wish), and the <code class="fw-bold">Action at Target</code> to <code class="fw-bold">Press A</code>.</li>
+            <ul>
+                <li>If you have decided to use a lower value between 70-90, consider entering the battle first as it should not be difficult to find a safe advance.</li>
+                <li>Finding a seed with 70 safe advances will take an average of ~3000 frames, which only takes a few minutes to advance to in battle.</li>
+                <li>Finding a seed with 100 safe advances will take an average of ~40000 frames, which can take a while to advance to in battle.</li>
+            </ul>
+            <li>Keep the <code class="fw-bold">Continuation Rate</code> at <code class="fw-bold">93%</code> as you should be playing perfectly to grant yourself the best possible chance of chain continuation.</li>
+            <li>Click the <code class="fw-bold">Generate</code> button towards the bottom of the column, you should now see your <code class="fw-bold">Next safe advance</code> at the very bottom of the column.</li>
+            <ul>
+                <li>If this value is >5000 and you are not in battle, you can use <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/radar/pokedex-scrolling.gif">Pok&eacute;dex scrolling</a> to quickly adavance the RNG state until you are roughly 5000 advances away from the safe advance.</li>
+            </ul>
+            <li>When you are close to the safe advance, enter the battle and capture the Pok&eacute;mon, then press the <code class="fw-bold">A</code> button until you reach the <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/radar/exp-gain-screen.png">EXP gain screen</a>.</li>
+            <ul>
+                <li>If you are playing in docked-mode you will need to completely disconnect any controllers that are connected to the console at this point, then disconnect and reconnect to the program.</li>
+            </ul>
+            <li>Press the <code class="fw-bold">Find Safe Advance</code> button on ARSE, then wait for the program to automatically dismiss the EXP gain screen.</li>
+            <ul>
+                <li>You can observe the <code class="fw-bold">Status</code> in the leftmost column underneath the <code class="fw-bold">Connect / Disconnect</code> buttons to check progress.</li>
+            </ul>
+            <li>If done correctly you should now see that your chain has continued, repeat these steps until you have built your chain to a sufficent length.</li>
+        </ol>
+
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 3 -</span> Chain Length Manipulation Complete</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/radar/chain-length-complete.png" alt="chain-continuation-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/radar/chain-length-complete.png">
+
+<div class="alert alert-success" style="border: 1px solid #28a745; border-radius: 5px; padding: 15px;">
+    <span class="fw-bold">Great!</span> You should now understand how to manipulate chain length, you can now build your chain to your desired length and continue following the encounter manipulation section on the next page. Most players will want to build a chain that reaches 39 or 99 for the IV bonuses.
 </div>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/radar/encounter" target="_blank" rel="noopener noreferrer">
