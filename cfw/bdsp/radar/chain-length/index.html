@@ -1,21 +1,21 @@
 ---
 layout: default
-title: Pok&eacute;Radar Chain Length RNG (CFW)
+title: Pok&eacute; Radar Chain Length RNG (CFW)
 permalink: /cfw/bdsp/radar/chain-length/
 ---
 
 <div class="title" style="background-color: #96324c;">
-    <h1 class="text-light text-center pt-3 pb-3">Pok&eacute;Radar Chain Length RNG</h1>
+    <h1 class="text-light text-center pt-3 pb-3">Pok&eacute; Radar Chain Length RNG</h1>
 </div>
 <small class="text-muted mb-3 mt-0">
-    Learn how to manipulate Pok&eacute;Radar chain length for the best possible shiny rates and IV bonuses.
+    Learn how to manipulate Pok&eacute; Radar chain length for the best possible shiny rates and IV bonuses.
 </small>
 <hr />
 
-<p>As mentioned earlier in the guide, manipulating your chain length will grant better <a href="https://www.serebii.net/brilliantdiamondshiningpearl/pokeradar.shtml" target="_blank" rel="noopener noreferrer">shiny patch rates and IV bonuses</a>. This section of the guide will teach you how to build a high chain using the automation features found in ARSE.</p>
+<p>As mentioned earlier in the guide, Pok&eacute; Radar chaining grants <a href="https://www.serebii.net/brilliantdiamondshiningpearl/pokeradar.shtml" target="_blank" rel="noopener noreferrer">guaranteed IV bonuses at specific chain lengths and increases the shiny rates up until a chain of 40</a>.  It would normally be very difficult to reach such high chain lengths even with perfect gameplay, so we use RNG manipulation to improve our chances of getting there. This section of the guide will teach you how to build a high chain using the automation features in ARSE.</p>
 
 <div class="alert alert-danger" style="border: 1px solid #a80404; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
-    <span class="fw-bold">Important -</span> From here it will be assumed that you have read and understand all of the information found on the previous pages of the guide. You should have gathered all of the resources you need and have the correct party set up to follow along with the instructions on this page. Go back and do this now if you have not already done so.
+    <span class="fw-bold">Important -</span> From here, we assume that you have dutifully followed the previous pages of this guide. You should have enough of the necessary items in your bag and the correct party set up before continuing with the instructions on this page. Go back if you have not properly prepared.
 </div>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/radar/tips" target="_blank" rel="noopener noreferrer">
@@ -33,13 +33,13 @@ permalink: /cfw/bdsp/radar/chain-length/
         <span class="fw-bold text-light">Getting Started</span>
     </div>
     <div class="card-body card-bg">
-        <p>At the end of a battle, shortly after dismissing the EXP gain screen, the game rolls a random number from 0-99 to decide if the chain will break or continue, with perfect play we want the game to roll a number < 93 for the chain to continue. Remember, there is still a 7% chance that the chain will break even when playing perfectly by encountering a Pok&eacute;mon four tiles away from the player and capturing it.</p>
+        <p>At the end of a battle, right after dismissing the experience gain screen, the game rolls a random number from 0-99 to decide if the chain will break or continue. With perfect play, our best chance of chain continuation is 93%, which means we need a roll of 0-92 for the chain to continue. The 7% chance that the chain will break occurs if the random number is 93-99.</p>
 
-        <p>Having a Pok&eacute;mon in our party that can gain EXP is crucial as this gives the player the most control over when the battle ends. The EXP gain screen is dismissed by pressing the <code class="fw-bold">A</code> button, which can be automated using ARSE. In practice, this means the tool will automatically press the <code class="fw-bold">A</code> button at a point where it is safe to exit the battle without risking the chain.</p>
+        <p>Recall that we recommended having at least one fainted Pok&eacute;mon in your party that can gain experience. Having a Pok&eacute;mon in our party that can gain experience is crucial as this gives us the most control over when the battle ends. The experience gain screen is the one where an experience gain value such as <code class="fw-bold">+0</code> appears next to the Pok&eacute;mon in our party. This screen will remain until we dismiss it by pressing the <code class="fw-bold">A</code> button. In practice, we can get to this screen, then leave the rest to ARSE to monitor for a safe frame and automatically press the <code class="fw-bold">A</code> button to exit the battle without risking the chain.</p>
 
-        <p>Because RNG frames advance very quickly during battle, it can be difficult to manually land on a single precise frame that will preserve the chain. For this reason, it is recommended to target ranges that contain 70-100 consecutive safe advances, this provides a buffer and significantly increasing the chance of continuing a chain when the battle ends.</p>
+        <p>Because the RNG state advances very quickly during battle, it can be difficult to manually land on a single precise frame that will preserve the chain. For this reason, it is recommended to target ranges that contain 70-100 consecutive safe advances. This provides a buffer and significantly increases the chance of continuing a chain when the battle ends.</p>
 
-        <p>Advances can be done outside of battle using methods such as Pok&eacute;dex scrolling, then you can enter the battle when you are roughly ~5000 frames away from the safe frame. It is recommended to use this method and target seeds which provide 100 safe frames.</p>
+        <p>Advances can be done outside of battle using methods such as Pok&eacute;dex scrolling if a target is very far away. Once you are about 5,000 advances away from the safe cluster, you can enter the battle. It is recommended to use this method and target clusters of about 100 safe frames.</p>
     </div>
 </div>
 <br />
@@ -52,38 +52,44 @@ permalink: /cfw/bdsp/radar/chain-length/
         <span class="fw-bold text-light">Automating Chain Continuation</span>
     </div>
     <div class="card-body card-bg">
-        <p>It is recommended to do follow these steps using handheld-mode with Joy-Cons properly attached to the console. This will circumvent the need to constantly disconnect and reconnect your controllers on every attempt.</p>
+        <p>We recommend following these steps in handheld mode (with JoyCons connected to the console). ARSE's automation features require the JoyCons to be docked or entirely disconnected through the system menu. If you disconnect them, you will have to dock them on each continuation attempt.</p>
 
-        <h6 class="fw-bold">Step-by-step</h6>
+        <h6 class="fw-bold">Before Starting</h6>
         <ol>
-            <li>Use the Pok&eacute;Radar and stand next to a grass patch that is 4 tiles away from the position the player is standing in and press the <code class="fw-bold">HOME</code> button on your controller.</li>
+            <li>Head to the location where you plan to start a Pok&eacute; Radar chain. Stand in the grass. Activate any kind of Repel. Make sure you keep a Repel active throughout this entire process.</li>
+            <li>Zubat should be the first Pok&eacute;mon in your party at this point for consistency. Your party should be set up <a href="https://billo-guides.github.io/cfw/bdsp/radar/tips/#in-game-setup-radar" target="_blank" rel="noopener noreferrer">as previously described</a>.</li>
+            <li>Connect to ARSE if you have not already done so. You should now see your seed information on the top left section of the program.</li>
+            <li>Set the <code class="fw-bold">Action at Target:</code> on ARSE to <code class="fw-bold">Press A</code>.</li>
+            <li>Set the <code class="fw-bold">Min. Safe Advances:</code> value to <code class="fw-bold">100</code>. You can set a lower value such as 70-90, which will be faster to find but less safe than 100.</li>
+            <li>Keep the <code class="fw-bold">Continuation Rate</code> at <code class="fw-bold">93%</code> as you should be playing perfectly for the best possible chance of chain continuation.</li>
+
+        </ol>
+
+        <h6 class="fw-bold">Step-by-Step</h6>
+        <ol>
+            <li>Use the Pok&eacute; Radar to spawn 4 shaking grass patches. Select a grass patch that is 4 tiles away from where you are standing. Walk over and stand in an adjacent tile, using the D-Pad to position within the grid.</li>
             <ul>
-                <li>Zubat should be the first Pok&eacute;mon in your party at this point for consistency reasons that were explained earlier in the guide.</li>
+                <li>If none of the grass patches are 4 tiles away, walk 50 steps to recharge the Pok&eacute; Radar and use it again from the middle of the grassy area.</li>
             </ul>
-            <li>Connect to ARSE if you have not already done so. If done correctly you should now see your seed information leftmost column on the main window.</li>
+            <li>The next step depends on what value you set for <code class="fw-bold">Min. Safe Advances:</code>.</li>
             <ul>
-                <li>If you have already connected to ARSE prior to pressing the <code class="fw-bold">HOME</code> button, press the <code class="fw-bold">Update Seeds</code> button on ARSE instead.</li>
+                <li>If you are using a lower value between 70-90, consider entering the battle at this time. It should not be difficult to find a safe frame. Finding a seed with 70 safe frames in a row will take an average of ~3,000 advances, which only takes a few minutes in battle.</li>
+                <li>If you are using 100, wait outside of battle and check how long you have to advance. Finding a seed with 100 safe frames in a row takes an average of ~40,000 frames, which can take a while to advance in battle. We can advance faster using the Pok&eacute;dex.</li>
             </ul>
-            <li>Set the <code class="fw-bold">Min. Safe Advances</code> value to <code class="fw-bold">100</code> (you can use a lower value if you wish), and the <code class="fw-bold">Action at Target</code> to <code class="fw-bold">Press A</code>.</li>
+            <li>Press the <code class="fw-bold">HOME</code> button on your JoyCon to minimize the game. You should be looking at the Switch Home Menu.</li>
+            <li>Click the <code class="fw-bold">Generate</code> button towards the bottom of the second column on ARSE. You should now see your <code class="fw-bold">Next safe advance</code> underneath.</li>
             <ul>
-                <li>If you have decided to use a lower value between 70-90, consider entering the battle first as it should not be difficult to find a safe advance.</li>
-                <li>Finding a seed with 70 safe advances will take an average of ~3000 frames, which only takes a few minutes to advance to in battle.</li>
-                <li>Finding a seed with 100 safe advances will take an average of ~40000 frames, which can take a while to advance to in battle.</li>
+                <li>If this value is over 5,000 and you are not in battle, you can use <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/radar/pokedex-scrolling.gif">Pok&eacute;dex scrolling</a> to quickly advance the RNG state until you are roughly 5,000 advances away.</li>
             </ul>
-            <li>Keep the <code class="fw-bold">Continuation Rate</code> at <code class="fw-bold">93%</code> as you should be playing perfectly to grant yourself the best possible chance of chain continuation.</li>
-            <li>Click the <code class="fw-bold">Generate</code> button towards the bottom of the column, you should now see your <code class="fw-bold">Next safe advance</code> at the very bottom of the column.</li>
+            <li>Enter the battle if you have not already done so and quickly capture the Pok&eacute;mon. Press the <code class="fw-bold">A</code> button until you reach the <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/radar/exp-gain-screen.png">experience gain screen</a>.</li>
             <ul>
-                <li>If this value is >5000 and you are not in battle, you can use <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/radar/pokedex-scrolling.gif">Pok&eacute;dex scrolling</a> to quickly adavance the RNG state until you are roughly 5000 advances away from the safe advance.</li>
+                <li>If you are playing in docked mode, you will now need to completely disconnect any extra controllers that are connected to the console, dock your Joycons, and disconnect/reconnect ARSE to the console before you can proceed. After this step, you can reactivate your controllers to initiate the next round. You will have to do this for <i>every continuation attempt</i>, which is why we do not recommend it!</li>
             </ul>
-            <li>When you are close to the safe advance, enter the battle and capture the Pok&eacute;mon, then press the <code class="fw-bold">A</code> button until you reach the <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/radar/exp-gain-screen.png">EXP gain screen</a>.</li>
+            <li>Press the <code class="fw-bold">Find Safe Advance</code> button on ARSE. The program will now monitor the RNG state and automatically dismiss the EXP gain screen when appropriate.</li>
             <ul>
-                <li>If you are playing in docked-mode you will need to completely disconnect any controllers that are connected to the console at this point, then disconnect and reconnect to the program.</li>
+                <li>You can watch the <code class="fw-bold">Status</code> in the leftmost column underneath the <code class="fw-bold">Connect / Disconnect</code> buttons to see what the program is doing.</li>
             </ul>
-            <li>Press the <code class="fw-bold">Find Safe Advance</code> button on ARSE, then wait for the program to automatically dismiss the EXP gain screen.</li>
-            <ul>
-                <li>You can observe the <code class="fw-bold">Status</code> in the leftmost column underneath the <code class="fw-bold">Connect / Disconnect</code> buttons to check progress.</li>
-            </ul>
-            <li>If done correctly you should now see that your chain has continued, repeat these steps until you have built your chain to a sufficent length.</li>
+            <li>If the attempt worked, you should be back on the overworld and see that that your chain has continued by spawning 4 more shaking grass patches. Repeat these steps until you have built your chain to a sufficient length.</li>
         </ol>
 
     </div>
@@ -91,7 +97,7 @@ permalink: /cfw/bdsp/radar/chain-length/
 <br />
 
 <div class="alert alert-danger" style="border: 1px solid #a80404; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
-    <span class="fw-bold">Important -</span> While it can be tempting to go for <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/radar/tempting-shiny-patch.gif">random shiny patches</a> while you are building your chain, it is often not worth the risk of lowering your Continue Rate by going for one that is not at least 4 tiles away.
+    <span class="fw-bold">Important -</span> It can be tempting to go for <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/radar/tempting-shiny-patch.gif">random shiny patches</a> that appear while you are building your chain. Note that you will lower your continuation rate by going for any patch that is less than 4 tiles away. You can set the <code class="fw-bold">Continuation Rate</code> lower to try and continue the chain. This guide will not cover suboptimal gameplay in more detail.
 </div>
 
 <p><span class="fw-bold">Figure 3 -</span> Chain Length Manipulation Complete</p>
@@ -102,7 +108,7 @@ permalink: /cfw/bdsp/radar/chain-length/
 </div>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/radar/encounter" target="_blank" rel="noopener noreferrer">
-    Move onto <span class="fw-bold">Pok&eacute;Radar Encounter Manipulation!</span>
+    Move onto <span class="fw-bold">Pok&eacute; Radar Encounter Manipulation!</span>
     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
     </svg>

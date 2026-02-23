@@ -72,9 +72,9 @@ permalink: /cfw/bdsp/
             </td>
         </tr>
         <tr>
-            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/poke-radar.png">Pok&eacute;Radar</a></span></td>
+            <td class="text-center"><span class="fw-bold"><a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/final-a-presses/poke-radar.png">Pok&eacute; Radar</a></span></td>
             <td>
-                Encounters initiated by using the Pok&eacute;Radar and entering a shaking grass patch.
+                Encounters initiated by using the Pok&eacute; Radar and entering a shaking grass patch.
             </td>
         </tr>
         <tr>
@@ -128,17 +128,17 @@ permalink: /cfw/bdsp/
 
         <h6><span class="fw-bold">Installation Instructions</span></h6>
         <ol>
-            <li>Download <code span class="fw-bold">PokeFinder</code> and extract the contents of the download to a clean, empty folder inside a known location on your computer.</li>
-            <li>Download <code span class="fw-bold">SysBot.NET - Moarencounterbots</code> and extract the contents of the download to a clean, empty folder inside a known location on your computer.</li>
-            <li>Download <code span class="fw-bold">PokeViewer.NET</code> and extract the contents of the download to a clean, empty folder inside a known location on your computer.</li>
+            <li>Download <code span class="fw-bold">PokeFinder</code> and extract the contents of the download to a clean, empty folder at a known location on your computer.</li>
+            <li>Download <code span class="fw-bold">SysBot.NET - Moarencounterbots</code> and extract the contents of the download to a clean, empty folder at a known location on your computer.</li>
+            <li>Download <code span class="fw-bold">PokeViewer.NET</code> and extract the contents of the download to a clean, empty folder at a known location on your computer.</li>
             <li>Download <code span class="fw-bold">sys-botbase</code> and extract the <code span class="fw-bold">atmosphere</code> folder to the root of your Switch SD card, then reboot the console into your chosen CFW environment.</li>
             <li>Confirm that PokeFinder, SysBot.NET and PokeViewer.NET all open correctly with no issues, resolve any issues before continuing to follow the guide.</li>
         </ol>
 
         <h6 span class="fw-bold">Finding Switch IP</h6>
         <ol>
-            <li>After launching your CFW environment enter the Homebrew Menu by clicking the <code class="fw-bold">Album</code> button on the Switch home screen.</li>
-            <li>Press the <code class="fw-bold">Y</code> button on your controller, this will cause a <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/main-page/switch-ip.png">pop-up</a> to appear. Your console IP will be visible here.</li>
+            <li>After launching your CFW environment, enter the Homebrew Menu by clicking the <code class="fw-bold">Album</code> button on the Switch home screen.</li>
+            <li>Press the <code class="fw-bold">Y</code> button on your controller. This will cause a <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/main-page/switch-ip.png">pop-up</a> to appear. Your console IP will be visible here.</li>
             <li>Memorize your IP or take note of it somewhere on your computer. This IP address will be used to connect to programs like SysBot.NET and PokeViewer.NET</li>
             <li>Attempt to connect to PokeViewer.NET by entering the overworld in-game, typing your local IP address into PokeViewer.NET, then clicking the <code class="fw-bold">Connect</code> button.</li>
             <li>If done correctly your save file information (OT and IDs) will be present on the passport section of the main window.</li>
@@ -149,7 +149,7 @@ permalink: /cfw/bdsp/
 <br>
 
 <div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
-    <span class="fw-bold">Important -</span> If you are running into issues connecting to SysBot.NET or PokeViewer.NET this likely means that sys-botbase has not been properly installed to your console. Visit the official <a href="https://github.com/kwsch/SysBot.NET/wiki/Troubleshooting-Connection-Errors" target="_blank">SysBot.NET Wiki</a> and follow the troubleshooting instructions until the connection to both of these programs is successful.
+    <span class="fw-bold">Important -</span> If you are running into issues connecting to SysBot.NET or PokeViewer.NET, this is likely because sys-botbase has not been properly installed to your console. Visit the official <a href="https://github.com/kwsch/SysBot.NET/wiki/Troubleshooting-Connection-Errors" target="_blank">SysBot.NET Wiki</a> and follow the troubleshooting instructions until you can connect to both of these programs successfully.
 </div>
 
 <hr />
@@ -157,7 +157,7 @@ permalink: /cfw/bdsp/
     <h1 class="text-light text-center pt-3 pb-3">Program Overview</h1>
 </div>
 <small class="text-muted mb-3 mt-0">
-    Start here if you are unfamiliar with how to use PokeFinder, Moarencounterbots &amp; PokeViewer.
+    Start here if you are unfamiliar with how to use PokeFinder, Moarencounterbots, or PokeViewer.
 </small>
 <hr />
 
@@ -211,35 +211,32 @@ permalink: /cfw/bdsp/
         <span class="fw-bold text-light">Moarencounterbots Overview</span>
     </div>
     <div class="card-body card-bg">
-        <p>Moarencounterbots is used for monitoring RNG seeds and automating the main bulk of the RNG advancement process. By default the program is configured to work with the latest games (not BDSP). To fix this issue you will need to the <code class="fw-bold">Mode</code> by do the following:</p>
+        <p>Moarencounterbots is used to monitor the RNG state and automate RNG advancements for distant targets. By default, the program is configured to work with the most recent Switch game, which is not BDSP. To fix this issue you will need to change the <code class="fw-bold">Mode</code> by doing the following:</p>
 
         <h6><span class="fw-bold">Initial Bot Configuration</span></h6>
         <ol>
-            <li>Open <code class="fw-bold">SysBot.exe</code> once then close it again to generate a file named <code class="fw-bold">config.json</code>.</li>
+            <li>Open <code class="fw-bold">SysBot.exe</code> once, then close it. This will generate a file named <code class="fw-bold">config.json</code> in the same folder. Make sure all instances of <code class="fw-bold">SysBot.exe</code> are closed before moving on.</li>
             <li>Open <code class="fw-bold">config.json</code> in a text editor like Notepad.</li>
-            <li>Change the <code class="fw-bold">Mode</code> to 2 (this represents BDSP) and save the changes.</li>
-            <li>Reboot the program, you should now see BDSP in the program header.</li>
-            <li>Navigate to the <code class="fw-bold">Hub</code> tab and open the <code class="fw-bold">EncounterRNGBS</code> dropdown menu.</li>
-            <li>Change <code class="fw-bold">DisplaySeedMode</code> from the default <code class="fw-bold">Bit32</code> option.</li>
-            <ul>
-                <li>If you are using PokeFinder, set this option to <code class="fw-bold">Bit64PokeFinder</code>.</li>
-            </ul>
-            <li>In any case, set the <code class="fw-bold">MonitorRefreshRate</code> to <code class="fw-bold">0</code>.</li>
-            <li>Close the program to lock in your settings configuration and relaunch <code class="fw-bold">SysBot.exe</code>.</li>
+            <li>Change the <code class="fw-bold">Mode</code> to 2 (this represents BDSP) and save the change. Close the text editor.</li>
+            <li>Launch the program again. You should now see BDSP in the program header.</li>
+            <li>Navigate to the <code class="fw-bold">Hub</code> tab and expand the <code class="fw-bold">EncounterRNGBS</code> category under <code class="fw-bold">BotEncounter</code>.</li>
+            <li>Change <code class="fw-bold">DisplaySeedMode</code> to <code class="fw-bold">Bit64</code>.</li>
+            <li>Ensure that <code class="fw-bold">MonitorRefreshRate</code> is set to <code class="fw-bold">0</code>.</li>
+            <li>Closing the program will automatically save these settings.</li>
         </ol>
 
         <h6><span class="fw-bold">Bot Tabs</span></h6>
         <ol>
-            <li><code class="fw-bold">Bots</code> - Add, remove or restart any of the bots in the dropdown menu on the right.</li>
-            <li><code class="fw-bold">Hub</code> - The central hub for determining how your bot operates.</li>
-            <li><code class="fw-bold">Logs</code> - Monitor any currently active bots to ensure a smooth operation.</li>
+            <li><code class="fw-bold">Bots</code> - Add/remove or start/stop the bots. Available bot programs are listed in the dropdown menu on the right.</li>
+            <li><code class="fw-bold">Hub</code> - The central hub for settings to control how your bot operates.</li>
+            <li><code class="fw-bold">Logs</code> - Monitor any currently active bots.</li>
         </ol>
 
         <h6><span class="fw-bold">Bot Types</span></h6>
         <ol>
-            <li><code class="fw-bold">EncBotRNGMonitorBS</code> - Monitor your RNG seed in real time.</li>
+            <li><code class="fw-bold">EncBotRNGMonitorBS</code> - Monitor your RNG state in real time.</li>
             <li><code class="fw-bold">EncBotCopySeedBS</code> - Copy your RNG seed to clipboard at any point.</li>
-            <li><code class="fw-bold">EncBotTIDBS</code> - Automate the process of TID RNG abuse.</li>
+            <li><code class="fw-bold">EncBotTIDBS</code> - Automate searching and advancing for TID RNG abuse.</li>
             <li><code class="fw-bold">EncBotDexFlipBS</code> - Automatically advance the RNG state until a given point by flipping between Pok&eacute;Dex pages.</li>
         </ol>
 
@@ -273,7 +270,7 @@ permalink: /cfw/bdsp/
 <br />
 
 <div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
-    <span class="fw-bold">Important -</span> At this stage the three main programs (PokeFinder, SysBot.NET &amp; PokeViewer.NET) should be configured properly configured and you should have a basic understanding of how to use them.
+    <span class="fw-bold">Important -</span> At this stage, the three main programs (PokeFinder, SysBot.NET &amp; PokeViewer.NET) should be properly configured and you should have a basic understanding of how to use them. Take some time to explore the features and familiarize yourself with the layout before proceeding. You can refer back to this section if you need a refresher on program features or layout.
 </div>
 
 <hr />
@@ -334,6 +331,6 @@ permalink: /cfw/bdsp/
     </svg>
 </a>
 
-<p><span class="fw-bold">Note -</span> The guide for Pok&eacute;Radar RNG manipulation is serparate and comes with its own set of initial setup instructions.</p>
+<p><span class="fw-bold">Note -</span> The guide for Pok&eacute; Radar RNG manipulation is serparate and comes with its own set of initial setup instructions.</p>
 
 

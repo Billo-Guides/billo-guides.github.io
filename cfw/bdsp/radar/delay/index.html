@@ -1,21 +1,21 @@
 ---
 layout: default
-title: Pok&eacute;Radar Delay Calibration (CFW)
+title: Pok&eacute; Radar Delay Calibration (CFW)
 permalink: /cfw/bdsp/radar/delay/
 ---
 
 <div class="title" style="background-color: #96324c;">
-    <h1 class="text-light text-center pt-3 pb-3">Pok&eacute;Radar Delay Calibration</h1>
+    <h1 class="text-light text-center pt-3 pb-3">Pok&eacute; Radar Delay Calibration</h1>
 </div>
 <small class="text-muted mb-3 mt-0">
-    Learn how to calibrate your area-specific delay for Pok&eacute;Radar encounters here.
+    Learn how to calibrate your area-specific delay for Pok&eacute; Radar encounters here.
 </small>
 <hr />
 
-<p>This page outlines the most commonly used method for calculating delay and explains how to use that information to your advantage. Calculating your delay is very important for controlling the stats of Pok&eacute;Radar encounters, which you will likely want to do after building up your chain. The term "delay" refers to the difference between the RNG advance at the moment of the final input before initiating an encounter, and the advance that generates the Pok&eacute;mon.</p>
+<p>This page outlines the most commonly-used method for calculating encounter delay to accurately target Pok&eacute; Radar encounters, which you will likely want to do after building up your chain. The term "delay" refers to the difference between the RNG frame at the moment of the final input before initiating an encounter, and the frame that actually generates the Pok&eacute;mon.</p>
 
 <div class="alert alert-primary" style="border: 1px solid #004085; border-radius: 8px; padding: 15px; background-color: #cce5ff; color: #004085;">
-    <span class="fw-bold">Example -</span> If you initiate an encounter on advance 100, but the Pok&eacute;mon you battle was generated on advance 180, your delay would be 80. As there is an 80 advance difference between 100 and 180.
+    <span class="fw-bold">Example -</span> If you initiate an encounter on frame 100, but the Pok&eacute;mon you battle was generated on frame 180, your delay would be 80 as there is an 80 advance difference between 100 and 180.
 </div>
 
 <p><span class="fw-bold">Figure 1 -</span> Delay Calibration Methods</p>
@@ -26,38 +26,43 @@ permalink: /cfw/bdsp/radar/delay/
         <span class="fw-bold text-light">Delay Calibration Methods</span>
     </div>
     <div class="card-body card-bg">
-        <p>There are two methods you can use to calibrate your delay, depending on whether you are playing in handheld or docked mode. The method shown above demonstrates the docked-mode approach, however, both methods have their own advantages. You can choose your preferred option by following the written steps outlined below.</p>
+        <p>There are two methods you can use to calibrate your delay: manual and automatic. The image above demonstrates the manual approach.</p>
 
-        <h6 class="fw-bold">Initial Setup</h6>
-        <ol>
-            <li>Stand one tile away from the target Pok&eacute;Radar grass patch. Use the D-Pad to line yourself up precisely with the tile grid for consistent positioning.</li>
-            <li>Press the <code class="fw-bold">HOME</code> button to open the Switch Home Menu. This will freeze the current RNG state.</li>
-            <li>If you have not already done so, connect your console to ARSE. Your current seed should now appear in the top-left of the window.</li>
-            <li>If your console was already connected you can simply click the <code class="fw-bold">Update Seeds</code> button in ARSE for the same effect.</li>
-        </ol>
+        <p>The manual method requires you to hold the joystick and resume the game yourself. This can be done in both handheld mode or docked mode.</p>
 
-        <h6 class="fw-bold">Docked-Mode Specifics</h6>
+        <p>The automatic method requires you to hold the joystick while ARSE performs the other steps for you. This must be done in handheld mode with both joycons docked.</p>
+
+        <p>Follow the steps below for your preferred method.</p>
+
+
+        <h6 class="fw-bold">Initial Setup (Required for Both Methods)</h6>
         <ol>
-            <li>With your console on the Switch Home Menu, hold the direction on your control stick that will cause the player to directly walk into the Pok&eacute;Radar grass patch.</li>
+            <li>Stand one tile away from the target Pok&eacute; Radar grass patch. Use the D-Pad to line yourself up precisely with the tile grid for consistent positioning.</li>
+            <li>Press the <code class="fw-bold">HOME</code> button to minimize the game so you are on the Switch Home Menu. This will pause the current RNG state.</li>
+            <li>If you have not already done so, connect your console to ARSE. Your current seed should now appear in the top-left part of the program.</li>
+            <li>If your console was already connected, you can simply click the <code class="fw-bold">Update Seeds</code> button in ARSE.</li>
+            <li>With your console on the Switch Home Menu, hold the direction on your control stick that will cause the player to directly walk into the Pok&eacute; Radar grass patch.</li>
             <ul>
-                <li>In the above example we are standing one tile to the left of the grass patch, so we will hold right on the control stick at this stage.</li>
+                <li>In the above example we are standing one tile to the left of the grass patch, so we will hold right on the joystick with the game minimized.</li>
             </ul>
-            <li>While holding the direction on your control stick, press the <code class="fw-bold">HOME</code> button again to resume the game. You should now see that the encounter has started.</li>
-            <li>Press the <code class="fw-bold">Read Encounter</code> button on ARSE to display the internal details of the Pok&eacute;mon you are in battle with.</li>
-            <li>Click the <code class="fw-bold">Calibate Delay (Docked)</code> button on the right hand-side of the ARSE window. If done correctly you should recieve a pop-up with your calibrated delay.</li>
-            <li>Repeat this process a few times (5-10 times is recommended) until you have a rough average delay. You can take notes of your delay in a table if you wish.</li>
+
         </ol>
 
-        <h6 class="fw-bold">Handheld-Mode Specifics</h6>
+        <h6 class="fw-bold">Manual Method Specifics</h6>
         <ol>
-            <li>With your console on the Switch Home Menu, hold the direction on your control stick that will cause the player to directly walk into the Pok&eacute;Radar grass patch.</li>
-            <ul>
-                <li>In the above example we are standing one tile to the left of the grass patch, so we will hold right on the control stick at this stage.</li>
-            </ul>
-            <li>While holding the direction on your control stick, press the <code class="fw-bold">Calibrate Delay (Handheld)</code> button on ARSE, this will prompt the program to resume the game.</li>
-            <li>After the game is resumed, the encounter will be initated and automatically read by ARSE. If done correctly you should recieve a pop-up with your calibrated delay.</li>
-            <li>Repeat this process a few times (5-10 times is recommended) until you have a rough average delay. You can take notes of your delay in a table if you wish.</li>
+            <li>While holding the direction on the joystick, press the <code class="fw-bold">HOME</code> button again to resume the game. Your character should immediately walk into the shaking grass and start the encounter.</li>
+            <li>Press the <code class="fw-bold">Read Encounter</code> button on ARSE to display the data for the Pok&eacute;mon you are in battle with.</li>
+            <li>Click the <code class="fw-bold">Calibrate Delay (Manual)</code> button on the right-hand side of the ARSE window. You should see a pop-up with your calibrated delay.</li>
         </ol>
+
+        <h6 class="fw-bold">Automatic Method Specifics</h6>
+        <ol>
+            <li>While holding the direction on the joystick, press the <code class="fw-bold">Calibrate Delay (Automatic)</code> button on ARSE. This will prompt the program to press the <code class="fw-bold">HOME</code> button to resume the game.</li>
+            <li>After the game resumes, your character should immediately walk into the shaking grass and start the encounter. ARSE will automatically read the encounter and show a pop-up with your calibrated delay.</li>
+        </ol>
+
+
+        <p>Repeat whichever method you have chosen about 5-10 times to get an average delay. You can list all your results in a table such as the one below to help you track your progress.</p>
     </div>
 </div>
 <br />
@@ -89,7 +94,7 @@ permalink: /cfw/bdsp/radar/delay/
 </table>
 
 <div class="alert alert-danger" style="border: 1px solid #a80404; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
-    <span class="fw-bold">Important -</span> Do not assume that your delay will be consistent across different areas as this is not the case, calibrate your delay every time you move to a new location. Additionally, results can fluctuate even in the same location, so it is recommended to calibrate multiple times and take an average of the results for the most consistent targeting.
+    <span class="fw-bold">Important -</span> Do not assume that your delay will be consistent across different areas! This is usually not the case. You should calibrate your delay every time you move to a new location. Additionally, you should expect to get slightly different results even in the same location, so you should calibrate multiple times to get an average delay.
 </div>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/radar/chain-length" target="_blank" rel="noopener noreferrer">

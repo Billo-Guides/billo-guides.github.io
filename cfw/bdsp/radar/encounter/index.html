@@ -1,21 +1,21 @@
 ---
 layout: default
-title: Pok&eacute;Radar Encounter RNG (CFW)
+title: Pok&eacute; Radar Encounter RNG (CFW)
 permalink: /cfw/bdsp/radar/encounter/
 ---
 
 <div class="title" style="background-color: #96324c;">
-    <h1 class="text-light text-center pt-3 pb-3">Pok&eacute;Radar Encounter RNG</h1>
+    <h1 class="text-light text-center pt-3 pb-3">Pok&eacute; Radar Encounter RNG</h1>
 </div>
 <small class="text-muted mb-3 mt-0">
-    Learn how to manipulate Pok&eacute;Radar encounters to control the internal details of the encountered Pok&eacute;mon.
+    Learn how to manipulate Pok&eacute; Radar encounters to encounter specific Pok&eacute;mon.
 </small>
 <hr />
 
-<p>As mentioned earlier in the guide, manipulating the Pok&eacute;Radar encounter after reaching a high chain will grant an IV bonus. We can use IV bonuses to our advantage alongside a high chain length to guarantee that we capture a high IV, shiny Pok&eacute;mon.</p>
+<p>As mentioned earlier in the guide, Pok&eacute; Radar chaining grants guaranteed IV bonuses at specific chain lengths and increases the shiny rates up until a chain of 40. It would normally be very difficult to reach such high chain lengths even with perfect gameplay, so we use RNG manipulation to improve our chances of getting there. We can use these IV bonuses alongside a high chain length to more easily encounter high IV Shiny Pok&eacute;mon.</p>
 
 <div class="alert alert-danger" style="border: 1px solid #a80404; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
-    <span class="fw-bold">Important -</span> From here it will be assumed that you have calibrated your delay, if you have not done so, go back and do this before continuing. It is also assumed that you have already manipulated your chain length to a number you are comfortable with.
+    <span class="fw-bold">Important -</span> From here, we assume that you have already calibrated your encounter delay and that you are currently at a high chain length that will give you the bonuses you want. If you did not calibrate your encounter delay and you are currently on a high chain, it is very likely you will miss your target. You should go back and calibrate your encounter delay before trying again.
 </div>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/bdsp/radar/tips" target="_blank" rel="noopener noreferrer">
@@ -37,24 +37,26 @@ permalink: /cfw/bdsp/radar/encounter/
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #96324c;" id="getting-started-encounter-manip-radar">
-        <span class="fw-bold text-light">Getting Started</span>
+        <span class="fw-bold text-light">Grass Patch Setup</span>
     </div>
     <div class="card-body card-bg">
-        <p>Before doing anything else you will need to decide if you want your target Pok&eacute;mon to be shiny. If you do want the Pok&eacute;mon to be shiny, the best way to do this is by recharging the Pok&eacute;Radar until a shiny patch appears. This can be done by doing the following:</p>
+        <p>Before proceeding, you should decide if you want your target Pok&eacute;mon to be Shiny. If you do want the Pok&eacute;mon to be Shiny, you will need to generate a shiny patch using the Pok&eacute; Radar. This is done with the following steps:</p>
 
-        <h6 class="fw-bold">Step-by-step</h6>
+        <h6 class="fw-bold">Step-by-Step</h6>
         <ol>
-            <li>Stand in the center of the patch of grass you are hunting in and use the Pok&eacute;Radar, check for a shiny patch.</li>
-            <li>If no shiny patch is produced, walk 50 steps to recharge the Pok&eacute;Radar and use it again. Avoid these actions:</li>
+            <li>Stand in the grass that you are hunting in and use the Pok&eacute; Radar. Check if any of the new shaking grass patches are shiny patches.</li>
+            <li>If no shiny patch was produced, walk 50 steps to recharge the Pok&eacute; Radar and use it again. Make sure to avoid:</li>
             <ul>
-                <li>Walking into a patch of shaking grass.</li>
-                <li>Encountering a random wild Pok&eacute;mon (tip: use Repels).</li>
+                <li>Walking into a shaking grass patch.</li>
+                <li>Encountering a random wild Pok&eacute;mon. Use Repels and a high-level lead Pok&eacute;mon.</li>
             </ul>
-            <li>Repeat until a shiny patch appears, then use the D-Pad to walk towards it and stand directly next to it in any direction.</li>
-            <li>Press the <code class="fw-bold">HOME</code> button to enter the Switch Home Menu, then click <code class="fw-bold">Update Seeds</code> on ARSE. This will freeze the RNG state.</li>
+            <li>Repeat until a shiny patch appears. Carefully walk toward it using the D-Pad and stop on an adjacent tile.</li>
         </ol>
 
-        <p>If for whatever reason you do not care about the shiny status of your Pok&eacute;mon you can simply use your D-Pad to walk towards any shaking grass patch and stand directly next to it in any direction instead.</p>
+        <p>If you do not care about the Shiny status of your Pok&eacute;mon, you can simply use the D-Pad to walk toward any shaking grass patch and stand on an adjacent tile.</p>
+
+        <p>Once you are standing next to the shaking grass patch you plan to use, press the <code class="fw-bold">HOME</code> button to minimize the game and pause RNG advancements. You should be looking at the Switch Home Menu. Click <code class="fw-bold">Update Seeds</code> on ARSE.</p>
+
     </div>
 </div>
 <br />
@@ -64,32 +66,32 @@ permalink: /cfw/bdsp/radar/encounter/
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #96324c;" id="getting-started-encounter-manip-radar">
-        <span class="fw-bold text-light">Getting Started</span>
+        <span class="fw-bold text-light">ARSE Setup</span>
     </div>
     <div class="card-body card-bg">
-        <p>You will now need to feed the program some information about your current in-game status, including the type of grass patch you are targeting, chain length, location, species, and search filters.</p>
+        <p>You will now need to fill in the program settings for your current in-game status, including the type of grass patch you are targeting, chain length, location, species, and search filters.</p>
 
-        <h6 class="fw-bold">Step-by-step</h6>
+        <h6 class="fw-bold">Step-by-Step</h6>
         <ol>
-            <li>In the <code class="fw-bold">General Criteria</code> section, set the <code class="fw-bold">Patch:</code> to match the grass patch you are looking at in-game.</li>
-            <li>Read your chain count from RAM, or manually set your current chain length inside the <code class="fw-bold">Chain Count</code> field. By default this is set to 99.</li>
-            <li>Set the <code class="fw-bold">Location</code> to match your current in-game location. If you do not know your current location you can use the map to find out.</li>
-            <li>Set the species to the one you are currently hunting, this can also be read from RAM using the <code class="fw-bold">Read Species from RAM</code> button.</li>
-            <li>Set your <code class="fw-bold">Lead</code> in the dropdown if you are using a Pok&eacute;mon with the ability Syncronize to control nature.</li>
-            <li>Now move over to the <code class="fw-bold">Search Filters</code> section and enter your search criteria, in this example we are searching for any 6IV.</li>
+            <li>In the <code class="fw-bold">General Criteria</code> section, set the <code class="fw-bold">Patch:</code> to match the grass patch you are facing in-game.</li>
+            <li>Read your chain count from RAM or manually enter your current chain length inside the <code class="fw-bold">Chain Count:</code> field. By default this is set to 99.</li>
+            <li>Set the <code class="fw-bold">Location:</code> to match your current in-game location. If you do not know your current location, check the in-game map.</li>
+            <li>Set the species to the one you are currently chaining. This can also be read from RAM using the <code class="fw-bold">Read Species from RAM</code> button.</li>
+            <li>Set your <code class="fw-bold">Lead</code> in the dropdown if you are using a Pok&eacute;mon with the Synchronize ability to control Nature.</li>
+            <li>Enter your search criteria in the <code class="fw-bold">Search Filters</code> section. In this example, we are searching for any 6IV.</li>
             <ul>
-                <li>You do not need to define shiny here if you are manipulating a shiny patch, simply leave this section on <code class="fw-bold">Ignore</code>.</li>
-                <li><code class="fw-bold">Rare EC</code> should only be checked if you are hunting Dunsparce and want a three-segment Dudunsparce in Scarlet/Violet.</li>
-                <li>You do not need to define height unless you are specifically searching for a Jumbo Marked Pok&eacute;mon in Scarlet/Violet.</li>
+                <li>You do not need to define <code class="fw-bold">Shiny:</code> here if you are manipulating a shiny patch. Simply leave this section on <code class="fw-bold">Ignore</code>.</li>
+                <li><code class="fw-bold">Rare EC?</code> should only be checked if you are hunting Dunsparce and want a Three-Segment Dudunsparce in future games such as Scarlet/Violet.</li>
+                <li>You do not need to define <code class="fw-bold">Height:</code> unless you are specifically searching for a Pok&eacute;mon that qualifies for the Jumbo Mark or Mini Mark in future games such as Scarlet/Violet.</li>
             </ul>
-            <li>Set the <code class="fw-bold">Min. Cluster</code> to a value you are comfortable with. It is recommended to set this value as high as is reasonable.</li>
+            <li>Set the <code class="fw-bold">Min. Cluster:</code> to as high a value as possible that still returns a result. Larger clusters improve your chances of successfully hitting a target, but make the search more difficult. For example:</li>
             <ul>
-                <li>On a chain of 99 it is very easy to find clusters of 10 or higher. The higher the cluster, the better the chance of hitting a target frame.</li>
-                <li>On lower chain lengths, you may wish to set this to a lower value or increase your search range to find results.</li>
+                <li>On a chain of 99, it is very easy to find clusters of 10 or higher because of the guaranteed IVs.</li>
+                <li>On lower chain lengths with fewer guaranted IVs, it is harder to find large clusters, so you should set this to a lower value or increase your search range to find results.</li>
                 <li>If you are hunting for a rare EC Dunsparce, consider lowering the cluster size to 2-3 AND increasing your search range.</li>
                 <li>Search range can be increased by adjusting the <code class="fw-bold">+</code> field at the bottom of the <code class="fw-bold">General Criteria</code> section.</li>
             </ul>
-            <li>Enter your delay into the <code class="fw-bold">Delay</code> field, this should generally be the lowest number or most consistent number from your delay table.</li>
+            <li>Enter your delay into the <code class="fw-bold">Delay:</code> field. This should generally be the lowest number or most consistent number from your delay table.</li>
         </ol>
     </div>
 </div>
@@ -103,27 +105,27 @@ permalink: /cfw/bdsp/radar/encounter/
         <span class="fw-bold text-light">Advancing The RNG State</span>
     </div>
     <div class="card-body card-bg">
-        <p>We found a cluster of x advances that will generate a 6IV Gastrodon on advance x-y. In any case we should aim for the very start of the cluster to grant the best possible chance of hitting the target, so in this example we will aim for advance z.</p>
+        <p>We found a cluster of x advances that will generate a 6IV Gastrodon on advance x-y. In any case, we should aim for the very start of the cluster for the best possible chance of hitting the target. In this example we will aim for advance z.</p>
 
-        <h6 class="fw-bold">Step-by-step</h6>
+        <h6 class="fw-bold">Step-by-Step</h6>
         <ol>
-            <li>Make sure you are connected to ARSE with the Switch Home Menu open on your console, search for your target frame again if necessary.</li>
-            <li>Advance the RNG state you are around ~1000 advances away from your target, the method you will use to advance the RNG state will vary depending on how far away from the target you are.</li>
+            <li>Make sure you are connected to ARSE while the game is minimized. You should be on the Switch Home Menu. Search for your target frame again if necessary.</li>
+            <li>Advance the RNG state until you are around ~1000 advances away from your target. The method you should use to advance the RNG state depends on how far away from the target you are.</li>
             <ul>
                 <li>If you are under 10,000 advances away from your target you can simply let the RNG state advance naturally by standing in the overworld.</li>
                 <li>If you are over 10,000 advances away from the target, it may be in your best interest to use <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/radar/pokedex-scrolling.gif">Pok&eacute;dex scrolling</a> to advance the RNG state quickly.</li>
-                <li>If your target is in the millions of advances away from your current seed, consider using SysBot.NET - Moarencounterbots to automate the process of advancing the RNG state using Dexflip.</li>
-                <li>The usage information for Dexflip can be found on the <a href="https://github.com/Lusamine/SysBot.NET/wiki/BDSP-EncounterBots#dex-flip-bot-encbotdexflipbs" target="_blank" rel="noopener noreferrer">official Moarencounterbots wiki</a>, or in the <a href="https://billo-guides.github.io/cfw/bdsp/" target="_blank" rel="noopener noreferrer">general BDSP RNG guide</a>.</li>
+                <li>If your target is millions of advances away, consider using SysBot.NET - Moarencounterbots to automate the process of advancing the RNG state using Dex Flip.</li>
+                <li>The usage information for Dex Flip can be found on the <a href="https://github.com/Lusamine/SysBot.NET/wiki/BDSP-EncounterBots#dex-flip-bot-encbotdexflipbs" target="_blank" rel="noopener noreferrer">official Moarencounterbots wiki</a> or in the <a href="https://billo-guides.github.io/cfw/bdsp/" target="_blank" rel="noopener noreferrer">general BDSP RNG manipulation guide</a>.</li>
             </ul>
-            <li>Once you are around 1000 advances away from your target you should go back to the Switch Home Menu, click the <code class="fw-bold">Update Seeds</code> button on ARSE, and search for your target again.</li>
-            <li>Slowly inch towards your target frame by quickly pressing the <code class="fw-bold">HOME</code> button twice, this will quickly unpause the game and pause it again.</li>
+            <li>Once you are around 1,000 advances away from your target, minimize the game again so you are back on the Switch Home Menu. Click the <code class="fw-bold">Update Seeds</code> button on ARSE and search for your target again.</li>
+            <li>Slowly inch towards your target frame by quickly pressing the <code class="fw-bold">HOME</code> button twice. This will quickly resume the game and minimize it again.</li>
             <ul>
-                <li>Keep a close eye on the <code class="fw-bold">Adv.</code> field of ARSE to avoid overshooting your target (note: you may overshoot your target due to bad luck, see below).</li>
+                <li>Keep a close eye on the <code class="fw-bold">Adv.</code> field of ARSE to avoid overshooting your target. Note that this may not always be possible to avoid in locations where the RNG state is advancing very quickly.</li>
             </ul>
             <li>Once you have landed on your target frame, keep the game paused on the Switch Home Menu.</li>
         </ol>
 
-        <p>In some cases it will not be possible to land directly onto your target frame due to the speed that the RNG state is advancing, this should be treated as a failure. You should find a new target frame and repeat this process again.</p>
+        <p>In some cases, it will not be possible to land directly onto your target frame due to the rate at which the RNG state is advancing. This should be treated as a failure. You should find a new target frame and repeat this process again.</p>
 
     </div>
 </div>
@@ -132,9 +134,9 @@ permalink: /cfw/bdsp/radar/encounter/
 <p><span class="fw-bold">Figure 4 -</span> Target Frame Hit</p>
 <img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/radar/target-frame-hit-radar-encounter.png" alt="encounter-manip-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/radar/target-frame-hit-radar-encounter.png">
 
-<p>We were able to land directly onto our target frame (x advance), now it is time to initiate the encounter. Hold the correct direction on your control stick (e.g if you are on the left of the shiny patch, hold right on your control stick), then while holding the direction, press the <code class="fw-bold">HOME</code> button. This will initiate the encounter.</p>
+<p>We were able to land directly onto our target frame (x advance). Now it is time to initiate the encounter. Hold the correct direction on your joystick so that you will walk into the grass patch. For example, if you are standing to the left of the shiny patch, hold the joystick to the right. Then, while holding the joystick, press the <code class="fw-bold">HOME</code> button to resume the game and trigger the encounter.</p>
 
-<p><span class="fw-bold">Figure 5 -</span> Initiating The Encounter</p>
+<p><span class="fw-bold">Figure 5 -</span> Initiating the Encounter</p>
 <img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/radar/initiating-the-encounter-radar.gif" alt="encounter-manip-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/bdsp/radar/target-frame-hit.png">
 
-<p>We have now initiated the encounter, and can use the <code class="fw-bold">Read Encounter</code> button on ARSE to confirm the internal details match what we expect. The details show that we are in battle with a 6IV, shiny Gastrodon so we have successfully hit the target frame!</p>
+<p>We have now initiated the encounter! We can use the <code class="fw-bold">Read Encounter</code> button on ARSE to confirm the internal details match what we expect. The details show that we are in battle with a 6IV Shiny Gastrodon so we have successfully hit the target frame!</p>
