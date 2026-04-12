@@ -1,0 +1,239 @@
+---
+layout: default
+title: Legends Arceus Legendary/Mythical RNG (RETAIL)
+permalink: /retail/la/legendary/
+---
+
+<div class="title" style="background-color: #6f3b97;">
+    <h1 class="text-light text-center pt-3 pb-3">Legends: Arceus RNG (RETAIL)</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    A guide for RNG manipulating Legendary &amp; Mythical Pok&eacute;mon in Pok&eacute;mon Legends: Arceus using ParLiAment by <a class="text-decoration-none text-muted" href="https://github.com/LegoFigure11/" target="_blank" rel="noopener noreferrer">LegoFigure11</a>.
+</small>
+<hr />
+
+<h5 span class="fw-bold">Introduction</h5>
+<p>In Legends: Arceus, all Legendary &amp; Mythical Pok&eacute;mon have predetermined internal values that can be predicted in advance using RNG manipulation. Currently, not all legendary/mythical Pok&eacute;mon can be predicted on retail hardware, but the ones that can be predicted are predictable with 100% consistency with no timing required. Learning how this works allows you to obtain most Legendary/Mythical Pok&eacute;mon in the game with desired IVs &amp; Natures.</p>
+
+<p>Legendary/Mythical Pok&eacute;mon are not all generated the same way and there are two seperate categories that they fall into <i>"Main RNG"</i> or <i>"Spawner RNG"</i>. Only those that fall into the Spawner RNG category can be manipulated on retail hardware at this current time. Here is a list encounters tied to Spawner RNG:</p>
+
+<ul>
+    <li style="margin-bottom:0px;">Lake Trio - Uxie, Mesprit &amp; Azelf</li>
+    <li style="margin-bottom:0px;">Weather Quartet - Tornadus, Thundurus, Landorus &amp; Enamorus</li>
+    <li style="margin-bottom:0px;">Heatran</li>
+    <li style="margin-bottom:0px;">Cresselia</li>
+    <li style="margin-bottom:0px;">Manaphy &amp; Phione</li>
+    <li style="margin-bottom:0px;">Shaymin</li>
+    <li style="margin-bottom:0px;">Darkrai</li>
+</ul>
+
+<p>Anything not included in this list is in the Main RNG category and cannot currently be manipulated on retail hardware. In the event that more research is done that gives retail players access to the Main RNG state this guide will be updated to support those encounters.</p>
+
+<hr /><div class="title" style="background-color: #6f3b97;">
+    <h1 class="text-light text-center pt-3 pb-3">Setup, Installation &amp; Usage</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    Learn how to use and configure the tools used throughout the RNG manipulation process.
+</small>
+<hr />
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="setup-and-installation-la-legendary-retail">
+        <span class="fw-bold text-light">Required Software &amp; Game Setup</span>
+    </div>
+    <div class="card-body card-bg">
+        <h5><span class="fw-bold">Tools and Applications</span></h5>
+        <ul>
+            <li><a href="https://github.com/LegoFigure11/parliament/releases" target="_blank" rel="noopener noreferrer">ParLiAment</a></li>
+            <li>Access to a SysBot running Legends: Arceus</li>
+        </ul>
+
+        <p>You can find a SysBot by searching online for "Legends: Arceus SysBot server" or by asking in relevant communities. This RNG utilizes someone elses Custom Firmware Switch to assist in dumping the relevant Pok&eacute;mon files on your behalf.</p>
+
+        <h5><span class="fw-bold">Game Setup</span></h5>
+        <p>Before starting, make sure your game is properly set up and that you have the required resources to ensure the RNG process is as smooth as possible. It is assumed that you have progressed the story enough to spawn your target Pok&eacute;mon. If you have not yet done so you should go back and do this now.</p>
+
+        <h6 class="fw-bold">In-game Resources</h6>
+        <ul>
+            <li>Plenty of throwable items to remove the shield and stun the target Pok&eacute;mon (e.g., Sticky Glob, Ball of Mud, etc.)</li>
+            <li>Plenty of healing items to keep your Pok&eacute;mon in good health (e.g., Full Restore, Revives, etc.)</li>
+            <li>Plenty of Pok&eacute; Balls to capture your target Pok&eacute;mon (e.g., Gigaton Ball, Jet Ball, Ultra Ball, etc.)</li>
+            <li>Plenty of stealth items, particularly helpful for weather genies and Darkrai (e.g., Stealth Spray, Smoke Ball, etc.)</li>
+        </ul>
+
+        <h6 class="fw-bold">Party Optimizations</h6>
+        <ul>
+            <li>A strong Pok&eacute;mon with a Super Effective move, ideally capable of knocking out your target Pok&eacute;mon in 1-2 attacks.</li>
+            <li>A fast Pok&eacute;mon capable of inflicting status conditions (Paralysis or Sleep) onto your target Pok&eacute;mon.</li>
+            <li>At least one spare space on your party for your target Pok&eacute;mon to go into.</li>
+        </ul>
+
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 1 -</span> ParLiAment Overview</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/setup/parliament-overview.gif" alt="spawner-setup-retail-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/setup/parliament-overview.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="parliament-overview-retail">
+        <span class="fw-bold text-light">ParLiAment Overview</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>You will be presented with the above screen when opening ParLiAment for the first time. The left-most and right-most columns are for those running manipulating Main RNG encounters using Custom Firmware, these two columns can be safely ignored.</p>
+
+        <p>Our focus will be on the middle two columns, here we can see some tabs towards the top of the window labelled <code class="fw-bold">Group Seed Solver</code> and <code class="fw-bold">Overworld Legendary (Spawner)</code>, which perform the actions we need for this RNG.</p>
+
+        <ul>
+            <li><span class="fw-bold">Group Seed Solver</span> - Resolves a group seed based on provided Pok&eacute;mon files, this is the seed expected by the Overworld Legendary (Spawner) tab.</li>
+            <li><span class="fw-bold">Overworld Legendary (Spawner)</span> - Calculates upcoming advances based on a given target Pok&eacute;mon and the provided group seed.</li>
+        </ul>
+
+        <p>To learn more about how to use each of the tabs continue reading below.</p>
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 2 -</span> Group Seed Solver Tab Overview</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/setup/group-seed-solver-overview.png" alt="spawner-setup-retail-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/setup/group-seed-solver-overview.png">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="advancing-the-rng-state">
+        <span class="fw-bold text-light">Group Seed Solver Tab Overview</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>This Group Seed Solver tab expects you to add two consecutive Pok&eacute;mon files from your target spawner to resolve your group seed, to understand how to use this tab you will first need to learn how to advance the RNG state. The method used to advance the RNG state varies depending on the target, but everything will fall into one of two categories:</p>
+
+        <h6 class="fw-bold mb-1">Immediate Respawn</h6>
+        <p><small>Includes: Uxie, Mesprit, Azelf, Heatran &amp; Cresselia</small></p>
+        <p>These Pok&eacute;mon are tied to story quests, which means that they will immediately respawn when knocked out, to respawn any of the Pok&eacute;mon in this list do the following:</p>
+
+        <ol>
+            <li>Engage the target Pok&eacute;mon in battle and knock it out.</li>
+            <li>Mash the A button through the cutscene.</li>
+            <li>You should now see that the Pok&eacute;mon has respawned.</li>
+        </ol>
+
+        <h6 class="fw-bold mb-1">Despawns When Defeated</h6>
+        <p><small>Includes: Phione, Manaphy, Shaymin, Darkrai, Tornadus, Thundurus, Landorus &amp; Enamorus</small></p>
+        <p>These Pok&eacute;mon require extra effort to respawn, they will disappear from the map once you knock them out, to respawn any of the Pok&eacute;mon in this list do the following:</p>
+
+        <ol>
+            <li>Engage your target Pok&eacute;mon in battle and knock it out.</li>
+            <li>Teleport to a campsite, then set the time of day to evening.</li>
+            <ul>
+                <li><span class="fw-bold">Tornadus -</span> Sleep repeatedly until the weather is <u>Blizzard</u>.</li>
+                <li><span class="fw-bold">Thundurus -</span> Sleep repeatedly until the weather is <u>Thunderstorm</u>.</li>
+            </ul>
+            <li>Enter the closest subzone (cave) before the time of day turns to night.</li>
+            <ul>
+                <li><span class="fw-bold">Shaymin/Landorus -</span> head to the cave at Lake Verity.</li>
+                <li><span class="fw-bold">Enamorus -</span> head to the cave at Lake Valor.</li>
+                <li><span class="fw-bold">Thundurus -</span> head to the cave at Firespit Island.</li>
+                <li><span class="fw-bold">Phione/Manaphy -</span> head to their spawn location (Seaside Hallow cave).</li>
+                <li><span class="fw-bold">Tornadus -</span> head to the cave at Lake Acuity.</li>
+                <li><span class="fw-bold">Darkrai -</span> head to either side of Wayward Cave.</li>
+            </ul>
+            <li>Wait inside the cave until night-time, this should take roughly 3 minutes.</li>
+            <li>Leave the cave and head back to the location of your target Pok&eacute;mon, you should now see that the Pok&eacute;mon has respawned.</li>
+        </ol>
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 3 -</span> Group Seed Solver Tab Usage</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/setup/group-seed-solver-usage.gif" alt="spawner-setup-retail-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/setup/group-seed-solver-usage.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="group-seed-solver-usage">
+        <span class="fw-bold text-light">Group Seed Solver Tab Usage</span>
+    </div>
+    <div class="card-body card-bg">
+        <ol>
+            <li>Head into the map that contains your desired target Pok&eacute;mon and save the game.</li>
+            <ul>
+                <li>If your target Pok&eacute;mon is Cresselia, Shaymin, Darkrai, Tornadus, Thundurus, Landorus or Enamorus, save the game upon entering the area.</li>
+                <li>If your target Pok&eacute;mon is Uxie, Mesprit, Azelf, Heatran or Manaphy, save the after entering the cave that contains your target.</li>
+                <li>If your target Pok&eacute;mon is Phione, capture 2/3 of the Phione in Seaside Hallow, deposit them into your boxes at a campsite, then save the game.</li>
+            </ul>
+            <li>Capture your target Pok&eacute;mon, then head back to Jubilife and initiate a dump trade with the SysBot you found earlier.</li>
+            <ul>
+                <li>If you need any help with this step, ask the bot host for more information about how to initiate a dump trade.</li>
+            </ul>
+            <li>Show the bot the Pok&eacute;mon you caught, you should then recieve a <code class="fw-bold">.pa8</code> file from the bot (typically found in your Discord private messages).</li>
+            <ul>
+                <li>The <code class="fw-bold">.pa8</code> file contains the information the seed solver needs to determine the group seed of our target spawner.</li>
+            </ul>
+            <li>Reset the game without saving, you should now be back in the area that contains your target Pok&eacute;mon.</li>
+            <li>Advance the RNG state once then capture the Pok&eacute;mon that respawns, show that Pok&eacute;mon to the SysBot too.</li>
+            <li>Reset the game once more, you should now be back in the area that contains your target Pok&eacute;mon with two <code class="fw-bold">.pa8</code> files.</li>
+            <li>On the <code class="fw-bold">Group Seed Solver</code> tab of ParLiAment, select the two files you just obtained from the bot and click <code class="fw-bold">Calculate Group Seed</code>.</li>
+            <li>Once your group seed has been resolved, click the <code class="fw-bold">Copy to Overworld Legendary (Spawner) Tab</code>.</li>
+        </ol>
+
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 4 -</span> Overworld Legendary (Spawner) Tab Usage</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/setup/overworld-legendary-spawner-usage.gif" alt="spawner-setup-retail-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/setup/overworld-legendary-spawner-usage.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="overworld-legendary-spawner-usage">
+        <span class="fw-bold text-light">Overworld Legendary (Spawner) Tab Usage</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Once you have obtained your matching group seed from the spawner seed solver you can then move back to the Overworld Legendary (Spawner) tab. Here is where you will search for upcoming target Pok&eacute;mon on your seed.</p>
+
+        <ol>
+            <li>Ensure your group seed has been copied over from the Group Seed Solver tab.</li>
+            <li>Ensure that the <code span class="fw-bold">0-indexed Seed</code> checkbox is ACTIVE.</li>
+            <li>Select your target Pok&eacute;mon from the list, in this case we are targeting Enamorus.</li>
+            <li>Enter your search range, consider the time it takes to advance the RNG state.</li>
+            <ul>
+                <li>For Uxie, Mesprit, Azelf, Heatran &amp; Cresselia, advancing the seed once takes around 30-60 seconds as they immediately respawn.</li>
+                <li>For Phione, Manaphy, Shaymin, Darkrai, Tornadus, Thundurus, Landorus &amp; Enamorus, advancing the seed once can take up to 5 minutes.</li>
+                <li>It may take a long time to reach your target frame. It is recommended to have a <code span class="fw-bold">SearchDepth</code> of 10-100 depending on the rarity of your target.</li>
+            </ul>
+            <li>Enter any search filters on the right if you wish, such as filtering for 0 speed IV.</li>
+            <li>Click search, you should now see your upcoming advances in the search result table.</li>
+        </ol>
+
+        <p>If you do not find any results or do not like your seed, you will need to head back to Jubilife and repeat the process of resolving your group seed again. Do this until you find a desirable result.</p>
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 5 -</span> Target Found</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/setup/target-found.png" alt="spawner-setup-retail-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/setup/target-found.png">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="target-found-spawner-retail">
+        <span class="fw-bold text-light">Target Found</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>A target Pokémon that matches our desired conditions has been found! In this case we have found an Enamorus with 0 speed in 3 advances. We can now advance the RNG state using the method described above until we reach the desired state.</p>
+
+        <h6 class="fw-bold">How to Track Your State</h6>
+        <ol>
+            <li>Perform a search without filters, enter the search range of your target seed (for example, enter 50 as your search range and disable any filters if your target seed is in 50 advances).</li>
+            <li>Click <code span class="fw-bold">Search</code>, you should now see every frame leading up to your target, click the row you are currently on and follow along until you reach your desired target seed.</li>
+            <li>If you get lost along the way, simply save the game and capture whatever Pok&eacute;mon is in front of you, then compare the IVs and Nature to the search result table.</li>
+            <li>In Legends: Arceus, Effort Levels are displayed instead of exact IV counts, the conversion is as follows:</li>
+            <ul>
+                <li>IV of 0-20 gives it Effort Level 0</li>
+                <li>IV of 20-25 gives it Effort Level 1</li>
+                <li>IV of 26-30 gives it Effort Level 2</li>
+                <li>IV of 31 gives it Effort Level 3</li>
+            </ul>
+        </ol>
+
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 6 -</span> Result Found</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/setup/result-found.png" alt="spawner-setup-retail-6" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/la/spawner/setup/result-found.png">
+
+
+

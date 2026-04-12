@@ -1,88 +1,71 @@
 ---
 layout: default
-title: Legends Arceus Spawner RNG Setup (CFW)
-permalink: /cfw/la/legendary/spawner-rng/setup
+title: Legends Arceus Legendary/Mythical RNG (CFW Spawner)
+permalink: /cfw/la/legendary/spawner/
 ---
 
 <div class="title" style="background-color: #6f3b97;">
-    <h1 class="text-light text-center pt-3 pb-3">Legends: Arceus Spawner RNG</h1>
+    <h1 class="text-light text-center pt-3 pb-3">Spawner RNG (CFW)</h1>
 </div>
 <small class="text-muted mb-3 mt-0">
-    Setup instructions for the tools and scripts required to manipulate Spawner RNG Legendaries &amp; Mythicals.
+    Step-by-step instructions for manipulating Legendary &amp; Mythical Pok&eacute;mon in the Spawner RNG category.
 </small>
 <hr />
 
-<p>This page covers setup instructions for manipulating Pok&eacute;mon that are generated via Spawner RNG. From here it is assumed that you have followed all of the setup instructions found on the main page. As a reminder, the Pok&eacute;mon that can be manipulated this way are:</p>
+<p>This page provides instructions and examples of how you can perform Spawner RNG manipulation for Legendary &amp; Mythical Pok&eacute;mon in Legends: Arceus. From here it is assumed that you have followed all of the instructions found on the main page and have confirmed that Pok&eacute;mon falls into the Spawner RNG category.</p>
 
-<ul>
-    <li style="margin-bottom:0px;">Uxie, Mesprit &amp; Azelf</li>
-    <li style="margin-bottom:0px;">Tornadus, Thundurus, Landorus &amp; Enamorus</li>
-    <li style="margin-bottom:0px;">Heatran</li>
-    <li style="margin-bottom:0px;">Cresselia</li>
-    <li style="margin-bottom:0px;">Manaphy &amp; Phione</li>
-    <li style="margin-bottom:0px;">Shaymin</li>
-    <li style="margin-bottom:0px;">Darkrai</li>
-</ul>
+<p>Moarencounterbots is the main tool we will be using throughout this guide. It can be used to automate the process of finding a desirable spawner seed for your target Pok&eacute;mon which cuts out a significant amount of manual effort. After we have found a desirable seed we will then be using ParLiAment to keep track of our current state.</p>
 
-<p>If your desired target is not in this list then you are in the wrong place. Your target Legendary/Mythical is associated with Main RNG.</p>
-
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/legendary/main-rng/setup">
-    In the wrong place? Visit the <span class="fw-bold">Main RNG guide!</span>
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/la/legendary/" target="_blank" rel="noopener noreferrer">
+    Unsure if your Pok&eacute;mon is in the Spawner category? <span class="fw-bold">Head back to the main page!</span>
     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
     </svg>
 </a>
 
-<hr />
-<div class="title" style="background-color: #6f3b97;">
-    <h1 class="text-light text-center pt-3 pb-3">Script &amp; Program Overview</h1>
-</div>
-<small class="text-muted mb-3 mt-0">
-    Understand how to use and interact with scripts &amp; programs used throughout this guide.
-</small>
-<hr />
-
-<p><span class="fw-bold">Figure 1 -</span> Spawner RNG Script Setup</p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/setup/spawner-script-setup.gif" alt="spawner-setup-cfw-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/setup/spawner-script-setup.gif">
+<p><span class="fw-bold">Figure 1 -</span> Initial Game Setup</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/setup/initial-game-setup-spawner.png" alt="spawner-rng-cfw-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/setup/initial-game-setup-spawner.png">
 
 <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #6f3b97;" id="spawner-rng-script-setup-la">
-        <span class="fw-bold text-light">LINQPad Setup (Overworld Legendary Calculator Script)</span>
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="initial-game-setup">
+        <span class="fw-bold text-light">Initial Game Setup</span>
     </div>
     <div class="card-body card-bg">
-        <p>LINQPad is used as an RNG tool for the purposes of this guide (as mentioned on the main page). We can use the <a href="https://gist.github.com/Lusamine/950888ce3906d19b1bb654de7399743e" target="_blank" rel="noopener noreferrer">Overworld Legendary Calculator (Spawner RNG)</a> script to calculate results based off of a given seed. It can also be used to keep track of the required number of advances required to reach a specific target frame.</p>
+        <p>Before doing anything else, make sure your game is properly set up and that you have the required resources to ensure the RNG process is as smooth as possible. It is assumed that you have progressed the story enough to spawn your target Pok&eacute;mon. If you have not yet done so you should go back and do this now.</p>
 
-        <p>Work through these setup instructions carefully to ensure that the script is functional:</p>
+        <h6 class="fw-bold">In-game Resources</h6>
+        <ul>
+            <li>Plenty of throwable items to remove the shield and stun the target Pok&eacute;mon (e.g., Sticky Glob, Ball of Mud, etc.)</li>
+            <li>Plenty of healing items to keep your Pok&eacute;mon in good health (e.g., Full Restore, Revives, etc.)</li>
+            <li>Plenty of Pok&eacute; Balls to capture your target Pok&eacute;mon (e.g., Gigaton Ball, Jet Ball, Ultra Ball, etc.)</li>
+            <li>Plenty of stealth items, particularly helpful for weather genies and Darkrai (e.g., Stealth Spray, Smoke Ball, etc.)</li>
+        </ul>
 
-        <ol>
-            <li>Launch LINQPad, then change the <code class="fw-bold">Language</code> in the header to <code class="fw-bold">C# Program</code>. DELETE THE EXTRA CODE THAT APPEARS AFTER DOING SO.</li>
-            <li>Paste the contents of the <code class="fw-bold">Spawner RNG</code> script into the main window of LINQPad. This is demonstrated in the above image.</li>
-            <li>Press F4 to open the <code class="fw-bold">Query Properties</code> subwindow, then click the <code class="fw-bold">Add/Browse</code> button to open file explorer.</li>
-            <li>Navigate to the folder that contains the SysBot.NET download (this should be in a known location), then find and select <code class="fw-bold">PKHeX.Core.dll</code>.</li>
-            <li>Open the <code class="fw-bold">Namespace Imports</code> tab, then type <code class="fw-bold">PKHeX.Core</code>, then click the <code class="fw-bold">OK</code> button to close the sub window.</li>
-            <li>Enable compiler optimizations by pressing the button on the bottom-right of the main window, then run the script by pressing the <code class="fw-bold" style="color: green;">▶</code> button at the top of the window.</li>
-            <li>Avoid applying any search filters. By default the script does not have any specific filters applied, which is what we want as Moarencounterbots handles the process of finding a desired result.</li>
-        </ol>
+        <h6 class="fw-bold">Party Setup</h6>
+        <ul>
+            <li>A strong Pok&eacute;mon with a Super Effective move, ideally capable of knocking out your target Pok&eacute;mon in 1-2 attacks.</li>
+            <li>A fast Pok&eacute;mon capable of inflicting status conditions (Paralysis or Sleep) onto your target Pok&eacute;mon.</li>
+            <li>At least one spare space on your party for your target Pok&eacute;mon to go into.</li>
+        </ul>
 
-        <p>If done correctly, when pressing the <code class="fw-bold" style="color: green;">▶</code> button you should see a list of advances, this shows that the script is working as intended. Save the changes after confirming that the script is working properly.</p>
-
+        <p>Most of these encounters have an initial in-game cutscene the first time you interact with them. It is recommended to interact with your desired target at least once, then leave back to Jubilife and save the game. This will remove the intro cutscene and refresh your seed.</p>
     </div>
 </div>
-<br>
+<br />
 
-<p><span class="fw-bold">Figure 2 -</span> SysBot Setup</p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/setup/initial-sysbot-setup.gif" alt="spawner-setup-cfw-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/setup/initial-sysbot-setup.gif"><p></p>
+<p><span class="fw-bold">Figure 2 -</span> Moarencounterbots Configuration</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/setup/moarencounterbots-config.gif" alt="spawner-rng-cfw-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/setup/moarencounterbots-config.gif">
 
 <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #6f3b97;" id="spawner-sysbot-setup-la">
-        <span class="fw-bold text-light">SysBot Setup</span>
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="moarencounterbots-configuration-spawner-cfw">
+        <span class="fw-bold text-light">Moarencounterbots Configuration</span>
     </div>
     <div class="card-body card-bg">
-        <p>Moarencounterbots (SysBot.NET) is used to automate the process of finding a desirable seed that matches your search conditions. You should have already configured the bot mode to work for Legends: Arceus, if you skipped this step you will need to revisit the material found on the main page.</p>
+        <p>As mentioned above, Moarencounterbots (SysBot.NET) is used to automate the process of finding a desirable seed that matches your search conditions, but you will need to manually configure the program settings to match your target Pok&eacute;mon first.</p>
 
-        <h6 span class="fw-bold">Spawner RNG Setup</h6>
+        <h6 span class="fw-bold">Bot Settings</h6>
         <ol>
-            <li>Open Sysbot.NET and click the <code span class="fw-bold">Hub</code> tab, then open the <code span class="fw-bold">EncounterLA</code> dropdown menu to reveal the settings.</li>
+            <li>Open SysBot.NET and click the <code span class="fw-bold">Hub</code> tab, then open the <code span class="fw-bold">EncounterLA</code> dropdown menu to reveal the settings.</li>
             <li>Set the <code span class="fw-bold">OWLegendary</code> to match your desired target, this will determine the routine the bot uses.</li>
             <li>Set the <code span class="fw-bold">SearchDepth</code> to an amount you are comfortable with, this is the amount of advances you wish to search through.</li>
             <ul>
@@ -93,46 +76,37 @@ permalink: /cfw/la/legendary/spawner-rng/setup
             <li>For Phione specifically, set <code class="fw-bold">CheckAllPhioneLayers</code> to <code class="fw-bold">True</code> if you have NOT caught any Phione, otherwise set this value to <code class="fw-bold">False</code> (<a href="https://github.com/Lusamine/SysBot.NET/wiki/LA-EncounterBots#overworld-legendary-seedcheck-bot-encbotowlcheckrngla" target="_blank" rel="noopener noreferrer">More Information</a>).</li>
         </ol>
 
-        <p>Most of these encounters have an initial in-game cutscene the first time you interact with them. It is recommended to interact with your desired target at least once, then leave back to Jubilife and save the game. This will remove the intro cutscene and refresh your seed.</p>
-    </div>
-</div>
-<br />
-
-<span class="fw-bold">Figure 3 -</span> PokeViewer Setup<p></p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/setup/pokeviewer-setup.gif" alt="spawner-setup-cfw-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/spawner-rng/setup/pokeviewer-setup.gif"><p></p>
-
-<div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #6f3b97;" id="spawner-pokeviewer-setup-la">
-        <span class="fw-bold text-light">PokeViewer Setup</span>
-    </div>
-    <div class="card-body card-bg">
-        <p>The main use of PokeViewer.NET is to read the details of the Pok&eacute;mon we are in battle with, this can then be compared with the Spawner RNG LINQPad script to track current advances. This helps to avoid overshooting your target frame.</p>
+        <h6 span class="fw-bold">Stop Conditions</h6>
+        <p>After completing all of the initial bot configurations you will need to set your <code class="fw-bold">StopConditions</code>. This essentially decides when the bot will stop searching for a target (result has been found). To set your Stop Conditions do the following:</p>
 
         <ol>
-            <li>Open <code class="fw-bold">PokeViewer.exe</code> and type the IP address of your console into the assigned field.</li>
-            <li>Click <code class="fw-bold">Connect</code>, doing this should display the trainer information of your save file.</li>
-            <li>Navigate to the <code class="fw-bold">View</code> tab and enter a battle in-game, then click the <code class="fw-bold">View</code> button.</li>
-            <li>If everything is working as intended you should now see the details of the Pok&eacute;mon you are in battle with.</li>
+            <li>Open the <code class="fw-bold">StopConditions</code> dropdown menu in the <code class="fw-bold">Hub</code> tab.</li>
+            <li>Set the <code class="fw-bold">TargetNature</code> if you want to filter seeds for specific natures.</li>
+            <li>Set the <code class="fw-bold">TargetMinIVs</code> &amp; <code class="fw-bold">TargetMaxIVs</code> if you want to filter seeds for specific IV ranges.</li>
+            <ul>
+                <li>IVs go in the order of HP/ATK/DEF/SPATK/SPDEF/SPEED and values of 0-31 can be set, enter x if you do not care about a specific IV value.</li>
+                <li>IV and Nature filters can be combined. For example, we can search for a Timid target with IVs of 31/0/31/31/31/31.</li>
+                <li>Set the same values in both <code class="fw-bold">TargetMinIVs</code> and <code class="fw-bold">TargetMaxIVs</code> if you want to search for an exact IV value.</li>
+            </ul>
+            <li>All Legendary and Mythical encounters are Shiny and Height locked, keep these settings disabled or you will never find a result.</li>
+            <li>After setting your Stop Conditions, close and re-open the program to lock in your settings, this is a requirement.</li>
         </ol>
 
     </div>
 </div>
-<br>
-
-<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
-    <span class="fw-bold">Important -</span> From this point it will be assumed that you have a basic understanding of how to use each of the tools to perform the RNG manipulation. If you do not yet understand the basics it is recommended to review the above matierial before continuing.
-</div>
+<br />
 
 <hr />
 <div class="title" style="background-color: #6f3b97;">
     <h1 class="text-light text-center pt-3 pb-3">Worked Example</h1>
 </div>
 <small class="text-muted mb-3 mt-0">
-    Follow along with step-by-step instructions to hit your desired target Legend/Mythical.
+    Follow along with step-by-step instructions to hit your desired seed for your target Pok&eacute;mon.
 </small>
 <hr />
 
-<p>The instructions for hitting a target frame depend on your target Pok&eacute;mon and exactly how that Pok&eacute;mon is generated. For example, encounters that are found in caves are generated when the player enters the cave, and encounters found in the Overworld will be set as soon as the player enters the map from Jubilife.</p>
+<p>The instructions will vary slightly depending on your target Pok&eacute;mon and how that Pok&eacute;mon is generated. Each of the available encounters can be split into three sub-categories: Cave, Overworld, and Unique Encounters.</p>
+<p>Each of these sub-categories has its own section on this page with worked examples and instructions for hitting a target frame. Make sure to follow the instructions for your specific encounter type!</p>
 
 <div class="mb-3 w-100">
     <div class="row row-cols-1">
@@ -174,3 +148,49 @@ permalink: /cfw/la/legendary/spawner-rng/setup
 <script>
     hljs.highlightAll();
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
