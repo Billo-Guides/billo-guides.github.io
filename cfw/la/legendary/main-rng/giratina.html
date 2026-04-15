@@ -1,1 +1,172 @@
-<p>Placeholder 3</p>
+<p><span class="fw-bold">Figure 1 -</span> Delay Calibration</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/giratina/delay-calibration.gif" alt="giratina-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/giratina/delay-calibration.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="delay-calibration-giratina">
+        <span class="fw-bold text-light">Delay Calibration</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>The term <i>delay</i> refers to the time between the final button input and when the Pok&eacute;mon is generated. Because the number of advances during this period can vary, it's important to do a few practice attempts to find a delay that is consistent for you. The image above illustrates the process of delay calibration for Giratina.</p>
+
+        <p>Pressing the <code class="fw-bold">Y</code> button causes the player to enter the loading zone that triggers the cutscene. for the purposes of this example this approach will be referred to as “tumbling”. The <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/giratina/tumble.gif">tumble method</a> does not require extremely precise positioning, which provides greater consistency between attempts compared to simply walking into the cutscene trigger.</p>
+
+        <h6 class="fw-bold">Step-by-step</h6>
+        <ol>
+            <li>Save your game while standing close to Giratina, avoid walking too close as you will trigger the cutscene. Press the <code class="fw-bold">Home (⌂)</code> button once you reach <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/final-button-inputs/giratina.png">this screen</a>.</li>
+            <li>Connect to ParLiAment if you have not already done so, or click <code class="fw-bold">Update Main RNG States</code> if you were already connected.</li>
+            <ul>
+                <li>Updating the states is important because this will reset your advances to 0, simplifying the delay calibration process.</li>
+            </ul>
+            <li>Press the <code class="fw-bold">Home (⌂)</code> button to resume the game, then quickly press the <code class="fw-bold">Y</code> button to cause your character to tumble into the cutscene trigger for the encounter.</li>
+            <li>Once the battle has started, click the <code class="fw-bold">Read Encounter</code> button on ParLiAment and then click <code class="fw-bold">Copy IVs to Filters</code>.</li>
+            <li>Enter a search range of ~200, then click the <code class="fw-bold">Generate</code> button. It should produce one or more results that match the Giratina you are in battle with.</li>
+            <ul>
+                <li>If you see multiple results, simply match the PID/EC with the Giratina in the <code class="fw-bold">Read Encounter</code> box.</li>
+            </ul>
+            <li>Take note of the advance the Giratina was generated on, this will be your delay for this attempt. It is recommended to repeat this process a few times to determine a rough average delay (5-10 attempts is ideal).</li>
+        </ol>
+
+    </div>
+</div>
+<br />
+
+<table class="table table-striped" style="width:100%; table-layout: fixed;">
+    <thead>
+        <tr>
+            <th colspan="2" class="text-white fw-bold text-center"
+                style="background-color: #6f3b97;">
+                Giratina Delay Table
+            </th>
+        </tr>
+        <tr class="text-white" style="background-color: #6f3b97;">
+            <th scope="col" style="width:50%;">Attempt</th>
+            <th scope="col" style="width:50%;">Delay</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td class="fw-bold">Attempt 1</td>
+            <td>56</td>
+        </tr>
+        <tr>
+            <td class="fw-bold">Attempt 2</td>
+            <td>55</td>
+        </tr>
+        <tr>
+            <td class="fw-bold">Attempt 3</td>
+            <td>57</td>
+        </tr>
+        <tr>
+            <td class="fw-bold">Attempt 4</td>
+            <td>56</td>
+        </tr>
+        <tr>
+            <td class="fw-bold">Attempt 5</td>
+            <td>48</td>
+        </tr>
+        <tr>
+            <td class="fw-bold">Attempt 6</td>
+            <td>52</td>
+        </tr>
+        <tr>
+            <td class="fw-bold">Attempt 7</td>
+            <td>46</td>
+        </tr>
+        <tr>
+            <td class="fw-bold">Attempt 8</td>
+            <td>48</td>
+        </tr>
+        <tr>
+            <td class="fw-bold">Attempt 9</td>
+            <td>62</td>
+        </tr>
+        <tr>
+            <td class="fw-bold">Attempt 10</td>
+            <td>49</td>
+        </tr>
+
+    </tbody>
+</table>
+
+<div class="alert alert-primary" style="border: 1px solid #004085; border-radius: 8px; padding: 15px; background-color: #cce5ff; color: #004085;">
+    <span class="fw-bold">Information -</span> Based on the above attempts, we can see that the delay is usually around 48-57 advances, but it can sometimes be as low as 46 or as high as 62. This means that if I wanted to target a specific Giratina, I should aim to press the A button around 48-57 advances before your target. Your results may vary based on how quickly you can mash the Y button, which is why self-calibration is important.
+</div>
+
+<p><span class="fw-bold">Figure 2 -</span> Seed Resetting / Target Found</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/giratina/target-found.png" alt="giratina-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/giratina/target-found.png">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="target-found-giratina">
+        <span class="fw-bold text-light">Seed Resetting / Target Found</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>After calibrating your delay, enter your desired search filters into ParLiAment. In this case we will be searching for a 6 IV Giratina so all six of the IV filters have been set to 31. We have also set our search range to 50,000 as we are searching for quite a rare target.</p>
+
+        <p>Once you have set your search filters, check the <code class="fw-bold">Delay</code> checkbox and enter the most common value from your delay calibration attempts, in our case we most commonly hit a delay of 56, so we will enter 56 into the <code class="fw-bold">Delay</code> field. You can now move onto resetting for a desirable target seed.</p>
+
+        <p>In the example above, we can see a 6 IV Giratina appearing at 4,193-4,195 advances in cluster of 3. A <i>cluster</i> is a group of advances that all produce the same outcome. In this case, there are 3 advances that result in a 6IV Giratina. Larger clusters increase the likelihood of hitting the correct target frame.</p>
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 3 -</span> Advancing The RNG State</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/advancing-rng-state.gif" alt="giratina-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/advancing-rng-state.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="advancing-rng-state">
+        <span class="fw-bold text-light">Advancing The RNG State</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>The RNG state advances naturally, and the speed of the advances will depend on what you are doing in-game. If you wish to increase the speed of advances you can perform the following actions:</p>
+
+        <ul>
+            <li>Stand next to a body of water, this will advance the RNG state by roughly 2,500-3,000 per minute and can be done while idle.</li>
+            <li>Fly around on Braviary spawning wild Pok&eacute;mon, this will advance the RNG state by roughly 5,500-6,000 per minute, but requires some manual effort.</li>
+            <li>Stand in areas densely populated with wild Pok&eacute;mon, this will advance the RNG state by roughly 3,000-3,500 per minute, but be cautious of attacks.</li>
+            <li>Combine any of the above methods to further increase the number of advances per minute.</li>
+        </ul>
+
+        <p>Leave yourself plenty of time to navigate back to Giratina after advancing the RNG state to avoid overshooting your target. If you overshoot your target frame by accident you will need to restart the process of finding a desirable seed and advance the RNG state again.</p>
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 4 -</span> Character Repositioning</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/giratina/character-repositioning.png" alt="giratina-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/giratina/character-repositioning.png">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="character-repositioning">
+        <span class="fw-bold text-light">Character Repositioning</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>We have now navigated back to Giratina and after updating the current seed using the <code class="fw-bold">Update Main RNG States</code> and searching for the target again, we can now see our new target frame is on advance 744-746. Delay is already being considered by the search result table, so we will aim to <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/giratina/tumble.gif">tumble</a> into the cutscene trigger on around advance 744.</p>
+
+        <p>Simply wait on the cutscene text box until you reach your target frame. If you want to advance the RNG state gradually you can press the <code class="fw-bold">Home (⌂)</code> button on your controller to pause the RNG state, then press it again to resume the game when you are ready. Do this until you have reached your target frame.</p>
+
+        <p>Once you reach your target frame, quickly tumble using the <code class="fw-bold">Y</code> button to initiate the encounter and generate Giratina. Click the <code class="fw-bold">Read Encounter</code> button to confirm that you are in battle with the correct Pok&eacute;mon before capturing.</p>
+
+        <details>
+            <summary><span class="fw-bold">Baby Mode</span></summary>
+            <p>You can optionally use baby mode to attempt to automate the process of hitting your target frame, this can be done as follows:</p>
+
+            <ol>
+                <li>Ensure that you are on the screen of the final button input, then press the <code class="fw-bold">Home (⌂)</code> button and update your current seed.</li>
+                <li>Uncheck the <code class="fw-bold">Delay</code> checkbox in the search filters section, then search for your target again.</li>
+                <li>Confirm the target frame, then enter that value into the <code class="fw-bold">Baby Mode:</code> field on the left-hand side of the ParLiAment window.</li>
+                <li>Click the <code class="fw-bold">Delay</code> checkbox found <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/giratina/baby-mode-delay.png">Baby Mode</a> section and enter your delay here instead, then set the button input to <code class="fw-bold">Y</code> in the dropdown menu.</li>
+                <li>Re-enter the game, disconnect all controllers (or dock the Joy Cons), then click the <code class="fw-bold">Go!</code> button. ParLiAment will then automatically press the <code class="fw-bold">Y</code> button once it reaches the target frame.</li>
+            </ol>
+        </details>
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 5 -</span> Result Found</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/giratina/result-found.png" alt="giratina-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/giratina/result-found.png">
+
+<p>After dismissing the text box on our target advance and reading the details of the encounter, we can see that the details of the Giratina match our desired conditions!</p>
+
+<div class="alert alert-primary" style="border: 1px solid #004085; border-radius: 8px; padding: 15px; background-color: #cce5ff; color: #004085;">
+    <span class="fw-bold">Information -</span> Due to the varying delay it may take multiple attempts to hit your target Pok&eacute;mon, even after calibrating your delay multiple times. Don't get discouraged if you don't hit your target on the first few tries!
+</div>
