@@ -1,1 +1,166 @@
-<p>Placeholder 1</p>
+<p><span class="fw-bold">Figure 1 -</span> Boss Battle Mechanics</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/arceus-continue.png" alt="arceus-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/arceus-continue.png">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="boss-battle-mechanics-arceus">
+        <span class="fw-bold text-light">Boss Battle Mechanics</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>The Arceus boss battle is difficult to beat in one attempt and you may find yourself losing to it multiple times. The <code class="fw-bold">Continue battle</code> option allows you to keep your previous progress, making it easier to eventually defeat Arceus. Use this to your advantage if you are struggling.</p>
+
+        <p>You could also take this time to connect your console to ParLiAment and monitor how many advances it takes you to defeat the boss on average. Knowing this information will be useful later when it comes to hitting a desired target Pok&eacute;mon.</p>
+
+        <p>In <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/arceus-battle-advances.png">my example</a>, around 5,500-6,000 advances were needed to defeat Arceus, and I lost to the battle multiple times before finally succeeding.</p>
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 2 -</span> Delay Calibration</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/delay-calibration.gif" alt="arceus-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/delay-calibration.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="delay-calibration-arceus">
+        <span class="fw-bold text-light">Delay Calibration</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>The term <i>delay</i> refers to the time between the final button input and when the Pok&eacute;mon is generated. Because the number of advances during this period can vary, it's important to do a few practice attempts to find a delay that is consistent for you.</p>
+
+        <p>The image above illustrates the process of delay calibration for the Arceus boss battle. This method will not work when targeting the Origin Form Dialga/Palkia boss battle, as Arceus is generated shortly after the battle ends once <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/final-button-inputs/arceus.png">the final text box</a> is dismissed.</p>
+
+        <h6 class="fw-bold">Step-by-step</h6>
+        <ol>
+            <li>Complete the boss battle and get through the cutscene until you reach <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/final-button-inputs/arceus.png">the final text box</a>. Press the <code class="fw-bold">Home (⌂)</code> button at this point.</li>
+            <li>Connect to ParLiAment if you have not already done so, or click <code class="fw-bold">Update Main RNG States</code> if you were already connected.</li>
+            <ul>
+                <li>Updating the states is important because this will reset your advances to 0, simplifying the delay calibration process.</li>
+            </ul>
+            <li>Press the <code class="fw-bold">Home (⌂)</code> button to resume the game, then quickly press the <code class="fw-bold">A</code> button to dismiss the text box and generate Arceus.</li>
+            <li>Once the screen fades to black, click the <code class="fw-bold">Read B1S1</code> button on ParLiAment and then click <code class="fw-bold">Copy IVs to Filters</code>.</li>
+            <ul>
+                <li>If nothing shows up or you read a Pok&eacute;mon that is not Arceus, clear Pasture/Box 1 Slot 1, save the game, then try again from step 1.</li>
+            </ul>
+            <li>Enter a search range of ~100, then click the <code class="fw-bold">Generate</code> button. It should produce one or more results that match the Arceus you are in battle with.</li>
+            <ul>
+                <li>If you see multiple results, simply match the PID/EC with the Arceus in the <code class="fw-bold">Read Encounter</code> box.</li>
+            </ul>
+            <li>Take note of the advance the Arceus was generated on, this will be your delay for this attempt. It is recommended to repeat this process a few times to determine a rough average delay (5-10 attempts is ideal).</li>
+        </ol>
+
+    </div>
+</div>
+<br />
+
+<table class="table table-striped" style="width:100%; table-layout: fixed;">
+    <thead>
+        <tr>
+            <th colspan="2" class="text-white fw-bold text-center"
+                style="background-color: #6f3b97;">
+                Arceus Delay Table
+            </th>
+        </tr>
+        <tr class="text-white" style="background-color: #6f3b97;">
+            <th scope="col" style="width:50%;">Attempt</th>
+            <th scope="col" style="width:50%;">Delay</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td class="fw-bold">Attempt 1</td>
+            <td>33</td>
+        </tr>
+        <tr>
+            <td class="fw-bold">Attempt 2</td>
+            <td>36</td>
+        </tr>
+        <tr>
+            <td class="fw-bold">Attempt 3</td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td class="fw-bold">Attempt 4</td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td class="fw-bold">Attempt 5</td>
+            <td>34</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="alert alert-primary" style="border: 1px solid #004085; border-radius: 8px; padding: 15px; background-color: #cce5ff; color: #004085;">
+    <span class="fw-bold">Information -</span> Based on the above attempts, we can see that the delay is usually around 33-40 advances. This means that if I wanted to target a specific Arceus, I should aim to press the A button around 33-40 advances before your target. Your results may vary which is why self-calibration is important.
+</div>
+
+<p><span class="fw-bold">Figure 3 -</span> Seed Resetting / Target Found</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/target-found.png" alt="arceus-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/target-found.png">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="target-found-arceus">
+        <span class="fw-bold text-light">Seed Resetting / Target Found</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>After calibrating your delay, enter your desired search filters into ParLiAment. In this case we will be searching for a 6 IV Arceus so all six of the IV filters have been set to 31. We have also set our search range to 50,000 as we are searching for quite a rare target.</p>
+
+        <p>Once you have set your search filters, check the <code class="fw-bold">Delay</code> checkbox and enter the most common value from your delay calibration attempts, in the context of this example we hit a delay of 33-40, so we will enter 33 into the <code class="fw-bold">Delay</code> field. You can now move onto resetting for a desirable target seed.</p>
+
+        <p>In the example above, we can see a 6 IV Arceus appearing at 13,556-13,558 advances in cluster of 3. A <i>cluster</i> is a group of advances that all produce the same outcome. In this case, there are 3 advances that result in a 6IV Arceus. Larger clusters increase the likelihood of hitting the correct target frame.</p>
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 4 -</span> Advancing The RNG State</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/advancing-rng-state.gif" alt="arceus-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/advancing-rng-state.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="advancing-rng-state">
+        <span class="fw-bold text-light">Advancing The RNG State</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>The RNG state advances naturally, and the speed of the advances will depend on what you are doing in-game. If you wish to increase the speed of advances you can perform the following actions:</p>
+
+        <ul>
+            <li>Stand next to a body of water, this will advance the RNG state by roughly 2,500-3,000 per minute and can be done while idle.</li>
+            <li>Fly around on Braviary spawning wild Pok&eacute;mon, this will advance the RNG state by roughly 5,500-6,000 per minute, but requires some manual effort.</li>
+            <li>Stand in areas densely populated with wild Pok&eacute;mon, this will advance the RNG state by roughly 3,000-3,500 per minute, but be cautious of attacks.</li>
+            <li>Combine any of the above methods to further increase the number of advances per minute.</li>
+        </ul>
+
+        <p>Leave yourself plenty of time to navigate back to Arceus and defeat the boss battle after finishing with advancing the RNG state to avoid overshooting your target. As mentioned above, it takes me roughly 6,000 advances to defeat the boss battle, we also need to add number of advances it takes to head back up to Spear Pillar from our current location, so for example:</p>
+
+        <ul>
+            <li>It takes ~6,000 advances to defeat the boss.</li>
+            <li>It takes ~2,500 advances to reposition at Spear Pillar.</li>
+        </ul>
+
+        <p>This means we should leave roughly 8,500 advances spare before we start heading back to Spear Pillar to defeat the boss (6,000 + 2,500 = 8,500)</p>
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 5 -</span> Character Repositioning</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/character-repositioning.png" alt="arceus-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/character-repositioning.png">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="character-repositioning">
+        <span class="fw-bold text-light">Character Repositioning</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>We have now navigated back to Spear Pillar and defeated Arceus. After updating the current seed using the <code class="fw-bold">Update Main RNG States</code> button and searching for the target again, we can now see our new target frame is on advance 995-997. Delay is already being considered by the search result table, so we will aim to dismiss the text box and skip the cutscene on advance 995.</p>
+
+        <p>Simply wait on the cutscene text box until you reach your target frame. If you want to advance the RNG state gradually you can press the <code class="fw-bold">Home (⌂)</code> button on your controller to pause the RNG state, then press it again to resume the game when you are ready. Do this until you have reached your target frame.</p>
+
+        <p>Once you reach your target frame, quickly dismiss the text box to generate Arceus. Press the <code class="fw-bold">A</code> button after skipping the cutscene, then click the <code class="fw-bold">Read B1S1</code> button once the screen fades to black to confirm that you hit the correct Arceus.</p>
+
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 6 -</span> Result Found</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/result-found.png" alt="arceus-6" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/result-found.png">
+
+<p>After dismissing the text box on our target advance and reading the details of Box 1 Slot 1, we can see that the details of the Arceus match our desired conditions!</p>
+
+<div class="alert alert-primary" style="border: 1px solid #004085; border-radius: 8px; padding: 15px; background-color: #cce5ff; color: #004085;">
+    <span class="fw-bold">Information -</span> Due to the varying delay it may take multiple attempts to hit your target Pok&eacute;mon, even after calibrating your delay multiple times. Don't get discouraged if you don't hit your target on the first few tries!
+</div>
