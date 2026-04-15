@@ -1,1 +1,231 @@
-<p>Placeholder 4</p>
+<p><span class="fw-bold">Figure 1 -</span> Boss Battle Mechanics</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/arceus-continue.png" alt="origin-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/arceus-continue.png">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="boss-battle-mechanics-origin">
+        <span class="fw-bold text-light">Boss Battle Mechanics</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>The Origin legends (Dialga or Palkia) are generated in one of two ways, either:</p>
+
+        <ul>
+            <li>After clearing the initial cutscene, where the boss generates on full HP.</li>
+            <li>After each failed attempt (character being blacked out from damage), where the boss can generate on lower HP.</li>
+        </ul>
+
+        <p>Generating the boss by skipping the initial cutscene, then defeating it in one attempt without blacking out is possible, but difficult. Instead, this method covers the process of damaging the boss down to its final health bar, then intentionally take damage and have the player black out as this is more beginner friendly.</p>
+
+        <p>The boss is respawned after the blackout, on the screen pictured above. When we respawn the boss using the <code class="fw-bold">Keep previous progress</code> option it will respawn with only a single bar of health, making the remainder of the fight easier to execute.</p>
+
+        <p>It's a good idea to do a test run and figure out how many advances it takes you to get the boss down to a single HP bar, this information will be useful later when it comes to hitting a target frame in practice. In <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/origin/origin-battle-advances.png">my example</a>, around 5,500-6,000 advances were needed to get the boss down to a single health bar.</p>
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 2 -</span> Delay Calibration</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/origin/delay-calibration.gif" alt="origin-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/origin/delay-calibration.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="delay-calibration-origin">
+        <span class="fw-bold text-light">Delay Calibration</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>The term <i>delay</i> refers to the time between the final button input and when the Pok&eacute;mon is generated. Because the number of advances during this period can vary, it's important to do a few practice attempts to find a delay that is consistent for you.</p>
+
+        <p>The image above illustrates the process of delay calibration for the Dialga/Palkia boss battle. This method will not work when targeting the Arceus boss battle, as Arceus is generated after the boss battle ends.</p>
+
+        <h6 class="fw-bold">Step-by-step</h6>
+        <ol>
+            <li>Get the boss down to a single bar of health, then intentionally lose the battle. Select <code class="fw-bold">Continue battle</code> and wait on <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/final-button-inputs/origin.png">this screen</a>.</li>
+            <li>Press the <code class="fw-bold">Home (⌂)</code> button and connect to ParLiAment if you have not already done so, or click <code class="fw-bold">Update Main RNG States</code> if you were already connected.</li>
+            <ul>
+                <li>Updating the states is important because this will reset your advances to 0, simplifying the delay calibration process.</li>
+            </ul>
+            <li>Press the <code class="fw-bold">Home (⌂)</code> button to resume the game, then quickly press the <code class="fw-bold">A</code> button to dismiss the text box and regenerate Dialga/Palkia.</li>
+            <li>Once the boss regerates you must then defeat it without dying, it should only have one bar of health so this should not be too difficult.</li>
+            <li>After the credits roll begins, click the <code class="fw-bold">Read B1S1</code> button on ParLiAment and then click <code class="fw-bold">Copy IVs to Filters</code></li>
+            <ul>
+                <li>If nothing shows up or you read a Pok&eacute;mon that is not Dialga/Palkia, clear Pasture/Box 1 Slot 1, save the game, then try again from step 1.</li>
+            </ul>
+            <li>Enter a search range of ~50, then click the <code class="fw-bold">Generate</code> button. It should produce one or more results that match the Dialga/Palkia you were in battle with.</li>
+            <ul>
+                <li>If you see multiple results, simply match the PID/EC with the Dialga/Palkia in the <code class="fw-bold">Read Encounter</code> box.</li>
+            </ul>
+            <li>Take note of the advance the Dialga/Palkia was generated on, this will be your delay for this attempt. It is recommended to repeat this process a few times to determine a rough average delay (5-10 attempts is ideal).</li>
+        </ol>
+
+    </div>
+</div>
+<br />
+
+<table class="table table-striped" style="width:100%; table-layout: fixed;">
+    <thead>
+        <tr>
+            <th colspan="2" class="text-white fw-bold text-center"
+                style="background-color: #6f3b97;">
+                Origin Form Dialga/Palkia Delay Table (Intentional Death Method)
+            </th>
+        </tr>
+        <tr class="text-white" style="background-color: #6f3b97;">
+            <th scope="col" style="width:50%;">Attempt</th>
+            <th scope="col" style="width:50%;">Delay</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td class="fw-bold">Attempt 1</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td class="fw-bold">Attempt 2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td class="fw-bold">Attempt 3</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td class="fw-bold">Attempt 4</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td class="fw-bold">Attempt 5</td>
+            <td>3</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="alert alert-primary" style="border: 1px solid #004085; border-radius: 8px; padding: 15px; background-color: #cce5ff; color: #004085;">
+    <span class="fw-bold">Information -</span> Based on the above attempts, we can see that the delay is usually around 2-4 advances when using the Intentional Death Method. This means that if I wanted to target a specific Palkia, I should aim to press the A button around 2-4 advances before your target. Your results may vary which is why self-calibration is important.
+</div>
+
+<!--
+<table class="table table-striped" style="width:100%; table-layout: fixed;">
+    <thead>
+        <tr>
+            <th colspan="2" class="text-white fw-bold text-center"
+                style="background-color: #6f3b97;">
+                Origin Form Dialga/Palkia Delay Table (Cutscene Skip Method)
+            </th>
+        </tr>
+        <tr class="text-white" style="background-color: #6f3b97;">
+            <th scope="col" style="width:50%;">Attempt</th>
+            <th scope="col" style="width:50%;">Delay</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td class="fw-bold">Attempt 1</td>
+            <td>58</td>
+        </tr>
+        <tr>
+            <td class="fw-bold">Attempt 2</td>
+            <td>57</td>
+        </tr>
+        <tr>
+            <td class="fw-bold">Attempt 3</td>
+            <td>65</td>
+        </tr>
+        <tr>
+            <td class="fw-bold">Attempt 4</td>
+            <td>62</td>
+        </tr>
+        <tr>
+            <td class="fw-bold">Attempt 5</td>
+            <td>58</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="alert alert-primary" style="border: 1px solid #004085; border-radius: 8px; padding: 15px; background-color: #cce5ff; color: #004085;">
+    <span class="fw-bold">Information -</span> Based on the above attempts, we can see that the delay is usually around 58-65 advances when using the Cutscene Skip Method. This means that if I wanted to target a specific Palkia, I should aim to press the A button around 58-65 advances before your target. Your results may vary which is why self-calibration is important.
+</div>
+-->
+
+<p><span class="fw-bold">Figure 3 -</span> Seed Resetting / Target Found</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/origin/target-found.png" alt="origin-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/origin/target-found.png">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="target-found-origin">
+        <span class="fw-bold text-light">Seed Resetting / Target Found</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>After calibrating your delay, enter your desired search filters into ParLiAment. In this case we will be searching for a 6 IV Palkia so all six of the IV filters have been set to 31. We have also set our search range to 50,000 as we are searching for quite a rare target.</p>
+
+        <p>Once you have set your search filters, check the <code class="fw-bold">Delay</code> checkbox and enter the most common value from your delay calibration attempts, in the context of this example we hit a delay of 2-4, so we will enter 2 into the <code class="fw-bold">Delay</code> field. You can now move onto resetting for a desirable target seed.</p>
+
+        <p>In the example above, we can see a 6 IV Palkia appearing at 10,179-10,180 advances in cluster of 2. A <i>cluster</i> is a group of advances that all produce the same outcome. In this case, there are 2 advances that result in a 6IV Palkia. Larger clusters increase the likelihood of hitting the correct target frame.</p>
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 4 -</span> Advancing The RNG State</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/advancing-rng-state.gif" alt="origin-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/advancing-rng-state.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="advancing-rng-state">
+        <span class="fw-bold text-light">Advancing The RNG State</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>The RNG state advances naturally, and the speed of the advances will depend on what you are doing in-game. If you wish to increase the speed of advances you can perform the following actions:</p>
+
+        <ul>
+            <li>Stand next to a body of water, this will advance the RNG state by roughly 2,500-3,000 per minute and can be done while idle.</li>
+            <li>Fly around on Braviary spawning wild Pok&eacute;mon, this will advance the RNG state by roughly 5,500-6,000 per minute, but requires some manual effort.</li>
+            <li>Stand in areas densely populated with wild Pok&eacute;mon, this will advance the RNG state by roughly 3,000-3,500 per minute, but be cautious of attacks.</li>
+            <li>Combine any of the above methods to further increase the number of advances per minute.</li>
+        </ul>
+
+        <p>Leave yourself plenty of time to navigate back to Spear Pillar and whittle down the HP bar to avoid overshooting your target. As mentioned above, it takes me roughly 3,000 advances to defeat the boss battle, we also need to add number of advances it takes to head back up to Spear Pillar from our current location, so for example:</p>
+
+        <ul>
+            <li>It takes ~3,000 advances to get the boss down to the final health bar.</li>
+            <li>It takes ~2,500 advances to reposition at Spear Pillar.</li>
+        </ul>
+
+        <p>This means we should leave roughly 5,500 advances spare before we start heading back to Spear Pillar to defeat the boss (3,000 + 2,500 = 5,500)</p>
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 5 -</span> Character Repositioning</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/origin/character-repositioning.png" alt="origin-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/origin/character-repositioning.png">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #6f3b97;" id="character-repositioning">
+        <span class="fw-bold text-light">Character Repositioning</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>We have now navigated back to Spear Pillar and got Palkia down to a single HP bar, after doing this we intentionally took damage causing the player to black out. Now we need to update the current seed using the <code class="fw-bold">Update Main RNG States</code> button and search for the target again. After doing so we can see our new target frame is on advance 964-965. Delay is already being considered by the search result table, so we will aim to dismiss the text box and skip the cutscene on advance 964.</p>
+
+        <p>Simply wait on the cutscene text box until you reach your target frame. If you want to advance the RNG state gradually you can press the <code class="fw-bold">Home (⌂)</code> button on your controller to pause the RNG state, then press it again to resume the game when you are ready. Do this until you have reached your target frame.</p>
+
+        <p>Once you reach your target frame, quickly dismiss the text box to generate Dialga/Palkia and defeat the boss without blacking out. Get through the cutscene until you see the screen fade to black and the credits roll begins, then click the <code class="fw-bold">Read B1S1</code> button to confirm that you hit the correct Dialga/Palkia.</p>
+
+        <details>
+            <summary><span class="fw-bold">Baby Mode</span></summary>
+            <p>You can optionally use baby mode to attempt to automate the process of hitting your target frame, this can be done as follows:</p>
+
+            <ol>
+                <li>Ensure that you are on the screen of the final button input, then press the <code class="fw-bold">Home (⌂)</code> button and update your current seed.</li>
+                <li>Uncheck the <code class="fw-bold">Delay</code> checkbox in the search filters section, then search for your target again.</li>
+                <li>Confirm the target frame, then enter that value into the <code class="fw-bold">Baby Mode:</code> field on the left-hand side of the ParLiAment window.</li>
+                <li>Click the <code class="fw-bold">Delay</code> checkbox found <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/regigigas/baby-mode-delay.png">Baby Mode</a> section and enter your delay here instead, then set the button input to <code class="fw-bold">A</code> in the dropdown menu.</li>
+                <li>Re-enter the game, disconnect all controllers (or dock the Joy Cons), then click the <code class="fw-bold">Go!</code> button. ParLiAment will then automatically press the <code class="fw-bold">A</code> button once it reaches the target frame.</li>
+            </ol>
+        </details>
+
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 6 -</span> Result Found</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/result-found.png" alt="arceus-6" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/la/main-rng/arceus/result-found.png">
+
+<p>After dismissing the text box on our target advance and reading the details of Box 1 Slot 1, we can see that the details of the Palkia match our desired conditions!</p>
+
+<div class="alert alert-primary" style="border: 1px solid #004085; border-radius: 8px; padding: 15px; background-color: #cce5ff; color: #004085;">
+    <span class="fw-bold">Information -</span> Due to the varying delay it may take multiple attempts to hit your target Pok&eacute;mon, even after calibrating your delay multiple times. Don't get discouraged if you don't hit your target on the first few tries!
+</div>
