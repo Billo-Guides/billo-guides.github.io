@@ -1,0 +1,95 @@
+---
+layout: default
+title: FRLG TID/SID Manipulation (CFW)
+permalink: /cfw/ports/frlg/tid-sid/
+---
+
+<div class="title" style="background-color: #3a5f3a; ">
+    <h1 class="text-light text-center pt-3 pb-3">TID/SID Manipulation (CFW)</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    A guide for RNG manipulating your TID/SID in the Switch ports of FireRed &amp; LeafGreen.
+</small>
+<hr />
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #3a5f3a;" id="tidsid-introduction">
+        <span class="fw-bold text-light">Introduction / Preface</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Finding yourself on this page means you are interested in manipulating your TID/SID combination. As mentioned on the main page, TID/SID manipulation allows you to control which PIDs generate shiny Pok&eacute;mon, or to target specific TID/SID values for aesthetic or personal preference. This section of the guide covers the full process of obtaining a desired TID and RNG manipulating an SID to make a specific PID shiny.</p>
+
+        <p>What you will do in this section of the guide will depend on your goal. In most cases you will want to either:</p>
+        <ul>
+            <li>Obtain a specific TID/SID combination to make a specific spread/PID shiny.</li>
+            <li>Obtain a specific TID for the sake of aesthetics or personal preference.</li>
+        </ul>
+
+        <p>Consider your goals. If you have a specific spread in mind that you would like to generate as a shiny, move onto Figure 1. Otherwise you can move directly to Figure 2 for TID botting setup instructions.</p>
+
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 1 -</span> SID RNG Initial Setup</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/ports/frlg/tid-sid/sid-setup.gif" alt="tid-sid-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/ports/frlg/tid-sid/sid-setup.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #3a5f3a;" id="sid-setup">
+        <span class="fw-bold text-light">SID RNG Initial Setup</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>You will need to decide on the Spread/PID you would like to make shiny. The <code class="fw-bold">Tools</code> tab of GRASS provides an <code class="fw-bold">IVs to PID</code> tool that can be used to search for specific PID values based on entered IVs.</p>
+
+        <h6 class="fw-bold">Step-by-step</h6>
+        <ol>
+            <li>Launch GRASS, then open the <code class="fw-bold">Tools</code> tab.</li>
+            <li>Type your desired IVs into the <code class="fw-bold">IVs to PID</code> section.</li>
+            <li>Select a method, in most cases you should target <code class="fw-bold">Method 1</code>.</li>
+            <ul>
+                <li>Method 1 is the most common method, controlling the method is considered an advanced technique and should only be done once you gain enough experience.</li>
+            </ul>
+            <li>Select a Nature if you wish to target a specific IV/Nature combination.</li>
+            <li>Click <code class="fw-bold">Generate</code>, you should now see a list of spreads in the results table.</li>
+            <ul>
+                <li>Not all spreads are possible, for example, a Timid 31/0/31/31/31/31 spread does not exist at all regardless of the Method.</li>
+                <li>If you get no search results after clicking <code class="fw-bold">Generate</code>, it means that no spreads match your search criteria.</li>
+                <li>Adjust your search filters accordingly by either loosening the IV or Nature filter, e.g, try filtering for any nature and see if there are any you like.</li>
+            </ul>
+            <li>Pick a spread from the results table, then note down the PID somewhere (you will need this later).</li>
+        </ol>
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 2 -</span> TID Botting Initial Setup</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/ports/frlg/tid-sid/tid-setup.gif" alt="tid-sid-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/ports/frlg/tid-sid/tid-setup.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #3a5f3a;" id="tid-setup">
+        <span class="fw-bold text-light">TID Botting Initial Setup</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>GRASS can automate the process of finding a desirable TID. Before doing anything else you will need to create a list of acceptable TIDs by doing the following:</p>
+
+        <h6 class="fw-bold">Step-by-step</h6>
+        <ol>
+            <li>Launch GRASS, then open the <code class="fw-bold">TID/SID</code> tab.</li>
+            <li>Click the <code class="fw-bold">Edit TID List</code> button to open a sub-window.</li>
+            <li>Enter your desired TID into the <code class="fw-bold">ID:</code> field, then click <code class="fw-bold">Add</code>.</li>
+            <li>Repeat the previous step until you have a list of acceptable TIDs.</li>
+            <li>Close the sub-window after entering all of your desired TIDs.</li>
+        </ol>
+
+        <p>If you have a long list of TIDs you would accept you can consider opening <code class="fw-bold">tid-list.json</code> in a text editor like notepad and entering your TIDs directly into the list. This may cause issues if you do not know what you are doing but is a more time efficient approach.</p>
+    </div>
+</div>
+<br />
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/ports/frlg/placeholder/" target="_blank" rel="noopener noreferrer">
+    This is a <span class="fw-bold">Placeholder</span>!
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+
