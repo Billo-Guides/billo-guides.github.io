@@ -17,59 +17,85 @@ permalink: /cfw/ports/frlg/
 
 <p>This guide explains the existing research while also highlighting any differences or quirks specific to RNG manipulation on the Switch ports. It's designed to be useful whether you're new to RNG abuse in Generation 3 or are already familiar with the concepts.</p>
 
+<p><span class="fw-bold">Figure 1 -</span> GRASS Setup</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/ports/frlg/main-page/grass-setup.gif" alt="frlg-setup-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/ports/frlg/main-page/grass-setup.gif">
+
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #3a5f3a; " id="setup-and-installation-frlg-ports">
         <span class="fw-bold text-light">Required Software</span>
     </div>
     <div class="card-body card-bg">
-        <h6><span class="fw-bold">Tools and Applications</span></h6>
+        <h6 class="fw-bold">Tools and Applications</h6>
         <ul>
             <li><a href="https://github.com/LegoFigure11/GRASS/releases" target="_blank" rel="noopener noreferrer">GRASS</a> by LegoFigure11</li>
         </ul>
+
         <h6 class="fw-bold">Installation Instructions</h6>
+        <p>Download the latest GRASS release and extract the entirety of the download into an empty folder inside a known location on your computer. GRASS comes bundled with a custom fork of <a href="https://github.com/olliz0r/sys-botbase" target="_blank" rel="noopener noreferrer">sys-botbase</a>, which is used to communicate with your console in real time. Copy the bundled <code class="fw-bold">atmosphere</code> folder to the root of your Switch SD card and reboot the console.</p>
+
+        <p>You can consider using a USB connection if your connection to Wi-Fi is unstable, but this comes with extra setup instructions that must be completed first.</p>
+
+        <details>
+            <summary class="fw-bold">Extra Setup (USB ONLY)</summary>
+            <ol>
+                <li>Follow the <a href="https://github.com/kwsch/SysBot.NET/wiki/Configuring-a-new-USB-Connection" target="_blank" rel="noopener noreferrer">USB setup instructions</a> and return here once complete.</li>
+                <li>In the file that contains your GRASS download, open <code class="fw-bold">config.json</code> in a text editor.</li>
+                <li>Set the <code class="fw-bold">Protocol</code> to <code class="fw-bold">1</code>.</li>
+                <li>Set the <code class="fw-bold">USBPort</code> to the appropriate port number (see USB setup instructions step 10).</li>
+                <li>Save the new changes, then close <code class="fw-bold">config.json</code>.</li>
+                <li>On your Switch SD card, navigate to <code class="fw-bold">/atmosphere/contents/430000000000000B/</code>.</li>
+                <li>Open <code class="fw-bold">config.cfg</code> in a text editor and change the text to <code class="fw-bold">usb</code>.</li>
+                <li>Save the changes and reboot the console once more.</li>
+            </ol>
+        </details>
+        <hr />
+
+        <h6 class="fw-bold">Program Connectivity</h6>
         <ol>
-            <li>Download the latest GRASS release and extract it to an empty folder in a known location on your computer.</li>
-            <li>Copy the bundled <code class="fw-bold">atmosphere</code> folder to the root of your Switch SD card, then reboot the console into your chosen CFW environment.</li>
+            <li>Launch FireRed/LeafGreen and press the <code class="fw-bold">A</code> button to reach the main menu.</li>
+            <li>Open GRASS, it should be configured to work with your desired connection method.</li>
+            <ul>
+                <li>For Wi-Fi, enter the console IP address into the <code class="fw-bold">Switch IP:</code> field, this can be found by entering the Homebrew menu and pressing the <code class="fw-bold">Y</code> button.</li>
+                <li>For USB, confirm that the USB port is correct or enter it into the <code class="fw-bold">USB Port:</code> field and connect your USB cable to your computer and console.</li>
+            </ul>
+            <li>Click <code class="fw-bold">Connect</code>, the Seed, Game, TID, and SID fields should automatically populate if connection was successful.</li>
         </ol>
 
-        <p>The included <code class="fw-bold">atmosphere</code> folder contains a custom fork of <a href="https://github.com/olliz0r/sys-botbase" target="_blank" rel="noopener noreferrer">sys-botbase</a>, which allows GRASS to communicate with your console over the same network. The bundled sys-botbase fork adds extra features, most notably USB support, which can provide a more stable connection if your Wi-Fi connection is unreliable.</p>
+        <p>Confirm that GRASS is communicating properly with your console before continuing, as later sections assume your setup is already functioning correctly. Visit the relevant troubleshooting Wiki if you are experiencing issues (<a href="https://github.com/kwsch/SysBot.NET/wiki/Troubleshooting-Connection-Errors" target="_blank" rel="noopener noreferrer">Wi-Fi</a> | <a href="https://github.com/kwsch/SysBot.NET/wiki/Configuring-a-new-USB-Connection" target="_blank" rel="noopener noreferrer">USB</a>).</p>
 
-        <p>USB support is not enabled by default and must be manually configured, this requires some extra initial setup that is not covered in this guide. If you wish to enable USB support, <a href="https://github.com/kwsch/SysBot.NET/wiki/Configuring-a-new-USB-Connection" target="_blank" rel="noopener noreferrer">visit this page</a> and come back once setup is complete.</p>
     </div>
 </div>
 <br />
 
-<p><span class="fw-bold">Figure 1 -</span> GRASS Setup</p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/ports/frlg/grass-setup.gif" alt="frlg-setup-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/ports/frlg/grass-setup.gif">
+<p><span class="fw-bold">Figure 2 -</span> GRASS Overview</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/ports/frlg/main-page/grass-overview.png" alt="frlg-setup-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/ports/frlg/main-page/grass-overview.png">
 
 <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #3a5f3a;" id="grass-setup-cfw">
-        <span class="fw-bold text-light">GRASS Setup</span>
+    <div class="anchored card-header" style="background-color: #3a5f3a; " id="grass-overview-frlg">
+        <span class="fw-bold text-light">GRASS Overview</span>
     </div>
     <div class="card-body card-bg">
-        <p>When opening GRASS for the first time you will be presented with something similar to the above image. Before doing anything else you will need to confirm that you can connect to the program with no issues by doing the following:</p>
+        <p>When opening GRASS you should be presented with something similar to the above image (coloured boxes have been added for clarity). This section provides a basic idea of what each section of the tool does, more detailed information will be covered in later sections of the guide when needed.</p>
 
-        <ol>
-            <li>Launch FireRed/LeafGreen and press the <code class="fw-bold">A</code> button to dismiss the title screen, you should now be on the main menu.</li>
-            <li>Type the IP address of your Switch console into the <code class="fw-bold">Switch IP:</code> field of GRASS.</li>
+        <ul>
+            <li><span style="color: #B02A37;" class="fw-bold">Red Section -</span> Provides program connectivity features, seed monitoring, advances counter, and save file information reading.</li>
+            <li><span style="color: #457B9D;" class="fw-bold">Blue Section -</span> Various tabs that are used for different functionalities within GRASS.</li>
             <ul>
-                <li>Your Switch IP address can be found by launching the Homebrew Menu then pressing the <code class="fw-bold">Y</code> button (port is not relevant).</li>
-                <li>If you are using a USB connection, ensure that your USB cable is properly connected to the console instead.</li>
+                <li><span class="fw-bold">Spread Finder -</span> Used to search for specific IV/Nature spreads for a given target Pok&eacute;mon to see what is possible in-game.</li>
+                <li><span class="fw-bold">Seed Reset -</span> Automates the process of resetting for a seed that is desirable based on your search criteria.</li>
+                <li><span class="fw-bold">TID/SID -</span> Used for TID/SID manipulation, automate the process of resetting for a desired TID, predict upcoming SIDs, and find matching SIDs for a target PID.</li>
+                <li><span class="fw-bold">Static -</span> Used throughout the process of Static RNG manipulation. Forecasts the details of upcoming Static encounters on your seed.</li>
+                <li><span class="fw-bold">Wild -</span> Used throughout the process of Wild RNG manipulation. Forecasts the details of upcoming Wild encounters on your seed.</li>
+                <li><span class="fw-bold">Tools -</span> Extra tools that can be used to aid the RNG manipulation process, typically used for more advanced users.</li>
             </ul>
-            <li>Click the <code class="fw-bold">Connect</code> button on GRASS. If connection was sucessful you should now see that the Seed, TID and SID fields have updated automatically.</li>
-        </ol>
+            <li><span style="color: #2A9D8F;" class="fw-bold">Green Section -</span> Baby Mode. Used to automate the process of hitting a target frame for those that have accessibility (or skill) issues.</li>
+            <li><span style="color: #C97A1E;" class="fw-bold">Orange Section -</span> Read the details of any wild or party Pok&eacute;mon and copy IVs to your search filters (useful for delay/offset calibration).</li>
+        </ul>
+
+        <p>You may be unfamiliar with some of the terminology in this section, so a table has been provided below as a reference. It is intended to give you a clear understanding of key terms/phrases used through the guide to avoid confusion.</p>
     </div>
 </div>
 <br />
-
-<div class="alert alert-success" style="border: 1px solid #28a745; border-radius: 5px; padding: 15px;">
-    <span class="fw-bold">Great! -</span> You should now have GRASS installed to your computer and have sys-botbase functioning properly on your console. Double check that you have a successful connection to GRASS before proceeding as this will not be covered later.
-</div>
-
-<p><span class="fw-bold">Figure 2 -</span> Common Terminology</p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/ports/frlg/common-terminology.png" alt="frlg-setup-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/ports/frlg/common-terminology.png">
-
-<p>This section covers common community terminology used throughout RNG manipulation. It's intended to give you a clear understanding of key terms and phrases, helping you avoid confusion when following the guide.</p>
 
 <table class="table table-striped" style="width:100%;">
     <thead>
@@ -87,12 +113,28 @@ permalink: /cfw/ports/frlg/
 
     <tbody>
         <tr>
-            <td class="fw-bold">Initial Seed</td>
+            <td class="fw-bold">Seed</td>
             <td>When launching the game you are given a "random" hexadecimal value that ultimately determines the outcome of anything random that happens in-game.</td>
         </tr>
         <tr>
             <td class="fw-bold">Advances</td>
             <td>Otherwise known as "frames", this term is used to describe how many times the RNG seed has progressed since we initially launched the game.</td>
+        </tr>
+        <tr>
+            <td class="fw-bold">TID/SID</td>
+            <td>Otherwise known as "Trainer ID/Secret ID", is a unique identifier for each trainer. These values are used to determine if a Pok&eacute;mon is shiny based on that Pok&eacute;mon's PID. We can manipulate our TID/SID to make a specific PID result in that Pok&eacute;mon being shiny (covered later!).</td>
+        </tr>
+        <tr>
+            <td class="fw-bold">PID</td>
+            <td>Otherwise known as "Personality ID", is a unique identifier for each Pok&eacute;mon. This value is closely tied to the details of the Pok&eacute;mon, such as its IVs, nature, gender, ability, and most importantly shiny status.</td>
+        </tr>
+        <tr>
+            <td class="fw-bold">Static</td>
+            <td>A type of encounter or gift. Refers to any Pok&eacute;mon with a visible overworld model or those given to you by interacting with an NPC. such as starter Pok&eacute;mon, NPC gifts/trades, game corner Pok&eacute;mon, Articuno/Zapdos/Moltres, Entei/Raikou/Suicune, Ho-Oh/Lugia/Deoxys, and Mewtwo.</td>
+        </tr>
+        <tr>
+            <td class="fw-bold">Wild</td>
+            <td>A random encounter type triggered by movement in grass, caves, water, or by using methods such as fishing or Sweet Scent. The Pok&eacute;mon species is not fixed and is determined randomly each time an encounter occurs.</td>
         </tr>
         <tr>
             <td class="fw-bold">Delay</td>
@@ -106,34 +148,26 @@ permalink: /cfw/ports/frlg/
             <td class="fw-bold">VBlank</td>
             <td>Otherwise known as "vertical blanking", is the function that is used to advance the games RNG, and is responsible for clearing the screen to draw the next frame. This function can affect the method a Pok&eacute;mon is generated with.</td>
         </tr>
-        <tr>
-            <td class="fw-bold">PID</td>
-            <td>Otherwise known as "Personality ID", is a unique identifier for each Pok&eacute;mon. This value is closely tied to the details of the Pok&eacute;mon, such as its IVs, nature, gender, ability, and most importantly shiny status.</td>
-        </tr>
-        <tr>
-            <td class="fw-bold">TID/SID</td>
-            <td>Otherwise known as "Trainer ID/Secret ID", is a unique identifier for each trainer. These values are used to determine if a Pok&eacute;mon is shiny based on that Pok&eacute;mon's PID. We can manipulate our TID/SID to make a specific PID result in that Pok&eacute;mon being shiny (covered later!).</td>
-        </tr>
 
     </tbody>
 </table>
-
-<p>
-    <small><span class="fw-bold">Credit -</span> Most of the information listed in the table was lifted from <a href="https://github.com/Wi-Fi-Labs/Labs-Guides/blob/main/GEN%203/Guides/Gen3MiscRNG.md" target="_blank" rel="noopener noreferrer">this source</a>. Click the link if you would like a more technical definition to anything listed above.</small>
-</p>
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #3a5f3a;" id="pid-tid-sid-relationship">
         <span class="fw-bold text-light">PID, TID &amp; SID Relationship</span>
     </div>
     <div class="card-body card-bg">
+        <h6 class="fw-bold">How Shininess Works</h6>
         <p>As mentioned in the table, your TID &amp; SID determine whether a Pok&eacute;mon will appear shiny. When a Pok&eacute;mon is generated, the game compares its PID against your Trainer ID and Secret ID. If the values match the required condition, the Pok&eacute;mon is generated as shiny. In theory, any PID can be shiny with the correct TID/SID combination.</p>
 
-        <p>TID can be controlled through bruteforce (botting), while SID is controlled by RNG manipulation (frame perfect button input). Any value between 00000-65535 is possible for both the TID and SID. Manipulating both the TID and SID allows complete control over the spreads that will be shiny in the save file, however, you can also bruteforce a specific TID for aesthetic/vanity purposes and avoid SID manipulation entirely if you wish.</p>
-        
-        <p>Consider manipulating both the TID and the SID if your goal is to obtain a specific shiny spread or a rare combination of IVs and nature. This allows you to target a specific PID that will result in the desired spread (e.g, 6 perfect IVs) and manipulate a TID/SID combination that will result in the Pok&eacute;mon generating as shiny.</p>
+        <h6 class="fw-bold">TID vs SID Control</h6>
+        <p>TID can be controlled through bruteforce (botting), while SID is controlled through RNG manipulation (frame perfect button input). Any value between 00000–65535 is possible for both the TID and SID. Manipulating both values gives you full control over which spreads can be shiny on your save file, though you can also target a specific TID for aesthetic purposes and ignore SID manipulation entirely if preferred.</p>
 
-        <p><span class="fw-bold">Note -</span> Most common spreads do not require a specific TID/SID to be shiny. For example, if you are only aiming for a general competitive spread (such as low Attack or Speed IVs), TID/SID manipulation is not necessary. However, lucking into highly specific combinations like a 6IV shiny by pure chance is astronomically unlikely, so TID/SID manipulation is basically a requirement for those targets.</p>
+        <h6 class="fw-bold">When TID/SID Manipulation Matters</h6>
+        <p>Consider manipulating both TID and SID if your goal is to obtain a specific shiny spread or a rare combination of IVs and nature. This allows you to target a specific PID that produces your desired spread (such as 6 perfect IVs) and then make that PID shiny through the correct TID/SID combination.</p>
+
+        <h6 class="fw-bold">Important Note</h6>
+        <p>Most common spreads do not require a specific TID/SID combination to be shiny. For example, if you are only aiming for a general competitive spread (such as low Attack or Speed IVs), TID/SID manipulation is usually unnecessary. However, highly specific targets like a 6IV shiny are astronomically unlikely without manipulation.</p>
     </div>
 </div>
 <br />
@@ -145,17 +179,26 @@ permalink: /cfw/ports/frlg/
     </svg>
 </a>
 
-<p>If you do not want to manipulate your TID/SID due to personal preference, not caring about shiny Pok&eacute;mon, or already having an existing save file, you can still continue following the guide and ignore the TID/SID manipulation page as the content inside is not relevant to you.</p>
+<hr />
+<div class="title" style="background-color: #3a5f3a; ">
+    <h1 class="text-light text-center pt-3 pb-3">The Process</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    Continue here if you are NOT interested in TID/SID manipulation.
+</small>
+<hr />
+
+<p>TID/SID manipulation is optional. If you are not interested in shiny Pokémon or are using an existing save file, you can safely skip the TID/SID section and move straight onto encounter manipulation. Read the definitions in the above table and decide which type of encounter you wish to manipulate, then click the corresponding button to get started!</p>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/ports/frlg/static/" target="_blank" rel="noopener noreferrer">
-    Move onto  <span class="fw-bold">Static Encounter/Gift Manipulation</span>!
+    <span class="fw-bold">Static Encounter/Gift Manipulation</span>!
     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
     </svg>
 </a>
 
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/ports/frlg/wild/" target="_blank" rel="noopener noreferrer">
-    Move onto  <span class="fw-bold">Wild Encounter Manipulation</span>!
+    <span class="fw-bold">Wild/Fishing Encounter Manipulation</span>!
     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
     </svg>
