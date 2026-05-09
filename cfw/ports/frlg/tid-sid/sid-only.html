@@ -6,14 +6,14 @@
         <span class="fw-bold text-light">Spread Finder</span>
     </div>
     <div class="card-body card-bg">
-        <p>When manipulating your SID, you will first want to decide on your target Pok&eacute;mon and your desired IV spread. GRASS provides a <code class="fw-bold">Spread Finder</code> tool to help with confirming that the spread you want actually exists, and provides valuable information such as the PID the Pok&eacute;mon has.</p>
+        <p>When manipulating your SID, you will first want to decide on your target Pok&eacute;mon and your desired IV spread. GRASS provides a <code class="fw-bold">Spread Finder</code> tool to help with confirming whether or not the IV spread you want actually exists, and gives us valuable information such as the PID the Pok&eacute;mon will have.</p>
 
         <h6 class="fw-bold">Step-by-step</h6>
         <ol>
             <li>Launch GRASS and open the <code class="fw-bold">Spread Finder</code> tab, then select your target Pok&eacute;mon and <code class="fw-bold">Method</code>.</li>
             <ul>
-                <li>In most cases, static encounters will use Method 1 and wild encounters will use Method H1.</li>
-                <li>Controlling the method a Pok&eacute;mon is generated with is considered an advanced technique for those with enough experience.</li>
+                <li>In most cases, static encounters will use Method 1 and wild encounters will use Method H1. If you are targeting a Method H1 spread and the number of rerolls is between 30-50+, you may have more luck targeting Method H4 instead.</li>
+                <li>Controlling the method a Pok&eacute;mon is generated with is considered an advanced technique for those with enough experience, and will not be covered further in these guides.</li>
             </ul>
             <li>Enter your search filters, such as filtering for a specific set of IVs.</li>
             <ul>
@@ -29,7 +29,7 @@
 
         <p>In this example we have configured our filters to search for any Mewtwo with 6 perfect IVs and a few results have appeared in the search results table. We will be targeting the Modest Mewtwo (PID: <code class="fw-bold">685011A9</code>) found at the bottom of the table.</p>
 
-        <p>Now that we know the PID of the Pok&eacute;mon we would like to be shiny we can move onto botting for a desired TID. Once we have our desired TID we can manipulate our SID to match the conditions that make our target PID shiny.</p>
+        <p>Now that we know the PID of the Pok&eacute;mon we would like to be shiny, we can move on to manipulating our SID to match the conditions needed to make our target PID shiny.</p>
     </div>
 </div>
 <br />
@@ -42,26 +42,26 @@
         <span class="fw-bold text-light">Calibrating SID Delay</span>
     </div>
     <div class="card-body card-bg">
-        <p>It is a good idea to calibrate your SID delay before doing anything else, this will allow you to target your desired SID with more accuracy when the time comes. To calibrate SID delay, pick between manual or automatic calibration and follow the relevant steps. The above example uses automatic calibration (Baby Mode).</p>
+        <p>It is a good idea to calibrate your SID delay before doing anything else - this will allow you to target your desired SID with more accuracy when the time comes. To calibrate SID delay, pick between manual or automatic calibration and follow the relevant steps. The above example uses automatic calibration (Baby Mode).</p>
 
-        <h6 class="fw-bold">Step-by-step (manual calibration)</h6>
+        <h6 class="fw-bold">Step-by-step (Manual Calibration)</h6>
         <ol>
             <li>Confirm your character name, then press the <code class="fw-bold">Home</code> button and reconnect to GRASS.</li>
             <li>Resume the game and name your rival, press A until you reach <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/ports/frlg/final-button-input/sid-rng-screen.png">this text box</a>.</li>
             <ul>
-                <li>Your SID is generated shortly after dismissing the text box, you will be able to read your SID after entering the overworld.</li>
+                <li>Your SID is generated shortly after dismissing the text box. You will be able to read your SID after entering the overworld.</li>
             </ul>
-            <li>Aim to press the <code class="fw-bold">A</code> button on a round number of advances for simplicity.</li>
+            <li>Aim to press the <code class="fw-bold">A</code> button on a round number (such as a multiple of 1,000) of advances for simplicity.</li>
             <ul>
                 <li>This helps maintain consistency and makes calculation slightly easier when calibrating your delay.</li>
             </ul>
-            <li>Resume the game, then press the <code class="fw-bold">A</code> button on your target advance, avoid pressing multiple times.</li>
+            <li>Resume the game, then press the <code class="fw-bold">A</code> button on your target advance. Avoid pressing multiple times.</li>
             <ul>
                 <li>Pressing the <code class="fw-bold">A</code> button multiple times can speed up the text, which will cause inconsistency between attempts.</li>
             </ul>
             <li>Click the <code class="fw-bold">Read IDs from RAM</code> button on the TID/SID tab of GRASS after entering the overworld.</li>
-            <li>Click the <code class="fw-bold">Specific SID</code> button, the SID you have found should already be present inside the correct field. Enter the SID manually if there are any issues.</li>
-            <li>Confirm the advance that your SID was generated on, and subtract it from the advance that you pressed the <code class="fw-bold">A</code> button on.</li>
+            <li>Click the <code class="fw-bold">Specific SID</code> button. The SID you have found should already be present inside the correct field, but you can enter the SID manually if there are any issues. Click the <code>Generate</code> to populate the results table.</li>
+            <li>Confirm the advance that your SID was generated on in the generated table, and subtract it from the advance that you pressed the <code class="fw-bold">A</code> button on.</li>
             <ul>
                 <li>For example, if we pressed the <code class="fw-bold">A</code> button on advance 2000 and the SID was generated on advance 2,465, our delay for this attempt is 465.</li>
             </ul>
@@ -72,14 +72,14 @@
         </ol>
         <hr />
 
-        <h6 class="fw-bold">Step-by-step (automatic calibration)</h6>
+        <h6 class="fw-bold">Step-by-step (Automatic Calibration)</h6>
         <ol>
             <li>Confirm your character name, then press the <code class="fw-bold">Home</code> button and reconnect to GRASS.</li>
             <li>Resume the game and name your rival, press A until you reach <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/ports/frlg/final-button-input/sid-rng-screen.png">this text box</a>.</li>
             <ul>
                 <li>Your SID is generated shortly after dismissing the text box, you will be able to read your SID after entering the overworld.</li>
             </ul>
-            <li>In the Baby Mode section of the main window, enter a round number inside the empty field and set the dropdown menu button to <code class="fw-bold">A</code>.</li>
+            <li>In the Baby Mode section of the main window, enter a round number (such as a multiple of 1,000) inside the empty field and set the dropdown menu button to <code class="fw-bold">A</code>.</li>
             <ul>
                 <li>Setting the value to a round number helps to maintain consistency and makes calculation slightly easier when calibrating your delay.</li>
             </ul>
@@ -90,10 +90,10 @@
             </ul>
             <li>Press the <code class="fw-bold">Go!</code> button in the Baby Mode section of GRASS and wait. The <code class="fw-bold">A</code> button will be pressed automatically on your target advance.</li>
             <li>Click the <code class="fw-bold">Read IDs from RAM</code> button on the TID/SID tab of GRASS after entering the overworld.</li>
-            <li>Click the <code class="fw-bold">Specific SID</code> button, the SID you have found should already be present inside the correct field. Enter the SID manually if there are any issues.</li>
-            <li>Confirm the advance that your SID was generated on, and subtract it from the advance that you pressed the <code class="fw-bold">A</code> button on.</li>
+            <li>Click the <code class="fw-bold">Specific SID</code> button. The SID you have found should already be present inside the correct field, but you can enter the SID manually if there are any issues. Click the <code>Generate</code> to populate the results table.</li>
+            <li>Confirm the advance that your SID was generated on in the generated table, and subtract it from the advance that Baby Mode pressed the <code class="fw-bold">A</code> button on.</li>
             <ul>
-                <li>For example, if we pressed the <code class="fw-bold">A</code> button on advance 2000 and the SID was generated on advance 2,465, our delay for this attempt is 465.</li>
+                <li>For example, if the <code class="fw-bold">A</code> button was pressed on advance 2000 and the SID was generated on advance 2,465, our delay for this attempt is 465.</li>
             </ul>
             <li>Repeat this process multiple times until you see a level of consistency in your delay.</li>
         </ol>
@@ -101,6 +101,10 @@
     </div>
 </div>
 <br />
+
+<div class="alert alert-primary" style="border: 1px solid #004085; border-radius: 8px; padding: 15px; background-color: #cce5ff; color: #004085;">
+    <span class="fw-bold">Information -</span> You must stick to whichever method you used to calibrate your delay when aiming for your desired SID in practice. For example, if you used the automatic calibration method, you must use the Baby Mode method when you attempt to hit your target SID.
+</div>
 
 <p><span class="fw-bold">Figure 3 -</span> Manipulating The SID</p>
 <img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/ports/frlg/tid-sid/manipulating-sid.gif" alt="sid-only-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/ports/frlg/tid-sid/manipulating-sid.gif">
@@ -110,19 +114,19 @@
         <span class="fw-bold text-light">Manipulating The SID</span>
     </div>
     <div class="card-body card-bg">
-        <p>We have now calibrated our SID delay and we know the PID of the spread we want to be shiny, so we can move onto manipulating our SID to match the conditions that make our target PID shiny. Similar to calibrating your delay, you can choose between manual button input or using the Baby Mode feature for automatic button input.</p>
+        <p>We have now calibrated our SID delay and we know the PID of the spread we want to be shiny, so we can move onto manipulating our SID to match the conditions that make our target PID shiny. Similar to calibrating your delay, you can choose between manual button input or using the Baby Mode feature for automatic button input. Use whichever method you completed the above calibration with.</p>
 
         <h6 class="fw-bold">Step-by-step (manual button input)</h6>
         <ol>
             <li>Confirm your character name, then press the <code class="fw-bold">Home</code> button and reconnect to GRASS.</li>
-            <li>Resume the game and name your rival, press A until you reach <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/ports/frlg/final-button-input/sid-rng-screen.png">this text box</a>.</li>
-            <li>Click <code class="fw-bold">Read Temp TID</code>, this will input your current TID into the <code class="fw-bold">TID</code> section of the main window.</li>
+            <li>Resume the game and name your rival, then press A until you reach <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/ports/frlg/final-button-input/sid-rng-screen.png">this text box</a>.</li>
+            <li>Click <code class="fw-bold">Read Temp TID</code>. This will input your current TID into the <code class="fw-bold">TID</code> section of the main window.</li>
             <li>Select <code class="fw-bold">SIDs for Shiny PID</code> in GRASS, then paste the PID of the spread you wish to make shiny into the field.</li>
             <li>Enter your delay (calibrated earlier) and your search range, then hit <code class="fw-bold">Generate</code>. You should now see results inside the table.</li>
             <ul>
                 <li>If you do not find any results you may need to increase your search range.</li>
             </ul>
-            <li>Take note of the advance that produces your target SID, this is the advance you will aim to press the <code class="fw-bold">A</code> button to dismiss the text box.</li>
+            <li>Take note of the advance that produces your target SID. This is the advance you will aim to press the <code class="fw-bold">A</code> button to dismiss the text box.</li>
             <li>Once you reach your target advance, press the <code class="fw-bold">A</code> button once and wait for the character to enter the overworld.</li>
             <li>Click the <code class="fw-bold">Read IDs from RAM</code> and confirm that the correct SID was generated.</li>
         </ol>
@@ -131,12 +135,12 @@
         <h6 class="fw-bold">Step-by-step (Baby Mode)</h6>
         <ol>
             <li>Confirm your character name, then press the <code class="fw-bold">Home</code> button and reconnect to GRASS.</li>
-            <li>Resume the game and name your rival, press A until you reach <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/ports/frlg/final-button-input/sid-rng-screen.png">this text box</a>.</li>
-            <li>Click <code class="fw-bold">Read Temp TID</code>, this will input your current TID into the <code class="fw-bold">TID</code> section of the main window</li>
+            <li>Resume the game and name your rival, then press A until you reach <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/ports/frlg/final-button-input/sid-rng-screen.png">this text box</a>.</li>
+            <li>Click <code class="fw-bold">Read Temp TID</code>. This will input your current TID into the <code class="fw-bold">TID</code> section of the main window.</li>
             <li>Select <code class="fw-bold">SIDs for Shiny PID</code> in GRASS, then paste the PID of the spread you wish to make shiny into the field.</li>
             <li>Enter your search range, then hit <code class="fw-bold">Generate</code>. You should now see results inside the table.</li>
             <ul>
-                <li>Do not enter your delay into the TID/SID tab, this is needed for the Baby Mode section instead.</li>
+                <li><span class="fw-bold">Do not enter your delay into the TID/SID tab!</span>. This is needed for the Baby Mode section instead.</li>
                 <li>If you do not find any results you may need to increase your search range.</li>
             </ul>
             <li>Enter your target adance into the Baby Mode section, then click the <code class="fw-bold">Delay</code> checkbox and enter your calibrated delay.</li>
