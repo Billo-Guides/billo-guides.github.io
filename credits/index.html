@@ -4,6 +4,23 @@ title: Credits
 permalink: /credits
 ---
 
+<style>
+    #credits-table {
+        min-width: 1000px;
+    }
+
+        #credits-table td:nth-child(1),
+        #credits-table th:nth-child(1) {
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+
+        #credits-table td:nth-child(2),
+        #credits-table th:nth-child(2) {
+            vertical-align: middle;
+        }
+</style>
+
 <div class="title" style="background-color: #0c0038;">
     <h1 class="text-light text-center pt-3 pb-3">Credits</h1>
 </div>
@@ -16,19 +33,22 @@ permalink: /credits
 </div>
 
 <div class="table-responsive">
-    <table class="table table-striped" style="width:100%" id="overworld-rng-table">
+    <table class="table table-striped align-middle"
+           style="width:100%; min-width:1000px;"
+           id="credits-table">
         <thead class="table text-white" style="background-color: #0c0038;">
             <tr>
-                <th scope="col" class="text-center" style="width:30%;">Contributor</th>
-                <th scope="col" class="text-center" style="width:30%;">Development</th>
-                <th scope="col" class="text-center" style="width:40%;">Significance</th>
+                <th scope="col" class="text-center" style="width:25%;">Contributor</th>
+                <th scope="col" class="text-center" style="width:25%;">Development</th>
+                <th scope="col" class="text-center" style="width:50%;">Significance</th>
             </tr>
         </thead>
         <tbody>
+
             <tr>
                 <td class="text-center">
                     <span class="fw-bold">
-                        <a href="https://github.com/LegoFigure11">LegoFigure11</a>
+                        <a href="https://github.com/LegoFigure11/">LegoFigure11</a>
                     </span>
                 </td>
                 <td>
@@ -43,18 +63,20 @@ permalink: /credits
                     </ul>
                 </td>
                 <td>
-                    <p>
-                        Multiple tool development efforts and research contributions.
-                        Huge help with site design, structure and maintenance.
-                    </p>
-                    This site would not be what it is today without LegoFigure11's countless hours of work and dedication and they cannot be thanked enough.
+                    <p>Lego is responsible for developing many of the tools used throughout the guides on this website. Their contributions have helped make RNG manipulation more accessible to the wider community through intuitive and user-friendly tools.</p>
+
+                    <p>They also created the original version of this website and has continued to play a major role in its design, structure, and ongoing maintenance. Their support has been instrumental in shaping and improving the site over time.</p>
+
+                    <p>On a more personal level, Lego has served as a mentor to both myself and many others within the community. Their willingness to share their knowledge and expertise has helped countless people, including myself, develop their skills and grow within the community.</p>
+
+                    <p>This site and the RNG community as a whole would not be what it is today without Lego's countless hours of work and dedication, they cannot be thanked enough for their efforts.</p>
                 </td>
             </tr>
 
             <tr>
                 <td class="text-center">
                     <span class="fw-bold">
-                        <a href="https://github.com/Lusamine">Anubis</a>
+                        <a href="https://github.com/Lusamine/">Anubis</a>
                     </span>
                 </td>
                 <td>
@@ -65,37 +87,45 @@ permalink: /credits
                     </ul>
                 </td>
                 <td>
-                    <p>
-                        Multiple tool development efforts and research contributions.
-                        Huge help with site design, guide writing and grammar checks.
-                    </p>
-                    Anubis is another person who has contributed an immeasurable amount to the community and this site. Lots of modern RNG abuse tools and knowledge are based off of the back of their work.
+                    <p>Anubis solved many of the modern RNG algorithms and developed proof-of-concept scripts for public use, as making their research accessible to the wider community has always been one of their top priorities. Many of these scripts served as the foundation for the initial write-ups of guides published on this website and has allowed others to build tools based on their work.</p>
+
+                    <p>Plenty of their work is featured throughout the guides in some way, some examples include: Automation routines to optimize the RNG experience in Legends: Arceus and Brilliant Diamond/Shining Pearl, tools that are based on their initial scripts, and polish (wording/grammar checks) on multiple site pages.</p>
+
+                    <p>For many years, Anubis has been a fantastic mentor and a major positive influence on me. Their guidance and support have been invaluable throughout my journey within this community, and they have motivated me on several occasions to work on fun projects with them.</p>
+
+                    <p>Their mentorship spans a wide range of areas, from teaching the intricacies of RNG manipulation to providing insightful advice on tool development. They also taught both Lego and myself how to research RNG calls in Sword/Shield using GDB scripts they created, which played a significant role in improving the accuracy of owoow!</p>
+
+                    <p><span class="fw-bold">Fun Anubis fact -</span> Sword/Shield Overworld RNG came to fruition because they wanted a shiny Lapras with a Fishing Mark, which inspired them to research the Overworld8 RNG algorithm with Kaphotics. SciresM identified the memory address storing the relevant RNG seed, and from there the work took off. The rest is history!</p>
+
                 </td>
             </tr>
 
             <tr>
                 <td class="text-center">
                     <span class="fw-bold">
-                        <a href="https://github.com/kwsch">Kaphotics</a>
+                        <a href="https://github.com/kwsch/">Kaphotics</a>
                     </span>
                 </td>
                 <td>
                     <ul>
-                        <li><a href="https://github.com/kwsch/PKHeX">PKHeX</a></li>
-                        <li><a href="https://github.com/kwsch/SysBot.NET">SysBot.NET</a></li>
+                        <li><a href="https://github.com/Lusamine/SysBot.NET/tree/moarencounterbots">Moarencounterbots</a></li>
+                        <li><a href="https://gist.github.com/Lusamine">RNG abuse scripts</a></li>
                         <li>Various other misc helpful tools</li>
                     </ul>
                 </td>
                 <td>
-                    <p>Creator of PKHeX and SysBot.NET, two programs that are constantly leveraged or used throughout the guides found on this site. Significant contributions towards RNG research over the span of many years.</p>
+                    <p>Kurt is a community pillar that has contributed significantly to the development of various tools used in the RNG manipulation projects. PKHeX is leveraged in some way by countless programs and has proven itself to be one of the most invaluable resources in Pok&eacute;mon development history.</p>
+
+                    <p>SysBot.NET is another one of their creations, the program provides a base for bot routines and live RAM reading and is written in such a way that it is easy for developers to extend and customize.</p>
+
+                    <p>Moarencounterbots and NotForkBot are two examples of SysBot.NET forks with improved functionality that have been used in site guides (past and present).</p>
                 </td>
             </tr>
-
 
             <tr>
                 <td class="text-center">
                     <span class="fw-bold">
-                        <a href="https://github.com/kwsch">Zyro670</a>
+                        <a href="https://github.com/zyro670/">Zyro</a>
                     </span>
                 </td>
                 <td>
@@ -105,23 +135,26 @@ permalink: /credits
                     </ul>
                 </td>
                 <td>
-                    <p>Created tools used to ease the process of reading encounters/automating RNG manipulation in multiple games.</p>
+                    <p>Zyro provided the first automation routine used for Legends: Arceus legendary RNG on their SysBot project NotForkBot. They took the time to work with me on expanding this routine to work with all spawner-based legendaries, which took a significant amount of effort.</p>
+
+                    <p>They also created the popular PokeViewer, which allows users to easily view Pok&eacute;mon data of any Pok&eacute;mon a player is in battle with, or found inside boxes. Which has proven to be very beneficial when performing actions like delay calibration during an RNG abuse attempt.</p>
+
                 </td>
             </tr>
 
             <tr>
                 <td class="text-center">
                     <span class="fw-bold">
-                        <a href="https://github.com/Lincoln-LM">Lincoln-LM</a>
+                        <a href="https://github.com/Lincoln-LM">Lincoln</a>
                     </span>
                 </td>
                 <td>
                     <ul>
-                        <li>Various misc helpful tools</li></li>
+                        <li>Various misc helpful tools</li>
                     </ul>
                 </td>
                 <td>
-                    <p>Honourable mention. Made various tools and scripts to help aid the RNG abuse process. They have also been a significant research contributor.</p>
+                    <p>Lincoln creates various misc scripts and tools that help with RNG manipulation and other aspects of gameplay, they were also a significant contributor in Sword/Shield research, providing a lot of early information and helping to refine the final bits and pieces.</p>
                 </td>
             </tr>
 
