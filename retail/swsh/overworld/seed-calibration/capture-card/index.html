@@ -1,0 +1,165 @@
+---
+layout: default
+title: Overworld RNG - Capture Card Seed Finding (RETAIL)
+permalink: /retail/swsh/overworld/seed-finding-and-monitoring/capture-card
+---
+
+<div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">Capture Card Seed Finding</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    Learn how to use owoow's Capture Card Monitor to identify your seed.
+</small>
+<hr />
+
+<p>This page contains information about finding and monitoring your current seed, specifically using owoow's capture card monitor. If you have reached this page you should already understand the basics of finding your seed, such as how to identify the different attack animation types and the difference between the summary screen and party list.</p>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/overworld/seed-finding-and-monitoring" target="_blank">
+    In the wrong place? <span class="fw-bold">click here to go back!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+
+<p><span class="fw-bold">Figure 1 -</span> Capture Card Monitor Overview</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/capture-card-seed-monitoring/capture-card-monitor-overview.gif" alt="capture-card-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/capture-card-seed-monitoring/capture-card-monitor-overview.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="capture-card-monitor-overview">
+        <span class="fw-bold text-light">Capture Card Monitor Overview</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>In the tab bar at the top of the main window, locate the button for the <code class="fw-bold">Capture Card Monitor</code> and click it to open a subwindow. Once you open the subwindow you should see something similar to what is displayed in Figure 1.</p>
+
+        <h6 class="fw-bold">General Feature Details</h6>
+        <ul>
+            <li>Select Video Source is where you choose the input source for the capture card. In the above example our video source is an Elgato 4K S.</li>
+            <ul>
+                <li>If you plug in a new capture card you may need to hit the <code class="fw-bold">Refresh</code> button for it to be recognized by owoow.</li>
+            </ul>
+            <li>The <code class="fw-bold">Start Feed</code> button allow owoow to grab the video output from your capture card and display it on screen.</li>
+            <li>Similarly, the <code class="fw-bold">Stop Feed</code> button will stop the video capture output and remove it from the screen.</li>
+            <li>The <code class="fw-bold">Pin to top</code> checkbox will force the capture output to be at the front of any window.</li>
+            <ul>
+                <li>This feature is useful when clicking around the main window while also wanting to monitor your video output, can be disabled by unchecking the box.</li>
+            </ul>
+            <li>The three <code class="fw-bold">Screenshot</code> buttons allow the program to take a screenshot of your current game state and save the images to your computer (more detail below).</li>
+            <li>The three <code class="fw-bold">Load Image</code> buttons allow you to load an existing image into the program, useful if you have already used it once before.</li>
+            <li><code class="fw-bold">Acceptable Difference Threshold</code> and <code class="fw-bold">Match Cooldown</code> are used to fine-tune the sensitivity of the capture card monitor.</li>
+            <li><code class="fw-bold">Monitor Animations</code> tells the program to monitor the video source and take note of any detected animation. Conversely, <code class="fw-bold">Stop Monitoring</code> ends the monitoring process.</li>
+            <li><code class="fw-bold">Show Logs</code> and <code class="fw-bold">Show CV output</code> are used for advanced troubleshooting. Helps the user to see exactly what is going wrong.</li>
+        </ul>
+
+        <h6 class="fw-bold">About "Acceptable Difference Threshold" &amp; "Match Cooldown"</h6>
+        <p>The <code class="fw-bold">Acceptable Difference Threshold</code> determines how much the current frame can differ from the reference image before it is considered a match. The <code class="fw-bold">Match Cooldown</code> sets a delay between consecutive matches to prevent multiple detections of the same event.</p>
+
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 2 -</span> Gathering Screenshots</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/capture-card-seed-monitoring/gathering-screenshots.gif" alt="capture-card-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/capture-card-seed-monitoring/gathering-screenshots.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="gathering-screenshots">
+        <span class="fw-bold text-light">Gathering Screenshots</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Before doing anything else you will need to gather three screenshots of your game state. These screenshots will be used as reference images for the capture card monitor. We will need screenshots of your Pok&eacute;mon's idle, physical and special animations.</p>
+
+        <p>The recommended Pok&eacute;mon to use are Drilbur, Chewtle, or Blipbug. These three Pok&eacute;mon are available at the start of the game and are good candidates for the role. Other Pok&eacute;mon can be used but this is more likely to result in needing to change the Acceptable Difference Threshold and/or Match Cooldown.</p>
+
+        <h6 class="fw-bold">Step-by-step</h6>
+        <ol>
+            <li>Open the Capture Card Monitor subwindow, select the video source, then click the <code class="fw-bold">Start Feed</code> button and wait for your feed to appear on screen.</li>
+            <li>Open the summary screen of the Pok&eacute;mon you wish to use for seed monitoring, avoid using the party list as this can cause unwanted seed advances.</li>
+            <li>For the idle animation, simply click the <code class="fw-bold">Screenshot (Idle)</code> button while on the summary screen, do not take this screenshot during an animation.</li>
+            <li>Click the Left/Right stick to cause your Pok&eacute;mon to animate, then click the <code class="fw-bold">Screenshot (Physical)</code> button during your Pok&eacute;mon's physical attack animation.</li>
+            <li>Click the Left/Right stick to cause your Pok&eacute;mon to animate, then click the <code class="fw-bold">Screenshot (Special)</code> button during your Pok&eacute;mon's special attack animation.</li>
+        </ol>
+
+        <p>All three of the required screenshots should now be loaded into the VideoFeed subwindow, this means we can now begin recording animations using the <code class="fw-bold">Monitor Animations</code> button.</p>
+    </div>
+</div>
+<br />
+
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <span class="fw-bold">Important -</span> You must use the exact same Pok&eacute;mon you took the screenshots of for monitoring, otherwise the program may struggle to detect the animations correctly. For example, if you took the screenshots using a non-shiny, female Drilbur like I did, then you should continue to use the same Drilbur when monitoring animations.
+</div>
+
+<p><span class="fw-bold">Figure 3 -</span> Monitoring Started</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/capture-card-seed-monitoring/monitoring-started.gif" alt="capture-card-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/capture-card-seed-monitoring/monitoring-started.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="monitoring-started">
+        <span class="fw-bold text-light">Monitoring Started</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>After confirming that your screenshots are correctly loaded, you can start monitoring animations using the <code class="fw-bold">Monitor Animations</code> button. Clicking the Left/Right stick will cause your Pok&eacute;mon to animate, and the program should correctly identify the animation type and output the result into the <code class="fw-bold">Observations</code> section of the VideoFeed subwindow. Record a total of 128 animations for the best results.</p>
+
+        <h6 class="fw-bold">Troubleshooting Tips:</h6>
+        <p><i>Animations are being detected while my Pok&eacute;mon is idle!</i></p>
+        <p>Take a better idle screenshot, adjust the Match Cooldown, or use a different Pok&eacute;mon. This happens when your idle screenshot is too similar to one of the Pok&eacute;mon's attack animations.</p>
+
+        <p><i>The program is registering multiple observations per animation!</i></p>
+        <p>Try increasing the Match Cooldown value, this will create a longer delay between each observation and prevent multiple detections of the same animation. If this does not work, consider adjusting the Acceptable Difference Threshold or trying a different Pok&eacute;mon.</p>
+
+        <p><i>My animations are not recording correctly!</i></p>
+        <p>Try retaking the physical and special screenshots to more accurately reflect each animation. If this does not work, consider adjusting the Acceptable Difference Threshold and Match Cooldown values, or trying a different Pok&eacute;mon.</p>
+
+        <p><i>It's wrong! It's all wrong! I've changed all the numbers and I still can't figure it out!</i></p>
+        <p>The default values (<code class="fw-bold">20736</code> for Acceptable Difference Threshold and <code class="fw-bold">1000 ms</code> for Match Cooldown) work well for most setups, though you may need to change them if you are experiencing issues. If you are still experiencing issues after changing them, revert to the defaults before attempting further troubleshooting.</p>
+
+        <p><i>I can't do this, I need a video or something to help figure out what I am doing wrong!</i></p>
+        <p>Lucky for you, Lego kindly uploaded a demonstration video of the entire process that can be found <a href="https://youtu.be/Tx7M8hSdaas" target="_blank" rel="noopener noreferrer">here</a>! Follow the tutorial video and come back once you have a functional setup.</p>
+
+    </div>
+</div>
+<br />
+
+<p><span class="fw-bold">Figure 4 -</span> Monitoring Complete</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/capture-card-seed-monitoring/monitoring-complete.gif" alt="capture-card-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/capture-card-seed-monitoring/monitoring-complete.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="monitoring-complete">
+        <span class="fw-bold text-light">Monitoring Complete</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>After you have successfully recorded up to 128 consecutive animations, you can click the <code class="fw-bold">Copy</code> button to copy the animation pattern to your clipboard. You can then open the <code class="fw-bold">Retail Seed Finder</code> sub-window and paste the output into it to find your seed.</p>
+
+        <p>If done correctly, a seed should be produced in the Retail Seed Finder subwindow, you can then click the <code class="fw-bold">Update Main Form</code> button to paste your seed into the main window.</p>
+
+        <p>After finding your seed and updating the main window, you will want to confirm that the seed is correct. A single erroneous input can result in the wrong seed. This is best achieved using the following method:</p>
+
+        <ol>
+            <li>Click <code class="fw-bold">Update Main Form</code> after identifying your seed using the Seed Finder to populate the seed fields on the main window.</li>
+            <li>With the <code class="fw-bold">X Menu</code> still open, set your search range (the <code class="fw-bold">+</code> field) inside the <code class="fw-bold">Encounter Settings</code> section to a small number such as 20-50. Untick the <code class="fw-bold">Filters Enabled?</code> checkbox and click <code class="fw-bold">Search!</code> to perform a filterless search.</li>
+            <li>You will see that the next 20-50 search results have been produced. Now, look at the <code class="fw-bold">Animations</code> column of the table. Keep in mind that <code class="fw-bold">0</code> represents a physical animation and <code class="fw-bold">1</code> represents special.</li>
+            <li>You should still be on the Pok&eacute;mon summary screen or the party list after identifying your seed. Perform some extra animations to confirm that the upcoming attack animations align with the next few results in the table.</li>
+            <li>Once you have confirmed that the animation pattern in the table properly matches, go back to the <code class="fw-bold">Retail Tools</code> section.</li>
+            <li>You will now learn to reidentify your seed at any point. You may use <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/seed-calibration/seed-distinctions.png">this labeled image</a> to orient yourself.</li>
+            <ol>
+                <li>First, enter the rough number of advances that have occurred into the <code class="fw-bold">+</code> field. This should be at least as many attack animations you did, plus some extra leeway.</li>
+                <li>Click the <code class="fw-bold">Generate</code> button, which will generate as far as you entered in the <code class="fw-bold">+</code> field.</li>
+                <li>Begin recording animations in the <code class="fw-bold">Anim.:</code> box underneath. It typically takes around 5-25 animations to find your seed.</li>
+            </ol>
+            <li>Every time you want to find your current seed, you must set the <code class="fw-bold">+</code> field to cover how much you have advanced and click the <code class="fw-bold">Generate</code> button. If you are unable to reidentify your seed, you can increase the <code class="fw-bold">+</code> field field and <code class="fw-bold">Generate</code> again.</li>
+        </ol>
+
+    </div>
+</div>
+<br />
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/overworld/main-page#the-basics" target="_blank">
+    Head back to the <span class="fw-bold">Main Page (OVERWORLD)</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/item/" target="_blank">
+    Head back to the <span class="fw-bold">Main Page (ITEM)</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>

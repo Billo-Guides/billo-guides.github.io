@@ -22,34 +22,33 @@ permalink: /retail/swsh/overworld/seed-finding-and-monitoring
         <span class="fw-bold text-light">Retail SeedFinder Overview</span>
     </div>
     <div class="card-body card-bg">
-        <p>On the far right of the main window, locate the button for the <code span class="fw-bold">Retail Seed Finder</code>. Clicking it will open the subwindow displayed in Figure 1. This is where we will record a series of actions known as "motions" or "animations" to identify our current seed. This button should only be used to identify your initial seed.</p>
+        <p>On the far right of the main window in the <code class="fw-bold">Retail Tools</code> section, locate the button for the <code span class="fw-bold">Retail Seed Finder</code> and click it to open a subwindow. This window is where we will record a series of "motions" or "animations" to identify our initial seed.</p>
 
         <h6 span class="fw-bold">What are motions/animations?</h6>
-        <p>When on the summary screen of a Pok&eacute;mon, pressing down on the <code span class="fw-bold">Left/Right Stick</code> will cause the Pok&eacute;mon to perform an attack animation. Most Pok&eacute;mon have two separate attack animations, which can be referred to as "Physical" or "Special". <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/seed-calibration/animations.gif">this gif</a> provides a short demonstration on how to identify animation differences.</p>
+        <p>When viewing the summary of a Pok&eacute;mon, pressing down on the <code span class="fw-bold">Left/Right Stick</code> will cause the Pok&eacute;mon to perform an attack animation. Most Pok&eacute;mon have two separate attack animations, which can be referred to as "Physical" or "Special". <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/seed-calibration/animations.gif">this gif</a> provides a short demonstration on how to identify animation differences.</p>
 
         <ul>
             <li>When Espeon lunges at the screen, this is a physical animation.</li>
             <li>When Espeon stands in place, this is a special animation.</li>
         </ul>
 
-        <p>It is important to pick a Pok&eacute;mon that has a clear animation difference to make the process as simple as possible. Espeon, Gallade, Drilbur, and Metapod are the most commonly used Pok&eacute;mon for this process.</p>
+        <p>To determine your seed you will need to accurately record up to 128 consecutive attack animations. You can do this on either the Pok&eacute;mon summary screen or the party list. If you are new to the process, we highly recommend that you use the Pok&eacute;mon summary screen.</p>
+
+        <p>The party list is not recommended for beginners as it allows you to press the stick before the previous animation has finished, which will cause an RNG advancement that you cannot see if you accidentally click too quickly.</p>
 
     </div>
 </div>
 <br />
 
 <p><span class="fw-bold">Figure 2 -</span> Recording Animations</p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/seed-calibration/recording-animations.gif" alt="retail-seed-calibration-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/seed-calibration/recording-animations.gif">
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/seed-calibration/recording-animations-manual.gif" alt="retail-seed-calibration-2a" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/seed-calibration/recording-animations-manual.gif">
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c0038;" id="recording-animations">
         <span class="fw-bold text-light">Recording Animations</span>
     </div>
     <div class="card-body card-bg">
-        <p>To determine your seed, you will need to accurately record 128 consecutive attack animations. You can do this on either the Pok&eacute;mon summary screen or the party list.</p>
-        <ul>
-            <li><span class="fw-bold">If you are new to the process, we highly recommend that you use the Pok&eacute;mon summary screen!</span> The party list allows you to press the stick before the previous animation has finished, which will cause an RNG advancement that you cannot see if you accidentally click too quickly.</li>
-        </ul>
+        <p>It is important to pick a Pok&eacute;mon that has a clear animation difference to make the process as simple as possible. Espeon, Gallade, Drilbur, and Metapod are the most commonly used Pok&eacute;mon for this process.</p>
 
         <h6 span class="fw-bold">Step-by-Step</h6>
         <ol>
@@ -99,6 +98,25 @@ permalink: /retail/swsh/overworld/seed-finding-and-monitoring
     <span class="fw-bold">Important -</span> When reidentifying your seed after advancing the RNG state, you will need to set the value inside the <code class="fw-bold">+</code> field of the Retail Tools section to a value greater than the number of advances you believe have occurred. For example, if you believe that roughly 50000 advances have occurred and you now wish to reidentify your seed, make sure the value inside the <code class="fw-bold">+</code> field is set to a number that is > 50000 to avoid matching with an incorrect animation pattern.
 </div>
 
+<div class="alert alert-success" style="border: 1px solid #28a745; border-radius: 5px; padding: 15px;">
+    <span class="fw-bold">Great!</span> You should now have a basic understanding of identifying and monitoring your current seed. Ensure that you have a solid understanding of how to apply these concepts before continuing.
+</div>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/overworld/main-page#the-basics" target="_blank">
+    Head back to the <span class="fw-bold">Main Page (OVERWORLD)</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/item/" target="_blank">
+    Head back to the <span class="fw-bold">Main Page (ITEM)</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+
+
 <hr />
 <div class="title" style="background-color: #0c0038;">
     <h1 class="text-light text-center pt-3 pb-3">Advanced Seed Finding &amp; Extras</h1>
@@ -133,34 +151,28 @@ permalink: /retail/swsh/overworld/seed-finding-and-monitoring
 </div>
 <br />
 
+<!--
+    
+<p><span class="fw-bold">Figure 5 -</span> Capture Card Monitoring</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/seed-calibration/capture-card-monitoring.png" alt="retail-seed-calibration-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/seed-calibration/capture-card-monitoring.png">
+
 <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="additional-resources">
-        <span class="fw-bold text-light">Additional Resources</span>
+    <div class="anchored card-header" style="background-color: #0c0038;" id="capture-card-monitoring">
+        <span class="fw-bold text-light">Capture Card Monitoring</span>
     </div>
     <div class="card-body card-bg">
-        <p>If you have a capture card that can stream your Switch video to a PC, you can try using <a href="https://drive.google.com/drive/folders/1x1mIboSZB1a0GNKbco9-F9Gm5I9Lwvyr">NX RNG Tool</a> by <a href="https://twitter.com/_3z8">_3z8</a>, which can automatically analyze attack animations to find your seed.</p>
+        <p>If you have a capture card capable of streaming your Switch video output to a PC, you can use owoow's <code class="fw-bold">Capture Card Monitor</code> feature to automatically capture animations for you. Detailed setup and usage instructions are available on a dedicated page, which can be found by clicking the button below.</p>
 
-        <p>Resources for this tool are entirely in Japanese. <a href="https://nantoiu-com.translate.goog/game/pkmn/22728/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-USI ">Here is a translated guide.</a></p>
-
-        <p>The authors of this guide are not familiar with this tool and cannot provide support if you choose to try it.</p>
+        <p>Before using this feature, it is recommended that you familiarize yourself with the basics of seed finding, particularly how to identify the different attack animation types and the difference between the summary screen and party list.</p>
     </div>
 </div>
 <br />
 
-<div class="alert alert-success" style="border: 1px solid #28a745; border-radius: 5px; padding: 15px;">
-    <span class="fw-bold">Great!</span> You should now have a basic understanding of identifying and monitoring your current seed. Ensure that you have a solid understanding of how to apply these concepts before continuing.
-</div>
-
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/overworld/main-page#the-basics" target="_blank">
-    Head back to the <span class="fw-bold">main page (OVERWORLD)</span>
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/overworld/seed-finding-and-monitoring/capture-card" target="_blank">
+    Send me to <span class="fw-bold">Capture Card Monitoring</span>
     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
     </svg>
 </a>
 
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/item/" target="_blank">
-    Head back to the <span class="fw-bold">main page (ITEM)</span>
-    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-    </svg>
-</a>
+-->
