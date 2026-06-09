@@ -51,7 +51,9 @@ permalink: /retail/swsh/overworld/seed-finding-and-monitoring/capture-card
         </ul>
 
         <h6 class="fw-bold">About "Acceptable Difference Threshold" &amp; "Match Cooldown"</h6>
-        <p>The <code class="fw-bold">Acceptable Difference Threshold</code> determines how much the current frame can differ from the reference image before it is considered a match. The <code class="fw-bold">Match Cooldown</code> sets a delay between consecutive matches to prevent multiple detections of the same event.</p>
+        <p>Acceptable difference threshold is the maximum number of pixels that can be different between two images being compared in order for it to register as a match. The default is 20736, which is 1% of the switch's standard output resolution, meaning that the images must be a 99% match to be accepted. Due to larger pokemon having more pixels and smaller pokemon having less, this value may need to be tweaked up or down respectively to get your matches to properly record.</p>
+
+        <p>Match cooldown is the minimum number of milliseconds that must have passed since the last accepted match before another one can be accepted. This is used to prevent multiple observations being recorded for a single attack animation, and may need to be lowered or raised if your pokemon has particularly fast or slow animations respectively.</p>
 
     </div>
 </div>
@@ -67,7 +69,7 @@ permalink: /retail/swsh/overworld/seed-finding-and-monitoring/capture-card
     <div class="card-body card-bg">
         <p>Before doing anything else you will need to gather three screenshots of your game state. These screenshots will be used as reference images for the capture card monitor. We will need screenshots of your Pok&eacute;mon's idle, physical and special animations.</p>
 
-        <p>The recommended Pok&eacute;mon to use are Drilbur, Chewtle, or Blipbug. These three Pok&eacute;mon are available at the start of the game and are good candidates for the role. Other Pok&eacute;mon can be used but this is more likely to result in needing to change the Acceptable Difference Threshold and/or Match Cooldown.</p>
+        <p>The recommended Pok&eacute;mon to use are Drilbur, Chewtle, or Blipbug. These three Pok&eacute;mon are available before obtaining the first gym badge and are good candidates for the role. Other Pok&eacute;mon can be used but this is more likely to result in needing to change the Acceptable Difference Threshold and/or Match Cooldown.</p>
 
         <h6 class="fw-bold">Step-by-step</h6>
         <ol>
