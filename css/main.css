@@ -114,3 +114,15 @@ small.subtext {
 .tooltip-underline {
     border-bottom: 1px dotted black;
 }
+
+
+/* LGPE Advancement Table Styling */
+
+#lgpe-item-rng-advance-table td:nth-child(1),
+#lgpe-item-rng-advance-table th:nth-child(1),
+#lgpe-item-rng-advance-table td:nth-child(2),
+#lgpe-item-rng-advance-table th:nth-child(2),
+#lgpe-item-rng-advance-table td:nth-child(3),
+#lgpe-item-rng-advance-table th:nth-child(3) {
+    vertical-align: middle;
+}
