@@ -1,53 +1,147 @@
 ---
 layout: default
-title: Finding TID/SID (SwSh)
-permalink: /retail/swsh/overworld/tid-sid
+title: Finding Your TID/SID (SwSh)
+permalink: /retail/swsh/tid-sid
 ---
 
 <div class="title" style="background-color: #0c0038;">
-    <h1 class="text-light text-center pt-3 pb-3">Finding 5 Digit TID/SID</h1>
+    <h1 class="text-light text-center pt-3 pb-3">Finding Your TID/SID</h1>
 </div>
+<small class="text-muted mb-3 mt-0">
+    Learn the common methods used to find your TID/SID combination in Sword &amp; Shield.
+</small>
 <hr />
 
-<p>This tutorial provides several methods to find your 5 digit TID/SID combination in Sword/Shield. Knowing these values is necessary if you wish to RNG abuse shiny Pok&eacute;mon from overworld encounters.</p>
+<h6 class="fw-bold">Introduction</h6>
+
+<p>Trainer ID (TID) and Secret ID (SID) are unique identifiers for your game save. Knowing these values is important if you wish to RNG abuse shiny Pok&eacute;mon from overworld encounters or if you want accurate Max Raid PID prediction. TID/SID <i>manipulation</i> is <span class="fw-bold">not possible</span> in Sword &amp; Shield. This tutorial is only for finding the TID/SID combination on an existing save file.</p>
+
+<p>Both owoow (Overworld) and PokeFinder (Max Raid) require a 5 digit TID/SID value for your profile. For the purposes of this guide the 5 digit values will be referred to as your internal TID/SID. Internal IDs are not visible in game and should not be confused with the 6-digit TID that is visible on the summary screen of a Pok&eacute;mon.</p>
 
 <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="possible-methods-tidsid">
-        <span class="fw-bold text-light">Possible Methods</span>
+    <div class="anchored card-header" style="background-color: #0c0038;" id="tid-sid-finding-methods">
+        <span class="fw-bold text-light">TID/SID Finding Methods</span>
     </div>
     <div class="card-body card-bg">
-        <p>It is not possible to RNG abuse your TID or SID in Sword/Shield. This tutorial is only for finding your internal TID/SID on an existing save file. There are three possible methods you can use:</p>
+        <p>Finding your TID/SID can be done using several methods, and the method you use will depend on the tools you have available. Most common methods include:</p>
 
-        <h6><span class="fw-bold">Using SysBot.NET</span></h6>
-        <p>SysBot.NET is a bot service hosted by members of the community, typically found in Discord servers. If you do not have access to a SysBot, you can find a public server with a quick Google search.</p>
+        <h6><span class="fw-bold">Using PokePiaSWSH</span></h6>
+        <p><a href="https://github.com/kwsch/PokePiaSWSH/releases/" target="_blank">PokePiaSWSH</a> is a tool that can be used to read the details of a save file by broadcasting a local communication between a PC and a console that are connected to the same Wi-Fi network. After communicating, the tool will display save file details including your internal and visual TID/SID combinations. It will also dump the information of any Pok&eacute;mon in your party which can be useful for finding the internal IDs of multiple save files at once.</p>
 
-        <p>SysBots come with dump functionality, which dumps the data of the shown Pokémon into a <code span class="fw-bold">.pk8</code> file. This file is then uploaded to your Discord messages.</p>
-
-        <p>The file can then be manually inspected using a program like PKHeX to view your TID/SID combination. This method is recommended as it takes the least effort, but does require a Nintendo Switch Online subscription.</p>
+        <p>It is recommended to try this method first where possible. It is the most convenient for the majority of users as it does not require a CFW Switch console or a Nintendo Switch Online subscription. However, it is a Windows application and will not work on MacOS or Linux.</p>
         <hr />
 
-        <h6><span class="fw-bold">Help from a Friend</span></h6>
-        <p>If you have a friend with a CFW Switch console, you can trade with them and they can dump the Pok&eacute;mon file for you. It can then be opened in PKHeX.</p>
+        <h6><span class="fw-bold">Using SysBot.NET (NSO Required)</span></h6>
+        <p>SysBot.NET is a bot service provided by members of the community and can be found in Discord Servers. If you do not know of any servers hosting SysBots you can try searching terms like "SysBot Discord server" on Google. Bots are hosted for all Switch titles, so you will need to find a server that is hosting a bot for Sword &amp; Shield specifically.</p>
+
+        <p>One of the features of SysBot.NET is the ability to dump the information of a Pok&eacute;mon shown to the bot into a <code span class="fw-bold">.pk8</code> file. This file can then be opened in <a href="https://projectPok&eacute;mon.org/home/files/file/1-pkhex/" target="_blank">PKHeX</a> to view your trainer information, which is where your TID/SID combination can be found.</p>
         <hr />
 
         <h6><span class="fw-bold">Finding a Shiny Pok&eacute;mon</span></h6>
-        <p>If you do not want to use anyone's CFW, it is possible to find TID/SID using entirely stock methods. This is very time-consuming as you will need to find a shiny Pok&eacute;mon. The older <a href="https://github.com/LegoFigure11/swsh-overworld-rng-gui/releases">swsh-overworld-rng-gui</a> program can help with the calculation. However, the steps will not be covered in this guide.</p>
+        <p>If you do not want external trading tools at all, it is technically possible to find TID/SID using entirely stock methods. The older <a href="https://github.com/LegoFigure11/swsh-overworld-rng-gui/releases">swsh-overworld-rng-gui</a> program can help with the calculation by backtracing a shiny Pok&eacute;mon. However, the steps will not be covered in this guide.</p>
+
+        <p>This method is not time optimal and is generally not recommended as it requires naturally finding a shiny Pok&eacute;mon in the overworld which may take a considerable amount of time.</p>
+
+    </div>
+</div>
+
+<hr /><div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">Using PokePiaSWSH</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    Finding your TID/SID using PokePiaSWSH and a stock Nintendo Switch.
+</small>
+<hr />
+
+<p>As mentioned above, for this method you will need to have PokePiaSWSH installed on your PC. Once installed, you can use it to read the details of a save file by broadcasting a local communication between a PC and a console that are connected to the same Wi-Fi network.</p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="sysbot-method-tid-sid">
+        <span class="fw-bold text-light">Requirements &amp; Instructions </span>
+    </div>
+    <div class="card-body card-bg">
+        <h6><span class="fw-bold">Requirements</span></h6>
+        <ul>
+            <li><a href="https://github.com/kwsch/PokePiaSWSH/releases/" target="_blank">PokePiaSWSH</a></li>
+            <li>Your console and PC connected to the same Wi-Fi network</li>
+        </ul>
+
+        <h6><span class="fw-bold">Instructions</span></h6>
+        <ul>
+            <li>Extract the contents of the PokePiaSWSH download into an empty folder in a known location on your PC.</li>
+            <li>Open Sword or Shield, then enter LAN Mode. This can be done by navigating to the Settings menu and pressing <code class="fw-bold">L</code> + <code class="fw-bold">R</code> +  <code class="fw-bold">Left Stick</code> all at once.</li>
+            <ul>
+                <li>If done correctly you should see a message indicating that the console is in LAN Mode (<a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/main-page/booting-lan-mode.jpg">Booting LAN</a>, <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/main-page/lan-mode.jpg">LAN enabled</a>).</li>
+            </ul>
+            <li>Open the Y-Comm and select <code class="fw-bold">Link Trade</code>, then search without a code. Launch <code class="fw-bold">PokePiaSWSH.exe</code> on your computer after doing so to have it listen.</li>
+            <li>If done correctly you should now see the details of your save file in the PokePiaSWSH window (see below image)</li>
+        </ul>
+
     </div>
 </div>
 <br>
 
-<hr /><div class="title" style="background-color: #0c0038;">
-    <h1 class="text-light text-center pt-3 pb-3">Finding TID/SID using CFW</h1>
+<p><span class="fw-bold">Figure 1 -</span> PokePiaSWSH Demonstration</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/tid-sid/pokepiaswsh-dump.gif" alt="tid-sid-1a" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/tid-sid/pokepiaswsh-dump.gif">
+
+<p>The above image demonstrates what the PokePiaSWSH interface looks like when after it has connected to your console. We can see the details of our save file, most notably the internal Trainer ID and Secret ID (surrounded by the top red box).</p>
+
+<p>Pok&eacute;mon from Max Raids will also display a Raid Seed, this can be quickly copied out and pasted into PokeFinder if you are dumping your Pok&eacute;mon for the purposes of Raid RNG manipulation.</p>
+
+<div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
+    <p><span class="fw-bold">Important -</span> If you are running into issues using PokePiaSWSH, you should first confirm that your console and PC are connected to the same Wi-Fi network. Including confirming that they are both connected to the same Wi-Fi band if you are using a multi band router.</p> If you are still running into issues after double checking the connection, seek support in the Discord server linked at the top of this page or use the SysBot.NET method below.
 </div>
-<hr />
 
-<p>As mentioned above, by having access to a CFW Switch console we can easily find our TID/SID combination. The method will differ slightly depending on if you are using a SysBot or asking a friend to help.</p>
-
-<p>Keep in mind that SysBot hosts are not constantly available. Join a public server that contains an active Sword/Shield bot, then follow the instructions given by the bot host. If you do not have a Discord account you will need to make one or ask a friend for help instead.</p>
+<p><span class="fw-bold">Figure 2 -</span> Adding Your Profile (PokePiaSWSH)</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/tid-sid/owoow-profile-pokepia.gif" alt="tid-sid-2a" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/tid-sid/owoow-profile-pokepia.gif">
 
 <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="cfw-method-tid-sid">
-        <span class="fw-bold text-light">Using CFW - Instructions</span>
+    <div class="anchored card-header" style="background-color: #0c0038;" id="adding-your-profile-pokepiaswsh">
+        <span class="fw-bold text-light">Adding Your Profile</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>The above image illustrates the process using owoow but the following information is applicable for both owoow and PokeFinder.</p>
+
+        <ol>
+            <li>Open the <code class="fw-bold">Profiles</code> subwindow and give your profile a name that you can easily recognize.</li>
+            <li>Enter the 5 digit IDs given by PokePiaSWSH into the <code class="fw-bold">TID</code> &amp; <code class="fw-bold">SID</code> fields, then select the <code class="fw-bold">Shiny Charm</code> &amp; <code class="fw-bold">Mark Charm</code> checkboxes if those items are present in your save file.</li>
+            <li>Select your game version. Confirm that all of the information entered is correct. Incorrect information will cause inaccuracies when searching for targets.</li>
+            <li>Click the <code class="fw-bold">Add</code> button to save your profile, then click the <code class="fw-bold">Select</code> button to apply the details to the main window.</li>
+            <li>Repeat this process if you have multiple profiles you wish to add to the list. Swapping profiles is as easy as selecting your chosen profile in the list on the left and clicking the <code class="fw-bold">Select</code> button again.</li>
+        </ol>
+    </div>
+</div>
+<br>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/overworld/main-page#the-basics" target="_blank">
+    Send me back to the <span class="fw-bold">Overworld RNG!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/raid/" target="_blank">
+    Send me back to the <span class="fw-bold">Raid RNG!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+
+<hr /><div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">Using SysBot.NET</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    Finding your TID/SID using a combination of SysBot.NET and PKHeX.
+</small>
+<hr />
+
+<p>As mentioned above, for this method you will need to have found a SysBot that is running Sword &amp; Shield. This method will obviously not work if you are using a bot that is running any other game.</p>
+
+<p>If you run into issues following this guide you will need to consult the bot host for extra support as it is likely they are using a bot with extra modifications, such as using a different command prefix.</p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="sysbot-method-tid-sid">
+        <span class="fw-bold text-light">Requirements &amp; Instructions </span>
     </div>
     <div class="card-body card-bg">
         <h6><span class="fw-bold">Requirements</span></h6>
@@ -57,11 +151,14 @@ permalink: /retail/swsh/overworld/tid-sid
             <li>A Discord account (for SysBot.NET)</li>
         </ul>
 
-        <h6><span class="fw-bold">Tutorial</span></h6>
+        <h6><span class="fw-bold">Instructions</span></h6>
         <ul>
             <li>Extract the contents of the PKHeX download into an empty folder in a known location on your PC.</li>
             <li>Click <code span class="fw-bold">Options</code> at the top of the window, then click <code span class="fw-bold">Settings</code>. Change the Blank Save Version to Sword or Shield. Close this window.</li>
-            <li>Dump the <code span class="fw-bold">.pk8</code> file of a Pokémon that was caught in the save file you wish to check the TID/SID on with a SysBot or with a friend's help.</li>
+            <li>Use a SysBot to dump the <code span class="fw-bold">.pk8</code> file of any Pok&eacute;mon caught in the save file you wish to find the TID/SID for.</li>
+            <ul>
+                <li>Typically, the command used to dump a Pokémon file is <code span class="fw-bold">$dump</code>, but the prefix (in this case <code class="fw-bold">$</code>) may vary depending on the bot configuration. Ask the bot host for more information.</li>
+            </ul>
             <li>Drag the file into the PKHeX window. You should now see the details on screen. Head over to the <code span class="fw-bold">OT/Misc</code> tab to view Trainer Information.</li>
             <li>Hover over the TID field with your mouse. This will reveal the 5 digit TID/SID combination. Take note of these values, as you will need them for any RNG manipulation involving shiny Pok&eacute;mon.</li>
         </ul>
@@ -71,18 +168,20 @@ permalink: /retail/swsh/overworld/tid-sid
 <br>
 
 <p><span class="fw-bold">Figure 1 -</span> TID/SID PKHeX Lookup</p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/tid-sid/tid-lookup-pkhex.gif" alt="tid-sid-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/tid-sid/tid-lookup-pkhex.gif">
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/tid-sid/tid-lookup-pkhex.gif" alt="tid-sid-1b" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/tid-sid/tid-lookup-pkhex.gif">
 
-<p>In this example we can see that the TID/SID combination is 28888/10267. We can now enter these values into owoow's <code class="fw-bold">Profiles</code> subwindow for future use.</p>
+<p>In this example we can see that the TID/SID combination is 28888/10267. We can now enter these values into owoow's or PokeFinder's <code class="fw-bold">Profiles</code> subwindow for future use.</p>
 
-<p><span class="fw-bold">Figure 2 -</span> Adding Your Profile</p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/tid-sid/owoow-profile.gif" alt="tid-sid-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/tid-sid/owoow-profile.gif">
+<p><span class="fw-bold">Figure 2 -</span> Adding Your Profile (SysBot.NET)</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/tid-sid/owoow-profile.gif" alt="tid-sid-2b" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/overworld/tid-sid/owoow-profile.gif">
 
 <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="adding-your-profile">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="adding-your-profile-sysbotnet">
         <span class="fw-bold text-light">Adding Your Profile</span>
     </div>
     <div class="card-body card-bg">
+        <p>The above image illustrates the process using owoow but the following information is applicable for both owoow and PokeFinder.</p>
+
         <ol>
             <li>Open the <code class="fw-bold">Profiles</code> subwindow and give your profile a name that you can easily recognize.</li>
             <li>Enter the IDs given by PKHeX into the <code class="fw-bold">TID</code> &amp; <code class="fw-bold">SID</code> fields, then select the <code class="fw-bold">Shiny Charm</code> &amp; <code class="fw-bold">Mark Charm</code> checkboxes if those items are present in your save file.</li>
@@ -93,9 +192,18 @@ permalink: /retail/swsh/overworld/tid-sid
     </div>
 </div>
 <br>
+
 <a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/overworld/main-page#the-basics" target="_blank">
-    Head back to the <span class="fw-bold">main page</span>
+    Send me back to the <span class="fw-bold">Overworld RNG!</span>
     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
     </svg>
 </a>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/raid/" target="_blank">
+    Send me back to the <span class="fw-bold">Raid RNG!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
+
