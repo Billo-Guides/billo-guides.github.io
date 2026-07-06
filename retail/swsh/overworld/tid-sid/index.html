@@ -29,6 +29,8 @@ permalink: /retail/swsh/tid-sid
         <p><a href="https://github.com/kwsch/PokePiaSWSH/releases/" target="_blank">PokePiaSWSH</a> is a tool that can be used to read the details of a save file by broadcasting a local communication between a PC and a console that are connected to the same Wi-Fi network. After communicating, the tool will display save file details including your internal and visual TID/SID combinations. It will also dump the information of any Pok&eacute;mon in your party which can be useful for finding the internal IDs of multiple save files at once.</p>
 
         <p>It is recommended to try this method first where possible. It is the most convenient for the majority of users as it does not require a CFW Switch console or a Nintendo Switch Online subscription. However, it is a Windows application and will not work on MacOS or Linux.</p>
+
+        <small>PokePiaSWSH is a project adapted from the original <a href="https://github.com/lincoln-lm/swsh-lan-client" target="_blank">swsh-lan-client</a> by Lincoln-LM, which is compatible with MacOS and Linux. Head over to their repository for if you are not on a Windows based system. Information on how to use Lincoln's project will not be covered here.</small>
         <hr />
 
         <h6><span class="fw-bold">Using SysBot.NET (NSO Required)</span></h6>
@@ -69,13 +71,15 @@ permalink: /retail/swsh/tid-sid
         <h6><span class="fw-bold">Instructions</span></h6>
         <ul>
             <li>Extract the contents of the PokePiaSWSH download into an empty folder in a known location on your PC.</li>
-            <li>Open Sword or Shield, then enter LAN Mode. This can be done by navigating to the Settings menu and pressing <code class="fw-bold">L</code> + <code class="fw-bold">R</code> +  <code class="fw-bold">Left Stick</code> all at once.</li>
+            <li>Open Sword or Shield, then enter LAN Mode. This can be done by navigating to the Options menu and pressing <code class="fw-bold">L</code> + <code class="fw-bold">R</code> +  <code class="fw-bold">Left Stick</code> all at once.</li>
             <ul>
                 <li>If done correctly you should see a message indicating that the console is in LAN Mode (<a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/main-page/booting-lan-mode.jpg">Booting LAN</a>, <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/main-page/lan-mode.jpg">LAN enabled</a>).</li>
             </ul>
             <li>Open the Y-Comm and select <code class="fw-bold">Link Trade</code>, then search without a code. Launch <code class="fw-bold">PokePiaSWSH.exe</code> on your computer after doing so to have it listen.</li>
             <li>If done correctly you should now see the details of your save file in the PokePiaSWSH window (see below image)</li>
         </ul>
+
+        <p>It is important that you do not mess around in-game while using PokePiaSWSH. You should be standing in the overworld with the "Searching..." message visible. Do not open any menus, walk around, start any battles, or interact with any NPCs.</p>
 
     </div>
 </div>
