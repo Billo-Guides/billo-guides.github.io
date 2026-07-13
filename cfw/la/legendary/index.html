@@ -85,22 +85,8 @@ permalink: /cfw/la/legendary/
             <li>Download sys-botbase then extract the contents of the download to the root of your Switch SD card, reboot the console into your chosen CFW environment after doing so.</li>
         </ol>
 
-        <details id="troubleshooting">
-            <summary><span class="fw-bold">DISABLING GAME MODS AND CHEATS</span></summary>
-            <p>You will need to remove all mods or cheats for Legends: Arceus before proceeding. Mods/cheats can alter the RNG of the games and cause RAM reads to fail. Switch mods/cheats are stored in the <code span class="fw-bold">atmosphere/contents</code> directory on your SD card. This folder is typically empty on a fresh installation of Atmosph&egrave;re.</p>
+        {% include common/sys-module-troubleshooting.html %}
 
-            <h6 class="fw-bold">Methods for Disabling Mods/Cheats</h6>
-            <p>Any of these methods can work to disable mods/cheats. You should select the best one for your use case.</p>
-
-            <ul>
-                <li>Rename the <code span class="fw-bold">atmosphere/contents</code> folder to something else, such as <code span class="fw-bold">oldcontents</code>. This will allow you to keep everything you previously installed. You can simply rename the folder back when done.</li>
-                <li>Delete the <code span class="fw-bold">atmosphere/contents</code> folder. This may be a good option if you have many files in this directory that you do not recognize and you want to clean out your SD card.</li>
-                <li>Delete specific mods/cheats from the <code span class="fw-bold">atmosphere/contents</code> folder. This requires you to know which title ID corresponds to what.</li>
-                <li>If you wish to keep the <code span class="fw-bold">atmosphere/contents</code> folder intact, you can hold <code span class="fw-bold">L</code> every time you boot the game.</li>
-            </ul>
-        </details>
-
-        <p><span class="fw-bold">Note -</span> Some sys-modules that are not necessary for these tools can still cause interference if they are present on your Switch. If you are still experiencing issues, remove all unnecessary sys-modules that were not listed on this guide.</p>
     </div>
 </div>
 <br />
