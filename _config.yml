@@ -29,6 +29,6 @@ github_username:  Billo-Guides
 # host: 0.0.0.0
 
 plugins:
-  - jekyll-avatar
   - jekyll-github-metadata
   - jekyll-seo-tag
+  - jekyll-titles-from-headings
