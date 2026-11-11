@@ -1,11 +1,11 @@
 ---
 layout: default
-title: SwSh Raid RNG (CFW)
-permalink: /cfw/swsh/raid
+title: SwSh Raid RNG
+permalink: /swsh/raid
 ---
 
 <div class="title" style="background-color: #0c0038;">
-    <h1 class="text-light text-center pt-3 pb-3">Wishing Piece Raid RNG (CFW)</h1>
+    <h1 class="text-light text-center pt-3 pb-3">Max Raid RNG</h1>
 </div>
 <small class="text-muted mb-3 mt-0">
     A guide for manipulating Max Raid battles in Sword/Shield, using <a class="text-decoration-none text-muted" href="https://github.com/Admiral-Fish/PokeFinder/">PokeFinder</a> by <a class="text-decoration-none text-muted" href="https://github.com/Admiral-Fish">Admiral-Fish</a>.
@@ -13,76 +13,40 @@ permalink: /cfw/swsh/raid
 <hr />
 
 <h5 span class="fw-bold">Introduction</h5>
-<p>Sword/Shield Max Raid RNG manipulation is used to select for specific characteristics of Pok&eacute;mon found in raid battles. It is possible to predict values such as IVs, Nature, Shiny status, Size (Jumbo/Teensy Mark in SV), and Gender. The Pok&eacute;mon species and raid star count cannot be manipulated, but we can randomly reroll them until the desired target is achieved.</p>
-
-<p>Note that it is only possible to manipulate encounters found inside Max Raid dens; it is NOT POSSIBLE to manipulate the details of Pok&eacute;mon found in Dynamax Adventures.</p>
-
-<p>Each raid has a randomly-assigned "raid seed" that determines the traits of the Pok&eacute;mon inside a den. Every day that passes advances the den seed by 1 in a predictable manner, making RNG abuse entirely possible via "date skipping". We can simply skip the required number of days to reach a desired seed.</p>
-
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/retail/swsh/raid">
-    Don't have CFW installed? <span class="fw-bold">Click here for the retail focused guide!</span>
-    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-    </svg>
-</a>
-
-<hr /><div class="title" style="background-color: #0c0038;">
-    <h1 class="text-light text-center pt-3 pb-3">Setup and Overview</h1>
-</div>
-<small class="text-muted mb-3 mt-0">
-    This section provides setup and installation instructions and an overview of the RNG tool.
-</small>
-<hr />
-
-<div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="setup-and-install-swsh-max-raid-cfw">
-        <span class="fw-bold text-light">Required Software</span>
-    </div>
-    <div class="card-body card-bg">
-
-        <h6><span class="fw-bold">Switch Software</span></h6>
-        <ol>
-            <li><a href="https://github.com/3096/luxray/releases/download/0.1.0/luxray-r0.1.0-0.zip" target="_blank" rel="noopener noreferrer">Luxray by 3096</a></li>
-            <li><a href="https://github.com/olliz0r/sys-botbase/releases" target="_blank">sys-botbase by olliz0r</a></li>
-            <li><a href="https://github.com/Lusamine/ldn_mitm/releases/" target="_blank">ldn_mitm fork by Lusamine</a></li>
-        </ol>
-
-        <h6><span class="fw-bold">Installation Instructions (Switch Software)</span></h6>
-        <ol>
-            <li>Download <code class="fw-bold">Luxray</code> and extract the contents of the download to the root of your Switch SD card.</li>
-            <li>Download <code class="fw-bold">sys-botbase</code> and extract the contents of the download to the root of your Switch SD card.</li>
-            <li>Download <code class="fw-bold">ldn_mitm</code> and extract the contents of the download to the root of your Switch SD card.</li>
-            <li>Reboot the console into your chosen CFW environment (SysCFW recommended).</li>
-        </ol>
-
-        {% include common/sys-module-troubleshooting.html %}
-
-        <hr />
-
-        <h6><span class="fw-bold">PC Software</span></h6>
-        <ul>
-            <li><a href="https://github.com/Admiral-Fish/PokeFinder/releases" target="_blank" rel="noopener noreferrer">PokeFinder by Admiral-Fish</a></li>
-            <li><a href="https://projectpokemon.org/home/files/file/1-pkhex/" target="_blank">PKHeX by Kaphotics</a></li>
-            <li><a href="https://github.com/santacrab2/PKHeX-Plugins/releases" target="_blank">PKHeX-Plugins fork by santacrab2</a></li>
-        </ul>
-
-        <h6><span class="fw-bold">Installation Instructions (PC Software)</span></h6>
-        <ol>
-            <li>Download and extract <code class="fw-bold">PokeFinder</code> for your operating system into a fresh, empty folder on your computer. You should download the zip file ending in <code class="fw-bold">-win</code> for Windows, <code class="fw-bold">-macOS</code> for Mac, and <code class="fw-bold">-linux</code> for Linux.</li>
-            <li>Refer to the <a href="https://github.com/santacrab2/PKHeX-Plugins/wiki/Installing-PKHeX-Plugins" target="_blank" rel="noopener noreferrer">PKHeX Plugins Wiki</a> for installing PKHeX with the required plugins. Do not leave the setup page until you have LiveHeX working properly.</li>
-            <li>When launching PKHeX/PokeFinder you may be asked to install the relevant dependencies if you do not already have them installed. Download the installer when prompted and go through the setup instructions until complete. These programs should be functional before you move on to the next step.</li>
-        </ol>
-
-        <h6><span class="fw-bold">Alternative Seed Checking for Mac/Linux</span></h6>
-        <p>If you do not have a PC and are unable to run PKHeX and LiveHeX, you can consider <a href="https://github.com/zaksabeast/CaptureSight" target="_blank" rel="noopener noreferrer">CaptureSight</a> to check and monitor your seeds. This is a Tesla overlay that is installed on your Switch.</p>
-
-        <p>CaptureSight will not be covered on this guide, so refer to the GitHub repository above for installation, usage, and troubleshooting. Keep in mind that CaptureSight interferes with programs that rely on sys-botbase, so you will need to reboot the console each time you want to switch over.</p>
-    </div>
-</div>
-<br>
+<p>Sword/Shield Max Raid RNG manipulation lets you predict the traits of a raid Pok&eacute;mon before fighting it. IVs, Nature, Shiny status, Gender, Ability, and Size (height/scale, which determines the Jumbo/Teensy Mark in Generation 9) can all be predicted from the den's seed. Each den has its own "raid seed" that decides everything about the Pok&eacute;mon inside. Every in-game day advances the seed by a fixed step. A technique known as "date skipping" lets you move the system date forward one seed per day until you reach the desired seed.</p>
 
 <div class="alert alert-danger" style="border: 1px solid #b60606; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
-    <span class="fw-bold">Important -</span> If ldn_mitm is not available or there is no working release, you will have to connect to Y-Comm or enable LAN mode for Wi-Fi connectivity in LiveHeX. You can enable LAN mode by going to the settings in SwSh and pressing <code class="fw-bold">L</code> + <code class="fw-bold">R</code> + <code class="fw-bold">L-Stick</code> (<a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/main-page/booting-lan-mode.jpg">Booting LAN</a>, <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/main-page/lan-mode.jpg">LAN enabled</a>). You will not have a <code class="fw-bold">420000000010</code> folder in the <code class="fw-bold">atmosphere/contents</code> directory since the outdated sys-module will crash Atmosph&egrave;re.
+    <span class="fw-bold">Important -</span> You can not manipulate Dynamax Adventures, this guide is only for the Max Raid Dens that are found the three Wild Areas (Base, Isle of Armor, and Crown Tundra).
+</div>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="setup-and-install-swsh-max-raid">
+        <span class="fw-bold text-light">Recommended Software</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>The recommended software for Sword/Shield Max Raid RNG manipulation depends on your setup, mainly whether you're on custom firmware (CFW) or a stock system. Read this section carefully and follow the instructions for your setup.</p>
+
+        <h6><span class="fw-bold">Recommended Software</span></h6>
+        <ul>
+            <li><a href="https://github.com/kwsch/PokePiaSWSH/releases" target="_blank" rel="noopener noreferrer">PokePiaSWSH by Kaphotics</a></li>
+            <li><a href="https://github.com/Admiral-Fish/PokeFinder/releases" target="_blank" rel="noopener noreferrer">PokeFinder by Admiral-Fish</a></li>
+            <li><a href="https://github.com/3096/luxray/releases/download/0.1.0/luxray-r0.1.0-0.zip" target="_blank" rel="noopener noreferrer">Luxray by 3096</a> - (CFW Only)</li>
+        </ul>
+
+        <h6><span class="fw-bold">Installation Instructions</span></h6>
+        <ul>
+            <li>Extract the contents of the PokeFinder download to a empty folder on your PC.</li>
+            <li>Extract the contents of the PokePiaSWSH download to a empty folder on your PC.</li>
+            <li>(CFW Only) Extract the contents of the Luxray download to the root of your Switch SD card, then reboot the console into your chosen CFW environment.</li>
+        </ul>
+
+        <details>
+            <summary><span class="fw-bold">Alternative Seed Checking for Mac/Linux</span></summary>
+            <p>If you do not have a PC and are unable to run PKHeX and LiveHeX, you can consider <a href="https://github.com/zaksabeast/CaptureSight" target="_blank" rel="noopener noreferrer">CaptureSight</a> to check and monitor your seeds. This is a Tesla overlay that is installed on your Switch.</p>
+
+            <p>CaptureSight will not be covered on this guide, so refer to the GitHub repository above for installation, usage, and troubleshooting. Keep in mind that CaptureSight interferes with programs that rely on sys-botbase, so you will need to reboot the console each time you want to switch over.</p>
+        </details>
+    </div>
 </div>
 
 <hr />
@@ -94,11 +58,61 @@ permalink: /cfw/swsh/raid
 </small>
 <hr />
 
-<p><span class="fw-bold">Figure 1 -</span> PokeFinder Overview</p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/pokefinder-main-window.png" alt="raid-setup-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/pokefinder-main-window.png">
+<p><span class="fw-bold">Figure 1 -</span> PokePiaSWSH Overview</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/pokepia-setup.png" alt="raid-setup-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/pokepia-setup.png">
 
 <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="pokefinder-overview-cfw">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="pokepia-overview">
+        <span class="fw-bold text-light">PokePiaSWSH Overview</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>PokePiaSWSH is a tool that has several useful applications. In our context, it is primarily used for finding save file information and resolving the seed of a caught Pok&eacute;mon from a Max Raid den.</p>
+
+        <p>Before doing anything else, you will need to ensure that PokePiaSWSH is functioning properly by following the instrructions below. When everything is done correctly you should see an output similar to what is shown in Figure 1.</p>
+
+        <h6><span class="fw-bold">Instructions</span></h6>
+        <ul>
+            <li>Open PokePiaSWSH.exe and make sure the program launches as intended. Close the program after doing so.</li>
+            <ul>
+                <li>You will be prompted by Windows Defender Firewall; allow the program the permissions it needs to run properly.</li>
+                <li>If you need to manually allow it through the firewall you can do so by following <a href="https://supportcenter.lexisnexis.com/app/answers/answer_view/a_id/1081611/~/how-to-add-exceptions-to-the-windows-firewall-" target="_blank">this process</a>.</li>
+            </ul>
+            <li>Open Sword or Shield, then enter LAN Mode. This can be done by navigating to the Options menu and pressing <code class="fw-bold">L</code> + <code class="fw-bold">R</code> +  <code class="fw-bold">Left Stick</code> all at once.</li>
+            <ul>
+                <li>If done correctly you should see a message indicating that the console is in LAN Mode (<a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/main-page/booting-lan-mode.jpg">Booting LAN</a>, <a class="clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/overworld/main-page/lan-mode.jpg">LAN enabled</a>).</li>
+            </ul>
+            <li>Open the Y-Comm and select <code class="fw-bold">Link Trade</code>, then search without a code. Launch <code class="fw-bold">PokePiaSWSH.exe</code> on your computer after doing so to have it listen.</li>
+            <li>If done correctly you should now see the details of your save file in the PokePiaSWSH window.</li>
+            <ul>
+                <li>The Internal IDs are used later! Save them before closing the program.</li>
+            </ul>
+        </ul>
+
+        <p>It is important that you do not mess around in-game while using PokePiaSWSH. You should be standing in the overworld with the <code class="fw-bold">Searching...</code> message visible. Do not open any menus, walk around, start any battles, or interact with any NPCs.</p>
+
+        <details>
+            <summary><span class="fw-bold">Troubleshooting</span></summary>
+            <p>Restarting the console and/or program often fixes broadcasting issues, so try that first. If that doesn't work and you're certain your setup is correct, make sure the console and computer are on the same network (if your router is dual-band, try both bands). Disable any VPN, and if you use a firewall, allow PokePiaSWSH through it.</p>
+
+            <p>If PokePiaSWSH still doesn't work, the cause is likely hardware-related. We cannot provide support with hardware compatibility beyond suggesting you try a different machine. Click the button below for alternative ways to find your save file information and raid seeds.</p>
+
+            <a type="button" class="list-group-item text-end d-inline-block w-auto" style="border-radius: 0.25rem; background-color: #0c0038; border-color: #0c0038; color: #ffffff;" href="/swsh/raid/alternatives">
+                <span class="fw-bold">Alternative Methods</span>
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                </svg>
+            </a>
+
+        </details>
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 2 -</span> PokeFinder Overview</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/pokefinder-main-window.png" alt="raid-setup-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/pokefinder-main-window.png">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="pokefinder-overview">
         <span class="fw-bold text-light">PokeFinder Overview</span>
     </div>
     <div class="card-body card-bg">
@@ -114,53 +128,37 @@ permalink: /cfw/swsh/raid
         </ul>
 
         <h6><span class="fw-bold">Profiles</span></h6>
-        <p>It is important to a set up a basic PokeFinder profile. For Max Raids, only the game version is necessary. This allows PokeFinder to display the correct version-exclusive species details for your game's raid dens. Everything else is optional and will NOT affect raid predictions. Select your profile in the dropdown menu at the top of the main window after creation.</p>
+        <p>It is important to a set up a basic PokeFinder profile. For Max Raids, only the game version is necessary so that PokeFinder knows which raids to display. You can also input your 5-digit Internal TID/SID for correct PID prediction (you should have this if you have correctly followed the above instructions).</p>
 
-        <details>
-            <summary><span class="fw-bold">Technical Details</span></summary>
-            <p>Pok&eacute;mon found in Max Raid battles always have the same Shiny status for all participants. For the game to do this, the raid seed generates a PID and a fake trainer's TID/SID. If the PID is shiny for the fake trainer, it will be shiny for everyone, and if it is nonshiny for the fake trainer, it will be nonshiny for everyone. After each participant captures the Pok&eacute;mon, its PID is modified for the player's TID/SID to ensure that the original shiny status is maintained. This is why entering your correct TID/SID into your PokeFinder profile is NOT required.</p>
+        <hr />
 
-            <p>However, if you enter correct IDs into your profile, the PID will be calculated based on your TID/SID. This is useful for trading communities that require proof that the Pok&eacute;mon was obtained through legitimate means since the PID will be correct in the search table.</p>
+        <h6><span class="fw-bold">Stock Dens VS Event Dens</span></h6>
+        <p>Before you continue, you should understand the difference between stock raid dens and event raid dens.</p>
 
-            <h6><span class="fw-bold">Finding your 5 digit TID/SID</span></h6>
-            <ol>
-                <li>Load your save file into PKHeX, then right-click and <code class="fw-bold">View</code> a self-obtained Pok&eacute;mon.</li>
-                <li>Select the OT/Misc tab and hover over the TID field with your mouse.</li>
-                <li>Your 5 digit TID/SID will be displayed in a tooltip. These are the values PokeFinder expects.</li>
-            </ol>
-        </details>
+        <h6><span class="fw-bold">Stock Dens</span></h6>
+        <p>These are location-specific, and their beams can either be red (Common/Normal) or purple (Rare). These raid dens are always available, even if you have not connected online. You can see what appears in each location using <a href="https://www.serebii.net/swordshield/maxraidbattledens.shtml" target="_blank" rel="noopener noreferrer">Serebii's Max Raid Battle Dens</a> page.</p>
+
+        <h6><span class="fw-bold">Event Dens</span></h6>
+        <p>These dens are obtained by connecting online to receive the Wild Area News. These dens appear anywhere on the map and contain unique tables of available Pok&eacute;mon for a limited time. These raid beams are always red. You can see what appeared in each event distribution using <a href="https://www.serebii.net/swordshield/maxraidbattles/eventden-finale.shtml" target="_blank" rel="noopener noreferrer">Serebii's Max Raid Event Dens</a> page. In most cases, you should have the final event distribution active in-game.</p>
+
+        <p>You can inject Wild Area News using Custom Firmware. Information about injecting older Wild Area News can be found in <a href="https://projectpokemon.org/tutorials/save-editing/gen-8_157/block-editing-r106/" target="_blank" rel="noopener noreferrer">this ProjectPok&eacute;mon tutorial</a>. No further support for Wild Area News injection will be provided in this guide.</p>
+
     </div>
 </div>
 <br>
 
-<div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="pokefinder-den-map">
-        <span class="fw-bold text-light">Stock Dens vs. Event Dens</span>
-    </div>
-    <div class="card-body card-bg">
-        <p>Before you continue, you should understand the difference between stock raid dens and event dens.</p>
-
-        <p>Stock raid dens are location-specific, and their beams can either be red (Common/Normal) or purple (Rare). These raid dens are always available, even if you have not connected online. You can see what appears in each location using <a href="https://www.serebii.net/swordshield/maxraidbattledens.shtml" target="_blank" rel="noopener noreferrer">Serebii's Max Raid Battle Dens</a> page.</p>
-
-        <p>Event dens are obtained by connecting online to receive the Wild Area News. These dens appear anywhere on the map and contain unique tables of available Pok&eacute;mon for a limited time. These raid beams are always red. You can see what appeared in each event distribution using <a href="https://www.serebii.net/swordshield/maxraidbattles/eventden-finale.shtml" target="_blank" rel="noopener noreferrer">Serebii's Max Raid Event Dens</a> page.</p>
-
-        <p>In most cases, you should have the final event distribution active in-game. Information about injecting older Wild Area News can be found in <a href="https://projectpokemon.org/tutorials/save-editing/gen-8_157/block-editing-r106/" target="_blank" rel="noopener noreferrer">this ProjectPok&eacute;mon tutorial</a>. No further support for Wild Area News injection will be provided in this guide.</p>
-    </div>
-</div>
-<br>
-
-<p><span class="fw-bold">Figure 2 -</span> PokeFinder Den Map</p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/pokefinder-den-map.gif" alt="raid-setup-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/pokefinder-den-map.gif">
+<p><span class="fw-bold">Figure 3 -</span> PokeFinder Configuration</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/pokefinder-den-map.gif" alt="raid-setup-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/pokefinder-den-map.gif">
 
 <div class="card border-dark">
     <div class="anchored card-header" style="background-color: #0c0038;" id="pokefinder-den-map">
         <span class="fw-bold text-light">PokeFinder Den Map</span>
     </div>
     <div class="card-body card-bg">
-        <p>In this section, you will learn how to find the Den ID for your chosen raid den. The Den ID is used to identify which Pok&eacute;mon are available in a stock raid. Later on, we will use it to find the correct raid seed for your den, whether it is a stock den or event den.</p>
+        <p>In this section, you will learn how to properly configure PokeFinder for the specific raid you are targetting. First, you will need to understand how to find a Raid Den ID, this is done using the Den Map tool in PokeFinder.</p>
 
         <h6><span class="fw-bold">Finding Den ID</span></h6>
-        <p>On the initial, smaller window that first appears when launching PokeFinder, the navigation menu at the top lists tools used for different games. Under <code class="fw-bold">Gen 8 Tools</code>, there is an option for <code class="fw-bold">Den Map</code>. This tool opens in a subwindow and can be used to find your chosen raid den's ID more easily.</p>
+        <p>On the initial smaller window that first appears when launching PokeFinder, the navigation menu at the top lists tools used for different games. Under <code class="fw-bold">Gen 8 Tools</code>, there is an option for <code class="fw-bold">Den Map</code>. This tool opens in a subwindow and can be used to find your chosen raid den's ID more easily.</p>
 
         <p>We can match the in-game location of a raid den to its location on PokeFinder's Den Map to find the corresponding Den ID.</p>
 
@@ -183,103 +181,132 @@ permalink: /cfw/swsh/raid
                 <li>If this is a stock den, select the correct Den rarity (Normal/Rare) from the <code class="fw-bold">Rarity</code> dropdown. This does not matter for event dens.</li>
             </ul>
             <li>Confirm that the species selection in PokeFinder matches Serebii.</li>
-            <li>Remember the Den ID you found for the next step.</li>
+            <li>Write down your Den ID in case you forget or need it later.</li>
         </ol>
     </div>
 </div>
 <br>
 
-<p><span class="fw-bold">Figure 3 -</span> PKHeX/LiveHeX Overview</p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/pkhex-livehex-overview.gif" alt="raid-setup-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/pkhex-livehex-overview.gif">
+<p><span class="fw-bold">Figure 4 -</span> Finding Your Den Seed</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/finding-den-seed.gif" alt="raid-setup-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/finding-den-seed.gif">
 
 <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="pkhex-livehex-overview">
-        <span class="fw-bold text-light">PKHeX/LiveHeX Overview</span>
+    <div class="anchored card-header" style="background-color: #0c0038;" id="finding-den-seed">
+        <span class="fw-bold text-light">Finding Your Den Seed</span>
     </div>
     <div class="card-body card-bg">
-        <p>LiveHeX is a feature of the Auto-Legality Mod plugin that is used to read the details of Max Raid dens while we are playing the game. We connect to LiveHeX using sys-botbase, a Switch program that was installed earlier.</p>
+        <p>After correctly identifying your raid den, you will need to find the den seed. This can be done by capturing the Pok&eacute;mon inside the Raid Den, then running PokePiaSWSH.</p>
 
-        <h6><span class="fw-bold">LiveHeX Connectivity</span></h6>
-        <ol>
-            <li>Open PKHeX, then navigate <code class="fw-bold">Options</code> -> <code class="fw-bold">Settings</code> and set your <code class="fw-bold">Blank Save Version</code> to the game you are playing (Sword or Shield).</li>
-            <li>Open the Homebrew Menu on your console, then press the <code class="fw-bold">Y</code> button to display the local IP address of your console.</li>
-            <li>Close the subwindow, then navigate to <code class="fw-bold">Tools</code> -> <code class="fw-bold">Auto Legality Mod</code> -> <code class="fw-bold">Open LiveHeX</code> to open the LiveHeX subwindow.</li>
-            <li>If you do not have ldn_mitm installed, connect to the Y-Comm in game or enter LAN mode. This step can be skipped if you already have ldn_mitm installed.</li>
-            <li>Enter the local IP of your console into the <code class="fw-bold">IP:</code> field and click the <code class="fw-bold">Connect</code> button. If done correctly, your console should now be connected to LiveHeX.</li>
-            <li>At the bottom of the LiveHeX window, open the dropdown menu and select the Raid block that corresponds to the location of your desired raid den.</li>
+        <h6><span class="fw-bold">Finding Den Seed</span></h6>
+        <ul>
+            <li>Save the game while standing in front of your desired den.</li>
+            <li>Throw a Wishing Piece into your desired den to activate it. Ensure that your beam is the correct colour (red = common, purple = rare)</li>
             <ul>
-                <li>Select <code class="fw-bold">Raid</code> if your raid is located in the Wild Area.</li>
-                <li>Select <code class="fw-bold">RaidArmor</code> if your raid is located in the Isle of Armor.</li>
-                <li>Select <code class="fw-bold">RaidCrown</code> if your raid is located in the Crown Tundra.</li>
+                <li>If the colour is incorrect, you can reset the game before it force saves to preserve your wishing piece.</li>
+                <li>If the colour is correct, but it is an event den when you don't want it to be (or vice versa), throw a wishing piece into a different den or clear out the current den to deaactivate it and try again.</li>
             </ul>
-            <li>Click <code class="fw-bold">Edit Block</code>, which will then show details of all the raid dens on the map.</li>
-        </ol>
-    </div>
-</div>
-<br>
-
-<p><span class="fw-bold">Figure 4 -</span> LiveHeX Den ID Confirmation</p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/livehex-den-confirmation.png" alt="raid-setup-4" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/livehex-den-confirmation.png">
-
-<div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="pkhex-livehex-overview">
-        <span class="fw-bold text-light">LiveHeX Den ID Confirmation</span>
-    </div>
-    <div class="card-body card-bg">
-        <h6><span class="fw-bold">Step-by-Step</span></h6>
-        <ol>
-            <li>If you have not already thrown a Wishing Piece into the den, close any raid block windows open on LiveHeX and use a Wishing Piece.</li>
-            <li>Connect to LiveHeX and open the Raid block subwindow for the correct map.</li>
-            <li>Select your Den ID you found earlier. If this is the correct Den ID, you should see the following:</li>
+            <li>Capture the Pok&eacute;mon inside the den, do not save with the Pokemon captured.</li>
+            <li>Run PokePiaSWSH, you should now see your den seed in the output. Refer back to Figure 1 for guidance.</li>
+            <li>Copy your den seed, paste it into the <code class="fw-bold">Seed</code> field of PokeFinder, then enter your search parameters.</li>
+            <li>Click the <code class="fw-bold">Generate</code> button and check for results in the search result table.</li>
             <ul>
-                <li><code class="fw-bold">isActive</code> is <code class="fw-bold">True</code>.</li>
-                <li><code class="fw-bold">isRare</code> is <code class="fw-bold">True</code> (purple beam) or <code class="fw-bold">False</code> (red beam).</li>
-                <li><code class="fw-bold">isWishingPiece</code> is <code class="fw-bold">True</code>.</li>
+                <li>If no results are found, try increasing your search range or adjusting your search parameters to be less strict.</li>
+                <li>You will need to adjust your <code class="fw-bold">Max Advances</code> according to your setup. Those using custom firmware can afford to set this value higher than those on a stock console.</li>
             </ul>
-            <li>Close the Raid Parameter Subwindow by either clicking the X in the top corner or clicking the <code class="fw-bold">Cancel</code> button. DO NOT CLICK SAVE.</li>
-        </ol>
+        </ul>
 
-        <p>Pressing the <code class="fw-bold">Save</code> button will inject the current seed and any other details back into the Raid Den (very bad). <span class="fw-bold">NEVER USE THIS BUTTON TO CLOSE THE RAID PARAMETER SUBWINDOW</span> if you care about the legitimacy of your Pok&eacute;mon.</p>
     </div>
 </div>
 <br>
 
-<p><span class="fw-bold">Figure 5 -</span> Luxray Overview</p>
-<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/luxray-overview.png" alt="raid-setup-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/luxray-overview.png">
+<p><span class="fw-bold">Figure 5 -</span> Target Found</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/target-found-raid.png" alt="raid-setup-5" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/target-found-raid.png">
 
 <div class="card border-dark">
-    <div class="anchored card-header" style="background-color: #0c0038;" id="luxray-overview-cfw">
-        <span class="fw-bold text-light">Luxray Overview</span>
+    <div class="anchored card-header" style="background-color: #0c0038;" id="frame-advancement-raid">
+        <span class="fw-bold text-light">Advancing Towards a Target</span>
     </div>
     <div class="card-body card-bg">
-        <p>Luxray is a Switch tool used for automating the (otherwise tedious) date skipping process. It can be launched from the Switch Homebrew Menu. As mentioned above, the den seed advances by one for each day that passes. Luxray can be used to alter the system clock and make the game believe that a day has passed to advance den seeds.</p>
+        <p>In Figure 5 we can see that a shiny, Gentle-natured Runerigus appears in 1,896 advances (rare beam). It is now time to advance the seed by date skipping until we are close to the target. The method you use to advance the seed will again depend on your setup and preferences.</p>
 
-        <h6><span class="fw-bold">Using Luxray</span></h6>
-        <p>Upon launching you will be presented with a calculator-style application with three main features:</p>
+        <p>If you wish to control the species of Pok&eacute;mon found inside the Raid Den, you must stop advancing the date 3 advances before your target seed. This will be explained in more detail below. In this case, since we specifically want Runerigus and our shiny is on advance 1,896, we must stop advancing once we reach frame 1,893.</p>
 
+        <h6><span class="fw-bold">Using Luxray (Quickest Automated Method - CFW Only)</span></h6>
         <ol>
-            <li><span class="fw-bold">Set -</span> Adjust the network time by the number of days entered. Useful for changing the weather.</li>
-            <li><span class="fw-bold">Step -</span> Date skips based on the number of days entered. Used to automate date-skipping.</li>
-            <li><span class="fw-bold">NTP -</span> Synchronizes the date and time back to network time. This should be done after every date-skipping session.</li>
+            <li>Launch Luxray through the Homebrew Menu.</li>
+            <li>Type the number of days you wish to advance into the calculator. For safety, you may wish to stop a few days earlier in case the system time rolls over automatically.</li>
+            <li>For targets >1,000 advances away, move to an indoor location like a Pok&eacute;mon Center before date skipping. Skipping rapidly for a long time while standing in the Wild Areas can cause the game to crash.</li>
+            <li>Click the <code class="fw-bold">Step</code> button and wait for the calculator to count to 0.</li>
         </ol>
 
-        <p>Date &amp; Time must be synced via the internet in the <code class="fw-bold">System Settings</code> in order to use Luxray.</p>
+        <p>Luxray tricks the system clock into believing a day has passed, causing the RNG to advance. This can advance up to 7,000 frames per hour which is much faster than human input. If you dislike the idea of using Luxray to artificially modify the system date, you can use one of the other two date skipping methods instead.</p>
+
+        <p>It is heavily advised use an indoor location and to stay within legal date boundaries when using Luxray. The lowest settable date is January 1, 2000, and the highest settable date is December 31, 2060. Use <code class="fw-bold">NTP</code> or <code class="fw-bold">Set</code> to adjust the clock if you are going out of bounds.</p>
+
+        <h6><span class="fw-bold">PvP Exploit (Quickest Manual Method - Stock Firmware Friendly)</span></h6>
+        <ol>
+            <li>Open the game and enter any Wild Area. Position your camera so you can see some active raid beams or claim the Watts from a nearby raid den.</li>
+            <li>Open the Y-Comm, connect to the internet, and select the <code span class="fw-bold">Link Battle</code> option.</li>
+            <li>Search for a battle with no code to find an online battle as quickly as possible.</li>
+            <li>Once you have entered the battle, cancel the battle by turning on <code span class="fw-bold">Airplane Mode</code>.</li>
+            <li>Close any in-game menus and go back to the overworld.</li>
+            <li>Change the console date forward in the <code span class="fw-bold">System Settings</code> > <code span class="fw-bold">System</code>, then resume the game where you are looking at the overworld.</li>
+            <ul>
+                <li>It is possible to skip multiple days at once without resuming the game. To do this, setting the date forward, hit <code span class="fw-bold">OK</code>, and repeat this process until you have done enough days. You can only skip once each time you hit <code span class="fw-bold">OK</code>, so changing the date forward by more than 1 will still be treated as 1.</li>
+                <li>If you are in the Wild Area, resuming the game after advancing multiple days has a chance to crash your game! If you are advancing more than 1 month at a time, we suggest you move indoors to a Pok&eacute;mon Center.</li>
+            </ul>
+            <li>If you did this correctly, the screen will flash, the currently active raid beams will change location, and any Watts you claimed will become available again.</li>
+            <li>Repeat this process from step 4. The exploit remains active until the game is restarted.</li>
+        </ol>
+
+        <h6><span class="fw-bold">"Invite Others" Exploit (Slow Manual Method - Stock Firmware Friendly)</span></h6>
+        <ol>
+            <li>Open the game, enter any Wild Area and find an inactive raid den. You can use your chosen raid den if you wish.</li>
+            <li>Throw a Wishing Piece into the raid den, then interact with it.</li>
+            <li>Click <code span class="fw-bold">Invite Others</code>, then minimize the game by pressing the Home button.</li>
+            <li>Navigate to <code span class="fw-bold">System Settings</code>. Change the console date forward under <code span class="fw-bold">System</code>, then resume the game.</li>
+            <li>Back out of the raid and re-enter the overworld.</li>
+            <li>If you did this correctly, you should see that you are able to claim Watts from the raid den again.</li>
+            <li>Repeat this process from Step 3 onwards as much as needed.</li>
+        </ol>
 
     </div>
 </div>
 <br>
 
-<div class="alert alert-danger" style="border: 1px solid #900505; border-radius: 8px; padding: 15px; background-color: #f8d7da; color: #721c24;">
-    <span class="fw-bold">Date Skipping Safety -</span> It is highly advised that you stay within reasonable Switch times when date skipping with Luxray. The lowest settable date is January 1, 2000, and the highest settable date is December 31, 2060. Use <code class="fw-bold">NTP</code> or <code class="fw-bold">Set</code> to adjust the clock if you are going out of bounds.
-</div>
 
-<div class="alert alert-success" style="border: 1px solid #28a745; border-radius: 5px; padding: 15px;">
-    <span class="fw-bold">Great!</span> You should now have basic understanding of how to use each of the tools and how to find your Max Raid seed. Click the button below to see a worked example of the entire process from start to finish.
-</div>
+<p><span class="fw-bold">Figure 6 -</span> Species Manipulation</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/species-manip.gif" alt="raid-setup-6" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/species-manip.gif">
 
-<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/cfw/swsh/raid/wishing-piece">
-    Continue to the <span class="fw-bold">RNG process!</span>
-    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-    </svg>
-</a>
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="species-manipulation-raid">
+        <span class="fw-bold text-light">Species Manipulation (The "3 Day" Method)</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>As stated previously, we cannot RNG manipulate species for Max Raid dens; we must randomly roll them. Raid dens lock the species for the first 2 days from the current day, but the 3rd day is random. Therefore, we must repeatedly advance 3 days until the species we want appears in the raid den. This is why it is important to stop 3 advances/days before the target if you want a specific species.</p>
+
+        <p>At this stage, you should be exactly 3 advances/days away from your target (today(0), second day(1), third day(2), target day(3)). From here, you can reroll the species on the "target day".</p>
+
+        <p>In the above image, the game has been saved and we are 3 advances away from the target. After advancing the seed 3 times, we started the raid to confirm that the Pok&eacute;mon is shiny, but the species was wrong. This problem can be resolved by doing the following:</p>
+
+        <h6><span class="fw-bold">Rerolling the Raid Species</span></h6>
+        <ol>
+            <li>Check your seed and confirm that you are exactly 3 advances away from the target.</li>
+            <li>Save the game once you are confident that you are in the correct state.</li>
+            <li>Advance the seed 3 times by date skipping. Open the raid den lobby and check the species. If the species is not what you wanted, reset the game.</li>
+            <li>You should now be standing besides your den, and the raid seed should be 3 advances away again. Repeat step 3 until your desired species appears.</li>
+            <li>(Optional) Save the game after acquiring your desired species if you intend to share it with friends.</li>
+        </ol>
+
+        <p>Be careful that the date does not automatically advance while you are doing the "3 day" method. You can change the system time to earlier in the day. If system time naturally advances past midnight, the seed will advance as well, which can cause you to go past your target.</p>
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 7 -</span> Result Found</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/result-found.gif" alt="raid-setup-7" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/result-found.gif">
+
+<p>The Max Raid den now contains the desired species. In this case, a 5 star shiny Runerigus! We can now capture the Pok&eacute;mon or share the raid with friends.</p>
+
+<p><span class="fw-bold">That's all there is to manipulating Max Raid Battles!</span>
+

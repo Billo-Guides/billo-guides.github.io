@@ -1,0 +1,116 @@
+---
+layout: default
+title: Alternative Seed Finding Methods
+permalink: /swsh/raid/alternatives
+---
+
+<div class="title" style="background-color: #0c0038;">
+    <h1 class="text-light text-center pt-3 pb-3">Alternative Methods (Max Raid)</h1>
+</div>
+<small class="text-muted mb-3 mt-0">
+    Learn any potential alternative methods to finding save file details and raid seeds on custom firmware, or using a stock console.
+</small>
+<hr />
+
+<p>This section aims to provide alternatives to PokePiaSWSH. This page should only really be used if you have exhausted all the possible troubleshooting options to get PokePiaSWSH working.</p>
+
+<p><span class="fw-bold">Figure 1 -</span> PKHeX/LiveHeX</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/pkhex-livehex-overview.gif" alt="seedfinding-alternative-1" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/pkhex-livehex-overview.gif">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="cfw-options">
+        <span class="fw-bold text-light">Custom Firmware Options</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>LiveHeX is a feature of the Auto-Legality Mod PKHeX plugin that is used to read the details of Max Raid dens while we are playing the game. We connect to LiveHeX using sys-botbase.</p>
+
+        <h6 class="fw-bold">Required Tools</h6>
+        <ul>
+            <li><a href="https://github.com/santacrab2/PKHeX-Plugins/releases/" target="_blank">PKHeX + Auto Legality Mod</a></li>
+            <li><a href="https://github.com/olliz0r/sys-botbase/releases/tag/v2.5" target="_blank" rel="noopener noreferrer">sys-botbase</a></li>
+            <li><a href="https://github.com/Lusamine/ldn_mitm/releases/latest" target="_blank" rel="noopener noreferrer">ldn_mitm fork</a></li>
+        </ul>
+
+        <h6 span class="fw-bold">Installation Instructions</h6>
+        <ul>
+            <li>Refer to the <a href="https://github.com/santacrab2/PKHeX-Plugins/releases/" target="_blank">official Auto Legality Mod documentation</a> for PKHeX + Auto Legality Mod installation steps.</li>
+            <li>Extract the contents of the sys-botbase download to the root of your Switch SD card.</li>
+            <li>Extract the contents of the ldn-mitm download to the root of your Switch SD card.</li>
+            <li>Reboot your console into your chosen CFW environment.</li>
+        </ul>
+
+        <h6><span class="fw-bold">LiveHeX Connectivity</span></h6>
+        <ol>
+            <li>Open PKHeX, then navigate <code class="fw-bold">Options</code> -> <code class="fw-bold">Settings</code> and set your <code class="fw-bold">Blank Save Version</code> to the game you are playing (Sword or Shield).</li>
+            <li>Open the Homebrew Menu on your console, then press the <code class="fw-bold">Y</code> button to display the local IP address of your console.</li>
+            <li>Close the subwindow, then navigate to <code class="fw-bold">Tools</code> -> <code class="fw-bold">Auto Legality Mod</code> -> <code class="fw-bold">Open LiveHeX</code> to open the LiveHeX subwindow.</li>
+            <li>If you do not have ldn_mitm installed, connect to the Y-Comm in game or enter LAN mode. This step can be skipped if you already have ldn_mitm installed.</li>
+            <li>Enter the local IP of your console into the <code class="fw-bold">IP:</code> field and click the <code class="fw-bold">Connect</code> button. If done correctly, your console should now be connected to LiveHeX.</li>
+            <li>At the bottom of the LiveHeX window, open the dropdown menu and select the Raid block that corresponds to the location of your desired raid den.</li>
+            <ul>
+                <li>Select <code class="fw-bold">Raid</code> if your raid is located in the Wild Area.</li>
+                <li>Select <code class="fw-bold">RaidArmor</code> if your raid is located in the Isle of Armor.</li>
+                <li>Select <code class="fw-bold">RaidCrown</code> if your raid is located in the Crown Tundra.</li>
+            </ul>
+            <li>Click <code class="fw-bold">Edit Block</code>, which will then show details of all the raid dens on the map, including the seed.</li>
+        </ol>
+    </div>
+</div>
+<br>
+
+<p><span class="fw-bold">Figure 2 -</span> LiveHeX Den ID Confirmation</p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/livehex-den-confirmation.png" alt="seedfinding-alternative-2" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/cfw/swsh/raid/livehex-den-confirmation.png">
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="pkhex-livehex-denid">
+        <span class="fw-bold text-light">LiveHeX Den ID Confirmation</span>
+    </div>
+    <div class="card-body card-bg">
+        <h6><span class="fw-bold">Step-by-Step</span></h6>
+        <ol>
+            <li>If you have not already thrown a Wishing Piece into the den, close any raid block windows open on LiveHeX and use a Wishing Piece.</li>
+            <li>Connect to LiveHeX and open the Raid block subwindow for the correct map.</li>
+            <li>Select your Den ID you found earlier. If this is the correct Den ID, you should see the following:</li>
+            <ul>
+                <li><code class="fw-bold">isActive</code> is <code class="fw-bold">True</code>.</li>
+                <li><code class="fw-bold">isRare</code> is <code class="fw-bold">True</code> (purple beam) or <code class="fw-bold">False</code> (red beam).</li>
+                <li><code class="fw-bold">isWishingPiece</code> is <code class="fw-bold">True</code>.</li>
+            </ul>
+            <li>Close the Raid Parameter Subwindow by either clicking the X in the top corner or clicking the <code class="fw-bold">Cancel</code> button. DO NOT CLICK SAVE.</li>
+        </ol>
+
+        <p>Pressing the <code class="fw-bold">Save</code> button will inject the current seed and any other details back into the Raid Den (very bad). <span class="fw-bold">NEVER USE THIS BUTTON TO CLOSE THE RAID PARAMETER SUBWINDOW</span> if you care about the legitimacy of your Pok&eacute;mon.</p>
+    </div>
+</div>
+<br>
+
+<span class="fw-bold">Figure 3 -</span> Using a SysBot (Retail Option)<p></p>
+<img src="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/raid/figure-2-sysbot-seed-output.png" alt="seedfinding-alternative-3" class="img-fluid clickable-image" data-image="https://raw.githubusercontent.com/Billo-PS/billo-guides-images/refs/heads/main/retail/swsh/raid/figure-2-sysbot-seed-output.png"><p></p>
+
+<div class="card border-dark">
+    <div class="anchored card-header" style="background-color: #0c0038;" id="retail-options">
+        <span class="fw-bold text-light">Retail Options</span>
+    </div>
+    <div class="card-body card-bg">
+        <p>Showing a Pok&eacute;mon caught from a Max Raid Battle to a SysBot will produce a raid seed and a pk8 file. The pk8 file can be imported into PKHeX to find your internal TID/SID. This is strictly optional however.</p>
+
+        <h6><span class="fw-bold">Step-by-Step</span></h6>
+        <ol>
+            <li>Throw a Wishing Piece into the den you wish to seed check.</li>
+            <li>Capture the Pok&eacute;mon from the raid, DO NOT SAVE AFTER THIS POINT.</li>
+            <li>Navigate to the server that contains the SysBot, enter the channel for inputting commands.</li>
+            <li>Initiate a <code span class="fw-bold">seedcheck</code> trade (command syntax may vary between hosts).</li>
+            <li>Wait for the bot to message you a trade code, then meet with it in-game.</li>
+            <li>Show the bot the caught Pok&eacute;mon and wait for it to message you a den seed.</li>
+            <li>Reset the game, you should now be back at the active den and also have your den seed.</li>
+        </ol>
+    </div>
+</div>
+<br>
+
+<a type="button" class="list-group-item list-group-item-primary text-end" style="border-radius: 0.25rem;" href="/swsh/raid/">
+    I have found my raid seed, I want to go back to the <span class="fw-bold">main page!</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+    </svg>
+</a>
